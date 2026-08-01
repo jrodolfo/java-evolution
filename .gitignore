@@ -1,0 +1,55 @@
+# macOS
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Maven / Java build output
+target/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Logs
+*.log
+logs/
+
+# IDEs and editors
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.project
+.classpath
+.settings/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Spring Boot
+spring.log
+
+# Test and coverage reports
+surefire-reports/
+failsafe-reports/
+jacoco.exec
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
