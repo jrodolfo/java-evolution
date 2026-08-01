@@ -12,36 +12,61 @@ class LambdaExamplesTest {
 	private final LambdaExamples examples = new LambdaExamples();
 
 	@Test
-	void filtersNamesUsingPredicateLambda() {
+	void predicateLambdaKeepsOnlyNamesWithAtLeastFourLetters() {
+		// Given
 		List<String> names = Arrays.asList("Ana", "John", "Li", "Maria");
 
-		assertThat(examples.namesWithAtLeastFourLetters(names))
+		// When
+		List<String> filteredNames = examples.namesWithAtLeastFourLetters(names);
+
+		// Then
+		assertThat(filteredNames)
+				.as("The Predicate lambda should keep only names with four or more letters")
 				.containsExactly("John", "Maria");
 	}
 
 	@Test
-	void sortsNamesUsingComparatorLambda() {
+	void comparatorLambdaSortsNamesFromShortestToLongest() {
+		// Given
 		List<String> names = Arrays.asList("Maria", "Ana", "Jonathan", "Li");
 
-		assertThat(examples.sortByLength(names))
+		// When
+		List<String> sortedNames = examples.sortByLength(names);
+
+		// Then
+		assertThat(sortedNames)
+				.as("The Comparator lambda should compare names by their length")
 				.containsExactly("Li", "Ana", "Maria", "Jonathan");
 	}
 
 	@Test
-	void receivesBehaviorAsFunctionArgument() {
+	void functionalInterfaceAllowsBehaviorToBePassedAsAnArgument() {
+		// Given / When
 		int sum = examples.calculate(10, 5, (left, right) -> left + right);
 		int multiplication = examples.calculate(10, 5, (left, right) -> left * right);
 
-		assertThat(sum).isEqualTo(15);
-		assertThat(multiplication).isEqualTo(50);
+		// Then
+		assertThat(sum)
+				.as("The first lambda should add both numbers")
+				.isEqualTo(15);
+		assertThat(multiplication)
+				.as("The second lambda should multiply both numbers")
+				.isEqualTo(50);
 	}
 
 	@Test
-	void lambdaCanReplaceAnonymousClassForSimpleBehavior() {
+	void lambdaCanReplaceAnonymousClassForSimpleComparatorBehavior() {
+		// Given
 		List<String> names = Arrays.asList("Maria", "Ana", "John");
 
-		assertThat(examples.sortWithLambda(names))
-				.isEqualTo(examples.sortWithAnonymousClass(names))
+		// When
+		List<String> sortedWithLambda = examples.sortWithLambda(names);
+		List<String> sortedWithAnonymousClass = examples.sortWithAnonymousClass(names);
+
+		// Then
+		assertThat(sortedWithLambda)
+				.as("The lambda version should produce the same result as the anonymous class")
+				.isEqualTo(sortedWithAnonymousClass)
 				.containsExactly("Ana", "John", "Maria");
 	}
 }
