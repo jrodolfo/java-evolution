@@ -7,6 +7,14 @@ import java.util.concurrent.FutureTask;
  * Demonstrates virtual threads as a Java 19 preview feature.
  *
  * <p>
+ * Before virtual threads, scalable blocking code often forced a tradeoff:
+ * platform threads were easy to understand but expensive at very high counts,
+ * while asynchronous callback or reactive styles scaled better but were harder
+ * to read and debug. Virtual threads were introduced to make thread-per-task
+ * code scale much further while keeping the programming model familiar.
+ * </p>
+ *
+ * <p>
  * Virtual threads became final later, in Java 21. This project compiles on JDK
  * 25, so the example uses the final API while documenting the Java 19 preview
  * origin.

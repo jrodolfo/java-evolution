@@ -4,6 +4,13 @@ package net.jrodolfo.java_evolution.java19;
  * Explains structured concurrency as an incubating feature in Java 19.
  *
  * <p>
+ * Concurrent code becomes difficult when related subtasks are started,
+ * cancelled, joined, and observed in different places. Structured concurrency
+ * addresses that by treating related subtasks as one bounded unit of work with
+ * clearer failure and cancellation behavior.
+ * </p>
+ *
+ * <p>
  * The structured concurrency API evolved after Java 19, so this repository uses
  * notes instead of depending on an incubator module or a specific preview API
  * shape.

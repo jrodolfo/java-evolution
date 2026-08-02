@@ -91,9 +91,9 @@ For a class-by-class navigation table, see [docs/feature-map.md](docs/feature-ma
 | 15 | [`java15`](src/main/java/net/jrodolfo/java_evolution/java15/README.md) | Text Blocks final, Sealed Classes preview, Hidden Classes notes |
 | 16 | [`java16`](src/main/java/net/jrodolfo/java_evolution/java16/README.md) | Records final, Pattern Matching for `instanceof` final, `Stream.toList`, Unix-domain socket notes |
 | 17 | [`java17`](src/main/java/net/jrodolfo/java_evolution/java17/README.md) | Sealed Classes final, Pattern Matching for switch preview, Random Generator API, `HexFormat`, Strong Encapsulation notes |
-| 18 | `java18` | UTF-8 default charset, Simple Web Server notes, JavaDoc snippets notes, InetAddress resolver SPI notes |
-| 19 | `java19` | Virtual Threads preview, Record Patterns preview, Pattern Matching switch preview, Structured Concurrency notes, FFM notes |
-| 20 | `java20` | Record Patterns second preview, Pattern Matching switch fourth preview, Scoped Values/Structured Concurrency/FFM/Vector notes |
+| 18 | [`java18`](src/main/java/net/jrodolfo/java_evolution/java18/README.md) | UTF-8 default charset, Simple Web Server notes, JavaDoc snippets notes, InetAddress resolver SPI notes |
+| 19 | [`java19`](src/main/java/net/jrodolfo/java_evolution/java19/README.md) | Virtual Threads preview, Record Patterns preview, Pattern Matching switch preview, Structured Concurrency notes, FFM notes |
+| 20 | [`java20`](src/main/java/net/jrodolfo/java_evolution/java20/README.md) | Record Patterns second preview, Pattern Matching switch fourth preview, Scoped Values/Structured Concurrency/FFM/Vector notes |
 | 21 | `java21` | Virtual Threads final, Record Patterns final, Pattern Matching switch final, Sequenced Collections, KEM notes |
 | 22 | `java22` | Unnamed Variables and Patterns final, FFM final notes, Stream Gatherers preview notes, Class-File API preview notes |
 | 23 | `java23` | Markdown Documentation Comments, Primitive Patterns preview notes, Module Imports preview notes, ZGC Generational Mode notes |

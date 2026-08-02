@@ -4,9 +4,17 @@ package net.jrodolfo.java_evolution.java18;
  * Explains the Internet-address resolution SPI introduced in Java 18.
  *
  * <p>
- * The feature allows custom name and address resolution providers. It is mostly
- * useful for advanced networking libraries and controlled runtime environments,
- * so this repository keeps the example as notes.
+ * Most applications can rely on the operating system for host-name resolution,
+ * but advanced environments sometimes need custom behavior for service
+ * discovery, controlled DNS, or testing infrastructure. Java 18 introduced a
+ * service-provider interface so this kind of resolver can be provided through a
+ * supported JDK extension point.
+ * </p>
+ *
+ * <p>
+ * Because a resolver provider affects process-wide networking behavior, this
+ * repository keeps the topic as notes instead of installing a live provider
+ * during tests.
  * </p>
  */
 public class InetAddressResolutionNotes {

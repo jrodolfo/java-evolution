@@ -2,9 +2,10 @@
  * Examples for features introduced in Java 18.
  *
  * <p>
- * Java 18 standardized UTF-8 as the default charset and added tooling/API
- * improvements such as the simple web server, JavaDoc {@code @snippet}, and an
- * Internet-address resolution SPI.
+ * Java 18 focused on portability and tooling. UTF-8 became the standard default
+ * charset, reducing platform-dependent text bugs. The JDK also gained the
+ * {@code jwebserver} tool, JavaDoc {@code @snippet} support, and an
+ * Internet-address resolution SPI for advanced networking environments.
  * </p>
  */
 package net.jrodolfo.java_evolution.java18;

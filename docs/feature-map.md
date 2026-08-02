@@ -122,6 +122,8 @@ Learning notes: [java17 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 ## Java 18
 
+Learning notes: [java18 README](../src/main/java/net/jrodolfo/java_evolution/java18/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | UTF-8 default charset | `Utf8DefaultCharsetExamples` | `Utf8DefaultCharsetExamplesTest` |
@@ -130,6 +132,8 @@ Learning notes: [java17 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | InetAddress resolver SPI | `InetAddressResolutionNotes` | `InetAddressResolutionNotesTest` |
 
 ## Java 19
+
+Learning notes: [java19 README](../src/main/java/net/jrodolfo/java_evolution/java19/README.md)
 
 | Feature | Example | Test |
 |---|---|---|
@@ -140,6 +144,8 @@ Learning notes: [java17 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Foreign Function and Memory API | `ForeignFunctionMemoryApiPreviewNotes` | `ForeignFunctionMemoryApiPreviewNotesTest` |
 
 ## Java 20
+
+Learning notes: [java20 README](../src/main/java/net/jrodolfo/java_evolution/java20/README.md)
 
 | Feature | Example | Test |
 |---|---|---|

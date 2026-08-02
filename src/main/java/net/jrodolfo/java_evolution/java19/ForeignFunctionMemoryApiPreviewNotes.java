@@ -4,6 +4,13 @@ package net.jrodolfo.java_evolution.java19;
  * Explains the Foreign Function and Memory API as a Java 19 preview feature.
  *
  * <p>
+ * Native integration in Java traditionally meant JNI, which is powerful but
+ * complex and easy to make unsafe. The Foreign Function and Memory API was
+ * introduced to provide a supported model for calling native functions and
+ * working with memory outside the Java heap.
+ * </p>
+ *
+ * <p>
  * The API evolved through later releases before finalization. A serious example
  * normally calls native code or manages off-heap memory, so this repository
  * keeps the Java 19 entry as notes.
