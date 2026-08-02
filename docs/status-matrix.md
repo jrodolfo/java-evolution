@@ -75,11 +75,11 @@ Status vocabulary:
 | 18 | InetAddress resolver SPI | final, notes-only | `InetAddressResolutionNotes` | `InetAddressResolutionNotesTest` | [JEP 418](https://openjdk.org/jeps/418) |
 | 19 | Virtual threads preview | preview | `VirtualThreadsPreviewExamples` | `VirtualThreadsPreviewExamplesTest` | [JEP 425](https://openjdk.org/jeps/425) |
 | 19 | Record patterns preview | preview | `RecordPatternsPreviewExamples` | `RecordPatternsPreviewExamplesTest` | [JEP 405](https://openjdk.org/jeps/405) |
-| 19 | Pattern matching switch preview | preview | `PatternMatchingSwitchPreviewExamples` | `PatternMatchingSwitchPreviewExamplesTest` | [JEP 427](https://openjdk.org/jeps/427) |
+| 19 | Pattern matching for switch preview | preview | `PatternMatchingSwitchPreviewExamples` | `PatternMatchingSwitchPreviewExamplesTest` | [JEP 427](https://openjdk.org/jeps/427) |
 | 19 | Structured concurrency incubator | incubator, notes-only | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` | [JEP 428](https://openjdk.org/jeps/428) |
 | 19 | Foreign Function and Memory API | preview, notes-only | `ForeignFunctionMemoryApiPreviewNotes` | `ForeignFunctionMemoryApiPreviewNotesTest` | [JEP 424](https://openjdk.org/jeps/424) |
 | 20 | Record patterns second preview | preview | `RecordPatternsSecondPreviewExamples` | `RecordPatternsSecondPreviewExamplesTest` | [JEP 432](https://openjdk.org/jeps/432) |
-| 20 | Pattern matching switch fourth preview | preview | `PatternMatchingSwitchFourthPreviewExamples` | `PatternMatchingSwitchFourthPreviewExamplesTest` | [JEP 433](https://openjdk.org/jeps/433) |
+| 20 | Pattern matching for switch fourth preview | preview | `PatternMatchingSwitchFourthPreviewExamples` | `PatternMatchingSwitchFourthPreviewExamplesTest` | [JEP 433](https://openjdk.org/jeps/433) |
 | 20 | Virtual threads second preview | preview, notes-only | `VirtualThreadsSecondPreviewNotes` | `VirtualThreadsSecondPreviewNotesTest` | [JEP 436](https://openjdk.org/jeps/436) |
 | 20 | Scoped values incubator | incubator, notes-only | `ScopedValuesIncubatorNotes` | `ScopedValuesIncubatorNotesTest` | [JEP 429](https://openjdk.org/jeps/429) |
 | 20 | Structured concurrency second incubator | incubator, notes-only | `StructuredConcurrencySecondIncubatorNotes` | `StructuredConcurrencySecondIncubatorNotesTest` | [JEP 437](https://openjdk.org/jeps/437) |
@@ -87,7 +87,7 @@ Status vocabulary:
 | 20 | Vector API fifth incubator | incubator, notes-only | `VectorApiFifthIncubatorNotes` | `VectorApiFifthIncubatorNotesTest` | [JEP 438](https://openjdk.org/jeps/438) |
 | 21 | Virtual threads final | final | `VirtualThreadsExamples` | `VirtualThreadsExamplesTest` | [JEP 444](https://openjdk.org/jeps/444) |
 | 21 | Record patterns final | final | `RecordPatternsExamples` | `RecordPatternsExamplesTest` | [JEP 440](https://openjdk.org/jeps/440) |
-| 21 | Pattern matching switch final | final | `PatternMatchingSwitchExamples` | `PatternMatchingSwitchExamplesTest` | [JEP 441](https://openjdk.org/jeps/441) |
+| 21 | Pattern matching for switch final | final | [`PatternMatchingSwitchExamples`](../src/main/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamples.java) | [`PatternMatchingSwitchExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamplesTest.java) | [JEP 441](https://openjdk.org/jeps/441) |
 | 21 | Sequenced collections | final | `SequencedCollectionsExamples` | `SequencedCollectionsExamplesTest` | [JEP 431](https://openjdk.org/jeps/431) |
 | 21 | Unnamed patterns and variables preview | preview | `UnnamedPatternsVariablesPreviewExamples` | `UnnamedPatternsVariablesPreviewExamplesTest` | [JEP 443](https://openjdk.org/jeps/443) |
 | 21 | Key Encapsulation Mechanism API | final, security, notes-only | `KeyEncapsulationMechanismNotes` | `KeyEncapsulationMechanismNotesTest` | [JEP 452](https://openjdk.org/jeps/452) |

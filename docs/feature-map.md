@@ -141,7 +141,7 @@ Learning notes: [java19 README](../src/main/java/net/jrodolfo/java_evolution/jav
 |---|---|---|
 | Virtual threads preview | `VirtualThreadsPreviewExamples` | `VirtualThreadsPreviewExamplesTest` |
 | Record patterns preview | `RecordPatternsPreviewExamples` | `RecordPatternsPreviewExamplesTest` |
-| Pattern matching switch preview | `PatternMatchingSwitchPreviewExamples` | `PatternMatchingSwitchPreviewExamplesTest` |
+| Pattern matching for switch preview | `PatternMatchingSwitchPreviewExamples` | `PatternMatchingSwitchPreviewExamplesTest` |
 | Structured concurrency incubator | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` |
 | Foreign Function and Memory API | `ForeignFunctionMemoryApiPreviewNotes` | `ForeignFunctionMemoryApiPreviewNotesTest` |
 
@@ -152,7 +152,7 @@ Learning notes: [java20 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Feature | Example | Test |
 |---|---|---|
 | Record patterns second preview | `RecordPatternsSecondPreviewExamples` | `RecordPatternsSecondPreviewExamplesTest` |
-| Pattern matching switch fourth preview | `PatternMatchingSwitchFourthPreviewExamples` | `PatternMatchingSwitchFourthPreviewExamplesTest` |
+| Pattern matching for switch fourth preview | `PatternMatchingSwitchFourthPreviewExamples` | `PatternMatchingSwitchFourthPreviewExamplesTest` |
 | Virtual threads second preview | `VirtualThreadsSecondPreviewNotes` | `VirtualThreadsSecondPreviewNotesTest` |
 | Scoped values incubator | `ScopedValuesIncubatorNotes` | `ScopedValuesIncubatorNotesTest` |
 | Structured concurrency second incubator | `StructuredConcurrencySecondIncubatorNotes` | `StructuredConcurrencySecondIncubatorNotesTest` |
@@ -167,7 +167,7 @@ Learning notes: [java21 README](../src/main/java/net/jrodolfo/java_evolution/jav
 |---|---|---|
 | Virtual threads final | `VirtualThreadsExamples` | `VirtualThreadsExamplesTest` |
 | Record patterns final | `RecordPatternsExamples` | `RecordPatternsExamplesTest` |
-| Pattern matching switch final | `PatternMatchingSwitchExamples` | `PatternMatchingSwitchExamplesTest` |
+| Pattern matching for switch final | [`PatternMatchingSwitchExamples`](../src/main/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamples.java) | [`PatternMatchingSwitchExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamplesTest.java) |
 | Sequenced collections | `SequencedCollectionsExamples` | `SequencedCollectionsExamplesTest` |
 | Unnamed patterns and variables preview | `UnnamedPatternsVariablesPreviewExamples` | `UnnamedPatternsVariablesPreviewExamplesTest` |
 | Key Encapsulation Mechanism API | `KeyEncapsulationMechanismNotes` | `KeyEncapsulationMechanismNotesTest` |
