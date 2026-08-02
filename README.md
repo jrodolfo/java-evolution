@@ -33,6 +33,12 @@ To print the active Java/Maven versions and run the test suite:
 make check
 ```
 
+To check documentation navigation consistency:
+
+```bash
+make docs-audit
+```
+
 To generate the local JavaDoc reference:
 
 ```bash
@@ -47,6 +53,7 @@ The published JavaDoc site is available at https://jrodolfo.github.io/java-evolu
 - Examples are built and tested with JDK 25.
 - Spring Boot is used as lightweight project tooling; the examples themselves are plain Java.
 - Some features are represented by `Notes` classes because they involve preview flags, incubator modules, native code, JVM flags, external tools, cryptography providers, or runtime behavior.
+- Documentation navigation is checked locally with `make docs-audit` and in GitHub Actions.
 - JavaDoc is generated locally with `make docs` and published through GitHub Pages.
 
 ## Important Design Choice
