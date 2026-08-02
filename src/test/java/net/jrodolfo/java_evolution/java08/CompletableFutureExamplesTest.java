@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Test;
 
 class CompletableFutureExamplesTest {
 
+	// The examples accept an Executor so tests can run deterministically. Real
+	// production code would normally use a real executor or the common pool.
 	private final Executor sameThreadExecutor = Runnable::run;
 	private final CompletableFutureExamples examples = new CompletableFutureExamples(sameThreadExecutor);
 

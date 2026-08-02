@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Demonstrates virtual threads, finalized in Java 21.
@@ -56,5 +58,49 @@ public class VirtualThreadsExamples {
 			thread.join();
 		}
 		return names;
+	}
+
+	/**
+	 * Starts many virtual threads that briefly block, then waits until all of them
+	 * complete.
+	 *
+	 * <p>
+	 * This is not a benchmark. It is a small demonstration of the design goal:
+	 * virtual threads make thread-per-task code practical for many tasks that
+	 * spend most of their time waiting.
+	 * </p>
+	 *
+	 * @param numberOfTasks number of virtual threads to start
+	 * @return number of completed tasks
+	 * @throws InterruptedException when waiting is interrupted
+	 */
+	public int runManyBlockingVirtualThreadTasks(int numberOfTasks) throws InterruptedException {
+		CountDownLatch started = new CountDownLatch(numberOfTasks);
+		CountDownLatch release = new CountDownLatch(1);
+		AtomicInteger completed = new AtomicInteger();
+		List<Thread> threads = new ArrayList<>();
+
+		for (int index = 0; index < numberOfTasks; index++) {
+			Thread thread = Thread.ofVirtual().start(() -> {
+				started.countDown();
+				try {
+					release.await();
+					Thread.sleep(1);
+					completed.incrementAndGet();
+				} catch (InterruptedException exception) {
+					Thread.currentThread().interrupt();
+				}
+			});
+			threads.add(thread);
+		}
+
+		started.await();
+		release.countDown();
+
+		for (Thread thread : threads) {
+			thread.join();
+		}
+
+		return completed.get();
 	}
 }

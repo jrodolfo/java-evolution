@@ -24,4 +24,18 @@ class VirtualThreadsExamplesTest {
 				.hasSize(3)
 				.allMatch(name -> name.startsWith("worker-"));
 	}
+
+	@Test
+	void manyVirtualThreadsCanBlockAndStillComplete() throws InterruptedException {
+		// Given
+		int numberOfTasks = 500;
+
+		// When
+		int completedTasks = examples.runManyBlockingVirtualThreadTasks(numberOfTasks);
+
+		// Then
+		assertThat(completedTasks)
+				.as("Virtual threads should support many simple blocking tasks without platform-thread-per-task cost")
+				.isEqualTo(numberOfTasks);
+	}
 }

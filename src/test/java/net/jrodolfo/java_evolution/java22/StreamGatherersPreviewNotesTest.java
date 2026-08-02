@@ -10,8 +10,18 @@ class StreamGatherersPreviewNotesTest {
 
 	@Test
 	void notesExplainStreamGatherersPreview() {
-		assertThat(notes.purpose()).contains("custom intermediate stream operations");
-		assertThat(notes.exampleUseCase()).contains("windowing").contains("scanning");
-		assertThat(notes.projectDecision()).contains("preview");
+		assertThat(notes.purpose())
+				.as("The note should explain the problem stream gatherers solve")
+				.contains("custom intermediate stream operations");
+		assertThat(notes.exampleUseCase())
+				.as("The note should name examples that were awkward with only built-in stream operations")
+				.contains("windowing")
+				.contains("scanning")
+				.contains("transformations");
+		assertThat(notes.projectDecision())
+				.as("The note should explain why Java 22 keeps this as documentation instead of final runnable syntax")
+				.contains("Java 22")
+				.contains("preview")
+				.contains("notes");
 	}
 }
