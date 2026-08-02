@@ -28,7 +28,9 @@ Test: `FlexibleConstructorBodiesExamplesTest`
 
 Module import declarations let source code import public packages exported by a module with one declaration.
 
-This is useful for learning, scripts, and code that naturally uses a broad module surface. The feature was previewed in Java 23 and Java 24, then finalized in Java 25.
+This is useful for learning, scripts, and code that naturally uses a broad module surface. The feature was previewed in Java 23 by JEP 476, previewed again in Java 24 by JEP 494, and finalized in Java 25 by JEP 511.
+
+This is a final Java 25 feature documented via notes because module imports are most natural in small source files, scripts, and examples outside this Spring Boot package tree.
 
 Example: `ModuleImportDeclarationsNotes`
 
@@ -40,7 +42,7 @@ Java traditionally required a class declaration and a static `main` method even 
 
 Java 25 finalized compact source files and instance main methods, reducing ceremony for learning, scripts, and small utilities.
 
-This repository keeps the feature as notes because compact source files belong naturally to source-launcher examples, not to the Spring Boot package tree.
+This is a final Java 25 feature documented via notes because compact source files belong naturally to source-launcher examples, not to the Spring Boot package tree.
 
 Example: `CompactSourceFilesNotes`
 
@@ -50,7 +52,7 @@ Test: `CompactSourceFilesNotesTest`
 
 Applications often need to derive keys from existing secret material and contextual information.
 
-Java 25 finalized the Key Derivation Function API. This repository keeps it as notes because real cryptographic examples need careful provider and security setup.
+Java 25 finalized the Key Derivation Function API in JEP 510. This is a final security API documented via notes because real cryptographic examples need careful provider and security setup.
 
 Example: `KeyDerivationFunctionNotes`
 

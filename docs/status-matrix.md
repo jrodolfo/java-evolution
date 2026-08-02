@@ -13,7 +13,7 @@ Status vocabulary:
 - `final`: stable feature in the named release
 - `preview`: available for feedback, may change later
 - `incubator`: non-final incubating API
-- `notes-only`: represented as a notes class in this repository
+- `notes-only`: represented as a notes class in this repository; this does not imply the Java feature itself is non-final
 - `runtime`: JVM, GC, diagnostics, startup, or migration behavior
 - `tooling`: command-line, launcher, JavaDoc, or development support
 - `security`: cryptography or security platform feature
@@ -76,7 +76,7 @@ Status vocabulary:
 | 19 | Virtual threads preview | preview | `VirtualThreadsPreviewExamples` | `VirtualThreadsPreviewExamplesTest` | [JEP 425](https://openjdk.org/jeps/425) |
 | 19 | Record patterns preview | preview | `RecordPatternsPreviewExamples` | `RecordPatternsPreviewExamplesTest` | [JEP 405](https://openjdk.org/jeps/405) |
 | 19 | Pattern matching switch preview | preview | `PatternMatchingSwitchPreviewExamples` | `PatternMatchingSwitchPreviewExamplesTest` | [JEP 427](https://openjdk.org/jeps/427) |
-| 19 | Structured concurrency | incubator, notes-only | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` | [JEP 428](https://openjdk.org/jeps/428) |
+| 19 | Structured concurrency incubator | incubator, notes-only | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` | [JEP 428](https://openjdk.org/jeps/428) |
 | 19 | Foreign Function and Memory API | preview, notes-only | `ForeignFunctionMemoryApiPreviewNotes` | `ForeignFunctionMemoryApiPreviewNotesTest` | [JEP 424](https://openjdk.org/jeps/424) |
 | 20 | Record patterns second preview | preview | `RecordPatternsSecondPreviewExamples` | `RecordPatternsSecondPreviewExamplesTest` | [JEP 432](https://openjdk.org/jeps/432) |
 | 20 | Pattern matching switch fourth preview | preview | `PatternMatchingSwitchFourthPreviewExamples` | `PatternMatchingSwitchFourthPreviewExamplesTest` | [JEP 433](https://openjdk.org/jeps/433) |
@@ -90,7 +90,7 @@ Status vocabulary:
 | 21 | Pattern matching switch final | final | `PatternMatchingSwitchExamples` | `PatternMatchingSwitchExamplesTest` | [JEP 441](https://openjdk.org/jeps/441) |
 | 21 | Sequenced collections | final | `SequencedCollectionsExamples` | `SequencedCollectionsExamplesTest` | [JEP 431](https://openjdk.org/jeps/431) |
 | 21 | Unnamed patterns and variables preview | preview | `UnnamedPatternsVariablesPreviewExamples` | `UnnamedPatternsVariablesPreviewExamplesTest` | [JEP 443](https://openjdk.org/jeps/443) |
-| 21 | Key Encapsulation Mechanism API | security, notes-only | `KeyEncapsulationMechanismNotes` | `KeyEncapsulationMechanismNotesTest` | [JEP 452](https://openjdk.org/jeps/452) |
+| 21 | Key Encapsulation Mechanism API | final, security, notes-only | `KeyEncapsulationMechanismNotes` | `KeyEncapsulationMechanismNotesTest` | [JEP 452](https://openjdk.org/jeps/452) |
 | 21 | Scoped values preview | preview, notes-only | `ScopedValuesPreviewNotes` | `ScopedValuesPreviewNotesTest` | [JEP 446](https://openjdk.org/jeps/446) |
 | 21 | Structured concurrency preview | preview, notes-only | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` | [JEP 453](https://openjdk.org/jeps/453) |
 | 22 | Unnamed variables and patterns final | final | `UnnamedVariablesPatternsExamples` | `UnnamedVariablesPatternsExamplesTest` | [JEP 456](https://openjdk.org/jeps/456) |
@@ -115,7 +115,7 @@ Status vocabulary:
 | 24 | Class-File API final | final, notes-only | `ClassFileApiNotes` | `ClassFileApiNotesTest` | [JEP 484](https://openjdk.org/jeps/484) |
 | 24 | Security Manager disabled | runtime, notes-only | `SecurityManagerDisabledNotes` | `SecurityManagerDisabledNotesTest` | [JEP 486](https://openjdk.org/jeps/486) |
 | 24 | Virtual-thread synchronization | runtime, notes-only | `VirtualThreadSynchronizationNotes` | `VirtualThreadSynchronizationNotesTest` | [JEP 491](https://openjdk.org/jeps/491) |
-| 24 | Quantum-resistant crypto | security, notes-only | `QuantumResistantCryptoNotes` | `QuantumResistantCryptoNotesTest` | [JEP 496](https://openjdk.org/jeps/496), [JEP 497](https://openjdk.org/jeps/497) |
+| 24 | Quantum-resistant crypto | final, security, notes-only | `QuantumResistantCryptoNotes` | `QuantumResistantCryptoNotesTest` | [JEP 496](https://openjdk.org/jeps/496), [JEP 497](https://openjdk.org/jeps/497) |
 | 24 | AOT class loading | runtime, notes-only | `AotClassLoadingNotes` | `AotClassLoadingNotesTest` | [JEP 483](https://openjdk.org/jeps/483) |
 | 24 | KDF preview | security, preview, notes-only | `KeyDerivationFunctionPreviewNotes` | `KeyDerivationFunctionPreviewNotesTest` | [JEP 478](https://openjdk.org/jeps/478) |
 | 24 | Flexible constructor bodies third preview | preview, notes-only | `FlexibleConstructorBodiesThirdPreviewNotes` | `FlexibleConstructorBodiesThirdPreviewNotesTest` | [JEP 492](https://openjdk.org/jeps/492) |
@@ -127,7 +127,7 @@ Status vocabulary:
 | 25 | Flexible constructor bodies final | final | `FlexibleConstructorBodiesExamples` | `FlexibleConstructorBodiesExamplesTest` | [JEP 513](https://openjdk.org/jeps/513) |
 | 25 | Module import declarations final | final, notes-only | `ModuleImportDeclarationsNotes` | `ModuleImportDeclarationsNotesTest` | [JEP 511](https://openjdk.org/jeps/511) |
 | 25 | Compact source files final | final, notes-only | `CompactSourceFilesNotes` | `CompactSourceFilesNotesTest` | [JEP 512](https://openjdk.org/jeps/512) |
-| 25 | Key Derivation Function API final | security, notes-only | `KeyDerivationFunctionNotes` | `KeyDerivationFunctionNotesTest` | [JEP 510](https://openjdk.org/jeps/510) |
+| 25 | Key Derivation Function API final | final, security, notes-only | `KeyDerivationFunctionNotes` | `KeyDerivationFunctionNotesTest` | [JEP 510](https://openjdk.org/jeps/510) |
 | 25 | Primitive patterns third preview | preview, notes-only | `PrimitivePatternsThirdPreviewNotes` | `PrimitivePatternsThirdPreviewNotesTest` | [JEP 507](https://openjdk.org/jeps/507) |
 | 25 | Stable values preview | preview, notes-only | `StableValuesPreviewNotes` | `StableValuesPreviewNotesTest` | [JEP 502](https://openjdk.org/jeps/502) |
 | 25 | PEM encodings preview | security, preview, notes-only | `PemEncodingsPreviewNotes` | `PemEncodingsPreviewNotesTest` | [JEP 470](https://openjdk.org/jeps/470) |

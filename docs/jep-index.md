@@ -8,7 +8,8 @@ Status labels:
 - **Preview**: available for feedback, may change later.
 - **Incubator**: non-final incubating API, usually in an incubator module.
 - **Tooling**: command-line, JavaDoc, launcher, or build/development support.
-- **Runtime**: JVM, GC, diagnostics, startup, security, or migration behavior.
+- **Runtime**: JVM, GC, diagnostics, startup, or migration behavior.
+- **Security**: cryptography or security platform feature.
 - **Notes**: represented as a notes class in this repository.
 
 ## Java 8
@@ -132,7 +133,7 @@ Status labels:
 | [JEP 443](https://openjdk.org/jeps/443) | Unnamed Patterns and Variables | Preview |
 | [JEP 446](https://openjdk.org/jeps/446) | Scoped Values | Preview, Notes |
 | [JEP 453](https://openjdk.org/jeps/453) | Structured Concurrency | Preview, Notes |
-| [JEP 452](https://openjdk.org/jeps/452) | Key Encapsulation Mechanism API | Final, Notes |
+| [JEP 452](https://openjdk.org/jeps/452) | Key Encapsulation Mechanism API | Final, Security, Notes |
 
 ## Java 22
 
@@ -170,10 +171,10 @@ Status labels:
 | [JEP 484](https://openjdk.org/jeps/484) | Class-File API | Final, Notes |
 | [JEP 486](https://openjdk.org/jeps/486) | Permanently Disable the Security Manager | Runtime, Notes |
 | [JEP 491](https://openjdk.org/jeps/491) | Synchronize Virtual Threads without Pinning | Runtime, Notes |
-| [JEP 496](https://openjdk.org/jeps/496) | Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism | Final, Notes |
-| [JEP 497](https://openjdk.org/jeps/497) | Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm | Final, Notes |
+| [JEP 496](https://openjdk.org/jeps/496) | Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism | Final, Security, Notes |
+| [JEP 497](https://openjdk.org/jeps/497) | Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm | Final, Security, Notes |
 | [JEP 483](https://openjdk.org/jeps/483) | Ahead-of-Time Class Loading & Linking | Runtime, Notes |
-| [JEP 478](https://openjdk.org/jeps/478) | Key Derivation Function API | Preview, Notes |
+| [JEP 478](https://openjdk.org/jeps/478) | Key Derivation Function API | Preview, Security, Notes |
 | [JEP 492](https://openjdk.org/jeps/492) | Flexible Constructor Bodies | Preview, Notes |
 | [JEP 494](https://openjdk.org/jeps/494) | Module Import Declarations | Preview, Notes |
 | [JEP 488](https://openjdk.org/jeps/488) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
@@ -188,10 +189,10 @@ Status labels:
 | [JEP 513](https://openjdk.org/jeps/513) | Flexible Constructor Bodies | Final |
 | [JEP 511](https://openjdk.org/jeps/511) | Module Import Declarations | Final, Notes |
 | [JEP 512](https://openjdk.org/jeps/512) | Compact Source Files and Instance Main Methods | Final, Notes |
-| [JEP 510](https://openjdk.org/jeps/510) | Key Derivation Function API | Final, Notes |
+| [JEP 510](https://openjdk.org/jeps/510) | Key Derivation Function API | Final, Security, Notes |
 | [JEP 507](https://openjdk.org/jeps/507) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
 | [JEP 502](https://openjdk.org/jeps/502) | Stable Values | Preview, Notes |
-| [JEP 470](https://openjdk.org/jeps/470) | PEM Encodings of Cryptographic Objects | Preview, Notes |
+| [JEP 470](https://openjdk.org/jeps/470) | PEM Encodings of Cryptographic Objects | Preview, Security, Notes |
 | [JEP 505](https://openjdk.org/jeps/505) | Structured Concurrency | Preview, Notes |
 | [JEP 508](https://openjdk.org/jeps/508) | Vector API | Incubator, Notes |
 | [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | Runtime, Notes |

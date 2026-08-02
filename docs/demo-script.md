@@ -97,7 +97,7 @@ src/test/java/net/jrodolfo/java_evolution/java25/ScopedValuesExamplesTest.java
 Say:
 
 ```text
-For newer releases, I separate final features from preview, incubator, runtime, and tooling features. Scoped values are represented as a final Java 25 feature, while other Java 25 topics are documented as notes when they need special flags or setup.
+For newer releases, I separate final features from preview, incubator, runtime, and tooling features. Scoped values are represented as a final executable Java 25 feature, while some other final Java 25 features are documented as notes when they fit source-launcher, cryptography, JVM, or operational examples better than tiny JUnit demos.
 ```
 
 Run:

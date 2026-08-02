@@ -58,7 +58,9 @@ Before structured concurrency, related tasks were often started in different pla
 
 Structured concurrency treats related concurrent subtasks as one unit of work. The goal is to make concurrent code behave more like structured sequential code: there is a clear scope, clear ownership, and clear failure behavior.
 
-This repository keeps the Java 19 version as notes because the API was incubating and changed in later releases.
+Java 19 introduced structured concurrency as an incubator API in JEP 428. This repository keeps the Java 19 version as notes because the API was incubating and changed in later releases.
+
+The class name still uses `PreviewNotes` to preserve the existing navigation, but the official Java 19 status is incubator.
 
 Example: `StructuredConcurrencyPreviewNotes`
 
@@ -87,7 +89,7 @@ mvn -Dtest=VirtualThreadsPreviewExamplesTest,RecordPatternsPreviewExamplesTest t
 mvn -Dtest=PatternMatchingSwitchPreviewExamplesTest,StructuredConcurrencyPreviewNotesTest,ForeignFunctionMemoryApiPreviewNotesTest test
 ```
 
-The structured concurrency and foreign memory examples are notes-based because their early forms were preview/incubator APIs that changed across releases. After this package, continue with Java 20 to see those preview and incubator features refined.
+The structured concurrency and foreign memory examples are notes-based because their early incubator and preview forms changed across releases. After this package, continue with Java 20 to see those APIs refined.
 
 ## References
 

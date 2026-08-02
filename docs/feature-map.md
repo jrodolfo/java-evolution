@@ -142,7 +142,7 @@ Learning notes: [java19 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Virtual threads preview | `VirtualThreadsPreviewExamples` | `VirtualThreadsPreviewExamplesTest` |
 | Record patterns preview | `RecordPatternsPreviewExamples` | `RecordPatternsPreviewExamplesTest` |
 | Pattern matching switch preview | `PatternMatchingSwitchPreviewExamples` | `PatternMatchingSwitchPreviewExamplesTest` |
-| Structured concurrency | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` |
+| Structured concurrency incubator | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` |
 | Foreign Function and Memory API | `ForeignFunctionMemoryApiPreviewNotes` | `ForeignFunctionMemoryApiPreviewNotesTest` |
 
 ## Java 20

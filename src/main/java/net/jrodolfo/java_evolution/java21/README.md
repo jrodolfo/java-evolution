@@ -106,7 +106,7 @@ A Key Encapsulation Mechanism helps two parties establish shared symmetric key m
 
 The problem is common in secure communication: two sides need to agree on a secret without sending that secret directly over the network.
 
-This repository keeps KEM as notes because a realistic example depends on cryptographic provider details and would distract from the core Java-version learning path.
+Java 21 introduced KEM as a final security API in JEP 452. This repository keeps KEM as notes because a realistic example depends on cryptographic provider details and would distract from the core Java-version learning path.
 
 Example: `KeyEncapsulationMechanismNotes`
 

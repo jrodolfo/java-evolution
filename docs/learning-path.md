@@ -111,25 +111,56 @@ Interview angle: treat Java 21 as the modern baseline. Explain virtual threads a
 
 Java 22 through 25 are useful for showing that you can read current Java evolution carefully. Some features are final and usable directly. Others are preview, incubator, runtime, tooling, or notes-only topics because they require flags, external setup, or APIs that are not ideal for a small portable example.
 
-Read these first:
+Read these first by version:
+
+Java 22:
 
 - `src/main/java/net/jrodolfo/java_evolution/java22/UnnamedVariablesPatternsExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java22/StreamGatherersPreviewNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java22/ForeignFunctionMemoryApiNotes.java`
+
+Run:
+
+```bash
+mvn -Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersPreviewNotesTest,ForeignFunctionMemoryApiNotesTest test
+```
+
+Java 23:
+
 - `src/main/java/net/jrodolfo/java_evolution/java23/MarkdownDocumentationCommentsNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java23/ModuleImportDeclarationsPreviewNotes.java`
+
+Run:
+
+```bash
+mvn -Dtest=MarkdownDocumentationCommentsNotesTest,ModuleImportDeclarationsPreviewNotesTest test
+```
+
+Java 24:
+
 - `src/main/java/net/jrodolfo/java_evolution/java24/StreamGatherersExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java24/ClassFileApiNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java24/SecurityManagerDisabledNotes.java`
+
+Run:
+
+```bash
+mvn -Dtest=StreamGatherersExamplesTest,ClassFileApiNotesTest,SecurityManagerDisabledNotesTest test
+```
+
+Java 25:
+
 - `src/main/java/net/jrodolfo/java_evolution/java25/ScopedValuesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/FlexibleConstructorBodiesExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/KeyDerivationFunctionNotes.java`
 
 Run:
 
 ```bash
-mvn -Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest test
-mvn -Dtest=MarkdownDocumentationCommentsNotesTest,ClassFileApiNotesTest,CompactSourceFilesNotesTest test
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
+mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest test
 ```
 
 Interview angle: be explicit about maturity. A strong answer distinguishes final features from preview and incubator work, and explains why some topics are documented as notes instead of executable demos.
