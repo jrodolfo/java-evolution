@@ -4,8 +4,15 @@ package net.jrodolfo.java_evolution.java17;
  * Explains strong encapsulation of JDK internals in Java 17.
  *
  * <p>
+ * Before Java 17, some applications and libraries reached into internal JDK
+ * packages through reflection or unsupported APIs. That made upgrades fragile
+ * because those internals were not stable public contracts.
+ * </p>
+ *
+ * <p>
  * Java 17 strongly encapsulated internal JDK APIs by default. This matters for
- * libraries that previously depended on unsupported internal packages.
+ * libraries that previously depended on unsupported internal packages and
+ * pushes code toward supported public APIs.
  * </p>
  */
 public class StrongEncapsulationNotes {

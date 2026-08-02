@@ -5,9 +5,16 @@ package net.jrodolfo.java_evolution.java17;
  * feature.
  *
  * <p>
- * Pattern matching for switch became final later, in Java 21. This project
- * compiles on JDK 25, so the example uses final syntax while documenting the
- * Java 17 preview origin.
+ * Before pattern matching for switch, type-based branching often required a
+ * chain of {@code if}, {@code instanceof}, and casts. That scattered the
+ * dispatch logic across multiple statements.
+ * </p>
+ *
+ * <p>
+ * Pattern matching for switch solves this by letting a switch branch on type
+ * patterns. It became final later, in Java 21. This project compiles on JDK
+ * 25, so the example uses final syntax while documenting the Java 17 preview
+ * origin.
  * </p>
  */
 public class PatternMatchingSwitchPreviewExamples {

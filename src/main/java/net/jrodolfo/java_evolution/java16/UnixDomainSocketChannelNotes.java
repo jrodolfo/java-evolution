@@ -4,9 +4,15 @@ package net.jrodolfo.java_evolution.java16;
  * Explains Unix-domain socket channel support, introduced in Java 16.
  *
  * <p>
- * Unix-domain sockets are useful for local inter-process communication. The API
- * is platform-dependent, so this repository keeps the example explanatory
- * instead of opening OS-specific sockets in unit tests.
+ * Before Java 16, Java's standard socket channel APIs focused on network
+ * sockets. Local inter-process communication through Unix-domain sockets
+ * required platform-specific approaches or non-standard libraries.
+ * </p>
+ *
+ * <p>
+ * Java 16 added standard Unix-domain socket channel support. The API is
+ * platform-dependent, so this repository keeps the example explanatory instead
+ * of opening OS-specific sockets in unit tests.
  * </p>
  */
 public class UnixDomainSocketChannelNotes {

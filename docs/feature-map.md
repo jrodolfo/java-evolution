@@ -89,6 +89,8 @@ Learning notes: [java14 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 ## Java 15
 
+Learning notes: [java15 README](../src/main/java/net/jrodolfo/java_evolution/java15/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | Text blocks final | `TextBlockExamples` | `TextBlockExamplesTest` |
@@ -96,6 +98,8 @@ Learning notes: [java14 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Hidden classes | `HiddenClassesNotes` | `HiddenClassesNotesTest` |
 
 ## Java 16
+
+Learning notes: [java16 README](../src/main/java/net/jrodolfo/java_evolution/java16/README.md)
 
 | Feature | Example | Test |
 |---|---|---|
@@ -105,6 +109,8 @@ Learning notes: [java14 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Unix-domain socket channels | `UnixDomainSocketChannelNotes` | `UnixDomainSocketChannelNotesTest` |
 
 ## Java 17
+
+Learning notes: [java17 README](../src/main/java/net/jrodolfo/java_evolution/java17/README.md)
 
 | Feature | Example | Test |
 |---|---|---|

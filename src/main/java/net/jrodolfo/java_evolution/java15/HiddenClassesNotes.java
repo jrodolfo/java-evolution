@@ -4,9 +4,17 @@ package net.jrodolfo.java_evolution.java15;
  * Explains hidden classes, introduced in Java 15.
  *
  * <p>
- * Hidden classes are mostly useful for frameworks and language runtimes that
- * generate classes dynamically. A full demonstration usually requires bytecode
- * generation, so this repository keeps the example explanatory.
+ * Before hidden classes, framework-generated implementation classes were more
+ * discoverable and name-addressable than they often needed to be. That was a
+ * poor fit for runtime-generated implementation details used by proxies,
+ * expression engines, and language runtimes.
+ * </p>
+ *
+ * <p>
+ * Hidden classes solve this by supporting dynamically generated classes that
+ * are not intended to be found by normal name lookup. A full demonstration
+ * usually requires bytecode generation, so this repository keeps the example
+ * explanatory.
  * </p>
  */
 public class HiddenClassesNotes {

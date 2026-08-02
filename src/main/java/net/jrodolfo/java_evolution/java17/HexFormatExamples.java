@@ -4,6 +4,17 @@ import java.util.HexFormat;
 
 /**
  * Demonstrates {@link HexFormat}, introduced in Java 17.
+ *
+ * <p>
+ * Before Java 17, converting bytes to hexadecimal text and parsing hexadecimal
+ * text back into bytes often required custom utility code or an external
+ * library.
+ * </p>
+ *
+ * <p>
+ * {@code HexFormat} solves this small but common problem with a standard API
+ * that supports parsing, formatting, delimiters, prefixes, and suffixes.
+ * </p>
  */
 public class HexFormatExamples {
 

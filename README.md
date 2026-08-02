@@ -88,9 +88,9 @@ For a class-by-class navigation table, see [docs/feature-map.md](docs/feature-ma
 | 12 | [`java12`](src/main/java/net/jrodolfo/java_evolution/java12/README.md) | Switch Expressions preview, `Collectors.teeing`, `String.indent`, `Files.mismatch`, Compact Number Format |
 | 13 | [`java13`](src/main/java/net/jrodolfo/java_evolution/java13/README.md) | Text Blocks preview, switch `yield` preview, `FileSystems.newFileSystem(Path)` |
 | 14 | [`java14`](src/main/java/net/jrodolfo/java_evolution/java14/README.md) | Switch Expressions final, Helpful NullPointerExceptions, Records preview, Pattern Matching for `instanceof` preview |
-| 15 | `java15` | Text Blocks final, Sealed Classes preview, Hidden Classes notes |
-| 16 | `java16` | Records final, Pattern Matching for `instanceof` final, `Stream.toList`, Unix-domain socket notes |
-| 17 | `java17` | Sealed Classes final, Pattern Matching for switch preview, Random Generator API, `HexFormat`, Strong Encapsulation notes |
+| 15 | [`java15`](src/main/java/net/jrodolfo/java_evolution/java15/README.md) | Text Blocks final, Sealed Classes preview, Hidden Classes notes |
+| 16 | [`java16`](src/main/java/net/jrodolfo/java_evolution/java16/README.md) | Records final, Pattern Matching for `instanceof` final, `Stream.toList`, Unix-domain socket notes |
+| 17 | [`java17`](src/main/java/net/jrodolfo/java_evolution/java17/README.md) | Sealed Classes final, Pattern Matching for switch preview, Random Generator API, `HexFormat`, Strong Encapsulation notes |
 | 18 | `java18` | UTF-8 default charset, Simple Web Server notes, JavaDoc snippets notes, InetAddress resolver SPI notes |
 | 19 | `java19` | Virtual Threads preview, Record Patterns preview, Pattern Matching switch preview, Structured Concurrency notes, FFM notes |
 | 20 | `java20` | Record Patterns second preview, Pattern Matching switch fourth preview, Scoped Values/Structured Concurrency/FFM/Vector notes |

@@ -4,9 +4,15 @@ package net.jrodolfo.java_evolution.java16;
  * Demonstrates records, finalized in Java 16.
  *
  * <p>
- * Records are compact data-carrier classes. The compiler generates a canonical
- * constructor, accessors, {@code equals}, {@code hashCode}, and {@code toString}
- * from the record components.
+ * Before records, simple immutable data carriers needed a lot of mechanical
+ * code: fields, constructors, accessors, {@code equals}, {@code hashCode}, and
+ * {@code toString}. That boilerplate obscured the actual data being modeled.
+ * </p>
+ *
+ * <p>
+ * Records solve this by making the state declaration central. The compiler
+ * generates a canonical constructor, accessors, {@code equals},
+ * {@code hashCode}, and {@code toString} from the record components.
  * </p>
  */
 public class RecordExamples {

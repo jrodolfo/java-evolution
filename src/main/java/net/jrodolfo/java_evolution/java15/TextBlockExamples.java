@@ -4,8 +4,15 @@ package net.jrodolfo.java_evolution.java15;
  * Demonstrates text blocks, finalized in Java 15.
  *
  * <p>
- * Text blocks make multi-line strings easier to read and maintain, especially
- * for JSON, SQL, HTML, and other structured text.
+ * Before text blocks, multi-line strings required newline escapes,
+ * concatenation, and careful indentation. That made embedded JSON, SQL, HTML,
+ * and other structured text hard to read in Java source code.
+ * </p>
+ *
+ * <p>
+ * Text blocks solve this by making multi-line string literals readable and
+ * maintainable. Java 15 finalized the feature after previews in Java 13 and
+ * Java 14.
  * </p>
  */
 public class TextBlockExamples {

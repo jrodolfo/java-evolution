@@ -4,9 +4,15 @@ package net.jrodolfo.java_evolution.java17;
  * Demonstrates sealed classes, finalized in Java 17.
  *
  * <p>
- * A sealed type explicitly controls which classes or interfaces may implement
- * or extend it. This makes domain hierarchies easier to understand and safer to
- * exhaustively handle.
+ * Before sealed classes, Java could not directly express a closed hierarchy in
+ * the type system. A parent type was usually open to any accessible subtype,
+ * even when the domain had a known finite set of valid implementations.
+ * </p>
+ *
+ * <p>
+ * A sealed type solves this by explicitly controlling which classes or
+ * interfaces may implement or extend it. This makes domain hierarchies easier
+ * to understand and safer to exhaustively handle.
  * </p>
  */
 public class SealedClassesExamples {
@@ -60,6 +66,11 @@ public class SealedClassesExamples {
 	public non-sealed static class Square implements Shape {
 		private final double side;
 
+		/**
+		 * Creates a square with the given side length.
+		 *
+		 * @param side the square side length
+		 */
 		public Square(double side) {
 			this.side = side;
 		}

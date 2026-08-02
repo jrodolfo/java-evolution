@@ -8,8 +8,14 @@ import java.util.random.RandomGeneratorFactory;
  * Java 17.
  *
  * <p>
- * Java 17 added the {@link RandomGenerator} interface and factories for
- * selecting named algorithms.
+ * Before Java 17, random-number APIs were less unified and algorithm selection
+ * was not as discoverable through one common abstraction.
+ * </p>
+ *
+ * <p>
+ * Java 17 added the {@link RandomGenerator} interface and
+ * {@link RandomGeneratorFactory} for selecting named algorithms. This gives
+ * code a standard way to choose and discover pseudo-random number generators.
  * </p>
  */
 public class RandomGeneratorExamples {
