@@ -13,9 +13,14 @@ class FlexibleConstructorBodiesExamplesTest {
 	void constructorCanValidateBeforeDelegating() {
 		FlexibleConstructorBodiesExamples.Account account = examples.account(" Rodolfo ");
 
-		assertThat(account.owner()).isEqualTo("Rodolfo");
-		assertThat(account.active()).isTrue();
+		assertThat(account.owner())
+				.as("The public constructor should normalize the argument before delegating")
+				.isEqualTo("Rodolfo");
+		assertThat(account.active())
+				.as("Delegation should still create the account with its default active state")
+				.isTrue();
 		assertThatThrownBy(() -> examples.account(" "))
+				.as("Validation before constructor delegation should reject invalid arguments early")
 				.isInstanceOf(IllegalArgumentException.class)
 				.hasMessage("owner is required");
 	}

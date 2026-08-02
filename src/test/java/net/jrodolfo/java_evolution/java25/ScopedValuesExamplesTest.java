@@ -11,6 +11,7 @@ class ScopedValuesExamplesTest {
 	@Test
 	void scopedValueIsVisibleOnlyInsideBoundScope() throws Exception {
 		assertThat(examples.userInsideScope("Rodolfo"))
+				.as("The value should be visible while the scoped binding is active")
 				.isEqualTo("current user=Rodolfo");
 		assertThat(examples.userIsBoundOutsideScope())
 				.as("Scoped value should not remain bound after the scoped call")

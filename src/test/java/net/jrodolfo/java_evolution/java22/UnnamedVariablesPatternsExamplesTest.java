@@ -26,9 +26,17 @@ class UnnamedVariablesPatternsExamplesTest {
 
 	@Test
 	void unnamedPatternDocumentsIgnoredBinding() {
-		assertThat(examples.broadType("java")).isEqualTo("text");
-		assertThat(examples.broadType(22)).isEqualTo("number");
-		assertThat(examples.broadType(null)).isEqualTo("null");
-		assertThat(examples.broadType(true)).isEqualTo("other");
+		assertThat(examples.broadType("java"))
+				.as("The String pattern needs only the broad type, not the bound value")
+				.isEqualTo("text");
+		assertThat(examples.broadType(22))
+				.as("The Number pattern needs only the broad type, not the bound value")
+				.isEqualTo("number");
+		assertThat(examples.broadType(null))
+				.as("Pattern switches can handle null explicitly")
+				.isEqualTo("null");
+		assertThat(examples.broadType(true))
+				.as("Values outside the named patterns should use the default branch")
+				.isEqualTo("other");
 	}
 }
