@@ -12,6 +12,21 @@ const markdownFiles = [
 ];
 
 const errors = [];
+const testClasses = new Set();
+
+function walk(directory) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    const currentPath = path.join(directory, entry.name);
+
+    if (entry.isDirectory()) {
+      walk(currentPath);
+    } else if (entry.name.endsWith("Test.java")) {
+      testClasses.add(path.basename(entry.name, ".java"));
+    }
+  }
+}
+
+walk("src/test/java");
 
 for (const version of versions) {
   const readme = path.join(root, version, "README.md");
@@ -42,6 +57,14 @@ for (const file of markdownFiles) {
 
   if (/\*NotesTest/.test(text)) {
     errors.push(`${file} contains wildcard notes test reference; prefer concrete test class names`);
+  }
+
+  for (const match of text.matchAll(/-Dtest=([^\s]+) test/g)) {
+    for (const testClass of match[1].split(",")) {
+      if (!testClasses.has(testClass)) {
+        errors.push(`${file} references missing test class ${testClass}`);
+      }
+    }
   }
 }
 
