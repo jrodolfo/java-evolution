@@ -4,9 +4,17 @@
 [![links](https://github.com/jrodolfo/java-evolution/actions/workflows/links.yml/badge.svg)](https://github.com/jrodolfo/java-evolution/actions/workflows/links.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-`java-evolution` is a didactic Java reference project that demonstrates features introduced in each Java release from Java 8 through Java 25.
+`java-evolution` is a practical Java reference project that demonstrates features introduced in each Java release from Java 8 through Java 25.
+
+I built this repository as a place to learn, test, and document how Java has evolved over time. It is primarily for my own continued growth, but it is also meant to help other developers who want concise examples of newer language features, APIs, and idioms.
 
 The project is intentionally lightweight. Spring Boot provides the project shell and Maven setup, but the examples are plain Java classes with focused JUnit tests. The main goal is to make each feature easy to read, run, and revisit during study or interview preparation.
+
+## Why This Exists
+
+Java keeps evolving, and day-to-day work can easily settle into older habits. This repository makes that evolution concrete through code: what changed, why it matters, and how newer Java can be used clearly and effectively.
+
+The emphasis is clarity over cleverness. Examples should stay small, readable, and easy to run. When useful, they should show not only how a feature works, but also what problem it solves.
 
 ## Requirements
 
