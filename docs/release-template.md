@@ -26,10 +26,14 @@ Use this checklist when adding examples for a new Java release.
 
 ## Documentation
 
+- Add a version README using the same shape as the existing packages: release overview, feature sections, how to read this package, and references.
 - Add the release to the `README.md` feature index.
 - Add official OpenJDK and JEP links where useful.
 - Add the release to `docs/feature-map.md`.
+- Add the release to `docs/status-matrix.md`.
+- Add the release or key features to `docs/learning-path.md` and `docs/demo-script.md` when they change the suggested study flow.
 - Mention preview or incubator status explicitly when a feature was not final in that release.
+- Run `make docs-audit` to catch stale grouped-test names, wildcard test references, and missing version READMEs.
 - Confirm generated JavaDoc is readable for the new classes.
 
 ## Final Check

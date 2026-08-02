@@ -7,7 +7,7 @@ export PATH := $(JAVA_HOME)/bin:$(PATH)
 JAVA_CMD := $(JAVA_HOME)/bin/java
 endif
 
-.PHONY: help java-version test clean-test run docs clean-docs links check
+.PHONY: help java-version test clean-test run docs clean-docs docs-audit links check
 
 help:
 	@echo "available targets:"
@@ -17,6 +17,7 @@ help:
 	@echo "  make run           run the Spring Boot application"
 	@echo "  make docs          generate JavaDoc under target/site/apidocs"
 	@echo "  make clean-docs    remove generated JavaDoc"
+	@echo "  make docs-audit    check documentation navigation consistency"
 	@echo "  make links         check Markdown links with lychee"
 	@echo "  make check         show versions and run the test suite"
 
@@ -38,6 +39,9 @@ docs:
 
 clean-docs:
 	rm -rf target/site/apidocs
+
+docs-audit:
+	@node scripts/check-doc-navigation.mjs
 
 links:
 	lychee --config .lychee.toml README.md docs/*.md src/main/java/net/jrodolfo/java_evolution/java*/README.md

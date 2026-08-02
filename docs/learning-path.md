@@ -128,7 +128,7 @@ Run:
 
 ```bash
 mvn -Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest test
-mvn -Dtest=Java23NotesTest,Java24NotesTest,Java25NotesTest test
+mvn -Dtest=MarkdownDocumentationCommentsNotesTest,ClassFileApiNotesTest,CompactSourceFilesNotesTest test
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
 ```
 
@@ -144,4 +144,3 @@ Use this checklist when preparing to show the repository:
 4. Pick one Java 21 example and explain why it matters for current production Java.
 5. Pick one Java 25 example or notes class and explain whether the feature is final, preview, incubator, runtime, or tooling-related.
 6. Use [docs/jep-index.md](jep-index.md) when you need the official JEP number or status.
-

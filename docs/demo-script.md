@@ -140,7 +140,7 @@ Use this when time is short:
 1. Show `README.md` and explain the version-based structure.
 2. Open `java08/StreamExamples.java` to show Java 8 functional style.
 3. Open `java21/VirtualThreadsExamples.java` to show modern Java concurrency.
-4. Open `java25/ScopedValuesExamples.java` or `java25/Java25NotesTest.java` to show current-release awareness.
+4. Open `java25/ScopedValuesExamples.java` or `java25/CompactSourceFilesNotesTest.java` to show current-release awareness.
 5. Run one focused command:
 
 ```bash
@@ -180,4 +180,3 @@ Open the generated JavaDoc:
 ```text
 target/site/apidocs/index.html
 ```
-
