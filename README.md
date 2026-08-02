@@ -39,6 +39,7 @@ make docs
 ```
 
 The generated JavaDoc is written to `target/site/apidocs/index.html`.
+The published JavaDoc site is available at https://jrodolfo.github.io/java-evolution/.
 
 ## Important Design Choice
 
@@ -81,6 +82,7 @@ Example classes contain JavaDoc. Test classes are written as executable document
 - [Interview Guide](docs/interview-guide.md): talking points and demo flow for interviews.
 - [JEP Index](docs/jep-index.md): centralized JEP links with status labels.
 - [Feature Map](docs/feature-map.md): class-by-class navigation table.
+- [JavaDoc Site](https://jrodolfo.github.io/java-evolution/): generated API documentation published by GitHub Pages.
 
 ## Feature Index
 
