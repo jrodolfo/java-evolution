@@ -12,7 +12,7 @@ Java 23 introduced Markdown documentation comments so API docs can be written in
 
 Example: `MarkdownDocumentationCommentsNotes`
 
-Test: `Java23NotesTest`
+Test: `MarkdownDocumentationCommentsNotesTest`
 
 ## Primitive Patterns Preview
 
@@ -22,7 +22,7 @@ Java 23 previewed primitive types in patterns, `instanceof`, and `switch`, movin
 
 Example: `PrimitivePatternsPreviewNotes`
 
-Test: `Java23NotesTest`
+Test: `PrimitivePatternsPreviewNotesTest`
 
 ## Module Import Declarations Preview
 
@@ -32,7 +32,7 @@ Java 23 previewed module import declarations. The feature became final in Java 2
 
 Example: `ModuleImportDeclarationsPreviewNotes`
 
-Test: `Java23NotesTest`
+Test: `ModuleImportDeclarationsPreviewNotesTest`
 
 ## Flexible Constructor Bodies Second Preview
 
@@ -42,7 +42,7 @@ Java 23 refined flexible constructor bodies in a second preview. The goal is saf
 
 Example: `FlexibleConstructorBodiesSecondPreviewNotes`
 
-Test: `Java23NotesTest`
+Test: `FlexibleConstructorBodiesSecondPreviewNotesTest`
 
 ## Stream Gatherers Second Preview
 
@@ -52,7 +52,7 @@ Java 23 continued Stream Gatherers as a second preview. Gatherers became final i
 
 Example: `StreamGatherersSecondPreviewNotes`
 
-Test: `Java23NotesTest`
+Test: `StreamGatherersSecondPreviewNotesTest`
 
 ## Class-File API Second Preview
 
@@ -62,7 +62,7 @@ Java 23 continued the standard Class-File API as a second preview. The API becam
 
 Example: `ClassFileApiSecondPreviewNotes`
 
-Test: `Java23NotesTest`
+Test: `ClassFileApiSecondPreviewNotesTest`
 
 ## Scoped Values Third Preview
 
@@ -72,7 +72,7 @@ Java 23 kept scoped values in preview. The feature became final in Java 25.
 
 Example: `ScopedValuesThirdPreviewNotes`
 
-Test: `Java23NotesTest`
+Test: `ScopedValuesThirdPreviewNotesTest`
 
 ## Structured Concurrency Third Preview
 
@@ -82,7 +82,7 @@ Java 23 continued this feature as a third preview.
 
 Example: `StructuredConcurrencyThirdPreviewNotes`
 
-Test: `Java23NotesTest`
+Test: `StructuredConcurrencyThirdPreviewNotesTest`
 
 ## Unsafe Memory-Access Deprecation
 
@@ -92,7 +92,7 @@ Java 23 deprecated memory-access methods in `sun.misc.Unsafe`, continuing the mo
 
 Example: `UnsafeMemoryAccessDeprecationNotes`
 
-Test: `Java23NotesTest`
+Test: `UnsafeMemoryAccessDeprecationNotesTest`
 
 ## ZGC Generational Mode
 
@@ -102,16 +102,18 @@ This is a runtime behavior topic rather than a small source-code feature, so thi
 
 Example: `ZgcGenerationalModeNotes`
 
-Test: `Java23NotesTest`
+Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
 Start with `MarkdownDocumentationCommentsNotes`, then read the preview and runtime notes for primitive patterns, module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, unsafe memory-access deprecation, and ZGC generational mode.
 
-Run the grouped notes test:
+Run the focused notes tests:
 
 ```bash
-mvn -Dtest=Java23NotesTest test
+mvn -Dtest=MarkdownDocumentationCommentsNotesTest,PrimitivePatternsPreviewNotesTest,ModuleImportDeclarationsPreviewNotesTest test
+mvn -Dtest=FlexibleConstructorBodiesSecondPreviewNotesTest,StreamGatherersSecondPreviewNotesTest,ClassFileApiSecondPreviewNotesTest test
+mvn -Dtest=ScopedValuesThirdPreviewNotesTest,StructuredConcurrencyThirdPreviewNotesTest,UnsafeMemoryAccessDeprecationNotesTest,ZgcGenerationalModeNotesTest test
 ```
 
 This package is notes-heavy because many Java 23 topics are preview, runtime, or tooling features. After this package, continue with Java 24 to see stream gatherers and the Class-File API reach final status.

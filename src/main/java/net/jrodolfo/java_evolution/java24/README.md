@@ -22,7 +22,7 @@ Java 24 finalized the Class-File API. This repository keeps it as notes because 
 
 Example: `ClassFileApiNotes`
 
-Test: `Java24NotesTest`
+Test: `ClassFileApiNotesTest`
 
 ## Security Manager Disabled
 
@@ -32,7 +32,7 @@ Java 24 permanently disabled it. The practical lesson is that application isolat
 
 Example: `SecurityManagerDisabledNotes`
 
-Test: `Java24NotesTest`
+Test: `SecurityManagerDisabledNotesTest`
 
 ## Virtual Thread Synchronization
 
@@ -42,7 +42,7 @@ This matters for existing code because synchronized blocks are common in older l
 
 Example: `VirtualThreadSynchronizationNotes`
 
-Test: `Java24NotesTest`
+Test: `VirtualThreadSynchronizationNotesTest`
 
 ## Quantum-Resistant Crypto
 
@@ -52,7 +52,7 @@ This repository keeps the feature as notes because realistic cryptography exampl
 
 Example: `QuantumResistantCryptoNotes`
 
-Test: `Java24NotesTest`
+Test: `QuantumResistantCryptoNotesTest`
 
 ## Ahead-of-Time Class Loading
 
@@ -62,7 +62,7 @@ This is an operational/runtime feature, so it is documented as notes.
 
 Example: `AotClassLoadingNotes`
 
-Test: `Java24NotesTest`
+Test: `AotClassLoadingNotesTest`
 
 ## Key Derivation Function API Preview
 
@@ -72,7 +72,7 @@ Java 24 previewed a standard KDF API. It became final in Java 25.
 
 Example: `KeyDerivationFunctionPreviewNotes`
 
-Test: `Java24NotesTest`
+Test: `KeyDerivationFunctionPreviewNotesTest`
 
 ## Continuing Preview Features
 
@@ -94,7 +94,10 @@ Run the focused tests:
 
 ```bash
 mvn -Dtest=StreamGatherersExamplesTest test
-mvn -Dtest=Java24NotesTest test
+mvn -Dtest=ClassFileApiNotesTest,SecurityManagerDisabledNotesTest,VirtualThreadSynchronizationNotesTest test
+mvn -Dtest=QuantumResistantCryptoNotesTest,AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest test
+mvn -Dtest=PrimitivePatternsSecondPreviewNotesTest,FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest test
+mvn -Dtest=ScopedValuesFourthPreviewNotesTest,StructuredConcurrencyFourthPreviewNotesTest test
 ```
 
 This package combines one executable final-feature example with several runtime, security, tooling, and preview notes. After this package, continue with Java 25 to see scoped values, flexible constructor bodies, module imports, compact source files, and the KDF API reach final status.

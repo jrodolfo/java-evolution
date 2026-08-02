@@ -101,32 +101,39 @@ Status vocabulary:
 | 22 | Class-File API preview | preview, notes-only | `ClassFileApiPreviewNotes` | `ClassFileApiPreviewNotesTest` | [JEP 457](https://openjdk.org/jeps/457) |
 | 22 | Scoped values second preview | preview, notes-only | `ScopedValuesSecondPreviewNotes` | `ScopedValuesSecondPreviewNotesTest` | [JEP 464](https://openjdk.org/jeps/464) |
 | 22 | Structured concurrency second preview | preview, notes-only | `StructuredConcurrencySecondPreviewNotes` | `StructuredConcurrencySecondPreviewNotesTest` | [JEP 462](https://openjdk.org/jeps/462) |
-| 23 | Markdown documentation comments | tooling, documentation, notes-only | `MarkdownDocumentationCommentsNotes` | `Java23NotesTest` | [JEP 467](https://openjdk.org/jeps/467) |
-| 23 | Primitive patterns preview | preview, notes-only | `PrimitivePatternsPreviewNotes` | `Java23NotesTest` | [JEP 455](https://openjdk.org/jeps/455) |
-| 23 | Module import declarations preview | preview, notes-only | `ModuleImportDeclarationsPreviewNotes` | `Java23NotesTest` | [JEP 476](https://openjdk.org/jeps/476) |
-| 23 | Flexible constructor bodies second preview | preview, notes-only | `FlexibleConstructorBodiesSecondPreviewNotes` | `Java23NotesTest` | [JEP 482](https://openjdk.org/jeps/482) |
-| 23 | Stream Gatherers second preview | preview, notes-only | `StreamGatherersSecondPreviewNotes` | `Java23NotesTest` | [JEP 473](https://openjdk.org/jeps/473) |
-| 23 | Class-File API second preview | preview, notes-only | `ClassFileApiSecondPreviewNotes` | `Java23NotesTest` | [JEP 466](https://openjdk.org/jeps/466) |
-| 23 | Scoped values third preview | preview, notes-only | `ScopedValuesThirdPreviewNotes` | `Java23NotesTest` | [JEP 481](https://openjdk.org/jeps/481) |
-| 23 | Structured concurrency third preview | preview, notes-only | `StructuredConcurrencyThirdPreviewNotes` | `Java23NotesTest` | [JEP 480](https://openjdk.org/jeps/480) |
-| 23 | Unsafe memory-access deprecation | runtime, notes-only | `UnsafeMemoryAccessDeprecationNotes` | `Java23NotesTest` | [JEP 471](https://openjdk.org/jeps/471) |
-| 23 | ZGC generational mode | runtime, notes-only | `ZgcGenerationalModeNotes` | `Java23NotesTest` | [JEP 474](https://openjdk.org/jeps/474) |
+| 23 | Markdown documentation comments | tooling, documentation, notes-only | `MarkdownDocumentationCommentsNotes` | `MarkdownDocumentationCommentsNotesTest` | [JEP 467](https://openjdk.org/jeps/467) |
+| 23 | Primitive patterns preview | preview, notes-only | `PrimitivePatternsPreviewNotes` | `PrimitivePatternsPreviewNotesTest` | [JEP 455](https://openjdk.org/jeps/455) |
+| 23 | Module import declarations preview | preview, notes-only | `ModuleImportDeclarationsPreviewNotes` | `ModuleImportDeclarationsPreviewNotesTest` | [JEP 476](https://openjdk.org/jeps/476) |
+| 23 | Flexible constructor bodies second preview | preview, notes-only | `FlexibleConstructorBodiesSecondPreviewNotes` | `FlexibleConstructorBodiesSecondPreviewNotesTest` | [JEP 482](https://openjdk.org/jeps/482) |
+| 23 | Stream Gatherers second preview | preview, notes-only | `StreamGatherersSecondPreviewNotes` | `StreamGatherersSecondPreviewNotesTest` | [JEP 473](https://openjdk.org/jeps/473) |
+| 23 | Class-File API second preview | preview, notes-only | `ClassFileApiSecondPreviewNotes` | `ClassFileApiSecondPreviewNotesTest` | [JEP 466](https://openjdk.org/jeps/466) |
+| 23 | Scoped values third preview | preview, notes-only | `ScopedValuesThirdPreviewNotes` | `ScopedValuesThirdPreviewNotesTest` | [JEP 481](https://openjdk.org/jeps/481) |
+| 23 | Structured concurrency third preview | preview, notes-only | `StructuredConcurrencyThirdPreviewNotes` | `StructuredConcurrencyThirdPreviewNotesTest` | [JEP 480](https://openjdk.org/jeps/480) |
+| 23 | Unsafe memory-access deprecation | runtime, notes-only | `UnsafeMemoryAccessDeprecationNotes` | `UnsafeMemoryAccessDeprecationNotesTest` | [JEP 471](https://openjdk.org/jeps/471) |
+| 23 | ZGC generational mode | runtime, notes-only | `ZgcGenerationalModeNotes` | `ZgcGenerationalModeNotesTest` | [JEP 474](https://openjdk.org/jeps/474) |
 | 24 | Stream Gatherers final | final | `StreamGatherersExamples` | `StreamGatherersExamplesTest` | [JEP 485](https://openjdk.org/jeps/485) |
-| 24 | Class-File API final | final, notes-only | `ClassFileApiNotes` | `Java24NotesTest` | [JEP 484](https://openjdk.org/jeps/484) |
-| 24 | Security Manager disabled | runtime, notes-only | `SecurityManagerDisabledNotes` | `Java24NotesTest` | [JEP 486](https://openjdk.org/jeps/486) |
-| 24 | Virtual-thread synchronization | runtime, notes-only | `VirtualThreadSynchronizationNotes` | `Java24NotesTest` | [JEP 491](https://openjdk.org/jeps/491) |
-| 24 | Quantum-resistant crypto | security, notes-only | `QuantumResistantCryptoNotes` | `Java24NotesTest` | [JEP 496](https://openjdk.org/jeps/496), [JEP 497](https://openjdk.org/jeps/497) |
-| 24 | AOT class loading | runtime, notes-only | `AotClassLoadingNotes` | `Java24NotesTest` | [JEP 483](https://openjdk.org/jeps/483) |
-| 24 | KDF preview | security, preview, notes-only | `KeyDerivationFunctionPreviewNotes` | `Java24NotesTest` | [JEP 478](https://openjdk.org/jeps/478) |
-| 24 | Remaining preview/runtime notes | preview, runtime, notes-only | `*Notes` | `Java24NotesTest` | [java24 README](../src/main/java/net/jrodolfo/java_evolution/java24/README.md) |
+| 24 | Class-File API final | final, notes-only | `ClassFileApiNotes` | `ClassFileApiNotesTest` | [JEP 484](https://openjdk.org/jeps/484) |
+| 24 | Security Manager disabled | runtime, notes-only | `SecurityManagerDisabledNotes` | `SecurityManagerDisabledNotesTest` | [JEP 486](https://openjdk.org/jeps/486) |
+| 24 | Virtual-thread synchronization | runtime, notes-only | `VirtualThreadSynchronizationNotes` | `VirtualThreadSynchronizationNotesTest` | [JEP 491](https://openjdk.org/jeps/491) |
+| 24 | Quantum-resistant crypto | security, notes-only | `QuantumResistantCryptoNotes` | `QuantumResistantCryptoNotesTest` | [JEP 496](https://openjdk.org/jeps/496), [JEP 497](https://openjdk.org/jeps/497) |
+| 24 | AOT class loading | runtime, notes-only | `AotClassLoadingNotes` | `AotClassLoadingNotesTest` | [JEP 483](https://openjdk.org/jeps/483) |
+| 24 | KDF preview | security, preview, notes-only | `KeyDerivationFunctionPreviewNotes` | `KeyDerivationFunctionPreviewNotesTest` | [JEP 478](https://openjdk.org/jeps/478) |
+| 24 | Flexible constructor bodies third preview | preview, notes-only | `FlexibleConstructorBodiesThirdPreviewNotes` | `FlexibleConstructorBodiesThirdPreviewNotesTest` | [JEP 492](https://openjdk.org/jeps/492) |
+| 24 | Module import declarations second preview | preview, notes-only | `ModuleImportDeclarationsSecondPreviewNotes` | `ModuleImportDeclarationsSecondPreviewNotesTest` | [JEP 494](https://openjdk.org/jeps/494) |
+| 24 | Primitive patterns second preview | preview, notes-only | `PrimitivePatternsSecondPreviewNotes` | `PrimitivePatternsSecondPreviewNotesTest` | [JEP 488](https://openjdk.org/jeps/488) |
+| 24 | Scoped values fourth preview | preview, notes-only | `ScopedValuesFourthPreviewNotes` | `ScopedValuesFourthPreviewNotesTest` | [JEP 487](https://openjdk.org/jeps/487) |
+| 24 | Structured concurrency fourth preview | preview, notes-only | `StructuredConcurrencyFourthPreviewNotes` | `StructuredConcurrencyFourthPreviewNotesTest` | [JEP 499](https://openjdk.org/jeps/499) |
 | 25 | Scoped values final | final | `ScopedValuesExamples` | `ScopedValuesExamplesTest` | [JEP 506](https://openjdk.org/jeps/506) |
 | 25 | Flexible constructor bodies final | final | `FlexibleConstructorBodiesExamples` | `FlexibleConstructorBodiesExamplesTest` | [JEP 513](https://openjdk.org/jeps/513) |
-| 25 | Module import declarations final | final, notes-only | `ModuleImportDeclarationsNotes` | `Java25NotesTest` | [JEP 511](https://openjdk.org/jeps/511) |
-| 25 | Compact source files final | final, notes-only | `CompactSourceFilesNotes` | `Java25NotesTest` | [JEP 512](https://openjdk.org/jeps/512) |
-| 25 | Key Derivation Function API final | security, notes-only | `KeyDerivationFunctionNotes` | `Java25NotesTest` | [JEP 510](https://openjdk.org/jeps/510) |
-| 25 | Primitive patterns third preview | preview, notes-only | `PrimitivePatternsThirdPreviewNotes` | `Java25NotesTest` | [JEP 507](https://openjdk.org/jeps/507) |
-| 25 | Stable values preview | preview, notes-only | `StableValuesPreviewNotes` | `Java25NotesTest` | [JEP 502](https://openjdk.org/jeps/502) |
-| 25 | PEM encodings preview | security, preview, notes-only | `PemEncodingsPreviewNotes` | `Java25NotesTest` | [JEP 470](https://openjdk.org/jeps/470) |
-| 25 | Structured concurrency fifth preview | preview, notes-only | `StructuredConcurrencyFifthPreviewNotes` | `Java25NotesTest` | [JEP 505](https://openjdk.org/jeps/505) |
-| 25 | Vector API tenth incubator | incubator, notes-only | `VectorApiTenthIncubatorNotes` | `Java25NotesTest` | [JEP 508](https://openjdk.org/jeps/508) |
-| 25 | AOT, JFR, object headers, GC notes | runtime, notes-only | `*Notes` | `Java25NotesTest` | [java25 README](../src/main/java/net/jrodolfo/java_evolution/java25/README.md) |
+| 25 | Module import declarations final | final, notes-only | `ModuleImportDeclarationsNotes` | `ModuleImportDeclarationsNotesTest` | [JEP 511](https://openjdk.org/jeps/511) |
+| 25 | Compact source files final | final, notes-only | `CompactSourceFilesNotes` | `CompactSourceFilesNotesTest` | [JEP 512](https://openjdk.org/jeps/512) |
+| 25 | Key Derivation Function API final | security, notes-only | `KeyDerivationFunctionNotes` | `KeyDerivationFunctionNotesTest` | [JEP 510](https://openjdk.org/jeps/510) |
+| 25 | Primitive patterns third preview | preview, notes-only | `PrimitivePatternsThirdPreviewNotes` | `PrimitivePatternsThirdPreviewNotesTest` | [JEP 507](https://openjdk.org/jeps/507) |
+| 25 | Stable values preview | preview, notes-only | `StableValuesPreviewNotes` | `StableValuesPreviewNotesTest` | [JEP 502](https://openjdk.org/jeps/502) |
+| 25 | PEM encodings preview | security, preview, notes-only | `PemEncodingsPreviewNotes` | `PemEncodingsPreviewNotesTest` | [JEP 470](https://openjdk.org/jeps/470) |
+| 25 | Structured concurrency fifth preview | preview, notes-only | `StructuredConcurrencyFifthPreviewNotes` | `StructuredConcurrencyFifthPreviewNotesTest` | [JEP 505](https://openjdk.org/jeps/505) |
+| 25 | Vector API tenth incubator | incubator, notes-only | `VectorApiTenthIncubatorNotes` | `VectorApiTenthIncubatorNotesTest` | [JEP 508](https://openjdk.org/jeps/508) |
+| 25 | AOT command-line ergonomics | runtime, notes-only | `AotCommandLineErgonomicsNotes` | `AotCommandLineErgonomicsNotesTest` | [JEP 514](https://openjdk.org/jeps/514) |
+| 25 | JFR enhancements | runtime, notes-only | `JfrEnhancementsNotes` | `JfrEnhancementsNotesTest` | [JEP 518](https://openjdk.org/jeps/518) |
+| 25 | Compact object headers | runtime, notes-only | `CompactObjectHeadersNotes` | `CompactObjectHeadersNotesTest` | [JEP 519](https://openjdk.org/jeps/519) |
+| 25 | Generational Shenandoah | runtime, notes-only | `GenerationalShenandoahNotes` | `GenerationalShenandoahNotesTest` | [JEP 521](https://openjdk.org/jeps/521) |

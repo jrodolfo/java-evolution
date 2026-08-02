@@ -193,16 +193,16 @@ Learning notes: [java23 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 | Feature | Example | Test |
 |---|---|---|
-| Markdown documentation comments | `MarkdownDocumentationCommentsNotes` | `Java23NotesTest` |
-| Primitive patterns preview | `PrimitivePatternsPreviewNotes` | `Java23NotesTest` |
-| Module import declarations preview | `ModuleImportDeclarationsPreviewNotes` | `Java23NotesTest` |
-| Flexible constructor bodies second preview | `FlexibleConstructorBodiesSecondPreviewNotes` | `Java23NotesTest` |
-| Stream Gatherers second preview | `StreamGatherersSecondPreviewNotes` | `Java23NotesTest` |
-| Class-File API second preview | `ClassFileApiSecondPreviewNotes` | `Java23NotesTest` |
-| Scoped values third preview | `ScopedValuesThirdPreviewNotes` | `Java23NotesTest` |
-| Structured concurrency third preview | `StructuredConcurrencyThirdPreviewNotes` | `Java23NotesTest` |
-| Unsafe memory-access deprecation | `UnsafeMemoryAccessDeprecationNotes` | `Java23NotesTest` |
-| ZGC generational mode | `ZgcGenerationalModeNotes` | `Java23NotesTest` |
+| Markdown documentation comments | `MarkdownDocumentationCommentsNotes` | `MarkdownDocumentationCommentsNotesTest` |
+| Primitive patterns preview | `PrimitivePatternsPreviewNotes` | `PrimitivePatternsPreviewNotesTest` |
+| Module import declarations preview | `ModuleImportDeclarationsPreviewNotes` | `ModuleImportDeclarationsPreviewNotesTest` |
+| Flexible constructor bodies second preview | `FlexibleConstructorBodiesSecondPreviewNotes` | `FlexibleConstructorBodiesSecondPreviewNotesTest` |
+| Stream Gatherers second preview | `StreamGatherersSecondPreviewNotes` | `StreamGatherersSecondPreviewNotesTest` |
+| Class-File API second preview | `ClassFileApiSecondPreviewNotes` | `ClassFileApiSecondPreviewNotesTest` |
+| Scoped values third preview | `ScopedValuesThirdPreviewNotes` | `ScopedValuesThirdPreviewNotesTest` |
+| Structured concurrency third preview | `StructuredConcurrencyThirdPreviewNotes` | `StructuredConcurrencyThirdPreviewNotesTest` |
+| Unsafe memory-access deprecation | `UnsafeMemoryAccessDeprecationNotes` | `UnsafeMemoryAccessDeprecationNotesTest` |
+| ZGC generational mode | `ZgcGenerationalModeNotes` | `ZgcGenerationalModeNotesTest` |
 
 ## Java 24
 
@@ -211,13 +211,17 @@ Learning notes: [java24 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Feature | Example | Test |
 |---|---|---|
 | Stream Gatherers final | `StreamGatherersExamples` | `StreamGatherersExamplesTest` |
-| Class-File API final | `ClassFileApiNotes` | `Java24NotesTest` |
-| Security Manager disabled | `SecurityManagerDisabledNotes` | `Java24NotesTest` |
-| Virtual-thread synchronization | `VirtualThreadSynchronizationNotes` | `Java24NotesTest` |
-| Quantum-resistant crypto | `QuantumResistantCryptoNotes` | `Java24NotesTest` |
-| AOT class loading | `AotClassLoadingNotes` | `Java24NotesTest` |
-| KDF preview | `KeyDerivationFunctionPreviewNotes` | `Java24NotesTest` |
-| Remaining preview/runtime notes | `*Notes` | `Java24NotesTest` |
+| Class-File API final | `ClassFileApiNotes` | `ClassFileApiNotesTest` |
+| Security Manager disabled | `SecurityManagerDisabledNotes` | `SecurityManagerDisabledNotesTest` |
+| Virtual-thread synchronization | `VirtualThreadSynchronizationNotes` | `VirtualThreadSynchronizationNotesTest` |
+| Quantum-resistant crypto | `QuantumResistantCryptoNotes` | `QuantumResistantCryptoNotesTest` |
+| AOT class loading | `AotClassLoadingNotes` | `AotClassLoadingNotesTest` |
+| KDF preview | `KeyDerivationFunctionPreviewNotes` | `KeyDerivationFunctionPreviewNotesTest` |
+| Flexible constructor bodies third preview | `FlexibleConstructorBodiesThirdPreviewNotes` | `FlexibleConstructorBodiesThirdPreviewNotesTest` |
+| Module import declarations second preview | `ModuleImportDeclarationsSecondPreviewNotes` | `ModuleImportDeclarationsSecondPreviewNotesTest` |
+| Primitive patterns second preview | `PrimitivePatternsSecondPreviewNotes` | `PrimitivePatternsSecondPreviewNotesTest` |
+| Scoped values fourth preview | `ScopedValuesFourthPreviewNotes` | `ScopedValuesFourthPreviewNotesTest` |
+| Structured concurrency fourth preview | `StructuredConcurrencyFourthPreviewNotes` | `StructuredConcurrencyFourthPreviewNotesTest` |
 
 ## Java 25
 
@@ -227,12 +231,15 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 |---|---|---|
 | Scoped values final | `ScopedValuesExamples` | `ScopedValuesExamplesTest` |
 | Flexible constructor bodies final | `FlexibleConstructorBodiesExamples` | `FlexibleConstructorBodiesExamplesTest` |
-| Module import declarations final | `ModuleImportDeclarationsNotes` | `Java25NotesTest` |
-| Compact source files final | `CompactSourceFilesNotes` | `Java25NotesTest` |
-| Key Derivation Function API final | `KeyDerivationFunctionNotes` | `Java25NotesTest` |
-| Primitive patterns third preview | `PrimitivePatternsThirdPreviewNotes` | `Java25NotesTest` |
-| Stable values preview | `StableValuesPreviewNotes` | `Java25NotesTest` |
-| PEM encodings preview | `PemEncodingsPreviewNotes` | `Java25NotesTest` |
-| Structured concurrency fifth preview | `StructuredConcurrencyFifthPreviewNotes` | `Java25NotesTest` |
-| Vector API tenth incubator | `VectorApiTenthIncubatorNotes` | `Java25NotesTest` |
-| AOT, JFR, object headers, GC notes | `*Notes` | `Java25NotesTest` |
+| Module import declarations final | `ModuleImportDeclarationsNotes` | `ModuleImportDeclarationsNotesTest` |
+| Compact source files final | `CompactSourceFilesNotes` | `CompactSourceFilesNotesTest` |
+| Key Derivation Function API final | `KeyDerivationFunctionNotes` | `KeyDerivationFunctionNotesTest` |
+| Primitive patterns third preview | `PrimitivePatternsThirdPreviewNotes` | `PrimitivePatternsThirdPreviewNotesTest` |
+| Stable values preview | `StableValuesPreviewNotes` | `StableValuesPreviewNotesTest` |
+| PEM encodings preview | `PemEncodingsPreviewNotes` | `PemEncodingsPreviewNotesTest` |
+| Structured concurrency fifth preview | `StructuredConcurrencyFifthPreviewNotes` | `StructuredConcurrencyFifthPreviewNotesTest` |
+| Vector API tenth incubator | `VectorApiTenthIncubatorNotes` | `VectorApiTenthIncubatorNotesTest` |
+| AOT command-line ergonomics | `AotCommandLineErgonomicsNotes` | `AotCommandLineErgonomicsNotesTest` |
+| JFR enhancements | `JfrEnhancementsNotes` | `JfrEnhancementsNotesTest` |
+| Compact object headers | `CompactObjectHeadersNotes` | `CompactObjectHeadersNotesTest` |
+| Generational Shenandoah | `GenerationalShenandoahNotes` | `GenerationalShenandoahNotesTest` |

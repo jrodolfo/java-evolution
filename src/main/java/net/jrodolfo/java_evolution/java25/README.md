@@ -32,7 +32,7 @@ This is useful for learning, scripts, and code that naturally uses a broad modul
 
 Example: `ModuleImportDeclarationsNotes`
 
-Test: `Java25NotesTest`
+Test: `ModuleImportDeclarationsNotesTest`
 
 ## Compact Source Files and Instance Main Methods Final
 
@@ -44,7 +44,7 @@ This repository keeps the feature as notes because compact source files belong n
 
 Example: `CompactSourceFilesNotes`
 
-Test: `Java25NotesTest`
+Test: `CompactSourceFilesNotesTest`
 
 ## Key Derivation Function API Final
 
@@ -54,7 +54,7 @@ Java 25 finalized the Key Derivation Function API. This repository keeps it as n
 
 Example: `KeyDerivationFunctionNotes`
 
-Test: `Java25NotesTest`
+Test: `KeyDerivationFunctionNotesTest`
 
 ## Primitive Patterns Third Preview
 
@@ -62,7 +62,7 @@ Java 25 continued primitive patterns as a third preview. The long-term goal is a
 
 Example: `PrimitivePatternsThirdPreviewNotes`
 
-Test: `Java25NotesTest`
+Test: `PrimitivePatternsThirdPreviewNotesTest`
 
 ## Stable Values Preview
 
@@ -70,7 +70,7 @@ Stable values model data initialized at most once. This can help the JVM optimiz
 
 Example: `StableValuesPreviewNotes`
 
-Test: `Java25NotesTest`
+Test: `StableValuesPreviewNotesTest`
 
 ## PEM Encodings Preview
 
@@ -78,7 +78,7 @@ PEM is a common text encoding for cryptographic material. Java 25 previewed APIs
 
 Example: `PemEncodingsPreviewNotes`
 
-Test: `Java25NotesTest`
+Test: `PemEncodingsPreviewNotesTest`
 
 ## Structured Concurrency Fifth Preview
 
@@ -86,7 +86,7 @@ Structured concurrency continued as a fifth preview in Java 25. It keeps the foc
 
 Example: `StructuredConcurrencyFifthPreviewNotes`
 
-Test: `Java25NotesTest`
+Test: `StructuredConcurrencyFifthPreviewNotesTest`
 
 ## Vector API Tenth Incubator
 
@@ -96,7 +96,7 @@ This repository keeps it as notes because the API requires an incubator module a
 
 Example: `VectorApiTenthIncubatorNotes`
 
-Test: `Java25NotesTest`
+Test: `VectorApiTenthIncubatorNotesTest`
 
 ## Runtime, Diagnostics, Memory, and GC Notes
 
@@ -117,7 +117,10 @@ Run the focused tests:
 
 ```bash
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
-mvn -Dtest=Java25NotesTest test
+mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest test
+mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewNotesTest,PemEncodingsPreviewNotesTest test
+mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNotesTest test
+mvn -Dtest=AotCommandLineErgonomicsNotesTest,JfrEnhancementsNotesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
 ```
 
 Java 25 is the final package in this repository. After reading it, use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.
