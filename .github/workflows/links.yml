@@ -4,10 +4,32 @@ on:
   push:
     branches:
       - main
+    paths:
+      - README.md
+      - CONTRIBUTING.md
+      - SECURITY.md
+      - CHANGELOG.md
+      - .lychee.toml
+      - .github/workflows/links.yml
+      - docs/**
+      - src/main/java/**/README.md
   pull_request:
     branches:
       - main
+    paths:
+      - README.md
+      - CONTRIBUTING.md
+      - SECURITY.md
+      - CHANGELOG.md
+      - .lychee.toml
+      - .github/workflows/links.yml
+      - docs/**
+      - src/main/java/**/README.md
   workflow_dispatch:
+
+concurrency:
+  group: links-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read

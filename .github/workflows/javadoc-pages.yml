@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - pom.xml
+      - Makefile
+      - .github/workflows/javadoc-pages.yml
+      - src/main/java/**
   workflow_dispatch:
 
 permissions:
@@ -12,8 +17,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
