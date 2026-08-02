@@ -46,6 +46,7 @@ public class SwitchExpressionExamples {
 			case 10, 9 -> "excellent";
 			case 8 -> "great";
 			case 7 -> {
+				// yield is needed only when a switch arm uses a block.
 				String label = "good";
 				yield label + " progress";
 			}

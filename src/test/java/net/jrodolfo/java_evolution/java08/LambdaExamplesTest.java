@@ -55,6 +55,17 @@ class LambdaExamplesTest {
 	}
 
 	@Test
+	void blockLambdaUsesBracesAndExplicitReturnForMultipleStatements() {
+		// When
+		int normalizedDifference = examples.normalizedPositiveDifference(250, 40);
+
+		// Then
+		assertThat(normalizedDifference)
+				.as("A multi-statement lambda should use braces and return an explicit value")
+				.isEqualTo(100);
+	}
+
+	@Test
 	void lambdaCanReplaceAnonymousClassForSimpleComparatorBehavior() {
 		// Given
 		List<String> names = Arrays.asList("Maria", "Ana", "John");

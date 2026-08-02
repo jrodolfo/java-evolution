@@ -18,7 +18,10 @@ import java.util.Set;
  * {@link List#of(Object[])}, {@link Set#of(Object[])}, and
  * {@link Map#of(Object, Object)} solve that problem for small collections.
  * They are compact, reject {@code null}, reject duplicate set elements or map
- * keys, and return collections that cannot be mutated.
+ * keys, and return collections that cannot be mutated. The JDK can also use
+ * specialized internal implementations for small immutable collections, which
+ * is one reason these factories are preferable to hand-built wrappers for
+ * constants and examples.
  * </p>
  */
 public class CollectionFactoryExamples {

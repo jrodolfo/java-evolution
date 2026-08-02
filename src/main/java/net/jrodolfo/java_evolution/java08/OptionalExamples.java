@@ -99,11 +99,10 @@ public class OptionalExamples {
 	}
 
 	private Optional<String> domainFromEmail(String email) {
-		int atSignIndex = email.indexOf('@');
-		if (atSignIndex < 0 || atSignIndex == email.length() - 1) {
-			return Optional.empty();
-		}
-		return Optional.of(email.substring(atSignIndex + 1));
+		return Optional.ofNullable(email)
+				.filter(value -> value.contains("@"))
+				.filter(value -> !value.endsWith("@"))
+				.map(value -> value.substring(value.indexOf('@') + 1));
 	}
 
 	/**

@@ -39,7 +39,7 @@ Before Java 11, the JDK had `HttpURLConnection`, but it was old and awkward for 
 
 Java 11 finalized the standard `java.net.http.HttpClient` API. It supports synchronous and asynchronous calls, HTTP/2, request builders, response body handlers, and a more fluent style.
 
-The examples build requests without sending network traffic so the tests remain deterministic.
+The examples build requests and demonstrate synchronous sending through a caller-provided client so the tests remain deterministic and offline.
 
 Example: `HttpClientExamples`
 

@@ -18,7 +18,9 @@ import java.util.SequencedMap;
  *
  * <p>
  * Sequenced collection interfaces give encounter-ordered data structures a
- * common vocabulary.
+ * common vocabulary. The {@code reversed()} operation returns a reversed view
+ * rather than requiring callers to make a defensive copy just to look at the
+ * same data from the other direction.
  * </p>
  */
 public class SequencedCollectionsExamples {

@@ -1,8 +1,10 @@
 package net.jrodolfo.java_evolution.java11;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.time.Duration;
 
 /**
@@ -18,8 +20,9 @@ import java.time.Duration;
  * <p>
  * The Java 11 {@link HttpClient} solves this by providing a standard client
  * with builders, synchronous and asynchronous execution, and modern protocol
- * support. The examples build clients and requests without sending real
- * network traffic, keeping tests deterministic and offline.
+ * support. The examples include request creation and synchronous execution.
+ * Tests pass in a fake client so the behavior remains deterministic and
+ * offline.
  * </p>
  */
 public class HttpClientExamples {
@@ -60,5 +63,27 @@ public class HttpClientExamples {
 				.header("Content-Type", "application/json")
 				.POST(HttpRequest.BodyPublishers.ofString(jsonBody))
 				.build();
+	}
+
+	/**
+	 * Sends a GET request synchronously and returns the response body.
+	 *
+	 * <p>
+	 * The {@link HttpClient#send(HttpRequest, HttpResponse.BodyHandler)} method is
+	 * the central Java 11 operation for blocking HTTP calls. The client is
+	 * provided by the caller so tests can use a deterministic fake client instead
+	 * of relying on external network access.
+	 * </p>
+	 *
+	 * @param client the client used to execute the request
+	 * @param uri the request URI
+	 * @return the response body
+	 * @throws IOException when the client cannot read the response
+	 * @throws InterruptedException when the sending thread is interrupted
+	 */
+	public String sendGetRequest(HttpClient client, URI uri) throws IOException, InterruptedException {
+		HttpRequest request = getRequest(uri);
+		HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+		return response.body();
 	}
 }

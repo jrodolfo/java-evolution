@@ -1,7 +1,7 @@
 package net.jrodolfo.java_evolution.java25;
 
 /**
- * Demonstrates scoped values, finalized in Java 25.
+ * Demonstrates scoped values, finalized in Java 25 by JEP 506.
  *
  * <p>
  * Scoped values solve a common context-passing problem. Data such as a user,

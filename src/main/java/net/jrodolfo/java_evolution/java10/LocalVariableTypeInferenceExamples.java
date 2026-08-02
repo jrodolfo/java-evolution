@@ -3,6 +3,7 @@ package net.jrodolfo.java_evolution.java10;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,14 +28,14 @@ import java.util.Map;
 public class LocalVariableTypeInferenceExamples {
 
 	/**
-	 * Uses {@code var} for a local variable whose initializer makes the type
-	 * obvious.
+	 * Uses {@code var} for a local variable whose constructor initializer makes a
+	 * longer generic type obvious.
 	 *
 	 * @param names the names to count
 	 * @return the number of names
 	 */
 	public int countNames(List<String> names) {
-		var copiedNames = names;
+		var copiedNames = new ArrayList<String>(names);
 		return copiedNames.size();
 	}
 

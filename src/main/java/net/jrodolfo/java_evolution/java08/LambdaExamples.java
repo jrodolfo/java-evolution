@@ -66,6 +66,27 @@ public class LambdaExamples {
 	}
 
 	/**
+	 * Uses a multi-statement lambda body.
+	 *
+	 * <p>
+	 * Single-expression lambdas can omit braces and {@code return}. When the
+	 * lambda needs more than one statement, Java requires a block body and an
+	 * explicit {@code return} for non-void functional interfaces.
+	 * </p>
+	 *
+	 * @param left the left number used by the operation
+	 * @param right the right number used by the operation
+	 * @return a normalized score
+	 */
+	public int normalizedPositiveDifference(int left, int right) {
+		return calculate(left, right, (first, second) -> {
+			int difference = first - second;
+			int absoluteDifference = Math.abs(difference);
+			return Math.min(absoluteDifference, 100);
+		});
+	}
+
+	/**
 	 * Sorts names with an anonymous class, the older style commonly used before
 	 * Java 8 lambdas.
 	 *
