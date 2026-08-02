@@ -92,6 +92,7 @@ Example classes contain JavaDoc. Test classes are written as executable document
 - [Demo Script](docs/demo-script.md): practical 5-10 minute live walkthrough.
 - [JEP Index](docs/jep-index.md): centralized JEP links with status labels.
 - [Feature Map](docs/feature-map.md): class-by-class navigation table.
+- [Status Matrix](docs/status-matrix.md): feature status, example class, test class, and reference links.
 - [JavaDoc Site](https://jrodolfo.github.io/java-evolution/): generated API documentation published by GitHub Pages.
 
 ## Feature Index
