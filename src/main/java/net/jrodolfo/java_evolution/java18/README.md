@@ -66,6 +66,19 @@ Example: `InetAddressResolutionNotes`
 
 Test: `InetAddressResolutionNotesTest`
 
+## How To Read This Package
+
+Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `SimpleWebServerNotes`, `CodeSnippetJavaDocNotes`, and `InetAddressResolutionNotes`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=Utf8DefaultCharsetExamplesTest test
+mvn -Dtest=SimpleWebServerNotesTest,CodeSnippetJavaDocNotesTest,InetAddressResolutionNotesTest test
+```
+
+The `Notes` classes here document tooling, documentation, or service-provider behavior that is easier to explain than to run portably in a small unit test. After this package, continue with Java 19 for the first previews of virtual threads and record patterns.
+
 ## References
 
 - [OpenJDK JDK 18 project](https://openjdk.org/projects/jdk/18/)

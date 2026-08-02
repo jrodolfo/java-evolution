@@ -115,6 +115,20 @@ Example: `DateTimeApiExamples`
 
 Test: `DateTimeApiExamplesTest`
 
+## How To Read This Package
+
+Start with `LambdaExamples`, then move to `StreamExamples`, `OptionalExamples`, `MethodReferenceExamples`, `CompletableFutureExamples`, `DefaultMethodExamples`, and `DateTimeApiExamples`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=LambdaExamplesTest,StreamExamplesTest,OptionalExamplesTest test
+mvn -Dtest=MethodReferenceExamplesTest,CompletableFutureExamplesTest test
+mvn -Dtest=DefaultMethodExamplesTest,DateTimeApiExamplesTest test
+```
+
+After this package, continue with Java 9 to see how the platform added modules, collection factories, and API refinements after the Java 8 language shift.
+
 ## References
 
 - [OpenJDK JDK 8 project](https://openjdk.org/projects/jdk8/)

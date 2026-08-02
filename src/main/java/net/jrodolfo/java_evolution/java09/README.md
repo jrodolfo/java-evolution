@@ -96,6 +96,20 @@ Example: `ModuleSystemNotes`
 
 Test: `ModuleSystemNotesTest`
 
+## How To Read This Package
+
+Start with `CollectionFactoryExamples`, `OptionalEnhancementExamples`, and `StreamEnhancementExamples` to see the everyday API improvements. Then read `PrivateInterfaceMethodExamples`, `TryWithResourcesExamples`, `ProcessApiExamples`, `StackWalkerExamples`, and `ModuleSystemNotes`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=CollectionFactoryExamplesTest,OptionalEnhancementExamplesTest,StreamEnhancementExamplesTest test
+mvn -Dtest=PrivateInterfaceMethodExamplesTest,TryWithResourcesExamplesTest test
+mvn -Dtest=ProcessApiExamplesTest,StackWalkerExamplesTest,ModuleSystemNotesTest test
+```
+
+`ModuleSystemNotes` is notes-based because a real module demo is clearer as a multi-module project than as a small class inside this Spring Boot shell. After this package, continue with Java 10 for local variable type inference and collector refinements.
+
 ## References
 
 - [OpenJDK JDK 9 project](https://openjdk.org/projects/jdk9/)

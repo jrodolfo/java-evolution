@@ -86,6 +86,19 @@ Java 24 also continued several language/API previews:
 
 These are represented as notes because the final or later form is covered in Java 25 where appropriate.
 
+## How To Read This Package
+
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. Then read `ClassFileApiNotes`, `SecurityManagerDisabledNotes`, `VirtualThreadSynchronizationNotes`, `QuantumResistantCryptoNotes`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=StreamGatherersExamplesTest test
+mvn -Dtest=Java24NotesTest test
+```
+
+This package combines one executable final-feature example with several runtime, security, tooling, and preview notes. After this package, continue with Java 25 to see scoped values, flexible constructor bodies, module imports, compact source files, and the KDF API reach final status.
+
 ## References
 
 - [OpenJDK JDK 24 project](https://openjdk.org/projects/jdk/24/)

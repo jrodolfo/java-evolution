@@ -102,6 +102,20 @@ Example: `StructuredConcurrencySecondPreviewNotes`
 
 Test: `StructuredConcurrencySecondPreviewNotesTest`
 
+## How To Read This Package
+
+Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read the notes for the Foreign Function and Memory API, stream gatherers, Class-File API, constructor-body changes, source launching, scoped values, and structured concurrency.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=UnnamedVariablesPatternsExamplesTest test
+mvn -Dtest=ForeignFunctionMemoryApiNotesTest,StreamGatherersPreviewNotesTest,ClassFileApiPreviewNotesTest test
+mvn -Dtest=StatementsBeforeSuperPreviewNotesTest,LaunchMultiFileSourceProgramsNotesTest,ScopedValuesSecondPreviewNotesTest,StructuredConcurrencySecondPreviewNotesTest test
+```
+
+This package mixes final APIs with previews and notes-only topics, so use it to practice separating stable features from evolving ones. After this package, continue with Java 23 for markdown documentation comments and another round of preview refinements.
+
 ## References
 
 - [OpenJDK JDK 22 project](https://openjdk.org/projects/jdk/22/)

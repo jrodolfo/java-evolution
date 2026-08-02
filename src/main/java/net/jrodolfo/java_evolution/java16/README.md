@@ -69,6 +69,19 @@ Example: `UnixDomainSocketChannelNotes`
 
 Test: `UnixDomainSocketChannelNotesTest`
 
+## How To Read This Package
+
+Start with `RecordExamples` and `PatternMatchingInstanceofExamples` because they represent final versions of important language simplifications. Then read `StreamToListExamples` and `UnixDomainSocketChannelNotes`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=RecordExamplesTest,PatternMatchingInstanceofExamplesTest test
+mvn -Dtest=StreamToListExamplesTest,UnixDomainSocketChannelNotesTest test
+```
+
+`UnixDomainSocketChannelNotes` is notes-based because the feature depends on local operating system socket behavior. After this package, continue with Java 17, an LTS release that finalizes sealed classes.
+
 ## References
 
 - [OpenJDK JDK 16 project](https://openjdk.org/projects/jdk/16/)

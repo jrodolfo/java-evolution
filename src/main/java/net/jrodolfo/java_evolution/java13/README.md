@@ -59,6 +59,19 @@ Example: `FileSystemsNewFileSystemExamples`
 
 Test: `FileSystemsNewFileSystemExamplesTest`
 
+## How To Read This Package
+
+Start with `TextBlockPreviewExamples` because multiline strings are the clearest Java 13 language preview. Then read `SwitchYieldPreviewExamples` and `FileSystemsNewFileSystemExamples`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=TextBlockPreviewExamplesTest,SwitchYieldPreviewExamplesTest test
+mvn -Dtest=FileSystemsNewFileSystemExamplesTest test
+```
+
+After this package, continue with Java 14 to see switch expressions become final and records/pattern matching begin their preview cycle.
+
 ## References
 
 - [OpenJDK JDK 13 project](https://openjdk.org/projects/jdk/13/)

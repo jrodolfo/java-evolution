@@ -109,6 +109,19 @@ Java 25 also includes several features that are better understood as runtime or 
 
 These are important, but they are not ideal for tiny deterministic unit tests, so the repository documents them as notes.
 
+## How To Read This Package
+
+Start with the final executable examples: `ScopedValuesExamples` and `FlexibleConstructorBodiesExamples`. Then read the notes for module imports, compact source files, the KDF API, primitive patterns, stable values, PEM encodings, structured concurrency, the Vector API, AOT, JFR, object headers, and GC behavior.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
+mvn -Dtest=Java25NotesTest test
+```
+
+Java 25 is the final package in this repository. After reading it, use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.
+
 ## References
 
 - [OpenJDK JDK 25 project](https://openjdk.org/projects/jdk/25/)

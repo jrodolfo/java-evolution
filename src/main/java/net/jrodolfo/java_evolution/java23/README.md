@@ -104,6 +104,18 @@ Example: `ZgcGenerationalModeNotes`
 
 Test: `Java23NotesTest`
 
+## How To Read This Package
+
+Start with `MarkdownDocumentationCommentsNotes`, then read the preview and runtime notes for primitive patterns, module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, unsafe memory-access deprecation, and ZGC generational mode.
+
+Run the grouped notes test:
+
+```bash
+mvn -Dtest=Java23NotesTest test
+```
+
+This package is notes-heavy because many Java 23 topics are preview, runtime, or tooling features. After this package, continue with Java 24 to see stream gatherers and the Class-File API reach final status.
+
 ## References
 
 - [OpenJDK JDK 23 project](https://openjdk.org/projects/jdk/23/)

@@ -68,6 +68,19 @@ Example: `CompactNumberFormatExamples`
 
 Test: `CompactNumberFormatExamplesTest`
 
+## How To Read This Package
+
+Start with `SwitchExpressionPreviewExamples` to see the first preview of switch expressions. Then read `TeeingCollectorExamples`, `StringIndentExamples`, `FilesMismatchExamples`, and `CompactNumberFormatExamples`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=SwitchExpressionPreviewExamplesTest,TeeingCollectorExamplesTest test
+mvn -Dtest=StringIndentExamplesTest,FilesMismatchExamplesTest,CompactNumberFormatExamplesTest test
+```
+
+After this package, continue with Java 13 to see text blocks preview and the `yield` form that helped switch expressions move toward finalization.
+
 ## References
 
 - [OpenJDK JDK 12 project](https://openjdk.org/projects/jdk/12/)

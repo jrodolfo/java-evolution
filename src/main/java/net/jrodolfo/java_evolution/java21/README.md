@@ -112,6 +112,20 @@ Example: `KeyEncapsulationMechanismNotes`
 
 Test: `KeyEncapsulationMechanismNotesTest`
 
+## How To Read This Package
+
+Start with the final features: `VirtualThreadsExamples`, `RecordPatternsExamples`, `PatternMatchingSwitchExamples`, and `SequencedCollectionsExamples`. Then read the preview and API notes: `UnnamedPatternsVariablesPreviewExamples`, `ScopedValuesPreviewNotes`, `StructuredConcurrencyPreviewNotes`, and `KeyEncapsulationMechanismNotes`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest,PatternMatchingSwitchExamplesTest test
+mvn -Dtest=SequencedCollectionsExamplesTest,UnnamedPatternsVariablesPreviewExamplesTest test
+mvn -Dtest=ScopedValuesPreviewNotesTest,StructuredConcurrencyPreviewNotesTest,KeyEncapsulationMechanismNotesTest test
+```
+
+Java 21 is an LTS release, so spend extra time here. After this package, continue with Java 22 to see unnamed variables become final and more preview/incubator work continue.
+
 ## References
 
 - [OpenJDK JDK 21 project](https://openjdk.org/projects/jdk/21/)

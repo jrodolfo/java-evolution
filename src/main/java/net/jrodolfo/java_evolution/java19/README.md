@@ -76,6 +76,19 @@ Example: `ForeignFunctionMemoryApiPreviewNotes`
 
 Test: `ForeignFunctionMemoryApiPreviewNotesTest`
 
+## How To Read This Package
+
+Start with `VirtualThreadsPreviewExamples` because virtual threads are the headline concurrency feature that later becomes final in Java 21. Then read `RecordPatternsPreviewExamples`, `PatternMatchingSwitchPreviewExamples`, `StructuredConcurrencyPreviewNotes`, and `ForeignFunctionMemoryApiPreviewNotes`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=VirtualThreadsPreviewExamplesTest,RecordPatternsPreviewExamplesTest test
+mvn -Dtest=PatternMatchingSwitchPreviewExamplesTest,StructuredConcurrencyPreviewNotesTest,ForeignFunctionMemoryApiPreviewNotesTest test
+```
+
+The structured concurrency and foreign memory examples are notes-based because their early forms were preview/incubator APIs that changed across releases. After this package, continue with Java 20 to see those preview and incubator features refined.
+
 ## References
 
 - [OpenJDK JDK 19 project](https://openjdk.org/projects/jdk/19/)

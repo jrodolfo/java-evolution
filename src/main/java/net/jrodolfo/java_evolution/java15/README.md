@@ -56,6 +56,19 @@ Example: `HiddenClassesNotes`
 
 Test: `HiddenClassesNotesTest`
 
+## How To Read This Package
+
+Start with `TextBlockExamples` because Java 15 finalized text blocks. Then read `SealedClassesPreviewExamples` and `HiddenClassesNotes`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=TextBlockExamplesTest,SealedClassesPreviewExamplesTest test
+mvn -Dtest=HiddenClassesNotesTest test
+```
+
+`HiddenClassesNotes` is notes-based because hidden classes are mostly useful to frameworks and language runtimes that generate classes dynamically. After this package, continue with Java 16 to see records and pattern matching for `instanceof` become final.
+
 ## References
 
 - [OpenJDK JDK 15 project](https://openjdk.org/projects/jdk/15/)

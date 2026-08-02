@@ -74,6 +74,19 @@ Example: `PatternMatchingInstanceofPreviewExamples`
 
 Test: `PatternMatchingInstanceofPreviewExamplesTest`
 
+## How To Read This Package
+
+Start with `SwitchExpressionExamples` because this is where switch expressions become final. Then read `HelpfulNullPointerExceptionExamples`, `RecordPreviewExamples`, and `PatternMatchingInstanceofPreviewExamples`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=SwitchExpressionExamplesTest,HelpfulNullPointerExceptionExamplesTest test
+mvn -Dtest=RecordPreviewExamplesTest,PatternMatchingInstanceofPreviewExamplesTest test
+```
+
+After this package, continue with Java 15 to see text blocks become final and sealed classes begin their preview cycle.
+
 ## References
 
 - [OpenJDK JDK 14 project](https://openjdk.org/projects/jdk/14/)

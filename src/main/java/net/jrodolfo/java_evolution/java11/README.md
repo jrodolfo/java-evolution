@@ -91,6 +91,19 @@ Example: `OptionalIsEmptyExamples`
 
 Test: `OptionalIsEmptyExamplesTest`
 
+## How To Read This Package
+
+Start with `StringApiExamples` and `FilesApiExamples` because they show small but practical library improvements. Then read `HttpClientExamples`, `PredicateNotExamples`, `LambdaVarExamples`, and `OptionalIsEmptyExamples`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=StringApiExamplesTest,FilesApiExamplesTest,HttpClientExamplesTest test
+mvn -Dtest=PredicateNotExamplesTest,LambdaVarExamplesTest,OptionalIsEmptyExamplesTest test
+```
+
+After this package, continue with Java 12 to see the start of switch expressions and more collector/string/file refinements.
+
 ## References
 
 - [OpenJDK JDK 11 project](https://openjdk.org/projects/jdk/11/)

@@ -73,6 +73,19 @@ Example: `StrongEncapsulationNotes`
 
 Test: `StrongEncapsulationNotesTest`
 
+## How To Read This Package
+
+Start with `SealedClassesExamples` because sealed classes are final in Java 17. Then read `PatternMatchingSwitchPreviewExamples`, `RandomGeneratorExamples`, `HexFormatExamples`, and `StrongEncapsulationNotes`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=SealedClassesExamplesTest,PatternMatchingSwitchPreviewExamplesTest test
+mvn -Dtest=RandomGeneratorExamplesTest,HexFormatExamplesTest,StrongEncapsulationNotesTest test
+```
+
+`StrongEncapsulationNotes` is notes-based because the behavior is mostly visible through module boundaries, reflective access, and migration warnings. After this package, continue with Java 18 for default charset and tooling/documentation improvements.
+
 ## References
 
 - [OpenJDK JDK 17 project](https://openjdk.org/projects/jdk/17/)

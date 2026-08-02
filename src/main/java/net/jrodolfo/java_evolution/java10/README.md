@@ -46,6 +46,19 @@ Example: `OptionalOrElseThrowExamples`
 
 Test: `OptionalOrElseThrowExamplesTest`
 
+## How To Read This Package
+
+Start with `LocalVariableTypeInferenceExamples` because `var` is the most visible Java 10 feature in everyday code. Then read `UnmodifiableCollectorsExamples` and `OptionalOrElseThrowExamples`.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=LocalVariableTypeInferenceExamplesTest test
+mvn -Dtest=UnmodifiableCollectorsExamplesTest,OptionalOrElseThrowExamplesTest test
+```
+
+After this package, continue with Java 11 to see the standard HTTP Client and small API additions that made common string, file, predicate, and optional code cleaner.
+
 ## References
 
 - [OpenJDK JDK 10 project](https://openjdk.org/projects/jdk/10/)

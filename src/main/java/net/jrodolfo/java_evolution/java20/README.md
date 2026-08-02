@@ -94,6 +94,20 @@ Example: `VectorApiFifthIncubatorNotes`
 
 Test: `VectorApiFifthIncubatorNotesTest`
 
+## How To Read This Package
+
+Start with `RecordPatternsSecondPreviewExamples` and `PatternMatchingSwitchFourthPreviewExamples` to see the pattern matching work continue. Then read the notes classes for virtual threads, scoped values, structured concurrency, foreign memory, and the Vector API.
+
+Run the focused tests:
+
+```bash
+mvn -Dtest=RecordPatternsSecondPreviewExamplesTest,PatternMatchingSwitchFourthPreviewExamplesTest test
+mvn -Dtest=VirtualThreadsSecondPreviewNotesTest,ScopedValuesIncubatorNotesTest,StructuredConcurrencySecondIncubatorNotesTest test
+mvn -Dtest=ForeignFunctionMemorySecondPreviewNotesTest,VectorApiFifthIncubatorNotesTest test
+```
+
+Most Java 20 topics are preview or incubator refinements, so pay attention to status rather than treating every API shape as final. After this package, continue with Java 21, where several of these features become final in an LTS release.
+
 ## References
 
 - [OpenJDK JDK 20 project](https://openjdk.org/projects/jdk/20/)
