@@ -89,6 +89,7 @@ Example classes contain JavaDoc. Test classes are written as executable document
 - [Study Guide](docs/study-guide.md): suggested learning path through Java 8-25.
 - [Learning Path](docs/learning-path.md): staged study sessions with files to read, tests to run, and interview angles.
 - [Interview Guide](docs/interview-guide.md): talking points and demo flow for interviews.
+- [Demo Script](docs/demo-script.md): practical 5-10 minute live walkthrough.
 - [JEP Index](docs/jep-index.md): centralized JEP links with status labels.
 - [Feature Map](docs/feature-map.md): class-by-class navigation table.
 - [JavaDoc Site](https://jrodolfo.github.io/java-evolution/): generated API documentation published by GitHub Pages.
