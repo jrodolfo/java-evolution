@@ -18,6 +18,8 @@ Learning notes: [java08 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 ## Java 9
 
+Learning notes: [java09 README](../src/main/java/net/jrodolfo/java_evolution/java09/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | Collection factories | `CollectionFactoryExamples` | `CollectionFactoryExamplesTest` |
@@ -31,6 +33,8 @@ Learning notes: [java08 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 ## Java 10
 
+Learning notes: [java10 README](../src/main/java/net/jrodolfo/java_evolution/java10/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | Local variable type inference | `LocalVariableTypeInferenceExamples` | `LocalVariableTypeInferenceExamplesTest` |
@@ -38,6 +42,8 @@ Learning notes: [java08 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | `Optional.orElseThrow()` | `OptionalOrElseThrowExamples` | `OptionalOrElseThrowExamplesTest` |
 
 ## Java 11
+
+Learning notes: [java11 README](../src/main/java/net/jrodolfo/java_evolution/java11/README.md)
 
 | Feature | Example | Test |
 |---|---|---|

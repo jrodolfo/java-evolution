@@ -8,9 +8,17 @@ import java.util.Set;
  * Demonstrates collection factory methods introduced in Java 9.
  *
  * <p>
+ * Before Java 9, creating a small read-only collection usually required
+ * several steps: create a mutable collection, populate it, and wrap it with an
+ * unmodifiable view. That made simple constants and test data noisier than the
+ * values being represented.
+ * </p>
+ *
+ * <p>
  * {@link List#of(Object[])}, {@link Set#of(Object[])}, and
- * {@link Map#of(Object, Object)} create small immutable collections with less
- * boilerplate than the older {@code Arrays.asList(...)} plus wrapper style.
+ * {@link Map#of(Object, Object)} solve that problem for small collections.
+ * They are compact, reject {@code null}, reject duplicate set elements or map
+ * keys, and return collections that cannot be mutated.
  * </p>
  */
 public class CollectionFactoryExamples {

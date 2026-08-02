@@ -4,11 +4,18 @@ package net.jrodolfo.java_evolution.java09;
  * Explains the Java Platform Module System, introduced in Java 9.
  *
  * <p>
- * The module system is Java 9's largest feature. A real modular application
- * normally contains a {@code module-info.java} file at the root of a source
- * set. This Spring Boot reference project intentionally does not become a
- * modular application yet, because the goal is to keep each feature example
- * small and independent.
+ * Before Java 9, Java applications were primarily organized with the classpath.
+ * The classpath could not express strong module boundaries, so code could
+ * accidentally depend on internals and the JDK itself was difficult to divide
+ * into smaller, well-defined pieces.
+ * </p>
+ *
+ * <p>
+ * The module system solves this with explicit module descriptors. A real
+ * modular application normally contains a {@code module-info.java} file at the
+ * root of a source set. This Spring Boot reference project intentionally does
+ * not become a modular application yet, because the goal is to keep each
+ * feature example small and independent.
  * </p>
  */
 public class ModuleSystemNotes {

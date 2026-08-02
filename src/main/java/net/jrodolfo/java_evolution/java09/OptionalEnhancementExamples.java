@@ -8,8 +8,16 @@ import java.util.stream.Collectors;
  * Demonstrates {@link Optional} methods added in Java 9.
  *
  * <p>
- * Java 9 made Optional easier to combine with fallback lookups, conditional
- * side effects, and stream pipelines.
+ * Java 8 made missing return values explicit with {@link Optional}, but some
+ * common workflows still needed awkward code: trying a fallback lookup,
+ * handling present and missing branches together, and flattening many
+ * {@code Optional} values into a stream.
+ * </p>
+ *
+ * <p>
+ * Java 9 added {@link Optional#or(java.util.function.Supplier)},
+ * {@link Optional#ifPresentOrElse(java.util.function.Consumer, Runnable)}, and
+ * {@link Optional#stream()} to make those workflows direct.
  * </p>
  */
 public class OptionalEnhancementExamples {

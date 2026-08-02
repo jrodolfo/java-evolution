@@ -6,9 +6,15 @@ import java.util.Optional;
  * Demonstrates Process API updates introduced in Java 9.
  *
  * <p>
- * {@link ProcessHandle} gives Java code a standard way to inspect the current
- * process and related process metadata without launching platform-specific
- * commands.
+ * Before Java 9, Java had limited standard APIs for process metadata. Code
+ * that needed a process id, parent process, or command information often had
+ * to call platform-specific shell commands or native code.
+ * </p>
+ *
+ * <p>
+ * {@link ProcessHandle} solves this by giving Java code a standard way to
+ * inspect the current process and related process metadata without launching
+ * platform-specific commands.
  * </p>
  */
 public class ProcessApiExamples {
@@ -63,6 +69,13 @@ public class ProcessApiExamples {
 		private final boolean alive;
 		private final boolean commandAvailable;
 
+		/**
+		 * Creates immutable process metadata for tests and examples.
+		 *
+		 * @param pid the process id
+		 * @param alive whether the process is alive
+		 * @param commandAvailable whether command metadata is visible
+		 */
 		public CurrentProcessSummary(long pid, boolean alive, boolean commandAvailable) {
 			this.pid = pid;
 			this.alive = alive;

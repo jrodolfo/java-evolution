@@ -10,6 +10,12 @@ import java.util.stream.Collectors;
  * Demonstrates unmodifiable collectors introduced in Java 10.
  *
  * <p>
+ * Java 8 streams made it easy to collect pipeline results, but the standard
+ * collectors returned mutable collections. Code that wanted to return a
+ * read-only result needed an extra wrapping or copying step.
+ * </p>
+ *
+ * <p>
  * Java 10 added {@link Collectors#toUnmodifiableList()},
  * {@link Collectors#toUnmodifiableSet()}, and
  * {@link Collectors#toUnmodifiableMap(Function, Function)}. These collectors
@@ -73,6 +79,13 @@ public class UnmodifiableCollectorsExamples {
 		private final String category;
 		private final boolean active;
 
+		/**
+		 * Creates a feature used by unmodifiable collector examples.
+		 *
+		 * @param name the feature name
+		 * @param category the feature category
+		 * @param active whether the feature is active
+		 */
 		public Feature(String name, String category, boolean active) {
 			this.name = name;
 			this.category = category;

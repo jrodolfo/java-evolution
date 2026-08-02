@@ -11,8 +11,15 @@ import java.util.stream.Collectors;
  * Demonstrates {@code var} in lambda parameters, introduced in Java 11.
  *
  * <p>
- * This made lambda parameters consistent with local variables and allowed
- * annotations on inferred lambda parameters.
+ * Java 10 introduced {@code var} for local variables. Lambda parameters could
+ * already have inferred types, but there was no syntax for annotating those
+ * inferred parameters.
+ * </p>
+ *
+ * <p>
+ * Java 11 allowed {@code var} in lambda parameter lists. The main benefit is
+ * not saving characters; it makes inferred lambda parameters consistent with
+ * local variables and allows annotations on them.
  * </p>
  */
 public class LambdaVarExamples {
@@ -42,6 +49,10 @@ public class LambdaVarExamples {
 				.collect(Collectors.toList());
 	}
 
+	/**
+	 * Marker annotation used only to demonstrate annotating an inferred lambda
+	 * parameter.
+	 */
 	@Target(ElementType.PARAMETER)
 	@Retention(RetentionPolicy.RUNTIME)
 	public @interface ExampleParameter {

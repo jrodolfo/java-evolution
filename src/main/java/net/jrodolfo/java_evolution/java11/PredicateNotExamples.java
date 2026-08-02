@@ -6,6 +6,18 @@ import java.util.stream.Collectors;
 
 /**
  * Demonstrates {@link Predicate#not(Predicate)}, introduced in Java 11.
+ *
+ * <p>
+ * Before Java 11, negating a predicate in a stream often required a lambda such
+ * as {@code value -> !value.isBlank()}. That prevented using a direct method
+ * reference for the positive condition.
+ * </p>
+ *
+ * <p>
+ * {@link Predicate#not(Predicate)} solves this by adapting an existing
+ * predicate or method reference into its opposite, keeping stream filters easy
+ * to scan.
+ * </p>
  */
 public class PredicateNotExamples {
 

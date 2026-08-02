@@ -6,9 +6,15 @@ import java.lang.StackWalker.StackFrame;
  * Demonstrates {@link StackWalker}, introduced in Java 9.
  *
  * <p>
- * StackWalker provides a lazy and structured way to inspect stack frames. It is
- * often preferable to eagerly creating an array with
- * {@code Thread.currentThread().getStackTrace()}.
+ * Before Java 9, stack inspection commonly used
+ * {@code Thread.currentThread().getStackTrace()}, which eagerly created an
+ * array and gave limited control over how frames were consumed.
+ * </p>
+ *
+ * <p>
+ * StackWalker solves this by providing a lazy and structured way to inspect
+ * stack frames. It is useful for diagnostics, logging, and framework code that
+ * needs caller information without eagerly materializing the whole stack.
  * </p>
  */
 public class StackWalkerExamples {

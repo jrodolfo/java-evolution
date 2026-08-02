@@ -4,9 +4,16 @@ package net.jrodolfo.java_evolution.java09;
  * Demonstrates private methods in interfaces, introduced in Java 9.
  *
  * <p>
- * Java 8 introduced default methods. Java 9 completed that idea by allowing
- * interfaces to hide shared helper logic in private methods instead of
- * duplicating it across default methods.
+ * Java 8 introduced default methods, which allowed interfaces to provide
+ * behavior. The missing piece was private helper logic: without Java 9, common
+ * code shared by multiple default methods had to be duplicated or exposed as a
+ * public interface method.
+ * </p>
+ *
+ * <p>
+ * Java 9 solved this by allowing private and private static methods in
+ * interfaces. Default methods can now share implementation details without
+ * adding those helpers to the public API.
  * </p>
  */
 public class PrivateInterfaceMethodExamples {

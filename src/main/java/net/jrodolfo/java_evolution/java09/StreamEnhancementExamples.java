@@ -8,6 +8,13 @@ import java.util.stream.Stream;
  * Demonstrates Stream API enhancements introduced in Java 9.
  *
  * <p>
+ * Java 8 streams made pipeline-style data processing practical, but some
+ * common stream shapes still required custom logic: process ordered values
+ * until a boundary, skip ordered values until a boundary, safely stream a
+ * possibly null value, or generate values with a built-in stopping condition.
+ * </p>
+ *
+ * <p>
  * Java 9 added ordered stream slicing with {@code takeWhile} and
  * {@code dropWhile}, nullable stream creation with {@code Stream.ofNullable},
  * and a bounded form of {@code Stream.iterate}.

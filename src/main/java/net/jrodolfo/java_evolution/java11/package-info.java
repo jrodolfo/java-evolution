@@ -7,5 +7,10 @@
  * Client API, {@code Predicate.not}, {@code Optional.isEmpty}, and {@code var}
  * support in lambda parameters.
  * </p>
+ *
+ * <p>
+ * For beginner-oriented notes about the problems these features solved, see
+ * the package README in the source directory.
+ * </p>
  */
 package net.jrodolfo.java_evolution.java11;

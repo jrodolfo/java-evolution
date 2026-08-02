@@ -12,9 +12,16 @@ import java.util.Map;
  * {@code var} reserved type name.
  *
  * <p>
- * {@code var} does not make Java dynamically typed. The compiler still infers a
- * specific static type from the initializer. In Java 10 it is limited to local
- * variables, including variables in loops and try-with-resources blocks.
+ * Before Java 10, local variables sometimes repeated long generic types that
+ * were already obvious from the initializer. That made code noisier without
+ * adding much information.
+ * </p>
+ *
+ * <p>
+ * {@code var} solves that local readability problem. It does not make Java
+ * dynamically typed: the compiler still infers a specific static type from the
+ * initializer. In Java 10 it is limited to local variables, including variables
+ * in loops and try-with-resources blocks.
  * </p>
  */
 public class LocalVariableTypeInferenceExamples {

@@ -7,8 +7,14 @@ import java.util.stream.Collectors;
  * Demonstrates String API additions introduced in Java 11.
  *
  * <p>
- * Java 11 added small but useful methods for blank checks, line processing,
- * Unicode-aware stripping, and repeating text.
+ * Before Java 11, common string operations such as checking for blank text,
+ * splitting into lines, stripping Unicode-aware whitespace, and repeating text
+ * often required helper code or less precise alternatives.
+ * </p>
+ *
+ * <p>
+ * Java 11 added small but useful methods for those cases: {@link String#isBlank()},
+ * {@link String#lines()}, {@link String#strip()}, and {@link String#repeat(int)}.
  * </p>
  */
 public class StringApiExamples {

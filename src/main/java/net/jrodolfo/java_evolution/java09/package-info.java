@@ -13,5 +13,10 @@
  * {@code module-info.java} file so the Spring Boot project can remain
  * intentionally lightweight.
  * </p>
+ *
+ * <p>
+ * For beginner-oriented notes about the problems these features solved, see
+ * the package README in the source directory.
+ * </p>
  */
 package net.jrodolfo.java_evolution.java09;

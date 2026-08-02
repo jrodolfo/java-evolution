@@ -9,8 +9,13 @@ import java.util.Optional;
  *
  * <p>
  * Before Java 10, callers commonly used {@code get()} or the Java 8
- * {@code orElseThrow(Supplier)} overload. Java 10 added a clearer no-argument
- * option for the common case where {@link NoSuchElementException} is acceptable.
+ * {@code orElseThrow(Supplier)} overload. {@code get()} was short but did not
+ * communicate intent well. The supplier overload was explicit but verbose when
+ * the default {@link NoSuchElementException} was acceptable.
+ * </p>
+ *
+ * <p>
+ * Java 10 added a clearer no-argument option for that common case.
  * </p>
  */
 public class OptionalOrElseThrowExamples {

@@ -6,6 +6,18 @@ import java.nio.file.Path;
 
 /**
  * Demonstrates file convenience methods introduced in Java 11.
+ *
+ * <p>
+ * Before Java 11, reading or writing a whole text file often required byte
+ * arrays or extra charset-handling code. That was more ceremony than many
+ * simple text-file use cases needed.
+ * </p>
+ *
+ * <p>
+ * {@link Files#readString(Path)} and
+ * {@link Files#writeString(Path, CharSequence, java.nio.file.OpenOption...)}
+ * solve the common whole-file text case directly.
+ * </p>
  */
 public class FilesApiExamples {
 

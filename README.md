@@ -82,9 +82,9 @@ For a class-by-class navigation table, see [docs/feature-map.md](docs/feature-ma
 | Java | Package | Highlights |
 |---|---|---|
 | 8 | [`java08`](src/main/java/net/jrodolfo/java_evolution/java08/README.md) | Lambdas, Streams, Optional, Method References, CompletableFuture, Default Methods, Date/Time API |
-| 9 | `java09` | Collection Factories, Optional/Stream Enhancements, Private Interface Methods, Process API, StackWalker, Modules notes |
-| 10 | `java10` | `var`, Unmodifiable Collectors, `Optional.orElseThrow()` |
-| 11 | `java11` | String APIs, Files read/write string, HTTP Client, `Predicate.not`, lambda `var`, `Optional.isEmpty` |
+| 9 | [`java09`](src/main/java/net/jrodolfo/java_evolution/java09/README.md) | Collection Factories, Optional/Stream Enhancements, Private Interface Methods, Process API, StackWalker, Modules notes |
+| 10 | [`java10`](src/main/java/net/jrodolfo/java_evolution/java10/README.md) | `var`, Unmodifiable Collectors, `Optional.orElseThrow()` |
+| 11 | [`java11`](src/main/java/net/jrodolfo/java_evolution/java11/README.md) | String APIs, Files read/write string, HTTP Client, `Predicate.not`, lambda `var`, `Optional.isEmpty` |
 | 12 | `java12` | Switch Expressions preview, `Collectors.teeing`, `String.indent`, `Files.mismatch`, Compact Number Format |
 | 13 | `java13` | Text Blocks preview, switch `yield` preview, `FileSystems.newFileSystem(Path)` |
 | 14 | `java14` | Switch Expressions final, Helpful NullPointerExceptions, Records preview, Pattern Matching for `instanceof` preview |

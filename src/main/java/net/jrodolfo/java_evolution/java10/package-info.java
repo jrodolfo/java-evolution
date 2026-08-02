@@ -11,5 +11,10 @@
  * The examples in this package intentionally stay focused on Java 10 additions,
  * even though the whole project is compiled with a newer JDK.
  * </p>
+ *
+ * <p>
+ * For beginner-oriented notes about the problems these features solved, see
+ * the package README in the source directory.
+ * </p>
  */
 package net.jrodolfo.java_evolution.java10;

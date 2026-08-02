@@ -9,8 +9,17 @@ import java.time.Duration;
  * Demonstrates the standard HTTP Client API finalized in Java 11.
  *
  * <p>
- * The examples build clients and requests without sending real network traffic,
- * keeping tests deterministic and offline.
+ * Before Java 11, the JDK's main built-in HTTP API was
+ * {@code HttpURLConnection}, which was old and awkward for modern HTTP usage.
+ * Many applications reached for third-party clients to get a fluent API,
+ * asynchronous calls, and HTTP/2 support.
+ * </p>
+ *
+ * <p>
+ * The Java 11 {@link HttpClient} solves this by providing a standard client
+ * with builders, synchronous and asynchronous execution, and modern protocol
+ * support. The examples build clients and requests without sending real
+ * network traffic, keeping tests deterministic and offline.
  * </p>
  */
 public class HttpClientExamples {
