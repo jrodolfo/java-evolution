@@ -35,6 +35,7 @@ Prefer names that describe the feature directly, such as `StreamExamples`, `Reco
 - Update `README.md` when adding a new Java version or major feature.
 - Update `docs/feature-map.md` with the example and test class names.
 - Link to JEPs or official documentation when a feature needs historical context.
+- Run `make docs` after adding or changing JavaDoc.
 
 ## Local Validation
 
@@ -42,4 +43,5 @@ Use JDK 25 and run:
 
 ```bash
 make check
+make docs
 ```

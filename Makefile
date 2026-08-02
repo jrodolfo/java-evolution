@@ -7,7 +7,7 @@ export PATH := $(JAVA_HOME)/bin:$(PATH)
 JAVA_CMD := $(JAVA_HOME)/bin/java
 endif
 
-.PHONY: help java-version test clean-test run check
+.PHONY: help java-version test clean-test run docs clean-docs check
 
 help:
 	@echo "available targets:"
@@ -15,6 +15,8 @@ help:
 	@echo "  make test          run the test suite"
 	@echo "  make clean-test    clean the build and run the test suite"
 	@echo "  make run           run the Spring Boot application"
+	@echo "  make docs          generate JavaDoc under target/site/apidocs"
+	@echo "  make clean-docs    remove generated JavaDoc"
 	@echo "  make check         show versions and run the test suite"
 
 java-version:
@@ -29,5 +31,11 @@ clean-test:
 
 run:
 	mvn spring-boot:run
+
+docs:
+	mvn javadoc:javadoc
+
+clean-docs:
+	rm -rf target/site/apidocs
 
 check: java-version test

@@ -32,6 +32,14 @@ To print the active Java/Maven versions and run the test suite:
 make check
 ```
 
+To generate the local JavaDoc reference:
+
+```bash
+make docs
+```
+
+The generated JavaDoc is written to `target/site/apidocs/index.html`.
+
 ## Important Design Choice
 
 The whole project compiles with JDK 25:
@@ -103,7 +111,7 @@ src/main/java/net/jrodolfo/java_evolution/java08/StreamExamples.java
 src/test/java/net/jrodolfo/java_evolution/java08/StreamExamplesTest.java
 ```
 
-The tests are meant to explain the expected behavior. Running `make test` proves that the examples compile and behave as documented.
+The tests are meant to explain the expected behavior. Running `make test` proves that the examples compile and behave as documented. Running `make docs` generates a browsable JavaDoc reference for the example classes.
 
 ## Official References
 

@@ -14,6 +14,7 @@ Use this checklist when adding examples for a new Java release.
 - Add one focused `*Examples` class for each feature that can be demonstrated with normal JDK 25-compatible source code.
 - Add one focused `*Notes` class for features that cannot be demonstrated cleanly in normal tests.
 - Add JavaDoc to each class and public method.
+- Generate JavaDoc with `make docs`.
 - Keep examples intentionally small and interview-readable.
 
 ## Tests
@@ -29,9 +30,11 @@ Use this checklist when adding examples for a new Java release.
 - Add official OpenJDK and JEP links where useful.
 - Add the release to `docs/feature-map.md`.
 - Mention preview or incubator status explicitly when a feature was not final in that release.
+- Confirm generated JavaDoc is readable for the new classes.
 
 ## Final Check
 
 - Confirm `make check` passes.
+- Confirm `make docs` passes.
 - Confirm `git status --short` only shows intentional changes.
 - Use a lower-case commit message.
