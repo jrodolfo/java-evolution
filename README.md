@@ -119,3 +119,15 @@ The tests are meant to explain the expected behavior. Running `mvn test` proves 
 - [OpenJDK JDK 23](https://openjdk.org/projects/jdk/23/)
 - [OpenJDK JDK 24](https://openjdk.org/projects/jdk/24/)
 - [OpenJDK JDK 25](https://openjdk.org/projects/jdk/25/)
+
+## Contact
+
+- Software Developer: Rod Oliveira
+- GitHub: https://github.com/jrodolfo
+- Webpage: https://jrodolfo.net
+
+## License
+
+- MIT License
+- Copyright (c) 2026 Rod Oliveira
+- See [LICENSE](./LICENSE)
