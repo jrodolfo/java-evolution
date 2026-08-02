@@ -2,6 +2,17 @@ package net.jrodolfo.java_evolution.java21;
 
 /**
  * Demonstrates pattern matching for switch, finalized in Java 21.
+ *
+ * <p>
+ * Before this feature, type-based dispatch usually meant an {@code if} chain
+ * with repeated {@code instanceof} checks and casts. Pattern matching for
+ * {@code switch} lets the switch expression branch directly on type patterns.
+ * </p>
+ *
+ * <p>
+ * The feature is especially strong with sealed hierarchies because the compiler
+ * knows the permitted implementations and can help verify exhaustive handling.
+ * </p>
  */
 public class PatternMatchingSwitchExamples {
 
@@ -19,15 +30,33 @@ public class PatternMatchingSwitchExamples {
 		};
 	}
 
+	/**
+	 * Closed command hierarchy used to demonstrate exhaustive switch handling.
+	 */
 	public sealed interface Command permits Start, Stop, Restart {
 	}
 
+	/**
+	 * Starts a service.
+	 *
+	 * @param service service name
+	 */
 	public record Start(String service) implements Command {
 	}
 
+	/**
+	 * Stops a service.
+	 *
+	 * @param service service name
+	 */
 	public record Stop(String service) implements Command {
 	}
 
+	/**
+	 * Restarts a service.
+	 *
+	 * @param service service name
+	 */
 	public record Restart(String service) implements Command {
 	}
 }

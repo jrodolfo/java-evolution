@@ -2,6 +2,13 @@ package net.jrodolfo.java_evolution.java22;
 
 /**
  * Demonstrates unnamed variables and patterns, finalized in Java 22.
+ *
+ * <p>
+ * Before Java 22, Java often required names for values that were intentionally
+ * unused. Those names could make code look as if the value mattered. The
+ * underscore marks the value as deliberately ignored in loops, lambdas, catch
+ * clauses, and patterns.
+ * </p>
  */
 public class UnnamedVariablesPatternsExamples {
 
@@ -47,8 +54,19 @@ public class UnnamedVariablesPatternsExamples {
 		};
 	}
 
+	/**
+	 * Small functional interface used to demonstrate an ignored lambda
+	 * parameter.
+	 */
 	@FunctionalInterface
 	public interface IntPairOperation {
+		/**
+		 * Applies an operation to two integer values.
+		 *
+		 * @param left first value
+		 * @param right second value
+		 * @return operation result
+		 */
 		int apply(int left, int right);
 	}
 }

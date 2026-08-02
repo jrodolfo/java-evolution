@@ -8,6 +8,18 @@ import java.util.SequencedMap;
 
 /**
  * Demonstrates sequenced collections, introduced in Java 21.
+ *
+ * <p>
+ * Java had many ordered collections before Java 21, but there was no shared API
+ * for first element, last element, or reversed views. Generic code had to know
+ * whether it was dealing with a {@link List}, deque, ordered set, or ordered
+ * map.
+ * </p>
+ *
+ * <p>
+ * Sequenced collection interfaces give encounter-ordered data structures a
+ * common vocabulary.
+ * </p>
  */
 public class SequencedCollectionsExamples {
 

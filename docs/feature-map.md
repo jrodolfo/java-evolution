@@ -159,6 +159,8 @@ Learning notes: [java20 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 ## Java 21
 
+Learning notes: [java21 README](../src/main/java/net/jrodolfo/java_evolution/java21/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | Virtual threads final | `VirtualThreadsExamples` | `VirtualThreadsExamplesTest` |
@@ -171,6 +173,8 @@ Learning notes: [java20 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Structured concurrency preview | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` |
 
 ## Java 22
+
+Learning notes: [java22 README](../src/main/java/net/jrodolfo/java_evolution/java22/README.md)
 
 | Feature | Example | Test |
 |---|---|---|

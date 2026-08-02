@@ -7,6 +7,19 @@ import java.util.concurrent.FutureTask;
 
 /**
  * Demonstrates virtual threads, finalized in Java 21.
+ *
+ * <p>
+ * Traditional platform threads are easy to program with, but each one is a
+ * relatively expensive operating-system resource. That makes simple
+ * thread-per-task code hard to scale for workloads with many blocking I/O
+ * operations.
+ * </p>
+ *
+ * <p>
+ * Virtual threads solve that scalability problem while preserving the familiar
+ * blocking style. They are especially useful for request handling and network
+ * I/O where tasks spend much of their time waiting.
+ * </p>
  */
 public class VirtualThreadsExamples {
 

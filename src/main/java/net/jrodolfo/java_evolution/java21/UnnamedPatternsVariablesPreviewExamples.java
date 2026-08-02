@@ -4,6 +4,13 @@ package net.jrodolfo.java_evolution.java21;
  * Demonstrates unnamed patterns and variables as a Java 21 preview feature.
  *
  * <p>
+ * Sometimes Java syntax requires a variable name even though the program
+ * intentionally ignores the value. Before this feature, developers often used
+ * names such as {@code ignored} or {@code unused}. The underscore makes that
+ * intent part of the language.
+ * </p>
+ *
+ * <p>
  * The feature became final in Java 22 as unnamed variables and patterns. This
  * example uses JDK 25-compatible syntax.
  * </p>
