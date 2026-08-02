@@ -2,6 +2,17 @@ package net.jrodolfo.java_evolution.java12;
 
 /**
  * Demonstrates {@link String#indent(int)}, introduced in Java 12.
+ *
+ * <p>
+ * Before Java 12, adding or removing indentation from multi-line text usually
+ * meant splitting lines, modifying each one, and joining them again.
+ * </p>
+ *
+ * <p>
+ * {@code String.indent} solves this directly by applying indentation changes
+ * to every line. Positive values add spaces, while negative values remove
+ * indentation where possible.
+ * </p>
  */
 public class StringIndentExamples {
 

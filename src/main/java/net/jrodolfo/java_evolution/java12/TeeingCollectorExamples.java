@@ -8,6 +8,17 @@ import java.util.stream.Collectors;
  * Demonstrates {@link Collectors#teeing(java.util.stream.Collector,
  * java.util.stream.Collector, java.util.function.BiFunction)}, introduced in
  * Java 12.
+ *
+ * <p>
+ * Before Java 12, computing two independent summaries from one stream often
+ * required two stream passes or a custom collector. That made simple aggregate
+ * combinations more complex than necessary.
+ * </p>
+ *
+ * <p>
+ * {@code teeing} solves this by sending the same input into two downstream
+ * collectors and combining their results with a final function.
+ * </p>
  */
 public class TeeingCollectorExamples {
 
@@ -46,6 +57,13 @@ public class TeeingCollectorExamples {
 		private final long count;
 		private final DoubleSummaryStatistics statistics;
 
+		/**
+		 * Creates a summary from the two downstream collectors used by
+		 * {@code teeing}.
+		 *
+		 * @param count how many numbers were processed
+		 * @param statistics numeric summary statistics
+		 */
 		public NumberSummary(long count, DoubleSummaryStatistics statistics) {
 			this.count = count;
 			this.statistics = statistics;

@@ -56,6 +56,8 @@ Learning notes: [java11 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 ## Java 12
 
+Learning notes: [java12 README](../src/main/java/net/jrodolfo/java_evolution/java12/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | Switch expressions preview | `SwitchExpressionPreviewExamples` | `SwitchExpressionPreviewExamplesTest` |
@@ -66,6 +68,8 @@ Learning notes: [java11 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 ## Java 13
 
+Learning notes: [java13 README](../src/main/java/net/jrodolfo/java_evolution/java13/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | Text blocks preview | `TextBlockPreviewExamples` | `TextBlockPreviewExamplesTest` |
@@ -73,6 +77,8 @@ Learning notes: [java11 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | `FileSystems.newFileSystem(Path)` | `FileSystemsNewFileSystemExamples` | `FileSystemsNewFileSystemExamplesTest` |
 
 ## Java 14
+
+Learning notes: [java14 README](../src/main/java/net/jrodolfo/java_evolution/java14/README.md)
 
 | Feature | Example | Test |
 |---|---|---|

@@ -9,6 +9,17 @@ import java.nio.file.Path;
 /**
  * Demonstrates the {@link FileSystems#newFileSystem(Path)} convenience overload
  * added in Java 13.
+ *
+ * <p>
+ * Before Java 13, opening an archive or other provider-backed path as a file
+ * system required more verbose overloads. That added ceremony to the common
+ * case where the path itself contained enough information.
+ * </p>
+ *
+ * <p>
+ * The Java 13 overload solves that convenience problem by letting code open a
+ * supported file system directly from a {@link Path}.
+ * </p>
  */
 public class FileSystemsNewFileSystemExamples {
 

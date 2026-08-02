@@ -4,8 +4,16 @@ package net.jrodolfo.java_evolution.java14;
  * Demonstrates switch expressions, finalized in Java 14.
  *
  * <p>
- * Switch expressions allow {@code switch} to produce a value directly. They
- * also support arrow labels, which avoid accidental fall-through.
+ * Before switch expressions, returning a value from {@code switch} usually
+ * required mutable variables, repeated assignments, and careful
+ * {@code break} statements.
+ * </p>
+ *
+ * <p>
+ * Switch expressions solve this by allowing {@code switch} to produce a value
+ * directly. They also support arrow labels, which avoid accidental
+ * fall-through. Java 14 finalized the feature after previews in Java 12 and
+ * Java 13.
  * </p>
  */
 public class SwitchExpressionExamples {

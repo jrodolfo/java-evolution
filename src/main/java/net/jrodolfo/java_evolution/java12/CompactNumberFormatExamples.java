@@ -5,6 +5,17 @@ import java.util.Locale;
 
 /**
  * Demonstrates compact number formatting, introduced in Java 12.
+ *
+ * <p>
+ * Before Java 12, displaying large numbers in user-friendly forms such as
+ * {@code 1K}, {@code 1M}, or localized long text usually required custom
+ * formatting logic or a third-party library.
+ * </p>
+ *
+ * <p>
+ * Java 12 added compact number formatting to {@link NumberFormat}. It solves
+ * this presentation problem with locale-aware short and long styles.
+ * </p>
  */
 public class CompactNumberFormatExamples {
 

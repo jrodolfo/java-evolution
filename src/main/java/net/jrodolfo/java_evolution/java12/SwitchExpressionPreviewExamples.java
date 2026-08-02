@@ -4,9 +4,17 @@ package net.jrodolfo.java_evolution.java12;
  * Demonstrates switch expressions as a Java 12 preview feature.
  *
  * <p>
- * Switch expressions became final later, in Java 14. This project compiles on
- * JDK 25, so the example uses the final syntax while documenting that Java 12
- * was the first preview release.
+ * Before switch expressions, returning a value from {@code switch} usually
+ * required a mutable local variable and careful {@code break} statements.
+ * Accidental fall-through was also a common source of bugs.
+ * </p>
+ *
+ * <p>
+ * Java 12 previewed switch expressions to solve those problems. They let
+ * {@code switch} produce a value directly and introduced arrow labels for
+ * safer branch syntax. Switch expressions became final later, in Java 14. This
+ * project compiles on JDK 25, so the example uses the final syntax while
+ * documenting that Java 12 was the first preview release.
  * </p>
  */
 public class SwitchExpressionPreviewExamples {

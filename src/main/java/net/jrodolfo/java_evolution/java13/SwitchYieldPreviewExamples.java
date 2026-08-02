@@ -5,8 +5,13 @@ package net.jrodolfo.java_evolution.java13;
  * refinement.
  *
  * <p>
- * Java 13 adjusted the switch expression preview by adding {@code yield} for
- * block branches that need to produce a value.
+ * Java 12 previewed switch expressions, but block branches still needed a
+ * clear way to produce a value when they contained multiple statements.
+ * </p>
+ *
+ * <p>
+ * Java 13 adjusted the preview by adding {@code yield}. It solves the
+ * readability problem by making the branch result explicit.
  * </p>
  */
 public class SwitchYieldPreviewExamples {

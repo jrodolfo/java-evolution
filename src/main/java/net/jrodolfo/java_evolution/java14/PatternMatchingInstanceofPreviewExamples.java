@@ -5,8 +5,14 @@ package net.jrodolfo.java_evolution.java14;
  * feature.
  *
  * <p>
- * The feature became final in Java 16. The example uses final syntax because
- * this repository compiles with JDK 25.
+ * Before this feature, type checks often required a separate cast after
+ * {@code instanceof}. That repeated the type and created room for mistakes.
+ * </p>
+ *
+ * <p>
+ * Pattern matching for {@code instanceof} solves this by combining the type
+ * check and local variable binding. The feature became final in Java 16. The
+ * example uses final syntax because this repository compiles with JDK 25.
  * </p>
  */
 public class PatternMatchingInstanceofPreviewExamples {

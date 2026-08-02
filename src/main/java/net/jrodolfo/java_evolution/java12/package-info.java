@@ -6,5 +6,10 @@
  * improvements such as teeing collectors, {@code String.indent},
  * {@code Files.mismatch}, and compact number formatting.
  * </p>
+ *
+ * <p>
+ * For beginner-oriented notes about the problems these features solved, see
+ * the package README in the source directory.
+ * </p>
  */
 package net.jrodolfo.java_evolution.java12;
