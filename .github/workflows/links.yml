@@ -1,0 +1,28 @@
+name: links
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  markdown-links:
+    name: markdown links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v5
+
+      - name: check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config .lychee.toml README.md "docs/**/*.md" "src/main/java/**/README.md"
+          fail: true

@@ -1,0 +1,17 @@
+# Keep link checking focused on repository documentation.
+exclude_path = [
+	"target",
+	".git"
+]
+
+max_retries = 2
+timeout = 20
+
+# Some documentation hosts rate-limit automated checks. Treating 429 as
+# acceptable avoids failing the build when the link is valid but temporarily
+# throttled.
+accept = [200, 204, 206, 429]
+
+exclude = [
+	"^mailto:"
+]
