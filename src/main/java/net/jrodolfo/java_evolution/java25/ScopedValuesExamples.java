@@ -4,12 +4,19 @@ package net.jrodolfo.java_evolution.java25;
  * Demonstrates scoped values, finalized in Java 25.
  *
  * <p>
- * Scoped values share immutable data for a bounded dynamic scope, making the
- * dataflow easier to reason about than broad thread-local state.
+ * Scoped values solve a common context-passing problem. Data such as a user,
+ * request ID, or tenant often needs to be available through a call chain without
+ * adding parameters everywhere. Compared with mutable thread-local state,
+ * scoped values bind immutable data to a bounded dynamic scope, making cleanup
+ * and ownership easier to reason about.
  * </p>
  */
 public class ScopedValuesExamples {
 
+	/**
+	 * Scoped value used by the example. It is intentionally private so all access
+	 * goes through methods that demonstrate binding and lookup behavior.
+	 */
 	private static final ScopedValue<String> USER = ScopedValue.newInstance();
 
 	/**

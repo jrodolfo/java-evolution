@@ -189,6 +189,8 @@ Learning notes: [java22 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 ## Java 23
 
+Learning notes: [java23 README](../src/main/java/net/jrodolfo/java_evolution/java23/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | Markdown documentation comments | `MarkdownDocumentationCommentsNotes` | `Java23NotesTest` |
@@ -204,6 +206,8 @@ Learning notes: [java22 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 ## Java 24
 
+Learning notes: [java24 README](../src/main/java/net/jrodolfo/java_evolution/java24/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | Stream Gatherers final | `StreamGatherersExamples` | `StreamGatherersExamplesTest` |
@@ -216,6 +220,8 @@ Learning notes: [java22 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Remaining preview/runtime notes | `*Notes` | `Java24NotesTest` |
 
 ## Java 25
+
+Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/java25/README.md)
 
 | Feature | Example | Test |
 |---|---|---|

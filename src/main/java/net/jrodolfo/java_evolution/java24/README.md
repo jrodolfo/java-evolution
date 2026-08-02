@@ -1,0 +1,104 @@
+# Java 24
+
+Java 24 finalized a few APIs and continued several preview efforts. It is a good release for seeing the difference between language features, library APIs, launcher/runtime behavior, VM ergonomics, and security changes.
+
+Runnable examples are used where the feature is stable and simple. Notes are used where the feature is operational, cryptographic, preview-only, or better demonstrated outside a lightweight Spring Boot project.
+
+## Stream Gatherers Final
+
+Streams are expressive, but custom intermediate operations were historically difficult. Developers often had to break out of the pipeline or force a problem into a collector that only runs at the end.
+
+Java 24 finalized Stream Gatherers, which allow custom intermediate stream operations. The JDK includes useful gatherers such as fixed-size windows and scans.
+
+Example: `StreamGatherersExamples`
+
+Test: `StreamGatherersExamplesTest`
+
+## Class-File API Final
+
+Bytecode tools need a reliable way to parse, generate, and transform class files. A standard API can evolve with the JDK class-file format.
+
+Java 24 finalized the Class-File API. This repository keeps it as notes because bytecode generation would distract from the core Java-version learning path.
+
+Example: `ClassFileApiNotes`
+
+Test: `Java24NotesTest`
+
+## Security Manager Disabled
+
+The Security Manager was once used as an in-process sandbox, but that model became less effective and increasingly difficult to maintain.
+
+Java 24 permanently disabled it. The practical lesson is that application isolation should come from operating-system permissions, containers, deployment boundaries, and process-level controls instead.
+
+Example: `SecurityManagerDisabledNotes`
+
+Test: `Java24NotesTest`
+
+## Virtual Thread Synchronization
+
+Virtual threads are most useful when blocking operations do not unnecessarily pin platform threads. Java 24 improved synchronization behavior so virtual threads blocked in synchronized code can avoid pinning platform threads.
+
+This matters for existing code because synchronized blocks are common in older libraries.
+
+Example: `VirtualThreadSynchronizationNotes`
+
+Test: `Java24NotesTest`
+
+## Quantum-Resistant Crypto
+
+Java 24 added support for ML-KEM and ML-DSA, algorithms intended for post-quantum security requirements.
+
+This repository keeps the feature as notes because realistic cryptography examples require careful provider and security setup.
+
+Example: `QuantumResistantCryptoNotes`
+
+Test: `Java24NotesTest`
+
+## Ahead-of-Time Class Loading
+
+Java startup can be affected by class loading and linking work. Java 24 introduced ahead-of-time class loading and linking to improve startup behavior.
+
+This is an operational/runtime feature, so it is documented as notes.
+
+Example: `AotClassLoadingNotes`
+
+Test: `Java24NotesTest`
+
+## Key Derivation Function API Preview
+
+Key derivation functions create cryptographic keys from secret material and context data.
+
+Java 24 previewed a standard KDF API. It became final in Java 25.
+
+Example: `KeyDerivationFunctionPreviewNotes`
+
+Test: `Java24NotesTest`
+
+## Continuing Preview Features
+
+Java 24 also continued several language/API previews:
+
+- flexible constructor bodies third preview
+- module import declarations second preview
+- primitive patterns second preview
+- scoped values fourth preview
+- structured concurrency fourth preview
+
+These are represented as notes because the final or later form is covered in Java 25 where appropriate.
+
+## References
+
+- [OpenJDK JDK 24 project](https://openjdk.org/projects/jdk/24/)
+- [JEP 485: Stream Gatherers](https://openjdk.org/jeps/485)
+- [JEP 484: Class-File API](https://openjdk.org/jeps/484)
+- [JEP 486: Permanently Disable the Security Manager](https://openjdk.org/jeps/486)
+- [JEP 491: Synchronize Virtual Threads without Pinning](https://openjdk.org/jeps/491)
+- [JEP 496: Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism](https://openjdk.org/jeps/496)
+- [JEP 497: Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm](https://openjdk.org/jeps/497)
+- [JEP 483: Ahead-of-Time Class Loading & Linking](https://openjdk.org/jeps/483)
+- [JEP 478: Key Derivation Function API](https://openjdk.org/jeps/478)
+- [JEP 492: Flexible Constructor Bodies](https://openjdk.org/jeps/492)
+- [JEP 494: Module Import Declarations](https://openjdk.org/jeps/494)
+- [JEP 488: Primitive Types in Patterns, instanceof, and switch](https://openjdk.org/jeps/488)
+- [JEP 487: Scoped Values](https://openjdk.org/jeps/487)
+- [JEP 499: Structured Concurrency](https://openjdk.org/jeps/499)

@@ -96,9 +96,9 @@ For a class-by-class navigation table, see [docs/feature-map.md](docs/feature-ma
 | 20 | [`java20`](src/main/java/net/jrodolfo/java_evolution/java20/README.md) | Record Patterns second preview, Pattern Matching switch fourth preview, Scoped Values/Structured Concurrency/FFM/Vector notes |
 | 21 | [`java21`](src/main/java/net/jrodolfo/java_evolution/java21/README.md) | Virtual Threads final, Record Patterns final, Pattern Matching switch final, Sequenced Collections, KEM notes |
 | 22 | [`java22`](src/main/java/net/jrodolfo/java_evolution/java22/README.md) | Unnamed Variables and Patterns final, FFM final notes, Stream Gatherers preview notes, Class-File API preview notes |
-| 23 | `java23` | Markdown Documentation Comments, Primitive Patterns preview notes, Module Imports preview notes, ZGC Generational Mode notes |
-| 24 | `java24` | Stream Gatherers final, Class-File API notes, Security Manager disabled, Virtual Thread synchronization notes, post-quantum crypto notes |
-| 25 | `java25` | Scoped Values final, Flexible Constructor Bodies final, Module Imports final notes, Compact Source Files notes, KDF/JFR/AOT/GC notes |
+| 23 | [`java23`](src/main/java/net/jrodolfo/java_evolution/java23/README.md) | Markdown Documentation Comments, Primitive Patterns preview notes, Module Imports preview notes, ZGC Generational Mode notes |
+| 24 | [`java24`](src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API notes, Security Manager disabled, Virtual Thread synchronization notes, post-quantum crypto notes |
+| 25 | [`java25`](src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, Module Imports final notes, Compact Source Files notes, KDF/JFR/AOT/GC notes |
 
 ## How To Study This Repository
 

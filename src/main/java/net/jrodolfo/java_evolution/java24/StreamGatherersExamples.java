@@ -7,9 +7,10 @@ import java.util.stream.Gatherers;
  * Demonstrates Stream Gatherers, finalized in Java 24.
  *
  * <p>
- * Gatherers let streams use custom intermediate operations. The JDK includes
- * built-in gatherers for common operations such as fixed-size windows and
- * scanning.
+ * Before gatherers, custom intermediate stream operations were difficult to
+ * express. Developers often had to leave the stream pipeline or force the
+ * problem into a terminal collector. Gatherers let streams model operations
+ * such as fixed windows and running scans as part of the pipeline.
  * </p>
  */
 public class StreamGatherersExamples {
