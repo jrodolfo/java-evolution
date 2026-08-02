@@ -4,6 +4,8 @@ This document maps each Java release to the example and test classes that demons
 
 ## Java 8
 
+Learning notes: [java08 README](../src/main/java/net/jrodolfo/java_evolution/java08/README.md)
+
 | Feature | Example | Test |
 |---|---|---|
 | Lambdas | `LambdaExamples` | `LambdaExamplesTest` |

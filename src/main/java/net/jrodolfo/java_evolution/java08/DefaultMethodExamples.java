@@ -2,8 +2,21 @@ package net.jrodolfo.java_evolution.java08;
 
 /**
  * Demonstrates default methods, introduced in Java 8 so interfaces could evolve
- * without forcing every existing implementation to add the new methods
+ * without forcing every existing implementation to add new methods
  * immediately.
+ *
+ * <p>
+ * Before Java 8, adding a method to an interface was a breaking change for
+ * every implementation. That was a serious problem for old, widely used JDK
+ * interfaces because the platform needed to add new behavior while preserving
+ * compatibility with existing code.
+ * </p>
+ *
+ * <p>
+ * Default methods solve this by allowing an interface to provide an inherited
+ * method body. Implementations can accept the default behavior or override it
+ * when they need something more specific.
+ * </p>
  */
 public class DefaultMethodExamples {
 
@@ -37,11 +50,15 @@ public class DefaultMethodExamples {
 	 */
 	public interface Named {
 		/**
+		 * Supplies the raw name owned by the implementation.
+		 *
 		 * @return the raw name supplied by the implementation
 		 */
 		String name();
 
 		/**
+		 * Returns the display form of the name.
+		 *
 		 * @return a user-friendly name for display
 		 */
 		default String displayName() {
@@ -49,6 +66,9 @@ public class DefaultMethodExamples {
 		}
 
 		/**
+		 * Builds initials from the display name without requiring each implementation
+		 * to duplicate the same string-processing logic.
+		 *
 		 * @return the first letter of each name part in uppercase
 		 */
 		default String initials() {
@@ -69,6 +89,11 @@ public class DefaultMethodExamples {
 	public static class RegularUser implements Named {
 		private final String name;
 
+		/**
+		 * Creates a regular user that inherits all default methods.
+		 *
+		 * @param name the user's name
+		 */
 		public RegularUser(String name) {
 			this.name = name;
 		}
@@ -85,6 +110,11 @@ public class DefaultMethodExamples {
 	public static class AdminUser implements Named {
 		private final String name;
 
+		/**
+		 * Creates an admin user that overrides the display-name behavior.
+		 *
+		 * @param name the user's name
+		 */
 		public AdminUser(String name) {
 			this.name = name;
 		}

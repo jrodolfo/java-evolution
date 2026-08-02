@@ -11,8 +11,17 @@ import java.util.stream.Collectors;
  * lambdas that only call an existing method or constructor.
  *
  * <p>
- * Method references make code easier to scan when the lambda body would only
- * delegate to another method.
+ * Lambdas made it easy to pass behavior, but many lambdas simply delegated to
+ * an existing method, such as {@code text -> Integer.parseInt(text)}. That
+ * repeated information already present in the method name.
+ * </p>
+ *
+ * <p>
+ * Method references solve that small readability problem. They let code say
+ * {@code Integer::parseInt}, {@code formatter::format},
+ * {@code String::compareToIgnoreCase}, or {@code User::new}. The feature does
+ * not add new behavior beyond lambdas; it makes simple delegation easier to
+ * scan.
  * </p>
  */
 public class MethodReferenceExamples {
@@ -113,11 +122,18 @@ public class MethodReferenceExamples {
 	public static class User {
 		private final String name;
 
+		/**
+		 * Creates a user with the supplied display name.
+		 *
+		 * @param name the user's display name
+		 */
 		public User(String name) {
 			this.name = name;
 		}
 
 		/**
+		 * Returns the user's display name.
+		 *
 		 * @return the user's display name
 		 */
 		public String name() {

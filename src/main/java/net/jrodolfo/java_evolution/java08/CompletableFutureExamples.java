@@ -4,18 +4,36 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 
 /**
- * Demonstrates {@link CompletableFuture}, introduced in Java 8 for composing
- * asynchronous computations.
+ * Demonstrates {@link CompletableFuture}, introduced in Java 8 to make
+ * asynchronous work easier to compose.
  *
  * <p>
- * The examples use a caller-provided {@link Executor} so tests can run
- * deterministically without relying on timing or background thread scheduling.
+ * Before Java 8, {@link java.util.concurrent.Future} could represent a result
+ * that would be available later, but it did not provide a fluent way to
+ * transform that result, combine it with another future, or recover from
+ * failure. Code often had to block with {@code get()} or coordinate callbacks
+ * manually.
+ * </p>
+ *
+ * <p>
+ * {@code CompletableFuture} solves that problem by treating asynchronous work
+ * as a pipeline. A program can start work with {@code supplyAsync}, transform
+ * the result with {@code thenApply}, combine independent results with
+ * {@code thenCombine}, and handle errors with {@code exceptionally}. The
+ * examples use a caller-provided {@link Executor} so tests can run
+ * deterministically without depending on timing or background thread
+ * scheduling.
  * </p>
  */
 public class CompletableFutureExamples {
 
 	private final Executor executor;
 
+	/**
+	 * Creates examples that run asynchronous stages on the supplied executor.
+	 *
+	 * @param executor the executor used by asynchronous examples
+	 */
 	public CompletableFutureExamples(Executor executor) {
 		this.executor = executor;
 	}

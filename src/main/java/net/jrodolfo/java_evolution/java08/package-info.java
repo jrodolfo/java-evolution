@@ -11,5 +11,10 @@
  * The classes in this package intentionally avoid features from later Java
  * versions so each example stays focused on what Java 8 added.
  * </p>
+ *
+ * <p>
+ * For a beginner-oriented explanation of the problems these features solved,
+ * see the package README in the source directory.
+ * </p>
  */
 package net.jrodolfo.java_evolution.java08;

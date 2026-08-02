@@ -9,10 +9,17 @@ import java.util.stream.Collectors;
  * Demonstrates the Stream API introduced in Java 8.
  *
  * <p>
- * Streams make it possible to describe data processing as a pipeline of
+ * Before Java 8, collection processing usually meant writing loops, temporary
+ * collections, counters, and mutable variables. That style works, but the
+ * intent can be hidden behind the mechanics of iteration.
+ * </p>
+ *
+ * <p>
+ * Streams solve this by representing data processing as a pipeline of
  * operations such as {@code filter}, {@code map}, {@code sorted}, and
- * {@code collect}. The examples here return values instead of printing output
- * so tests can document the expected behavior.
+ * {@code collect}. The code can describe what result is wanted instead of
+ * spelling out every loop step. The examples here return values instead of
+ * printing output so tests can document the expected behavior.
  * </p>
  */
 public class StreamExamples {
@@ -86,6 +93,14 @@ public class StreamExamples {
 		private final String department;
 		private final boolean active;
 
+		/**
+		 * Creates a user for stream-processing examples.
+		 *
+		 * @param name the user's display name
+		 * @param age the user's age
+		 * @param department the department the user belongs to
+		 * @param active whether the user is active
+		 */
 		public User(String name, int age, String department, boolean active) {
 			this.name = name;
 			this.age = age;

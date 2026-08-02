@@ -7,9 +7,19 @@ import java.util.Optional;
  * that may be absent.
  *
  * <p>
- * Optional is most useful as a method return type. It helps callers see that a
- * value may be missing and encourages explicit handling instead of scattered
- * null checks.
+ * Before Java 8, many methods returned {@code null} when a value could not be
+ * found. That made absence invisible in the method signature, so callers had
+ * to remember defensive checks and failures often appeared later as
+ * {@link NullPointerException}s.
+ * </p>
+ *
+ * <p>
+ * {@code Optional} solves part of that problem by making absence explicit in a
+ * return type. A method returning {@code Optional<String>} communicates that a
+ * value may be missing and encourages the caller to handle that case with
+ * operations such as {@code map}, {@code filter}, {@code orElseGet}, and
+ * {@code orElseThrow}. It is most useful as a return type, not as a replacement
+ * for every nullable field or parameter.
  * </p>
  */
 public class OptionalExamples {
@@ -108,6 +118,13 @@ public class OptionalExamples {
 		private final String name;
 		private final String email;
 
+		/**
+		 * Creates a user. The email is intentionally nullable so the examples can
+		 * demonstrate converting legacy nullable data into {@link Optional}.
+		 *
+		 * @param name the user's display name
+		 * @param email the user's email, or {@code null} when it is missing
+		 */
 		public User(String name, String email) {
 			this.name = name;
 			this.email = email;

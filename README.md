@@ -73,7 +73,7 @@ src/test/java/net/jrodolfo/java_evolution/
   java25/
 ```
 
-Example classes contain JavaDoc. Test classes are written as executable documentation with clear assertions.
+Example classes contain JavaDoc. Test classes are written as executable documentation with clear assertions. Packages can also include a version README with a deeper explanation of the problems each feature solved.
 
 For a class-by-class navigation table, see [docs/feature-map.md](docs/feature-map.md).
 
@@ -81,7 +81,7 @@ For a class-by-class navigation table, see [docs/feature-map.md](docs/feature-ma
 
 | Java | Package | Highlights |
 |---|---|---|
-| 8 | `java08` | Lambdas, Streams, Optional, Method References, CompletableFuture, Default Methods, Date/Time API |
+| 8 | [`java08`](src/main/java/net/jrodolfo/java_evolution/java08/README.md) | Lambdas, Streams, Optional, Method References, CompletableFuture, Default Methods, Date/Time API |
 | 9 | `java09` | Collection Factories, Optional/Stream Enhancements, Private Interface Methods, Process API, StackWalker, Modules notes |
 | 10 | `java10` | `var`, Unmodifiable Collectors, `Optional.orElseThrow()` |
 | 11 | `java11` | String APIs, Files read/write string, HTTP Client, `Predicate.not`, lambda `var`, `Optional.isEmpty` |

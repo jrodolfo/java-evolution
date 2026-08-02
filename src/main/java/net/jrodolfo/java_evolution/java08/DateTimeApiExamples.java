@@ -13,9 +13,19 @@ import java.time.format.DateTimeFormatter;
  * {@code java.time}.
  *
  * <p>
- * The API provides immutable types such as {@link LocalDate},
- * {@link LocalDateTime}, {@link ZonedDateTime}, {@link Period}, and
- * {@link Duration}, replacing many common uses of older mutable date classes.
+ * Before Java 8, date and time code usually relied on {@code java.util.Date},
+ * {@code java.util.Calendar}, and {@code java.text.SimpleDateFormat}. Those
+ * APIs mixed different concepts, were mutable, and made time-zone handling
+ * difficult to reason about.
+ * </p>
+ *
+ * <p>
+ * The Java 8 API solves this by giving different time concepts different
+ * immutable types. {@link LocalDate} represents a date without a time zone,
+ * {@link LocalDateTime} represents a local date and time, {@link ZonedDateTime}
+ * adds a zone, {@link Period} represents date-based amounts, and
+ * {@link Duration} represents time-based amounts. The clearer types make many
+ * bugs visible in the method signature.
  * </p>
  */
 public class DateTimeApiExamples {

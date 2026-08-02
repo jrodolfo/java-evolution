@@ -11,9 +11,17 @@ import java.util.stream.Collectors;
  * in Java 8.
  *
  * <p>
- * Lambdas let a method receive behavior as data. They are commonly used with
- * functional interfaces such as {@link Predicate}, {@link Comparator}, and the
- * interfaces in {@code java.util.function}.
+ * Before Java 8, passing behavior into a method usually meant creating an
+ * anonymous class. That made common operations such as filtering, sorting, and
+ * callbacks much more verbose than the actual idea being expressed.
+ * </p>
+ *
+ * <p>
+ * Lambdas solve this by letting Java treat a small block of behavior as a
+ * value, as long as the target type is a functional interface. They are
+ * commonly used with interfaces such as {@link Predicate}, {@link Comparator},
+ * and the interfaces in {@code java.util.function}. This also made the Stream
+ * API practical because stream operations can receive behavior directly.
  * </p>
  */
 public class LambdaExamples {
