@@ -21,7 +21,7 @@ Use this checklist when adding examples for a new Java release.
 - Add a matching `*Test` class for every `*Examples` class.
 - Add tests for `*Notes` classes when the notes expose structured summary methods.
 - Make each test explain the expected behavior through method names, assertions, or short local comments.
-- Run `mvn test`.
+- Run `make check`.
 
 ## Documentation
 
@@ -32,6 +32,6 @@ Use this checklist when adding examples for a new Java release.
 
 ## Final Check
 
-- Confirm `mvn test` passes.
+- Confirm `make check` passes.
 - Confirm `git status --short` only shows intentional changes.
 - Use a lower-case commit message.

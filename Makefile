@@ -1,0 +1,33 @@
+JAVA_25_HOME := $(shell /usr/libexec/java_home -v 25 2>/dev/null)
+JAVA_CMD := java
+
+ifneq ($(JAVA_25_HOME),)
+export JAVA_HOME := $(JAVA_25_HOME)
+export PATH := $(JAVA_HOME)/bin:$(PATH)
+JAVA_CMD := $(JAVA_HOME)/bin/java
+endif
+
+.PHONY: help java-version test clean-test run check
+
+help:
+	@echo "available targets:"
+	@echo "  make java-version  show the Java and Maven versions"
+	@echo "  make test          run the test suite"
+	@echo "  make clean-test    clean the build and run the test suite"
+	@echo "  make run           run the Spring Boot application"
+	@echo "  make check         show versions and run the test suite"
+
+java-version:
+	$(JAVA_CMD) --version
+	mvn --version
+
+test:
+	mvn test
+
+clean-test:
+	mvn clean test
+
+run:
+	mvn spring-boot:run
+
+check: java-version test

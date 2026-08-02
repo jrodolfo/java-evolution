@@ -41,5 +41,5 @@ Prefer names that describe the feature directly, such as `StreamExamples`, `Reco
 Use JDK 25 and run:
 
 ```bash
-mvn test
+make check
 ```

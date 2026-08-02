@@ -23,7 +23,13 @@ source scripts/use-java-25.sh
 Then run the test suite:
 
 ```bash
-mvn test
+make test
+```
+
+To print the active Java/Maven versions and run the test suite:
+
+```bash
+make check
 ```
 
 ## Important Design Choice
@@ -97,7 +103,7 @@ src/main/java/net/jrodolfo/java_evolution/java08/StreamExamples.java
 src/test/java/net/jrodolfo/java_evolution/java08/StreamExamplesTest.java
 ```
 
-The tests are meant to explain the expected behavior. Running `mvn test` proves that the examples compile and behave as documented.
+The tests are meant to explain the expected behavior. Running `make test` proves that the examples compile and behave as documented.
 
 ## Official References
 
