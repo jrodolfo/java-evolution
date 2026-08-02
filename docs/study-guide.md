@@ -1,0 +1,114 @@
+# Study Guide
+
+This guide suggests one way to study the repository without treating every Java release as equally important on the first pass.
+
+The repository is organized by release, but learning Java features is easier if you group them by theme: functional style, platform modernization, language simplification, pattern matching, concurrency, and recent preview work.
+
+## How To Use The Examples
+
+For each feature, read in this order:
+
+1. The version README, to understand the problem the feature solved.
+2. The example or notes class, to see the smallest useful representation.
+3. The matching test, to see the expected behavior as executable documentation.
+
+For example:
+
+```text
+src/main/java/net/jrodolfo/java_evolution/java08/StreamExamples.java
+src/test/java/net/jrodolfo/java_evolution/java08/StreamExamplesTest.java
+```
+
+Run the examples through tests:
+
+```bash
+make test
+```
+
+Use JavaDoc when you want a browsable API reference:
+
+```bash
+make docs
+```
+
+The generated site is written to:
+
+```text
+target/site/apidocs/index.html
+```
+
+## First Pass
+
+Start here if the goal is interview preparation or practical Java fluency.
+
+| Phase | Java Versions | Focus |
+|---|---|---|
+| Functional Java | 8 | Lambdas, streams, method references, `Optional`, default methods, date/time |
+| Platform/API modernization | 9-11 | Collections factories, modules, HTTP Client, String/File APIs, `var` |
+| Language simplification | 12-17 | Switch expressions, text blocks, records, pattern matching, sealed classes |
+| Modern concurrency and data modeling | 18-22 | UTF-8 default, virtual threads, record patterns, pattern switch, sequenced collections |
+| Latest release awareness | 23-25 | Final vs preview/incubator status, compact source files, scoped values, runtime notes |
+
+Do not try to memorize every JEP number on the first pass. Focus on explaining why the feature exists and where you would use it.
+
+## Recommended Study Order
+
+1. **Java 8**
+   Study lambdas, streams, `Optional`, method references, `CompletableFuture`, default methods, and the date/time API. These are still daily-use features.
+
+2. **Java 10, 11**
+   Study `var`, `HttpClient`, String APIs, files APIs, `Predicate.not`, and `Optional.isEmpty`. These show how Java became more concise without becoming dynamic.
+
+3. **Java 14-17**
+   Study switch expressions, records, pattern matching for `instanceof`, sealed classes, `HexFormat`, and strong encapsulation. These are common in modern code reviews and migration discussions.
+
+4. **Java 21**
+   Spend extra time here because Java 21 is an LTS release. Focus on virtual threads, record patterns, pattern matching for `switch`, and sequenced collections.
+
+5. **Java 22-25**
+   Study these for current-version awareness. Pay attention to status labels: final, preview, incubator, notes-only, runtime, tooling, or cryptography.
+
+## What To Skip Initially
+
+It is reasonable to skim these on the first pass:
+
+- low-level runtime and GC notes
+- cryptography provider details
+- incubator APIs
+- native interop details
+- source launcher behavior
+- JFR/AOT operational features
+
+These are useful, but they are less likely to matter before you understand the language and library features used in everyday code.
+
+## How To Review One Java Version
+
+Use this checklist:
+
+1. Read the package README.
+2. Name each feature in one sentence.
+3. Explain what problem each feature solved.
+4. Open each example class and read the JavaDoc.
+5. Open the matching test and read the assertion messages.
+6. Run the tests for the whole project with `make test`.
+
+For a quick version review, use [feature-map.md](feature-map.md).
+
+For JEP lookup, use [jep-index.md](jep-index.md).
+
+## Interview Prep Path
+
+If time is limited, prioritize these topics:
+
+- Java 8: lambdas, streams, `Optional`, date/time
+- Java 10: `var`
+- Java 11: HTTP Client and String APIs
+- Java 14-17: switch expressions, records, pattern matching, sealed classes
+- Java 21: virtual threads, record patterns, pattern matching for `switch`, sequenced collections
+- Java 22-25: final vs preview awareness
+
+The most convincing interview answer is not "I know Java 21." It is:
+
+```text
+I can explain what changed, why it changed, and I have small tested examples here.
+```

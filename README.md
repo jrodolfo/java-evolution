@@ -75,7 +75,12 @@ src/test/java/net/jrodolfo/java_evolution/
 
 Example classes contain JavaDoc. Test classes are written as executable documentation with clear assertions. Packages can also include a version README with a deeper explanation of the problems each feature solved.
 
-For a class-by-class navigation table, see [docs/feature-map.md](docs/feature-map.md).
+## Documentation
+
+- [Study Guide](docs/study-guide.md): suggested learning path through Java 8-25.
+- [Interview Guide](docs/interview-guide.md): talking points and demo flow for interviews.
+- [JEP Index](docs/jep-index.md): centralized JEP links with status labels.
+- [Feature Map](docs/feature-map.md): class-by-class navigation table.
 
 ## Feature Index
 
