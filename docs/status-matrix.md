@@ -71,7 +71,7 @@ Status vocabulary:
 | 17 | Strong encapsulation | runtime, notes-only | `StrongEncapsulationNotes` | `StrongEncapsulationNotesTest` | [JEP 403](https://openjdk.org/jeps/403) |
 | 18 | UTF-8 default charset | final | `Utf8DefaultCharsetExamples` | `Utf8DefaultCharsetExamplesTest` | [JEP 400](https://openjdk.org/jeps/400) |
 | 18 | Simple Web Server | tooling, notes-only | `SimpleWebServerNotes` | `SimpleWebServerNotesTest` | [JEP 408](https://openjdk.org/jeps/408) |
-| 18 | JavaDoc snippets | documentation, notes-only | `CodeSnippetJavaDocNotes` | `CodeSnippetJavaDocNotesTest` | [JEP 413](https://openjdk.org/jeps/413) |
+| 18 | JavaDoc snippets | tooling, documentation, notes-only | `CodeSnippetJavaDocNotes` | `CodeSnippetJavaDocNotesTest` | [JEP 413](https://openjdk.org/jeps/413) |
 | 18 | InetAddress resolver SPI | final, notes-only | `InetAddressResolutionNotes` | `InetAddressResolutionNotesTest` | [JEP 418](https://openjdk.org/jeps/418) |
 | 19 | Virtual threads preview | preview | `VirtualThreadsPreviewExamples` | `VirtualThreadsPreviewExamplesTest` | [JEP 425](https://openjdk.org/jeps/425) |
 | 19 | Record patterns preview | preview | `RecordPatternsPreviewExamples` | `RecordPatternsPreviewExamplesTest` | [JEP 405](https://openjdk.org/jeps/405) |
@@ -101,7 +101,7 @@ Status vocabulary:
 | 22 | Class-File API preview | preview, notes-only | `ClassFileApiPreviewNotes` | `ClassFileApiPreviewNotesTest` | [JEP 457](https://openjdk.org/jeps/457) |
 | 22 | Scoped values second preview | preview, notes-only | `ScopedValuesSecondPreviewNotes` | `ScopedValuesSecondPreviewNotesTest` | [JEP 464](https://openjdk.org/jeps/464) |
 | 22 | Structured concurrency second preview | preview, notes-only | `StructuredConcurrencySecondPreviewNotes` | `StructuredConcurrencySecondPreviewNotesTest` | [JEP 462](https://openjdk.org/jeps/462) |
-| 23 | Markdown documentation comments | documentation, notes-only | `MarkdownDocumentationCommentsNotes` | `Java23NotesTest` | [JEP 467](https://openjdk.org/jeps/467) |
+| 23 | Markdown documentation comments | tooling, documentation, notes-only | `MarkdownDocumentationCommentsNotes` | `Java23NotesTest` | [JEP 467](https://openjdk.org/jeps/467) |
 | 23 | Primitive patterns preview | preview, notes-only | `PrimitivePatternsPreviewNotes` | `Java23NotesTest` | [JEP 455](https://openjdk.org/jeps/455) |
 | 23 | Module import declarations preview | preview, notes-only | `ModuleImportDeclarationsPreviewNotes` | `Java23NotesTest` | [JEP 476](https://openjdk.org/jeps/476) |
 | 23 | Flexible constructor bodies second preview | preview, notes-only | `FlexibleConstructorBodiesSecondPreviewNotes` | `Java23NotesTest` | [JEP 482](https://openjdk.org/jeps/482) |
@@ -130,4 +130,3 @@ Status vocabulary:
 | 25 | Structured concurrency fifth preview | preview, notes-only | `StructuredConcurrencyFifthPreviewNotes` | `Java25NotesTest` | [JEP 505](https://openjdk.org/jeps/505) |
 | 25 | Vector API tenth incubator | incubator, notes-only | `VectorApiTenthIncubatorNotes` | `Java25NotesTest` | [JEP 508](https://openjdk.org/jeps/508) |
 | 25 | AOT, JFR, object headers, GC notes | runtime, notes-only | `*Notes` | `Java25NotesTest` | [java25 README](../src/main/java/net/jrodolfo/java_evolution/java25/README.md) |
-
