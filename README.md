@@ -1,5 +1,8 @@
 # java-evolution
 
+[![build](https://github.com/jrodolfo/java-evolution/actions/workflows/build.yml/badge.svg)](https://github.com/jrodolfo/java-evolution/actions/workflows/build.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 `java-evolution` is a didactic Java reference project that demonstrates features introduced in each Java release from Java 8 through Java 25.
 
 The project is intentionally lightweight. Spring Boot provides the project shell and Maven setup, but the examples are plain Java classes with focused JUnit tests. The main goal is to make each feature easy to read, run, and revisit during study or interview preparation.
@@ -58,6 +61,8 @@ src/test/java/net/jrodolfo/java_evolution/
 
 Example classes contain JavaDoc. Test classes are written as executable documentation with clear assertions.
 
+For a class-by-class navigation table, see [docs/feature-map.md](docs/feature-map.md).
+
 ## Feature Index
 
 | Java | Package | Highlights |
@@ -114,7 +119,3 @@ The tests are meant to explain the expected behavior. Running `mvn test` proves 
 - [OpenJDK JDK 23](https://openjdk.org/projects/jdk/23/)
 - [OpenJDK JDK 24](https://openjdk.org/projects/jdk/24/)
 - [OpenJDK JDK 25](https://openjdk.org/projects/jdk/25/)
-
-## Notes
-
-`HELP.md` is the original Spring Initializr help file. It is kept for now, but the main documentation for this repository is this README.
