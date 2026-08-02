@@ -13,5 +13,8 @@ timeout = 20
 accept = [200, 204, 206, 429]
 
 exclude = [
-	"^mailto:"
+	"^mailto:",
+	# OpenJDK/JEP pages are valid browser links but can return 403 to
+	# automated GitHub Actions link checks.
+	"^https://openjdk\\.org/"
 ]

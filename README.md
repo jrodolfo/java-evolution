@@ -42,6 +42,13 @@ make docs
 The generated JavaDoc is written to `target/site/apidocs/index.html`.
 The published JavaDoc site is available at https://jrodolfo.github.io/java-evolution/.
 
+## Repository Status
+
+- Examples are built and tested with JDK 25.
+- Spring Boot is used as lightweight project tooling; the examples themselves are plain Java.
+- Some features are represented by `Notes` classes because they involve preview flags, incubator modules, native code, JVM flags, external tools, cryptography providers, or runtime behavior.
+- JavaDoc is generated locally with `make docs` and published through GitHub Pages.
+
 ## Important Design Choice
 
 The whole project compiles with JDK 25:
@@ -120,6 +127,18 @@ src/test/java/net/jrodolfo/java_evolution/java08/StreamExamplesTest.java
 ```
 
 The tests are meant to explain the expected behavior. Running `make test` proves that the examples compile and behave as documented. Running `make docs` generates a browsable JavaDoc reference for the example classes.
+
+## Run One Example
+
+Tests are the executable examples. To focus on one topic, run only the matching test class:
+
+```bash
+mvn -Dtest=StreamExamplesTest test
+mvn -Dtest=VirtualThreadsExamplesTest test
+mvn -Dtest=ScopedValuesExamplesTest test
+```
+
+Use the class names in [docs/feature-map.md](docs/feature-map.md) to choose a specific example.
 
 ## Official References
 
