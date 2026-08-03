@@ -2,7 +2,7 @@
 
 This glossary explains acronyms and recurring terms used across the repository. The explanations are intentionally practical: they describe what each term means when reading or running this project.
 
-| Term | Stands For | Meaning In This Project |
+| Term | Stands for | Meaning in this project |
 |---|---|---|
 | AOT | Ahead-of-Time | Work done before normal application startup, such as preloading or linking classes to reduce startup cost. |
 | API | Application Programming Interface | A public type, method, module, or library contract that code can call. |
