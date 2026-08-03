@@ -16,6 +16,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | JDK | Java Development Kit | The Java installation used to compile, test, document, and run this project. |
 | JEP | JDK Enhancement Proposal | The OpenJDK design record for a Java platform feature or change. |
 | JFR | Java Flight Recorder | JVM observability tooling for recording runtime events and performance data. |
+| JPMS | Java Platform Module System | The Java 9 module system used to declare module dependencies and exported packages with `module-info.java`, `requires`, and `exports`. |
 | JRE | Java Runtime Environment | The runtime pieces needed to run Java applications; modern JDK installs include the runtime. |
 | JUnit | Java unit testing framework | The test framework used for executable examples in this repository. |
 | JVM | Java Virtual Machine | The runtime engine that executes compiled Java bytecode. |

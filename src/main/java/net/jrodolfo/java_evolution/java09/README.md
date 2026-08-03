@@ -1,6 +1,6 @@
 # Java 9
 
-Java 9 was a large release. Its headline feature was the Java Platform Module System, but it also added several everyday improvements that made Java 8-style code easier to write and maintain.
+Java 9 was a large release. Its headline feature was the Java Platform Module System (JPMS), but it also added several everyday improvements that made Java 8-style code easier to write and maintain.
 
 The examples in this package keep the Spring Boot project non-modular on purpose. That lets the repository stay simple while still explaining what modules are for.
 
@@ -88,7 +88,7 @@ Test: `StackWalkerExamplesTest`
 
 Before Java 9, the classpath had no strong module boundaries. Large applications could accidentally depend on internal packages, and the JDK itself was difficult to split into smaller pieces.
 
-The Java Platform Module System introduced `module-info.java`, `requires`, and `exports`. It lets code declare which modules it depends on and which packages it exposes.
+The Java Platform Module System (JPMS) introduced `module-info.java`, `requires`, and `exports`. It lets code declare which modules it depends on and which packages it exposes.
 
 This repository explains modules without converting the Spring Boot app into a modular application, because the learning examples are meant to stay independent.
 

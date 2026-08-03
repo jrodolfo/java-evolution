@@ -1,7 +1,7 @@
 package net.jrodolfo.java_evolution.java09;
 
 /**
- * Explains the Java Platform Module System, introduced in Java 9.
+ * Explains the Java Platform Module System (JPMS), introduced in Java 9.
  *
  * <p>
  * Before Java 9, Java applications were primarily organized with the classpath.
