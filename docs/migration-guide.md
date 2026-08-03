@@ -4,6 +4,8 @@ This guide explains what to study when moving from one common Java baseline to a
 
 For exact feature status and JEP links, use [status-matrix.md](status-matrix.md) and [jep-index.md](jep-index.md). For class-by-class navigation, use [feature-map.md](feature-map.md).
 
+For recurring acronyms such as JEP, LTS, AOT, JFR, and GC, see [glossary.md](glossary.md).
+
 ## Java 8 To Java 11
 
 Java 8 is still common in older systems, but Java 11 changed the practical baseline for many projects. The biggest learning theme is platform modernization: fewer small bits of boilerplate, better standard APIs, and more awareness of modules.

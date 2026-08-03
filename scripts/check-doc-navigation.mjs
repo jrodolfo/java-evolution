@@ -59,7 +59,7 @@ for (const file of markdownFiles) {
     errors.push(`${file} contains wildcard notes test reference; prefer concrete test class names`);
   }
 
-  for (const match of text.matchAll(/-Dtest=([^\s]+) test/g)) {
+  for (const match of text.matchAll(/["']?-Dtest=([^"'\s]+)["']?\s+test/g)) {
     for (const testClass of match[1].split(",")) {
       if (!testClasses.has(testClass)) {
         errors.push(`${file} references missing test class ${testClass}`);
