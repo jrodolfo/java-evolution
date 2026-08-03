@@ -152,7 +152,7 @@ Start here depending on what you need:
 - Looking for one feature quickly: use the [Feature Map](docs/feature-map.md).
 - Checking maturity or official references: use the [Status Matrix](docs/status-matrix.md) and [JEP Index](docs/jep-index.md).
 - Preparing to present the project: use the [Interview Guide](docs/interview-guide.md) and [Demo Script](docs/demo-script.md).
-- Preparing a release: use the [Release Checklist](docs/release-checklist.md).
+- Preparing a release: use the [Release Checklist](docs/release/checklist.md).
 - Browsing API-style documentation: use the [JavaDoc Site](https://jrodolfo.github.io/java-evolution/).
 
 - [Changelog](CHANGELOG.md): release history.
@@ -165,8 +165,8 @@ Start here depending on what you need:
 - [JEP Index](docs/jep-index.md): centralized JEP links with status labels.
 - [Feature Map](docs/feature-map.md): class-by-class navigation table.
 - [Status Matrix](docs/status-matrix.md): feature status, example class, test class, and reference links.
-- [Release Checklist](docs/release-checklist.md): repeatable release process.
-- [v1.0.0 Release Notes](docs/release-notes-v1.0.0.md): draft text for the first GitHub release.
+- [Release Checklist](docs/release/checklist.md): repeatable release process.
+- [v1.0.0 Release Notes](docs/release/notes-v1.0.0.md): draft text for the first GitHub release.
 - [JavaDoc Site](https://jrodolfo.github.io/java-evolution/): generated API documentation published by GitHub Pages.
 
 ## Feature Index

@@ -3,11 +3,26 @@ import path from "node:path";
 
 const versions = Array.from({ length: 18 }, (_, index) => `java${String(index + 8).padStart(2, "0")}`);
 const root = "src/main/java/net/jrodolfo/java_evolution";
+
+function markdownFilesIn(directory) {
+  const files = [];
+
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    const currentPath = path.join(directory, entry.name);
+
+    if (entry.isDirectory()) {
+      files.push(...markdownFilesIn(currentPath));
+    } else if (entry.name.endsWith(".md")) {
+      files.push(currentPath);
+    }
+  }
+
+  return files;
+}
+
 const markdownFiles = [
   "README.md",
-  ...fs.readdirSync("docs")
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => path.join("docs", file)),
+  ...markdownFilesIn("docs"),
   ...versions.map((version) => path.join(root, version, "README.md")),
 ];
 

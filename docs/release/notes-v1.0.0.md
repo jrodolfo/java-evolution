@@ -24,8 +24,8 @@ The repository demonstrates features introduced from Java 8 through Java 25. It 
 - `docs/feature-map.md`: class-by-class navigation.
 - `docs/status-matrix.md`: feature maturity and repository representation.
 - `docs/jep-index.md`: centralized official JEP links.
-- `docs/release-template.md`: checklist for adding future Java releases.
-- `docs/release-checklist.md`: repeatable release process.
+- `docs/release/template.md`: checklist for adding future Java releases.
+- `docs/release/checklist.md`: repeatable release process.
 
 ## Validation
 
