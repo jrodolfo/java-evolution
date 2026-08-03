@@ -44,6 +44,6 @@ docs-audit:
 	@node scripts/check-doc-navigation.mjs
 
 links:
-	lychee --config .lychee.toml README.md docs/*.md src/main/java/net/jrodolfo/java_evolution/java*/README.md
+	lychee --config .lychee.toml README.md "docs/**/*.md" src/main/java/net/jrodolfo/java_evolution/java*/README.md
 
 check: java-version test
