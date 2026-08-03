@@ -23,10 +23,49 @@ The emphasis is clarity over cleverness. Examples should stay small, readable, a
 
 This repository uses the local Maven installation on your machine. It does not use the Maven wrapper.
 
-On macOS, this helper switches the current terminal session to JDK 25:
+### Java 25 Helpers
+
+If you usually keep another JDK on your machine, use one of these helpers to switch the current terminal session to JDK 25 before running Maven.
+
+On macOS:
 
 ```bash
 source scripts/use-java-25.sh
+```
+
+On Windows with Git Bash:
+
+```bash
+source scripts/use-java-25-windows.sh
+```
+
+On Windows with PowerShell:
+
+```powershell
+.\scripts\Use-Java25.ps1
+```
+
+If PowerShell blocks local scripts on a fresh Windows install, allow scripts only for the current terminal session and then run the helper:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\scripts\Use-Java25.ps1
+```
+
+The Windows helpers look for JDK 25 in `JAVA25_HOME`, `JDK25_HOME`, `C:\dev\apps`, and common `Program Files` Java install directories. If your JDK is somewhere else, pass it explicitly:
+
+```bash
+source scripts/use-java-25-windows.sh /c/dev/apps/jdk-25.0.0
+```
+
+```powershell
+.\scripts\Use-Java25.ps1 -JavaHome C:\dev\apps\jdk-25.0.0
+```
+
+After switching Java, confirm Maven is also using JDK 25:
+
+```bash
+mvn --version
 ```
 
 Then run the test suite:
