@@ -93,7 +93,7 @@ Could not find a JDK 25 installation.
 Pass the JDK path explicitly, or set JAVA25_HOME or JDK25_HOME first.
 
 Examples:
-  .\scripts\Use-Java25.ps1 -JavaHome C:\dev\apps\jdk-25.0.0
-  `$env:JAVA25_HOME = 'C:\dev\apps\jdk-25.0.0'; .\scripts\Use-Java25.ps1
+  .\scripts\use-java-25-windows.ps1 -JavaHome C:\dev\apps\jdk-25.0.0
+  `$env:JAVA25_HOME = 'C:\dev\apps\jdk-25.0.0'; .\scripts\use-java-25-windows.ps1
 "@
 exit 1
