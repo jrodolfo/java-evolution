@@ -22,6 +22,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | KDF | Key Derivation Function | A cryptographic API for deriving keys from secret material and context. |
 | LTS | Long-Term Support | A Java release line commonly supported for a longer maintenance window by vendors. |
 | Maven | Apache Maven | The build tool used here for dependency resolution, compilation, tests, and documentation tasks. |
+| Notes | Notes Class | A source file that documents a Java feature when a small portable executable example would be misleading, platform-specific, or too large. |
 | PEM | Privacy-Enhanced Mail | A text encoding format commonly used for cryptographic keys and certificates. |
 | Preview | Preview Feature | A Java language or API feature available for feedback before becoming final or changing shape. |
 | Spring Boot | Spring Boot | The lightweight application shell and Maven parent used by this project. |
