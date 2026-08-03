@@ -33,9 +33,11 @@ Study these files:
 
 Run:
 
+Multi-test Maven commands quote `-Dtest=...` so the examples work in Bash, Git Bash, and PowerShell.
+
 ```bash
-mvn -Dtest=CollectionFactoryExamplesTest,ModuleSystemNotesTest test
-mvn -Dtest=LocalVariableTypeInferenceExamplesTest,StringApiExamplesTest,FilesApiExamplesTest test
+mvn "-Dtest=CollectionFactoryExamplesTest,ModuleSystemNotesTest" test
+mvn "-Dtest=LocalVariableTypeInferenceExamplesTest,StringApiExamplesTest,FilesApiExamplesTest" test
 mvn -Dtest=HttpClientExamplesTest test
 ```
 
@@ -72,8 +74,8 @@ Study these files:
 Run:
 
 ```bash
-mvn -Dtest=SwitchExpressionExamplesTest,TextBlockExamplesTest test
-mvn -Dtest=RecordExamplesTest,PatternMatchingInstanceofExamplesTest,SealedClassesExamplesTest test
+mvn "-Dtest=SwitchExpressionExamplesTest,TextBlockExamplesTest" test
+mvn "-Dtest=RecordExamplesTest,PatternMatchingInstanceofExamplesTest,SealedClassesExamplesTest" test
 mvn -Dtest=StrongEncapsulationNotesTest test
 ```
 
@@ -109,9 +111,9 @@ Study these files:
 Run:
 
 ```bash
-mvn -Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest test
-mvn -Dtest=PatternMatchingSwitchExamplesTest,SequencedCollectionsExamplesTest test
-mvn -Dtest=ScopedValuesPreviewNotesTest,StructuredConcurrencyPreviewNotesTest test
+mvn "-Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest" test
+mvn "-Dtest=PatternMatchingSwitchExamplesTest,SequencedCollectionsExamplesTest" test
+mvn "-Dtest=ScopedValuesPreviewNotesTest,StructuredConcurrencyPreviewNotesTest" test
 ```
 
 Interview angle: explain Java 21 as the point where modern Java concurrency becomes practical for many server applications. Virtual threads let code keep a simple blocking style while supporting many concurrent I/O-bound tasks.
@@ -147,9 +149,9 @@ Study these files:
 Run:
 
 ```bash
-mvn -Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest test
-mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
-mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest test
+mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest" test
+mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
+mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest" test
 ```
 
 Interview angle: show maturity discipline. A strong answer distinguishes final language/API features from preview, incubator, runtime, tooling, and security topics, and explains why some final features are represented as notes in this repository.

@@ -21,8 +21,8 @@ Read these first:
 Run:
 
 ```bash
-mvn -Dtest=LambdaExamplesTest,StreamExamplesTest,OptionalExamplesTest test
-mvn -Dtest=CompletableFutureExamplesTest,DateTimeApiExamplesTest test
+mvn "-Dtest=LambdaExamplesTest,StreamExamplesTest,OptionalExamplesTest" test
+mvn "-Dtest=CompletableFutureExamplesTest,DateTimeApiExamplesTest" test
 ```
 
 Interview angle: explain how Java 8 made Java more expressive without abandoning static typing. Be ready to compare external iteration with streams, null checks with `Optional`, and callback-style asynchronous code with `CompletableFuture`.
@@ -46,9 +46,9 @@ Read these first:
 Run:
 
 ```bash
-mvn -Dtest=CollectionFactoryExamplesTest,StreamEnhancementExamplesTest,OptionalEnhancementExamplesTest test
-mvn -Dtest=LocalVariableTypeInferenceExamplesTest,StringApiExamplesTest,FilesApiExamplesTest test
-mvn -Dtest=HttpClientExamplesTest,PredicateNotExamplesTest,OptionalIsEmptyExamplesTest test
+mvn "-Dtest=CollectionFactoryExamplesTest,StreamEnhancementExamplesTest,OptionalEnhancementExamplesTest" test
+mvn "-Dtest=LocalVariableTypeInferenceExamplesTest,StringApiExamplesTest,FilesApiExamplesTest" test
+mvn "-Dtest=HttpClientExamplesTest,PredicateNotExamplesTest,OptionalIsEmptyExamplesTest" test
 ```
 
 Interview angle: describe these releases as practical modernization. Java became easier to write and easier to package, while remaining compatible with existing code.
@@ -73,9 +73,9 @@ Read these first:
 Run:
 
 ```bash
-mvn -Dtest=SwitchExpressionPreviewExamplesTest,TeeingCollectorExamplesTest,TextBlockPreviewExamplesTest test
-mvn -Dtest=SwitchExpressionExamplesTest,RecordPreviewExamplesTest,TextBlockExamplesTest test
-mvn -Dtest=RecordExamplesTest,PatternMatchingInstanceofExamplesTest,StreamToListExamplesTest test
+mvn "-Dtest=SwitchExpressionPreviewExamplesTest,TeeingCollectorExamplesTest,TextBlockPreviewExamplesTest" test
+mvn "-Dtest=SwitchExpressionExamplesTest,RecordPreviewExamplesTest,TextBlockExamplesTest" test
+mvn "-Dtest=RecordExamplesTest,PatternMatchingInstanceofExamplesTest,StreamToListExamplesTest" test
 ```
 
 Interview angle: focus on readability. These features are not about making Java clever; they reduce ceremony around common business-code patterns.
@@ -100,9 +100,9 @@ Read these first:
 Run:
 
 ```bash
-mvn -Dtest=SealedClassesExamplesTest,PatternMatchingSwitchPreviewExamplesTest,RandomGeneratorExamplesTest test
-mvn -Dtest=VirtualThreadsPreviewExamplesTest,RecordPatternsPreviewExamplesTest test
-mvn -Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest,PatternMatchingSwitchExamplesTest,SequencedCollectionsExamplesTest test
+mvn "-Dtest=SealedClassesExamplesTest,PatternMatchingSwitchPreviewExamplesTest,RandomGeneratorExamplesTest" test
+mvn "-Dtest=VirtualThreadsPreviewExamplesTest,RecordPatternsPreviewExamplesTest" test
+mvn "-Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest,PatternMatchingSwitchExamplesTest,SequencedCollectionsExamplesTest" test
 ```
 
 Interview angle: treat Java 21 as the modern baseline. Explain virtual threads as a way to keep the simple blocking style while scaling I/O-bound work, and explain sealed classes plus pattern matching as a safer way to model known alternatives.
@@ -122,7 +122,7 @@ Java 22:
 Run:
 
 ```bash
-mvn -Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersPreviewNotesTest,ForeignFunctionMemoryApiNotesTest test
+mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersPreviewNotesTest,ForeignFunctionMemoryApiNotesTest" test
 ```
 
 Java 23:
@@ -133,7 +133,7 @@ Java 23:
 Run:
 
 ```bash
-mvn -Dtest=MarkdownDocumentationCommentsNotesTest,ModuleImportDeclarationsPreviewNotesTest test
+mvn "-Dtest=MarkdownDocumentationCommentsNotesTest,ModuleImportDeclarationsPreviewNotesTest" test
 ```
 
 Java 24:
@@ -145,7 +145,7 @@ Java 24:
 Run:
 
 ```bash
-mvn -Dtest=StreamGatherersExamplesTest,ClassFileApiNotesTest,SecurityManagerDisabledNotesTest test
+mvn "-Dtest=StreamGatherersExamplesTest,ClassFileApiNotesTest,SecurityManagerDisabledNotesTest" test
 ```
 
 Java 25:
@@ -159,8 +159,8 @@ Java 25:
 Run:
 
 ```bash
-mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
-mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest test
+mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
+mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest" test
 ```
 
 Interview angle: be explicit about maturity. A strong answer distinguishes final features from preview and incubator work, and explains why some topics are documented as notes instead of executable demos.
