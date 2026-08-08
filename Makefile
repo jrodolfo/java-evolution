@@ -26,44 +26,7 @@ help:
 	@echo "  make release-check run documentation, full test, and practical demo gates"
 
 check-java-25:
-	@java_version="$$(java --version 2>&1 | sed -n '1p')" || exit 1; \
-	case "$$java_version" in \
-	  "java 25"*|"openjdk 25"*) ;; \
-	  *) \
-	    echo "java 25 is required, but the active java is not java 25."; \
-	    echo; \
-	    echo "active java:"; \
-	    echo "  $$java_version"; \
-	    echo; \
-	    echo "run one of:"; \
-	    echo "  source scripts/use-java-25-mac.sh"; \
-	    echo "  source scripts/use-java-25-windows.sh"; \
-	    echo "  . .\\scripts\\use-java-25-windows.ps1"; \
-	    echo; \
-	    echo "then verify:"; \
-	    echo "  java --version"; \
-	    echo "  mvn --version"; \
-	    exit 1; \
-	esac; \
-	maven_java_version="$$(mvn --version 2>&1 | sed -n 's/^Java version: //p')" || exit 1; \
-	case "$$maven_java_version" in \
-	  25*|25.*) ;; \
-	  *) \
-	    echo "java 25 is required, but maven is not using java 25."; \
-	    echo; \
-	    echo "maven java:"; \
-	    echo "  Java version: $$maven_java_version"; \
-	    echo; \
-	    echo "run one of:"; \
-	    echo "  source scripts/use-java-25-mac.sh"; \
-	    echo "  source scripts/use-java-25-windows.sh"; \
-	    echo "  . .\\scripts\\use-java-25-windows.ps1"; \
-	    echo; \
-	    echo "then verify:"; \
-	    echo "  java --version"; \
-	    echo "  mvn --version"; \
-	    exit 1; \
-	esac
+	@java scripts/CheckJava25.java
 
 java-version: check-java-25
 	$(JAVA_CMD) --version
