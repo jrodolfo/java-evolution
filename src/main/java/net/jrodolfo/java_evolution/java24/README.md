@@ -18,11 +18,15 @@ Test: `StreamGatherersExamplesTest`
 
 Bytecode tools need a reliable way to parse, generate, and transform class files. A standard API can evolve with the JDK class-file format.
 
-Java 24 finalized the Class-File API. This repository keeps it as notes because bytecode generation would distract from the core Java-version learning path.
+Java 24 finalized the Class-File API. The executable example in this package parses an already-compiled project class with `ClassFile.of().parse(...)`, extracts class-file metadata, and keeps generation and transformation for later study.
 
 Example: `ClassFileApiNotes`
 
 Test: `ClassFileApiNotesTest`
+
+Executable example: [`class_file`](class_file/README.md)
+
+Executable test: `ClassFileInspectorTest`
 
 ## Security Manager Disabled
 
@@ -95,13 +99,13 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. Then read `ClassFileApiNotes`, `SecurityManagerDisabledNotes`, `VirtualThreadSynchronizationNotes`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `ClassFileApiNotes`, `SecurityManagerDisabledNotes`, `VirtualThreadSynchronizationNotes`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=StreamGatherersExamplesTest test
-mvn -Dtest=ClassFileApiNotesTest,SecurityManagerDisabledNotesTest,VirtualThreadSynchronizationNotesTest test
+mvn -Dtest=ClassFileApiNotesTest,ClassFileInspectorTest,SecurityManagerDisabledNotesTest,VirtualThreadSynchronizationNotesTest test
 mvn -Dtest=QuantumResistantCryptoNotesTest,AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest test
 mvn -Dtest=ModuleLatticeCryptoExamplesTest test
 mvn -Dtest=PrimitivePatternsSecondPreviewNotesTest,FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest test

@@ -141,7 +141,8 @@ mvn "-Dtest=MarkdownDocumentationCommentsNotesTest,ModuleImportDeclarationsPrevi
 Java 24:
 
 - `src/main/java/net/jrodolfo/java_evolution/java24/StreamGatherersExamples.java`
-- `src/main/java/net/jrodolfo/java_evolution/java24/ClassFileApiNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java24/class_file/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspector.java`
 - `src/main/java/net/jrodolfo/java_evolution/java24/SecurityManagerDisabledNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeKemExample.java`
@@ -150,7 +151,7 @@ Java 24:
 Run:
 
 ```bash
-mvn "-Dtest=StreamGatherersExamplesTest,ClassFileApiNotesTest,SecurityManagerDisabledNotesTest" test
+mvn "-Dtest=StreamGatherersExamplesTest,ClassFileApiNotesTest,ClassFileInspectorTest,SecurityManagerDisabledNotesTest" test
 mvn "-Dtest=QuantumResistantCryptoNotesTest,ModuleLatticeCryptoExamplesTest" test
 ```
 

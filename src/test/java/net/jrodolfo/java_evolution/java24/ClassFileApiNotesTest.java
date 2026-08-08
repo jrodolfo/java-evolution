@@ -16,5 +16,8 @@ class ClassFileApiNotesTest {
 		assertThat(notes.audience())
 				.as("The note should identify who benefits from this API")
 				.contains("tools");
+		assertThat(notes.detailedExplanation())
+				.as("The notes should point learners to the executable Class-File API example")
+				.endsWith("class_file/README.md");
 	}
 }

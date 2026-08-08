@@ -9,6 +9,12 @@ package net.jrodolfo.java_evolution.java24;
  * standard API for that work, allowing the JDK and tools to evolve with the
  * class-file format together.
  * </p>
+ *
+ * <p>
+ * The executable inspection example lives in the {@code class_file}
+ * subpackage. These notes keep the high-level purpose easy to find from the
+ * main Java 24 package.
+ * </p>
  */
 public class ClassFileApiNotes {
 	/**
@@ -27,5 +33,14 @@ public class ClassFileApiNotes {
 	 */
 	public String audience() {
 		return "bytecode tools, frameworks, compilers, and analysis utilities";
+	}
+
+	/**
+	 * Points to the detailed executable example.
+	 *
+	 * @return project-relative path to the detailed explanation
+	 */
+	public String detailedExplanation() {
+		return "src/main/java/net/jrodolfo/java_evolution/java24/class_file/README.md";
 	}
 }

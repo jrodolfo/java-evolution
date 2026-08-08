@@ -168,7 +168,7 @@ Status labels:
 | JEP | Feature | Status |
 |---|---|---|
 | [JEP 485](https://openjdk.org/jeps/485) | Stream Gatherers | Final |
-| [JEP 484](https://openjdk.org/jeps/484) | Class-File API | Final, Notes |
+| [JEP 484](https://openjdk.org/jeps/484) | Class-File API | Final, Example |
 | [JEP 486](https://openjdk.org/jeps/486) | Permanently Disable the Security Manager | Runtime, Notes |
 | [JEP 491](https://openjdk.org/jeps/491) | Synchronize Virtual Threads without Pinning | Runtime, Notes |
 | [JEP 496](https://openjdk.org/jeps/496) | Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism | Final, Security, Example |
