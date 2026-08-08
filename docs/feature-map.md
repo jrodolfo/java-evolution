@@ -216,7 +216,7 @@ Learning notes: [java24 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Class-File API final | `ClassFileApiNotes` | `ClassFileApiNotesTest` |
 | Security Manager disabled | `SecurityManagerDisabledNotes` | `SecurityManagerDisabledNotesTest` |
 | Virtual-thread synchronization | `VirtualThreadSynchronizationNotes` | `VirtualThreadSynchronizationNotesTest` |
-| Quantum-resistant crypto | `QuantumResistantCryptoNotes` | `QuantumResistantCryptoNotesTest` |
+| Quantum-resistant crypto | [`ModuleLatticeKemExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeKemExample.java), [`ModuleLatticeDsaExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeDsaExample.java), `QuantumResistantCryptoNotes` | [`ModuleLatticeCryptoExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeCryptoExamplesTest.java), `QuantumResistantCryptoNotesTest` |
 | AOT class loading | `AotClassLoadingNotes` | `AotClassLoadingNotesTest` |
 | KDF preview | `KeyDerivationFunctionPreviewNotes` | `KeyDerivationFunctionPreviewNotesTest` |
 | Flexible constructor bodies third preview | `FlexibleConstructorBodiesThirdPreviewNotes` | `FlexibleConstructorBodiesThirdPreviewNotesTest` |

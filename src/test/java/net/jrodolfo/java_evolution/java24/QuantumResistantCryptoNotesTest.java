@@ -17,5 +17,8 @@ class QuantumResistantCryptoNotesTest {
 		assertThat(notes.purpose())
 				.as("The note should explain why post-quantum algorithms matter")
 				.contains("quantum");
+		assertThat(notes.detailedExplanation())
+				.as("The detailed explanation should point to the executable examples")
+				.endsWith("quantum_resistant_crypto/README.md");
 	}
 }

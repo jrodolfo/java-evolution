@@ -48,11 +48,18 @@ Test: `VirtualThreadSynchronizationNotesTest`
 
 Java 24 added support for ML-KEM and ML-DSA, algorithms intended for post-quantum security requirements.
 
-This repository keeps the feature as notes because realistic cryptography examples require careful provider and security setup.
+The executable examples in this package use Java Cryptography Architecture APIs to demonstrate both sides:
+
+- ML-KEM establishes matching shared secret material through encapsulation and decapsulation.
+- ML-DSA signs a message, verifies the original message, and rejects a tampered message.
 
 Example: `QuantumResistantCryptoNotes`
 
 Test: `QuantumResistantCryptoNotesTest`
+
+Executable example: [`quantum_resistant_crypto`](quantum_resistant_crypto/README.md)
+
+Executable test: `ModuleLatticeCryptoExamplesTest`
 
 ## Ahead-of-Time Class Loading
 
@@ -88,7 +95,7 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. Then read `ClassFileApiNotes`, `SecurityManagerDisabledNotes`, `VirtualThreadSynchronizationNotes`, `QuantumResistantCryptoNotes`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. Then read `ClassFileApiNotes`, `SecurityManagerDisabledNotes`, `VirtualThreadSynchronizationNotes`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 
@@ -96,6 +103,7 @@ Run the focused tests:
 mvn -Dtest=StreamGatherersExamplesTest test
 mvn -Dtest=ClassFileApiNotesTest,SecurityManagerDisabledNotesTest,VirtualThreadSynchronizationNotesTest test
 mvn -Dtest=QuantumResistantCryptoNotesTest,AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest test
+mvn -Dtest=ModuleLatticeCryptoExamplesTest test
 mvn -Dtest=PrimitivePatternsSecondPreviewNotesTest,FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest test
 mvn -Dtest=ScopedValuesFourthPreviewNotesTest,StructuredConcurrencyFourthPreviewNotesTest test
 ```
