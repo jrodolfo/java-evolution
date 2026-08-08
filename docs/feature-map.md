@@ -183,7 +183,7 @@ Learning notes: [java22 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Unnamed variables and patterns final | `UnnamedVariablesPatternsExamples` | `UnnamedVariablesPatternsExamplesTest` |
 | Statements before `super(...)` preview | `StatementsBeforeSuperPreviewNotes` | `StatementsBeforeSuperPreviewNotesTest` |
 | Stream Gatherers preview | `StreamGatherersPreviewNotes` | `StreamGatherersPreviewNotesTest` |
-| Foreign Function and Memory API final | `ForeignFunctionMemoryApiNotes` | `ForeignFunctionMemoryApiNotesTest` |
+| Foreign Function and Memory API final | [`NativeStringParser`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringParser.java), [`NativeStringLength`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringLength.java), `ForeignFunctionMemoryApiNotes` | [`ForeignFunctionExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/foreign_function/ForeignFunctionExamplesTest.java), `ForeignFunctionMemoryApiNotesTest` |
 | Multi-file source launcher | `LaunchMultiFileSourceProgramsNotes` | `LaunchMultiFileSourceProgramsNotesTest` |
 | Class-File API preview | `ClassFileApiPreviewNotes` | `ClassFileApiPreviewNotesTest` |
 | Scoped values second preview | `ScopedValuesSecondPreviewNotes` | `ScopedValuesSecondPreviewNotesTest` |

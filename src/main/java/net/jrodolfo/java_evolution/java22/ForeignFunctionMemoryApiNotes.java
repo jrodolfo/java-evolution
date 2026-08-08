@@ -10,8 +10,9 @@ package net.jrodolfo.java_evolution.java22;
  * </p>
  *
  * <p>
- * This repository keeps the feature as notes because a realistic native example
- * would require platform-specific libraries or setup.
+ * The executable native-call examples live in the {@code foreign_function}
+ * subpackage. These notes keep the high-level purpose easy to find from the
+ * main Java 22 package.
  * </p>
  */
 public class ForeignFunctionMemoryApiNotes {
@@ -40,6 +41,15 @@ public class ForeignFunctionMemoryApiNotes {
 	 * @return the project decision
 	 */
 	public String projectDecision() {
-		return "the repository keeps this as notes to avoid platform-specific native library examples";
+		return "the runnable FFM examples live in the foreign_function subpackage";
+	}
+
+	/**
+	 * Points readers to the detailed Markdown explanation.
+	 *
+	 * @return the local documentation file for the full explanation
+	 */
+	public String detailedExplanation() {
+		return "src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/README.md";
 	}
 }

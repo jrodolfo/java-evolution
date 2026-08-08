@@ -117,12 +117,14 @@ Java 22:
 
 - `src/main/java/net/jrodolfo/java_evolution/java22/UnnamedVariablesPatternsExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java22/StreamGatherersPreviewNotes.java`
-- `src/main/java/net/jrodolfo/java_evolution/java22/ForeignFunctionMemoryApiNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringParser.java`
+- `src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringLength.java`
 
 Run:
 
 ```bash
-mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersPreviewNotesTest,ForeignFunctionMemoryApiNotesTest" test
+mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersPreviewNotesTest,ForeignFunctionMemoryApiNotesTest,ForeignFunctionExamplesTest" test
 ```
 
 Java 23:

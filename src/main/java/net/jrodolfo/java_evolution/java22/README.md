@@ -28,11 +28,15 @@ Before the Foreign Function and Memory API, Java native integration usually mean
 
 Java 22 finalized a supported API for calling native functions and accessing memory outside the Java heap.
 
-This repository keeps the feature as notes because a useful native interop example would require platform-specific native libraries or external setup. That would make the project less lightweight.
+The executable example in this package calls small C standard-library functions through `Linker`, `Arena`, `MemorySegment`, and `FunctionDescriptor`. It uses `atoi` to parse a native string as an integer and `strlen` to compute the length of a native C string.
 
 Example: `ForeignFunctionMemoryApiNotes`
 
 Test: `ForeignFunctionMemoryApiNotesTest`
+
+Executable example: [`foreign_function`](foreign_function/README.md)
+
+Executable test: `ForeignFunctionExamplesTest`
 
 ## Stream Gatherers Preview
 
@@ -104,13 +108,14 @@ Test: `StructuredConcurrencySecondPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read the notes for the Foreign Function and Memory API, stream gatherers, Class-File API, constructor-body changes, source launching, scoped values, and structured concurrency.
+Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read the notes for stream gatherers, Class-File API, constructor-body changes, source launching, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=UnnamedVariablesPatternsExamplesTest test
 mvn -Dtest=ForeignFunctionMemoryApiNotesTest,StreamGatherersPreviewNotesTest,ClassFileApiPreviewNotesTest test
+mvn -Dtest=ForeignFunctionExamplesTest test
 mvn -Dtest=StatementsBeforeSuperPreviewNotesTest,LaunchMultiFileSourceProgramsNotesTest,ScopedValuesSecondPreviewNotesTest,StructuredConcurrencySecondPreviewNotesTest test
 ```
 

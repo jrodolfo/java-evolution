@@ -12,6 +12,7 @@ class ForeignFunctionMemoryApiNotesTest {
 	void notesExplainFinalFfmApi() {
 		assertThat(notes.purpose()).contains("native code").contains("outside the Java heap");
 		assertThat(notes.replacesManyUseCasesFor()).isEqualTo("JNI");
-		assertThat(notes.projectDecision()).contains("platform-specific");
+		assertThat(notes.projectDecision()).contains("foreign_function");
+		assertThat(notes.detailedExplanation()).endsWith("foreign_function/README.md");
 	}
 }

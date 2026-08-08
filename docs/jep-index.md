@@ -140,7 +140,7 @@ Status labels:
 | JEP | Feature | Status |
 |---|---|---|
 | [JEP 456](https://openjdk.org/jeps/456) | Unnamed Variables and Patterns | Final |
-| [JEP 454](https://openjdk.org/jeps/454) | Foreign Function and Memory API | Final, Notes |
+| [JEP 454](https://openjdk.org/jeps/454) | Foreign Function and Memory API | Final, Example |
 | [JEP 461](https://openjdk.org/jeps/461) | Stream Gatherers | Preview, Notes |
 | [JEP 457](https://openjdk.org/jeps/457) | Class-File API | Preview, Notes |
 | [JEP 447](https://openjdk.org/jeps/447) | Statements before super(...) | Preview, Notes |
