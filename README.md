@@ -121,6 +121,7 @@ The published JavaDoc site is available at https://jrodolfo.github.io/java-evolu
 - `Notes` does not mean a Java feature is unfinished. Some final features are documented as notes because they are not a good fit for a tiny portable JUnit example.
 - Documentation health is checked locally with `make docs-check`; navigation and links are also checked in GitHub Actions.
 - JavaDoc is generated locally with `make docs` and published through GitHub Pages.
+- GitHub Actions use the same Make targets where practical, so local commands and CI stay aligned.
 
 ## Important Design Choice
 

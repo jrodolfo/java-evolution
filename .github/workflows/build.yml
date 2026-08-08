@@ -31,8 +31,5 @@ jobs:
           java-version: '25'
           cache: maven
 
-      - name: audit documentation navigation
-        run: make docs-audit
-
-      - name: run tests
-        run: make test
+      - name: run local check target
+        run: make check
