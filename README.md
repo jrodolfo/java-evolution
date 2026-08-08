@@ -20,6 +20,8 @@ The emphasis is clarity over cleverness. Examples should stay small, readable, a
 
 - JDK 25
 - Maven 3.9+
+- GNU Make, if you want to use the documented `make` targets
+- `lychee`, if you want to run `make docs-check` or `make release-check` locally
 
 This repository uses the local Maven installation on your machine. It does not use the Maven wrapper.
 
