@@ -161,6 +161,14 @@ Run the full validation:
 make check
 ```
 
+Run the practical demo validation:
+
+```bash
+make demos
+```
+
+Use this before a live walkthrough to verify that the hands-on demos still match your local environment.
+
 Run one example:
 
 ```bash

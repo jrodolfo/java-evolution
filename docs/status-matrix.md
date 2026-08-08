@@ -10,14 +10,19 @@ Use this when you need to distinguish final, preview, incubator, notes-only, run
 
 Status vocabulary:
 
+Status values may be combined, such as `final, security, executable example`, when a feature has both an official maturity status and a repository representation.
+
 - `final`: stable feature in the named release
 - `preview`: available for feedback, may change later
 - `incubator`: non-final incubating API
 - `notes-only`: represented as a notes class in this repository; this does not imply the Java feature itself is non-final
+- `executable example`: represented by runnable example code and focused tests
+- `executable native example`: represented by runnable example code that calls native platform functionality
 - `runtime`: JVM, GC, diagnostics, startup, or migration behavior
 - `tooling`: command-line, launcher, JavaDoc, or development support
 - `security`: cryptography or security platform feature
 - `documentation`: JavaDoc or documentation syntax feature
+- `documentation example`: represented by source documentation that is verified through JavaDoc generation
 
 | Java | Feature | Status | Example or Notes Class | Test Class | Reference |
 |---|---|---|---|---|---|

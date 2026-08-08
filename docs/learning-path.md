@@ -166,6 +166,7 @@ Java 25:
 - `src/main/java/net/jrodolfo/java_evolution/java25/FlexibleConstructorBodiesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/KeyDerivationFunctionNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java`
 
