@@ -37,6 +37,15 @@ Prefer names that describe the feature directly, such as `StreamExamples`, `Reco
 - Link to JEPs or official documentation when a feature needs historical context.
 - Run `make docs` after adding or changing JavaDoc.
 
+## Practical Demos
+
+When a feature becomes a practical demo, update the curated demo path:
+
+- Add or update the package README.
+- Update `docs/practical-demos.md`.
+- Add the focused test class to the `demos` target in `Makefile`.
+- Update the relevant version README, `docs/feature-map.md`, and `docs/status-matrix.md`.
+
 ## Local Validation
 
 Use JDK 25 and run:

@@ -4,6 +4,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Tests the Java 22 Foreign Function and Memory API examples.
+ *
+ * <p>
+ * These tests use native symbols discovered through the platform linker's
+ * default lookup. The examples call {@code atoi} and {@code strlen}, standard C
+ * library functions commonly available on macOS and Linux. Windows behavior
+ * depends on how the C runtime symbols are exposed and will be validated during
+ * the Windows compatibility pass.
+ * </p>
+ */
 class ForeignFunctionExamplesTest {
 
 	@Test

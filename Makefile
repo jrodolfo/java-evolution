@@ -39,8 +39,10 @@ demos:
 	mvn "-Dtest=CodeSnippetJavaDocNotesTest,JavaDocSnippetExamplesTest" test
 	mvn "-Dtest=KeyEncapsulationMechanismNotesTest,KeyEncapsulationExchangeTest" test
 	mvn "-Dtest=ForeignFunctionMemoryApiNotesTest,ForeignFunctionExamplesTest" test
+	mvn "-Dtest=StreamGatherersExamplesTest" test
 	mvn "-Dtest=ClassFileApiNotesTest,ClassFileInspectorTest" test
 	mvn "-Dtest=QuantumResistantCryptoNotesTest,ModuleLatticeCryptoExamplesTest" test
+	mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
 	mvn "-Dtest=KeyDerivationFunctionNotesTest,HkdfKeyDerivationExampleTest" test
 
 run:
