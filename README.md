@@ -92,6 +92,12 @@ To check documentation navigation consistency:
 make docs-audit
 ```
 
+To run the full documentation validation gate:
+
+```bash
+make docs-check
+```
+
 To generate the local JavaDoc reference:
 
 ```bash
@@ -107,7 +113,7 @@ The published JavaDoc site is available at https://jrodolfo.github.io/java-evolu
 - Spring Boot is used as lightweight project tooling; the examples themselves are plain Java.
 - Some features are represented by `Notes` classes because they involve preview flags, incubator modules, native code, JVM flags, external tools, cryptography providers, source-launcher behavior, or runtime behavior.
 - `Notes` does not mean a Java feature is unfinished. Some final features are documented as notes because they are not a good fit for a tiny portable JUnit example.
-- Documentation navigation is checked locally with `make docs-audit` and in GitHub Actions.
+- Documentation health is checked locally with `make docs-check`; navigation and links are also checked in GitHub Actions.
 - JavaDoc is generated locally with `make docs` and published through GitHub Pages.
 
 ## Important Design Choice

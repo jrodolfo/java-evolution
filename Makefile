@@ -7,7 +7,7 @@ export PATH := $(JAVA_HOME)/bin:$(PATH)
 JAVA_CMD := $(JAVA_HOME)/bin/java
 endif
 
-.PHONY: help java-version test clean-test demos run docs clean-docs docs-audit links check
+.PHONY: help java-version test clean-test demos run docs clean-docs docs-audit links docs-check check
 
 help:
 	@echo "available targets:"
@@ -20,6 +20,7 @@ help:
 	@echo "  make clean-docs    remove generated JavaDoc"
 	@echo "  make docs-audit    check documentation navigation consistency"
 	@echo "  make links         check Markdown links with lychee"
+	@echo "  make docs-check    run documentation audit, JavaDoc generation, and link check"
 	@echo "  make check         show versions and run the test suite"
 
 java-version:
@@ -55,5 +56,7 @@ docs-audit:
 
 links:
 	lychee --config .lychee.toml README.md "docs/**/*.md" "src/main/java/**/README.md"
+
+docs-check: docs-audit docs links
 
 check: java-version test

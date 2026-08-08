@@ -33,13 +33,12 @@ Use this checklist when adding examples for a new Java release.
 - Add the release to `docs/status-matrix.md`.
 - Add the release or key features to `docs/learning-path.md` and `docs/demo-script.md` when they change the suggested study flow.
 - Mention preview or incubator status explicitly when a feature was not final in that release.
-- Run `make docs-audit` to catch stale grouped-test names, wildcard test references, and missing version READMEs.
+- Run `make docs-check` to catch stale grouped-test names, wildcard test references, missing version READMEs, JavaDoc issues, and broken Markdown links.
 - Confirm generated JavaDoc is readable for the new classes.
 
 ## Final Check
 
-- Confirm `make docs-audit` passes.
+- Confirm `make docs-check` passes.
 - Confirm `make check` passes.
-- Confirm `make docs` passes.
 - Confirm `git status --short` only shows intentional changes.
 - Use a lower-case commit message.

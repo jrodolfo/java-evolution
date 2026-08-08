@@ -13,15 +13,8 @@ git status --short
 Run the local validation gate:
 
 ```bash
-make docs-audit
-make docs
+make docs-check
 make check
-```
-
-Optional link check, if `lychee` is installed locally:
-
-```bash
-make links
 ```
 
 Confirm generated files are not tracked:
