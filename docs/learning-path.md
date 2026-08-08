@@ -2,7 +2,7 @@
 
 This path turns the repository into a sequence of study sessions. The goal is not to memorize release notes. The goal is to understand the problem each group of features solved, read the smallest useful examples, and run the tests that prove the behavior.
 
-Use [feature-map.md](feature-map.md) when you want a complete class-by-class index.
+Use [feature-map.md](feature-map.md) when you want a complete class-by-class index. Use [practical-demos.md](practical-demos.md) when you want a shorter tour of the most hands-on examples.
 
 ## Stage 1: Java 8 Foundations
 
@@ -184,7 +184,8 @@ Use this checklist when preparing to show the repository:
 
 1. Run `make check`.
 2. Open the JavaDoc site or run `make docs` locally.
-3. Pick one Java 8 example and explain the problem it solved.
-4. Pick one Java 21 example and explain why it matters for current production Java.
-5. Pick one Java 25 example or notes class and explain whether the feature is final, preview, incubator, runtime, or tooling-related.
-6. Use [docs/jep-index.md](jep-index.md) when you need the official JEP number or status.
+3. Open [practical-demos.md](practical-demos.md) and choose one hands-on demo.
+4. Pick one Java 8 example and explain the problem it solved.
+5. Pick one Java 21 example and explain why it matters for current production Java.
+6. Pick one Java 25 example or notes class and explain whether the feature is final, preview, incubator, runtime, or tooling-related.
+7. Use [docs/jep-index.md](jep-index.md) when you need the official JEP number or status.

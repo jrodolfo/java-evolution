@@ -6,7 +6,7 @@ This matrix gives one place to answer three practical questions:
 - Which class should I open?
 - Which test proves or documents the behavior?
 
-Use this when you need to distinguish final, preview, incubator, notes-only, runtime, tooling, documentation, and security topics. Use [feature-map.md](feature-map.md) for class-by-class navigation and [jep-index.md](jep-index.md) for the release-level JEP list.
+Use this when you need to distinguish final, preview, incubator, notes-only, runtime, tooling, documentation, and security topics. Use [feature-map.md](feature-map.md) for class-by-class navigation, [jep-index.md](jep-index.md) for the release-level JEP list, and [practical-demos.md](practical-demos.md) for a shorter guide to hands-on demonstrations.
 
 Status vocabulary:
 

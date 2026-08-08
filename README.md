@@ -148,6 +148,7 @@ Start here depending on what you need:
 - New to the repository: read this README, then follow the [Study Guide](docs/study-guide.md).
 - Moving from an older Java baseline: use the [Migration Guide](docs/migration-guide.md).
 - Studying over multiple sessions: use the [Learning Path](docs/learning-path.md).
+- Looking for hands-on walkthroughs: use the [Practical Demos](docs/practical-demos.md).
 - Looking up acronyms and recurring platform terms: use the [Glossary](docs/glossary.md).
 - Looking for one feature quickly: use the [Feature Map](docs/feature-map.md).
 - Checking maturity or official references: use the [Status Matrix](docs/status-matrix.md) and [JEP Index](docs/jep-index.md).
@@ -159,6 +160,7 @@ Start here depending on what you need:
 - [Study Guide](docs/study-guide.md): suggested learning path through Java 8-25.
 - [Migration Guide](docs/migration-guide.md): practical guide for moving from Java 8, 11, 17, or 21 to newer baselines.
 - [Learning Path](docs/learning-path.md): staged study sessions with files to read, tests to run, and interview angles.
+- [Practical Demos](docs/practical-demos.md): focused walkthroughs for tooling, security, native, and class-file features.
 - [Glossary](docs/glossary.md): acronyms and recurring Java platform terms used throughout the repository.
 - [Interview Guide](docs/interview-guide.md): talking points and demo flow for interviews.
 - [Demo Script](docs/demo-script.md): practical 5-10 minute live walkthrough.
