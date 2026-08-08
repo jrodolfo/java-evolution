@@ -32,8 +32,7 @@ The repository demonstrates features introduced from Java 8 through Java 25. It 
 Before publishing this release, run:
 
 ```bash
-make docs-check
-make check
+make release-check
 ```
 
 Expected result:
@@ -42,6 +41,7 @@ Expected result:
 - JavaDoc generation succeeds
 - Markdown link check passes
 - Maven tests pass on JDK 25
+- practical demo tests pass
 
 ## Known Notes
 
@@ -56,6 +56,5 @@ Initial public release of java-evolution.
 This release provides a didactic Java reference from Java 8 through Java 25, with focused examples, notes classes, JUnit executable documentation, JavaDoc generation, GitHub Pages publishing, and study/interview/migration documentation.
 
 Validation:
-- make docs-check
-- make check
+- make release-check
 ```

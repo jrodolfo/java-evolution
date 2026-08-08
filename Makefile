@@ -7,7 +7,7 @@ export PATH := $(JAVA_HOME)/bin:$(PATH)
 JAVA_CMD := $(JAVA_HOME)/bin/java
 endif
 
-.PHONY: help java-version test clean-test demos run docs clean-docs docs-audit links docs-check check
+.PHONY: help java-version test clean-test demos run docs clean-docs docs-audit links docs-check check release-check
 
 help:
 	@echo "available targets:"
@@ -22,6 +22,7 @@ help:
 	@echo "  make links         check Markdown links with lychee"
 	@echo "  make docs-check    run documentation audit, JavaDoc generation, and link check"
 	@echo "  make check         show versions and run the test suite"
+	@echo "  make release-check run documentation, full test, and practical demo gates"
 
 java-version:
 	$(JAVA_CMD) --version
@@ -60,3 +61,5 @@ links:
 docs-check: docs-audit docs links
 
 check: java-version test
+
+release-check: docs-check check demos

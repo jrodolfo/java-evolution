@@ -38,7 +38,6 @@ Use this checklist when adding examples for a new Java release.
 
 ## Final Check
 
-- Confirm `make docs-check` passes.
-- Confirm `make check` passes.
+- Confirm `make release-check` passes.
 - Confirm `git status --short` only shows intentional changes.
 - Use a lower-case commit message.

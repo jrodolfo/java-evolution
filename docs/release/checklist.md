@@ -13,8 +13,7 @@ git status --short
 Run the local validation gate:
 
 ```bash
-make docs-check
-make check
+make release-check
 ```
 
 Confirm generated files are not tracked:

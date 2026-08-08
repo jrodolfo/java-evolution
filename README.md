@@ -86,6 +86,12 @@ To print the active Java/Maven versions and run the test suite:
 make check
 ```
 
+To run the final local pre-release gate:
+
+```bash
+make release-check
+```
+
 To check documentation navigation consistency:
 
 ```bash
