@@ -92,6 +92,8 @@ Read these first:
 - `src/main/java/net/jrodolfo/java_evolution/java18/Utf8DefaultCharsetExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java18/simple_web_server/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java18/simple_web_server/SimpleStaticFileServer.java`
+- `src/main/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/JavaDocSnippetExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java19/VirtualThreadsPreviewExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java19/RecordPatternsPreviewExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java21/VirtualThreadsExamples.java`
@@ -103,7 +105,7 @@ Run:
 
 ```bash
 mvn "-Dtest=SealedClassesExamplesTest,PatternMatchingSwitchPreviewExamplesTest,RandomGeneratorExamplesTest" test
-mvn "-Dtest=Utf8DefaultCharsetExamplesTest,SimpleWebServerNotesTest,SimpleStaticFileServerTest" test
+mvn "-Dtest=Utf8DefaultCharsetExamplesTest,SimpleWebServerNotesTest,SimpleStaticFileServerTest,CodeSnippetJavaDocNotesTest,JavaDocSnippetExamplesTest" test
 mvn "-Dtest=VirtualThreadsPreviewExamplesTest,RecordPatternsPreviewExamplesTest" test
 mvn "-Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest,PatternMatchingSwitchExamplesTest,SequencedCollectionsExamplesTest" test
 ```

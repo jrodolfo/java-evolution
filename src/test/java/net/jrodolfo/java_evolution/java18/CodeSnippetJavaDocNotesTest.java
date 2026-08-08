@@ -21,5 +21,8 @@ class CodeSnippetJavaDocNotesTest {
 		assertThat(notes.purpose())
 				.as("The notes should explain why snippets are useful")
 				.contains("code examples");
+		assertThat(notes.detailedExplanation())
+				.as("The notes should point learners to the executable JavaDoc snippets example")
+				.endsWith("javadoc_snippets/README.md");
 	}
 }

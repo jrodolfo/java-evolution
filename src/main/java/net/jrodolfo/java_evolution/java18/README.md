@@ -56,9 +56,15 @@ var name = "Java 18";
 
 For a teaching repository, this matters because examples in documentation should be easy to read and hard to misformat.
 
+The executable example in this package keeps the Java methods simple and puts the main teaching value in the generated JavaDoc. Run `make docs`, then compare the source JavaDoc with the rendered page.
+
 Example: `CodeSnippetJavaDocNotes`
 
 Test: `CodeSnippetJavaDocNotesTest`
+
+Executable example: [`javadoc_snippets`](javadoc_snippets/README.md)
+
+Executable test: `JavaDocSnippetExamplesTest`
 
 ## InetAddress Resolver SPI
 
@@ -74,13 +80,13 @@ Test: `InetAddressResolutionNotesTest`
 
 ## How To Read This Package
 
-Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `simple_web_server/README.md` before `SimpleStaticFileServer`. After that, read `SimpleWebServerNotes`, `CodeSnippetJavaDocNotes`, and `InetAddressResolutionNotes`.
+Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `simple_web_server/README.md` before `SimpleStaticFileServer`. For documentation snippets, read `javadoc_snippets/README.md`, inspect `JavaDocSnippetExamples`, and generate the JavaDoc site. After that, read `SimpleWebServerNotes`, `CodeSnippetJavaDocNotes`, and `InetAddressResolutionNotes`.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=Utf8DefaultCharsetExamplesTest test
-mvn -Dtest=SimpleWebServerNotesTest,SimpleStaticFileServerTest,CodeSnippetJavaDocNotesTest,InetAddressResolutionNotesTest test
+mvn -Dtest=SimpleWebServerNotesTest,SimpleStaticFileServerTest,CodeSnippetJavaDocNotesTest,JavaDocSnippetExamplesTest,InetAddressResolutionNotesTest test
 ```
 
 This package now includes one executable tooling example plus notes for documentation and service-provider behavior. After this package, continue with Java 19 for the first previews of virtual threads and record patterns.

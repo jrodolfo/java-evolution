@@ -15,6 +15,11 @@ package net.jrodolfo.java_evolution.java18;
  * should be easy to format consistently and easy to scan in the generated
  * JavaDoc site.
  * </p>
+ *
+ * <p>
+ * The executable documentation example lives in the {@code javadoc_snippets}
+ * subpackage. Generate the JavaDoc site to see how the snippets render.
+ * </p>
  */
 public class CodeSnippetJavaDocNotes {
 
@@ -43,5 +48,14 @@ public class CodeSnippetJavaDocNotes {
 	 */
 	public String purpose() {
 		return "document code examples with structure instead of relying only on preformatted text";
+	}
+
+	/**
+	 * Points to the detailed example.
+	 *
+	 * @return project-relative path to the detailed explanation
+	 */
+	public String detailedExplanation() {
+		return "src/main/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/README.md";
 	}
 }
