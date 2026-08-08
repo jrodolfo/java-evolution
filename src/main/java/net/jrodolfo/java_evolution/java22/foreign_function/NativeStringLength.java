@@ -34,6 +34,8 @@ public class NativeStringLength {
 	public ForeignFunctionCallResult lengthOf(String text) throws Throwable {
 		try (var arena = Arena.ofConfined()) {
 			var cString = arena.allocateFrom(text);
+			// invokeExact is signature-sensitive: this cast must match the
+			// FunctionDescriptor return type, otherwise the call site does not match.
 			long length = (long) strlenHandle().invokeExact(cString);
 
 			return new ForeignFunctionCallResult(
