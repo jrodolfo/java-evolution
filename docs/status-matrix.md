@@ -70,7 +70,7 @@ Status vocabulary:
 | 17 | `HexFormat` | final | `HexFormatExamples` | `HexFormatExamplesTest` | [java17 README](../src/main/java/net/jrodolfo/java_evolution/java17/README.md) |
 | 17 | Strong encapsulation | runtime, notes-only | `StrongEncapsulationNotes` | `StrongEncapsulationNotesTest` | [JEP 403](https://openjdk.org/jeps/403) |
 | 18 | UTF-8 default charset | final | `Utf8DefaultCharsetExamples` | `Utf8DefaultCharsetExamplesTest` | [JEP 400](https://openjdk.org/jeps/400) |
-| 18 | Simple Web Server | tooling, notes-only | `SimpleWebServerNotes` | `SimpleWebServerNotesTest` | [JEP 408](https://openjdk.org/jeps/408) |
+| 18 | Simple Web Server | tooling, executable example | [`SimpleStaticFileServer`](../src/main/java/net/jrodolfo/java_evolution/java18/simple_web_server/SimpleStaticFileServer.java), `SimpleWebServerNotes` | [`SimpleStaticFileServerTest`](../src/test/java/net/jrodolfo/java_evolution/java18/simple_web_server/SimpleStaticFileServerTest.java), `SimpleWebServerNotesTest` | [JEP 408](https://openjdk.org/jeps/408) |
 | 18 | JavaDoc snippets | tooling, documentation, notes-only | `CodeSnippetJavaDocNotes` | `CodeSnippetJavaDocNotesTest` | [JEP 413](https://openjdk.org/jeps/413) |
 | 18 | InetAddress resolver SPI | final, notes-only | `InetAddressResolutionNotes` | `InetAddressResolutionNotesTest` | [JEP 418](https://openjdk.org/jeps/418) |
 | 19 | Virtual threads preview | preview | `VirtualThreadsPreviewExamples` | `VirtualThreadsPreviewExamplesTest` | [JEP 425](https://openjdk.org/jeps/425) |

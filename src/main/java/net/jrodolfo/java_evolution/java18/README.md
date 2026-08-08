@@ -32,9 +32,15 @@ jwebserver --port 8000 --directory public
 
 This is not a replacement for Spring Boot, Tomcat, nginx, or production web infrastructure. It solves the small local-development problem: "I have static files and want to serve them quickly with only the JDK installed."
 
+The executable example in this package uses `SimpleFileServer`, the Java API added with the same feature. It starts a local static-file server on an ephemeral port, serves a temporary directory, and verifies the response with `HttpClient`.
+
 Example: `SimpleWebServerNotes`
 
 Test: `SimpleWebServerNotesTest`
+
+Executable example: [`simple_web_server`](simple_web_server/README.md)
+
+Executable test: `SimpleStaticFileServerTest`
 
 ## JavaDoc Code Snippets
 
@@ -68,16 +74,16 @@ Test: `InetAddressResolutionNotesTest`
 
 ## How To Read This Package
 
-Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `SimpleWebServerNotes`, `CodeSnippetJavaDocNotes`, and `InetAddressResolutionNotes`.
+Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `simple_web_server/README.md` before `SimpleStaticFileServer`. After that, read `SimpleWebServerNotes`, `CodeSnippetJavaDocNotes`, and `InetAddressResolutionNotes`.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=Utf8DefaultCharsetExamplesTest test
-mvn -Dtest=SimpleWebServerNotesTest,CodeSnippetJavaDocNotesTest,InetAddressResolutionNotesTest test
+mvn -Dtest=SimpleWebServerNotesTest,SimpleStaticFileServerTest,CodeSnippetJavaDocNotesTest,InetAddressResolutionNotesTest test
 ```
 
-The `Notes` classes here document tooling, documentation, or service-provider behavior that is easier to explain than to run portably in a small unit test. After this package, continue with Java 19 for the first previews of virtual threads and record patterns.
+This package now includes one executable tooling example plus notes for documentation and service-provider behavior. After this package, continue with Java 19 for the first previews of virtual threads and record patterns.
 
 ## References
 

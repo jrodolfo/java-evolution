@@ -96,7 +96,7 @@ Status labels:
 | JEP | Feature | Status |
 |---|---|---|
 | [JEP 400](https://openjdk.org/jeps/400) | UTF-8 by Default | Final |
-| [JEP 408](https://openjdk.org/jeps/408) | Simple Web Server | Tooling, Notes |
+| [JEP 408](https://openjdk.org/jeps/408) | Simple Web Server | Tooling, Example |
 | [JEP 413](https://openjdk.org/jeps/413) | Code Snippets in Java API Documentation | Tooling, Notes |
 | [JEP 418](https://openjdk.org/jeps/418) | Internet-Address Resolution SPI | Final, Notes |
 

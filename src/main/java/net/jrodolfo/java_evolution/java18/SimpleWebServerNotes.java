@@ -11,10 +11,10 @@ package net.jrodolfo.java_evolution.java18;
  * </p>
  *
  * <p>
- * Unit tests do not launch it because that would introduce port and
- * process-management concerns. This is a tooling feature, so notes communicate
- * the practical usage without making the test suite depend on a background
- * process.
+ * The executable example in the {@code simple_web_server} subpackage uses the
+ * Java API behind the same feature: {@code SimpleFileServer}. It starts a local
+ * server on an ephemeral port, serves a temporary directory, and keeps the
+ * example focused on local static-file serving.
  * </p>
  */
 public class SimpleWebServerNotes {
@@ -44,5 +44,14 @@ public class SimpleWebServerNotes {
 	 */
 	public String purpose() {
 		return "serve static files with the JDK during local development or simple demos";
+	}
+
+	/**
+	 * Points to the executable example and detailed explanation.
+	 *
+	 * @return project-relative path to the detailed explanation
+	 */
+	public String detailedExplanation() {
+		return "src/main/java/net/jrodolfo/java_evolution/java18/simple_web_server/README.md";
 	}
 }

@@ -21,5 +21,8 @@ class SimpleWebServerNotesTest {
 		assertThat(notes.purpose())
 				.as("The notes should explain the static-file use case")
 				.contains("static files");
+		assertThat(notes.detailedExplanation())
+				.as("The notes should point learners to the executable Simple Web Server example")
+				.endsWith("simple_web_server/README.md");
 	}
 }
