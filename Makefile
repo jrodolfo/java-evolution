@@ -7,10 +7,11 @@ export PATH := $(JAVA_HOME)/bin:$(PATH)
 JAVA_CMD := $(JAVA_HOME)/bin/java
 endif
 
-.PHONY: help java-version test clean-test demos run docs clean-docs docs-audit links docs-check check release-check
+.PHONY: help check-java-25 java-version test clean-test demos run docs clean-docs docs-audit links docs-check check release-check
 
 help:
 	@echo "available targets:"
+	@echo "  make check-java-25 verify the active Java and Maven runtimes use Java 25"
 	@echo "  make java-version  show the Java and Maven versions"
 	@echo "  make test          run the test suite"
 	@echo "  make clean-test    clean the build and run the test suite"
@@ -24,17 +25,57 @@ help:
 	@echo "  make check         show versions and run the test suite"
 	@echo "  make release-check run documentation, full test, and practical demo gates"
 
-java-version:
+check-java-25:
+	@java_version="$$(java --version 2>&1 | sed -n '1p')" || exit 1; \
+	case "$$java_version" in \
+	  "java 25"*|"openjdk 25"*) ;; \
+	  *) \
+	    echo "java 25 is required, but the active java is not java 25."; \
+	    echo; \
+	    echo "active java:"; \
+	    echo "  $$java_version"; \
+	    echo; \
+	    echo "run one of:"; \
+	    echo "  source scripts/use-java-25-mac.sh"; \
+	    echo "  source scripts/use-java-25-windows.sh"; \
+	    echo "  . .\\scripts\\use-java-25-windows.ps1"; \
+	    echo; \
+	    echo "then verify:"; \
+	    echo "  java --version"; \
+	    echo "  mvn --version"; \
+	    exit 1; \
+	esac; \
+	maven_java_version="$$(mvn --version 2>&1 | sed -n 's/^Java version: //p')" || exit 1; \
+	case "$$maven_java_version" in \
+	  25*|25.*) ;; \
+	  *) \
+	    echo "java 25 is required, but maven is not using java 25."; \
+	    echo; \
+	    echo "maven java:"; \
+	    echo "  Java version: $$maven_java_version"; \
+	    echo; \
+	    echo "run one of:"; \
+	    echo "  source scripts/use-java-25-mac.sh"; \
+	    echo "  source scripts/use-java-25-windows.sh"; \
+	    echo "  . .\\scripts\\use-java-25-windows.ps1"; \
+	    echo; \
+	    echo "then verify:"; \
+	    echo "  java --version"; \
+	    echo "  mvn --version"; \
+	    exit 1; \
+	esac
+
+java-version: check-java-25
 	$(JAVA_CMD) --version
 	mvn --version
 
-test:
+test: check-java-25
 	mvn test
 
-clean-test:
+clean-test: check-java-25
 	mvn clean test
 
-demos:
+demos: check-java-25
 	mvn "-Dtest=SimpleWebServerNotesTest,SimpleStaticFileServerTest" test
 	mvn "-Dtest=CodeSnippetJavaDocNotesTest,JavaDocSnippetExamplesTest" test
 	mvn "-Dtest=KeyEncapsulationMechanismNotesTest,KeyEncapsulationExchangeTest" test
@@ -45,10 +86,10 @@ demos:
 	mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
 	mvn "-Dtest=KeyDerivationFunctionNotesTest,HkdfKeyDerivationExampleTest" test
 
-run:
+run: check-java-25
 	mvn spring-boot:run
 
-docs:
+docs: check-java-25
 	mvn javadoc:javadoc
 
 clean-docs:
@@ -60,8 +101,8 @@ docs-audit:
 links:
 	lychee --config .lychee.toml README.md "docs/**/*.md" "src/main/java/**/README.md"
 
-docs-check: docs-audit docs links
+docs-check: check-java-25 docs-audit docs links
 
-check: java-version test
+check: check-java-25 java-version test
 
-release-check: docs-check check demos
+release-check: check-java-25 docs-check check demos
