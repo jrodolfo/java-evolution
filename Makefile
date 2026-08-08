@@ -7,13 +7,14 @@ export PATH := $(JAVA_HOME)/bin:$(PATH)
 JAVA_CMD := $(JAVA_HOME)/bin/java
 endif
 
-.PHONY: help java-version test clean-test run docs clean-docs docs-audit links check
+.PHONY: help java-version test clean-test demos run docs clean-docs docs-audit links check
 
 help:
 	@echo "available targets:"
 	@echo "  make java-version  show the Java and Maven versions"
 	@echo "  make test          run the test suite"
 	@echo "  make clean-test    clean the build and run the test suite"
+	@echo "  make demos         run the focused practical demo tests"
 	@echo "  make run           run the Spring Boot application"
 	@echo "  make docs          generate JavaDoc under target/site/apidocs"
 	@echo "  make clean-docs    remove generated JavaDoc"
@@ -30,6 +31,15 @@ test:
 
 clean-test:
 	mvn clean test
+
+demos:
+	mvn "-Dtest=SimpleWebServerNotesTest,SimpleStaticFileServerTest" test
+	mvn "-Dtest=CodeSnippetJavaDocNotesTest,JavaDocSnippetExamplesTest" test
+	mvn "-Dtest=KeyEncapsulationMechanismNotesTest,KeyEncapsulationExchangeTest" test
+	mvn "-Dtest=ForeignFunctionMemoryApiNotesTest,ForeignFunctionExamplesTest" test
+	mvn "-Dtest=ClassFileApiNotesTest,ClassFileInspectorTest" test
+	mvn "-Dtest=QuantumResistantCryptoNotesTest,ModuleLatticeCryptoExamplesTest" test
+	mvn "-Dtest=KeyDerivationFunctionNotesTest,HkdfKeyDerivationExampleTest" test
 
 run:
 	mvn spring-boot:run

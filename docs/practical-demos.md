@@ -4,6 +4,14 @@ This guide highlights examples that are especially useful for study, demos, and 
 
 Use this guide when you want a practical tour through the repository instead of reading every package in release order.
 
+Before a study session, interview walkthrough, or live demo, run the complete practical demo check:
+
+```bash
+make demos
+```
+
+The table still includes focused commands for running one demo at a time.
+
 ## How To Use This Guide
 
 For each feature:
