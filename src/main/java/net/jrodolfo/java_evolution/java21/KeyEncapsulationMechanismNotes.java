@@ -10,9 +10,9 @@ package net.jrodolfo.java_evolution.java21;
  * </p>
  *
  * <p>
- * This repository keeps KEM as notes because a realistic example depends on
- * cryptographic providers and setup that would distract from the language/API
- * learning path.
+ * The executable sender/receiver flow lives in the {@code key_encapsulation}
+ * subpackage. These notes keep the high-level purpose easy to find from the
+ * main Java 21 package.
  * </p>
  */
 public class KeyEncapsulationMechanismNotes {
@@ -32,6 +32,15 @@ public class KeyEncapsulationMechanismNotes {
 	 * @return the project decision
 	 */
 	public String projectDecision() {
-		return "the repository keeps KEM as notes to avoid crypto-provider-specific setup in simple examples";
+		return "the runnable KEM sender and receiver example lives in the key_encapsulation subpackage";
+	}
+
+	/**
+	 * Points readers to the detailed Markdown explanation.
+	 *
+	 * @return the local documentation file for the full explanation
+	 */
+	public String detailedExplanation() {
+		return "src/main/java/net/jrodolfo/java_evolution/java21/key_encapsulation/README.md";
 	}
 }

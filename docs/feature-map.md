@@ -170,7 +170,7 @@ Learning notes: [java21 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Pattern matching for switch final | [`PatternMatchingSwitchExamples`](../src/main/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamples.java) | [`PatternMatchingSwitchExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamplesTest.java) |
 | Sequenced collections | `SequencedCollectionsExamples` | `SequencedCollectionsExamplesTest` |
 | Unnamed patterns and variables preview | `UnnamedPatternsVariablesPreviewExamples` | `UnnamedPatternsVariablesPreviewExamplesTest` |
-| Key Encapsulation Mechanism API | `KeyEncapsulationMechanismNotes` | `KeyEncapsulationMechanismNotesTest` |
+| Key Encapsulation Mechanism API | [`KeyEncapsulationExchange`](../src/main/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchange.java), `KeyEncapsulationMechanismNotes` | [`KeyEncapsulationExchangeTest`](../src/test/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchangeTest.java), `KeyEncapsulationMechanismNotesTest` |
 | Scoped values preview | `ScopedValuesPreviewNotes` | `ScopedValuesPreviewNotesTest` |
 | Structured concurrency preview | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` |
 

@@ -11,6 +11,7 @@ class KeyEncapsulationMechanismNotesTest {
 	@Test
 	void notesExplainKemApi() {
 		assertThat(notes.purpose()).contains("symmetric key material");
-		assertThat(notes.projectDecision()).contains("crypto-provider-specific");
+		assertThat(notes.projectDecision()).contains("key_encapsulation");
+		assertThat(notes.detailedExplanation()).endsWith("key_encapsulation/README.md");
 	}
 }

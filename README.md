@@ -186,7 +186,7 @@ Start here depending on what you need:
 | 18 | [`java18`](src/main/java/net/jrodolfo/java_evolution/java18/README.md) | UTF-8 default charset, Simple Web Server notes, JavaDoc snippets notes, InetAddress resolver SPI notes |
 | 19 | [`java19`](src/main/java/net/jrodolfo/java_evolution/java19/README.md) | Virtual Threads preview, Record Patterns preview, Pattern Matching switch preview, Structured Concurrency notes, FFM notes |
 | 20 | [`java20`](src/main/java/net/jrodolfo/java_evolution/java20/README.md) | Record Patterns second preview, Pattern Matching switch fourth preview, Scoped Values/Structured Concurrency/FFM/Vector notes |
-| 21 | [`java21`](src/main/java/net/jrodolfo/java_evolution/java21/README.md) | Virtual Threads final, Record Patterns final, Pattern Matching for switch final, Sequenced Collections, KEM notes |
+| 21 | [`java21`](src/main/java/net/jrodolfo/java_evolution/java21/README.md) | Virtual Threads final, Record Patterns final, Pattern Matching for switch final, Sequenced Collections, KEM example |
 | 22 | [`java22`](src/main/java/net/jrodolfo/java_evolution/java22/README.md) | Unnamed Variables and Patterns final, FFM final documented via notes, Stream Gatherers preview notes, Class-File API preview notes |
 | 23 | [`java23`](src/main/java/net/jrodolfo/java_evolution/java23/README.md) | Markdown Documentation Comments, Primitive Patterns preview notes, Module Imports preview notes, ZGC Generational Mode notes |
 | 24 | [`java24`](src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API notes, Security Manager disabled, Virtual Thread synchronization notes, post-quantum crypto notes |

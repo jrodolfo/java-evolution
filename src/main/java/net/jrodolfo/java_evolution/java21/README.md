@@ -102,19 +102,25 @@ Test: `StructuredConcurrencyPreviewNotesTest`
 
 ## Key Encapsulation Mechanism API
 
-A Key Encapsulation Mechanism helps two parties establish shared symmetric key material using asymmetric cryptography.
+A Key Encapsulation Mechanism helps two parties establish shared symmetric key material using asymmetric cryptography. It is not the algorithm that encrypts a whole application conversation. It solves the earlier setup problem: how two sides agree on secret key material without sending that secret directly over the network.
 
-The problem is common in secure communication: two sides need to agree on a secret without sending that secret directly over the network.
+Java 21 introduced KEM as a final security API in JEP 452. The executable example in this package uses `DHKEM` with an `X25519` key pair:
 
-Java 21 introduced KEM as a final security API in JEP 452. This repository keeps KEM as notes because a realistic example depends on cryptographic provider details and would distract from the core Java-version learning path.
+- the receiver creates a public/private key pair
+- the sender uses the receiver public key to create a shared secret and an encapsulation message
+- the receiver uses the private key and encapsulation message to recover the same shared secret
 
 Example: `KeyEncapsulationMechanismNotes`
 
 Test: `KeyEncapsulationMechanismNotesTest`
 
+Executable example: [`key_encapsulation`](key_encapsulation/README.md)
+
+Executable test: `KeyEncapsulationExchangeTest`
+
 ## How To Read This Package
 
-Start with the final features: `VirtualThreadsExamples`, `RecordPatternsExamples`, `PatternMatchingSwitchExamples`, and `SequencedCollectionsExamples`. Then read the preview and API notes: `UnnamedPatternsVariablesPreviewExamples`, `ScopedValuesPreviewNotes`, `StructuredConcurrencyPreviewNotes`, and `KeyEncapsulationMechanismNotes`.
+Start with the final features: `VirtualThreadsExamples`, `RecordPatternsExamples`, `PatternMatchingSwitchExamples`, and `SequencedCollectionsExamples`. Then read the preview and API notes: `UnnamedPatternsVariablesPreviewExamples`, `ScopedValuesPreviewNotes`, `StructuredConcurrencyPreviewNotes`, and `KeyEncapsulationMechanismNotes`. For the security API example, read `key_encapsulation/README.md` before the sender and receiver classes.
 
 Run the focused tests:
 
@@ -122,6 +128,7 @@ Run the focused tests:
 mvn -Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest,PatternMatchingSwitchExamplesTest test
 mvn -Dtest=SequencedCollectionsExamplesTest,UnnamedPatternsVariablesPreviewExamplesTest test
 mvn -Dtest=ScopedValuesPreviewNotesTest,StructuredConcurrencyPreviewNotesTest,KeyEncapsulationMechanismNotesTest test
+mvn -Dtest=KeyEncapsulationExchangeTest test
 ```
 
 Java 21 is an LTS release, so spend extra time here. After this package, continue with Java 22 to see unnamed variables become final and more preview/incubator work continue.
