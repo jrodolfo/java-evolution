@@ -66,6 +66,7 @@ final class CheckJava25 {
     private static void printHelperInstructions() {
         System.err.println("run one of:");
         System.err.println("  source scripts/use-java-25-mac.sh");
+        System.err.println("  source scripts/use-java-25-linux.sh");
         System.err.println("  source scripts/use-java-25-windows.sh");
         System.err.println("  . .\\scripts\\use-java-25-windows.ps1");
         System.err.println();
