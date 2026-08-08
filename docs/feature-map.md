@@ -235,7 +235,7 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Flexible constructor bodies final | `FlexibleConstructorBodiesExamples` | `FlexibleConstructorBodiesExamplesTest` |
 | Module import declarations final | `ModuleImportDeclarationsNotes` | `ModuleImportDeclarationsNotesTest` |
 | Compact source files final | `CompactSourceFilesNotes` | `CompactSourceFilesNotesTest` |
-| Key Derivation Function API final | `KeyDerivationFunctionNotes` | `KeyDerivationFunctionNotesTest` |
+| Key Derivation Function API final | [`HkdfKeyDerivationExample`](../src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java), `KeyDerivationFunctionNotes` | [`HkdfKeyDerivationExampleTest`](../src/test/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExampleTest.java), `KeyDerivationFunctionNotesTest` |
 | Primitive patterns third preview | `PrimitivePatternsThirdPreviewNotes` | `PrimitivePatternsThirdPreviewNotesTest` |
 | Stable values preview | `StableValuesPreviewNotes` | `StableValuesPreviewNotesTest` |
 | PEM encodings preview | `PemEncodingsPreviewNotes` | `PemEncodingsPreviewNotesTest` |

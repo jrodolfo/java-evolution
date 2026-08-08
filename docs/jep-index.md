@@ -189,7 +189,7 @@ Status labels:
 | [JEP 513](https://openjdk.org/jeps/513) | Flexible Constructor Bodies | Final |
 | [JEP 511](https://openjdk.org/jeps/511) | Module Import Declarations | Final, Notes |
 | [JEP 512](https://openjdk.org/jeps/512) | Compact Source Files and Instance Main Methods | Final, Notes |
-| [JEP 510](https://openjdk.org/jeps/510) | Key Derivation Function API | Final, Security, Notes |
+| [JEP 510](https://openjdk.org/jeps/510) | Key Derivation Function API | Final, Security, Example |
 | [JEP 507](https://openjdk.org/jeps/507) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
 | [JEP 502](https://openjdk.org/jeps/502) | Stable Values | Preview, Notes |
 | [JEP 470](https://openjdk.org/jeps/470) | PEM Encodings of Cryptographic Objects | Preview, Security, Notes |

@@ -52,11 +52,15 @@ Test: `CompactSourceFilesNotesTest`
 
 Applications often need to derive keys from existing secret material and contextual information.
 
-Java 25 finalized the Key Derivation Function API in JEP 510. This is a final security API documented via notes because real cryptographic examples need careful provider and security setup.
+Java 25 finalized the Key Derivation Function API in JEP 510. The executable example in this package uses `HKDF-SHA256` to derive purpose-specific 256-bit key material from input secret material, salt, and context.
 
 Example: `KeyDerivationFunctionNotes`
 
 Test: `KeyDerivationFunctionNotesTest`
+
+Executable example: [`key_derivation`](key_derivation/README.md)
+
+Executable test: `HkdfKeyDerivationExampleTest`
 
 ## Primitive Patterns Third Preview
 
@@ -113,13 +117,14 @@ These are important, but they are not ideal for tiny deterministic unit tests, s
 
 ## How To Read This Package
 
-Start with the final executable examples: `ScopedValuesExamples` and `FlexibleConstructorBodiesExamples`. Then read the notes for module imports, compact source files, the KDF API, primitive patterns, stable values, PEM encodings, structured concurrency, the Vector API, AOT, JFR, object headers, and GC behavior.
+Start with the final executable examples: `ScopedValuesExamples`, `FlexibleConstructorBodiesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, compact source files, primitive patterns, stable values, PEM encodings, structured concurrency, the Vector API, AOT, JFR, object headers, and GC behavior.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
 mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest test
+mvn -Dtest=HkdfKeyDerivationExampleTest test
 mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewNotesTest,PemEncodingsPreviewNotesTest test
 mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNotesTest test
 mvn -Dtest=AotCommandLineErgonomicsNotesTest,JfrEnhancementsNotesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test

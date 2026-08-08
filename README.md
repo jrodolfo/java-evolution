@@ -190,7 +190,7 @@ Start here depending on what you need:
 | 22 | [`java22`](src/main/java/net/jrodolfo/java_evolution/java22/README.md) | Unnamed Variables and Patterns final, FFM executable native example, Stream Gatherers preview notes, Class-File API preview notes |
 | 23 | [`java23`](src/main/java/net/jrodolfo/java_evolution/java23/README.md) | Markdown Documentation Comments, Primitive Patterns preview notes, Module Imports preview notes, ZGC Generational Mode notes |
 | 24 | [`java24`](src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API notes, Security Manager disabled, Virtual Thread synchronization notes, post-quantum crypto examples |
-| 25 | [`java25`](src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, Module Imports and Compact Source Files final documented via notes, KDF/JFR/AOT/GC notes |
+| 25 | [`java25`](src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, KDF example, Module Imports and Compact Source Files final documented via notes, JFR/AOT/GC notes |
 
 ## How To Study This Repository
 

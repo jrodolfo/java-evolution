@@ -127,7 +127,7 @@ Status vocabulary:
 | 25 | Flexible constructor bodies final | final | `FlexibleConstructorBodiesExamples` | `FlexibleConstructorBodiesExamplesTest` | [JEP 513](https://openjdk.org/jeps/513) |
 | 25 | Module import declarations final | final, notes-only | `ModuleImportDeclarationsNotes` | `ModuleImportDeclarationsNotesTest` | [JEP 511](https://openjdk.org/jeps/511) |
 | 25 | Compact source files final | final, notes-only | `CompactSourceFilesNotes` | `CompactSourceFilesNotesTest` | [JEP 512](https://openjdk.org/jeps/512) |
-| 25 | Key Derivation Function API final | final, security, notes-only | `KeyDerivationFunctionNotes` | `KeyDerivationFunctionNotesTest` | [JEP 510](https://openjdk.org/jeps/510) |
+| 25 | Key Derivation Function API final | final, security, executable example | [`HkdfKeyDerivationExample`](../src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java), `KeyDerivationFunctionNotes` | [`HkdfKeyDerivationExampleTest`](../src/test/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExampleTest.java), `KeyDerivationFunctionNotesTest` | [JEP 510](https://openjdk.org/jeps/510) |
 | 25 | Primitive patterns third preview | preview, notes-only | `PrimitivePatternsThirdPreviewNotes` | `PrimitivePatternsThirdPreviewNotesTest` | [JEP 507](https://openjdk.org/jeps/507) |
 | 25 | Stable values preview | preview, notes-only | `StableValuesPreviewNotes` | `StableValuesPreviewNotesTest` | [JEP 502](https://openjdk.org/jeps/502) |
 | 25 | PEM encodings preview | security, preview, notes-only | `PemEncodingsPreviewNotes` | `PemEncodingsPreviewNotesTest` | [JEP 470](https://openjdk.org/jeps/470) |
