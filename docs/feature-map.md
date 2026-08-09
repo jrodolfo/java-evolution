@@ -129,8 +129,8 @@ Learning notes: [java18 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Feature | Example | Test |
 |---|---|---|
 | UTF-8 default charset | `Utf8DefaultCharsetExamples` | `Utf8DefaultCharsetExamplesTest` |
-| Simple Web Server | [`SimpleStaticFileServer`](../src/main/java/net/jrodolfo/java_evolution/java18/simple_web_server/SimpleStaticFileServer.java), `SimpleWebServerNotes` | [`SimpleStaticFileServerTest`](../src/test/java/net/jrodolfo/java_evolution/java18/simple_web_server/SimpleStaticFileServerTest.java), `SimpleWebServerNotesTest` |
-| JavaDoc snippets | [`JavaDocSnippetExamples`](../src/main/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/JavaDocSnippetExamples.java), `CodeSnippetJavaDocNotes` | [`JavaDocSnippetExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/JavaDocSnippetExamplesTest.java), `CodeSnippetJavaDocNotesTest` |
+| Simple Web Server | [`SimpleStaticFileServer`](../src/main/java/net/jrodolfo/java_evolution/java18/simple_web_server/SimpleStaticFileServer.java) | [`SimpleStaticFileServerTest`](../src/test/java/net/jrodolfo/java_evolution/java18/simple_web_server/SimpleStaticFileServerTest.java) |
+| JavaDoc snippets | [`JavaDocSnippetExamples`](../src/main/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/JavaDocSnippetExamples.java) | [`JavaDocSnippetExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/JavaDocSnippetExamplesTest.java) |
 | InetAddress resolver SPI | `InetAddressResolutionNotes` | `InetAddressResolutionNotesTest` |
 
 ## Java 19
@@ -170,7 +170,7 @@ Learning notes: [java21 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Pattern matching for switch final | [`PatternMatchingSwitchExamples`](../src/main/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamples.java) | [`PatternMatchingSwitchExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamplesTest.java) |
 | Sequenced collections | `SequencedCollectionsExamples` | `SequencedCollectionsExamplesTest` |
 | Unnamed patterns and variables preview | `UnnamedPatternsVariablesPreviewExamples` | `UnnamedPatternsVariablesPreviewExamplesTest` |
-| Key Encapsulation Mechanism API | [`KeyEncapsulationExchange`](../src/main/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchange.java), `KeyEncapsulationMechanismNotes` | [`KeyEncapsulationExchangeTest`](../src/test/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchangeTest.java), `KeyEncapsulationMechanismNotesTest` |
+| Key Encapsulation Mechanism API | [`KeyEncapsulationExchange`](../src/main/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchange.java) | [`KeyEncapsulationExchangeTest`](../src/test/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchangeTest.java) |
 | Scoped values preview | `ScopedValuesPreviewNotes` | `ScopedValuesPreviewNotesTest` |
 | Structured concurrency preview | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` |
 
@@ -183,7 +183,7 @@ Learning notes: [java22 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Unnamed variables and patterns final | `UnnamedVariablesPatternsExamples` | `UnnamedVariablesPatternsExamplesTest` |
 | Statements before `super(...)` preview | `StatementsBeforeSuperPreviewNotes` | `StatementsBeforeSuperPreviewNotesTest` |
 | Stream Gatherers preview | `StreamGatherersPreviewNotes` | `StreamGatherersPreviewNotesTest` |
-| Foreign Function and Memory API final | [`NativeStringParser`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringParser.java), [`NativeStringLength`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringLength.java), `ForeignFunctionMemoryApiNotes` | [`ForeignFunctionExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/foreign_function/ForeignFunctionExamplesTest.java), `ForeignFunctionMemoryApiNotesTest` |
+| Foreign Function and Memory API final | [`NativeStringParser`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringParser.java), [`NativeStringLength`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringLength.java) | [`ForeignFunctionExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/foreign_function/ForeignFunctionExamplesTest.java) |
 | Multi-file source launcher | `LaunchMultiFileSourceProgramsNotes` | `LaunchMultiFileSourceProgramsNotesTest` |
 | Class-File API preview | `ClassFileApiPreviewNotes` | `ClassFileApiPreviewNotesTest` |
 | Scoped values second preview | `ScopedValuesSecondPreviewNotes` | `ScopedValuesSecondPreviewNotesTest` |
@@ -213,10 +213,10 @@ Learning notes: [java24 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Feature | Example | Test |
 |---|---|---|
 | Stream Gatherers final | `StreamGatherersExamples` | `StreamGatherersExamplesTest` |
-| Class-File API final | [`ClassFileInspector`](../src/main/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspector.java), `ClassFileApiNotes` | [`ClassFileInspectorTest`](../src/test/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspectorTest.java), `ClassFileApiNotesTest` |
+| Class-File API final | [`ClassFileInspector`](../src/main/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspector.java) | [`ClassFileInspectorTest`](../src/test/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspectorTest.java) |
 | Security Manager disabled | `SecurityManagerDisabledNotes` | `SecurityManagerDisabledNotesTest` |
 | Virtual-thread synchronization | `VirtualThreadSynchronizationNotes` | `VirtualThreadSynchronizationNotesTest` |
-| Quantum-resistant crypto | [`ModuleLatticeKemExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeKemExample.java), [`ModuleLatticeDsaExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeDsaExample.java), `QuantumResistantCryptoNotes` | [`ModuleLatticeCryptoExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeCryptoExamplesTest.java), `QuantumResistantCryptoNotesTest` |
+| Quantum-resistant crypto | [`ModuleLatticeKemExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeKemExample.java), [`ModuleLatticeDsaExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeDsaExample.java) | [`ModuleLatticeCryptoExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeCryptoExamplesTest.java) |
 | AOT class loading | `AotClassLoadingNotes` | `AotClassLoadingNotesTest` |
 | KDF preview | `KeyDerivationFunctionPreviewNotes` | `KeyDerivationFunctionPreviewNotesTest` |
 | Flexible constructor bodies third preview | `FlexibleConstructorBodiesThirdPreviewNotes` | `FlexibleConstructorBodiesThirdPreviewNotesTest` |
@@ -235,7 +235,7 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Flexible constructor bodies final | `FlexibleConstructorBodiesExamples` | `FlexibleConstructorBodiesExamplesTest` |
 | Module import declarations final | `ModuleImportDeclarationsNotes` | `ModuleImportDeclarationsNotesTest` |
 | Compact source files final | `CompactSourceFilesNotes` | `CompactSourceFilesNotesTest` |
-| Key Derivation Function API final | [`HkdfKeyDerivationExample`](../src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java), `KeyDerivationFunctionNotes` | [`HkdfKeyDerivationExampleTest`](../src/test/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExampleTest.java), `KeyDerivationFunctionNotesTest` |
+| Key Derivation Function API final | [`HkdfKeyDerivationExample`](../src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java) | [`HkdfKeyDerivationExampleTest`](../src/test/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExampleTest.java) |
 | Primitive patterns third preview | `PrimitivePatternsThirdPreviewNotes` | `PrimitivePatternsThirdPreviewNotesTest` |
 | Stable values preview | `StableValuesPreviewNotes` | `StableValuesPreviewNotesTest` |
 | PEM encodings preview | `PemEncodingsPreviewNotes` | `PemEncodingsPreviewNotesTest` |

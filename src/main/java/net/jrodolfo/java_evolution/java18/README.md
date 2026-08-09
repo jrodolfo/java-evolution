@@ -34,10 +34,6 @@ This is not a replacement for Spring Boot, Tomcat, nginx, or production web infr
 
 The executable example in this package uses `SimpleFileServer`, the Java API added with the same feature. It starts a local static-file server on an ephemeral port, serves a temporary directory, and verifies the response with `HttpClient`.
 
-Example: `SimpleWebServerNotes`
-
-Test: `SimpleWebServerNotesTest`
-
 Executable example: [`simple_web_server`](simple_web_server/README.md)
 
 Executable test: `SimpleStaticFileServerTest`
@@ -58,10 +54,6 @@ For a teaching repository, this matters because examples in documentation should
 
 The executable example in this package keeps the Java methods simple and puts the main teaching value in the generated JavaDoc. Run `make docs`, then compare the source JavaDoc with the rendered page.
 
-Example: `CodeSnippetJavaDocNotes`
-
-Test: `CodeSnippetJavaDocNotesTest`
-
 Executable example: [`javadoc_snippets`](javadoc_snippets/README.md)
 
 Executable test: `JavaDocSnippetExamplesTest`
@@ -80,16 +72,16 @@ Test: `InetAddressResolutionNotesTest`
 
 ## How To Read This Package
 
-Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `simple_web_server/README.md` before `SimpleStaticFileServer`. For documentation snippets, read `javadoc_snippets/README.md`, inspect `JavaDocSnippetExamples`, and generate the JavaDoc site. After that, read `SimpleWebServerNotes`, `CodeSnippetJavaDocNotes`, and `InetAddressResolutionNotes`.
+Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `simple_web_server/README.md` before `SimpleStaticFileServer`. For documentation snippets, read `javadoc_snippets/README.md`, inspect `JavaDocSnippetExamples`, and generate the JavaDoc site. After that, read `InetAddressResolutionNotes`.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=Utf8DefaultCharsetExamplesTest test
-mvn -Dtest=SimpleWebServerNotesTest,SimpleStaticFileServerTest,CodeSnippetJavaDocNotesTest,JavaDocSnippetExamplesTest,InetAddressResolutionNotesTest test
+mvn -Dtest=SimpleStaticFileServerTest,JavaDocSnippetExamplesTest,InetAddressResolutionNotesTest test
 ```
 
-This package now includes one executable tooling example plus notes for documentation and service-provider behavior. After this package, continue with Java 19 for the first previews of virtual threads and record patterns.
+This package now includes executable tooling and documentation examples plus notes for service-provider behavior. After this package, continue with Java 19 for the first previews of virtual threads and record patterns.
 
 ## References
 

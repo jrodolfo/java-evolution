@@ -105,7 +105,7 @@ Run:
 
 ```bash
 mvn "-Dtest=SealedClassesExamplesTest,PatternMatchingSwitchPreviewExamplesTest,RandomGeneratorExamplesTest" test
-mvn "-Dtest=Utf8DefaultCharsetExamplesTest,SimpleWebServerNotesTest,SimpleStaticFileServerTest,CodeSnippetJavaDocNotesTest,JavaDocSnippetExamplesTest" test
+mvn "-Dtest=Utf8DefaultCharsetExamplesTest,SimpleStaticFileServerTest,JavaDocSnippetExamplesTest" test
 mvn "-Dtest=VirtualThreadsPreviewExamplesTest,RecordPatternsPreviewExamplesTest" test
 mvn "-Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest,PatternMatchingSwitchExamplesTest,SequencedCollectionsExamplesTest" test
 ```
@@ -129,7 +129,7 @@ Java 22:
 Run:
 
 ```bash
-mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersPreviewNotesTest,ForeignFunctionMemoryApiNotesTest,ForeignFunctionExamplesTest" test
+mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersPreviewNotesTest,ForeignFunctionExamplesTest" test
 ```
 
 Java 23:
@@ -156,8 +156,8 @@ Java 24:
 Run:
 
 ```bash
-mvn "-Dtest=StreamGatherersExamplesTest,ClassFileApiNotesTest,ClassFileInspectorTest,SecurityManagerDisabledNotesTest" test
-mvn "-Dtest=QuantumResistantCryptoNotesTest,ModuleLatticeCryptoExamplesTest" test
+mvn "-Dtest=StreamGatherersExamplesTest,ClassFileInspectorTest,SecurityManagerDisabledNotesTest" test
+mvn "-Dtest=ModuleLatticeCryptoExamplesTest" test
 ```
 
 Java 25:
@@ -166,7 +166,6 @@ Java 25:
 - `src/main/java/net/jrodolfo/java_evolution/java25/FlexibleConstructorBodiesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesNotes.java`
-- `src/main/java/net/jrodolfo/java_evolution/java25/KeyDerivationFunctionNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java`
 
@@ -174,7 +173,7 @@ Run:
 
 ```bash
 mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
-mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest,HkdfKeyDerivationExampleTest" test
+mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,HkdfKeyDerivationExampleTest" test
 ```
 
 Interview angle: be explicit about maturity. A strong answer distinguishes final features from preview and incubator work, and explains why some topics are documented as notes instead of executable demos.

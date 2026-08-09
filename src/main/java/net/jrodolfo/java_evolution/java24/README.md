@@ -20,10 +20,6 @@ Bytecode tools need a reliable way to parse, generate, and transform class files
 
 Java 24 finalized the Class-File API. The executable example in this package parses an already-compiled project class with `ClassFile.of().parse(...)`, extracts class-file metadata, and keeps generation and transformation for later study.
 
-Example: `ClassFileApiNotes`
-
-Test: `ClassFileApiNotesTest`
-
 Executable example: [`class_file`](class_file/README.md)
 
 Executable test: `ClassFileInspectorTest`
@@ -56,10 +52,6 @@ The executable examples in this package use Java Cryptography Architecture APIs 
 
 - ML-KEM establishes matching shared secret material through encapsulation and decapsulation.
 - ML-DSA signs a message, verifies the original message, and rejects a tampered message.
-
-Example: `QuantumResistantCryptoNotes`
-
-Test: `QuantumResistantCryptoNotesTest`
 
 Executable example: [`quantum_resistant_crypto`](quantum_resistant_crypto/README.md)
 
@@ -99,20 +91,20 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `ClassFileApiNotes`, `SecurityManagerDisabledNotes`, `VirtualThreadSynchronizationNotes`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `VirtualThreadSynchronizationNotes`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=StreamGatherersExamplesTest test
-mvn -Dtest=ClassFileApiNotesTest,ClassFileInspectorTest,SecurityManagerDisabledNotesTest,VirtualThreadSynchronizationNotesTest test
-mvn -Dtest=QuantumResistantCryptoNotesTest,AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest test
+mvn -Dtest=ClassFileInspectorTest,SecurityManagerDisabledNotesTest,VirtualThreadSynchronizationNotesTest test
+mvn -Dtest=AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest test
 mvn -Dtest=ModuleLatticeCryptoExamplesTest test
 mvn -Dtest=PrimitivePatternsSecondPreviewNotesTest,FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest test
 mvn -Dtest=ScopedValuesFourthPreviewNotesTest,StructuredConcurrencyFourthPreviewNotesTest test
 ```
 
-This package combines one executable final-feature example with several runtime, security, tooling, and preview notes. After this package, continue with Java 25 to see scoped values, flexible constructor bodies, module imports, compact source files, and the KDF API reach final status.
+This package combines executable final-feature examples with several runtime, security, tooling, and preview notes. After this package, continue with Java 25 to see scoped values, flexible constructor bodies, module imports, compact source files, and the KDF API reach final status.
 
 ## References
 

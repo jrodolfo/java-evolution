@@ -146,14 +146,15 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java25/FlexibleConstructorBodiesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesNotes.java`
-- `src/main/java/net/jrodolfo/java_evolution/java25/KeyDerivationFunctionNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java`
 
 Run:
 
 ```bash
 mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest" test
 mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
-mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest" test
+mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,HkdfKeyDerivationExampleTest" test
 ```
 
 Interview angle: show maturity discipline. A strong answer distinguishes final language/API features from preview, incubator, runtime, tooling, and security topics, and explains why some final features are represented as notes in this repository.

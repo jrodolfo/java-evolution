@@ -110,24 +110,20 @@ Java 21 introduced KEM as a final security API in JEP 452. The executable exampl
 - the sender uses the receiver public key to create a shared secret and an encapsulation message
 - the receiver uses the private key and encapsulation message to recover the same shared secret
 
-Example: `KeyEncapsulationMechanismNotes`
-
-Test: `KeyEncapsulationMechanismNotesTest`
-
 Executable example: [`key_encapsulation`](key_encapsulation/README.md)
 
 Executable test: `KeyEncapsulationExchangeTest`
 
 ## How To Read This Package
 
-Start with the final features: `VirtualThreadsExamples`, `RecordPatternsExamples`, `PatternMatchingSwitchExamples`, and `SequencedCollectionsExamples`. Then read the preview and API notes: `UnnamedPatternsVariablesPreviewExamples`, `ScopedValuesPreviewNotes`, `StructuredConcurrencyPreviewNotes`, and `KeyEncapsulationMechanismNotes`. For the security API example, read `key_encapsulation/README.md` before the sender and receiver classes.
+Start with the final features: `VirtualThreadsExamples`, `RecordPatternsExamples`, `PatternMatchingSwitchExamples`, and `SequencedCollectionsExamples`. Then read the preview notes and preview example: `UnnamedPatternsVariablesPreviewExamples`, `ScopedValuesPreviewNotes`, and `StructuredConcurrencyPreviewNotes`. For the security API example, read `key_encapsulation/README.md` before the sender and receiver classes.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest,PatternMatchingSwitchExamplesTest test
 mvn -Dtest=SequencedCollectionsExamplesTest,UnnamedPatternsVariablesPreviewExamplesTest test
-mvn -Dtest=ScopedValuesPreviewNotesTest,StructuredConcurrencyPreviewNotesTest,KeyEncapsulationMechanismNotesTest test
+mvn -Dtest=ScopedValuesPreviewNotesTest,StructuredConcurrencyPreviewNotesTest test
 mvn -Dtest=KeyEncapsulationExchangeTest test
 ```
 

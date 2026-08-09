@@ -30,10 +30,6 @@ Java 22 finalized a supported API for calling native functions and accessing mem
 
 The executable example in this package calls small C standard-library functions through `Linker`, `Arena`, `MemorySegment`, and `FunctionDescriptor`. It uses `atoi` to parse a native string as an integer and `strlen` to compute the length of a native C string.
 
-Example: `ForeignFunctionMemoryApiNotes`
-
-Test: `ForeignFunctionMemoryApiNotesTest`
-
 Executable example: [`foreign_function`](foreign_function/README.md)
 
 Executable test: `ForeignFunctionExamplesTest`
@@ -114,7 +110,7 @@ Run the focused tests:
 
 ```bash
 mvn -Dtest=UnnamedVariablesPatternsExamplesTest test
-mvn -Dtest=ForeignFunctionMemoryApiNotesTest,StreamGatherersPreviewNotesTest,ClassFileApiPreviewNotesTest test
+mvn -Dtest=StreamGatherersPreviewNotesTest,ClassFileApiPreviewNotesTest test
 mvn -Dtest=ForeignFunctionExamplesTest test
 mvn -Dtest=StatementsBeforeSuperPreviewNotesTest,LaunchMultiFileSourceProgramsNotesTest,ScopedValuesSecondPreviewNotesTest,StructuredConcurrencySecondPreviewNotesTest test
 ```

@@ -54,10 +54,6 @@ Applications often need to derive keys from existing secret material and context
 
 Java 25 finalized the Key Derivation Function API in JEP 510. The executable example in this package uses `HKDF-SHA256` to derive purpose-specific 256-bit key material from input secret material, salt, and context.
 
-Example: `KeyDerivationFunctionNotes`
-
-Test: `KeyDerivationFunctionNotesTest`
-
 Executable example: [`key_derivation`](key_derivation/README.md)
 
 Executable test: `HkdfKeyDerivationExampleTest`
@@ -123,7 +119,7 @@ Run the focused tests:
 
 ```bash
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
-mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,KeyDerivationFunctionNotesTest test
+mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest test
 mvn -Dtest=HkdfKeyDerivationExampleTest test
 mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewNotesTest,PemEncodingsPreviewNotesTest test
 mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNotesTest test

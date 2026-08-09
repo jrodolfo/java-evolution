@@ -39,15 +39,15 @@ clean-test: check-java-25
 	mvn clean test
 
 demos: check-java-25
-	mvn "-Dtest=SimpleWebServerNotesTest,SimpleStaticFileServerTest" test
-	mvn "-Dtest=CodeSnippetJavaDocNotesTest,JavaDocSnippetExamplesTest" test
-	mvn "-Dtest=KeyEncapsulationMechanismNotesTest,KeyEncapsulationExchangeTest" test
-	mvn "-Dtest=ForeignFunctionMemoryApiNotesTest,ForeignFunctionExamplesTest" test
+	mvn "-Dtest=SimpleStaticFileServerTest" test
+	mvn "-Dtest=JavaDocSnippetExamplesTest" test
+	mvn "-Dtest=KeyEncapsulationExchangeTest" test
+	mvn "-Dtest=ForeignFunctionExamplesTest" test
 	mvn "-Dtest=StreamGatherersExamplesTest" test
-	mvn "-Dtest=ClassFileApiNotesTest,ClassFileInspectorTest" test
-	mvn "-Dtest=QuantumResistantCryptoNotesTest,ModuleLatticeCryptoExamplesTest" test
+	mvn "-Dtest=ClassFileInspectorTest" test
+	mvn "-Dtest=ModuleLatticeCryptoExamplesTest" test
 	mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
-	mvn "-Dtest=KeyDerivationFunctionNotesTest,HkdfKeyDerivationExampleTest" test
+	mvn "-Dtest=HkdfKeyDerivationExampleTest" test
 
 run: check-java-25
 	mvn spring-boot:run
