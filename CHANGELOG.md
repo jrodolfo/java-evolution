@@ -8,6 +8,20 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 - No unreleased changes.
 
+## v1.1.2
+
+Patch release focused on glossary and acronym clarity for learners.
+
+### Changed
+
+- Expanded glossary coverage for recurring acronyms used across documentation.
+- Made first-use acronym definitions explicit in cryptography feature READMEs.
+- Added glossary links from deep feature documentation for KEM, ML-KEM, ML-DSA, HKDF, HMAC, AES, KDF, JEP, and JDK context.
+
+### Validation
+
+- `make release-check`
+
 ## v1.1.1
 
 Patch release focused on JavaDoc and documentation navigation clarity.
