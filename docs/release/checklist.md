@@ -28,7 +28,7 @@ There should be no tracked `target/`, `.DS_Store`, `.idea/`, or generated JavaDo
 
 - Confirm `README.md` links to the main learner docs.
 - Confirm `CHANGELOG.md` has the release entry.
-- Confirm `docs/release/notes-v1.0.0.md` matches the intended GitHub release text.
+- Confirm the current `docs/release/notes-vX.Y.Z.md` file matches the intended GitHub release text.
 - Confirm `docs/status-matrix.md` distinguishes feature maturity from repository representation.
 - Confirm `docs/jep-index.md` has official JEP links for the release content.
 - Confirm the JavaDoc site URL is visible in the README.
@@ -60,11 +60,11 @@ Confirm repository metadata:
 Create the release tag:
 
 ```bash
-git tag -a v1.0.0 -m "v1.0.0"
-git push origin v1.0.0
+git tag -a vX.Y.Z -m "vX.Y.Z"
+git push origin vX.Y.Z
 ```
 
-Create a GitHub release using `docs/release/notes-v1.0.0.md` as the source text.
+Create a GitHub release using the current `docs/release/notes-vX.Y.Z.md` file as the source text.
 
 ## Post-Release Checks
 

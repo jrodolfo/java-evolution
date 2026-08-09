@@ -6,7 +6,42 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
-- Prepare the first public release.
+- No unreleased changes.
+
+## v1.1.0
+
+Second public release of `java-evolution`, focused on turning several notes-only topics into executable, learner-friendly examples and improving cross-platform validation.
+
+### Added
+
+- Executable Key Encapsulation Mechanism example for Java 21.
+- Executable Foreign Function and Memory API example for Java 22.
+- Executable Class-File API example for Java 24.
+- Executable ML-KEM and ML-DSA examples for Java 24.
+- Executable HKDF key derivation example for Java 25.
+- Java 18 JavaDoc `@snippet` examples.
+- Java 18 Simple Web Server example.
+- Practical demo guide and `make demos` target for focused walkthroughs.
+- Glossary documentation, including Java Platform Module System (JPMS) search terms.
+- Java 25 guardrail for Make targets.
+- Java 25 helper scripts for macOS, Linux, Windows Git Bash, and Windows PowerShell.
+- README platform support note for macOS, Windows 11, and Linux.
+
+### Changed
+
+- Improved release automation with `make docs-check` and `make release-check`.
+- Aligned build workflow with the local `make check` behavior.
+- Improved documentation and tests after code, documentation, and test reviews.
+- Clarified Foreign Function and Memory API `invokeExact` cast requirements.
+- Renamed and organized release documentation under `docs/release/`.
+- Improved Pattern Matching for switch discoverability.
+
+### Validation
+
+- `make release-check`
+- macOS validation with JDK 25 and Maven.
+- Windows 11 validation with JDK 25, Maven, PowerShell helper, Git Bash helper, and Make.
+- Linux validation with JDK 25 helper flow.
 
 ## v1.0.0
 
