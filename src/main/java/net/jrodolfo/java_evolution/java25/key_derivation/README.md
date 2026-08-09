@@ -4,6 +4,8 @@ Java 25 finalized the Key Derivation Function API in JEP 510.
 
 A Key Derivation Function, or KDF, derives new key material from existing secret material and context information. This is an important piece of real cryptographic protocols because the first shared secret is rarely the exact key every part of the application should use directly.
 
+For recurring acronyms such as KDF, HKDF, HMAC, KEM, and JEP, see the [Glossary](../../../../../../../../docs/glossary.md).
+
 ## The Problem
 
 Imagine two parties completed a key exchange, such as the Java 21 KEM example or the Java 24 ML-KEM example.
@@ -27,7 +29,7 @@ Reusing the same raw secret for every purpose is fragile. If one use is weakened
 
 ## What HKDF Does
 
-HKDF stands for HMAC-based Key Derivation Function.
+HMAC-based Key Derivation Function (HKDF) uses HMAC, a hash-based message authentication code, as the cryptographic building block for deriving key material.
 
 At a high level, HKDF takes:
 

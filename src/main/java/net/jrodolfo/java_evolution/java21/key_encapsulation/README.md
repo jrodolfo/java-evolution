@@ -1,8 +1,8 @@
 # Key Encapsulation Mechanism API
 
-Java 21 introduced the Key Encapsulation Mechanism API through JEP 452. The API lives in `javax.crypto.KEM` and gives Java a standard shape for KEM algorithms.
+Java 21 introduced the Key Encapsulation Mechanism (KEM) API through JEP 452. The API lives in `javax.crypto.KEM` and gives Java a standard shape for KEM algorithms.
 
-This topic deserves more explanation than a short class comment because it sits at the boundary between Java, networking, and modern cryptography.
+This topic deserves more explanation than a short class comment because it sits at the boundary between Java, networking, and modern cryptography. For recurring acronyms such as KEM, AES, KDF, and JEP, see the [Glossary](../../../../../../../../docs/glossary.md).
 
 ## The Problem
 
@@ -17,7 +17,7 @@ message + secret key -> encrypted message
 encrypted message + same secret key -> original message
 ```
 
-AES, the Advanced Encryption Standard, is the most common example. It is fast and widely used for protecting application data.
+Advanced Encryption Standard (AES) is the most common example. It is fast and widely used for protecting application data.
 
 The problem is not AES itself. The problem is key agreement:
 
@@ -110,7 +110,7 @@ The example uses:
 - `KEM.Encapsulator`
 - `KEM.Decapsulator`
 
-The important point is that Java 21 standardized the API. Specific algorithms are still supplied by Java security providers.
+The important point is that Java 21 standardized the API. Specific algorithms, such as Diffie-Hellman Key Encapsulation Mechanism (DHKEM), are still supplied by Java security providers.
 
 ## Sender And Receiver Flow
 
