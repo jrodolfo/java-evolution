@@ -8,6 +8,20 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 - No unreleased changes.
 
+## v1.1.1
+
+Patch release focused on JavaDoc and documentation navigation clarity.
+
+### Changed
+
+- Removed duplicate notes classes for features that now have dedicated executable example packages.
+- Removed matching redundant notes tests.
+- Updated demo commands, feature maps, status matrix, learning path, migration guide, and version READMEs to point directly to executable examples.
+
+### Validation
+
+- `make release-check`
+
 ## v1.1.0
 
 Second public release of `java-evolution`, focused on turning several notes-only topics into executable, learner-friendly examples and improving cross-platform validation.
