@@ -20,9 +20,9 @@ class VirtualThreadsExamplesTest {
 	@Test
 	void canStartMultipleNamedVirtualThreads() throws InterruptedException {
 		assertThat(examples.startNamedVirtualThreads())
-				.as("Virtual thread builders can name started threads")
+				.as("Reusing a named virtual-thread builder should increment the suffix for each started thread")
 				.hasSize(3)
-				.allMatch(name -> name.startsWith("worker-"));
+				.containsExactlyInAnyOrder("worker-1", "worker-2", "worker-3");
 	}
 
 	@Test

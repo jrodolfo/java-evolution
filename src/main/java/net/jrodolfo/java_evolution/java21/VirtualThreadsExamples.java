@@ -48,9 +48,10 @@ public class VirtualThreadsExamples {
 	public List<String> startNamedVirtualThreads() throws InterruptedException {
 		List<String> names = java.util.Collections.synchronizedList(new ArrayList<>());
 		List<Thread> threads = new ArrayList<>();
+		Thread.Builder.OfVirtual builder = Thread.ofVirtual().name("worker-", 1);
 
 		for (int index = 1; index <= 3; index++) {
-			Thread thread = Thread.ofVirtual().name("worker-", 1).start(() -> names.add(Thread.currentThread().getName()));
+			Thread thread = builder.start(() -> names.add(Thread.currentThread().getName()));
 			threads.add(thread);
 		}
 
