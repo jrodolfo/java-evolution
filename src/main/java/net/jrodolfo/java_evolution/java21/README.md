@@ -1,6 +1,6 @@
 # Java 21
 
-Java 21 is a long-term support release and one of the most important modern Java milestones. Several features that had been previewed in earlier releases became final here, especially virtual threads, record patterns, pattern matching for `switch`, and sequenced collections.
+Java 21 is a long-term support release and one of the most important modern Java milestones. Several features that had been previewed in earlier releases became final here, especially virtual threads, record patterns, and pattern matching for `switch`. Java 21 also introduced sequenced collections as a final Collections Framework feature.
 
 For learners, Java 21 is where many pieces of modern Java start to feel connected: records describe data, sealed types describe limited hierarchies, record patterns deconstruct data, pattern matching for `switch` dispatches by shape, and virtual threads make straightforward blocking code scale better.
 

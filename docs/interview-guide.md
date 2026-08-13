@@ -129,7 +129,7 @@ Key topics:
 - Java 18 standardized UTF-8 as the default charset.
 - Java 19 previewed virtual threads and record patterns.
 - Java 20 refined preview/incubator features.
-- Java 21 finalized virtual threads, record patterns, pattern matching for `switch`, and sequenced collections.
+- Java 21 finalized virtual threads, record patterns, and pattern matching for `switch`, and introduced sequenced collections as a final Collections Framework feature.
 - Java 22 finalized unnamed variables and patterns and the Foreign Function and Memory API.
 
 Possible prompt:
