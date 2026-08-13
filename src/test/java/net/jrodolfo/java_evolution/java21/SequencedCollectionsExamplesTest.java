@@ -12,15 +12,34 @@ class SequencedCollectionsExamplesTest {
 
 	@Test
 	void sequencedCollectionExposesFirstLastAndReversedOrder() {
-		assertThat(examples.summarizeSequence(List.of("java17", "java21", "java25")))
-				.as("SequencedCollection should expose first, last, and reversed views")
-				.isEqualTo("java17 -> java25 | reversed=[java25, java21, java17]");
+		var summary = examples.summarizeSequence(List.of("java17", "java21", "java25"));
+
+		assertThat(summary.first())
+				.as("SequencedCollection.getFirst should expose the first value in encounter order")
+				.isEqualTo("java17");
+		assertThat(summary.last())
+				.as("SequencedCollection.getLast should expose the last value in encounter order")
+				.isEqualTo("java25");
+		assertThat(summary.reversed())
+				.as("SequencedCollection.reversed should expose the same values from the other direction")
+				.containsExactly("java25", "java21", "java17");
 	}
 
 	@Test
 	void sequencedMapExposesFirstAndLastEntries() {
-		assertThat(examples.summarizeMapOrder())
-				.as("SequencedMap should expose first and last entries by encounter order")
-				.isEqualTo("17 to 25");
+		var summary = examples.summarizeMapOrder();
+
+		assertThat(summary.firstKey())
+				.as("SequencedMap.firstEntry should expose the first key in encounter order")
+				.isEqualTo(17);
+		assertThat(summary.firstValue())
+				.as("SequencedMap.firstEntry should expose the first value in encounter order")
+				.isEqualTo("LTS");
+		assertThat(summary.lastKey())
+				.as("SequencedMap.lastEntry should expose the last key in encounter order")
+				.isEqualTo(25);
+		assertThat(summary.lastValue())
+				.as("SequencedMap.lastEntry should expose the last value in encounter order")
+				.isEqualTo("current");
 	}
 }

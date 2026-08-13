@@ -31,9 +31,9 @@ public class SequencedCollectionsExamples {
 	 * @param values ordered values
 	 * @return a summary of sequence operations
 	 */
-	public String summarizeSequence(List<String> values) {
+	public SequenceSummary summarizeSequence(List<String> values) {
 		SequencedCollection<String> sequence = new ArrayList<>(values);
-		return sequence.getFirst() + " -> " + sequence.getLast() + " | reversed=" + sequence.reversed();
+		return new SequenceSummary(sequence.getFirst(), sequence.getLast(), List.copyOf(sequence.reversed()));
 	}
 
 	/**
@@ -41,11 +41,34 @@ public class SequencedCollectionsExamples {
 	 *
 	 * @return a summary of map encounter order
 	 */
-	public String summarizeMapOrder() {
+	public MapOrderSummary summarizeMapOrder() {
 		SequencedMap<Integer, String> releases = new LinkedHashMap<>();
 		releases.put(17, "LTS");
 		releases.put(21, "LTS");
 		releases.put(25, "current");
-		return releases.firstEntry().getKey() + " to " + releases.lastEntry().getKey();
+		var first = releases.firstEntry();
+		var last = releases.lastEntry();
+		return new MapOrderSummary(first.getKey(), first.getValue(), last.getKey(), last.getValue());
+	}
+
+	/**
+	 * Captures direct observations from {@link SequencedCollection}.
+	 *
+	 * @param first the first element in encounter order
+	 * @param last the last element in encounter order
+	 * @param reversed the values observed through the reversed view
+	 */
+	public record SequenceSummary(String first, String last, List<String> reversed) {
+	}
+
+	/**
+	 * Captures direct observations from {@link SequencedMap}.
+	 *
+	 * @param firstKey the first key in encounter order
+	 * @param firstValue the first value in encounter order
+	 * @param lastKey the last key in encounter order
+	 * @param lastValue the last value in encounter order
+	 */
+	public record MapOrderSummary(int firstKey, String firstValue, int lastKey, String lastValue) {
 	}
 }

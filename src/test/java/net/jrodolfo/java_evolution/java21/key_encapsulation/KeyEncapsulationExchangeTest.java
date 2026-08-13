@@ -1,8 +1,11 @@
 package net.jrodolfo.java_evolution.java21.key_encapsulation;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.util.Arrays;
+
+import javax.crypto.DecapsulateException;
 
 import org.junit.jupiter.api.Test;
 
@@ -48,5 +51,14 @@ class KeyEncapsulationExchangeTest {
 		assertThat(Arrays.equals(encapsulated.secretBytes(), receiverSecret.getEncoded()))
 				.as("the private key lets the receiver recover the sender's shared secret")
 				.isTrue();
+	}
+
+	@Test
+	void malformedEncapsulationCannotBeDecapsulated() throws Exception {
+		var receiver = KemReceiver.create();
+
+		assertThatThrownBy(() -> receiver.decapsulate(new byte[] { 1, 2, 3 }))
+				.as("DHKEM should reject encapsulation messages with an invalid size")
+				.isInstanceOf(DecapsulateException.class);
 	}
 }
