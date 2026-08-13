@@ -2,7 +2,7 @@
 
 Java 21 introduced the Key Encapsulation Mechanism (KEM) API through JEP 452. The API lives in `javax.crypto.KEM` and gives Java a standard shape for KEM algorithms.
 
-This topic deserves more explanation than a short class comment because it sits at the boundary between Java, networking, and modern cryptography. For recurring acronyms such as KEM, AES, KDF, and JEP, see the [Glossary](../../../../../../../../docs/glossary.md).
+This topic deserves more explanation than a short class comment because it sits at the boundary between Java, networking, and modern cryptography. For recurring acronyms, see the [project glossary](../../../../../../../../docs/glossary.md).
 
 ## The Problem
 

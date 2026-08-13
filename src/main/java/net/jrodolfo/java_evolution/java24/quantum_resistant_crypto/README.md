@@ -7,7 +7,7 @@ Java 24 added standard support for module-lattice cryptographic algorithms:
 
 These algorithms are intended for post-quantum security requirements.
 
-For recurring acronyms such as ML-KEM, ML-DSA, KEM, and JDK, see the [Glossary](../../../../../../../../docs/glossary.md).
+For recurring acronyms, see the [project glossary](../../../../../../../../docs/glossary.md).
 
 ## The Problem
 

@@ -4,7 +4,7 @@ Java 25 finalized the Key Derivation Function API in JEP 510.
 
 A Key Derivation Function, or KDF, derives new key material from existing secret material and context information. This is an important piece of real cryptographic protocols because the first shared secret is rarely the exact key every part of the application should use directly.
 
-For recurring acronyms such as KDF, HKDF, HMAC, KEM, and JEP, see the [Glossary](../../../../../../../../docs/glossary.md).
+For recurring acronyms, see the [project glossary](../../../../../../../../docs/glossary.md).
 
 ## The Problem
 

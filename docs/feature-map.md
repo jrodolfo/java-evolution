@@ -168,7 +168,7 @@ Learning notes: [java21 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Virtual threads final | `VirtualThreadsExamples` | `VirtualThreadsExamplesTest` |
 | Record patterns final | `RecordPatternsExamples` | `RecordPatternsExamplesTest` |
 | Pattern matching for switch final | [`PatternMatchingSwitchExamples`](../src/main/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamples.java) | [`PatternMatchingSwitchExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamplesTest.java) |
-| Sequenced collections | `SequencedCollectionsExamples` | `SequencedCollectionsExamplesTest` |
+| Sequenced collections final | `SequencedCollectionsExamples` | `SequencedCollectionsExamplesTest` |
 | Unnamed patterns and variables preview | `UnnamedPatternsVariablesPreviewExamples` | `UnnamedPatternsVariablesPreviewExamplesTest` |
 | Key Encapsulation Mechanism API | [`KeyEncapsulationExchange`](../src/main/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchange.java) | [`KeyEncapsulationExchangeTest`](../src/test/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchangeTest.java) |
 | Scoped values preview | `ScopedValuesPreviewNotes` | `ScopedValuesPreviewNotesTest` |

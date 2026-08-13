@@ -12,7 +12,7 @@ package net.jrodolfo.java_evolution.java21;
  *
  * <p>
  * The feature became final in Java 22 as unnamed variables and patterns. This
- * example uses JDK 25-compatible syntax.
+ * project compiles on JDK 25, where the same syntax is final.
  * </p>
  */
 public class UnnamedPatternsVariablesPreviewExamples {
