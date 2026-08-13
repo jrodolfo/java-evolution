@@ -8,6 +8,19 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 - No unreleased changes.
 
+## v1.1.3
+
+Patch release focused on the Java 21 virtual-thread naming example.
+
+### Changed
+
+- Reused one configured virtual-thread builder so the Java 21 example demonstrates incrementing thread names.
+- Strengthened the virtual-thread naming test to verify `worker-1`, `worker-2`, and `worker-3` directly.
+
+### Validation
+
+- `make release-check`
+
 ## v1.1.2
 
 Patch release focused on glossary and acronym clarity for learners.
