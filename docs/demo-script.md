@@ -90,8 +90,9 @@ Expected point: the example shows the API shape without turning the repository i
 Open:
 
 ```text
-src/main/java/net/jrodolfo/java_evolution/java25/ScopedValuesExamples.java
-src/test/java/net/jrodolfo/java_evolution/java25/ScopedValuesExamplesTest.java
+src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/README.md
+src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamples.java
+src/test/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamplesTest.java
 ```
 
 Say:
@@ -140,7 +141,7 @@ Use this when time is short:
 1. Show `README.md` and explain the version-based structure.
 2. Open `java08/StreamExamples.java` to show Java 8 functional style.
 3. Open `java21/VirtualThreadsExamples.java` to show modern Java concurrency.
-4. Open `java25/ScopedValuesExamples.java` or `java25/CompactSourceFilesNotesTest.java` to show current-release awareness.
+4. Open `java25/scoped_values/README.md` or `java25/CompactSourceFilesNotesTest.java` to show current-release awareness.
 5. Run one focused command:
 
 ```bash

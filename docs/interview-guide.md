@@ -203,7 +203,7 @@ Use this flow if you have only a few minutes:
 2. Show `java16/RecordExamples` to demonstrate data-carrier simplification.
 3. Show `java17/SealedClassesExamples` to demonstrate closed hierarchies.
 4. Show `java21/VirtualThreadsExamples` to demonstrate modern concurrency.
-5. Show `java25/ScopedValuesExamples` to demonstrate current Java 25 awareness.
+5. Show `java25/scoped_values/README.md` to demonstrate current Java 25 awareness.
 
 Then show the tests to prove that the examples are not just snippets.
 

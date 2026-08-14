@@ -6,11 +6,11 @@ Because this is the newest release in the repository, this package is careful ab
 
 ## Scoped Values Final
 
-Many applications need contextual data such as request IDs, user names, or tenant IDs. `ThreadLocal` can solve that, but mutable thread-local state can be hard to reason about and easy to leak.
+Scoped Values help code share immutable contextual data, such as a current user or request ID, with methods deeper in a call chain without passing that value through every intermediate parameter list.
 
-Java 25 finalized scoped values, which bind immutable values to a bounded dynamic scope.
+Java 25 finalized scoped values in JEP 506.
 
-Example: `ScopedValuesExamples`
+Tutorial and executable example: [`scoped_values`](scoped_values/README.md)
 
 Test: `ScopedValuesExamplesTest`
 
@@ -113,7 +113,7 @@ These are important, but they are not ideal for tiny deterministic unit tests, s
 
 ## How To Read This Package
 
-Start with the final executable examples: `ScopedValuesExamples`, `FlexibleConstructorBodiesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, compact source files, primitive patterns, stable values, PEM encodings, structured concurrency, the Vector API, AOT, JFR, object headers, and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, compact source files, primitive patterns, stable values, PEM encodings, structured concurrency, the Vector API, AOT, JFR, object headers, and GC behavior.
 
 Run the focused tests:
 

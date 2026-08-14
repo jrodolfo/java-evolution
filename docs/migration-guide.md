@@ -142,7 +142,8 @@ Study these files:
 
 - `src/main/java/net/jrodolfo/java_evolution/java22/UnnamedVariablesPatternsExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java24/StreamGatherersExamples.java`
-- `src/main/java/net/jrodolfo/java_evolution/java25/ScopedValuesExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/FlexibleConstructorBodiesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesNotes.java`

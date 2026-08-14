@@ -128,7 +128,7 @@ Status values may be combined, such as `final, security, executable example`, wh
 | 24 | Primitive patterns second preview | preview, notes-only | `PrimitivePatternsSecondPreviewNotes` | `PrimitivePatternsSecondPreviewNotesTest` | [JEP 488](https://openjdk.org/jeps/488) |
 | 24 | Scoped values fourth preview | preview, notes-only | `ScopedValuesFourthPreviewNotes` | `ScopedValuesFourthPreviewNotesTest` | [JEP 487](https://openjdk.org/jeps/487) |
 | 24 | Structured concurrency fourth preview | preview, notes-only | `StructuredConcurrencyFourthPreviewNotes` | `StructuredConcurrencyFourthPreviewNotesTest` | [JEP 499](https://openjdk.org/jeps/499) |
-| 25 | Scoped values final | final | `ScopedValuesExamples` | `ScopedValuesExamplesTest` | [JEP 506](https://openjdk.org/jeps/506) |
+| 25 | Scoped values final | final, executable example | [`ScopedValuesExamples`](../src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamples.java) | [`ScopedValuesExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamplesTest.java) | [JEP 506](https://openjdk.org/jeps/506) |
 | 25 | Flexible constructor bodies final | final | `FlexibleConstructorBodiesExamples` | `FlexibleConstructorBodiesExamplesTest` | [JEP 513](https://openjdk.org/jeps/513) |
 | 25 | Module import declarations final | final, notes-only | `ModuleImportDeclarationsNotes` | `ModuleImportDeclarationsNotesTest` | [JEP 511](https://openjdk.org/jeps/511) |
 | 25 | Compact source files final | final, notes-only | `CompactSourceFilesNotes` | `CompactSourceFilesNotesTest` | [JEP 512](https://openjdk.org/jeps/512) |
