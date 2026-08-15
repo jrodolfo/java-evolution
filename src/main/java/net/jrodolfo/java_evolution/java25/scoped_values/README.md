@@ -92,8 +92,7 @@ Inside one binding, the key points to one value. Code inside the scope can read 
 The example starts with this field:
 
 ```java
-private static final ScopedValue<String> USER =
-        ScopedValue.newInstance();
+private static final ScopedValue<String> USER = ScopedValue.newInstance();
 ```
 
 `USER` is not the username itself.
