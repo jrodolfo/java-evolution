@@ -149,6 +149,8 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/stable_values/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java25/structured_concurrency/README.md`
 
 Run:
 
@@ -156,6 +158,7 @@ Run:
 mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest" test
 mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
 mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,HkdfKeyDerivationExampleTest" test
+mvn "-Dtest=StableValuesPreviewNotesTest,StructuredConcurrencyFifthPreviewNotesTest" test
 ```
 
 Interview angle: show maturity discipline. A strong answer distinguishes final language/API features from preview, incubator, runtime, tooling, and security topics, and explains why some final features are represented as notes in this repository.

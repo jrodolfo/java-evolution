@@ -70,7 +70,7 @@ Test: `PrimitivePatternsThirdPreviewNotesTest`
 
 Stable values model data initialized at most once. This can help the JVM optimize values that are not known at object construction time but become stable later.
 
-Example: `StableValuesPreviewNotes`
+Explanatory module: [`stable_values`](stable_values/README.md)
 
 Test: `StableValuesPreviewNotesTest`
 
@@ -86,7 +86,7 @@ Test: `PemEncodingsPreviewNotesTest`
 
 Structured concurrency continued as a fifth preview in Java 25. It keeps the focus on treating related concurrent subtasks as one observable unit of work.
 
-Example: `StructuredConcurrencyFifthPreviewNotes`
+Explanatory module: [`structured_concurrency`](structured_concurrency/README.md)
 
 Test: `StructuredConcurrencyFifthPreviewNotesTest`
 
@@ -113,7 +113,7 @@ These are important, but they are not ideal for tiny deterministic unit tests, s
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, compact source files, primitive patterns, stable values, PEM encodings, structured concurrency, the Vector API, AOT, JFR, object headers, and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, compact source files, primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, the Vector API, AOT, JFR, object headers, and GC behavior.
 
 Run the focused tests:
 

@@ -237,9 +237,9 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Compact source files final | `CompactSourceFilesNotes` | `CompactSourceFilesNotesTest` |
 | Key Derivation Function API final | [`HkdfKeyDerivationExample`](../src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java) | [`HkdfKeyDerivationExampleTest`](../src/test/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExampleTest.java) |
 | Primitive patterns third preview | `PrimitivePatternsThirdPreviewNotes` | `PrimitivePatternsThirdPreviewNotesTest` |
-| Stable values preview | `StableValuesPreviewNotes` | `StableValuesPreviewNotesTest` |
+| Stable values preview | [`StableValuesPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/stable_values/StableValuesPreviewNotes.java) | [`StableValuesPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/stable_values/StableValuesPreviewNotesTest.java) |
 | PEM encodings preview | `PemEncodingsPreviewNotes` | `PemEncodingsPreviewNotesTest` |
-| Structured concurrency fifth preview | `StructuredConcurrencyFifthPreviewNotes` | `StructuredConcurrencyFifthPreviewNotesTest` |
+| Structured concurrency fifth preview | [`StructuredConcurrencyFifthPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/structured_concurrency/StructuredConcurrencyFifthPreviewNotes.java) | [`StructuredConcurrencyFifthPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/structured_concurrency/StructuredConcurrencyFifthPreviewNotesTest.java) |
 | Vector API tenth incubator | `VectorApiTenthIncubatorNotes` | `VectorApiTenthIncubatorNotesTest` |
 | AOT command-line ergonomics | `AotCommandLineErgonomicsNotes` | `AotCommandLineErgonomicsNotesTest` |
 | JFR enhancements | `JfrEnhancementsNotes` | `JfrEnhancementsNotesTest` |

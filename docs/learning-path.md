@@ -169,12 +169,15 @@ Java 25:
 - `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesNotes.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/stable_values/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java25/structured_concurrency/README.md`
 
 Run:
 
 ```bash
 mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
 mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,HkdfKeyDerivationExampleTest" test
+mvn "-Dtest=StableValuesPreviewNotesTest,StructuredConcurrencyFifthPreviewNotesTest" test
 ```
 
 Interview angle: be explicit about maturity. A strong answer distinguishes final features from preview and incubator work, and explains why some topics are documented as notes instead of executable demos.
