@@ -43,7 +43,7 @@ class PrimitivePatternsPreviewNotesTest {
 				.contains("still preview in Java 25");
 		assertThat(nextStep)
 				.as("The bridge note should point learners through the Java 24 and Java 25 previews")
-				.contains("PrimitivePatternsSecondPreviewNotes")
+				.contains("Java 24 primitive_patterns module")
 				.contains("PrimitivePatternsThirdPreviewNotes")
 				.contains("still preview");
 	}

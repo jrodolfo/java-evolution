@@ -55,7 +55,7 @@ public class PrimitivePatternsPreviewNotes {
 	 * @return a short next-step note
 	 */
 	public String nextStep() {
-		return "read PrimitivePatternsSecondPreviewNotes in Java 24 and PrimitivePatternsThirdPreviewNotes in Java 25 because this feature is still preview";
+		return "read the Java 24 primitive_patterns module and PrimitivePatternsThirdPreviewNotes in Java 25 because this feature is still preview";
 	}
 
 	/**

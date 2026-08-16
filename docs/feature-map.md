@@ -221,7 +221,7 @@ Learning notes: [java24 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | KDF preview | `KeyDerivationFunctionPreviewNotes` | `KeyDerivationFunctionPreviewNotesTest` |
 | Flexible constructor bodies third preview | `FlexibleConstructorBodiesThirdPreviewNotes` | `FlexibleConstructorBodiesThirdPreviewNotesTest` |
 | Module import declarations second preview | `ModuleImportDeclarationsSecondPreviewNotes` | `ModuleImportDeclarationsSecondPreviewNotesTest` |
-| Primitive patterns second preview | `PrimitivePatternsSecondPreviewNotes` | `PrimitivePatternsSecondPreviewNotesTest` |
+| Primitive patterns second preview | [`PrimitivePatternsSecondPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java24/primitive_patterns/PrimitivePatternsSecondPreviewNotes.java) | [`PrimitivePatternsSecondPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/primitive_patterns/PrimitivePatternsSecondPreviewNotesTest.java) |
 | Scoped values fourth preview | [`ScopedValuesFourthPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java24/scoped_values/ScopedValuesFourthPreviewNotes.java) | [`ScopedValuesFourthPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/scoped_values/ScopedValuesFourthPreviewNotesTest.java) |
 | Structured concurrency fourth preview | [`StructuredConcurrencyFourthPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java24/structured_concurrency/StructuredConcurrencyFourthPreviewNotes.java) | [`StructuredConcurrencyFourthPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/structured_concurrency/StructuredConcurrencyFourthPreviewNotesTest.java) |
 

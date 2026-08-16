@@ -133,3 +133,5 @@ The feature matters when primitive values need to participate in broader pattern
 ## Remember This
 
 Primitive patterns move Java toward one pattern-matching model for both reference values and primitive values. Java 23 introduced the idea as a preview, and Java 24 and Java 25 continued refining it.
+
+Continue with the Java 24 [`primitive_patterns`](../../java24/primitive_patterns/README.md) module for the second-preview step.
