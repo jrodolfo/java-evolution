@@ -10,6 +10,8 @@ Traditional JavaDoc comments often require HTML tags for lists, code blocks, and
 
 Java 23 introduced Markdown documentation comments so API docs can be written in a lighter format that is easier to read directly in source code.
 
+The mental model is simple: source comments can move from HTML-heavy shapes such as `<ul>` and `<pre>` toward Markdown lists and code fences, while JavaDoc tooling still produces the generated API documentation.
+
 Example: `MarkdownDocumentationCommentsNotes`
 
 Test: `MarkdownDocumentationCommentsNotesTest`
