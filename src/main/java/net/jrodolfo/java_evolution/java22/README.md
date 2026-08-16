@@ -106,7 +106,7 @@ Structured concurrency also continued in preview in Java 22.
 
 The goal is to make related concurrent subtasks easier to manage as one parent operation, with clearer joining, failure, cancellation, and observability boundaries.
 
-Continue with `StructuredConcurrencyThirdPreviewNotes` in Java 23 and the Java 25 [`structured_concurrency`](../java25/structured_concurrency/README.md) module.
+Continue with the Java 23 [`structured_concurrency`](../java23/structured_concurrency/README.md) module and the Java 25 [`structured_concurrency`](../java25/structured_concurrency/README.md) module.
 
 Explanatory module: [`structured_concurrency`](structured_concurrency/README.md)
 

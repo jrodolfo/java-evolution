@@ -96,7 +96,7 @@ Java 23 continued this feature as a third preview.
 
 Continue with the Java 25 [`structured_concurrency`](../java25/structured_concurrency/README.md) module because this feature is still preview there.
 
-Example: `StructuredConcurrencyThirdPreviewNotes`
+Explanatory module: [`structured_concurrency`](structured_concurrency/README.md)
 
 Test: `StructuredConcurrencyThirdPreviewNotesTest`
 
@@ -122,7 +122,7 @@ Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, `stream_gatherers/README.md`, `class_file_api/README.md`, `scoped_values/README.md`, and the preview/runtime notes for structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
+Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, `stream_gatherers/README.md`, `class_file_api/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
 Run the focused notes tests:
 
