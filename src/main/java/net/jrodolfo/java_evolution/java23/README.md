@@ -60,7 +60,7 @@ Java 23 continued Stream Gatherers as a second preview. Gatherers became final i
 
 Continue with `StreamGatherersExamples` in Java 24 for the final runnable example.
 
-Example: `StreamGatherersSecondPreviewNotes`
+Explanatory module: [`stream_gatherers`](stream_gatherers/README.md)
 
 Test: `StreamGatherersSecondPreviewNotesTest`
 
@@ -122,7 +122,7 @@ Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, and the preview/runtime notes for stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
+Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, `stream_gatherers/README.md`, and the preview/runtime notes for the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
 Run the focused notes tests:
 

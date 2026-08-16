@@ -44,7 +44,7 @@ Stream Gatherers address this by allowing custom intermediate stream operations.
 
 This repository keeps Java 22 gatherers as an explanatory module because the API was preview and later became final in Java 24.
 
-Continue with `StreamGatherersSecondPreviewNotes` in Java 23 and `StreamGatherersExamples` in Java 24.
+Continue with the Java 23 [`stream_gatherers`](../java23/stream_gatherers/README.md) module and `StreamGatherersExamples` in Java 24.
 
 Explanatory module: [`stream_gatherers`](stream_gatherers/README.md)
 

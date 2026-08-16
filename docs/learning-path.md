@@ -142,6 +142,7 @@ Java 23:
 - `src/main/java/net/jrodolfo/java_evolution/java23/primitive_patterns/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java23/module_import_declarations/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java23/flexible_constructor_bodies/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java23/stream_gatherers/README.md`
 
 Run:
 

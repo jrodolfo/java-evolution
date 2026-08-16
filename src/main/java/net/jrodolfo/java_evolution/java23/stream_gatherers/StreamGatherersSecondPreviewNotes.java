@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java23;
+package net.jrodolfo.java_evolution.java23.stream_gatherers;
 
 /**
  * Explains Stream Gatherers as a Java 23 second preview feature.
@@ -16,8 +16,26 @@ public class StreamGatherersSecondPreviewNotes {
 	 *
 	 * @return a short explanation
 	 */
-	public String purpose() {
-		return "define custom intermediate stream operations";
+	public String problemSolved() {
+		return "custom intermediate stream operations such as windowing, scanning, and batching were hard to express";
+	}
+
+	/**
+	 * Explains the Java 22 connection.
+	 *
+	 * @return a short explanation
+	 */
+	public String java22Connection() {
+		return "Java 22 introduced Stream Gatherers as a first preview";
+	}
+
+	/**
+	 * Explains the Java 23 status.
+	 *
+	 * @return a short explanation
+	 */
+	public String java23Status() {
+		return "Java 23 continued Stream Gatherers as a second preview";
 	}
 
 	/**
