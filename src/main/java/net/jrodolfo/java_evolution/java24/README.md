@@ -75,7 +75,7 @@ Key derivation functions create cryptographic keys from secret material and cont
 
 Java 24 previewed a standard KDF API. It became final in Java 25, where this repository provides the final runnable example and deeper explanation in [`java25/key_derivation`](../java25/key_derivation/README.md).
 
-Example: `KeyDerivationFunctionPreviewNotes`
+Explanatory module: [`key_derivation`](key_derivation/README.md)
 
 Test: `KeyDerivationFunctionPreviewNotesTest`
 
@@ -93,7 +93,7 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `KeyDerivationFunctionPreviewNotes`, `flexible_constructor_bodies/README.md`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `key_derivation/README.md`, `flexible_constructor_bodies/README.md`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 
