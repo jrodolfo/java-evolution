@@ -10,8 +10,21 @@ class ModuleImportDeclarationsSecondPreviewNotesTest {
 
 	@Test
 	void notesPointToJava25Finalization() {
-		assertThat(notes.status())
+		String featureGoal = notes.featureGoal();
+		String status = notes.status();
+		String nextStep = notes.nextStep();
+
+		assertThat(featureGoal)
+				.as("The note should explain what module import declarations import")
+				.contains("exported packages")
+				.contains("module");
+		assertThat(status)
 				.as("Module imports should point to Java 25 finalization")
+				.contains("second preview in Java 24")
 				.contains("final in Java 25");
+		assertThat(nextStep)
+				.as("The Java 24 bridge note should point to the final Java 25 notes")
+				.contains("ModuleImportDeclarationsNotes")
+				.contains("Java 25");
 	}
 }

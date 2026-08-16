@@ -83,11 +83,11 @@ Test: `KeyDerivationFunctionPreviewNotesTest`
 
 Java 24 also continued several language/API previews:
 
-- flexible constructor bodies third preview
-- module import declarations second preview
-- primitive patterns second preview
-- scoped values fourth preview
-- structured concurrency fourth preview
+- flexible constructor bodies third preview, finalized in Java 25 as `FlexibleConstructorBodiesExamples`
+- module import declarations second preview, finalized in Java 25 as `ModuleImportDeclarationsNotes`
+- primitive patterns second preview, continued in Java 25 as `PrimitivePatternsThirdPreviewNotes`
+- scoped values fourth preview, finalized in Java 25 in [`java25/scoped_values`](../java25/scoped_values/README.md)
+- structured concurrency fourth preview, continued in Java 25 in [`java25/structured_concurrency`](../java25/structured_concurrency/README.md)
 
 These are represented as notes because the final or later form is covered in Java 25 where appropriate.
 
