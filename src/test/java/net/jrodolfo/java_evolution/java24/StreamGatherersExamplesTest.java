@@ -13,7 +13,8 @@ class StreamGatherersExamplesTest {
 	@Test
 	void windowFixedCreatesFixedSizeWindows() {
 		// When
-		List<List<Integer>> windows = examples.fixedWindows(List.of(1, 2, 3, 4, 5), 2);
+		List<Integer> inputValues = List.of(1, 2, 3, 4, 5);
+		List<List<Integer>> windows = examples.fixedWindows(inputValues, 2);
 
 		// Then
 		assertThat(windows)
@@ -24,7 +25,8 @@ class StreamGatherersExamplesTest {
 	@Test
 	void scanCreatesRunningSum() {
 		// When
-		List<Integer> runningSums = examples.runningSum(List.of(1, 2, 3, 4));
+		List<Integer> inputValues = List.of(1, 2, 3, 4);
+		List<Integer> runningSums = examples.runningSum(inputValues);
 
 		// Then
 		assertThat(runningSums)

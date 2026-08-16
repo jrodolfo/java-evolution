@@ -8,7 +8,9 @@ Runnable examples are used where the feature is stable and simple. Notes are use
 
 Streams are expressive, but custom intermediate operations were historically difficult. Developers often had to break out of the pipeline or force a problem into a collector that only runs at the end.
 
-Java 24 finalized Stream Gatherers, which allow custom intermediate stream operations. The JDK includes useful gatherers such as fixed-size windows and scans.
+Java 24 finalized Stream Gatherers, which allow custom intermediate stream operations. This matters for operations that do not fit cleanly into one-element transformations such as `map`, one-element checks such as `filter`, or final aggregation with `collect`.
+
+For example, a fixed window operation needs to look at several input elements before emitting one output element. A scan operation needs to remember accumulated state while the stream is still flowing. Gatherers let those patterns remain inside the stream pipeline. The JDK includes useful gatherers such as fixed-size windows and scans.
 
 Example: `StreamGatherersExamples`
 

@@ -8,9 +8,13 @@ import java.util.stream.Gatherers;
  *
  * <p>
  * Before gatherers, custom intermediate stream operations were difficult to
- * express. Developers often had to leave the stream pipeline or force the
- * problem into a terminal collector. Gatherers let streams model operations
- * such as fixed windows and running scans as part of the pipeline.
+ * express. Simple operations such as {@code map} and {@code filter} work on
+ * one element at a time, while a terminal {@code collect} operation runs only
+ * after the stream has reached the end. That left a gap for operations that
+ * need to emit values while still flowing through the pipeline. Developers
+ * often had to leave the stream pipeline or force the problem into a terminal
+ * collector. Gatherers fill that gap by letting streams model operations such
+ * as fixed windows and running scans as intermediate operations.
  * </p>
  *
  * <p>
@@ -23,8 +27,8 @@ public class StreamGatherersExamples {
 
 	/**
 	 * Groups values into fixed-size windows. Windowing is an intermediate
-	 * operation because it changes how elements flow through the pipeline before
-	 * the final {@code toList()} terminal operation runs.
+	 * operation because {@code gather(...)} changes how elements flow through the
+	 * pipeline before the final {@code toList()} terminal operation runs.
 	 *
 	 * @param values values to window
 	 * @param size window size
