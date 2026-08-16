@@ -80,7 +80,7 @@ Status labels:
 |---|---|---|
 | [JEP 395](https://openjdk.org/jeps/395) | Records | Final |
 | [JEP 394](https://openjdk.org/jeps/394) | Pattern Matching for instanceof | Final |
-| [JEP 380](https://openjdk.org/jeps/380) | Unix-Domain Socket Channels | Final, Notes |
+| [JEP 380](https://openjdk.org/jeps/380) | Unix-Domain Socket Channels | Final, Explanatory Module |
 
 ## Java 17
 

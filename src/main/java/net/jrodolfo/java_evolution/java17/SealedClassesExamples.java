@@ -1,5 +1,8 @@
 package net.jrodolfo.java_evolution.java17;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Demonstrates sealed classes, finalized in Java 17.
  *
@@ -34,6 +37,18 @@ public class SealedClassesExamples {
 			return square.side() * square.side();
 		}
 		throw new IllegalArgumentException("unknown shape");
+	}
+
+	/**
+	 * Lists the direct subtypes explicitly permitted by the sealed {@link Shape}
+	 * parent.
+	 *
+	 * @return permitted subtype simple names
+	 */
+	public List<String> permittedShapeNames() {
+		return Arrays.stream(Shape.class.getPermittedSubclasses())
+				.map(Class::getSimpleName)
+				.toList();
 	}
 
 	/**

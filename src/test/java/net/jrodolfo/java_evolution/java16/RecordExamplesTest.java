@@ -29,11 +29,22 @@ class RecordExamplesTest {
 	}
 
 	@Test
-	void compactConstructorValidatesRecordComponents() {
-		// When / Then
-		assertThat(examples.release("Java", 16).version())
+	void compactConstructorAcceptsValidRecordComponents() {
+		// When
+		RecordExamples.Release release = examples.release("Java", 16);
+
+		// Then
+		assertThat(release.name())
+				.as("Valid record data should keep the component value")
+				.isEqualTo("Java");
+		assertThat(release.version())
 				.as("Valid record data should be accepted by the compact constructor")
 				.isEqualTo(16);
+	}
+
+	@Test
+	void compactConstructorRejectsInvalidRecordComponents() {
+		// When / Then
 		assertThatThrownBy(() -> examples.release("", 16))
 				.as("The compact constructor should reject blank names")
 				.isInstanceOf(IllegalArgumentException.class)

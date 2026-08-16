@@ -11,6 +11,14 @@ class StrongEncapsulationNotesTest {
 	@Test
 	void notesExplainStrongEncapsulationImpact() {
 		// When / Then
+		assertThat(notes.before())
+				.as("The notes should explain the unsupported internal-API habit")
+				.contains("reflection")
+				.contains("internal JDK implementation details");
+		assertThat(notes.after())
+				.as("The notes should contrast internals with documented public APIs")
+				.contains("documented public APIs")
+				.contains("platform contracts");
 		assertThat(notes.impact())
 				.as("The notes should explain the move away from internal JDK packages")
 				.contains("public APIs")

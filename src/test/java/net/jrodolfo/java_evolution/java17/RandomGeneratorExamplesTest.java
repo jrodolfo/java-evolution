@@ -18,11 +18,15 @@ class RandomGeneratorExamplesTest {
 	@Test
 	void namedGeneratorCanProduceBoundedValues() {
 		// When
-		int value = examples.boundedRandomValue("L64X128MixRandom", 10);
+		int firstValue = examples.boundedRandomValue("L64X128MixRandom", 10);
+		int secondValue = examples.boundedRandomValue("L64X128MixRandom", 10);
 
 		// Then
-		assertThat(value)
+		assertThat(firstValue)
 				.as("A bounded random value should be inside the requested range")
 				.isBetween(0, 9);
+		assertThat(secondValue)
+				.as("Using the same algorithm and seed should make this teaching example deterministic")
+				.isEqualTo(firstValue);
 	}
 }

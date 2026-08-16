@@ -108,7 +108,7 @@ Learning notes: [java16 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Records final | `RecordExamples` | `RecordExamplesTest` |
 | Pattern matching for `instanceof` final | `PatternMatchingInstanceofExamples` | `PatternMatchingInstanceofExamplesTest` |
 | `Stream.toList()` | `StreamToListExamples` | `StreamToListExamplesTest` |
-| Unix-domain socket channels | `UnixDomainSocketChannelNotes` | `UnixDomainSocketChannelNotesTest` |
+| Unix-domain socket channels | [`unix_domain_socket/UnixDomainSocketChannelNotes`](../src/main/java/net/jrodolfo/java_evolution/java16/unix_domain_socket/UnixDomainSocketChannelNotes.java) | [`UnixDomainSocketChannelNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java16/unix_domain_socket/UnixDomainSocketChannelNotesTest.java) |
 
 ## Java 17
 

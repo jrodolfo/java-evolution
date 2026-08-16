@@ -26,4 +26,15 @@ class SealedClassesExamplesTest {
 				.as("The permitted non-sealed Square implementation should be handled")
 				.isEqualTo(25.0);
 	}
+
+	@Test
+	void sealedParentExposesItsPermittedSubclasses() {
+		// When
+		var permittedShapeNames = examples.permittedShapeNames();
+
+		// Then
+		assertThat(permittedShapeNames)
+				.as("The final sealed Shape interface should declare the subtypes allowed by the hierarchy")
+				.containsExactlyInAnyOrder("Circle", "Rectangle", "Square");
+	}
 }
