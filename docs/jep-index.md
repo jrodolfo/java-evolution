@@ -72,7 +72,7 @@ Status labels:
 |---|---|---|
 | [JEP 378](https://openjdk.org/jeps/378) | Text Blocks | Final |
 | [JEP 360](https://openjdk.org/jeps/360) | Sealed Classes | Preview |
-| [JEP 371](https://openjdk.org/jeps/371) | Hidden Classes | Final, Notes |
+| [JEP 371](https://openjdk.org/jeps/371) | Hidden Classes | Final, Explanatory Module |
 
 ## Java 16
 

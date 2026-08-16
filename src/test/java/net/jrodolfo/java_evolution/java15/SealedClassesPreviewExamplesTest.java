@@ -22,4 +22,15 @@ class SealedClassesPreviewExamplesTest {
 				.as("The permitted Rectangle implementation should be handled explicitly")
 				.isEqualTo(12.0);
 	}
+
+	@Test
+	void sealedParentExposesItsPermittedSubclasses() {
+		// When
+		var permittedShapeNames = examples.permittedShapeNames();
+
+		// Then
+		assertThat(permittedShapeNames)
+				.as("The sealed Shape interface should explicitly permit only the known domain subtypes")
+				.containsExactlyInAnyOrder("Circle", "Rectangle");
+	}
 }

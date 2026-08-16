@@ -1,5 +1,8 @@
 package net.jrodolfo.java_evolution.java15;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Demonstrates sealed classes as a Java 15 preview feature.
  *
@@ -35,7 +38,20 @@ public class SealedClassesPreviewExamples {
 	}
 
 	/**
-	 * Sealed parent type that explicitly lists permitted implementations.
+	 * Lists the classes explicitly permitted by the sealed {@link Shape} parent.
+	 *
+	 * @return permitted subtype simple names
+	 */
+	public List<String> permittedShapeNames() {
+		return Arrays.stream(Shape.class.getPermittedSubclasses())
+				.map(Class::getSimpleName)
+				.toList();
+	}
+
+	/**
+	 * Sealed parent type that explicitly lists permitted implementations with
+	 * {@code permits}. Code outside that list cannot directly implement this
+	 * interface.
 	 */
 	public sealed interface Shape permits Circle, Rectangle {
 	}

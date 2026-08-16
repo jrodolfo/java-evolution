@@ -64,7 +64,7 @@ Status values may be combined, such as `final, security, executable example`, wh
 | 14 | Pattern matching for `instanceof` preview | preview | `PatternMatchingInstanceofPreviewExamples` | `PatternMatchingInstanceofPreviewExamplesTest` | [JEP 305](https://openjdk.org/jeps/305) |
 | 15 | Text blocks final | final | `TextBlockExamples` | `TextBlockExamplesTest` | [JEP 378](https://openjdk.org/jeps/378) |
 | 15 | Sealed classes preview | preview | `SealedClassesPreviewExamples` | `SealedClassesPreviewExamplesTest` | [JEP 360](https://openjdk.org/jeps/360) |
-| 15 | Hidden classes | final, notes-only | `HiddenClassesNotes` | `HiddenClassesNotesTest` | [JEP 371](https://openjdk.org/jeps/371) |
+| 15 | Hidden classes | final, explanatory module | [`HiddenClassesNotes`](../src/main/java/net/jrodolfo/java_evolution/java15/hidden_classes/HiddenClassesNotes.java) | [`HiddenClassesNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java15/hidden_classes/HiddenClassesNotesTest.java) | [JEP 371](https://openjdk.org/jeps/371) |
 | 16 | Records final | final | `RecordExamples` | `RecordExamplesTest` | [JEP 395](https://openjdk.org/jeps/395) |
 | 16 | Pattern matching for `instanceof` final | final | `PatternMatchingInstanceofExamples` | `PatternMatchingInstanceofExamplesTest` | [JEP 394](https://openjdk.org/jeps/394) |
 | 16 | `Stream.toList()` | final | `StreamToListExamples` | `StreamToListExamplesTest` | [java16 README](../src/main/java/net/jrodolfo/java_evolution/java16/README.md) |

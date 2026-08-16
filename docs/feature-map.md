@@ -97,7 +97,7 @@ Learning notes: [java15 README](../src/main/java/net/jrodolfo/java_evolution/jav
 |---|---|---|
 | Text blocks final | `TextBlockExamples` | `TextBlockExamplesTest` |
 | Sealed classes preview | `SealedClassesPreviewExamples` | `SealedClassesPreviewExamplesTest` |
-| Hidden classes | `HiddenClassesNotes` | `HiddenClassesNotesTest` |
+| Hidden classes | [`HiddenClassesNotes`](../src/main/java/net/jrodolfo/java_evolution/java15/hidden_classes/HiddenClassesNotes.java) | [`HiddenClassesNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java15/hidden_classes/HiddenClassesNotesTest.java) |
 
 ## Java 16
 

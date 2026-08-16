@@ -31,4 +31,15 @@ class TextBlockExamplesTest {
 				.contains("Java 15")
 				.contains("Feature: text blocks");
 	}
+
+	@Test
+	void textBlockRemovesIncidentalIndentationButKeepsIntentionalIndentation() {
+		// When
+		String text = examples.textWithIncidentalIndentationRemoved();
+
+		// Then
+		assertThat(text)
+				.as("The shared source indentation should be removed, but intentional indentation should remain")
+				.isEqualTo("first\n  second\n");
+	}
 }

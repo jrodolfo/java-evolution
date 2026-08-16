@@ -50,15 +50,15 @@ Frameworks and language runtimes sometimes generate classes at runtime. Before h
 
 Java 15 introduced hidden classes for generated implementation details that should not be used directly by application code. They are useful for frameworks, proxies, expression engines, and dynamic language runtimes.
 
-This repository keeps hidden classes as notes because a realistic example usually requires bytecode generation, which would distract from the Java release feature itself.
+This repository explains hidden classes in a dedicated notes module because a realistic example usually requires bytecode generation, which would distract from the Java release feature itself.
 
-Example: `HiddenClassesNotes`
+Explanatory module: [`hidden_classes`](hidden_classes/README.md)
 
 Test: `HiddenClassesNotesTest`
 
 ## How To Read This Package
 
-Start with `TextBlockExamples` because Java 15 finalized text blocks. Then read `SealedClassesPreviewExamples` and `HiddenClassesNotes`.
+Start with `TextBlockExamples` because Java 15 finalized text blocks. Then read `SealedClassesPreviewExamples` and `hidden_classes/README.md`.
 
 Run the focused tests:
 
@@ -67,7 +67,7 @@ mvn -Dtest=TextBlockExamplesTest,SealedClassesPreviewExamplesTest test
 mvn -Dtest=HiddenClassesNotesTest test
 ```
 
-`HiddenClassesNotes` is notes-based because hidden classes are mostly useful to frameworks and language runtimes that generate classes dynamically. After this package, continue with Java 16 to see records and pattern matching for `instanceof` become final.
+`hidden_classes/README.md` explains hidden classes as an explanatory module because they are mostly useful to frameworks and language runtimes that generate classes dynamically. After this package, continue with Java 16 to see records and pattern matching for `instanceof` become final.
 
 ## References
 

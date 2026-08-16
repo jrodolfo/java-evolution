@@ -44,4 +44,17 @@ public class TextBlockExamples {
 				Feature: %s
 				""".formatted(version, feature);
 	}
+
+	/**
+	 * Shows that Java removes incidental indentation from a text block and keeps
+	 * the final newline created by the closing delimiter position.
+	 *
+	 * @return a small two-line text block
+	 */
+	public String textWithIncidentalIndentationRemoved() {
+		return """
+				first
+				  second
+				""";
+	}
 }
