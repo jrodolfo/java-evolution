@@ -180,7 +180,7 @@ Learning notes: [java22 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 | Feature | Example | Test |
 |---|---|---|
-| Unnamed variables and patterns final | `UnnamedVariablesPatternsExamples` | `UnnamedVariablesPatternsExamplesTest` |
+| Unnamed variables and patterns final | [`UnnamedVariablesPatternsExamples`](../src/main/java/net/jrodolfo/java_evolution/java22/UnnamedVariablesPatternsExamples.java) | [`UnnamedVariablesPatternsExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/UnnamedVariablesPatternsExamplesTest.java) |
 | Statements before `super(...)` preview | [`StatementsBeforeSuperPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java22/statements_before_super/StatementsBeforeSuperPreviewNotes.java) | [`StatementsBeforeSuperPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/statements_before_super/StatementsBeforeSuperPreviewNotesTest.java) |
 | Stream Gatherers preview | [`StreamGatherersPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java22/stream_gatherers/StreamGatherersPreviewNotes.java) | [`StreamGatherersPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/stream_gatherers/StreamGatherersPreviewNotesTest.java) |
 | Foreign Function and Memory API final | [`NativeStringParser`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringParser.java), [`NativeStringLength`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringLength.java) | [`ForeignFunctionExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/foreign_function/ForeignFunctionExamplesTest.java) |

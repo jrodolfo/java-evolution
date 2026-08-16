@@ -134,6 +134,8 @@ Run:
 
 ```bash
 mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersPreviewNotesTest,ForeignFunctionExamplesTest" test
+mvn "-Dtest=ClassFileApiPreviewNotesTest,StatementsBeforeSuperPreviewNotesTest,LaunchMultiFileSourceProgramsNotesTest" test
+mvn "-Dtest=ScopedValuesSecondPreviewNotesTest,StructuredConcurrencySecondPreviewNotesTest" test
 ```
 
 Java 23:
