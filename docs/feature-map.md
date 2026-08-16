@@ -187,7 +187,7 @@ Learning notes: [java22 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Multi-file source launcher | [`LaunchMultiFileSourceProgramsNotes`](../src/main/java/net/jrodolfo/java_evolution/java22/launch_multi_file_source_programs/LaunchMultiFileSourceProgramsNotes.java) | [`LaunchMultiFileSourceProgramsNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/launch_multi_file_source_programs/LaunchMultiFileSourceProgramsNotesTest.java) |
 | Class-File API preview | [`ClassFileApiPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java22/class_file_api/ClassFileApiPreviewNotes.java) | [`ClassFileApiPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/class_file_api/ClassFileApiPreviewNotesTest.java) |
 | Scoped values second preview | [`ScopedValuesSecondPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java22/scoped_values/ScopedValuesSecondPreviewNotes.java) | [`ScopedValuesSecondPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/scoped_values/ScopedValuesSecondPreviewNotesTest.java) |
-| Structured concurrency second preview | `StructuredConcurrencySecondPreviewNotes` | `StructuredConcurrencySecondPreviewNotesTest` |
+| Structured concurrency second preview | [`StructuredConcurrencySecondPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java22/structured_concurrency/StructuredConcurrencySecondPreviewNotes.java) | [`StructuredConcurrencySecondPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/structured_concurrency/StructuredConcurrencySecondPreviewNotesTest.java) |
 
 ## Java 23
 

@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java22;
+package net.jrodolfo.java_evolution.java22.structured_concurrency;
 
 /**
  * Explains structured concurrency as a Java 22 second preview feature.
@@ -17,12 +17,30 @@ package net.jrodolfo.java_evolution.java22;
 public class StructuredConcurrencySecondPreviewNotes {
 
 	/**
-	 * Explains the practical goal.
+	 * Explains the practical problem.
 	 *
 	 * @return a short explanation
 	 */
-	public String purpose() {
-		return "manage related concurrent subtasks with clear lifetime and cancellation boundaries";
+	public String problemSolved() {
+		return "related concurrent subtasks need clear parent, lifetime, and cancellation boundaries";
+	}
+
+	/**
+	 * Explains the structured unit of work.
+	 *
+	 * @return a short explanation
+	 */
+	public String structuredUnitOfWork() {
+		return "a parent operation opens a scope, forks related subtasks, joins them, and closes the scope";
+	}
+
+	/**
+	 * Names important behavior that structure makes clearer.
+	 *
+	 * @return key behavior
+	 */
+	public String coordinationBenefits() {
+		return "joining, failure handling, cancellation, cleanup, and observability become easier to reason about";
 	}
 
 	/**

@@ -108,13 +108,13 @@ The goal is to make related concurrent subtasks easier to manage as one parent o
 
 Continue with `StructuredConcurrencyThirdPreviewNotes` in Java 23 and the Java 25 [`structured_concurrency`](../java25/structured_concurrency/README.md) module.
 
-Example: `StructuredConcurrencySecondPreviewNotes`
+Explanatory module: [`structured_concurrency`](structured_concurrency/README.md)
 
 Test: `StructuredConcurrencySecondPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read `stream_gatherers/README.md`, `class_file_api/README.md`, `statements_before_super/README.md`, `launch_multi_file_source_programs/README.md`, `scoped_values/README.md`, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
+Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read `stream_gatherers/README.md`, `class_file_api/README.md`, `statements_before_super/README.md`, `launch_multi_file_source_programs/README.md`, `scoped_values/README.md`, and `structured_concurrency/README.md`. For native interop, read `foreign_function/README.md` before the FFM example classes.
 
 Run the focused tests:
 
