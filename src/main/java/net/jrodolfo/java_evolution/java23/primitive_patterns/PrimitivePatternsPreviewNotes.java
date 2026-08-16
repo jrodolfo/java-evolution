@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java23;
+package net.jrodolfo.java_evolution.java23.primitive_patterns;
 
 /**
  * Explains primitive types in patterns, {@code instanceof}, and {@code switch}
@@ -18,12 +18,39 @@ public class PrimitivePatternsPreviewNotes {
 	 *
 	 * @return a short explanation
 	 */
-	public String purpose() {
-		return "extend pattern matching so primitive values can participate in instanceof and switch checks";
+	public String problemSolved() {
+		return "primitive values were less integrated with Java pattern matching than reference values";
 	}
 
 	/**
-	 * Points learners to the next preview in this repository.
+	 * Explains what Java 23 previewed.
+	 *
+	 * @return a short explanation
+	 */
+	public String whatJavaPreviewed() {
+		return "primitive values can participate in pattern matching, instanceof, and switch checks";
+	}
+
+	/**
+	 * Explains the broader pattern-matching direction.
+	 *
+	 * @return a short explanation
+	 */
+	public String languageDirection() {
+		return "Java is moving toward a more uniform pattern model for reference and primitive values";
+	}
+
+	/**
+	 * Explains an important safety goal.
+	 *
+	 * @return a short safety note
+	 */
+	public String safetyGoal() {
+		return "primitive patterns help test whether a primitive conversion is safe before binding the converted value";
+	}
+
+	/**
+	 * Points learners to the next previews in this repository.
 	 *
 	 * @return a short next-step note
 	 */

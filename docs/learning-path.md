@@ -139,6 +139,7 @@ mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersPreviewNotesTest
 Java 23:
 
 - `src/main/java/net/jrodolfo/java_evolution/java23/markdown_documentation_comments/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java23/primitive_patterns/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java23/ModuleImportDeclarationsPreviewNotes.java`
 
 Run:

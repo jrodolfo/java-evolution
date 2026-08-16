@@ -24,7 +24,7 @@ Java 23 previewed primitive types in patterns, `instanceof`, and `switch`, movin
 
 This feature continued as a second preview in Java 24 and a third preview in Java 25.
 
-Example: `PrimitivePatternsPreviewNotes`
+Explanatory module: [`primitive_patterns`](primitive_patterns/README.md)
 
 Test: `PrimitivePatternsPreviewNotesTest`
 
@@ -122,7 +122,7 @@ Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `markdown_documentation_comments/README.md`, then read the preview and runtime notes for primitive patterns, module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
+Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md` and the preview/runtime notes for module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
 Run the focused notes tests:
 
