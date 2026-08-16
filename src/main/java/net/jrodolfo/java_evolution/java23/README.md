@@ -32,9 +32,9 @@ Test: `PrimitivePatternsPreviewNotesTest`
 
 Java has package imports, but a large API often spans many packages. After Java 9 introduced modules, it became natural to ask whether code could import from a module boundary instead of importing packages one by one.
 
-Java 23 previewed module import declarations. The feature became final in Java 25.
+Java 23 previewed module import declarations. The feature continued as a second preview in Java 24 and became final in Java 25.
 
-Continue with `ModuleImportDeclarationsSecondPreviewNotes` in Java 24 and `ModuleImportDeclarationsNotes` in Java 25.
+Continue with the Java 24 [`module_import_declarations`](../java24/module_import_declarations/README.md) module and `ModuleImportDeclarationsNotes` in Java 25.
 
 Explanatory module: [`module_import_declarations`](module_import_declarations/README.md)
 
