@@ -36,7 +36,7 @@ Java 23 previewed module import declarations. The feature became final in Java 2
 
 Continue with `ModuleImportDeclarationsSecondPreviewNotes` in Java 24 and `ModuleImportDeclarationsNotes` in Java 25.
 
-Example: `ModuleImportDeclarationsPreviewNotes`
+Explanatory module: [`module_import_declarations`](module_import_declarations/README.md)
 
 Test: `ModuleImportDeclarationsPreviewNotesTest`
 
@@ -122,7 +122,7 @@ Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md` and the preview/runtime notes for module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
+Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, and the preview/runtime notes for flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
 Run the focused notes tests:
 
