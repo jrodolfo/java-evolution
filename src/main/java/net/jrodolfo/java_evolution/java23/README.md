@@ -114,7 +114,7 @@ Test: `UnsafeMemoryAccessDeprecationNotesTest`
 
 Garbage collectors can often perform better when they treat young and old objects differently. Java 23 made ZGC use generational mode by default.
 
-This is a runtime behavior topic rather than a small source-code feature, so this repository keeps it as notes.
+This is a runtime behavior topic rather than a small source-code feature, so this repository documents it as an explanatory notes module.
 
 Explanatory module: [`zgc_generational_mode`](zgc_generational_mode/README.md)
 
