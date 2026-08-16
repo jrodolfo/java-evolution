@@ -70,7 +70,7 @@ Before this feature, an explicit `super(...)` or `this(...)` call had to be the 
 
 Java 22 previewed statements before `super(...)`, under strict safety rules. The constructor still cannot use the object being created before the superclass is initialized.
 
-Continue with `FlexibleConstructorBodiesSecondPreviewNotes` in Java 23 and `FlexibleConstructorBodiesExamples` in Java 25.
+Continue with the Java 23 [`flexible_constructor_bodies`](../java23/flexible_constructor_bodies/README.md) module and `FlexibleConstructorBodiesExamples` in Java 25.
 
 Explanatory module: [`statements_before_super`](statements_before_super/README.md)
 

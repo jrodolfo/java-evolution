@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java23;
+package net.jrodolfo.java_evolution.java23.flexible_constructor_bodies;
 
 /**
  * Explains flexible constructor bodies as a Java 23 second preview feature.
@@ -18,8 +18,26 @@ public class FlexibleConstructorBodiesSecondPreviewNotes {
 	 *
 	 * @return a short explanation
 	 */
-	public String purpose() {
-		return "allow safe validation or field initialization before an explicit constructor invocation";
+	public String problemSolved() {
+		return "constructors sometimes need validation or preparation before explicit constructor invocation";
+	}
+
+	/**
+	 * Explains the relationship to the Java 22 preview.
+	 *
+	 * @return a short explanation
+	 */
+	public String java22Connection() {
+		return "Java 22 previewed statements before super and Java 23 continued the feature as flexible constructor bodies";
+	}
+
+	/**
+	 * Names the constructor safety rule.
+	 *
+	 * @return a short safety note
+	 */
+	public String safetyRule() {
+		return "constructor code before delegation still cannot use the partially constructed object unsafely";
 	}
 
 	/**
@@ -37,6 +55,6 @@ public class FlexibleConstructorBodiesSecondPreviewNotes {
 	 * @return a short status note
 	 */
 	public String status() {
-		return "second preview in Java 23 and final in Java 25";
+		return "second preview in Java 23, third preview in Java 24, and final in Java 25";
 	}
 }

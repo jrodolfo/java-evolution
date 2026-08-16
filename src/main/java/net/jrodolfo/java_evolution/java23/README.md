@@ -48,7 +48,7 @@ Java 23 refined flexible constructor bodies in a second preview. The goal is saf
 
 Continue with `FlexibleConstructorBodiesThirdPreviewNotes` in Java 24 and `FlexibleConstructorBodiesExamples` in Java 25.
 
-Example: `FlexibleConstructorBodiesSecondPreviewNotes`
+Explanatory module: [`flexible_constructor_bodies`](flexible_constructor_bodies/README.md)
 
 Test: `FlexibleConstructorBodiesSecondPreviewNotesTest`
 
@@ -122,7 +122,7 @@ Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, and the preview/runtime notes for flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
+Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, and the preview/runtime notes for stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
 Run the focused notes tests:
 
