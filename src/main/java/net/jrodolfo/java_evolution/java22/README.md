@@ -72,7 +72,7 @@ Java 22 previewed statements before `super(...)`, under strict safety rules. The
 
 Continue with `FlexibleConstructorBodiesSecondPreviewNotes` in Java 23 and `FlexibleConstructorBodiesExamples` in Java 25.
 
-Example: `StatementsBeforeSuperPreviewNotes`
+Explanatory module: [`statements_before_super`](statements_before_super/README.md)
 
 Test: `StatementsBeforeSuperPreviewNotesTest`
 
@@ -114,7 +114,7 @@ Test: `StructuredConcurrencySecondPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read `stream_gatherers/README.md`, `class_file_api/README.md`, the notes for constructor-body changes, `launch_multi_file_source_programs/README.md`, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
+Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read `stream_gatherers/README.md`, `class_file_api/README.md`, `statements_before_super/README.md`, `launch_multi_file_source_programs/README.md`, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
 
 Run the focused tests:
 

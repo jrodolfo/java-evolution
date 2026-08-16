@@ -123,6 +123,7 @@ Java 22:
 - `src/main/java/net/jrodolfo/java_evolution/java22/UnnamedVariablesPatternsExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java22/stream_gatherers/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java22/class_file_api/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java22/statements_before_super/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringParser.java`
 - `src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringLength.java`

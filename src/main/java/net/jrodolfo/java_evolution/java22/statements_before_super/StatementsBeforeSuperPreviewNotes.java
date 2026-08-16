@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java22;
+package net.jrodolfo.java_evolution.java22.statements_before_super;
 
 /**
  * Explains statements before {@code super(...)} as a Java 22 preview feature.
@@ -11,19 +11,29 @@ package net.jrodolfo.java_evolution.java22;
  * </p>
  *
  * <p>
- * The feature allows constructor argument validation or preparation before an
- * explicit superclass constructor invocation, within strict safety rules.
+ * Java 22 previewed a more flexible constructor body while preserving the
+ * important safety rule: code before {@code super(...)} still cannot use the
+ * instance being constructed.
  * </p>
  */
 public class StatementsBeforeSuperPreviewNotes {
 
 	/**
-	 * Explains the practical goal.
+	 * Explains the old constructor rule.
 	 *
 	 * @return a short explanation
 	 */
-	public String purpose() {
-		return "allow safe argument checking and preparation before calling an explicit superclass constructor";
+	public String oldRule() {
+		return "an explicit super or this constructor call had to be the first constructor statement";
+	}
+
+	/**
+	 * Explains the practical problem.
+	 *
+	 * @return a short explanation
+	 */
+	public String problemSolved() {
+		return "constructor arguments sometimes need validation or preparation before delegation";
 	}
 
 	/**
@@ -31,7 +41,7 @@ public class StatementsBeforeSuperPreviewNotes {
 	 *
 	 * @return a short limitation
 	 */
-	public String limitation() {
+	public String safetyRule() {
 		return "statements before super cannot use the instance being constructed";
 	}
 
@@ -50,6 +60,6 @@ public class StatementsBeforeSuperPreviewNotes {
 	 * @return the project decision
 	 */
 	public String projectDecision() {
-		return "the repository documents this preview feature as notes to avoid preview-flag complexity";
+		return "the repository documents this Java 22 preview feature as notes to avoid preview-flag complexity";
 	}
 }
