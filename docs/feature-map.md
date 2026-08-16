@@ -204,7 +204,7 @@ Learning notes: [java23 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Scoped values third preview | `ScopedValuesThirdPreviewNotes` | `ScopedValuesThirdPreviewNotesTest` |
 | Structured concurrency third preview | `StructuredConcurrencyThirdPreviewNotes` | `StructuredConcurrencyThirdPreviewNotesTest` |
 | Unsafe memory-access deprecation | [`UnsafeMemoryAccessDeprecationNotes`](../src/main/java/net/jrodolfo/java_evolution/java23/unsafe_memory_access_deprecation/UnsafeMemoryAccessDeprecationNotes.java) | [`UnsafeMemoryAccessDeprecationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java23/unsafe_memory_access_deprecation/UnsafeMemoryAccessDeprecationNotesTest.java) |
-| ZGC generational mode | `ZgcGenerationalModeNotes` | `ZgcGenerationalModeNotesTest` |
+| ZGC generational mode | [`ZgcGenerationalModeNotes`](../src/main/java/net/jrodolfo/java_evolution/java23/zgc_generational_mode/ZgcGenerationalModeNotes.java) | [`ZgcGenerationalModeNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java23/zgc_generational_mode/ZgcGenerationalModeNotesTest.java) |
 
 ## Java 24
 

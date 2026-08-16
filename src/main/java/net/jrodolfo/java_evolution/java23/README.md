@@ -114,13 +114,13 @@ Garbage collectors can often perform better when they treat young and old object
 
 This is a runtime behavior topic rather than a small source-code feature, so this repository keeps it as notes.
 
-Example: `ZgcGenerationalModeNotes`
+Explanatory module: [`zgc_generational_mode`](zgc_generational_mode/README.md)
 
 Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `MarkdownDocumentationCommentsNotes`, then read the preview and runtime notes for primitive patterns, module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and ZGC generational mode.
+Start with `MarkdownDocumentationCommentsNotes`, then read the preview and runtime notes for primitive patterns, module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
 Run the focused notes tests:
 
