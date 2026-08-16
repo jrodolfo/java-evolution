@@ -229,7 +229,7 @@ Start here depending on what you need:
 | 21 | [`java21`](src/main/java/net/jrodolfo/java_evolution/java21/README.md) | Virtual Threads final, Record Patterns final, Pattern Matching for switch final, Sequenced Collections, KEM example |
 | 22 | [`java22`](src/main/java/net/jrodolfo/java_evolution/java22/README.md) | Unnamed Variables and Patterns final, FFM executable native example, Stream Gatherers explanatory module, Class-File API explanatory module |
 | 23 | [`java23`](src/main/java/net/jrodolfo/java_evolution/java23/README.md) | Markdown Documentation Comments module, Primitive Patterns preview module, Module Imports preview module, ZGC Generational Mode notes |
-| 24 | [`java24`](src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API example, Security Manager disabled, Virtual Thread synchronization notes, post-quantum crypto examples |
+| 24 | [`java24`](src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API, Security Manager/AOT/runtime modules, post-quantum crypto examples, preview bridge modules |
 | 25 | [`java25`](src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, KDF example, Module Imports and Compact Source Files final documented via notes, JFR/AOT/GC notes |
 
 ## How To Study This Repository

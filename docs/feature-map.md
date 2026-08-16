@@ -212,7 +212,7 @@ Learning notes: [java24 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 | Feature | Example | Test |
 |---|---|---|
-| Stream Gatherers final | `StreamGatherersExamples` | `StreamGatherersExamplesTest` |
+| Stream Gatherers final | [`StreamGatherersExamples`](../src/main/java/net/jrodolfo/java_evolution/java24/StreamGatherersExamples.java) | [`StreamGatherersExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/StreamGatherersExamplesTest.java) |
 | Class-File API final | [`ClassFileInspector`](../src/main/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspector.java) | [`ClassFileInspectorTest`](../src/test/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspectorTest.java) |
 | Security Manager disabled | [`SecurityManagerDisabledNotes`](../src/main/java/net/jrodolfo/java_evolution/java24/security_manager_disabled/SecurityManagerDisabledNotes.java) | [`SecurityManagerDisabledNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/security_manager_disabled/SecurityManagerDisabledNotesTest.java) |
 | Virtual-thread synchronization | [`VirtualThreadSynchronizationNotes`](../src/main/java/net/jrodolfo/java_evolution/java24/virtual_thread_synchronization/VirtualThreadSynchronizationNotes.java) | [`VirtualThreadSynchronizationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/virtual_thread_synchronization/VirtualThreadSynchronizationNotesTest.java) |

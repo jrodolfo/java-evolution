@@ -158,15 +158,26 @@ Java 24:
 - `src/main/java/net/jrodolfo/java_evolution/java24/class_file/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspector.java`
 - `src/main/java/net/jrodolfo/java_evolution/java24/security_manager_disabled/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java24/virtual_thread_synchronization/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java24/aot_class_loading/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java24/key_derivation/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeKemExample.java`
 - `src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeDsaExample.java`
+- `src/main/java/net/jrodolfo/java_evolution/java24/flexible_constructor_bodies/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java24/module_import_declarations/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java24/primitive_patterns/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java24/scoped_values/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java24/structured_concurrency/README.md`
 
 Run:
 
 ```bash
 mvn "-Dtest=StreamGatherersExamplesTest,ClassFileInspectorTest,SecurityManagerDisabledNotesTest" test
 mvn "-Dtest=ModuleLatticeCryptoExamplesTest" test
+mvn "-Dtest=VirtualThreadSynchronizationNotesTest,AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest" test
+mvn "-Dtest=FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest,PrimitivePatternsSecondPreviewNotesTest" test
+mvn "-Dtest=ScopedValuesFourthPreviewNotesTest,StructuredConcurrencyFourthPreviewNotesTest" test
 ```
 
 Java 25:
