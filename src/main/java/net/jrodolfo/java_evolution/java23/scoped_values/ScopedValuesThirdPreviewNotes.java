@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java23;
+package net.jrodolfo.java_evolution.java23.scoped_values;
 
 /**
  * Explains scoped values as a Java 23 third preview feature.
@@ -12,12 +12,30 @@ package net.jrodolfo.java_evolution.java23;
 public class ScopedValuesThirdPreviewNotes {
 
 	/**
-	 * Explains the feature goal.
+	 * Explains the contextual-data problem.
 	 *
 	 * @return a short explanation
 	 */
-	public String purpose() {
-		return "share immutable data across call chains and child threads within a bounded scope";
+	public String problemSolved() {
+		return "share immutable contextual data across call chains and child tasks within a bounded scope";
+	}
+
+	/**
+	 * Compares scoped values with a common older mechanism.
+	 *
+	 * @return a short comparison
+	 */
+	public String threadLocalContrast() {
+		return "scoped values avoid broad mutable ThreadLocal state and stale-context cleanup hazards";
+	}
+
+	/**
+	 * Explains the Java 22 connection.
+	 *
+	 * @return a short explanation
+	 */
+	public String java22Connection() {
+		return "Java 22 continued Scoped Values as a second preview";
 	}
 
 	/**
@@ -35,6 +53,6 @@ public class ScopedValuesThirdPreviewNotes {
 	 * @return a short status note
 	 */
 	public String status() {
-		return "third preview in Java 23 and final in Java 25";
+		return "third preview in Java 23, fourth preview in Java 24, and final in Java 25";
 	}
 }

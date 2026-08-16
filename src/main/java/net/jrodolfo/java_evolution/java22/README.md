@@ -94,7 +94,7 @@ Scoped values continued in preview in Java 22.
 
 The problem remains the same as Java 21: immutable contextual data should be passed through a bounded execution scope without the cleanup and mutability hazards of many `ThreadLocal` designs.
 
-Continue with `ScopedValuesThirdPreviewNotes` in Java 23 and the Java 25 [`scoped_values`](../java25/scoped_values/README.md) module.
+Continue with the Java 23 [`scoped_values`](../java23/scoped_values/README.md) module and the Java 25 [`scoped_values`](../java25/scoped_values/README.md) module.
 
 Explanatory module: [`scoped_values`](scoped_values/README.md)
 

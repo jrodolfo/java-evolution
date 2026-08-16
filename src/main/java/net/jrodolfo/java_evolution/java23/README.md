@@ -84,7 +84,7 @@ Java 23 kept scoped values in preview. The feature became final in Java 25.
 
 Continue with the Java 25 [`scoped_values`](../java25/scoped_values/README.md) module for the final learning example.
 
-Example: `ScopedValuesThirdPreviewNotes`
+Explanatory module: [`scoped_values`](scoped_values/README.md)
 
 Test: `ScopedValuesThirdPreviewNotesTest`
 
@@ -122,7 +122,7 @@ Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, `stream_gatherers/README.md`, `class_file_api/README.md`, and the preview/runtime notes for scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
+Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, `stream_gatherers/README.md`, `class_file_api/README.md`, `scoped_values/README.md`, and the preview/runtime notes for structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
 Run the focused notes tests:
 
