@@ -12,30 +12,58 @@ class UnnamedVariablesPatternsExamplesTest {
 
 	@Test
 	void unnamedLambdaParameterDocumentsIgnoredArgument() {
-		assertThat(examples.useOnlyFirstValue(10, 99))
+		int usefulValue = 10;
+		int intentionallyIgnoredValue = 99;
+
+		int result = examples.useOnlyFirstValue(usefulValue, intentionallyIgnoredValue);
+
+		assertThat(result)
 				.as("The second lambda parameter is intentionally ignored")
 				.isEqualTo(20);
 	}
 
 	@Test
 	void unnamedLoopVariableDocumentsIgnoredElement() {
-		assertThat(examples.countValues(List.of("a", "b", "c")))
+		List<String> valuesWhoseContentDoesNotMatter = List.of("a", "b", "c");
+
+		int count = examples.countValues(valuesWhoseContentDoesNotMatter);
+
+		assertThat(count)
 				.as("The loop element is intentionally ignored")
 				.isEqualTo(3);
 	}
 
 	@Test
-	void unnamedPatternDocumentsIgnoredBinding() {
-		assertThat(examples.broadType("java"))
+	void unnamedStringPatternDocumentsIgnoredBinding() {
+		Object textValue = "java";
+
+		String broadType = examples.broadType(textValue);
+
+		assertThat(broadType)
 				.as("The String pattern needs only the broad type, not the bound value")
 				.isEqualTo("text");
-		assertThat(examples.broadType(22))
+	}
+
+	@Test
+	void unnamedNumberPatternDocumentsIgnoredBinding() {
+		Object numberValue = 22;
+
+		String broadType = examples.broadType(numberValue);
+
+		assertThat(broadType)
 				.as("The Number pattern needs only the broad type, not the bound value")
 				.isEqualTo("number");
-		assertThat(examples.broadType(null))
+	}
+
+	@Test
+	void patternSwitchCanStillHandleNullAndDefaultCases() {
+		String nullType = examples.broadType(null);
+		String defaultType = examples.broadType(true);
+
+		assertThat(nullType)
 				.as("Pattern switches can handle null explicitly")
 				.isEqualTo("null");
-		assertThat(examples.broadType(true))
+		assertThat(defaultType)
 				.as("Values outside the named patterns should use the default branch")
 				.isEqualTo("other");
 	}
