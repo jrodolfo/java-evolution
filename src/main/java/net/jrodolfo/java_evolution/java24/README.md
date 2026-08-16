@@ -86,14 +86,14 @@ Java 24 also continued several language/API previews:
 - flexible constructor bodies third preview, finalized in Java 25 as `FlexibleConstructorBodiesExamples`
 - module import declarations second preview, finalized in Java 25 as `ModuleImportDeclarationsNotes`
 - primitive patterns second preview, continued in Java 25 as `PrimitivePatternsThirdPreviewNotes`
-- scoped values fourth preview, finalized in Java 25 in [`java25/scoped_values`](../java25/scoped_values/README.md)
+- scoped values fourth preview, documented in [`scoped_values`](scoped_values/README.md) and finalized in Java 25 in [`java25/scoped_values`](../java25/scoped_values/README.md)
 - structured concurrency fourth preview, documented in [`structured_concurrency`](structured_concurrency/README.md) and continued in Java 25 in [`java25/structured_concurrency`](../java25/structured_concurrency/README.md)
 
 These are represented as notes because the final or later form is covered in Java 25 where appropriate.
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `KeyDerivationFunctionPreviewNotes`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `KeyDerivationFunctionPreviewNotes`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 
