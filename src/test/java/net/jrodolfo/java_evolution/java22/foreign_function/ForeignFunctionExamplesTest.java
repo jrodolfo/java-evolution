@@ -10,9 +10,9 @@ import org.junit.jupiter.api.Test;
  * <p>
  * These tests use native symbols discovered through the platform linker's
  * default lookup. The examples call {@code atoi} and {@code strlen}, standard C
- * library functions commonly available on macOS and Linux. Windows behavior
- * depends on how the C runtime symbols are exposed and will be validated during
- * the Windows compatibility pass.
+ * library functions exposed by the validated macOS, Linux, and Windows
+ * environments used for this project. Symbol lookup is still platform and
+ * runtime dependent, which is one reason the examples stay intentionally small.
  * </p>
  */
 class ForeignFunctionExamplesTest {

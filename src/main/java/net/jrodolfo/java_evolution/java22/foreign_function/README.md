@@ -111,6 +111,38 @@ Java string
 
 That is enough to understand why the API matters without turning this repository into a native build project.
 
+## What The Tests Prove
+
+`ForeignFunctionExamplesTest` is intentionally small because the goal is to prove the native-call path, not to test the C standard library.
+
+`atoiParsesANumberFromNativeMemory` shows this flow:
+
+```text
+Java String "25"
+  -> native memory allocated by Arena
+  -> native atoi function
+  -> Java int result 25
+```
+
+The assertions check that the example linked `atoi`, copied the Java input into native memory, received the numeric value back, and represented the C `int` result as Java `Integer`.
+
+`strlenReturnsTheLengthOfANativeCString` shows a similar flow:
+
+```text
+Java String "java"
+  -> null-terminated native C string
+  -> native strlen function
+  -> Java long result 4
+```
+
+The assertions check that the example linked `strlen`, allocated a C-style string, received the native length, and represented the native size value as Java `Long`.
+
+These tests are useful because the risky part of the feature is the boundary crossing:
+
+```text
+Java value -> native representation -> native function -> Java value
+```
+
 ## Native Access
 
 The Foreign Function and Memory API includes restricted operations. This project runs tests with:
