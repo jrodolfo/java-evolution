@@ -38,11 +38,11 @@ Test: `SecurityManagerDisabledNotesTest`
 
 ## Virtual Thread Synchronization
 
-Virtual threads are most useful when blocking operations do not unnecessarily pin platform threads. Java 24 improved synchronization behavior so virtual threads blocked in synchronized code can avoid pinning platform threads.
+Virtual threads are most useful when blocking operations do not unnecessarily pin carrier platform threads. Java 24 improved synchronization behavior so virtual threads blocked in synchronized code can avoid pinning carrier threads in more cases.
 
 This matters for existing code because synchronized blocks are common in older libraries.
 
-Example: `VirtualThreadSynchronizationNotes`
+Explanatory module: [`virtual_thread_synchronization`](virtual_thread_synchronization/README.md)
 
 Test: `VirtualThreadSynchronizationNotesTest`
 
@@ -93,7 +93,7 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `VirtualThreadSynchronizationNotes`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 

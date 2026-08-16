@@ -215,7 +215,7 @@ Learning notes: [java24 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Stream Gatherers final | `StreamGatherersExamples` | `StreamGatherersExamplesTest` |
 | Class-File API final | [`ClassFileInspector`](../src/main/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspector.java) | [`ClassFileInspectorTest`](../src/test/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspectorTest.java) |
 | Security Manager disabled | `SecurityManagerDisabledNotes` | `SecurityManagerDisabledNotesTest` |
-| Virtual-thread synchronization | `VirtualThreadSynchronizationNotes` | `VirtualThreadSynchronizationNotesTest` |
+| Virtual-thread synchronization | [`VirtualThreadSynchronizationNotes`](../src/main/java/net/jrodolfo/java_evolution/java24/virtual_thread_synchronization/VirtualThreadSynchronizationNotes.java) | [`VirtualThreadSynchronizationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/virtual_thread_synchronization/VirtualThreadSynchronizationNotesTest.java) |
 | Quantum-resistant crypto | [`ModuleLatticeKemExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeKemExample.java), [`ModuleLatticeDsaExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeDsaExample.java) | [`ModuleLatticeCryptoExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeCryptoExamplesTest.java) |
 | AOT class loading | `AotClassLoadingNotes` | `AotClassLoadingNotesTest` |
 | KDF preview | `KeyDerivationFunctionPreviewNotes` | `KeyDerivationFunctionPreviewNotesTest` |
