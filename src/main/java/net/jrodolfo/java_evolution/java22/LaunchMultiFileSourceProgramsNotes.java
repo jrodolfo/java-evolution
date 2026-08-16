@@ -11,6 +11,13 @@ package net.jrodolfo.java_evolution.java22;
  * </p>
  *
  * <p>
+ * The important idea is that {@code Main.java} can refer to another source file
+ * next to it, such as {@code Greeting.java}, and the launcher can compile the
+ * small source tree for that run. This is different from this Maven project,
+ * where source files are compiled through the normal build lifecycle.
+ * </p>
+ *
+ * <p>
  * This repository keeps the feature as notes because testing launcher behavior
  * would require creating temporary source trees and spawning separate Java
  * processes.
@@ -34,6 +41,27 @@ public class LaunchMultiFileSourceProgramsNotes {
 	 */
 	public String exampleCommand() {
 		return "java Main.java";
+	}
+
+	/**
+	 * Shows the conceptual file layout for a multi-file source launch.
+	 *
+	 * @return sample source file layout
+	 */
+	public String exampleFileLayout() {
+		return """
+				Main.java
+				Greeting.java
+				""";
+	}
+
+	/**
+	 * Explains what changed from the single-source launcher mental model.
+	 *
+	 * @return a short explanation
+	 */
+	public String multiFileMeaning() {
+		return "Main.java can reference another source file such as Greeting.java without creating a Maven or Gradle project first";
 	}
 
 	/**

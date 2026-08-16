@@ -12,11 +12,19 @@ import java.util.stream.Gatherers;
  * problem into a terminal collector. Gatherers let streams model operations
  * such as fixed windows and running scans as part of the pipeline.
  * </p>
+ *
+ * <p>
+ * A gatherer is useful when each emitted output may depend on more than one
+ * input element, or on state accumulated while the stream is flowing. That is
+ * why windowing and scanning are good teaching examples.
+ * </p>
  */
 public class StreamGatherersExamples {
 
 	/**
-	 * Groups values into fixed-size windows.
+	 * Groups values into fixed-size windows. Windowing is an intermediate
+	 * operation because it changes how elements flow through the pipeline before
+	 * the final {@code toList()} terminal operation runs.
 	 *
 	 * @param values values to window
 	 * @param size window size
@@ -29,7 +37,8 @@ public class StreamGatherersExamples {
 	}
 
 	/**
-	 * Produces a running sum.
+	 * Produces a running sum. Scanning is stateful: each output depends on the
+	 * accumulated state from earlier input values.
 	 *
 	 * @param values values to scan
 	 * @return running sum after each value

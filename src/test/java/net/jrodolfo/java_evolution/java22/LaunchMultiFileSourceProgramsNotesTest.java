@@ -10,8 +10,23 @@ class LaunchMultiFileSourceProgramsNotesTest {
 
 	@Test
 	void notesExplainMultiFileSourceLauncher() {
-		assertThat(notes.purpose()).contains("source files").contains("build tool");
-		assertThat(notes.exampleCommand()).isEqualTo("java Main.java");
-		assertThat(notes.projectDecision()).contains("launcher behavior");
+		assertThat(notes.purpose())
+				.as("The note should explain the source-launcher convenience goal")
+				.contains("source files")
+				.contains("build tool");
+		assertThat(notes.exampleCommand())
+				.as("The launcher still starts from the main source file")
+				.isEqualTo("java Main.java");
+		assertThat(notes.exampleFileLayout())
+				.as("The note should show that the launched program can involve more than one source file")
+				.contains("Main.java")
+				.contains("Greeting.java");
+		assertThat(notes.multiFileMeaning())
+				.as("The note should explain that the extra source file is discovered without a build project")
+				.contains("Greeting.java")
+				.contains("Maven or Gradle");
+		assertThat(notes.projectDecision())
+				.as("The note should explain why the repository does not spawn a separate launcher process")
+				.contains("launcher behavior");
 	}
 }
