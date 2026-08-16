@@ -27,7 +27,7 @@ Compatibility concerns:
 Study these files:
 
 - `src/main/java/net/jrodolfo/java_evolution/java09/CollectionFactoryExamples.java`
-- `src/main/java/net/jrodolfo/java_evolution/java09/ModuleSystemNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java09/module_system/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java10/LocalVariableTypeInferenceExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java11/StringApiExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java11/FilesApiExamples.java`

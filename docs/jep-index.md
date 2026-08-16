@@ -24,7 +24,7 @@ Status labels:
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 261](https://openjdk.org/jeps/261) | Module System | Final, Notes |
+| [JEP 261](https://openjdk.org/jeps/261) | Module System | Final, Explanatory Module |
 | [JEP 269](https://openjdk.org/jeps/269) | Convenience Factory Methods for Collections | Final |
 | [JEP 102](https://openjdk.org/jeps/102) | Process API Updates | Final |
 | [JEP 259](https://openjdk.org/jeps/259) | Stack-Walking API | Final |

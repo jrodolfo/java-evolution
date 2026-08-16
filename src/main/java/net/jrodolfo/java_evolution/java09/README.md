@@ -92,13 +92,13 @@ The Java Platform Module System (JPMS) introduced `module-info.java`, `requires`
 
 This repository explains modules without converting the Spring Boot app into a modular application, because the learning examples are meant to stay independent.
 
-Example: `ModuleSystemNotes`
+Explanatory module: [`module_system`](module_system/README.md)
 
 Test: `ModuleSystemNotesTest`
 
 ## How To Read This Package
 
-Start with `CollectionFactoryExamples`, `OptionalEnhancementExamples`, and `StreamEnhancementExamples` to see the everyday API improvements. Then read `PrivateInterfaceMethodExamples`, `TryWithResourcesExamples`, `ProcessApiExamples`, `StackWalkerExamples`, and `ModuleSystemNotes`.
+Start with `CollectionFactoryExamples`, `OptionalEnhancementExamples`, and `StreamEnhancementExamples` to see the everyday API improvements. Then read `PrivateInterfaceMethodExamples`, `TryWithResourcesExamples`, `ProcessApiExamples`, `StackWalkerExamples`, and `module_system/README.md`.
 
 Run the focused tests:
 
@@ -108,7 +108,7 @@ mvn -Dtest=PrivateInterfaceMethodExamplesTest,TryWithResourcesExamplesTest test
 mvn -Dtest=ProcessApiExamplesTest,StackWalkerExamplesTest,ModuleSystemNotesTest test
 ```
 
-`ModuleSystemNotes` is notes-based because a real module demo is clearer as a multi-module project than as a small class inside this Spring Boot shell. After this package, continue with Java 10 for local variable type inference and collector refinements.
+`module_system/README.md` explains JPMS as an explanatory module because a real module demo is clearer as a multi-module project than as a small class inside this Spring Boot shell. After this package, continue with Java 10 for local variable type inference and collector refinements.
 
 ## References
 

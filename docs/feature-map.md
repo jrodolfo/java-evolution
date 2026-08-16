@@ -31,7 +31,7 @@ Learning notes: [java09 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Try-with-resources improvement | `TryWithResourcesExamples` | `TryWithResourcesExamplesTest` |
 | Process API | `ProcessApiExamples` | `ProcessApiExamplesTest` |
 | StackWalker | `StackWalkerExamples` | `StackWalkerExamplesTest` |
-| Module system | `ModuleSystemNotes` | `ModuleSystemNotesTest` |
+| Module system | [`ModuleSystemNotes`](../src/main/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemNotes.java) | [`ModuleSystemNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemNotesTest.java) |
 
 ## Java 10
 
