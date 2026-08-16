@@ -28,9 +28,9 @@ Executable test: `ClassFileInspectorTest`
 
 ## Security Manager Disabled
 
-The Security Manager was once used as an in-process sandbox, but that model became less effective and increasingly difficult to maintain.
+The Security Manager was once used as an in-process sandbox. It tried to restrict code running inside the same JVM with permission checks for actions such as file access, network access, and exiting the VM. Over time, that model became less effective and increasingly difficult to maintain.
 
-Java 24 permanently disabled it. The practical lesson is that application isolation should come from operating-system permissions, containers, deployment boundaries, and process-level controls instead.
+Java 24 permanently disabled it. The practical lesson is architectural rather than syntactic: application isolation should come from operating-system permissions, containers, deployment boundaries, and process-level controls instead.
 
 Example: `SecurityManagerDisabledNotes`
 

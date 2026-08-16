@@ -10,11 +10,22 @@ class SecurityManagerDisabledNotesTest {
 
 	@Test
 	void notesPointToDeploymentLevelIsolation() {
-		assertThat(notes.impact())
-				.as("The test should document that Security Manager is no longer an application sandbox")
+		String oldModel = notes.oldModel();
+		String impact = notes.impact();
+		String migrationAdvice = notes.migrationAdvice();
+
+		assertThat(oldModel)
+				.as("The old Security Manager model was an in-process JVM sandbox")
+				.contains("same JVM")
 				.contains("sandbox");
-		assertThat(notes.migrationAdvice())
+		assertThat(impact)
+				.as("Java 24 permanently disabled the Security Manager sandbox model")
+				.contains("permanently disabled")
+				.contains("sandbox");
+		assertThat(migrationAdvice)
 				.as("The note should point to modern isolation approaches")
+				.contains("operating system")
+				.contains("container")
 				.contains("deployment");
 	}
 }
