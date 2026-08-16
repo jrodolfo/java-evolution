@@ -143,6 +143,7 @@ Java 23:
 - `src/main/java/net/jrodolfo/java_evolution/java23/module_import_declarations/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java23/flexible_constructor_bodies/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java23/stream_gatherers/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java23/class_file_api/README.md`
 
 Run:
 

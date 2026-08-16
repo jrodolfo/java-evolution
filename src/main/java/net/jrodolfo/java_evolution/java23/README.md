@@ -72,7 +72,7 @@ Java 23 continued the standard Class-File API as a second preview. The API becam
 
 Continue with the Java 24 [`class_file`](../java24/class_file/README.md) module for the final executable example.
 
-Example: `ClassFileApiSecondPreviewNotes`
+Explanatory module: [`class_file_api`](class_file_api/README.md)
 
 Test: `ClassFileApiSecondPreviewNotesTest`
 
@@ -122,7 +122,7 @@ Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, `stream_gatherers/README.md`, and the preview/runtime notes for the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
+Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, `stream_gatherers/README.md`, `class_file_api/README.md`, and the preview/runtime notes for scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
 Run the focused notes tests:
 

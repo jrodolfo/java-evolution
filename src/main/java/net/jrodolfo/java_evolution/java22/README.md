@@ -58,7 +58,7 @@ Before the Class-File API, projects usually depended on third-party bytecode lib
 
 Java 22 introduced the Class-File API as a preview feature.
 
-Continue with `ClassFileApiSecondPreviewNotes` in Java 23 and the Java 24 [`class_file`](../java24/class_file/README.md) module.
+Continue with the Java 23 [`class_file_api`](../java23/class_file_api/README.md) module and the Java 24 [`class_file`](../java24/class_file/README.md) module.
 
 Explanatory module: [`class_file_api`](class_file_api/README.md)
 

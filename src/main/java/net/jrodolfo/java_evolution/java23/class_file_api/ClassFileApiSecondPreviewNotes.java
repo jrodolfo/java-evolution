@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java23;
+package net.jrodolfo.java_evolution.java23.class_file_api;
 
 /**
  * Explains the Class-File API as a Java 23 second preview feature.
@@ -17,8 +17,26 @@ public class ClassFileApiSecondPreviewNotes {
 	 *
 	 * @return a short explanation
 	 */
-	public String purpose() {
-		return "parse, generate, and transform Java class files with a standard API";
+	public String problemSolved() {
+		return "tools need a standard API to parse, generate, and transform Java class files";
+	}
+
+	/**
+	 * Explains why a JDK API is useful.
+	 *
+	 * @return a short explanation
+	 */
+	public String platformReason() {
+		return "a standard JDK model can evolve together with the Java class-file format";
+	}
+
+	/**
+	 * Explains the Java 22 connection.
+	 *
+	 * @return a short explanation
+	 */
+	public String java22Connection() {
+		return "Java 22 introduced the Class-File API as a first preview";
 	}
 
 	/**
