@@ -60,7 +60,7 @@ Java 22 introduced the Class-File API as a preview feature.
 
 Continue with `ClassFileApiSecondPreviewNotes` in Java 23 and the Java 24 [`class_file`](../java24/class_file/README.md) module.
 
-Example: `ClassFileApiPreviewNotes`
+Explanatory module: [`class_file_api`](class_file_api/README.md)
 
 Test: `ClassFileApiPreviewNotesTest`
 
@@ -114,7 +114,7 @@ Test: `StructuredConcurrencySecondPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read `stream_gatherers/README.md`, the notes for the Class-File API, constructor-body changes, `launch_multi_file_source_programs/README.md`, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
+Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read `stream_gatherers/README.md`, `class_file_api/README.md`, the notes for constructor-body changes, `launch_multi_file_source_programs/README.md`, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
 
 Run the focused tests:
 
