@@ -11,10 +11,16 @@ class ModuleImportDeclarationsNotesTest {
 	@Test
 	void notesShowFinalModuleImportDeclarationShape() {
 		assertThat(notes.purpose())
-				.as("Module imports should explain reduced import ceremony")
-				.contains("module");
+				.as("Module imports should explain reduced import ceremony across exported packages")
+				.contains("reduce import ceremony")
+				.contains("several packages");
+		assertThat(notes.semantics())
+				.as("Module imports should explain what becomes available")
+				.contains("public top-level classes and interfaces")
+				.contains("exported packages")
+				.contains("named module");
 		assertThat(notes.example())
 				.as("Module imports should show the source declaration shape")
-				.contains("import module");
+				.isEqualTo("import module java.base;");
 	}
 }

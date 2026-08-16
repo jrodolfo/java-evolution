@@ -26,7 +26,23 @@ Test: `FlexibleConstructorBodiesExamplesTest`
 
 ## Module Import Declarations Final
 
-Module import declarations let source code import public packages exported by a module with one declaration.
+Module import declarations let source code import public top-level classes and interfaces from packages exported by a named module with one declaration.
+
+Before this feature, code using common Java platform types often needed several individual imports:
+
+```java
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Stream;
+```
+
+With Java 25, a source file can use a module import declaration:
+
+```java
+import module java.base;
+```
+
+This makes public top-level types from packages exported by `java.base`, such as `java.util` and `java.util.stream`, available on demand.
 
 This is useful for learning, scripts, and code that naturally uses a broad module surface. The feature was previewed in Java 23 by JEP 476, previewed again in Java 24 by JEP 494, and finalized in Java 25 by JEP 511.
 
