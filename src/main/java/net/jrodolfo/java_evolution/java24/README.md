@@ -28,11 +28,9 @@ Executable test: `ClassFileInspectorTest`
 
 ## Security Manager Disabled
 
-The Security Manager was once used as an in-process sandbox. It tried to restrict code running inside the same JVM with permission checks for actions such as file access, network access, and exiting the VM. Over time, that model became less effective and increasingly difficult to maintain.
+The Security Manager was Java's old in-process sandboxing mechanism. Java 24 permanently disabled it, reinforcing that strong isolation belongs at operating-system, container, process, and deployment boundaries.
 
-Java 24 permanently disabled it. The practical lesson is architectural rather than syntactic: application isolation should come from operating-system permissions, containers, deployment boundaries, and process-level controls instead.
-
-Example: `SecurityManagerDisabledNotes`
+Explanatory module: [`security_manager_disabled`](security_manager_disabled/README.md)
 
 Test: `SecurityManagerDisabledNotesTest`
 
@@ -93,7 +91,7 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `key_derivation/README.md`, `flexible_constructor_bodies/README.md`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `security_manager_disabled/README.md`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `key_derivation/README.md`, `flexible_constructor_bodies/README.md`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 

@@ -157,7 +157,7 @@ Java 24:
 - `src/main/java/net/jrodolfo/java_evolution/java24/StreamGatherersExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java24/class_file/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java24/class_file/ClassFileInspector.java`
-- `src/main/java/net/jrodolfo/java_evolution/java24/SecurityManagerDisabledNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java24/security_manager_disabled/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeKemExample.java`
 - `src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeDsaExample.java`
