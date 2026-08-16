@@ -104,7 +104,7 @@ Some libraries historically used `sun.misc.Unsafe` for low-level memory access. 
 
 Java 23 deprecated memory-access methods in `sun.misc.Unsafe`, continuing the move toward supported APIs such as `VarHandle` and the Foreign Function and Memory API.
 
-Example: `UnsafeMemoryAccessDeprecationNotes`
+Explanatory module: [`unsafe_memory_access_deprecation`](unsafe_memory_access_deprecation/README.md)
 
 Test: `UnsafeMemoryAccessDeprecationNotesTest`
 
@@ -120,7 +120,7 @@ Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `MarkdownDocumentationCommentsNotes`, then read the preview and runtime notes for primitive patterns, module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, unsafe memory-access deprecation, and ZGC generational mode.
+Start with `MarkdownDocumentationCommentsNotes`, then read the preview and runtime notes for primitive patterns, module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and ZGC generational mode.
 
 Run the focused notes tests:
 
