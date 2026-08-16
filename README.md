@@ -136,8 +136,8 @@ The published JavaDoc site is available at https://jrodolfo.github.io/java-evolu
 
 - Examples are built and tested against the required JDK listed above.
 - Spring Boot is used as lightweight project tooling; the examples themselves are plain Java.
-- Some features are represented by `Notes` classes because they involve preview flags, incubator modules, native code, JVM flags, external tools, cryptography providers, source-launcher behavior, or runtime behavior.
-- `Notes` does not mean a Java feature is unfinished. Some final features are documented as notes because they are not a good fit for a tiny portable JUnit example.
+- Some features are represented by `Notes` classes or explanatory modules because they involve preview flags, incubator modules, native code, JVM flags, external tools, cryptography providers, source-launcher behavior, or runtime behavior.
+- `Notes` does not mean a Java feature is unfinished. Some final features are documented as notes or explanatory modules because they are not a good fit for a tiny portable JUnit example.
 - Documentation health is checked locally with `make docs-check`; navigation and links are also checked in GitHub Actions.
 - JavaDoc is generated locally with `make docs` and published through GitHub Pages.
 - GitHub Actions use the same Make targets where practical, so local commands and CI stay aligned.
@@ -157,7 +157,7 @@ Some older preview or incubator features changed before becoming final. In those
 - uses syntax compatible with the configured project JDK and explains the original preview status, or
 - uses a `Notes` class when the original feature requires preview flags, incubator modules, native code, JVM flags, external processes, or platform-specific setup.
 
-When a feature is final but represented by a notes class, the status tables say `final, notes-only`: final describes the Java feature, and notes-only describes how this repository documents it.
+When a feature is final but represented by a notes class or explanatory module, the status tables use labels such as `final, notes-only` or `final, explanatory module`: final describes the Java feature, and the second label describes how this repository documents it.
 
 ## Repository Structure
 

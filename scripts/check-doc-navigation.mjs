@@ -43,6 +43,39 @@ function walk(directory) {
 
 walk("src/test/java");
 
+function testClassesFromText(text) {
+  const classes = new Set();
+
+  for (const match of text.matchAll(/["']?-Dtest=([^"'\s]+)["']?\s+test/g)) {
+    for (const testClass of match[1].split(",")) {
+      classes.add(testClass);
+    }
+  }
+
+  return classes;
+}
+
+function makeDemosTargetText() {
+  const makefile = fs.readFileSync("Makefile", "utf8");
+  const lines = makefile.split("\n");
+  const start = lines.findIndex((line) => line === "demos: check-java-25");
+
+  if (start === -1) {
+    errors.push("Makefile is missing demos target");
+    return "";
+  }
+
+  const targetLines = [];
+  for (const line of lines.slice(start + 1)) {
+    if (/^[A-Za-z0-9_-]+:/.test(line)) {
+      break;
+    }
+    targetLines.push(line);
+  }
+
+  return targetLines.join("\n");
+}
+
 for (const version of versions) {
   const readme = path.join(root, version, "README.md");
   const packageInfo = path.join(root, version, "package-info.java");
@@ -74,12 +107,25 @@ for (const file of markdownFiles) {
     errors.push(`${file} contains wildcard notes test reference; prefer concrete test class names`);
   }
 
-  for (const match of text.matchAll(/["']?-Dtest=([^"'\s]+)["']?\s+test/g)) {
-    for (const testClass of match[1].split(",")) {
-      if (!testClasses.has(testClass)) {
-        errors.push(`${file} references missing test class ${testClass}`);
-      }
+  for (const testClass of testClassesFromText(text)) {
+    if (!testClasses.has(testClass)) {
+      errors.push(`${file} references missing test class ${testClass}`);
     }
+  }
+}
+
+const makeDemoTests = testClassesFromText(makeDemosTargetText());
+const practicalDemoTests = testClassesFromText(fs.readFileSync("docs/practical-demos.md", "utf8"));
+
+for (const testClass of makeDemoTests) {
+  if (!practicalDemoTests.has(testClass)) {
+    errors.push(`docs/practical-demos.md is missing make demos test class ${testClass}`);
+  }
+}
+
+for (const testClass of practicalDemoTests) {
+  if (!makeDemoTests.has(testClass)) {
+    errors.push(`docs/practical-demos.md lists ${testClass}, but make demos does not run it`);
   }
 }
 

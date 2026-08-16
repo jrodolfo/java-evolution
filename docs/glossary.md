@@ -29,7 +29,9 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | I/O | Input/Output | Reading from or writing to external resources such as files, sockets, HTTP services, or processes. |
 | ID | Identifier | A value that identifies something, such as a request ID in scoped-value examples. |
 | IDE | Integrated Development Environment | A developer tool useful for browsing Java packages, tests, and generated documentation. |
+| INET | Internet Protocol family | The protocol family used by Internet sockets in Java networking APIs. In this project, it appears when contrasting `StandardProtocolFamily.INET` with Unix-domain sockets. |
 | Incubator | Incubator Module or API | A non-final API delivered for experimentation before it is finalized, changed, or removed. |
+| IO | Input/Output | Reading from or writing to external resources. In compact source-file examples, `IO.println(...)` is a small console output helper available to simple source programs. |
 | JAR | Java Archive | A packaged Java artifact produced by build tools such as Maven. |
 | JavaDoc | Java Documentation | Documentation generated from Java source comments, usually browsed as HTML. |
 | JDK | Java Development Kit | The Java installation used to compile, test, document, and run this project. |
@@ -57,7 +59,9 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | RMI | Remote Method Invocation | A Java distributed-object technology mentioned as background when discussing native calls and remote procedure styles. |
 | RPC | Remote Procedure Call | A style of calling code across process or network boundaries; useful contrast for local native calls through FFM. |
 | SDKMAN | Software Development Kit Manager | A tool commonly used on Linux/macOS to install and switch between JDK versions. |
+| SE | Standard Edition | Java Standard Edition, the core Java platform specification for the language, JVM, and standard APIs. |
 | SHA-256 | Secure Hash Algorithm 256-bit | A cryptographic hash function used as the hash primitive in `HKDF-SHA256`. |
+| SIMD | Single Instruction, Multiple Data | A processor execution model where one operation applies to multiple data values at once; relevant to the Vector API notes. |
 | SPI | Service Provider Interface | An extension point that lets libraries or runtime components plug in implementations, such as the Java 18 `InetAddress` resolver SPI. |
 | SQL | Structured Query Language | A database query language often embedded in Java strings or text blocks. |
 | Spring Boot | Spring Boot | The lightweight application shell and Maven parent used by this project. |

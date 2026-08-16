@@ -6,7 +6,19 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
-- No unreleased changes.
+### Changed
+
+- Improved teaching clarity across Java 9 through Java 25 examples, notes, tests, and feature documentation.
+- Added explanatory learning modules for substantial notes-only topics such as the Java 9 module system, Java 15 hidden classes, and Java 16 Unix-domain socket channels.
+- Clarified practical demo documentation so it matches the focused `make demos` validation target.
+- Expanded glossary coverage for recurring Java platform acronyms and terms.
+
+### Validation
+
+- `make docs-audit`
+- `make docs-check`
+- `make demos`
+- `mvn -B clean test -q`
 
 ## v1.1.3
 
