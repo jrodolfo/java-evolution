@@ -84,7 +84,7 @@ The problem it solves is setup friction: small Java programs should not always r
 
 This repository keeps the topic as notes because testing launcher behavior would require spawning separate Java processes and temporary source trees.
 
-Example: `LaunchMultiFileSourceProgramsNotes`
+Explanatory module: [`launch_multi_file_source_programs`](launch_multi_file_source_programs/README.md)
 
 Test: `LaunchMultiFileSourceProgramsNotesTest`
 
@@ -114,7 +114,7 @@ Test: `StructuredConcurrencySecondPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read the notes for stream gatherers, Class-File API, constructor-body changes, source launching, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
+Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read the notes for stream gatherers, Class-File API, constructor-body changes, `launch_multi_file_source_programs/README.md`, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
 
 Run the focused tests:
 

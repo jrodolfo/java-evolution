@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java22;
+package net.jrodolfo.java_evolution.java22.launch_multi_file_source_programs;
 
 /**
  * Explains launching multi-file source-code programs, introduced in Java 22.
@@ -16,12 +16,6 @@ package net.jrodolfo.java_evolution.java22;
  * small source tree for that run. This is different from this Maven project,
  * where source files are compiled through the normal build lifecycle.
  * </p>
- *
- * <p>
- * This repository keeps the feature as notes because testing launcher behavior
- * would require creating temporary source trees and spawning separate Java
- * processes.
- * </p>
  */
 public class LaunchMultiFileSourceProgramsNotes {
 
@@ -32,6 +26,15 @@ public class LaunchMultiFileSourceProgramsNotes {
 	 */
 	public String purpose() {
 		return "run small Java programs from source files without setting up a build tool first";
+	}
+
+	/**
+	 * Explains the single-file launcher baseline.
+	 *
+	 * @return a short baseline explanation
+	 */
+	public String singleFileBaseline() {
+		return "the source launcher can start from one source file such as Main.java";
 	}
 
 	/**
@@ -62,6 +65,15 @@ public class LaunchMultiFileSourceProgramsNotes {
 	 */
 	public String multiFileMeaning() {
 		return "Main.java can reference another source file such as Greeting.java without creating a Maven or Gradle project first";
+	}
+
+	/**
+	 * Explains when a build tool becomes the better fit.
+	 *
+	 * @return a short build-tool boundary note
+	 */
+	public String buildToolBoundary() {
+		return "use Maven or Gradle when the program needs dependencies, packaging, or a repeatable build lifecycle";
 	}
 
 	/**
