@@ -12,6 +12,16 @@ class PemEncodingsPreviewNotesTest {
 	void notesExplainCryptographicTextEncodingSupport() {
 		assertThat(notes.purpose())
 				.as("PEM support should be documented as cryptographic text encoding support")
-				.contains("PEM");
+				.contains("Privacy-Enhanced Mail")
+				.contains("cryptographic objects");
+		assertThat(notes.formatShape())
+				.as("PEM notes should explain the recognizable BEGIN/END text envelope")
+				.contains("BEGIN")
+				.contains("END")
+				.contains("Base64");
+		assertThat(notes.status())
+				.as("PEM support should stay marked as preview in Java 25")
+				.contains("preview")
+				.contains("Java 25");
 	}
 }

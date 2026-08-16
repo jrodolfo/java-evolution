@@ -116,7 +116,17 @@ Test: `StableValuesPreviewNotesTest`
 
 ## PEM Encodings Preview
 
-PEM is a common text encoding for cryptographic material. Java 25 previewed APIs for reading and writing cryptographic objects using PEM encodings.
+PEM originally stood for Privacy-Enhanced Mail, but today it is widely used as a text transport format for cryptographic objects such as public keys, private keys, certificates, and certificate revocation lists.
+
+A PEM text has a recognizable envelope:
+
+```text
+-----BEGIN PUBLIC KEY-----
+Base64-encoded binary data
+-----END PUBLIC KEY-----
+```
+
+Before Java 25, applications often had to combine cryptographic object APIs, binary encodings, Base64 conversion, and careful text parsing themselves. Java 25 previewed APIs for reading and writing cryptographic objects using PEM encodings.
 
 Example: `PemEncodingsPreviewNotes`
 
