@@ -102,6 +102,18 @@ Executable test: `HkdfKeyDerivationExampleTest`
 
 Java 25 continued primitive patterns as a third preview. The long-term goal is a more uniform pattern-matching model where primitive values can participate naturally in `instanceof`, `switch`, and related pattern contexts.
 
+Before this work, Java pattern matching was most natural for reference types. Primitive values often required separate range checks, casts, or fallback branches.
+
+The preview explores syntax such as:
+
+```java
+if (value instanceof byte b) {
+    // b is available only when value can be converted to byte without loss
+}
+```
+
+That matters because primitive casts can silently lose information. A primitive pattern combines the safety check and the binding step.
+
 Example: `PrimitivePatternsThirdPreviewNotes`
 
 Test: `PrimitivePatternsThirdPreviewNotesTest`
