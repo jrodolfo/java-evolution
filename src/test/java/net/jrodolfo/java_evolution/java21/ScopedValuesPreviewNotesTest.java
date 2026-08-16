@@ -10,7 +10,11 @@ class ScopedValuesPreviewNotesTest {
 
 	@Test
 	void notesExplainScopedValuesPreviewStatus() {
-		assertThat(notes.purpose()).contains("immutable data");
-		assertThat(notes.previewStatus()).contains("Java 21");
+		assertThat(notes.purpose())
+				.as("The Java 21 notes should preserve the main scoped-values idea")
+				.contains("immutable data");
+		assertThat(notes.previewStatus())
+				.as("The notes should identify Java 21 as a preview release for scoped values")
+				.contains("Java 21");
 	}
 }

@@ -10,11 +10,28 @@ class PatternMatchingSwitchFourthPreviewExamplesTest {
 
 	@Test
 	void switchPatternsClassifyValues() {
-		// When / Then
-		assertThat(examples.classify(null)).isEqualTo("null");
-		assertThat(examples.classify("evolution")).isEqualTo("long string");
-		assertThat(examples.classify("java")).isEqualTo("short string: java");
-		assertThat(examples.classify(20)).isEqualTo("integer: 20");
-		assertThat(examples.classify(20L)).isEqualTo("unknown");
+		// When
+		String nullResult = examples.classify(null);
+		String guardedStringResult = examples.classify("evolution");
+		String stringPatternResult = examples.classify("java");
+		String integerPatternResult = examples.classify(20);
+		String fallbackResult = examples.classify(20L);
+
+		// Then
+		assertThat(nullResult)
+				.as("A pattern switch can handle null explicitly")
+				.isEqualTo("null");
+		assertThat(guardedStringResult)
+				.as("A guarded String pattern should run before the more general String pattern")
+				.isEqualTo("long string");
+		assertThat(stringPatternResult)
+				.as("A String pattern should bind the text when the guard does not match")
+				.isEqualTo("short string: java");
+		assertThat(integerPatternResult)
+				.as("An Integer pattern should bind the integer value")
+				.isEqualTo("integer: 20");
+		assertThat(fallbackResult)
+				.as("Values without a matching pattern should reach the default branch")
+				.isEqualTo("unknown");
 	}
 }

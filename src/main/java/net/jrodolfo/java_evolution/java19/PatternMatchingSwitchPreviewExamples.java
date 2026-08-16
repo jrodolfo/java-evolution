@@ -30,12 +30,25 @@ public class PatternMatchingSwitchPreviewExamples {
 		};
 	}
 
+	/**
+	 * Closed event hierarchy used to demonstrate exhaustive switch handling.
+	 */
 	public sealed interface Event permits Login, Logout {
 	}
 
+	/**
+	 * Event representing a user login.
+	 *
+	 * @param username the user name
+	 */
 	public record Login(String username) implements Event {
 	}
 
+	/**
+	 * Event representing a user logout.
+	 *
+	 * @param username the user name
+	 */
 	public record Logout(String username) implements Event {
 	}
 }

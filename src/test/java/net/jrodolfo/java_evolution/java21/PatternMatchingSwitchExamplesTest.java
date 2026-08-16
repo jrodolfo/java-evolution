@@ -10,8 +10,20 @@ class PatternMatchingSwitchExamplesTest {
 
 	@Test
 	void switchPatternsHandleSealedCommandsExhaustively() {
-		assertThat(examples.describe(new PatternMatchingSwitchExamples.Start("api"))).isEqualTo("start api");
-		assertThat(examples.describe(new PatternMatchingSwitchExamples.Stop("api"))).isEqualTo("stop api");
-		assertThat(examples.describe(new PatternMatchingSwitchExamples.Restart("api"))).isEqualTo("restart api");
+		// When
+		String startDescription = examples.describe(new PatternMatchingSwitchExamples.Start("api"));
+		String stopDescription = examples.describe(new PatternMatchingSwitchExamples.Stop("api"));
+		String restartDescription = examples.describe(new PatternMatchingSwitchExamples.Restart("api"));
+
+		// Then
+		assertThat(startDescription)
+				.as("The Start record pattern should bind the service name")
+				.isEqualTo("start api");
+		assertThat(stopDescription)
+				.as("The Stop record pattern should bind the service name")
+				.isEqualTo("stop api");
+		assertThat(restartDescription)
+				.as("The Restart record pattern should bind the service name")
+				.isEqualTo("restart api");
 	}
 }
