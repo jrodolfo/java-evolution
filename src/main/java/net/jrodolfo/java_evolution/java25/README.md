@@ -1,6 +1,6 @@
 # Java 25
 
-Java 25 finalizes several features that were previewed in earlier releases and continues newer platform work around diagnostics, startup, memory layout, garbage collection, cryptography, and vector computation.
+Java 25 finalizes several features, continues some preview and incubator work, and adds newer platform work around diagnostics, startup, memory layout, garbage collection, cryptography, and vector computation.
 
 Because this is the newest release in the repository, this package is careful about status. Some examples are runnable with JDK 25. Others are notes because they involve preview APIs, incubator modules, JVM options, cryptographic providers, source-launcher behavior, or runtime ergonomics.
 
@@ -114,6 +114,8 @@ if (value instanceof byte b) {
 
 That matters because primitive casts can silently lose information. A primitive pattern combines the safety check and the binding step.
 
+Because this is a preview feature, real code must be compiled and run with preview features enabled.
+
 Example: `PrimitivePatternsThirdPreviewNotes`
 
 Test: `PrimitivePatternsThirdPreviewNotesTest`
@@ -121,6 +123,8 @@ Test: `PrimitivePatternsThirdPreviewNotesTest`
 ## Stable Values Preview
 
 Stable values model data initialized at most once. This can help the JVM optimize values that are not known at object construction time but become stable later.
+
+Because this is a preview API, the repository keeps the runnable project simple and explains the feature in a dedicated notes module instead of requiring preview-source examples in the main build.
 
 Explanatory module: [`stable_values`](stable_values/README.md)
 
@@ -140,6 +144,8 @@ Base64-encoded binary data
 
 Before Java 25, applications often had to combine cryptographic object APIs, binary encodings, Base64 conversion, and careful text parsing themselves. Java 25 previewed APIs for reading and writing cryptographic objects using PEM encodings.
 
+Because this is a preview API, the example stays notes-based and focuses on the format and problem being standardized.
+
 Example: `PemEncodingsPreviewNotes`
 
 Test: `PemEncodingsPreviewNotesTest`
@@ -147,6 +153,8 @@ Test: `PemEncodingsPreviewNotesTest`
 ## Structured Concurrency Fifth Preview
 
 Structured concurrency continued as a fifth preview in Java 25. It keeps the focus on treating related concurrent subtasks as one observable unit of work.
+
+Because this is still a preview API, the repository explains the model and lifecycle without turning the main build into a preview API exercise.
 
 Explanatory module: [`structured_concurrency`](structured_concurrency/README.md)
 
@@ -156,7 +164,7 @@ Test: `StructuredConcurrencyFifthPreviewNotesTest`
 
 The Vector API continued as a tenth incubator. It is intended for computations that can benefit from CPU vector instructions.
 
-This repository keeps it as notes because the API requires an incubator module and is still evolving.
+This repository keeps it as notes because the API requires the `jdk.incubator.vector` module and is still evolving.
 
 Example: `VectorApiTenthIncubatorNotes`
 
@@ -166,10 +174,10 @@ Test: `VectorApiTenthIncubatorNotesTest`
 
 Java 25 also includes several features that are better understood as runtime or operational improvements:
 
-- ahead-of-time command-line ergonomics and method profiling
-- Java Flight Recorder enhancements
-- compact object headers
-- Generational Shenandoah
+- ahead-of-time command-line ergonomics and method profiling: `AotCommandLineErgonomicsNotes`
+- Java Flight Recorder enhancements: `JfrEnhancementsNotes`
+- compact object headers: `CompactObjectHeadersNotes`
+- Generational Shenandoah: `GenerationalShenandoahNotes`
 
 These are important, but they are not ideal for tiny deterministic unit tests, so the repository documents them as notes.
 
