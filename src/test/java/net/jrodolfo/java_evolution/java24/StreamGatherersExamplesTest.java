@@ -14,10 +14,12 @@ class StreamGatherersExamplesTest {
 	void windowFixedCreatesFixedSizeWindows() {
 		// When
 		List<Integer> inputValues = List.of(1, 2, 3, 4, 5);
-		List<List<Integer>> windows = examples.fixedWindows(inputValues, 2);
+		int windowSize = 2;
+
+		List<List<Integer>> fixedSizeWindows = examples.fixedWindows(inputValues, windowSize);
 
 		// Then
-		assertThat(windows)
+		assertThat(fixedSizeWindows)
 				.as("windowFixed should create intermediate stream windows, keeping a smaller final window")
 				.containsExactly(List.of(1, 2), List.of(3, 4), List.of(5));
 	}

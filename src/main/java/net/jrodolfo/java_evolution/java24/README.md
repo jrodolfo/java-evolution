@@ -10,7 +10,15 @@ Streams are expressive, but custom intermediate operations were historically dif
 
 Java 24 finalized Stream Gatherers, which allow custom intermediate stream operations. This matters for operations that do not fit cleanly into one-element transformations such as `map`, one-element checks such as `filter`, or final aggregation with `collect`.
 
-For example, a fixed window operation needs to look at several input elements before emitting one output element. A scan operation needs to remember accumulated state while the stream is still flowing. Gatherers let those patterns remain inside the stream pipeline. The JDK includes useful gatherers such as fixed-size windows and scans.
+An intermediate operation is a stream step that sits between the source and the terminal operation:
+
+```text
+source -> intermediate operations -> terminal operation
+```
+
+Before gatherers, code that needed state while the stream was still flowing often had to leave the pipeline or force the problem into a final `collect(...)`. For example, a fixed window operation needs to look at several input elements before emitting one output element. A scan operation needs to remember accumulated state while the stream is still flowing.
+
+Gatherers let those patterns stay inside the pipeline with `stream.gather(...)`. The JDK includes useful gatherers such as fixed-size windows and scans.
 
 Example: `StreamGatherersExamples`
 
