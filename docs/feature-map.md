@@ -195,7 +195,7 @@ Learning notes: [java23 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 | Feature | Example | Test |
 |---|---|---|
-| Markdown documentation comments | `MarkdownDocumentationCommentsNotes` | `MarkdownDocumentationCommentsNotesTest` |
+| Markdown documentation comments | [`MarkdownDocumentationCommentsNotes`](../src/main/java/net/jrodolfo/java_evolution/java23/markdown_documentation_comments/MarkdownDocumentationCommentsNotes.java) | [`MarkdownDocumentationCommentsNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java23/markdown_documentation_comments/MarkdownDocumentationCommentsNotesTest.java) |
 | Primitive patterns preview | `PrimitivePatternsPreviewNotes` | `PrimitivePatternsPreviewNotesTest` |
 | Module import declarations preview | `ModuleImportDeclarationsPreviewNotes` | `ModuleImportDeclarationsPreviewNotesTest` |
 | Flexible constructor bodies second preview | `FlexibleConstructorBodiesSecondPreviewNotes` | `FlexibleConstructorBodiesSecondPreviewNotesTest` |

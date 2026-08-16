@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java23;
+package net.jrodolfo.java_evolution.java23.markdown_documentation_comments;
 
 /**
  * Explains Markdown documentation comments, introduced in Java 23.
@@ -7,7 +7,7 @@ package net.jrodolfo.java_evolution.java23;
  * Traditional JavaDoc comments often use HTML for structure such as lists and
  * code blocks. Java 23 allows API documentation comments to be written in
  * Markdown, giving developers a lighter alternative that is easier to read in
- * source code.
+ * source code while still producing generated API documentation.
  * </p>
  */
 public class MarkdownDocumentationCommentsNotes {
@@ -17,8 +17,8 @@ public class MarkdownDocumentationCommentsNotes {
 	 *
 	 * @return a short before explanation
 	 */
-	public String before() {
-		return "traditional JavaDoc comments often used HTML tags for lists, tables, and code blocks";
+	public String olderStyle() {
+		return "traditional JavaDoc comments often used HTML tags for lists, paragraphs, and code blocks";
 	}
 
 	/**
@@ -26,8 +26,8 @@ public class MarkdownDocumentationCommentsNotes {
 	 *
 	 * @return a short explanation
 	 */
-	public String purpose() {
-		return "write Java API documentation comments with Markdown instead of mostly HTML";
+	public String problemSolved() {
+		return "HTML-heavy documentation comments can be noisy to read and maintain in source code";
 	}
 
 	/**
@@ -35,17 +35,17 @@ public class MarkdownDocumentationCommentsNotes {
 	 *
 	 * @return a short after explanation
 	 */
-	public String after() {
-		return "Java 23 lets documentation comments use Markdown for lighter source documentation";
+	public String whatJavaIntroduced() {
+		return "Java 23 lets API documentation comments use Markdown for lists, links, and code fences";
 	}
 
 	/**
-	 * Names the practical source-code benefit.
+	 * Explains what kind of feature this is.
 	 *
-	 * @return a short benefit
+	 * @return a short classification
 	 */
-	public String benefit() {
-		return "documentation becomes easier to read in source code";
+	public String featureKind() {
+		return "Markdown documentation comments are a source documentation and JavaDoc tooling feature";
 	}
 
 	/**

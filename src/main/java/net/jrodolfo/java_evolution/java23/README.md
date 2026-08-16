@@ -12,7 +12,7 @@ Java 23 introduced Markdown documentation comments so API docs can be written in
 
 The mental model is simple: source comments can move from HTML-heavy shapes such as `<ul>` and `<pre>` toward Markdown lists and code fences, while JavaDoc tooling still produces the generated API documentation.
 
-Example: `MarkdownDocumentationCommentsNotes`
+Explanatory module: [`markdown_documentation_comments`](markdown_documentation_comments/README.md)
 
 Test: `MarkdownDocumentationCommentsNotesTest`
 
@@ -122,7 +122,7 @@ Test: `ZgcGenerationalModeNotesTest`
 
 ## How To Read This Package
 
-Start with `MarkdownDocumentationCommentsNotes`, then read the preview and runtime notes for primitive patterns, module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
+Start with `markdown_documentation_comments/README.md`, then read the preview and runtime notes for primitive patterns, module imports, flexible constructor bodies, stream gatherers, the Class-File API, scoped values, structured concurrency, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
 Run the focused notes tests:
 
