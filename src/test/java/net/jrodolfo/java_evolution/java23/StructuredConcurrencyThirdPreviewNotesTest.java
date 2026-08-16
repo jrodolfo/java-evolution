@@ -10,11 +10,22 @@ class StructuredConcurrencyThirdPreviewNotesTest {
 
 	@Test
 	void notesKeepStructuredConcurrencyMarkedAsEvolving() {
-		assertThat(notes.purpose())
+		String purpose = notes.purpose();
+		String status = notes.status();
+		String nextStep = notes.nextStep();
+
+		assertThat(purpose)
 				.as("Structured concurrency should explain grouping related tasks")
-				.contains("tasks");
-		assertThat(notes.status())
+				.contains("concurrent subtasks")
+				.contains("unit of work");
+		assertThat(status)
 				.as("Structured concurrency should remain marked as preview in this release range")
+				.contains("third preview in Java 23")
 				.contains("fifth preview");
+		assertThat(nextStep)
+				.as("The bridge note should point learners to the Java 25 preview module")
+				.contains("Java 25")
+				.contains("structured_concurrency")
+				.contains("still preview");
 	}
 }

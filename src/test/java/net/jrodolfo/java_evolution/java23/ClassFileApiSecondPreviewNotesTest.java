@@ -10,11 +10,20 @@ class ClassFileApiSecondPreviewNotesTest {
 
 	@Test
 	void notesIdentifyClassFileToolingAsTheProblemSpace() {
-		assertThat(notes.purpose())
+		String purpose = notes.purpose();
+		String status = notes.status();
+		String nextStep = notes.nextStep();
+
+		assertThat(purpose)
 				.as("The Class-File API note should identify bytecode/class-file tooling as the problem space")
 				.contains("class files");
-		assertThat(notes.status())
-				.as("The feature should be documented as preview before becoming final")
-				.contains("preview");
+		assertThat(status)
+				.as("The Java 23 note should document the second preview before Java 24 finalization")
+				.contains("second preview in Java 23")
+				.contains("final in Java 24");
+		assertThat(nextStep)
+				.as("The bridge note should point learners to the final Java 24 executable module")
+				.contains("Java 24")
+				.contains("class_file");
 	}
 }

@@ -22,6 +22,15 @@ public class ClassFileApiSecondPreviewNotes {
 	}
 
 	/**
+	 * Points learners to the final Java 24 example.
+	 *
+	 * @return a short next-step note
+	 */
+	public String nextStep() {
+		return "read the Java 24 class_file module for the final executable Class-File API example";
+	}
+
+	/**
 	 * Describes the feature status across releases.
 	 *
 	 * @return a short status note

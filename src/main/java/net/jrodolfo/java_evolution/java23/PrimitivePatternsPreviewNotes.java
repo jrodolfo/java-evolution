@@ -23,6 +23,15 @@ public class PrimitivePatternsPreviewNotes {
 	}
 
 	/**
+	 * Points learners to the next preview in this repository.
+	 *
+	 * @return a short next-step note
+	 */
+	public String nextStep() {
+		return "read PrimitivePatternsSecondPreviewNotes in Java 24 and PrimitivePatternsThirdPreviewNotes in Java 25 because this feature is still preview";
+	}
+
+	/**
 	 * Describes the preview status in this repository's version range.
 	 *
 	 * @return a short status note

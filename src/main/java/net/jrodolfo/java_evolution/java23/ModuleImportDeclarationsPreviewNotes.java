@@ -22,6 +22,15 @@ public class ModuleImportDeclarationsPreviewNotes {
 	}
 
 	/**
+	 * Points learners to the final Java 25 notes.
+	 *
+	 * @return a short next-step note
+	 */
+	public String nextStep() {
+		return "read ModuleImportDeclarationsNotes in Java 25 for the final feature explanation";
+	}
+
+	/**
 	 * Describes the feature status across releases.
 	 *
 	 * @return a short status note

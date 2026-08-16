@@ -22,6 +22,15 @@ public class StructuredConcurrencyThirdPreviewNotes {
 	}
 
 	/**
+	 * Points learners to the next preview module.
+	 *
+	 * @return a short next-step note
+	 */
+	public String nextStep() {
+		return "read the Java 25 structured_concurrency module because this feature is still preview";
+	}
+
+	/**
 	 * Describes the feature status across releases.
 	 *
 	 * @return a short status note

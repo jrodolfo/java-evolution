@@ -10,11 +10,20 @@ class StreamGatherersSecondPreviewNotesTest {
 
 	@Test
 	void notesKeepStreamGatherersAsPreviewBeforeJava24Finalization() {
-		assertThat(notes.purpose())
+		String purpose = notes.purpose();
+		String status = notes.status();
+		String nextStep = notes.nextStep();
+
+		assertThat(purpose)
 				.as("Stream gatherers should explain custom stream transformations")
-				.contains("stream");
-		assertThat(notes.status())
+				.contains("custom intermediate stream operations");
+		assertThat(status)
 				.as("Gatherers should be documented as a Java 23 preview, not a final Java 23 API")
+				.contains("second preview in Java 23")
 				.contains("final in Java 24");
+		assertThat(nextStep)
+				.as("The bridge note should point learners to the final Java 24 runnable example")
+				.contains("StreamGatherersExamples")
+				.contains("Java 24");
 	}
 }

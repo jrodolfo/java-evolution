@@ -23,6 +23,15 @@ public class FlexibleConstructorBodiesSecondPreviewNotes {
 	}
 
 	/**
+	 * Points learners to the final Java 25 example.
+	 *
+	 * @return a short next-step note
+	 */
+	public String nextStep() {
+		return "read FlexibleConstructorBodiesExamples in Java 25 for the final runnable example";
+	}
+
+	/**
 	 * Describes the feature status across releases.
 	 *
 	 * @return a short status note

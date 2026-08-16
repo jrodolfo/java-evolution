@@ -20,6 +20,8 @@ Pattern matching had been growing around reference types: `instanceof`, record p
 
 Java 23 previewed primitive types in patterns, `instanceof`, and `switch`, moving Java toward a more uniform pattern-matching model.
 
+This feature continued as a second preview in Java 24 and a third preview in Java 25.
+
 Example: `PrimitivePatternsPreviewNotes`
 
 Test: `PrimitivePatternsPreviewNotesTest`
@@ -29,6 +31,8 @@ Test: `PrimitivePatternsPreviewNotesTest`
 Java has package imports, but a large API often spans many packages. After Java 9 introduced modules, it became natural to ask whether code could import from a module boundary instead of importing packages one by one.
 
 Java 23 previewed module import declarations. The feature became final in Java 25.
+
+Continue with `ModuleImportDeclarationsSecondPreviewNotes` in Java 24 and `ModuleImportDeclarationsNotes` in Java 25.
 
 Example: `ModuleImportDeclarationsPreviewNotes`
 
@@ -40,6 +44,8 @@ Before this feature line, explicit constructor invocation had to appear first. T
 
 Java 23 refined flexible constructor bodies in a second preview. The goal is safer and clearer constructor code while still preventing use of the object before it is initialized.
 
+Continue with `FlexibleConstructorBodiesThirdPreviewNotes` in Java 24 and `FlexibleConstructorBodiesExamples` in Java 25.
+
 Example: `FlexibleConstructorBodiesSecondPreviewNotes`
 
 Test: `FlexibleConstructorBodiesSecondPreviewNotesTest`
@@ -49,6 +55,8 @@ Test: `FlexibleConstructorBodiesSecondPreviewNotesTest`
 Streams had many built-in operations, but custom intermediate operations were hard to express.
 
 Java 23 continued Stream Gatherers as a second preview. Gatherers became final in Java 24.
+
+Continue with `StreamGatherersExamples` in Java 24 for the final runnable example.
 
 Example: `StreamGatherersSecondPreviewNotes`
 
@@ -60,6 +68,8 @@ Bytecode tools need to read, generate, and transform `.class` files. Before the 
 
 Java 23 continued the standard Class-File API as a second preview. The API became final in Java 24.
 
+Continue with the Java 24 [`class_file`](../java24/class_file/README.md) module for the final executable example.
+
 Example: `ClassFileApiSecondPreviewNotes`
 
 Test: `ClassFileApiSecondPreviewNotesTest`
@@ -70,6 +80,8 @@ Scoped values provide immutable context within a bounded execution scope, addres
 
 Java 23 kept scoped values in preview. The feature became final in Java 25.
 
+Continue with the Java 25 [`scoped_values`](../java25/scoped_values/README.md) module for the final learning example.
+
 Example: `ScopedValuesThirdPreviewNotes`
 
 Test: `ScopedValuesThirdPreviewNotesTest`
@@ -79,6 +91,8 @@ Test: `ScopedValuesThirdPreviewNotesTest`
 Structured concurrency treats related concurrent subtasks as one unit of work, making cancellation and failure handling easier to reason about.
 
 Java 23 continued this feature as a third preview.
+
+Continue with the Java 25 [`structured_concurrency`](../java25/structured_concurrency/README.md) module because this feature is still preview there.
 
 Example: `StructuredConcurrencyThirdPreviewNotes`
 
