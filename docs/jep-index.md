@@ -196,6 +196,8 @@ Status labels:
 | [JEP 505](https://openjdk.org/jeps/505) | Structured Concurrency | Preview, Notes |
 | [JEP 508](https://openjdk.org/jeps/508) | Vector API | Incubator, Notes |
 | [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | Runtime, Notes |
+| [JEP 509](https://openjdk.org/jeps/509) | JFR CPU-Time Profiling | Runtime, Experimental, Notes |
 | [JEP 518](https://openjdk.org/jeps/518) | JFR Cooperative Sampling | Runtime, Notes |
+| [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | Runtime, Notes |
 | [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Runtime, Notes |
 | [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Runtime, Notes |

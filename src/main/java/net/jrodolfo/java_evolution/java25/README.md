@@ -177,7 +177,7 @@ Test: `VectorApiTenthIncubatorNotesTest`
 Java 25 also includes several features that are better understood as runtime or operational improvements:
 
 - ahead-of-time command-line ergonomics: [`aot_command_line`](aot_command_line/README.md)
-- Java Flight Recorder enhancements: `JfrEnhancementsNotes`
+- Java Flight Recorder enhancements: [`jfr_enhancements`](jfr_enhancements/README.md)
 - compact object headers: `CompactObjectHeadersNotes`
 - Generational Shenandoah: `GenerationalShenandoahNotes`
 
@@ -214,6 +214,8 @@ Java 25 is the final package in this repository. After reading it, use `docs/lea
 - [JEP 505: Structured Concurrency](https://openjdk.org/jeps/505)
 - [JEP 508: Vector API](https://openjdk.org/jeps/508)
 - [JEP 514: Ahead-of-Time Command-Line Ergonomics](https://openjdk.org/jeps/514)
+- [JEP 509: JFR CPU-Time Profiling](https://openjdk.org/jeps/509)
 - [JEP 518: JFR Cooperative Sampling](https://openjdk.org/jeps/518)
+- [JEP 520: JFR Method Timing & Tracing](https://openjdk.org/jeps/520)
 - [JEP 519: Compact Object Headers](https://openjdk.org/jeps/519)
 - [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)
