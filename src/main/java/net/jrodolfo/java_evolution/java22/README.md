@@ -42,11 +42,11 @@ For example, operations such as windowing, scanning, batching, or stateful trans
 
 Stream Gatherers address this by allowing custom intermediate stream operations.
 
-This repository keeps Java 22 gatherers as notes because the API was preview and later became final in Java 24.
+This repository keeps Java 22 gatherers as an explanatory module because the API was preview and later became final in Java 24.
 
 Continue with `StreamGatherersSecondPreviewNotes` in Java 23 and `StreamGatherersExamples` in Java 24.
 
-Example: `StreamGatherersPreviewNotes`
+Explanatory module: [`stream_gatherers`](stream_gatherers/README.md)
 
 Test: `StreamGatherersPreviewNotesTest`
 
@@ -114,7 +114,7 @@ Test: `StructuredConcurrencySecondPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read the notes for stream gatherers, Class-File API, constructor-body changes, `launch_multi_file_source_programs/README.md`, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
+Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read `stream_gatherers/README.md`, the notes for the Class-File API, constructor-body changes, `launch_multi_file_source_programs/README.md`, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
 
 Run the focused tests:
 
