@@ -217,7 +217,7 @@ Learning notes: [java24 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Security Manager disabled | `SecurityManagerDisabledNotes` | `SecurityManagerDisabledNotesTest` |
 | Virtual-thread synchronization | [`VirtualThreadSynchronizationNotes`](../src/main/java/net/jrodolfo/java_evolution/java24/virtual_thread_synchronization/VirtualThreadSynchronizationNotes.java) | [`VirtualThreadSynchronizationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/virtual_thread_synchronization/VirtualThreadSynchronizationNotesTest.java) |
 | Quantum-resistant crypto | [`ModuleLatticeKemExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeKemExample.java), [`ModuleLatticeDsaExample`](../src/main/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeDsaExample.java) | [`ModuleLatticeCryptoExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/quantum_resistant_crypto/ModuleLatticeCryptoExamplesTest.java) |
-| AOT class loading | `AotClassLoadingNotes` | `AotClassLoadingNotesTest` |
+| AOT class loading | [`AotClassLoadingNotes`](../src/main/java/net/jrodolfo/java_evolution/java24/aot_class_loading/AotClassLoadingNotes.java) | [`AotClassLoadingNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java24/aot_class_loading/AotClassLoadingNotesTest.java) |
 | KDF preview | `KeyDerivationFunctionPreviewNotes` | `KeyDerivationFunctionPreviewNotesTest` |
 | Flexible constructor bodies third preview | `FlexibleConstructorBodiesThirdPreviewNotes` | `FlexibleConstructorBodiesThirdPreviewNotesTest` |
 | Module import declarations second preview | `ModuleImportDeclarationsSecondPreviewNotes` | `ModuleImportDeclarationsSecondPreviewNotesTest` |

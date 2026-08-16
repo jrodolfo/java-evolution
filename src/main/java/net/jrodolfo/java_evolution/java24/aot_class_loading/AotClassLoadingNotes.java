@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java24;
+package net.jrodolfo.java_evolution.java24.aot_class_loading;
 
 /**
  * Explains ahead-of-time class loading and linking, introduced in Java 24.
@@ -25,6 +25,24 @@ public class AotClassLoadingNotes {
 	 */
 	public String purpose() {
 		return "improve startup by loading and linking classes ahead of application execution";
+	}
+
+	/**
+	 * Explains class loading in learner-friendly terms.
+	 *
+	 * @return a short class-loading explanation
+	 */
+	public String classLoading() {
+		return "class loading finds class data and brings it into the JVM";
+	}
+
+	/**
+	 * Explains class linking in learner-friendly terms.
+	 *
+	 * @return a short class-linking explanation
+	 */
+	public String classLinking() {
+		return "class linking prepares a loaded class so the JVM can use it safely";
 	}
 
 	/**

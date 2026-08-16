@@ -65,7 +65,7 @@ Java startup can be affected by class loading and linking work. Java 24 introduc
 
 This is an operational/runtime feature, so it is documented as notes.
 
-Example: `AotClassLoadingNotes`
+Explanatory module: [`aot_class_loading`](aot_class_loading/README.md)
 
 Test: `AotClassLoadingNotesTest`
 
@@ -93,7 +93,7 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `AotClassLoadingNotes`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `KeyDerivationFunctionPreviewNotes`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 
