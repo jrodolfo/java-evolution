@@ -200,4 +200,4 @@ Status labels:
 | [JEP 518](https://openjdk.org/jeps/518) | JFR Cooperative Sampling | Runtime, Notes |
 | [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | Runtime, Notes |
 | [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Runtime, Notes |
-| [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Runtime, Notes |
+| [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Runtime, Explanatory Module |
