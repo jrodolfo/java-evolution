@@ -26,6 +26,15 @@ public class StructuredConcurrencySecondPreviewNotes {
 	}
 
 	/**
+	 * Points learners to the later Java 25 preview module.
+	 *
+	 * @return a short next-step note
+	 */
+	public String nextStep() {
+		return "read the Java 25 structured_concurrency module because this feature is still preview";
+	}
+
+	/**
 	 * Describes the Java 22 maturity level.
 	 *
 	 * @return a short status note

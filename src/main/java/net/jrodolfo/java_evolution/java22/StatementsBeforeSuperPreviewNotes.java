@@ -36,6 +36,15 @@ public class StatementsBeforeSuperPreviewNotes {
 	}
 
 	/**
+	 * Points learners to the final Java 25 example.
+	 *
+	 * @return a short next-step note
+	 */
+	public String nextStep() {
+		return "read FlexibleConstructorBodiesExamples in Java 25 for the final constructor feature";
+	}
+
+	/**
 	 * Explains why this package uses notes.
 	 *
 	 * @return the project decision

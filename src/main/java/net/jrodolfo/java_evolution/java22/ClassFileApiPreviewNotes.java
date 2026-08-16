@@ -35,6 +35,15 @@ public class ClassFileApiPreviewNotes {
 	}
 
 	/**
+	 * Points learners to the final Java 24 module.
+	 *
+	 * @return a short next-step note
+	 */
+	public String nextStep() {
+		return "read the Java 24 class_file module for the final executable Class-File API example";
+	}
+
+	/**
 	 * Explains why this package keeps the feature as notes.
 	 *
 	 * @return the project decision

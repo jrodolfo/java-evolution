@@ -26,6 +26,15 @@ public class ScopedValuesSecondPreviewNotes {
 	}
 
 	/**
+	 * Points learners to the final Java 25 module.
+	 *
+	 * @return a short next-step note
+	 */
+	public String nextStep() {
+		return "read the Java 25 scoped_values module for the final runnable learning example";
+	}
+
+	/**
 	 * Describes the Java 22 maturity level.
 	 *
 	 * @return a short status note

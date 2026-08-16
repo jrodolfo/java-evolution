@@ -44,6 +44,8 @@ Stream Gatherers address this by allowing custom intermediate stream operations.
 
 This repository keeps Java 22 gatherers as notes because the API was preview and later became final in Java 24.
 
+Continue with `StreamGatherersSecondPreviewNotes` in Java 23 and `StreamGatherersExamples` in Java 24.
+
 Example: `StreamGatherersPreviewNotes`
 
 Test: `StreamGatherersPreviewNotesTest`
@@ -56,6 +58,8 @@ Before the Class-File API, projects usually depended on third-party bytecode lib
 
 Java 22 introduced the Class-File API as a preview feature.
 
+Continue with `ClassFileApiSecondPreviewNotes` in Java 23 and the Java 24 [`class_file`](../java24/class_file/README.md) module.
+
 Example: `ClassFileApiPreviewNotes`
 
 Test: `ClassFileApiPreviewNotesTest`
@@ -65,6 +69,8 @@ Test: `ClassFileApiPreviewNotesTest`
 Before this feature, an explicit `super(...)` or `this(...)` call had to be the first statement in a constructor. That made it awkward to validate or prepare constructor arguments before passing them to the superclass constructor.
 
 Java 22 previewed statements before `super(...)`, under strict safety rules. The constructor still cannot use the object being created before the superclass is initialized.
+
+Continue with `FlexibleConstructorBodiesSecondPreviewNotes` in Java 23 and `FlexibleConstructorBodiesExamples` in Java 25.
 
 Example: `StatementsBeforeSuperPreviewNotes`
 
@@ -88,6 +94,8 @@ Scoped values continued in preview in Java 22.
 
 The problem remains the same as Java 21: immutable contextual data should be passed through a bounded execution scope without the cleanup and mutability hazards of many `ThreadLocal` designs.
 
+Continue with `ScopedValuesThirdPreviewNotes` in Java 23 and the Java 25 [`scoped_values`](../java25/scoped_values/README.md) module.
+
 Example: `ScopedValuesSecondPreviewNotes`
 
 Test: `ScopedValuesSecondPreviewNotesTest`
@@ -97,6 +105,8 @@ Test: `ScopedValuesSecondPreviewNotesTest`
 Structured concurrency also continued in preview in Java 22.
 
 The goal is to make related concurrent subtasks easier to manage as one parent operation, with clearer joining, failure, cancellation, and observability boundaries.
+
+Continue with `StructuredConcurrencyThirdPreviewNotes` in Java 23 and the Java 25 [`structured_concurrency`](../java25/structured_concurrency/README.md) module.
 
 Example: `StructuredConcurrencySecondPreviewNotes`
 
