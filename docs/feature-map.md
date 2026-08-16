@@ -241,7 +241,7 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | PEM encodings preview | `PemEncodingsPreviewNotes` | `PemEncodingsPreviewNotesTest` |
 | Structured concurrency fifth preview | [`StructuredConcurrencyFifthPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/structured_concurrency/StructuredConcurrencyFifthPreviewNotes.java) | [`StructuredConcurrencyFifthPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/structured_concurrency/StructuredConcurrencyFifthPreviewNotesTest.java) |
 | Vector API tenth incubator | [`VectorApiTenthIncubatorNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/vector_api/VectorApiTenthIncubatorNotes.java) | [`VectorApiTenthIncubatorNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/vector_api/VectorApiTenthIncubatorNotesTest.java) |
-| AOT command-line ergonomics | `AotCommandLineErgonomicsNotes` | `AotCommandLineErgonomicsNotesTest` |
+| AOT command-line ergonomics | [`AotCommandLineErgonomicsNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/aot_command_line/AotCommandLineErgonomicsNotes.java) | [`AotCommandLineErgonomicsNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/aot_command_line/AotCommandLineErgonomicsNotesTest.java) |
 | JFR enhancements | `JfrEnhancementsNotes` | `JfrEnhancementsNotesTest` |
 | Compact object headers | `CompactObjectHeadersNotes` | `CompactObjectHeadersNotesTest` |
 | Generational Shenandoah | `GenerationalShenandoahNotes` | `GenerationalShenandoahNotesTest` |

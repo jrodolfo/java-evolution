@@ -176,7 +176,7 @@ Test: `VectorApiTenthIncubatorNotesTest`
 
 Java 25 also includes several features that are better understood as runtime or operational improvements:
 
-- ahead-of-time command-line ergonomics and method profiling: `AotCommandLineErgonomicsNotes`
+- ahead-of-time command-line ergonomics: [`aot_command_line`](aot_command_line/README.md)
 - Java Flight Recorder enhancements: `JfrEnhancementsNotes`
 - compact object headers: `CompactObjectHeadersNotes`
 - Generational Shenandoah: `GenerationalShenandoahNotes`
