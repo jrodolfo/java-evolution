@@ -10,6 +10,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 - Improved teaching clarity across Java 9 through Java 25 examples, notes, tests, and feature documentation.
 - Added explanatory learning modules for substantial notes-only topics such as the Java 9 module system, Java 15 hidden classes, and Java 16 Unix-domain socket channels.
+- Improved Java 24 learning material with clearer Stream Gatherers and Class-File API explanations, explanatory modules for virtual-thread synchronization and AOT class loading, and stronger preview bridge notes to Java 25.
 - Clarified practical demo documentation so it matches the focused `make demos` validation target.
 - Expanded glossary coverage for recurring Java platform acronyms and terms.
 
