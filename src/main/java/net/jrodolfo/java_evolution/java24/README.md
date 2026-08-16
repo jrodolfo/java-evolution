@@ -83,7 +83,7 @@ Test: `KeyDerivationFunctionPreviewNotesTest`
 
 Java 24 also continued several language/API previews:
 
-- flexible constructor bodies third preview, finalized in Java 25 as `FlexibleConstructorBodiesExamples`
+- flexible constructor bodies third preview, documented in [`flexible_constructor_bodies`](flexible_constructor_bodies/README.md) and finalized in Java 25 as `FlexibleConstructorBodiesExamples`
 - module import declarations second preview, documented in [`module_import_declarations`](module_import_declarations/README.md) and finalized in Java 25 as `ModuleImportDeclarationsNotes`
 - primitive patterns second preview, documented in [`primitive_patterns`](primitive_patterns/README.md) and continued in Java 25 as `PrimitivePatternsThirdPreviewNotes`
 - scoped values fourth preview, documented in [`scoped_values`](scoped_values/README.md) and finalized in Java 25 in [`java25/scoped_values`](../java25/scoped_values/README.md)
@@ -93,7 +93,7 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `KeyDerivationFunctionPreviewNotes`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `SecurityManagerDisabledNotes`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `KeyDerivationFunctionPreviewNotes`, `flexible_constructor_bodies/README.md`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 

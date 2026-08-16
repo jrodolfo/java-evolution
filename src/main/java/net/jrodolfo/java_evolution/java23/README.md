@@ -46,7 +46,7 @@ Before this feature line, explicit constructor invocation had to appear first. T
 
 Java 23 refined flexible constructor bodies in a second preview. The goal is safer and clearer constructor code while still preventing use of the object before it is initialized.
 
-Continue with `FlexibleConstructorBodiesThirdPreviewNotes` in Java 24 and `FlexibleConstructorBodiesExamples` in Java 25.
+Continue with the Java 24 [`flexible_constructor_bodies`](../java24/flexible_constructor_bodies/README.md) module and `FlexibleConstructorBodiesExamples` in Java 25.
 
 Explanatory module: [`flexible_constructor_bodies`](flexible_constructor_bodies/README.md)
 
