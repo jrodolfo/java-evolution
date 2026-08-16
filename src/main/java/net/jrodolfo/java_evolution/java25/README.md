@@ -58,6 +58,30 @@ Java traditionally required a class declaration and a static `main` method even 
 
 Java 25 finalized compact source files and instance main methods, reducing ceremony for learning, scripts, and small utilities.
 
+Before this feature, even a tiny program usually looked like this:
+
+```java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java");
+    }
+}
+```
+
+A compact source file can focus on the program body:
+
+```java
+void main() {
+    IO.println("Hello, Java 25");
+}
+```
+
+If that source is saved as `HelloWorld.java`, it can be launched directly:
+
+```bash
+java HelloWorld.java
+```
+
 This is a final Java 25 feature documented via notes because compact source files belong naturally to source-launcher examples, not to the Spring Boot package tree.
 
 Example: `CompactSourceFilesNotes`

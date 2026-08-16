@@ -12,9 +12,15 @@ class CompactSourceFilesNotesTest {
 	void notesExplainRemovingClassAndMainCeremony() {
 		assertThat(notes.purpose())
 				.as("Compact source files should be framed as removing class/main ceremony")
-				.contains("without an explicit class");
+				.contains("without an explicit class")
+				.contains("static main");
+		assertThat(notes.sourceLauncherCommand())
+				.as("Compact source files should be shown with the normal source launcher")
+				.isEqualTo("java HelloWorld.java");
 		assertThat(notes.projectDecision())
 				.as("The note should explain why this is documented rather than compiled in this package")
-				.contains("source");
+				.contains("source-launcher")
+				.contains("unnamed package")
+				.contains("Spring Boot package tree");
 	}
 }

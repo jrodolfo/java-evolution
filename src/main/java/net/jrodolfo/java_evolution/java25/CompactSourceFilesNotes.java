@@ -10,6 +10,17 @@ package net.jrodolfo.java_evolution.java25;
  * </p>
  *
  * <p>
+ * A compact source file can contain methods and fields without wrapping them in
+ * an explicit class declaration. For example:
+ * </p>
+ *
+ * <pre>{@code
+ * void main() {
+ *     IO.println("Hello, Java 25");
+ * }
+ * }</pre>
+ *
+ * <p>
  * This repository documents the feature as notes because compact source files
  * belong naturally to source-launcher examples rather than the Spring Boot
  * source tree.
@@ -26,11 +37,20 @@ public class CompactSourceFilesNotes {
 	}
 
 	/**
+	 * Shows the natural source-launcher command shape for a compact source file.
+	 *
+	 * @return sample launcher command
+	 */
+	public String sourceLauncherCommand() {
+		return "java HelloWorld.java";
+	}
+
+	/**
 	 * Explains why this project does not include compact source files directly.
 	 *
 	 * @return the project decision
 	 */
 	public String projectDecision() {
-		return "the repository documents source-launcher behavior instead of mixing compact source files into the Spring Boot source tree";
+		return "the repository documents source-launcher behavior because compact source files naturally live in the unnamed package rather than this Spring Boot package tree";
 	}
 }
