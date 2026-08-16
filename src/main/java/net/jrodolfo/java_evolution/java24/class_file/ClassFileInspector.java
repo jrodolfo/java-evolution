@@ -23,20 +23,24 @@ public class ClassFileInspector {
 	 */
 	public ClassFileSummary inspect(byte[] classFileBytes) {
 		var model = ClassFile.of().parse(classFileBytes);
+		var className = dottedClassName(model);
+		var methodNames = model.methods().stream()
+				.map(method -> method.methodName().stringValue())
+				.sorted()
+				.toList();
+		var fieldNames = model.fields().stream()
+				.map(field -> field.fieldName().stringValue())
+				.sorted()
+				.toList();
+		var accessFlags = model.flags().flags();
 
 		return new ClassFileSummary(
-				dottedClassName(model),
+				className,
 				model.majorVersion(),
 				model.minorVersion(),
-				model.methods().stream()
-						.map(method -> method.methodName().stringValue())
-						.sorted()
-						.toList(),
-				model.fields().stream()
-						.map(field -> field.fieldName().stringValue())
-						.sorted()
-						.toList(),
-				model.flags().flags());
+				methodNames,
+				fieldNames,
+				accessFlags);
 	}
 
 	private String dottedClassName(ClassModel model) {

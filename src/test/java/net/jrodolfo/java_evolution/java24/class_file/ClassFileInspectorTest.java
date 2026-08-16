@@ -16,7 +16,9 @@ class ClassFileInspectorTest {
 
 	@Test
 	void inspectsCompiledProjectClass() throws IOException {
-		var summary = inspector.inspect(classBytes(StreamGatherersExamples.class));
+		Class<?> inspectedType = StreamGatherersExamples.class;
+		byte[] compiledClassBytes = classBytes(inspectedType);
+		ClassFileSummary summary = inspector.inspect(compiledClassBytes);
 
 		assertThat(summary.className())
 				.as("the Class-File API exposes the class declared by the bytes")
