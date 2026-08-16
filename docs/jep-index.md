@@ -191,13 +191,13 @@ Status labels:
 | [JEP 512](https://openjdk.org/jeps/512) | Compact Source Files and Instance Main Methods | Final, Notes |
 | [JEP 510](https://openjdk.org/jeps/510) | Key Derivation Function API | Final, Security, Example |
 | [JEP 507](https://openjdk.org/jeps/507) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
-| [JEP 502](https://openjdk.org/jeps/502) | Stable Values | Preview, Notes |
+| [JEP 502](https://openjdk.org/jeps/502) | Stable Values | Preview, Explanatory Module |
 | [JEP 470](https://openjdk.org/jeps/470) | PEM Encodings of Cryptographic Objects | Preview, Security, Notes |
-| [JEP 505](https://openjdk.org/jeps/505) | Structured Concurrency | Preview, Notes |
-| [JEP 508](https://openjdk.org/jeps/508) | Vector API | Incubator, Notes |
-| [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | Runtime, Notes |
-| [JEP 509](https://openjdk.org/jeps/509) | JFR CPU-Time Profiling | Runtime, Experimental, Notes |
-| [JEP 518](https://openjdk.org/jeps/518) | JFR Cooperative Sampling | Runtime, Notes |
-| [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | Runtime, Notes |
-| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Runtime, Notes |
+| [JEP 505](https://openjdk.org/jeps/505) | Structured Concurrency | Preview, Explanatory Module |
+| [JEP 508](https://openjdk.org/jeps/508) | Vector API | Incubator, Explanatory Module |
+| [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | Runtime, Explanatory Module |
+| [JEP 509](https://openjdk.org/jeps/509) | JFR CPU-Time Profiling | Runtime, Experimental, Explanatory Module |
+| [JEP 518](https://openjdk.org/jeps/518) | JFR Cooperative Sampling | Runtime, Explanatory Module |
+| [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | Runtime, Explanatory Module |
+| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Runtime, Explanatory Module |
 | [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Runtime, Explanatory Module |
