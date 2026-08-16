@@ -178,7 +178,7 @@ Java 25 also includes several features that are better understood as runtime or 
 
 - ahead-of-time command-line ergonomics: [`aot_command_line`](aot_command_line/README.md)
 - Java Flight Recorder enhancements: [`jfr_enhancements`](jfr_enhancements/README.md)
-- compact object headers: `CompactObjectHeadersNotes`
+- compact object headers: [`compact_object_headers`](compact_object_headers/README.md)
 - Generational Shenandoah: `GenerationalShenandoahNotes`
 
 These are important, but they are not ideal for tiny deterministic unit tests, so the repository documents them as notes.
