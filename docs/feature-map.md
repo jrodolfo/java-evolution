@@ -240,7 +240,7 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Stable values preview | [`StableValuesPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/stable_values/StableValuesPreviewNotes.java) | [`StableValuesPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/stable_values/StableValuesPreviewNotesTest.java) |
 | PEM encodings preview | `PemEncodingsPreviewNotes` | `PemEncodingsPreviewNotesTest` |
 | Structured concurrency fifth preview | [`StructuredConcurrencyFifthPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/structured_concurrency/StructuredConcurrencyFifthPreviewNotes.java) | [`StructuredConcurrencyFifthPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/structured_concurrency/StructuredConcurrencyFifthPreviewNotesTest.java) |
-| Vector API tenth incubator | `VectorApiTenthIncubatorNotes` | `VectorApiTenthIncubatorNotesTest` |
+| Vector API tenth incubator | [`VectorApiTenthIncubatorNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/vector_api/VectorApiTenthIncubatorNotes.java) | [`VectorApiTenthIncubatorNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/vector_api/VectorApiTenthIncubatorNotesTest.java) |
 | AOT command-line ergonomics | `AotCommandLineErgonomicsNotes` | `AotCommandLineErgonomicsNotesTest` |
 | JFR enhancements | `JfrEnhancementsNotes` | `JfrEnhancementsNotesTest` |
 | Compact object headers | `CompactObjectHeadersNotes` | `CompactObjectHeadersNotesTest` |

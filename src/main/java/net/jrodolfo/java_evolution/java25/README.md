@@ -164,9 +164,11 @@ Test: `StructuredConcurrencyFifthPreviewNotesTest`
 
 The Vector API continued as a tenth incubator. It is intended for computations that can benefit from CPU vector instructions.
 
+The core idea is Single Instruction, Multiple Data (SIMD): one operation can be applied across multiple lanes of data. Instead of processing one `int` at a time, vector-style code can describe work over a group of `int` values and let the JVM map that work to CPU vector instructions when possible.
+
 This repository keeps it as notes because the API requires the `jdk.incubator.vector` module and is still evolving.
 
-Example: `VectorApiTenthIncubatorNotes`
+Explanatory module: [`vector_api`](vector_api/README.md)
 
 Test: `VectorApiTenthIncubatorNotesTest`
 
@@ -183,7 +185,7 @@ These are important, but they are not ideal for tiny deterministic unit tests, s
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, compact source files, primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, the Vector API, AOT, JFR, object headers, and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, compact source files, primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, `vector_api/README.md`, AOT, JFR, object headers, and GC behavior.
 
 Run the focused tests:
 
