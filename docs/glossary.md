@@ -33,7 +33,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | JAR | Java Archive | A packaged Java artifact produced by build tools such as Maven. |
 | JavaDoc | Java Documentation | Documentation generated from Java source comments, usually browsed as HTML. |
 | JDK | Java Development Kit | The Java installation used to compile, test, document, and run this project. |
-| JEP | JDK Enhancement Proposal | The OpenJDK design record for a Java platform feature or change. |
+| JEP | JDK Enhancement Proposal | The OpenJDK process and design record used to propose, track, and document significant JDK changes. In this project, JEP links are the authoritative source for when a Java feature was previewed, finalized, changed, or removed. |
 | JFR | Java Flight Recorder | JVM observability tooling for recording runtime events and performance data. |
 | JIT | Just-In-Time | JVM compilation work performed while a program runs, often discussed with startup, warmup, and runtime optimization. |
 | JNI | Java Native Interface | The older native-integration mechanism that the Foreign Function and Memory API improves on for many use cases. |
