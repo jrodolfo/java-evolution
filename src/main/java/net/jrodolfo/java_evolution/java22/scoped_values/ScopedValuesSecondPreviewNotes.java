@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java22;
+package net.jrodolfo.java_evolution.java22.scoped_values;
 
 /**
  * Explains scoped values as a Java 22 second preview feature.
@@ -11,7 +11,8 @@ package net.jrodolfo.java_evolution.java22;
  *
  * <p>
  * Java 22 kept the API in preview, so this repository keeps the version entry
- * as notes.
+ * explanatory and points to the final Java 25 scoped-values module for runnable
+ * code.
  * </p>
  */
 public class ScopedValuesSecondPreviewNotes {
@@ -21,8 +22,26 @@ public class ScopedValuesSecondPreviewNotes {
 	 *
 	 * @return a short explanation
 	 */
-	public String purpose() {
-		return "share immutable values safely across a bounded dynamic scope";
+	public String problemSolved() {
+		return "share immutable contextual data across a call chain without passing it through every method";
+	}
+
+	/**
+	 * Compares scoped values with a common older approach.
+	 *
+	 * @return a short comparison
+	 */
+	public String threadLocalMotivation() {
+		return "scoped values avoid many ThreadLocal cleanup and stale-context hazards";
+	}
+
+	/**
+	 * Explains bounded dynamic scope in plain language.
+	 *
+	 * @return a short explanation
+	 */
+	public String boundedDynamicScope() {
+		return "a binding is visible while the scoped operation runs and disappears when that operation finishes";
 	}
 
 	/**

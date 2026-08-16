@@ -186,7 +186,7 @@ Learning notes: [java22 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Foreign Function and Memory API final | [`NativeStringParser`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringParser.java), [`NativeStringLength`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/NativeStringLength.java) | [`ForeignFunctionExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/foreign_function/ForeignFunctionExamplesTest.java) |
 | Multi-file source launcher | [`LaunchMultiFileSourceProgramsNotes`](../src/main/java/net/jrodolfo/java_evolution/java22/launch_multi_file_source_programs/LaunchMultiFileSourceProgramsNotes.java) | [`LaunchMultiFileSourceProgramsNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/launch_multi_file_source_programs/LaunchMultiFileSourceProgramsNotesTest.java) |
 | Class-File API preview | [`ClassFileApiPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java22/class_file_api/ClassFileApiPreviewNotes.java) | [`ClassFileApiPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/class_file_api/ClassFileApiPreviewNotesTest.java) |
-| Scoped values second preview | `ScopedValuesSecondPreviewNotes` | `ScopedValuesSecondPreviewNotesTest` |
+| Scoped values second preview | [`ScopedValuesSecondPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java22/scoped_values/ScopedValuesSecondPreviewNotes.java) | [`ScopedValuesSecondPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java22/scoped_values/ScopedValuesSecondPreviewNotesTest.java) |
 | Structured concurrency second preview | `StructuredConcurrencySecondPreviewNotes` | `StructuredConcurrencySecondPreviewNotesTest` |
 
 ## Java 23

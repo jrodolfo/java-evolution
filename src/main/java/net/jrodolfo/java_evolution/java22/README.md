@@ -96,7 +96,7 @@ The problem remains the same as Java 21: immutable contextual data should be pas
 
 Continue with `ScopedValuesThirdPreviewNotes` in Java 23 and the Java 25 [`scoped_values`](../java25/scoped_values/README.md) module.
 
-Example: `ScopedValuesSecondPreviewNotes`
+Explanatory module: [`scoped_values`](scoped_values/README.md)
 
 Test: `ScopedValuesSecondPreviewNotesTest`
 
@@ -114,7 +114,7 @@ Test: `StructuredConcurrencySecondPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read `stream_gatherers/README.md`, `class_file_api/README.md`, `statements_before_super/README.md`, `launch_multi_file_source_programs/README.md`, scoped values, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
+Start with `UnnamedVariablesPatternsExamples` because unnamed variables and patterns are final in Java 22. Then read `stream_gatherers/README.md`, `class_file_api/README.md`, `statements_before_super/README.md`, `launch_multi_file_source_programs/README.md`, `scoped_values/README.md`, and structured concurrency. For native interop, read `foreign_function/README.md` before the FFM example classes.
 
 Run the focused tests:
 
