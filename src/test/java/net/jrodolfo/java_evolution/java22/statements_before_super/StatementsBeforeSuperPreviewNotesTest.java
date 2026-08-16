@@ -13,6 +13,7 @@ class StatementsBeforeSuperPreviewNotesTest {
 		String oldRule = notes.oldRule();
 		String problemSolved = notes.problemSolved();
 		String safetyRule = notes.safetyRule();
+		String namingEvolution = notes.namingEvolution();
 		String nextStep = notes.nextStep();
 		String projectDecision = notes.projectDecision();
 
@@ -30,6 +31,12 @@ class StatementsBeforeSuperPreviewNotesTest {
 				.as("The note should preserve the constructor initialization safety rule")
 				.contains("cannot use the instance")
 				.contains("being constructed");
+		assertThat(namingEvolution)
+				.as("The Java 22 name should be connected to the later Flexible Constructor Bodies name")
+				.contains("Java 22")
+				.contains("statements before super")
+				.contains("Java 25")
+				.contains("Flexible Constructor Bodies");
 		assertThat(nextStep)
 				.as("The Java 22 bridge note should point to the final Java 25 constructor feature")
 				.contains("FlexibleConstructorBodiesExamples")

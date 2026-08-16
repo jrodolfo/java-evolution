@@ -46,6 +46,15 @@ public class StatementsBeforeSuperPreviewNotes {
 	}
 
 	/**
+	 * Explains how the feature name evolved after the first preview.
+	 *
+	 * @return a short naming-history note
+	 */
+	public String namingEvolution() {
+		return "Java 22 described statements before super, while later previews and Java 25 use the broader name Flexible Constructor Bodies";
+	}
+
+	/**
 	 * Points learners to the final Java 25 example.
 	 *
 	 * @return a short next-step note

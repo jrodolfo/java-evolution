@@ -62,6 +62,20 @@ allow safe statements before an explicit super(...) or this(...) call
 
 This made constructor code easier to read when arguments needed validation or preparation before delegation.
 
+## Naming Note
+
+Java 22 described the preview around the most visible syntax change: statements before `super(...)`.
+
+Later previews used the broader name Flexible Constructor Bodies. That name better describes the final Java 25 feature because the relaxed constructor body rules also apply to safe work before explicit `this(...)` delegation.
+
+In this repository:
+
+```text
+Java 22 -> statements_before_super preview notes
+Java 23 and 24 -> flexible_constructor_bodies preview notes
+Java 25 -> FlexibleConstructorBodiesExamples final runnable example
+```
+
 ## What Safety Rule Still Matters?
 
 The constructor still cannot use the object being created before the superclass constructor has run.
