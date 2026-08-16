@@ -73,7 +73,7 @@ Test: `AotClassLoadingNotesTest`
 
 Key derivation functions create cryptographic keys from secret material and context data.
 
-Java 24 previewed a standard KDF API. It became final in Java 25.
+Java 24 previewed a standard KDF API. It became final in Java 25, where this repository provides the final runnable example and deeper explanation in [`java25/key_derivation`](../java25/key_derivation/README.md).
 
 Example: `KeyDerivationFunctionPreviewNotes`
 
