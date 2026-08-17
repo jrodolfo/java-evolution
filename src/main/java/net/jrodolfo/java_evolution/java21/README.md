@@ -94,9 +94,9 @@ Concurrent code is easier to reason about when related tasks have a clear parent
 
 Structured concurrency addresses that by treating related subtasks as one unit of work.
 
-This repository keeps the Java 21 version as notes because the API was preview and changed in later releases.
+This repository keeps the Java 21 version as an explanatory module because the API was preview and changed in later releases.
 
-Example: `StructuredConcurrencyPreviewNotes`
+Explanatory module: [`structured_concurrency`](structured_concurrency/README.md)
 
 Test: `StructuredConcurrencyPreviewNotesTest`
 
@@ -116,7 +116,7 @@ Executable test: `KeyEncapsulationExchangeTest`
 
 ## How To Read This Package
 
-Start with the final features: `VirtualThreadsExamples`, `RecordPatternsExamples`, `PatternMatchingSwitchExamples`, and `SequencedCollectionsExamples`. Then read the preview notes and preview example: `UnnamedPatternsVariablesPreviewExamples`, `scoped_values/README.md`, and `StructuredConcurrencyPreviewNotes`. For the security API example, read `key_encapsulation/README.md` before the sender and receiver classes.
+Start with the final features: `VirtualThreadsExamples`, `RecordPatternsExamples`, `PatternMatchingSwitchExamples`, and `SequencedCollectionsExamples`. Then read the preview notes and preview example: `UnnamedPatternsVariablesPreviewExamples`, `scoped_values/README.md`, and `structured_concurrency/README.md`. For the security API example, read `key_encapsulation/README.md` before the sender and receiver classes.
 
 Run the focused tests:
 

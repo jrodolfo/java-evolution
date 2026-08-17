@@ -108,7 +108,7 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java21/SequencedCollectionsExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java21/scoped_values/README.md`
-- `src/main/java/net/jrodolfo/java_evolution/java21/StructuredConcurrencyPreviewNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java21/structured_concurrency/README.md`
 
 Run:
 

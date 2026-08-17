@@ -172,7 +172,7 @@ Learning notes: [java21 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Unnamed patterns and variables preview | `UnnamedPatternsVariablesPreviewExamples` | `UnnamedPatternsVariablesPreviewExamplesTest` |
 | Key Encapsulation Mechanism API | [`KeyEncapsulationExchange`](../src/main/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchange.java) | [`KeyEncapsulationExchangeTest`](../src/test/java/net/jrodolfo/java_evolution/java21/key_encapsulation/KeyEncapsulationExchangeTest.java) |
 | Scoped values preview | [`ScopedValuesPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java21/scoped_values/ScopedValuesPreviewNotes.java) | [`ScopedValuesPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java21/scoped_values/ScopedValuesPreviewNotesTest.java) |
-| Structured concurrency preview | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` |
+| Structured concurrency preview | [`StructuredConcurrencyPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java21/structured_concurrency/StructuredConcurrencyPreviewNotes.java) | [`StructuredConcurrencyPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java21/structured_concurrency/StructuredConcurrencyPreviewNotesTest.java) |
 
 ## Java 22
 
