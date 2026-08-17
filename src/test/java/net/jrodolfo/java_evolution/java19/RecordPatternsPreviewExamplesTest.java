@@ -10,11 +10,20 @@ class RecordPatternsPreviewExamplesTest {
 
 	@Test
 	void recordPatternDeconstructsRecordComponents() {
-		// When / Then
-		assertThat(examples.describe(new RecordPatternsPreviewExamples.Point(3, 4)))
+		RecordPatternsPreviewExamples.Point point = new RecordPatternsPreviewExamples.Point(3, 4);
+
+		String description = examples.describe(point);
+
+		assertThat(description)
 				.as("A record pattern should bind the record components")
 				.isEqualTo("point x=3 y=4");
-		assertThat(examples.describe("not a point"))
+	}
+
+	@Test
+	void nonMatchingValueUsesFallbackBranch() {
+		String description = examples.describe("not a point");
+
+		assertThat(description)
 				.as("Non-matching values should use the fallback branch")
 				.isEqualTo("unknown");
 	}

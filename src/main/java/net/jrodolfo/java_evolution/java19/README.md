@@ -72,7 +72,9 @@ Before the Foreign Function and Memory API, Java code usually used JNI for serio
 
 The Foreign Function and Memory API aims to provide a supported way to call native functions and work with memory outside the Java heap.
 
-This repository keeps the Java 19 version as notes because a meaningful example normally requires native libraries or off-heap memory setup, and the preview API evolved before becoming final.
+Java 19 was an early preview step. This repository keeps the Java 19 version as notes because the API changed before becoming final, and preserving every historical preview shape would make the project harder to run.
+
+For an executable example of the final API, read the Java 22 [`foreign_function`](../java22/foreign_function/README.md) module.
 
 Example: `ForeignFunctionMemoryApiPreviewNotes`
 
