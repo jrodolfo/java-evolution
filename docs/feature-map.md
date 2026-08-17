@@ -155,7 +155,7 @@ Learning notes: [java20 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Pattern matching for switch fourth preview | `PatternMatchingSwitchFourthPreviewExamples` | `PatternMatchingSwitchFourthPreviewExamplesTest` |
 | Virtual threads second preview | `VirtualThreadsSecondPreviewNotes` | `VirtualThreadsSecondPreviewNotesTest` |
 | Scoped values incubator | [`ScopedValuesIncubatorNotes`](../src/main/java/net/jrodolfo/java_evolution/java20/scoped_values/ScopedValuesIncubatorNotes.java) | [`ScopedValuesIncubatorNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java20/scoped_values/ScopedValuesIncubatorNotesTest.java) |
-| Structured concurrency second incubator | `StructuredConcurrencySecondIncubatorNotes` | `StructuredConcurrencySecondIncubatorNotesTest` |
+| Structured concurrency second incubator | [`StructuredConcurrencySecondIncubatorNotes`](../src/main/java/net/jrodolfo/java_evolution/java20/structured_concurrency/StructuredConcurrencySecondIncubatorNotes.java) | [`StructuredConcurrencySecondIncubatorNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java20/structured_concurrency/StructuredConcurrencySecondIncubatorNotesTest.java) |
 | Foreign Function and Memory API second preview | `ForeignFunctionMemorySecondPreviewNotes` | `ForeignFunctionMemorySecondPreviewNotesTest` |
 | Vector API fifth incubator | `VectorApiFifthIncubatorNotes` | `VectorApiFifthIncubatorNotesTest` |
 

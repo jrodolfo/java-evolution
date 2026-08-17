@@ -64,9 +64,9 @@ Java 20 continued structured concurrency as an incubating API.
 
 The feature addresses a common concurrency problem: when a parent operation starts several child tasks, those tasks should have a clear lifetime relationship with the parent. Failure, cancellation, joining, and observability should be handled as one coordinated unit.
 
-This repository keeps the feature as notes because the incubator API was still changing.
+This repository keeps the feature as an explanatory module because the incubator API was still changing.
 
-Example: `StructuredConcurrencySecondIncubatorNotes`
+Explanatory module: [`structured_concurrency`](structured_concurrency/README.md)
 
 Test: `StructuredConcurrencySecondIncubatorNotesTest`
 
@@ -96,7 +96,7 @@ Test: `VectorApiFifthIncubatorNotesTest`
 
 ## How To Read This Package
 
-Start with `RecordPatternsSecondPreviewExamples` and `PatternMatchingSwitchFourthPreviewExamples` to see the pattern matching work continue. Then read the notes classes for virtual threads, structured concurrency, foreign memory, and the Vector API. For contextual data, read `scoped_values/README.md` before continuing to the Java 21 and Java 25 scoped-values modules.
+Start with `RecordPatternsSecondPreviewExamples` and `PatternMatchingSwitchFourthPreviewExamples` to see the pattern matching work continue. Then read the notes classes for virtual threads, foreign memory, and the Vector API. For contextual data, read `scoped_values/README.md` before continuing to the Java 21 and Java 25 scoped-values modules. For parent-child task lifetime, read `structured_concurrency/README.md` before the later structured-concurrency preview modules.
 
 Run the focused tests:
 

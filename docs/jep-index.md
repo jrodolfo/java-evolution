@@ -118,7 +118,7 @@ Status labels:
 | [JEP 433](https://openjdk.org/jeps/433) | Pattern Matching for switch | Preview |
 | [JEP 436](https://openjdk.org/jeps/436) | Virtual Threads | Preview, Notes |
 | [JEP 429](https://openjdk.org/jeps/429) | Scoped Values | Incubator, Explanatory module |
-| [JEP 437](https://openjdk.org/jeps/437) | Structured Concurrency | Incubator, Notes |
+| [JEP 437](https://openjdk.org/jeps/437) | Structured Concurrency | Incubator, Explanatory module |
 | [JEP 434](https://openjdk.org/jeps/434) | Foreign Function and Memory API | Preview, Notes |
 | [JEP 438](https://openjdk.org/jeps/438) | Vector API | Incubator, Notes |
 
