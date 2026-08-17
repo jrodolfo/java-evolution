@@ -81,7 +81,7 @@ Status values may be combined, such as `final, security, executable example`, wh
 | 19 | Virtual threads preview | preview | `VirtualThreadsPreviewExamples` | `VirtualThreadsPreviewExamplesTest` | [JEP 425](https://openjdk.org/jeps/425) |
 | 19 | Record patterns preview | preview | `RecordPatternsPreviewExamples` | `RecordPatternsPreviewExamplesTest` | [JEP 405](https://openjdk.org/jeps/405) |
 | 19 | Pattern matching for switch preview | preview | `PatternMatchingSwitchPreviewExamples` | `PatternMatchingSwitchPreviewExamplesTest` | [JEP 427](https://openjdk.org/jeps/427) |
-| 19 | Structured concurrency incubator | incubator, notes-only | `StructuredConcurrencyPreviewNotes` | `StructuredConcurrencyPreviewNotesTest` | [JEP 428](https://openjdk.org/jeps/428) |
+| 19 | Structured concurrency incubator | incubator, explanatory module | [`StructuredConcurrencyPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java19/structured_concurrency/StructuredConcurrencyPreviewNotes.java) | [`StructuredConcurrencyPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java19/structured_concurrency/StructuredConcurrencyPreviewNotesTest.java) | [JEP 428](https://openjdk.org/jeps/428) |
 | 19 | Foreign Function and Memory API | preview, notes-only | `ForeignFunctionMemoryApiPreviewNotes` | `ForeignFunctionMemoryApiPreviewNotesTest` | [JEP 424](https://openjdk.org/jeps/424) |
 | 20 | Record patterns second preview | preview | `RecordPatternsSecondPreviewExamples` | `RecordPatternsSecondPreviewExamplesTest` | [JEP 432](https://openjdk.org/jeps/432) |
 | 20 | Pattern matching for switch fourth preview | preview | `PatternMatchingSwitchFourthPreviewExamples` | `PatternMatchingSwitchFourthPreviewExamplesTest` | [JEP 433](https://openjdk.org/jeps/433) |

@@ -105,7 +105,7 @@ Status labels:
 | JEP | Feature | Status |
 |---|---|---|
 | [JEP 425](https://openjdk.org/jeps/425) | Virtual Threads | Preview |
-| [JEP 428](https://openjdk.org/jeps/428) | Structured Concurrency | Incubator, Notes |
+| [JEP 428](https://openjdk.org/jeps/428) | Structured Concurrency | Incubator, Explanatory module |
 | [JEP 405](https://openjdk.org/jeps/405) | Record Patterns | Preview |
 | [JEP 427](https://openjdk.org/jeps/427) | Pattern Matching for switch | Preview |
 | [JEP 424](https://openjdk.org/jeps/424) | Foreign Function and Memory API | Preview, Notes |
