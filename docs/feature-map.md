@@ -154,7 +154,7 @@ Learning notes: [java20 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Record patterns second preview | `RecordPatternsSecondPreviewExamples` | `RecordPatternsSecondPreviewExamplesTest` |
 | Pattern matching for switch fourth preview | `PatternMatchingSwitchFourthPreviewExamples` | `PatternMatchingSwitchFourthPreviewExamplesTest` |
 | Virtual threads second preview | `VirtualThreadsSecondPreviewNotes` | `VirtualThreadsSecondPreviewNotesTest` |
-| Scoped values incubator | `ScopedValuesIncubatorNotes` | `ScopedValuesIncubatorNotesTest` |
+| Scoped values incubator | [`ScopedValuesIncubatorNotes`](../src/main/java/net/jrodolfo/java_evolution/java20/scoped_values/ScopedValuesIncubatorNotes.java) | [`ScopedValuesIncubatorNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java20/scoped_values/ScopedValuesIncubatorNotesTest.java) |
 | Structured concurrency second incubator | `StructuredConcurrencySecondIncubatorNotes` | `StructuredConcurrencySecondIncubatorNotesTest` |
 | Foreign Function and Memory API second preview | `ForeignFunctionMemorySecondPreviewNotes` | `ForeignFunctionMemorySecondPreviewNotesTest` |
 | Vector API fifth incubator | `VectorApiFifthIncubatorNotes` | `VectorApiFifthIncubatorNotesTest` |

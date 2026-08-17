@@ -52,9 +52,9 @@ Thread-local variables are useful for passing contextual data, such as request I
 
 Scoped values were introduced as an incubating API to provide a safer model for sharing immutable contextual data within a bounded execution scope.
 
-This repository keeps Java 20 scoped values as notes because the API was incubating and changed before finalization.
+This repository keeps Java 20 scoped values as an explanatory module because the API was incubating and changed before finalization.
 
-Example: `ScopedValuesIncubatorNotes`
+Explanatory module: [`scoped_values`](scoped_values/README.md)
 
 Test: `ScopedValuesIncubatorNotesTest`
 
@@ -96,7 +96,7 @@ Test: `VectorApiFifthIncubatorNotesTest`
 
 ## How To Read This Package
 
-Start with `RecordPatternsSecondPreviewExamples` and `PatternMatchingSwitchFourthPreviewExamples` to see the pattern matching work continue. Then read the notes classes for virtual threads, scoped values, structured concurrency, foreign memory, and the Vector API.
+Start with `RecordPatternsSecondPreviewExamples` and `PatternMatchingSwitchFourthPreviewExamples` to see the pattern matching work continue. Then read the notes classes for virtual threads, structured concurrency, foreign memory, and the Vector API. For contextual data, read `scoped_values/README.md` before continuing to the Java 21 and Java 25 scoped-values modules.
 
 Run the focused tests:
 
