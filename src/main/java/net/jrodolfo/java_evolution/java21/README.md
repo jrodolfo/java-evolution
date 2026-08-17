@@ -82,9 +82,9 @@ Thread-local variables are often used to pass contextual information, such as a 
 
 Scoped values provide a safer model for immutable contextual data bound to a limited execution scope.
 
-This repository keeps the Java 21 version as notes because the API was preview and continued to evolve.
+This repository keeps the Java 21 version as an explanatory module because the API was preview and continued to evolve.
 
-Example: `ScopedValuesPreviewNotes`
+Explanatory module: [`scoped_values`](scoped_values/README.md)
 
 Test: `ScopedValuesPreviewNotesTest`
 
@@ -116,7 +116,7 @@ Executable test: `KeyEncapsulationExchangeTest`
 
 ## How To Read This Package
 
-Start with the final features: `VirtualThreadsExamples`, `RecordPatternsExamples`, `PatternMatchingSwitchExamples`, and `SequencedCollectionsExamples`. Then read the preview notes and preview example: `UnnamedPatternsVariablesPreviewExamples`, `ScopedValuesPreviewNotes`, and `StructuredConcurrencyPreviewNotes`. For the security API example, read `key_encapsulation/README.md` before the sender and receiver classes.
+Start with the final features: `VirtualThreadsExamples`, `RecordPatternsExamples`, `PatternMatchingSwitchExamples`, and `SequencedCollectionsExamples`. Then read the preview notes and preview example: `UnnamedPatternsVariablesPreviewExamples`, `scoped_values/README.md`, and `StructuredConcurrencyPreviewNotes`. For the security API example, read `key_encapsulation/README.md` before the sender and receiver classes.
 
 Run the focused tests:
 
