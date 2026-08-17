@@ -101,6 +101,12 @@ Read these first:
 - `src/main/java/net/jrodolfo/java_evolution/java21/PatternMatchingSwitchExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java21/SequencedCollectionsExamples.java`
 
+Then read the Java 21 specialized modules:
+
+- `src/main/java/net/jrodolfo/java_evolution/java21/key_encapsulation/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java21/scoped_values/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java21/structured_concurrency/README.md`
+
 Run:
 
 ```bash
@@ -108,6 +114,7 @@ mvn "-Dtest=SealedClassesExamplesTest,PatternMatchingSwitchPreviewExamplesTest,R
 mvn "-Dtest=Utf8DefaultCharsetExamplesTest,SimpleStaticFileServerTest,JavaDocSnippetExamplesTest" test
 mvn "-Dtest=VirtualThreadsPreviewExamplesTest,RecordPatternsPreviewExamplesTest" test
 mvn "-Dtest=VirtualThreadsExamplesTest,RecordPatternsExamplesTest,PatternMatchingSwitchExamplesTest,SequencedCollectionsExamplesTest" test
+mvn "-Dtest=KeyEncapsulationExchangeTest,ScopedValuesPreviewNotesTest,StructuredConcurrencyPreviewNotesTest" test
 ```
 
 Interview angle: treat Java 21 as the modern baseline. Explain virtual threads as a way to keep the simple blocking style while scaling I/O-bound work, and explain sealed classes plus pattern matching as a safer way to model known alternatives.

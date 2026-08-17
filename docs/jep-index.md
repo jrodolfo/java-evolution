@@ -131,9 +131,9 @@ Status labels:
 | [JEP 441](https://openjdk.org/jeps/441) | Pattern Matching for switch | Final |
 | [JEP 431](https://openjdk.org/jeps/431) | Sequenced Collections | Final |
 | [JEP 443](https://openjdk.org/jeps/443) | Unnamed Patterns and Variables | Preview |
-| [JEP 446](https://openjdk.org/jeps/446) | Scoped Values | Preview, Notes |
-| [JEP 453](https://openjdk.org/jeps/453) | Structured Concurrency | Preview, Notes |
-| [JEP 452](https://openjdk.org/jeps/452) | Key Encapsulation Mechanism API | Final, Security, Example |
+| [JEP 446](https://openjdk.org/jeps/446) | Scoped Values | Preview, Explanatory module |
+| [JEP 453](https://openjdk.org/jeps/453) | Structured Concurrency | Preview, Explanatory module |
+| [JEP 452](https://openjdk.org/jeps/452) | Key Encapsulation Mechanism API | Final, Security, Executable example |
 
 ## Java 22
 
