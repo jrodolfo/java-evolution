@@ -10,15 +10,23 @@ class RecordPatternsSecondPreviewExamplesTest {
 
 	@Test
 	void nestedRecordPatternDeconstructsNestedRecords() {
-		// Given
 		var address = new RecordPatternsSecondPreviewExamples.Address("Halifax", "Canada");
 		var customer = new RecordPatternsSecondPreviewExamples.Customer("Rodolfo", address);
 
-		// When / Then
-		assertThat(examples.describe(customer))
+		String description = examples.describe(customer);
+
+		assertThat(description)
 				.as("Nested record patterns should bind components from both records")
 				.isEqualTo("Rodolfo lives in Halifax, Canada");
-		assertThat(examples.describe("not a customer"))
+	}
+
+	@Test
+	void nonMatchingValueUsesFallbackDescription() {
+		Object notACustomer = "not a customer";
+
+		String description = examples.describe(notACustomer);
+
+		assertThat(description)
 				.as("Non-matching values should use the fallback")
 				.isEqualTo("unknown");
 	}

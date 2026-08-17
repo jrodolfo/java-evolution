@@ -27,6 +27,24 @@ public class VirtualThreadsSecondPreviewNotes {
 	}
 
 	/**
+	 * Explains why Java 20 still matters in the feature history.
+	 *
+	 * @return a short preview-history note
+	 */
+	public String previewStep() {
+		return "Java 20 was the second preview step for virtual threads before finalization";
+	}
+
+	/**
+	 * Explains why this Java 20 entry stays as notes.
+	 *
+	 * @return the project decision
+	 */
+	public String projectDecision() {
+		return "this Java 20 entry stays as notes because Java 21 has the final executable virtual-thread example";
+	}
+
+	/**
 	 * Names the release where virtual threads became final.
 	 *
 	 * @return a short release note

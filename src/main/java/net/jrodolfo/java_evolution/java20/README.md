@@ -42,6 +42,8 @@ Java 20 continued virtual threads as a second preview. The feature targeted the 
 
 The final version arrived in Java 21. This package keeps Java 20 as notes to avoid repeating the same runnable demonstration in every preview package.
 
+Read `VirtualThreadsExamples` in Java 21 for the final executable version.
+
 Example: `VirtualThreadsSecondPreviewNotes`
 
 Test: `VirtualThreadsSecondPreviewNotesTest`
@@ -77,6 +79,8 @@ Java 20 continued the Foreign Function and Memory API as a second preview.
 The problem it solves is native interoperation. Java needed a supported alternative to JNI for calling native functions and accessing off-heap memory with clearer safety boundaries.
 
 This repository keeps the feature as notes because native interop would distract from the main goal of simple, portable examples.
+
+Read the Java 22 [`foreign_function`](../java22/foreign_function/README.md) module for the final executable version.
 
 Example: `ForeignFunctionMemorySecondPreviewNotes`
 

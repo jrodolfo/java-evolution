@@ -27,12 +27,30 @@ public class ForeignFunctionMemorySecondPreviewNotes {
 	}
 
 	/**
+	 * Explains the older mechanism that motivated the API.
+	 *
+	 * @return a short explanation
+	 */
+	public String oldApproachProblem() {
+		return "JNI can call native code, but it is difficult to use safely, cleanly, and portably";
+	}
+
+	/**
 	 * Describes the Java 20 maturity level.
 	 *
 	 * @return a short status note
 	 */
 	public String java20Status() {
 		return "the Foreign Function and Memory API was in second preview in Java 20";
+	}
+
+	/**
+	 * Explains why this Java 20 entry stays as notes.
+	 *
+	 * @return the project decision
+	 */
+	public String projectDecision() {
+		return "this Java 20 entry stays as notes because Java 22 has the final executable FFM example";
 	}
 
 	/**
