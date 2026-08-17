@@ -12,14 +12,25 @@ class UnnamedPatternsVariablesPreviewExamplesTest {
 
 	@Test
 	void unnamedVariableDocumentsIgnoredLoopValue() {
-		assertThat(examples.countWithoutUsingElements(List.of("a", "b", "c")))
+		List<String> values = List.of("a", "b", "c");
+
+		int visitedValues = examples.countWithoutUsingElements(values);
+
+		assertThat(visitedValues)
 				.as("The loop value is intentionally ignored")
 				.isEqualTo(3);
 	}
 
 	@Test
 	void unnamedCatchParameterDocumentsIgnoredExceptionObject() {
-		assertThat(examples.canParseInteger("21")).isTrue();
-		assertThat(examples.canParseInteger("not a number")).isFalse();
+		boolean validNumber = examples.canParseInteger("21");
+		boolean invalidNumber = examples.canParseInteger("not a number");
+
+		assertThat(validNumber)
+				.as("Parsing succeeds without needing the catch path")
+				.isTrue();
+		assertThat(invalidNumber)
+				.as("The catch parameter can be unnamed when the exception object is not needed")
+				.isFalse();
 	}
 }

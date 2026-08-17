@@ -5,15 +5,21 @@ package net.jrodolfo.java_evolution.java21;
  *
  * <p>
  * Records make transparent data carriers concise, but code often needs to read
- * the components back out. Record patterns let code test the type and bind
- * record components in one expression, which is especially useful for nested
- * records.
+ * the components back out. Before record patterns, code first checked the type,
+ * then called accessors such as {@code rectangle.topLeft().x()} to reach nested
+ * values. Record patterns let code test the type and bind record components in
+ * one expression, which is especially useful for nested records.
  * </p>
  */
 public class RecordPatternsExamples {
 
 	/**
-	 * Deconstructs nested records.
+	 * Deconstructs nested records in the {@code instanceof} condition.
+	 *
+	 * <p>
+	 * If {@code shape} is a {@link Rectangle}, the pattern also opens both nested
+	 * {@link Point} records and gives local names to their coordinates.
+	 * </p>
 	 *
 	 * @param shape the shape to describe
 	 * @return a text description

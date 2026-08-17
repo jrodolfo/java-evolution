@@ -14,8 +14,21 @@ class RecordPatternsExamplesTest {
 				new RecordPatternsExamples.Point(0, 0),
 				new RecordPatternsExamples.Point(10, 20));
 
-		assertThat(examples.describe(rectangle))
+		String description = examples.describe(rectangle);
+
+		assertThat(description)
 				.as("Record patterns should deconstruct nested record components")
 				.isEqualTo("rectangle from 0,0 to 10,20");
+	}
+
+	@Test
+	void nonMatchingValueKeepsTheFallbackPathVisible() {
+		Object notARectangle = "not a rectangle";
+
+		String description = examples.describe(notARectangle);
+
+		assertThat(description)
+				.as("The record pattern only binds components when the value has the expected record shape")
+				.isEqualTo("unknown");
 	}
 }
