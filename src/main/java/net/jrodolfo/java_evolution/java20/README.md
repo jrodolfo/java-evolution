@@ -88,15 +88,15 @@ Many CPUs can process multiple values with one vector instruction. Before the Ve
 
 The Vector API gives Java code a way to express vector computations more directly, while still letting the JVM map them to efficient hardware instructions when possible.
 
-This repository keeps the feature as notes because the API was incubating and requires an incubator module.
+This repository keeps the feature as an explanatory module because the API was incubating and requires an incubator module.
 
-Example: `VectorApiFifthIncubatorNotes`
+Explanatory module: [`vector_api`](vector_api/README.md)
 
 Test: `VectorApiFifthIncubatorNotesTest`
 
 ## How To Read This Package
 
-Start with `RecordPatternsSecondPreviewExamples` and `PatternMatchingSwitchFourthPreviewExamples` to see the pattern matching work continue. Then read the notes classes for virtual threads, foreign memory, and the Vector API. For contextual data, read `scoped_values/README.md` before continuing to the Java 21 and Java 25 scoped-values modules. For parent-child task lifetime, read `structured_concurrency/README.md` before the later structured-concurrency preview modules.
+Start with `RecordPatternsSecondPreviewExamples` and `PatternMatchingSwitchFourthPreviewExamples` to see the pattern matching work continue. Then read the notes classes for virtual threads and foreign memory. For contextual data, read `scoped_values/README.md` before continuing to the Java 21 and Java 25 scoped-values modules. For parent-child task lifetime, read `structured_concurrency/README.md` before the later structured-concurrency preview modules. For performance-oriented SIMD concepts, read `vector_api/README.md` before the later Vector API incubator module.
 
 Run the focused tests:
 

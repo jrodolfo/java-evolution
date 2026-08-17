@@ -120,7 +120,7 @@ Status labels:
 | [JEP 429](https://openjdk.org/jeps/429) | Scoped Values | Incubator, Explanatory module |
 | [JEP 437](https://openjdk.org/jeps/437) | Structured Concurrency | Incubator, Explanatory module |
 | [JEP 434](https://openjdk.org/jeps/434) | Foreign Function and Memory API | Preview, Notes |
-| [JEP 438](https://openjdk.org/jeps/438) | Vector API | Incubator, Notes |
+| [JEP 438](https://openjdk.org/jeps/438) | Vector API | Incubator, Explanatory module |
 
 ## Java 21
 
