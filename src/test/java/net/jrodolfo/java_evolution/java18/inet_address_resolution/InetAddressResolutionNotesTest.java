@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java18;
+package net.jrodolfo.java_evolution.java18.inet_address_resolution;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -10,16 +10,22 @@ class InetAddressResolutionNotesTest {
 
 	@Test
 	void notesExplainInetAddressResolutionSpi() {
-		// When / Then
-		assertThat(notes.extensionPoint())
+		// When
+		var extensionPoint = notes.extensionPoint();
+		var useCase = notes.useCase();
+		var projectDecision = notes.projectDecision();
+
+		// Then
+		assertThat(extensionPoint)
 				.as("The notes should identify the extension point")
-				.contains("resolver")
+				.contains("InetAddressResolverProvider")
 				.contains("service-provider");
-		assertThat(notes.useCase())
+		assertThat(useCase)
 				.as("The notes should describe advanced networking use cases")
 				.contains("custom DNS");
-		assertThat(notes.projectDecision())
+		assertThat(projectDecision)
 				.as("The notes should explain why no live resolver provider is installed")
+				.contains("process-wide")
 				.contains("without installing");
 	}
 }

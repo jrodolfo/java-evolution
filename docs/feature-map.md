@@ -131,7 +131,7 @@ Learning notes: [java18 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | UTF-8 default charset | `Utf8DefaultCharsetExamples` | `Utf8DefaultCharsetExamplesTest` |
 | Simple Web Server | [`SimpleStaticFileServer`](../src/main/java/net/jrodolfo/java_evolution/java18/simple_web_server/SimpleStaticFileServer.java) | [`SimpleStaticFileServerTest`](../src/test/java/net/jrodolfo/java_evolution/java18/simple_web_server/SimpleStaticFileServerTest.java) |
 | JavaDoc snippets | [`JavaDocSnippetExamples`](../src/main/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/JavaDocSnippetExamples.java) | [`JavaDocSnippetExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/JavaDocSnippetExamplesTest.java) |
-| InetAddress resolver SPI | `InetAddressResolutionNotes` | `InetAddressResolutionNotesTest` |
+| Internet-Address Resolution SPI | [`inet_address_resolution`](../src/main/java/net/jrodolfo/java_evolution/java18/inet_address_resolution/README.md) | [`InetAddressResolutionNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java18/inet_address_resolution/InetAddressResolutionNotesTest.java) |
 
 ## Java 19
 

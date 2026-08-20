@@ -64,15 +64,15 @@ Before Java 18, applications that needed custom host-name resolution had limited
 
 Java 18 introduced a service-provider interface for `InetAddress` resolution. This is mostly useful for libraries, platforms, and specialized runtime environments.
 
-This repository keeps the feature as notes because installing a resolver provider changes process-wide networking behavior. That would be too heavy for a simple educational unit test.
+This repository keeps the feature as an explanatory module because installing a resolver provider changes process-wide networking behavior. Read the [`inet_address_resolution`](inet_address_resolution/README.md) module for the terminology, provider-discovery model, realistic use cases, and the reason no live provider is installed.
 
-Example: `InetAddressResolutionNotes`
+Notes: `InetAddressResolutionNotes`
 
-Test: `InetAddressResolutionNotesTest`
+Documentation test: `InetAddressResolutionNotesTest`
 
 ## How To Read This Package
 
-Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `simple_web_server/README.md` before `SimpleStaticFileServer`. For documentation snippets, read `javadoc_snippets/README.md`, inspect `JavaDocSnippetExamples`, and generate the JavaDoc site. After that, read `InetAddressResolutionNotes`.
+Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `simple_web_server/README.md` before `SimpleStaticFileServer`. For documentation snippets, read `javadoc_snippets/README.md`, inspect `JavaDocSnippetExamples`, and generate the JavaDoc site. After that, read `inet_address_resolution/README.md` before `InetAddressResolutionNotes`.
 
 Run the focused tests:
 
