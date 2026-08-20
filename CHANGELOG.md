@@ -6,21 +6,34 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
+No unreleased changes yet.
+
+## v1.3.0
+
+Learning-focused release that expands the repository from Java 8-25 coverage to Java 1-25 coverage.
+
+### Added
+
+- Added Java 1 through Java 4 foundation packages covering object-oriented basics, interfaces, checked exceptions, threads, I/O, inner classes, collections, sorting, dynamic proxies, timers, regex, NIO, logging, chained exceptions, and major explanatory platform topics.
+- Added Java 5 through Java 7 packages covering generics, enhanced for loops, autoboxing, enums, varargs, static imports, annotations, covariant returns, formatted output, concurrency utilities, Java 6 platform APIs, Project Coin, NIO.2, fork/join, and `invokedynamic`.
+- Added focused JUnit tests for Java 1 through Java 7 examples, using tests as executable documentation.
+- Added explanatory notes modules for historical features that are environment-bound, security-sensitive, obsolete, or misleading as tiny runnable examples.
+- Expanded repository navigation so the README, feature map, status matrix, JEP/reference index, learning path, study guide, migration guide, and glossary cover Java 1 through Java 25.
+
 ### Changed
 
-- Improved teaching clarity across Java 9 through Java 25 examples, notes, tests, and feature documentation.
-- Added explanatory learning modules for substantial notes-only topics such as the Java 9 module system, Java 15 hidden classes, and Java 16 Unix-domain socket channels.
-- Improved Java 23 learning material with clearer preview bridge notes, Markdown documentation comments guidance, and explanatory modules for unsafe memory-access deprecation and ZGC generational mode.
-- Improved Java 24 learning material with clearer Stream Gatherers and Class-File API explanations, explanatory modules for virtual-thread synchronization and AOT class loading, and stronger preview bridge notes to Java 25.
-- Clarified practical demo documentation so it matches the focused `make demos` validation target.
-- Expanded glossary coverage for recurring Java platform acronyms and terms.
+- Improved historical accuracy in early Java examples by avoiding later syntax where it would blur the teaching contrast, such as Java 7 diamond syntax in Java 5 and Java 6 examples.
+- Strengthened early Java source, test, and documentation clarity after source, test, documentation, and integration reviews.
+- Expanded glossary coverage for early Java platform acronyms and terms such as AWT, JDBC, JAAS, JMX, JAXB, JAX-WS, DOM, SAX, and XSLT.
 
 ### Validation
 
-- `make docs-audit`
-- `make docs-check`
-- `make demos`
-- `mvn -B clean test -q`
+- Java 1-7 focused Maven test suite
+- `node scripts/check-doc-navigation.mjs`
+- `mvn javadoc:javadoc`
+- `git diff --check`
+- `make links` was attempted in a restricted environment; external HTTP checks failed with network/firewall errors.
+- `mvn test` was attempted in a restricted environment; existing Java 18 simple web server tests failed because local socket binding was denied.
 
 ## v1.2.0
 
