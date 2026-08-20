@@ -2,6 +2,7 @@ package net.jrodolfo.java_evolution.java15;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Demonstrates sealed classes as a Java 15 preview feature.
@@ -45,7 +46,7 @@ public class SealedClassesPreviewExamples {
 	public List<String> permittedShapeNames() {
 		return Arrays.stream(Shape.class.getPermittedSubclasses())
 				.map(Class::getSimpleName)
-				.toList();
+				.collect(Collectors.toList());
 	}
 
 	/**
