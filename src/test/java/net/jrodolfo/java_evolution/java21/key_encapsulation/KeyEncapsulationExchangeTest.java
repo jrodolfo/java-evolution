@@ -47,9 +47,12 @@ class KeyEncapsulationExchangeTest {
 		assertThat(sender.providerName())
 				.as("DHKEM is implemented by a Java security provider")
 				.isNotBlank();
-		assertThat(encapsulated.secretBytes())
+		byte[] senderSecretBytes = encapsulated.secretBytes();
+		byte[] receiverSecretBytes = receiverSecret.getEncoded();
+
+		assertThat(senderSecretBytes)
 				.as("the private key lets the receiver recover the sender's shared secret")
-				.isEqualTo(receiverSecret.getEncoded());
+				.isEqualTo(receiverSecretBytes);
 	}
 
 	@Test
