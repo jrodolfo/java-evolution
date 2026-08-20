@@ -3,8 +3,6 @@ package net.jrodolfo.java_evolution.java21.key_encapsulation;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-import java.util.Arrays;
-
 import javax.crypto.DecapsulateException;
 import javax.crypto.SecretKey;
 
@@ -49,9 +47,9 @@ class KeyEncapsulationExchangeTest {
 		assertThat(sender.providerName())
 				.as("DHKEM is implemented by a Java security provider")
 				.isNotBlank();
-		assertThat(Arrays.equals(encapsulated.secretBytes(), receiverSecret.getEncoded()))
+		assertThat(encapsulated.secretBytes())
 				.as("the private key lets the receiver recover the sender's shared secret")
-				.isTrue();
+				.isEqualTo(receiverSecret.getEncoded());
 	}
 
 	@Test
