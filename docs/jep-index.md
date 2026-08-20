@@ -159,7 +159,7 @@ Status labels:
 | [JEP 461](https://openjdk.org/jeps/461) | Stream Gatherers | Preview, Notes |
 | [JEP 457](https://openjdk.org/jeps/457) | Class-File API | Preview, Notes |
 | [JEP 447](https://openjdk.org/jeps/447) | Statements before super(...) | Preview, Notes |
-| [JEP 458](https://openjdk.org/jeps/458) | Launch Multi-File Source-Code Programs | Tooling, Notes |
+| [JEP 458](https://openjdk.org/jeps/458) | Launch Multi-File Source-Code Programs | Final, Tooling, Notes |
 | [JEP 464](https://openjdk.org/jeps/464) | Scoped Values | Preview, Notes |
 | [JEP 462](https://openjdk.org/jeps/462) | Structured Concurrency | Preview, Notes |
 
