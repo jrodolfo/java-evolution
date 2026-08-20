@@ -17,7 +17,7 @@ public class AutoboxingExamples {
 	 * @return boxed integers in insertion order
 	 */
 	public List<Integer> boxedNumbers(int left, int right) {
-		List<Integer> numbers = new ArrayList<>();
+		List<Integer> numbers = new ArrayList<Integer>();
 		numbers.add(left);
 		numbers.add(right);
 		return numbers;

@@ -31,7 +31,7 @@ public class NavigableCollectionExamples {
 	 * @return descending release names
 	 */
 	public NavigableSet<String> releaseNamesDescending() {
-		NavigableSet<String> releases = new TreeSet<>();
+		NavigableSet<String> releases = new TreeSet<String>();
 		releases.add("java05");
 		releases.add("java06");
 		releases.add("java07");
@@ -45,7 +45,7 @@ public class NavigableCollectionExamples {
 	 * @return release name for the greatest known version at or below the request
 	 */
 	public String releaseAtOrBefore(int requestedVersion) {
-		NavigableMap<Integer, String> releases = new TreeMap<>();
+		NavigableMap<Integer, String> releases = new TreeMap<Integer, String>();
 		releases.put(5, "generics and concurrency utilities");
 		releases.put(6, "scripting and compiler APIs");
 		releases.put(7, "Project Coin and NIO.2");
@@ -59,7 +59,7 @@ public class NavigableCollectionExamples {
 	 * @return removal order after adding work to both ends
 	 */
 	public String dequeProcessingOrder() {
-		Deque<String> work = new ArrayDeque<>();
+		Deque<String> work = new ArrayDeque<String>();
 		work.addLast("normal");
 		work.addFirst("urgent");
 		work.addLast("background");

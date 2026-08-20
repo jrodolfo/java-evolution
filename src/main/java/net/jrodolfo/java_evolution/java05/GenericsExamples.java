@@ -21,7 +21,7 @@ public class GenericsExamples {
 	 * @return a new list whose element type is known to the compiler
 	 */
 	public List<String> typedNames(List<String> names) {
-		return new ArrayList<>(names);
+		return new ArrayList<String>(names);
 	}
 
 	/**

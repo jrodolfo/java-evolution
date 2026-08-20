@@ -46,7 +46,7 @@ class Nio2ExamplesTest {
 		List<String> fileNames = examples.regularFileNames(tempDir);
 
 		assertThat(fileNames)
-				.as("Files.list should expose Path values that can be filtered and sorted")
+				.as("Files.newDirectoryStream should expose Path entries that can be filtered and sorted")
 				.containsExactly("a.txt", "b.txt");
 	}
 }
