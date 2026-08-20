@@ -33,4 +33,21 @@ class UnnamedPatternsVariablesPreviewExamplesTest {
 				.as("The catch parameter can be unnamed when the exception object is not needed")
 				.isFalse();
 	}
+
+	@Test
+	void unnamedPatternDocumentsIgnoredRecordComponents() {
+		var line = new UnnamedPatternsVariablesPreviewExamples.Line(
+				new UnnamedPatternsVariablesPreviewExamples.Point(10, 20),
+				new UnnamedPatternsVariablesPreviewExamples.Point(30, 40));
+
+		boolean startsAtExpectedX = examples.startsAtX(line, 10);
+		boolean startsAtDifferentX = examples.startsAtX(line, 99);
+
+		assertThat(startsAtExpectedX)
+				.as("An unnamed pattern can ignore record components that the example does not need")
+				.isTrue();
+		assertThat(startsAtDifferentX)
+				.as("The named component should still be available for the actual condition")
+				.isFalse();
+	}
 }

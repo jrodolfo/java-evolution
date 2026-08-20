@@ -6,6 +6,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import java.util.Arrays;
 
 import javax.crypto.DecapsulateException;
+import javax.crypto.SecretKey;
 
 import org.junit.jupiter.api.Test;
 
@@ -60,5 +61,32 @@ class KeyEncapsulationExchangeTest {
 		assertThatThrownBy(() -> receiver.decapsulate(new byte[] { 1, 2, 3 }))
 				.as("DHKEM should reject encapsulation messages with an invalid size")
 				.isInstanceOf(DecapsulateException.class);
+	}
+
+	@Test
+	void secretBytesRejectsKeysWithoutAnEncodedRepresentation() {
+		SecretKey unencodableKey = new SecretKey() {
+			@Override
+			public String getAlgorithm() {
+				return "test";
+			}
+
+			@Override
+			public String getFormat() {
+				return null;
+			}
+
+			@Override
+			public byte[] getEncoded() {
+				return null;
+			}
+		};
+
+		var encapsulatedSecret = new EncapsulatedSecret(unencodableKey, new byte[] { 1 });
+
+		assertThatThrownBy(encapsulatedSecret::secretBytes)
+				.as("The example needs encoded bytes when exposing key material for comparison")
+				.isInstanceOf(IllegalStateException.class)
+				.hasMessage("the shared secret does not support encoding");
 	}
 }

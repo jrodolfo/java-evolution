@@ -28,10 +28,12 @@ public final class SimpleStaticFileServer implements AutoCloseable {
 
 	private final Path rootDirectory;
 	private final HttpServer server;
+	private final HttpClient httpClient;
 
-	private SimpleStaticFileServer(Path rootDirectory, HttpServer server) {
+	private SimpleStaticFileServer(Path rootDirectory, HttpServer server, HttpClient httpClient) {
 		this.rootDirectory = rootDirectory;
 		this.server = server;
+		this.httpClient = httpClient;
 	}
 
 	/**
@@ -50,8 +52,9 @@ public final class SimpleStaticFileServer implements AutoCloseable {
 		var normalizedRoot = rootDirectory.toAbsolutePath().normalize();
 		var address = new InetSocketAddress(InetAddress.getLoopbackAddress(), 0);
 		var server = SimpleFileServer.createFileServer(address, normalizedRoot, SimpleFileServer.OutputLevel.NONE);
+		var httpClient = HttpClient.newHttpClient();
 		server.start();
-		return new SimpleStaticFileServer(normalizedRoot, server);
+		return new SimpleStaticFileServer(normalizedRoot, server, httpClient);
 	}
 
 	/**
@@ -80,8 +83,9 @@ public final class SimpleStaticFileServer implements AutoCloseable {
 	 */
 	public URI uri(String path) {
 		var normalizedPath = path.startsWith("/") ? path : "/" + path;
+		var host = server.getAddress().getAddress().getHostAddress();
 		try {
-			return new URI("http", null, "127.0.0.1", port(), normalizedPath, null, null);
+			return new URI("http", null, host, port(), normalizedPath, null, null);
 		}
 		catch (URISyntaxException exception) {
 			throw new IllegalArgumentException("invalid request path: " + path, exception);
@@ -100,8 +104,7 @@ public final class SimpleStaticFileServer implements AutoCloseable {
 		var request = HttpRequest.newBuilder(uri(path))
 				.GET()
 				.build();
-		var response = HttpClient.newHttpClient()
-				.send(request, HttpResponse.BodyHandlers.ofString());
+		var response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 		return new StaticFileResponse(response.statusCode(), response.body());
 	}
 

@@ -57,4 +57,39 @@ public class UnnamedPatternsVariablesPreviewExamples {
 			return false;
 		}
 	}
+
+	/**
+	 * Uses unnamed patterns for record components that are not needed.
+	 *
+	 * <p>
+	 * The first point's x coordinate is useful, but neither y coordinate nor the
+	 * second point is needed. The underscores make those intentional omissions
+	 * visible in the pattern.
+	 * </p>
+	 *
+	 * @param shape value to inspect
+	 * @param expectedStartX x coordinate required for the first point
+	 * @return whether the value is a line whose first point has the requested x coordinate
+	 */
+	public boolean startsAtX(Object shape, int expectedStartX) {
+		return shape instanceof Line(Point(int startX, _), _) && startX == expectedStartX;
+	}
+
+	/**
+	 * Point record used by the unnamed record-pattern example.
+	 *
+	 * @param x x coordinate
+	 * @param y y coordinate
+	 */
+	public record Point(int x, int y) {
+	}
+
+	/**
+	 * Line record used by the unnamed record-pattern example.
+	 *
+	 * @param start starting point
+	 * @param end ending point
+	 */
+	public record Line(Point start, Point end) {
+	}
 }

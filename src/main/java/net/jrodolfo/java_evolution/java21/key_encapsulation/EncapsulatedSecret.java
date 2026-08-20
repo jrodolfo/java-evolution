@@ -40,6 +40,10 @@ public record EncapsulatedSecret(SecretKey secretKey, byte[] encapsulation) {
 	 * @return a defensive copy of the sender-side secret bytes
 	 */
 	public byte[] secretBytes() {
-		return secretKey.getEncoded().clone();
+		var encoded = secretKey.getEncoded();
+		if (encoded == null) {
+			throw new IllegalStateException("the shared secret does not support encoding");
+		}
+		return encoded.clone();
 	}
 }

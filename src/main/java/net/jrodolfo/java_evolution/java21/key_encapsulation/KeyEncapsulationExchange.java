@@ -1,8 +1,8 @@
 package net.jrodolfo.java_evolution.java21.key_encapsulation;
 
 import java.security.InvalidKeyException;
+import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
 
 import javax.crypto.DecapsulateException;
 
@@ -84,7 +84,7 @@ public class KeyEncapsulationExchange {
 		 * @return {@code true} when sender and receiver key material matches
 		 */
 		public boolean secretsMatch() {
-			return Arrays.equals(senderSecretBytes, receiverSecretBytes);
+			return MessageDigest.isEqual(senderSecretBytes, receiverSecretBytes);
 		}
 	}
 }

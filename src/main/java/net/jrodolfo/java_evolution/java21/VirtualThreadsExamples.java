@@ -95,8 +95,12 @@ public class VirtualThreadsExamples {
 			threads.add(thread);
 		}
 
-		started.await();
-		release.countDown();
+		try {
+			started.await();
+		}
+		finally {
+			release.countDown();
+		}
 
 		for (Thread thread : threads) {
 			thread.join();

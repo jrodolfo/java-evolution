@@ -78,6 +78,6 @@ public class StructuredConcurrencyPreviewNotes {
 	 * @return a short next-step note
 	 */
 	public String nextStep() {
-		return "read the Java 20 structured_concurrency module next, then the Java 25 structured_concurrency module for the later preview workflow";
+		return "read the Java 20 structured_concurrency module next, then Java 21 for the first preview, and Java 25 for the later preview workflow";
 	}
 }
