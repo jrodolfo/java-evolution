@@ -68,6 +68,23 @@ Example: `CompactNumberFormatExamples`
 
 Test: `CompactNumberFormatExamplesTest`
 
+## JVM Constants API
+
+Before Java 12, tools that worked with bytecode or generated Java code often
+had to load a class in order to describe a field, method, or type reference.
+Loading a class can trigger resolution or initialization, which is undesirable
+when a tool only needs to inspect or describe a constant symbolically.
+
+Java 12 introduced the JVM Constants API through JEP 334. The
+`java.lang.constant` API lets compilers, bytecode tools, and other platform
+tools describe constant-pool entries by name and structure without requiring
+the referenced class to be loaded first. These nominal descriptions can later
+be resolved when the tool actually needs a live runtime object.
+
+This repository keeps JEP 334 as a reference topic because the API is most
+useful in compiler and bytecode tooling rather than in a small application
+example.
+
 ## How To Read This Package
 
 Start with `SwitchExpressionPreviewExamples` to see the first preview of switch expressions. Then read `TeeingCollectorExamples`, `StringIndentExamples`, `FilesMismatchExamples`, and `CompactNumberFormatExamples`.

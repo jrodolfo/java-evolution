@@ -76,9 +76,9 @@ Explanatory module: [`statements_before_super`](statements_before_super/README.m
 
 Test: `StatementsBeforeSuperPreviewNotesTest`
 
-## Launch Multi-File Source Programs
+## Launch Multi-File Source Programs Final
 
-Java can run a single source file directly, which is useful for small scripts and learning examples. Java 22 improved this by supporting multi-file source programs from the launcher.
+Java can run a single source file directly, which is useful for small scripts and learning examples. Java 22 finalized the multi-file source launcher improvement from JEP 458.
 
 The problem it solves is setup friction: small Java programs should not always require a Maven or Gradle project before they can be tried.
 

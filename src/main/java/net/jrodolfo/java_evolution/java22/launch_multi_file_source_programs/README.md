@@ -1,6 +1,6 @@
 # Launch Multi-File Source Programs
 
-Java 22 improved the Java source launcher so small programs can span multiple source files.
+Java 22 finalized the Java source launcher improvement through JEP 458, Launch Multi-File Source-Code Programs. This is a permanent tooling feature, not a preview feature.
 
 This feature is documented as an explanatory module because it is command-line launcher behavior. A faithful demo belongs to a small source tree launched with `java Main.java`, not to ordinary Maven-compiled classes.
 

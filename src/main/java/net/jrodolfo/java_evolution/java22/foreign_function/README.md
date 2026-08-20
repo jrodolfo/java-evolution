@@ -72,6 +72,12 @@ The examples use these Java 22 API pieces:
 - `FunctionDescriptor`: describes the native function signature
 - `downcallHandle(...)`: creates a method handle that Java can invoke
 
+The linker follows the platform's C Application Binary Interface (ABI). An ABI
+defines details such as calling conventions, data representations, alignment,
+and how values cross the Java/native boundary. This is why a native function's
+signature must be described with layouts that match the operating system and
+processor running the JVM.
+
 For `atoi`, the C shape is conceptually:
 
 ```text

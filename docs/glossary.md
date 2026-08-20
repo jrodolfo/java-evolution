@@ -10,6 +10,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | ARM | Advanced RISC Machines | A processor architecture family. In this project, it mainly appears through ARM64 platform notes for Apple Silicon and Linux virtual machines. |
 | AOT | Ahead-of-Time | Work done before normal application startup, such as preloading or linking classes to reduce startup cost. |
 | API | Application Programming Interface | A public type, method, module, or library contract that code can call. |
+| ABI | Application Binary Interface | The platform rules that describe how compiled code calls functions and represents values in memory; relevant to the FFM linker's native function signatures. |
 | ARM64 | 64-bit ARM architecture | The CPU architecture used by modern Apple Silicon machines and some Linux/Windows systems. It matters when installing JDKs or tools such as `lychee`. |
 | CI | Continuous Integration | Automated checks run by GitHub Actions, such as build, link validation, and JavaDoc publishing. |
 | CORBA | Common Object Request Broker Architecture | An older distributed-object technology whose Java EE/JDK-bundled modules matter mainly for legacy Java migration discussions. |

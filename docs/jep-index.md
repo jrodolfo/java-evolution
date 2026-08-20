@@ -69,6 +69,7 @@ Status labels:
 | [JEP 358](https://openjdk.org/jeps/358) | Helpful NullPointerExceptions | Runtime |
 | [JEP 359](https://openjdk.org/jeps/359) | Records | Preview |
 | [JEP 305](https://openjdk.org/jeps/305) | Pattern Matching for instanceof | Preview |
+| [JEP 368](https://openjdk.org/jeps/368) | Text Blocks | Second Preview |
 
 ## Java 15
 
@@ -76,6 +77,8 @@ Status labels:
 |---|---|---|
 | [JEP 378](https://openjdk.org/jeps/378) | Text Blocks | Final |
 | [JEP 360](https://openjdk.org/jeps/360) | Sealed Classes | Preview |
+| [JEP 375](https://openjdk.org/jeps/375) | Pattern Matching for instanceof | Second Preview |
+| [JEP 384](https://openjdk.org/jeps/384) | Records | Second Preview |
 | [JEP 371](https://openjdk.org/jeps/371) | Hidden Classes | Final, Explanatory Module |
 
 ## Java 16
@@ -84,6 +87,7 @@ Status labels:
 |---|---|---|
 | [JEP 395](https://openjdk.org/jeps/395) | Records | Final |
 | [JEP 394](https://openjdk.org/jeps/394) | Pattern Matching for instanceof | Final |
+| [JEP 397](https://openjdk.org/jeps/397) | Sealed Classes | Second Preview |
 | [JEP 380](https://openjdk.org/jeps/380) | Unix-Domain Socket Channels | Final, Explanatory Module |
 | [JEP 338](https://openjdk.org/jeps/338) | Vector API | Incubator, Notes |
 | [JEP 389](https://openjdk.org/jeps/389) | Foreign Linker API | Incubator, Notes |
@@ -115,6 +119,7 @@ Status labels:
 | [JEP 428](https://openjdk.org/jeps/428) | Structured Concurrency | Incubator, Explanatory module |
 | [JEP 405](https://openjdk.org/jeps/405) | Record Patterns | Preview |
 | [JEP 427](https://openjdk.org/jeps/427) | Pattern Matching for switch | Preview |
+| [JEP 420](https://openjdk.org/jeps/420) | Pattern Matching for switch | Second Preview |
 | [JEP 424](https://openjdk.org/jeps/424) | Foreign Function and Memory API | Preview, Notes |
 
 ## Java 20
@@ -141,6 +146,8 @@ Status labels:
 | [JEP 446](https://openjdk.org/jeps/446) | Scoped Values | Preview, Explanatory module |
 | [JEP 453](https://openjdk.org/jeps/453) | Structured Concurrency | Preview, Explanatory module |
 | [JEP 452](https://openjdk.org/jeps/452) | Key Encapsulation Mechanism API | Final, Security, Executable example |
+| [JEP 442](https://openjdk.org/jeps/442) | Foreign Function and Memory API | Third Preview, Notes |
+| [JEP 445](https://openjdk.org/jeps/445) | Unnamed Classes and Instance Main Methods | Preview, Notes |
 
 ## Java 22
 
@@ -148,6 +155,7 @@ Status labels:
 |---|---|---|
 | [JEP 456](https://openjdk.org/jeps/456) | Unnamed Variables and Patterns | Final |
 | [JEP 454](https://openjdk.org/jeps/454) | Foreign Function and Memory API | Final, Example |
+| [JEP 463](https://openjdk.org/jeps/463) | Implicitly Declared Classes and Instance Main Methods | Second Preview, Notes |
 | [JEP 461](https://openjdk.org/jeps/461) | Stream Gatherers | Preview, Notes |
 | [JEP 457](https://openjdk.org/jeps/457) | Class-File API | Preview, Notes |
 | [JEP 447](https://openjdk.org/jeps/447) | Statements before super(...) | Preview, Notes |
@@ -160,6 +168,7 @@ Status labels:
 | JEP | Feature | Status |
 |---|---|---|
 | [JEP 467](https://openjdk.org/jeps/467) | Markdown Documentation Comments | Tooling, Notes |
+| [JEP 477](https://openjdk.org/jeps/477) | Implicitly Declared Classes and Instance Main Methods | Third Preview, Notes |
 | [JEP 455](https://openjdk.org/jeps/455) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
 | [JEP 476](https://openjdk.org/jeps/476) | Module Import Declarations | Preview, Notes |
 | [JEP 482](https://openjdk.org/jeps/482) | Flexible Constructor Bodies | Preview, Notes |
@@ -187,6 +196,8 @@ Status labels:
 | [JEP 488](https://openjdk.org/jeps/488) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
 | [JEP 487](https://openjdk.org/jeps/487) | Scoped Values | Preview, Notes |
 | [JEP 499](https://openjdk.org/jeps/499) | Structured Concurrency | Preview, Notes |
+| [JEP 495](https://openjdk.org/jeps/495) | Simple Source Files and Instance Main Methods | Fourth Preview, Notes |
+| [JEP 450](https://openjdk.org/jeps/450) | Compact Object Headers | Experimental, Notes |
 
 ## Java 25
 
