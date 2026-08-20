@@ -23,5 +23,8 @@ class PatternMatchingSwitchPreviewExamplesTest {
 		assertThat(examples.describe(21))
 				.as("An Integer pattern should bind the value")
 				.isEqualTo("integer doubled=42");
+		assertThat(examples.describe(1.5))
+				.as("Values not matching any pattern should use the default branch")
+				.isEqualTo("unknown");
 	}
 }

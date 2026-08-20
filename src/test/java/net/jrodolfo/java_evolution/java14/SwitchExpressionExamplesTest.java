@@ -25,8 +25,14 @@ class SwitchExpressionExamplesTest {
 	@Test
 	void yieldReturnsAValueFromABlockBranch() {
 		// When / Then
+		assertThat(examples.grade(95))
+				.as("Arrow branches can return values directly without yield")
+				.isEqualTo("excellent");
 		assertThat(examples.grade(75))
 				.as("Block branches should use yield to produce the switch expression result")
 				.isEqualTo("good progress");
+		assertThat(examples.grade(50))
+				.as("The default branch should produce the fallback label")
+				.isEqualTo("keep practicing");
 	}
 }

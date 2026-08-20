@@ -25,6 +25,7 @@ class StrongEncapsulationNotesTest {
 				.contains("internal JDK packages");
 		assertThat(notes.migrationAdvice())
 				.as("The notes should include practical migration advice")
+				.contains("reflective access")
 				.contains("standard APIs");
 		assertThat(notes.projectDecision())
 				.as("The notes should explain why no illegal-access demo is included")
