@@ -12,12 +12,14 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | API | Application Programming Interface | A public type, method, module, or library contract that code can call. |
 | ABI | Application Binary Interface | The platform rules that describe how compiled code calls functions and represents values in memory; relevant to the FFM linker's native function signatures. |
 | ARM64 | 64-bit ARM architecture | The CPU architecture used by modern Apple Silicon machines and some Linux/Windows systems. It matters when installing JDKs or tools such as `lychee`. |
+| AWT | Abstract Window Toolkit | Java's original GUI toolkit. In this project, AWT appears as early platform background and as part of the history that led to Swing and Java 2D. |
 | CI | Continuous Integration | Automated checks run by GitHub Actions, such as build, link validation, and JavaDoc publishing. |
 | CORBA | Common Object Request Broker Architecture | An older distributed-object technology whose Java EE/JDK-bundled modules matter mainly for legacy Java migration discussions. |
 | CPU | Central Processing Unit | The processor running Java code. It appears in discussions about platform architecture, virtual threads, and vector computation. |
 | CSS | Cascading Style Sheets | A web styling language mentioned when examples use embedded text formats. |
 | DHKEM | Diffie-Hellman Key Encapsulation Mechanism | The KEM algorithm name used by the Java 21 example with X25519 keys. |
 | DNS | Domain Name System | The naming system that resolves host names to network addresses; relevant to the Java 18 `InetAddress` resolver SPI notes. |
+| DOM | Document Object Model | A tree-oriented XML API. In the Java 4 XML notes, DOM contrasts with streaming or event-oriented XML processing. |
 | EE | Enterprise Edition | Usually appears as Java EE, the older enterprise Java platform name relevant to migration from older JDKs. |
 | FFM | Foreign Function and Memory | Java APIs for calling native code and working with memory outside the Java heap. |
 | GC | Garbage Collection | JVM memory management that finds and reclaims objects the application no longer uses. |
@@ -33,14 +35,19 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | INET | Internet Protocol family | The protocol family used by Internet sockets in Java networking APIs. In this project, it appears when contrasting `StandardProtocolFamily.INET` with Unix-domain sockets. |
 | Incubator | Incubator Module or API | A non-final API delivered for experimentation before it is finalized, changed, or removed. |
 | IO | Input/Output | Reading from or writing to external resources. In compact source-file examples, `IO.println(...)` is a small console output helper available to simple source programs. |
+| JAAS | Java Authentication and Authorization Service | Java security APIs for representing authenticated subjects and checking permissions. In this project, JAAS appears in the Java 4 security integration notes. |
 | JAR | Java Archive | A packaged Java artifact produced by build tools such as Maven. |
+| JAXB | Java Architecture for XML Binding | A Java/XML binding technology used to map XML documents to Java objects. It appears in the Java 6 web-service notes as part of the older bundled enterprise-facing stack. |
+| JAX-WS | Java API for XML Web Services | The Java API for SOAP-based XML web services. It appears in the Java 6 web-service notes as platform support that later moved out of the core JDK. |
 | JavaDoc | Java Documentation | Documentation generated from Java source comments, usually browsed as HTML. |
+| JDBC | Java Database Connectivity | Java's standard database access API. In this project, JDBC is treated as a Java 1.1-era explanatory module because a real example would need a database fixture. |
 | JDK | Java Development Kit | The Java installation used to compile, test, document, and run this project. |
 | JEP | JDK Enhancement Proposal | The OpenJDK process and design record used to propose, track, and document significant JDK changes. In this project, JEP links are the authoritative source for when a Java feature was previewed, finalized, changed, or removed. |
 | JFR | Java Flight Recorder | JVM observability tooling for recording runtime events and performance data. |
 | JIT | Just-In-Time | JVM compilation work performed while a program runs, often discussed with startup, warmup, and runtime optimization. |
 | JAXP | Java API for XML Processing | The standard XML processing API added to the Java platform in the Java 4 era. |
 | JCE | Java Cryptography Extension | Java cryptography APIs integrated into the standard platform in the Java 4 era. |
+| JMX | Java Management Extensions | Java APIs and conventions for monitoring and managing applications and the JVM through managed beans, commonly called MBeans or MXBeans. |
 | JNDI | Java Naming and Directory Interface | A naming and directory API used by older enterprise Java systems to look up resources. |
 | JNI | Java Native Interface | The older native-integration mechanism that the Foreign Function and Memory API improves on for many use cases. |
 | JPMS | Java Platform Module System | The Java 9 module system used to declare module dependencies and exported packages with `module-info.java`, `requires`, and `exports`. |
@@ -69,6 +76,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | RISC | Reduced Instruction Set Computer | A processor design style referenced by the ARM acronym. |
 | RMI | Remote Method Invocation | A Java distributed-object technology mentioned as background when discussing native calls and remote procedure styles. |
 | RPC | Remote Procedure Call | A style of calling code across process or network boundaries; useful contrast for local native calls through FFM. |
+| SAX | Simple API for XML | An event-driven XML parsing API. In the Java 4 XML notes, SAX is useful contrast to DOM because it streams parser events instead of building a full tree. |
 | SDKMAN | Software Development Kit Manager | A tool commonly used on Linux/macOS to install and switch between JDK versions. |
 | SE | Standard Edition | Java Standard Edition, the core Java platform specification for the language, JVM, and standard APIs. |
 | SHA-256 | Secure Hash Algorithm 256-bit | A cryptographic hash function used as the hash primitive in `HKDF-SHA256`. |
@@ -82,5 +90,6 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | VM | Virtual Machine | A general term for a runtime or machine abstraction; in this project it usually appears as part of JVM discussions. |
 | X25519 | X25519 elliptic-curve Diffie-Hellman function | The key-agreement key type used by the Java 21 DHKEM example. |
 | XML | Extensible Markup Language | A structured text data format often embedded in Java strings or text blocks. |
+| XSLT | Extensible Stylesheet Language Transformations | An XML transformation language. In the Java 4 XML notes, XSLT represents the transformation side of the standard XML-processing stack. |
 | ZGC | Z Garbage Collector | A low-latency garbage collector discussed in Java runtime and GC notes. |
 | ZIP | ZIP archive format | A compressed archive format used in examples that treat archives as filesystems. |

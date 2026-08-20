@@ -10,6 +10,8 @@ Before Java 7, resource cleanup commonly required `try`/`finally` blocks. That w
 
 Try-with-resources closes resources automatically and records cleanup failures as suppressed exceptions.
 
+Java 7 introduced `AutoCloseable` as the general contract for resources managed by try-with-resources. `java.io.Closeable` was retrofitted to extend `AutoCloseable`, but it keeps the older I/O-specific signature where `close()` throws `IOException` instead of the broader `Exception`. In interviews, this distinction explains why try-with-resources works for both classic I/O streams and non-I/O resources such as locks, cursors, or custom cleanup handles.
+
 Example: `TryWithResourcesStatementExamples`
 
 Test: `TryWithResourcesStatementExamplesTest`

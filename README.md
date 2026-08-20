@@ -280,6 +280,8 @@ Use the class names in [docs/feature-map.md](docs/feature-map.md) to choose a sp
 
 ## Official References
 
+Java 1 through Java 7 predate the modern OpenJDK release-project pages and the JEP process used for later releases. Their historical release notes, specifications, and API references are tracked in [docs/jep-index.md](docs/jep-index.md#java-1-7) and in the individual version READMEs.
+
 - [OpenJDK JDK 8](https://openjdk.org/projects/jdk8/)
 - [OpenJDK JDK 9](https://openjdk.org/projects/jdk9/)
 - [OpenJDK JDK 10](https://openjdk.org/projects/jdk/10/)
