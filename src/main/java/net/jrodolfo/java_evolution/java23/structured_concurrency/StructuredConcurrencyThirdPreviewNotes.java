@@ -44,12 +44,12 @@ public class StructuredConcurrencyThirdPreviewNotes {
 	}
 
 	/**
-	 * Points learners to the next preview module.
+	 * Points learners to the next preview module in the release sequence.
 	 *
 	 * @return a short next-step note
 	 */
 	public String nextStep() {
-		return "read the Java 25 structured_concurrency module because this feature is still preview";
+		return "read the Java 24 structured_concurrency module next, then the Java 25 module because this feature is still preview";
 	}
 
 	/**

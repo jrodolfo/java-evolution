@@ -39,12 +39,12 @@ public class ScopedValuesThirdPreviewNotes {
 	}
 
 	/**
-	 * Points learners to the final Java 25 module.
+	 * Points learners to the next preview module and then the later Java 25 module.
 	 *
 	 * @return a short next-step note
 	 */
 	public String nextStep() {
-		return "read the Java 25 scoped_values module for the final runnable learning example";
+		return "read the Java 24 scoped_values module next, then the Java 25 module for the final runnable learning example";
 	}
 
 	/**

@@ -21,6 +21,6 @@ class CompactSourceFilesNotesTest {
 				.as("The note should explain why this is documented rather than compiled in this package")
 				.contains("source-launcher")
 				.contains("unnamed package")
-				.contains("Spring Boot package tree");
+				.contains("Spring Boot-based Maven reference project's ordinary package tree");
 	}
 }

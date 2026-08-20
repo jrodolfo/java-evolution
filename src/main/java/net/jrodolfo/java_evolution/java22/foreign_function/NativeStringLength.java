@@ -18,6 +18,12 @@ import java.lang.invoke.MethodHandle;
  * to C {@code strlen}, and receives the string length back as a Java
  * {@code long}. This shows the foreign-function side of the Foreign Function
  * and Memory API without requiring a custom native library.
+ *
+ * <p>
+ * The example uses {@code JAVA_LONG} for C {@code size_t}, which matches the
+ * 64-bit platforms targeted by this repository. The native linker provides
+ * canonical layouts for platform-dependent C types when code must support
+ * other data models.
  * </p>
  */
 public class NativeStringLength {

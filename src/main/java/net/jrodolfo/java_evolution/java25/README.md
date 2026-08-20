@@ -46,7 +46,7 @@ This makes public top-level types from packages exported by `java.base`, such as
 
 This is useful for learning, scripts, and code that naturally uses a broad module surface. The feature was previewed in Java 23 by JEP 476, previewed again in Java 24 by JEP 494, and finalized in Java 25 by JEP 511.
 
-This is a final Java 25 feature documented via notes because module imports are most natural in small source files, scripts, and examples outside this Spring Boot package tree.
+This is a final Java 25 feature documented via notes because module imports are most natural in small source files, scripts, and examples outside this Spring Boot-based Maven reference project's ordinary package tree.
 
 Example: `ModuleImportDeclarationsNotes`
 
@@ -82,7 +82,7 @@ If that source is saved as `HelloWorld.java`, it can be launched directly:
 java HelloWorld.java
 ```
 
-This is a final Java 25 feature documented via notes because compact source files belong naturally to source-launcher examples, not to the Spring Boot package tree.
+This is a final Java 25 feature documented via notes because compact source files belong naturally to source-launcher examples, not to this Spring Boot-based Maven reference project's ordinary package tree.
 
 Example: `CompactSourceFilesNotes`
 

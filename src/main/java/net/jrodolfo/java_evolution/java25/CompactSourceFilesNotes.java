@@ -22,8 +22,8 @@ package net.jrodolfo.java_evolution.java25;
  *
  * <p>
  * This repository documents the feature as notes because compact source files
- * belong naturally to source-launcher examples rather than the Spring Boot
- * source tree.
+ * belong naturally to source-launcher examples rather than this Spring Boot-
+ * based Maven reference project's ordinary source tree.
  * </p>
  */
 public class CompactSourceFilesNotes {
@@ -51,6 +51,6 @@ public class CompactSourceFilesNotes {
 	 * @return the project decision
 	 */
 	public String projectDecision() {
-		return "the repository documents source-launcher behavior because compact source files naturally live in the unnamed package rather than this Spring Boot package tree";
+		return "the repository documents source-launcher behavior because compact source files naturally live in the unnamed package rather than this Spring Boot-based Maven reference project's ordinary package tree";
 	}
 }
