@@ -47,6 +47,28 @@ class StringApiExamplesTest {
 	}
 
 	@Test
+	void stripLeadingRemovesOnlyLeadingWhitespace() {
+		// When
+		String stripped = examples.stripLeadingText("  Java 11  ");
+
+		// Then
+		assertThat(stripped)
+				.as("String.stripLeading should preserve trailing whitespace")
+				.isEqualTo("Java 11  ");
+	}
+
+	@Test
+	void stripTrailingRemovesOnlyTrailingWhitespace() {
+		// When
+		String stripped = examples.stripTrailingText("  Java 11  ");
+
+		// Then
+		assertThat(stripped)
+				.as("String.stripTrailing should preserve leading whitespace")
+				.isEqualTo("  Java 11");
+	}
+
+	@Test
 	void repeatCreatesRepeatedText() {
 		// When
 		String repeated = examples.repeatText("ha", 3);

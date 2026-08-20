@@ -21,8 +21,8 @@ import java.time.Duration;
  * The Java 11 {@link HttpClient} solves this by providing a standard client
  * with builders, synchronous and asynchronous execution, and modern protocol
  * support. The examples include request creation and synchronous execution.
- * Tests pass in a fake client so the behavior remains deterministic and
- * offline.
+ * Tests use a local HTTP server on an ephemeral port, so the request and
+ * response flow is real while remaining deterministic and offline.
  * </p>
  */
 public class HttpClientExamples {
@@ -71,7 +71,7 @@ public class HttpClientExamples {
 	 * <p>
 	 * The {@link HttpClient#send(HttpRequest, HttpResponse.BodyHandler)} method is
 	 * the central Java 11 operation for blocking HTTP calls. The client is
-	 * provided by the caller so tests can use a deterministic fake client instead
+	 * provided by the caller so tests can use a local deterministic server instead
 	 * of relying on external network access.
 	 * </p>
 	 *

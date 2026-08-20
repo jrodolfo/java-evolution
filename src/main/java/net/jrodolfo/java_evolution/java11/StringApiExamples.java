@@ -51,6 +51,28 @@ public class StringApiExamples {
 	}
 
 	/**
+	 * Uses {@link String#stripLeading()} to remove Unicode whitespace only from
+	 * the beginning of the text.
+	 *
+	 * @param text the text to strip
+	 * @return text without leading whitespace
+	 */
+	public String stripLeadingText(String text) {
+		return text.stripLeading();
+	}
+
+	/**
+	 * Uses {@link String#stripTrailing()} to remove Unicode whitespace only from
+	 * the end of the text.
+	 *
+	 * @param text the text to strip
+	 * @return text without trailing whitespace
+	 */
+	public String stripTrailingText(String text) {
+		return text.stripTrailing();
+	}
+
+	/**
 	 * Uses {@link String#repeat(int)} to repeat a string.
 	 *
 	 * @param text the text to repeat
