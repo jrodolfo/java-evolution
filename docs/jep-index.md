@@ -11,6 +11,10 @@ Status labels:
 - **Runtime**: JVM, GC, diagnostics, startup, or migration behavior.
 - **Security**: cryptography or security platform feature.
 - **Notes**: represented as a notes class in this repository.
+- **Explanatory module**: represented by a focused package README and notes class because a small runnable example would be misleading or require special setup.
+- **Example**: represented by runnable example code and focused tests.
+- **Documentation example**: represented by source documentation that is verified through JavaDoc generation.
+- **Experimental**: an additional qualifier used when the referenced JEP describes an experimental runtime or tooling capability.
 
 ## Java 8
 
