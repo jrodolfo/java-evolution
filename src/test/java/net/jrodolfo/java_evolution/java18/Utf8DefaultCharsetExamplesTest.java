@@ -24,11 +24,11 @@ class Utf8DefaultCharsetExamplesTest {
 	@Test
 	void defaultEncodingUsesUtf8Bytes() {
 		// When
-		byte[] bytes = examples.bytesWithDefaultCharset("cafe");
+		byte[] bytes = examples.bytesWithDefaultCharset("café");
 
 		// Then
 		assertThat(bytes)
-				.as("Default charset encoding should match explicit UTF-8 for ASCII-compatible text")
-				.containsExactly("cafe".getBytes(StandardCharsets.UTF_8));
+				.as("Default charset encoding should match explicit UTF-8 for non-ASCII text")
+				.containsExactly("café".getBytes(StandardCharsets.UTF_8));
 	}
 }
