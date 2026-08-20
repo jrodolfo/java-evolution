@@ -81,6 +81,9 @@ Status labels:
 | [JEP 395](https://openjdk.org/jeps/395) | Records | Final |
 | [JEP 394](https://openjdk.org/jeps/394) | Pattern Matching for instanceof | Final |
 | [JEP 380](https://openjdk.org/jeps/380) | Unix-Domain Socket Channels | Final, Explanatory Module |
+| [JEP 338](https://openjdk.org/jeps/338) | Vector API | Incubator, Notes |
+| [JEP 389](https://openjdk.org/jeps/389) | Foreign Linker API | Incubator, Notes |
+| [JEP 393](https://openjdk.org/jeps/393) | Foreign-Memory Access API | Third Incubator, Notes |
 
 ## Java 17
 

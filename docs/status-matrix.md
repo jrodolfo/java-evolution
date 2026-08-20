@@ -69,6 +69,9 @@ Status values may be combined, such as `final, security, executable example`, wh
 | 16 | Pattern matching for `instanceof` final | final | `PatternMatchingInstanceofExamples` | `PatternMatchingInstanceofExamplesTest` | [JEP 394](https://openjdk.org/jeps/394) |
 | 16 | `Stream.toList()` | final | `StreamToListExamples` | `StreamToListExamplesTest` | [java16 README](../src/main/java/net/jrodolfo/java_evolution/java16/README.md) |
 | 16 | Unix-domain socket channels | final, explanatory module | [`UnixDomainSocketChannelNotes`](../src/main/java/net/jrodolfo/java_evolution/java16/unix_domain_socket/UnixDomainSocketChannelNotes.java) | [`UnixDomainSocketChannelNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java16/unix_domain_socket/UnixDomainSocketChannelNotesTest.java) | [JEP 380](https://openjdk.org/jeps/380) |
+| 16 | Vector API first incubator | incubator, documentation | [java16 README](../src/main/java/net/jrodolfo/java_evolution/java16/README.md) | No dedicated test | [JEP 338](https://openjdk.org/jeps/338) |
+| 16 | Foreign Linker API | incubator, documentation | [java16 README](../src/main/java/net/jrodolfo/java_evolution/java16/README.md) | No dedicated test | [JEP 389](https://openjdk.org/jeps/389) |
+| 16 | Foreign-Memory Access API third incubator | incubator, documentation | [java16 README](../src/main/java/net/jrodolfo/java_evolution/java16/README.md) | No dedicated test | [JEP 393](https://openjdk.org/jeps/393) |
 | 17 | Sealed classes final | final | `SealedClassesExamples` | `SealedClassesExamplesTest` | [JEP 409](https://openjdk.org/jeps/409) |
 | 17 | Pattern matching for switch preview | preview | `PatternMatchingSwitchPreviewExamples` | `PatternMatchingSwitchPreviewExamplesTest` | [JEP 406](https://openjdk.org/jeps/406) |
 | 17 | Random Generator API | final | `RandomGeneratorExamples` | `RandomGeneratorExamplesTest` | [JEP 356](https://openjdk.org/jeps/356) |
