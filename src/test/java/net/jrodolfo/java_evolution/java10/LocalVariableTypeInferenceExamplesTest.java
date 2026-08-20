@@ -56,14 +56,14 @@ class LocalVariableTypeInferenceExamplesTest {
 	}
 
 	@Test
-	void varIsStillStaticallyTyped() {
+	void varSupportsOperationsOnItsInferredStaticType() {
 		// When
-		var typeName = examples.inferredTypeStillHasAConcreteClass();
+		var uppercaseFeature = examples.inferredTypeSupportsStringOperations();
 
 		// Then
-		assertThat(typeName)
-				.as("var should infer a concrete compile-time type, not a dynamic type")
-				.isEqualTo("String");
+		assertThat(uppercaseFeature)
+				.as("var should infer String so String operations remain available")
+				.isEqualTo("LOCAL VARIABLE TYPE INFERENCE");
 	}
 
 	@Test

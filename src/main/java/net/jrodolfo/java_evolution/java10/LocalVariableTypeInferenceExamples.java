@@ -70,13 +70,14 @@ public class LocalVariableTypeInferenceExamples {
 	}
 
 	/**
-	 * Shows that a {@code var} variable still has a real compile-time type.
+	 * Shows that a {@code var} variable still has a concrete compile-time type by
+	 * calling a {@link String}-specific method on the inferred variable.
 	 *
-	 * @return the runtime class name of a variable inferred as {@link String}
+	 * @return the text converted through a {@link String} operation
 	 */
-	public String inferredTypeStillHasAConcreteClass() {
+	public String inferredTypeSupportsStringOperations() {
 		var feature = "local variable type inference";
-		return feature.getClass().getSimpleName();
+		return feature.toUpperCase();
 	}
 
 	/**
