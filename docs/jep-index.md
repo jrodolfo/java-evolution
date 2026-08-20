@@ -89,7 +89,7 @@ Status labels:
 | [JEP 409](https://openjdk.org/jeps/409) | Sealed Classes | Final |
 | [JEP 406](https://openjdk.org/jeps/406) | Pattern Matching for switch | Preview |
 | [JEP 356](https://openjdk.org/jeps/356) | Enhanced Pseudo-Random Number Generators | Final |
-| [JEP 403](https://openjdk.org/jeps/403) | Strongly Encapsulate JDK Internals | Runtime, Notes |
+| [JEP 403](https://openjdk.org/jeps/403) | Strongly Encapsulate JDK Internals | Runtime, Explanatory Module |
 
 ## Java 18
 

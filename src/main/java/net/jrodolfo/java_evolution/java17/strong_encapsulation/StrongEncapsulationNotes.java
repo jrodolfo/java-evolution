@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java17;
+package net.jrodolfo.java_evolution.java17.strong_encapsulation;
 
 /**
  * Explains strong encapsulation of JDK internals in Java 17.

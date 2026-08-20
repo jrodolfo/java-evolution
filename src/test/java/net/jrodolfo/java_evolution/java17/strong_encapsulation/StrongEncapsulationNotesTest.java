@@ -1,4 +1,4 @@
-package net.jrodolfo.java_evolution.java17;
+package net.jrodolfo.java_evolution.java17.strong_encapsulation;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

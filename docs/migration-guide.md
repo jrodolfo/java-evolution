@@ -71,7 +71,7 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java16/RecordExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java16/PatternMatchingInstanceofExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java17/SealedClassesExamples.java`
-- `src/main/java/net/jrodolfo/java_evolution/java17/StrongEncapsulationNotes.java`
+- [`strong_encapsulation`](../src/main/java/net/jrodolfo/java_evolution/java17/strong_encapsulation/README.md)
 
 Run:
 
