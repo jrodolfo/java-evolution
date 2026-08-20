@@ -68,7 +68,7 @@ Test: `TryWithResourcesExamplesTest`
 
 Before Java 9, Java code had limited standard support for inspecting operating-system processes. Developers often had to rely on platform-specific shell commands or native code to get process IDs and related metadata.
 
-Java 9 added `ProcessHandle`, which gives Java code a standard way to inspect the current process, parent process, child processes, and process metadata.
+Java 9 added `ProcessHandle`, which gives Java code a standard way to inspect the current process, its parent when visible, and process metadata such as the process id, command, and liveness.
 
 Example: `ProcessApiExamples`
 
