@@ -30,9 +30,11 @@ Example: `TextBlockPreviewExamples`
 
 Test: `TextBlockPreviewExamplesTest`
 
-## Switch yield Preview
+## Switch Expressions: `yield` Preview
 
-Java 12 previewed switch expressions, but Java 13 refined how block branches produce a value. A branch with multiple statements needs a clear way to say which value the branch returns.
+Java 12 previewed switch expressions, but its design used a `break` statement with a value when a branch needed to produce the result. Feedback from that preview led Java 13 to replace that design with the `yield` statement.
+
+This means `yield` is not an unrelated feature. It is part of the evolving switch-expression design. A branch with multiple statements still needs a clear way to say which value the branch returns.
 
 Java 13 introduced `yield` for that purpose:
 
@@ -43,7 +45,7 @@ case 7 -> {
 }
 ```
 
-The problem solved was clarity. `yield` makes it obvious which value leaves a switch branch.
+The problem solved was clarity. `yield` makes it obvious which value leaves a switch branch, while keeping `break` associated with leaving a switch statement or loop. Java 14 later finalized the switch-expression feature with this `yield` design.
 
 Example: `SwitchYieldPreviewExamples`
 
