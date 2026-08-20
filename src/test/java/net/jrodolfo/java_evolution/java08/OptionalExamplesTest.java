@@ -3,6 +3,8 @@ package net.jrodolfo.java_evolution.java08;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import org.junit.jupiter.api.Test;
 
 class OptionalExamplesTest {
@@ -41,14 +43,42 @@ class OptionalExamplesTest {
 	void orElseGetCreatesDefaultValueLazilyWhenOptionalIsEmpty() {
 		// Given
 		OptionalExamples.User user = new OptionalExamples.User("Rodolfo", null);
+		AtomicBoolean fallbackEvaluated = new AtomicBoolean(false);
 
 		// When
-		String displayedEmail = examples.displayEmailGeneratedLazily(user);
+		String displayedEmail = examples.displayEmailGeneratedLazily(user, () -> {
+			fallbackEvaluated.set(true);
+			return "email generated only when Optional is empty";
+		});
 
 		// Then
 		assertThat(displayedEmail)
 				.as("orElseGet should call the Supplier only when the Optional is empty")
 				.isEqualTo("email generated only when Optional is empty");
+		assertThat(fallbackEvaluated)
+				.as("orElseGet should evaluate the fallback when the Optional is empty")
+				.isTrue();
+	}
+
+	@Test
+	void orElseGetDoesNotEvaluateFallbackWhenOptionalHasAValue() {
+		// Given
+		OptionalExamples.User user = new OptionalExamples.User("Rodolfo", "rodolfo@example.com");
+		AtomicBoolean fallbackEvaluated = new AtomicBoolean(false);
+
+		// When
+		String displayedEmail = examples.displayEmailGeneratedLazily(user, () -> {
+			fallbackEvaluated.set(true);
+			return "fallback";
+		});
+
+		// Then
+		assertThat(displayedEmail)
+				.as("orElseGet should return the present email")
+				.isEqualTo("rodolfo@example.com");
+		assertThat(fallbackEvaluated)
+				.as("orElseGet should not evaluate the fallback when a value is present")
+				.isFalse();
 	}
 
 	@Test

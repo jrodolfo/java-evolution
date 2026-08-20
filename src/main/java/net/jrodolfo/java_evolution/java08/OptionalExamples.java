@@ -1,6 +1,7 @@
 package net.jrodolfo.java_evolution.java08;
 
 import java.util.Optional;
+import java.util.function.Supplier;
 
 /**
  * Demonstrates {@link Optional}, introduced in Java 8 as a container for values
@@ -54,9 +55,21 @@ public class OptionalExamples {
 	 * @return the user's email, or a lazily generated fallback message
 	 */
 	public String displayEmailGeneratedLazily(User user) {
-		// orElseGet receives a Supplier, so the fallback is evaluated only if needed.
+		return displayEmailGeneratedLazily(user,
+				() -> "email generated only when Optional is empty");
+	}
+
+	/**
+	 * Uses {@link Optional#orElseGet(Supplier)} with a caller-provided fallback.
+	 * The supplier is evaluated only when the Optional is empty.
+	 *
+	 * @param user the user to inspect
+	 * @param fallback the value supplier used only when the email is missing
+	 * @return the user's email, or the lazily generated fallback message
+	 */
+	public String displayEmailGeneratedLazily(User user, Supplier<String> fallback) {
 		return findEmail(user)
-				.orElseGet(() -> "email generated only when Optional is empty");
+				.orElseGet(fallback);
 	}
 
 	/**
