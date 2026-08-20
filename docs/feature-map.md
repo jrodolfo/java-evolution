@@ -4,6 +4,51 @@ This document maps each Java release to the example and test classes that demons
 
 Use this when you already know the Java version or feature name and want to jump directly to the code. For learning context, open the linked version README first. For feature maturity and JEP links, use [status-matrix.md](status-matrix.md). For a shorter list of hands-on demonstrations, use [practical-demos.md](practical-demos.md).
 
+## Java 5
+
+Learning notes: [java05 README](../src/main/java/net/jrodolfo/java_evolution/java05/README.md)
+
+| Feature | Example | Test |
+|---|---|---|
+| Generics | `GenericsExamples` | `GenericsExamplesTest` |
+| Enhanced for loop | `EnhancedForLoopExamples` | `EnhancedForLoopExamplesTest` |
+| Autoboxing and unboxing | `AutoboxingExamples` | `AutoboxingExamplesTest` |
+| Typesafe enums | `EnumExamples` | `EnumExamplesTest` |
+| Varargs | `VarargsExamples` | `VarargsExamplesTest` |
+| Static import | `StaticImportExamples` | `StaticImportExamplesTest` |
+| Annotations | `AnnotationExamples` | `AnnotationExamplesTest` |
+| Covariant return types | `CovariantReturnExamples` | `CovariantReturnExamplesTest` |
+| Formatted output | `FormattingExamples` | `FormattingExamplesTest` |
+| Concurrency utilities | `ConcurrencyUtilitiesExamples` | `ConcurrencyUtilitiesExamplesTest` |
+
+## Java 6
+
+Learning notes: [java06 README](../src/main/java/net/jrodolfo/java_evolution/java06/README.md)
+
+| Feature | Example | Test |
+|---|---|---|
+| Navigable collections and deques | `NavigableCollectionExamples` | `NavigableCollectionExamplesTest` |
+| Scripting support | [`scripting/ScriptingSupportNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/scripting/ScriptingSupportNotes.java) | [`ScriptingSupportNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/scripting/ScriptingSupportNotesTest.java) |
+| Compiler API | [`compiler_api/CompilerApiNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/compiler_api/CompilerApiNotes.java) | [`CompilerApiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/compiler_api/CompilerApiNotesTest.java) |
+| Console API | [`console_api/ConsoleApiNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/console_api/ConsoleApiNotes.java) | [`ConsoleApiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/console_api/ConsoleApiNotesTest.java) |
+| Monitoring and management | [`monitoring_management/MonitoringManagementNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/monitoring_management/MonitoringManagementNotes.java) | [`MonitoringManagementNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/monitoring_management/MonitoringManagementNotesTest.java) |
+| Web-service support | [`web_services/WebServiceSupportNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/web_services/WebServiceSupportNotes.java) | [`WebServiceSupportNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/web_services/WebServiceSupportNotesTest.java) |
+
+## Java 7
+
+Learning notes: [java07 README](../src/main/java/net/jrodolfo/java_evolution/java07/README.md)
+
+| Feature | Example | Test |
+|---|---|---|
+| Try-with-resources | `TryWithResourcesStatementExamples` | `TryWithResourcesStatementExamplesTest` |
+| Multi-catch and precise rethrow | `ExceptionHandlingExamples` | `ExceptionHandlingExamplesTest` |
+| Diamond operator | `DiamondOperatorExamples` | `DiamondOperatorExamplesTest` |
+| Strings in switch | `StringSwitchExamples` | `StringSwitchExamplesTest` |
+| Binary literals and numeric underscores | `NumericLiteralExamples` | `NumericLiteralExamplesTest` |
+| NIO.2 | `Nio2Examples` | `Nio2ExamplesTest` |
+| Fork/join framework | `ForkJoinExamples` | `ForkJoinExamplesTest` |
+| `invokedynamic` | [`invokedynamic/InvokeDynamicNotes`](../src/main/java/net/jrodolfo/java_evolution/java07/invokedynamic/InvokeDynamicNotes.java) | [`InvokeDynamicNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java07/invokedynamic/InvokeDynamicNotesTest.java) |
+
 ## Java 8
 
 Learning notes: [java08 README](../src/main/java/net/jrodolfo/java_evolution/java08/README.md)

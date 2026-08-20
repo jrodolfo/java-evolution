@@ -41,6 +41,10 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | JIT | Just-In-Time | JVM compilation work performed while a program runs, often discussed with startup, warmup, and runtime optimization. |
 | JNI | Java Native Interface | The older native-integration mechanism that the Foreign Function and Memory API improves on for many use cases. |
 | JPMS | Java Platform Module System | The Java 9 module system used to declare module dependencies and exported packages with `module-info.java`, `requires`, and `exports`. |
+| JSR | Java Specification Request | The Java Community Process mechanism used for many older Java features before the modern JEP process became the main lookup path in this repository. |
+| JSR 199 | Java Compiler API | The Java 6 specification for invoking a Java compiler from Java code through `javax.tools`. |
+| JSR 223 | Scripting for the Java Platform | The Java 6 scripting API that lets Java applications host pluggable script engines through `javax.script`. |
+| JSR 334 | Small Enhancements to the Java Programming Language | The Java 7 Project Coin specification covering features such as try-with-resources, multi-catch, diamond, strings in switch, binary literals, and numeric underscores. |
 | JRE | Java Runtime Environment | The runtime pieces needed to run Java applications; modern JDK installs include the runtime. |
 | JSON | JavaScript Object Notation | A structured text data format often embedded in Java strings or text blocks. |
 | JUnit | Java unit testing framework | The test framework used for executable examples in this repository. |
@@ -53,9 +57,11 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | ML-DSA | Module-Lattice-Based Digital Signature Algorithm | A Java 24 quantum-resistant signature algorithm used to sign and verify messages. |
 | ML-KEM | Module-Lattice-Based Key Encapsulation Mechanism | A Java 24 quantum-resistant key encapsulation algorithm used to establish shared secret material. |
 | NIO | New Input/Output | Java's non-blocking and buffer-oriented I/O APIs, relevant to socket channels and filesystem work. |
+| NIO.2 | New Input/Output 2 | The Java 7 filesystem API centered on `Path`, `Files`, file attributes, directory walking, and filesystem providers. |
 | Notes | Notes Class | A source file that documents a Java feature when a small portable executable example would be misleading, platform-specific, or too large. |
 | PEM | Privacy-Enhanced Mail | A text encoding format commonly used for cryptographic keys and certificates. |
 | Preview | Preview Feature | A Java language or API feature available for feedback before becoming final or changing shape. |
+| Project Coin | Small Java language enhancements | The Java 7 effort behind small language improvements such as try-with-resources, multi-catch, diamond, strings in switch, binary literals, and numeric underscores. |
 | RISC | Reduced Instruction Set Computer | A processor design style referenced by the ARM acronym. |
 | RMI | Remote Method Invocation | A Java distributed-object technology mentioned as background when discussing native calls and remote procedure styles. |
 | RPC | Remote Procedure Call | A style of calling code across process or network boundaries; useful contrast for local native calls through FFM. |

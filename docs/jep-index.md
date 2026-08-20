@@ -16,6 +16,23 @@ Status labels:
 - **Documentation example**: represented by source documentation that is verified through JavaDoc generation.
 - **Experimental**: an additional qualifier used when the referenced JEP describes an experimental runtime or tooling capability.
 
+## Java 5-7
+
+Java 5-7 predate the modern JEP process used elsewhere in this index. Their entries point to official release notes, specifications, or API documentation instead of JEP pages.
+
+| Reference | Feature | Status |
+|---|---|---|
+| [Oracle J2SE 5.0 new features](https://docs.oracle.com/javase/1.5.0/docs/relnotes/features.html) | Generics, enhanced for loop, autoboxing, enums, varargs, static import, annotations, concurrency utilities | Final, Example |
+| [Formatter API](https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html) | Formatted output | Final, Example |
+| [Oracle Java SE 6 features](https://www.oracle.com/java/technologies/javase/features.html) | Navigable collections, scripting, compiler API, console, monitoring, web-service support | Final, Examples and Explanatory Modules |
+| [Java SE 6 scripting guide](https://docs.oracle.com/javase/6/docs/technotes/guides/scripting/) | Scripting support | Final, Explanatory Module |
+| [JavaCompiler API](https://docs.oracle.com/javase/6/docs/api/javax/tools/JavaCompiler.html) | Compiler API | Final, Tooling, Explanatory Module |
+| [Console API](https://docs.oracle.com/javase/6/docs/api/java/io/Console.html) | Console API | Final, Tooling, Explanatory Module |
+| [Project Coin / JSR 334](https://cr.openjdk.org/~darcy/ProjectCoin/ProjectCoin-Documentation-v0.9375.html) | Try-with-resources, multi-catch, diamond operator, strings in switch, binary literals, numeric underscores | Final, Example |
+| [JDK 7 adoption guide](https://docs.oracle.com/javase/7/docs/webnotes/adoptionGuide/) | NIO.2 and Java 7 migration features | Final, Example |
+| [Java SE 7 concurrency enhancements](https://docs.oracle.com/javase/7/docs/technotes/guides/concurrency/changes7.html) | Fork/join framework | Final, Example |
+| [java.lang.invoke package](https://docs.oracle.com/javase/7/docs/api/java/lang/invoke/package-summary.html) | `invokedynamic` and method handles | Final, Explanatory Module |
+
 ## Java 8
 
 | JEP | Feature | Status |

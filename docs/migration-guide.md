@@ -6,6 +6,36 @@ For exact feature status and JEP links, use [status-matrix.md](status-matrix.md)
 
 For recurring acronyms such as JEP, LTS, AOT, JFR, and GC, see [glossary.md](glossary.md).
 
+## Java 5-7 To Java 8
+
+Java 5 through 7 established many foundations of modern Java: generics, annotations, enums, `java.util.concurrent`, try-with-resources, NIO.2, and fork/join. Moving to Java 8 adds a functional programming layer on top of that baseline.
+
+What changed conceptually:
+
+- Java 5 made collections type-safe with generics and raised concurrency above raw `Thread` coordination.
+- Java 6 improved tooling, scripting, console, monitoring, and web-service support.
+- Java 7 made resource cleanup and exception handling safer through Project Coin and added NIO.2 filesystem APIs.
+- Java 8 then added lambdas, method references, streams, `Optional`, default methods, and the Date/Time API.
+
+Study these files:
+
+- `src/main/java/net/jrodolfo/java_evolution/java05/GenericsExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java05/ConcurrencyUtilitiesExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java07/TryWithResourcesStatementExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java07/Nio2Examples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java08/LambdaExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java08/StreamExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java08/DateTimeApiExamples.java`
+
+Run:
+
+```bash
+mvn "-Dtest=GenericsExamplesTest,ConcurrencyUtilitiesExamplesTest,TryWithResourcesStatementExamplesTest,Nio2ExamplesTest" test
+mvn "-Dtest=LambdaExamplesTest,StreamExamplesTest,DateTimeApiExamplesTest" test
+```
+
+Interview angle: explain Java 8 as a major style shift, but not as the beginning of modern Java. Java 5-7 supplied much of the type-safety, concurrency, resource-management, and filesystem foundation.
+
 ## Java 8 To Java 11
 
 Java 8 is still common in older systems, but Java 11 changed the practical baseline for many projects. The biggest learning theme is platform modernization: fewer small bits of boilerplate, better standard APIs, and more awareness of modules.
