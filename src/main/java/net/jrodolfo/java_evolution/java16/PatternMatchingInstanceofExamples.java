@@ -9,6 +9,19 @@ package net.jrodolfo.java_evolution.java16;
  * logic more verbose than necessary.
  * </p>
  *
+ * <pre>{@code
+ * // Before Java 16
+ * if (value instanceof String) {
+ *     String text = (String) value;
+ *     return text.length();
+ * }
+ *
+ * // Java 16
+ * if (value instanceof String text) {
+ *     return text.length();
+ * }
+ * }</pre>
+ *
  * <p>
  * Pattern matching solves this by combining the type check and local variable
  * binding in one expression.
