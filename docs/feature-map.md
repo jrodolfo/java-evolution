@@ -4,6 +4,64 @@ This document maps each Java release to the example and test classes that demons
 
 Use this when you already know the Java version or feature name and want to jump directly to the code. For learning context, open the linked version README first. For feature maturity and JEP links, use [status-matrix.md](status-matrix.md). For a shorter list of hands-on demonstrations, use [practical-demos.md](practical-demos.md).
 
+## Java 1
+
+Learning notes: [java01 README](../src/main/java/net/jrodolfo/java_evolution/java01/README.md)
+
+| Feature | Example | Test |
+|---|---|---|
+| Object-oriented basics | `ObjectOrientedBasicsExamples` | `ObjectOrientedBasicsExamplesTest` |
+| Interfaces | `InterfaceExamples` | `InterfaceExamplesTest` |
+| Checked exceptions | `ExceptionHandlingBasicsExamples` | `ExceptionHandlingBasicsExamplesTest` |
+| Threads and Runnable | `ThreadBasicsExamples` | `ThreadBasicsExamplesTest` |
+| `java.io` streams | `IoBasicsExamples` | `IoBasicsExamplesTest` |
+| Inner classes | `InnerClassExamples` | `InnerClassExamplesTest` |
+| Reflection | [`reflection/ReflectionNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/reflection/ReflectionNotes.java) | [`ReflectionNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/reflection/ReflectionNotesTest.java) |
+| Serialization | [`serialization/SerializationNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/serialization/SerializationNotes.java) | [`SerializationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/serialization/SerializationNotesTest.java) |
+| JDBC | [`jdbc/JdbcNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/jdbc/JdbcNotes.java) | [`JdbcNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/jdbc/JdbcNotesTest.java) |
+| RMI | [`rmi/RmiNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/rmi/RmiNotes.java) | [`RmiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/rmi/RmiNotesTest.java) |
+| JavaBeans | [`javabeans/JavaBeansNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/javabeans/JavaBeansNotes.java) | [`JavaBeansNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/javabeans/JavaBeansNotesTest.java) |
+
+## Java 2
+
+Learning notes: [java02 README](../src/main/java/net/jrodolfo/java_evolution/java02/README.md)
+
+| Feature | Example | Test |
+|---|---|---|
+| Collections Framework | `CollectionsFrameworkExamples` | `CollectionsFrameworkExamplesTest` |
+| Sorting with `Comparable` and `Comparator` | `SortingExamples` | `SortingExamplesTest` |
+| `strictfp` | [`strict_floating_point/StrictFloatingPointNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointNotes.java) | [`StrictFloatingPointNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointNotesTest.java) |
+| Swing | [`swing/SwingNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/swing/SwingNotes.java) | [`SwingNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/swing/SwingNotesTest.java) |
+| Java 2D | [`java2d/Java2DNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/java2d/Java2DNotes.java) | [`Java2DNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/java2d/Java2DNotesTest.java) |
+| Security policy | [`security/SecurityPolicyNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyNotes.java) | [`SecurityPolicyNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyNotesTest.java) |
+
+## Java 3
+
+Learning notes: [java03 README](../src/main/java/net/jrodolfo/java_evolution/java03/README.md)
+
+| Feature | Example | Test |
+|---|---|---|
+| Dynamic proxy | `DynamicProxyExamples` | `DynamicProxyExamplesTest` |
+| Timer and TimerTask | `TimerExamples` | `TimerExamplesTest` |
+| Shutdown hooks | [`shutdown_hooks/ShutdownHookNotes`](../src/main/java/net/jrodolfo/java_evolution/java03/shutdown_hooks/ShutdownHookNotes.java) | [`ShutdownHookNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java03/shutdown_hooks/ShutdownHookNotesTest.java) |
+| JNDI | [`jndi/JndiNotes`](../src/main/java/net/jrodolfo/java_evolution/java03/jndi/JndiNotes.java) | [`JndiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java03/jndi/JndiNotesTest.java) |
+| Legacy integration | [`legacy_integration/LegacyIntegrationNotes`](../src/main/java/net/jrodolfo/java_evolution/java03/legacy_integration/LegacyIntegrationNotes.java) | [`LegacyIntegrationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java03/legacy_integration/LegacyIntegrationNotesTest.java) |
+
+## Java 4
+
+Learning notes: [java04 README](../src/main/java/net/jrodolfo/java_evolution/java04/README.md)
+
+| Feature | Example | Test |
+|---|---|---|
+| Assertions | [`assertions/AssertionNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/assertions/AssertionNotes.java) | [`AssertionNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/assertions/AssertionNotesTest.java) |
+| Regular expressions | `RegexExamples` | `RegexExamplesTest` |
+| NIO | `NioExamples` | `NioExamplesTest` |
+| Logging API | `LoggingExamples` | `LoggingExamplesTest` |
+| Chained exceptions | `ChainedExceptionExamples` | `ChainedExceptionExamplesTest` |
+| Preferences API | [`preferences/PreferencesNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/preferences/PreferencesNotes.java) | [`PreferencesNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/preferences/PreferencesNotesTest.java) |
+| XML/JAXP | [`xml/JaxpNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/xml/JaxpNotes.java) | [`JaxpNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/xml/JaxpNotesTest.java) |
+| Integrated security APIs | [`security/SecurityIntegrationNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/security/SecurityIntegrationNotes.java) | [`SecurityIntegrationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/security/SecurityIntegrationNotesTest.java) |
+
 ## Java 5
 
 Learning notes: [java05 README](../src/main/java/net/jrodolfo/java_evolution/java05/README.md)

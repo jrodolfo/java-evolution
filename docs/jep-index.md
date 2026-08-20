@@ -16,12 +16,17 @@ Status labels:
 - **Documentation example**: represented by source documentation that is verified through JavaDoc generation.
 - **Experimental**: an additional qualifier used when the referenced JEP describes an experimental runtime or tooling capability.
 
-## Java 5-7
+## Java 1-7
 
-Java 5-7 predate the modern JEP process used elsewhere in this index. Their entries point to official release notes, specifications, or API documentation instead of JEP pages.
+Java 1-7 predate the modern JEP process used elsewhere in this index. Their entries point to official release notes, specifications, or API documentation instead of JEP pages.
 
 | Reference | Feature | Status |
 |---|---|---|
+| [What's New in JDK 1.1](https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/post1.0/whatsnew/index.html) | Inner classes, reflection, serialization, JDBC, RMI, JavaBeans, AWT updates, JAR files, JNI, internationalization | Final, Examples and Explanatory Modules |
+| [JavaBeans specification](https://www.oracle.com/java/technologies/javase/javabeans-spec.html) | JavaBeans component conventions | Final, Explanatory Module |
+| [Object Serialization FAQ](https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html) | Object serialization | Final, Explanatory Module |
+| [Java language enhancements history](https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html) | `strictfp` and assertions | Final, Explanatory Modules |
+| [Java 2 platform documentation](https://docs.oracle.com/cd/E19683-01/806-7930/features-2d/index.html) | Java 2D, NIO, regular expressions, XML/JAXP, integrated security APIs | Final, Examples and Explanatory Modules |
 | [Oracle J2SE 5.0 new features](https://docs.oracle.com/javase/1.5.0/docs/relnotes/features.html) | Generics, enhanced for loop, autoboxing, enums, varargs, static import, annotations, concurrency utilities | Final, Example |
 | [Formatter API](https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html) | Formatted output | Final, Example |
 | [Oracle Java SE 6 features](https://www.oracle.com/java/technologies/javase/features.html) | Navigable collections, scripting, compiler API, console, monitoring, web-service support | Final, Examples and Explanatory Modules |

@@ -4,7 +4,7 @@
 [![links](https://github.com/jrodolfo/java-evolution/actions/workflows/links.yml/badge.svg)](https://github.com/jrodolfo/java-evolution/actions/workflows/links.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-`java-evolution` is a practical Java reference project that demonstrates features introduced in each Java release from Java 5 through Java 25.
+`java-evolution` is a practical Java reference project that demonstrates features introduced in each Java release from Java 1 through Java 25.
 
 I built this repository as a place to learn, test, and document how Java has evolved over time. It is primarily for my own continued growth, but it is also meant to help other developers who want concise examples of newer language features, APIs, and idioms.
 
@@ -150,7 +150,7 @@ The Maven build uses a single Java release for every package:
 <java.version>25</java.version>
 ```
 
-Each package demonstrates features introduced in a specific Java release. For example, `java05` demonstrates Java 5 features, `java08` demonstrates Java 8 features, and `java21` demonstrates Java 21 features.
+Each package demonstrates features introduced in a specific Java release. For example, `java01` refreshes early Java foundations, `java05` demonstrates Java 5 features, and `java21` demonstrates Java 21 features.
 
 Some older preview or incubator features changed before becoming final. In those cases, the project either:
 
@@ -163,6 +163,10 @@ When a feature is final but represented by a notes class or explanatory module, 
 
 ```text
 src/main/java/net/jrodolfo/java_evolution/
+  java01/
+  java02/
+  java03/
+  java04/
   java05/
   java06/
   java07/
@@ -173,6 +177,10 @@ src/main/java/net/jrodolfo/java_evolution/
   java25/
 
 src/test/java/net/jrodolfo/java_evolution/
+  java01/
+  java02/
+  java03/
+  java04/
   java05/
   java06/
   java07/
@@ -201,7 +209,7 @@ Start here depending on what you need:
 - Browsing API-style documentation: use the [JavaDoc Site](https://jrodolfo.github.io/java-evolution/).
 
 - [Changelog](CHANGELOG.md): release history.
-- [Study Guide](docs/study-guide.md): suggested learning path through Java 5-25.
+- [Study Guide](docs/study-guide.md): suggested learning path through Java 1-25.
 - [Migration Guide](docs/migration-guide.md): practical guide for moving from Java 8, 11, 17, or 21 to newer baselines.
 - [Learning Path](docs/learning-path.md): staged study sessions with files to read, tests to run, and interview angles.
 - [Practical Demos](docs/practical-demos.md): focused walkthroughs for tooling, security, native, and class-file features, with `make demos` as a pre-demo check.
@@ -219,6 +227,10 @@ Start here depending on what you need:
 
 | Java | Package | Highlights |
 |---|---|---|
+| 1 | [`java01`](src/main/java/net/jrodolfo/java_evolution/java01/README.md) | Object-Oriented Foundations, Interfaces, Checked Exceptions, Threads, `java.io`, Inner Classes, Reflection/Serialization/JDBC/RMI/JavaBeans notes |
+| 2 | [`java02`](src/main/java/net/jrodolfo/java_evolution/java02/README.md) | Collections Framework, Sorting, `strictfp`, Swing/Java 2D/Security notes |
+| 3 | [`java03`](src/main/java/net/jrodolfo/java_evolution/java03/README.md) | Dynamic Proxy, Timer, Shutdown Hooks/JNDI/Legacy Integration notes |
+| 4 | [`java04`](src/main/java/net/jrodolfo/java_evolution/java04/README.md) | Assertions notes, Regex, NIO, Logging, Chained Exceptions, Preferences/XML/Security notes |
 | 5 | [`java05`](src/main/java/net/jrodolfo/java_evolution/java05/README.md) | Generics, Enhanced For Loop, Autoboxing, Enums, Varargs, Static Import, Annotations, Concurrency Utilities |
 | 6 | [`java06`](src/main/java/net/jrodolfo/java_evolution/java06/README.md) | Navigable Collections, Scripting/Compiler/Console/Monitoring/Web-Service explanatory modules |
 | 7 | [`java07`](src/main/java/net/jrodolfo/java_evolution/java07/README.md) | Try-With-Resources, Multi-Catch, Diamond Operator, String Switch, NIO.2, Fork/Join, `invokedynamic` notes |

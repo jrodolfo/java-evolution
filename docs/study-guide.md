@@ -43,6 +43,7 @@ Start here if the goal is interview preparation or practical Java fluency.
 
 | Phase | Java Versions | Focus |
 |---|---|---|
+| Early foundations | 1-4 | Objects, interfaces, exceptions, threads, I/O, collections, reflection, regex, NIO |
 | Pre-Java-8 foundations | 5-7 | Generics, enums, annotations, concurrency utilities, Project Coin, NIO.2 |
 | Functional Java | 8 | Lambdas, streams, method references, `Optional`, default methods, date/time |
 | Platform/API modernization | 9-11 | Collections factories, modules, HTTP Client, String/File APIs, `var` |
@@ -54,22 +55,25 @@ Do not try to memorize every JEP number on the first pass. Focus on explaining w
 
 ## Recommended Study Order
 
-1. **Java 5-7**
+1. **Java 1-4**
+   Study object-oriented basics, interfaces, checked exceptions, threads, `java.io`, collections, dynamic proxies, regex, NIO, logging, and chained exceptions. These are the foundation beneath later Java evolution.
+
+2. **Java 5-7**
    Study generics, enums, annotations, `java.util.concurrent`, try-with-resources, multi-catch, NIO.2, and fork/join. These explain the baseline that Java 8 built on.
 
-2. **Java 8**
+3. **Java 8**
    Study lambdas, streams, `Optional`, method references, `CompletableFuture`, default methods, and the date/time API. These are still daily-use features.
 
-3. **Java 10, 11**
+4. **Java 10, 11**
    Study `var`, `HttpClient`, String APIs, files APIs, `Predicate.not`, and `Optional.isEmpty`. These show how Java became more concise without becoming dynamic.
 
-4. **Java 14-17**
+5. **Java 14-17**
    Study switch expressions, records, pattern matching for `instanceof`, sealed classes, `HexFormat`, and strong encapsulation. These are common in modern code reviews and migration discussions.
 
-5. **Java 21**
+6. **Java 21**
    Spend extra time here because Java 21 is an LTS release. Focus on virtual threads, record patterns, pattern matching for `switch`, and sequenced collections.
 
-6. **Java 22-25**
+7. **Java 22-25**
    Study these for current-version awareness. Pay attention to status labels: final, preview, incubator, notes-only, runtime, tooling, or cryptography.
 
 ## What To Skip Initially

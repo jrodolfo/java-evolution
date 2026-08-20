@@ -4,7 +4,35 @@ This path turns the repository into a sequence of study sessions. The goal is no
 
 Use [feature-map.md](feature-map.md) when you want a complete class-by-class index. Use [practical-demos.md](practical-demos.md) when you want a shorter tour of the most hands-on examples.
 
-## Stage 1: Java 5-7 Foundations Before Modern Java
+## Stage 1: Java 1-4 Early Foundations
+
+Java 1 through 4 established the original object model, checked exceptions, threads, classic I/O, inner classes, reflection, serialization, the Collections Framework, dynamic proxies, regex, NIO, logging, and chained exceptions.
+
+Read these first:
+
+- `src/main/java/net/jrodolfo/java_evolution/java01/ObjectOrientedBasicsExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java01/InterfaceExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java01/ExceptionHandlingBasicsExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java01/ThreadBasicsExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java01/InnerClassExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java02/CollectionsFrameworkExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java02/SortingExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java03/DynamicProxyExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java04/RegexExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java04/NioExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java04/ChainedExceptionExamples.java`
+
+Run:
+
+```bash
+mvn "-Dtest=ObjectOrientedBasicsExamplesTest,InterfaceExamplesTest,ExceptionHandlingBasicsExamplesTest" test
+mvn "-Dtest=ThreadBasicsExamplesTest,InnerClassExamplesTest,CollectionsFrameworkExamplesTest,SortingExamplesTest" test
+mvn "-Dtest=DynamicProxyExamplesTest,RegexExamplesTest,NioExamplesTest,ChainedExceptionExamplesTest" test
+```
+
+Interview angle: explain these releases as the foundation of Java's object model, standard collections, runtime reflection, classic I/O, and early platform libraries.
+
+## Stage 2: Java 5-7 Foundations Before Modern Java
 
 Java 5 through 7 created much of the baseline that modern Java developers take for granted. Java 5 added generics, enums, annotations, enhanced loops, varargs, formatted output, and concurrency utilities. Java 6 improved platform tooling and operational support. Java 7 added Project Coin, NIO.2, fork/join, and `invokedynamic`.
 
@@ -33,7 +61,7 @@ mvn "-Dtest=TryWithResourcesStatementExamplesTest,ExceptionHandlingExamplesTest,
 
 Interview angle: explain these releases as the foundation under later Java. Generics made collections type-safe, Java 5 concurrency utilities raised the abstraction above raw threads, Java 7 made resource and exception handling safer, and Java 6/7 platform work prepared Java for better tooling and JVM language support.
 
-## Stage 2: Java 8 Foundations
+## Stage 3: Java 8 Foundations
 
 Java 8 changed the way everyday Java code is written. Before Java 8, behavior was often passed around through anonymous classes, collection processing required explicit loops, dates were handled with mutable and confusing APIs, and asynchronous work was harder to compose.
 
@@ -56,7 +84,7 @@ mvn "-Dtest=CompletableFutureExamplesTest,DateTimeApiExamplesTest" test
 
 Interview angle: explain how Java 8 made Java more expressive without abandoning static typing. Be ready to compare external iteration with streams, null checks with `Optional`, and callback-style asynchronous code with `CompletableFuture`.
 
-## Stage 3: Java 9-11 Platform Modernization
+## Stage 4: Java 9-11 Platform Modernization
 
 Java 9 through 11 cleaned up many rough edges in the platform. These releases improved collection creation, stream and optional APIs, resource handling, process inspection, HTTP calls, files, strings, and local variable declarations.
 
@@ -82,7 +110,7 @@ mvn "-Dtest=HttpClientExamplesTest,PredicateNotExamplesTest,OptionalIsEmptyExamp
 
 Interview angle: describe these releases as practical modernization. Java became easier to write and easier to package, while remaining compatible with existing code.
 
-## Stage 4: Java 12-16 Language Simplification
+## Stage 5: Java 12-16 Language Simplification
 
 Java 12 through 16 made common code shapes shorter and clearer. Switch expressions reduce assignment boilerplate, text blocks make embedded text readable, records remove repetitive data-carrier code, and pattern matching removes manual casts.
 
@@ -109,7 +137,7 @@ mvn "-Dtest=RecordExamplesTest,PatternMatchingInstanceofExamplesTest,StreamToLis
 
 Interview angle: focus on readability. These features are not about making Java clever; they reduce ceremony around common business-code patterns.
 
-## Stage 5: Java 17-21 Modern Java Style
+## Stage 6: Java 17-21 Modern Java Style
 
 Java 17 and Java 21 are LTS releases, so this is the most important stage after Java 8. These releases make modern Java code more expressive through sealed classes, pattern matching, records, sequenced collections, and virtual threads.
 
@@ -148,7 +176,7 @@ mvn "-Dtest=KeyEncapsulationExchangeTest,ScopedValuesPreviewNotesTest,Structured
 
 Interview angle: treat Java 21 as the modern baseline. Explain virtual threads as a way to keep the simple blocking style while scaling I/O-bound work, and explain sealed classes plus pattern matching as a safer way to model known alternatives.
 
-## Stage 6: Java 22-25 Current Release Awareness
+## Stage 7: Java 22-25 Current Release Awareness
 
 Java 22 through 25 are useful for showing that you can read current Java evolution carefully. Some features are final and usable directly. Others are preview, incubator, runtime, tooling, or notes-only topics because they require flags, external setup, or APIs that are not ideal for a small portable example.
 

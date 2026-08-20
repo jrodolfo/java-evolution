@@ -6,6 +6,31 @@ For exact feature status and JEP links, use [status-matrix.md](status-matrix.md)
 
 For recurring acronyms such as JEP, LTS, AOT, JFR, and GC, see [glossary.md](glossary.md).
 
+## Java 1-4 To Java 5
+
+Java 1 through 4 established Java's original foundation: objects, interfaces, checked exceptions, threads, `java.io`, inner classes, reflection, serialization, collections, dynamic proxies, regex, NIO, logging, and chained exceptions. Java 5 then added major language and library improvements on top of that foundation.
+
+Study these files:
+
+- `src/main/java/net/jrodolfo/java_evolution/java01/ObjectOrientedBasicsExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java01/ThreadBasicsExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java02/CollectionsFrameworkExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java03/DynamicProxyExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java04/RegexExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java04/NioExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java05/GenericsExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java05/ConcurrencyUtilitiesExamples.java`
+
+Run:
+
+```bash
+mvn "-Dtest=ObjectOrientedBasicsExamplesTest,ThreadBasicsExamplesTest,CollectionsFrameworkExamplesTest" test
+mvn "-Dtest=DynamicProxyExamplesTest,RegexExamplesTest,NioExamplesTest" test
+mvn "-Dtest=GenericsExamplesTest,ConcurrencyUtilitiesExamplesTest" test
+```
+
+Interview angle: explain Java 5 as a major language modernization built on the Java 1-4 platform: generics made collections safer, annotations gave tools metadata, and concurrency utilities raised the level above raw threads.
+
 ## Java 5-7 To Java 8
 
 Java 5 through 7 established many foundations of modern Java: generics, annotations, enums, `java.util.concurrent`, try-with-resources, NIO.2, and fork/join. Moving to Java 8 adds a functional programming layer on top of that baseline.

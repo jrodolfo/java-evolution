@@ -39,8 +39,12 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | JEP | JDK Enhancement Proposal | The OpenJDK process and design record used to propose, track, and document significant JDK changes. In this project, JEP links are the authoritative source for when a Java feature was previewed, finalized, changed, or removed. |
 | JFR | Java Flight Recorder | JVM observability tooling for recording runtime events and performance data. |
 | JIT | Just-In-Time | JVM compilation work performed while a program runs, often discussed with startup, warmup, and runtime optimization. |
+| JAXP | Java API for XML Processing | The standard XML processing API added to the Java platform in the Java 4 era. |
+| JCE | Java Cryptography Extension | Java cryptography APIs integrated into the standard platform in the Java 4 era. |
+| JNDI | Java Naming and Directory Interface | A naming and directory API used by older enterprise Java systems to look up resources. |
 | JNI | Java Native Interface | The older native-integration mechanism that the Foreign Function and Memory API improves on for many use cases. |
 | JPMS | Java Platform Module System | The Java 9 module system used to declare module dependencies and exported packages with `module-info.java`, `requires`, and `exports`. |
+| JSSE | Java Secure Socket Extension | Java secure-socket APIs integrated into the standard platform in the Java 4 era. |
 | JSR | Java Specification Request | The Java Community Process mechanism used for many older Java features before the modern JEP process became the main lookup path in this repository. |
 | JSR 199 | Java Compiler API | The Java 6 specification for invoking a Java compiler from Java code through `javax.tools`. |
 | JSR 223 | Scripting for the Java Platform | The Java 6 scripting API that lets Java applications host pluggable script engines through `javax.script`. |
