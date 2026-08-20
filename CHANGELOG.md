@@ -22,6 +22,25 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - `make demos`
 - `mvn -B clean test -q`
 
+## v1.2.0
+
+Learning-focused release that substantially improves the Java 8 through Java 25 reference material.
+
+### Changed
+
+- Expanded explanations of the problems solved by Java features across the version packages.
+- Added and expanded explanatory learning modules for complex, preview, incubator, runtime, tooling, and platform features.
+- Improved Java 8 through Java 25 READMEs, JavaDoc, navigation, glossary terminology, JEP references, and feature-status documentation.
+- Strengthened tests as executable documentation with clearer scenarios, assertions, and historical context.
+- Corrected Java-version API usage and preview/final status labels, including JEP 458's final tooling status.
+
+### Validation
+
+- `make docs-audit`
+- `mvn -B javadoc:javadoc`
+- `mvn -B test` on JDK 25 outside restricted loopback environments
+- `make release-check`
+
 ## v1.1.3
 
 Patch release focused on the Java 21 virtual-thread naming example.
