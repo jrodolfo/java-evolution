@@ -63,6 +63,15 @@ Before Java 17, random number generation APIs were less unified. Choosing an alg
 
 Java 17 introduced the `RandomGenerator` interface and `RandomGeneratorFactory`, creating a common abstraction for multiple pseudo-random number generator algorithms.
 
+This separation is useful when the algorithm is part of the application's
+decision rather than an accidental detail of one concrete class. A program can
+choose a named generator, and a test or simulation can use a fixed seed so that
+the same inputs produce the same sequence again while debugging.
+
+The API is for pseudo-random generation, not for secrets. Passwords, tokens,
+keys, and other security-sensitive values should use the appropriate
+cryptographic random API instead of a general-purpose `RandomGenerator`.
+
 Example: `RandomGeneratorExamples`
 
 Test: `RandomGeneratorExamplesTest`
