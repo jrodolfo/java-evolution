@@ -37,6 +37,22 @@ return switch (value) {
 
 The feature became final later in Java 21. This repository uses current syntax while documenting Java 17 as the preview origin.
 
+The preview syntax also evolved. Java 17 used `&&` to add a condition to a
+pattern, for example:
+
+```java
+case String text && text.isBlank() -> "blank string";
+```
+
+The current syntax uses `when` instead:
+
+```java
+case String text when text.isBlank() -> "blank string";
+```
+
+Because this project compiles with JDK 25, the example class uses the current
+`when` syntax while this README preserves the Java 17 preview history.
+
 Example: `PatternMatchingSwitchPreviewExamples`
 
 Test: `PatternMatchingSwitchPreviewExamplesTest`
