@@ -27,12 +27,29 @@ public class ThreadBasicsExamples {
 	 * Uses synchronization to protect a shared counter.
 	 *
 	 * @return the final counter value
+	 * @throws InterruptedException when waiting is interrupted
 	 */
-	public int synchronizedCounter() {
-		Counter counter = new Counter();
-		counter.increment();
-		counter.increment();
+	public int synchronizedCounter() throws InterruptedException {
+		final Counter counter = new Counter();
+		Thread first = counterWorker(counter, 1000);
+		Thread second = counterWorker(counter, 1000);
+
+		first.start();
+		second.start();
+		first.join();
+		second.join();
+
 		return counter.value();
+	}
+
+	private Thread counterWorker(final Counter counter, final int increments) {
+		return new Thread(new Runnable() {
+			public void run() {
+				for (int index = 0; index < increments; index++) {
+					counter.increment();
+				}
+			}
+		});
 	}
 
 	static class Counter {

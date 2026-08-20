@@ -1,6 +1,7 @@
 package net.jrodolfo.java_evolution.java01;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.io.IOException;
 
@@ -15,6 +16,14 @@ class ExceptionHandlingBasicsExamplesTest {
 		assertThat(examples.loadRequiredValue(true))
 				.as("The successful path should return the loaded value")
 				.isEqualTo("loaded");
+	}
+
+	@Test
+	void checkedExceptionCanBeObservedDirectly() {
+		assertThatThrownBy(() -> examples.loadRequiredValue(false))
+				.as("The failing path should expose the checked IOException declared by the method")
+				.isInstanceOf(IOException.class)
+				.hasMessage("value is unavailable");
 	}
 
 	@Test

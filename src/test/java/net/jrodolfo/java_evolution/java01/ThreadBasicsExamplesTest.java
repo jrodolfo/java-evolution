@@ -16,9 +16,9 @@ class ThreadBasicsExamplesTest {
 	}
 
 	@Test
-	void synchronizedMethodProtectsSharedCounter() {
+	void synchronizedMethodProtectsSharedCounterAcrossThreads() throws InterruptedException {
 		assertThat(examples.synchronizedCounter())
-				.as("Synchronized methods should serialize access to the counter state")
-				.isEqualTo(2);
+				.as("Synchronized methods should serialize concurrent access to the counter state")
+				.isEqualTo(2000);
 	}
 }

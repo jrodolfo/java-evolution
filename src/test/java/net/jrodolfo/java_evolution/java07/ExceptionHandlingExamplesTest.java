@@ -4,6 +4,8 @@ import static net.jrodolfo.java_evolution.java07.ExceptionHandlingExamples.Failu
 import static net.jrodolfo.java_evolution.java07.ExceptionHandlingExamples.FailureMode.NONE;
 import static net.jrodolfo.java_evolution.java07.ExceptionHandlingExamples.FailureMode.SQL;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatNoException;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -25,28 +27,23 @@ class ExceptionHandlingExamplesTest {
 	}
 
 	@Test
-	void preciseRethrowKeepsCheckedExceptionTypesVisible() throws IOException, SQLException {
-		examples.rethrowPrecisely(NONE);
-
-		Exception ioFailure = captureRethrow(IO);
-		Exception sqlFailure = captureRethrow(SQL);
-
-		assertThat(ioFailure)
+	void preciseRethrowKeepsIOExceptionVisible() {
+		assertThatThrownBy(() -> examples.rethrowPrecisely(IO))
 				.as("Precise rethrow should allow IOException to remain part of the method contract")
 				.isInstanceOf(IOException.class);
+	}
 
-		assertThat(sqlFailure)
+	@Test
+	void preciseRethrowKeepsSqlExceptionVisible() {
+		assertThatThrownBy(() -> examples.rethrowPrecisely(SQL))
 				.as("Precise rethrow should allow SQLException to remain part of the method contract")
 				.isInstanceOf(SQLException.class);
 	}
 
-	private Exception captureRethrow(ExceptionHandlingExamples.FailureMode failure) {
-		try {
-			examples.rethrowPrecisely(failure);
-		}
-		catch (Exception exception) {
-			return exception;
-		}
-		return null;
+	@Test
+	void preciseRethrowAllowsSuccessPathWithoutWideningTheContract() {
+		assertThatNoException()
+				.as("The precise rethrow example should still allow the non-failing path")
+				.isThrownBy(() -> examples.rethrowPrecisely(NONE));
 	}
 }
