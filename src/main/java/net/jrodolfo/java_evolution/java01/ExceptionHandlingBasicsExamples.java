@@ -31,13 +31,13 @@ public class ExceptionHandlingBasicsExamples {
 			return loadRequiredValue(false);
 		}
 		catch (IOException exception) {
-			throw new ConfigurationException("configuration could not be loaded", exception);
+			throw new ConfigurationException("configuration could not be loaded");
 		}
 	}
 
 	static class ConfigurationException extends RuntimeException {
-		ConfigurationException(String message, Throwable cause) {
-			super(message, cause);
+		ConfigurationException(String message) {
+			super(message);
 		}
 	}
 }

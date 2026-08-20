@@ -43,6 +43,13 @@ class NavigableCollectionExamplesTest {
 	}
 
 	@Test
+	void navigableMapReturnsNullWhenNoFloorEntryExists() {
+		assertThat(examples.releaseAtOrBefore(4))
+				.as("NavigableMap.floorEntry returns null when every key is greater than the request")
+				.isNull();
+	}
+
+	@Test
 	void dequeSupportsWorkAtBothEnds() {
 		assertThat(examples.dequeProcessingOrder())
 				.as("Deque should support urgent work at the front and normal work at the back")

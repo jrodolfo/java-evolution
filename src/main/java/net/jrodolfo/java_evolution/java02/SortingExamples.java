@@ -17,8 +17,8 @@ public class SortingExamples {
 	 * @param numbers numbers to sort
 	 * @return sorted numbers
 	 */
-	public List<Integer> sortNaturally(List<Integer> numbers) {
-		List<Integer> copy = new ArrayList<>(numbers);
+	public List sortNaturally(List numbers) {
+		List copy = new ArrayList(numbers);
 		Collections.sort(copy);
 		return copy;
 	}
@@ -29,12 +29,19 @@ public class SortingExamples {
 	 * @param names names to sort
 	 * @return names from shortest to longest
 	 */
-	public List<String> sortByLength(List<String> names) {
-		List<String> copy = new ArrayList<>(names);
-		Collections.sort(copy, new Comparator<String>() {
-			@Override
-			public int compare(String left, String right) {
-				return Integer.compare(left.length(), right.length());
+	public List sortByLength(List names) {
+		List copy = new ArrayList(names);
+		Collections.sort(copy, new Comparator() {
+			public int compare(Object leftValue, Object rightValue) {
+				String left = (String) leftValue;
+				String right = (String) rightValue;
+				if (left.length() < right.length()) {
+					return -1;
+				}
+				if (left.length() > right.length()) {
+					return 1;
+				}
+				return 0;
 			}
 		});
 		return copy;

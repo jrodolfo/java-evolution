@@ -41,7 +41,6 @@ public class ObjectOrientedBasicsExamples {
 			this.height = height;
 		}
 
-		@Override
 		String description() {
 			return "rectangle " + width + "x" + height;
 		}

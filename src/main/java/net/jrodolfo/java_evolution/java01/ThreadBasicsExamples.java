@@ -1,7 +1,5 @@
 package net.jrodolfo.java_evolution.java01;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 /**
  * Refreshes early Java {@link Thread} and {@link Runnable} usage.
  */
@@ -14,16 +12,15 @@ public class ThreadBasicsExamples {
 	 * @throws InterruptedException when waiting is interrupted
 	 */
 	public int runRunnableInThread() throws InterruptedException {
-		AtomicInteger value = new AtomicInteger();
+		final int[] value = new int[1];
 		Thread worker = new Thread(new Runnable() {
-			@Override
 			public void run() {
-				value.set(42);
+				value[0] = 42;
 			}
 		});
 		worker.start();
 		worker.join();
-		return value.get();
+		return value[0];
 	}
 
 	/**

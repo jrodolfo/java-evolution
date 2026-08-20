@@ -18,7 +18,7 @@ public class DynamicProxyExamples {
 		GreetingService target = new DefaultGreetingService();
 		GreetingService proxy = (GreetingService) Proxy.newProxyInstance(
 				GreetingService.class.getClassLoader(),
-				new Class<?>[] { GreetingService.class },
+				new Class[] { GreetingService.class },
 				new TracingInvocationHandler(target));
 		return proxy.greet("Java");
 	}
@@ -28,7 +28,6 @@ public class DynamicProxyExamples {
 	}
 
 	static class DefaultGreetingService implements GreetingService {
-		@Override
 		public String greet(String name) {
 			return "Hello, " + name;
 		}
@@ -41,7 +40,6 @@ public class DynamicProxyExamples {
 			this.target = target;
 		}
 
-		@Override
 		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 			Object result = method.invoke(target, args);
 			return "traced: " + result;

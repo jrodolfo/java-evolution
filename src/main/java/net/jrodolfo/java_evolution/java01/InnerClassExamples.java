@@ -36,7 +36,6 @@ public class InnerClassExamples {
 	 */
 	public String transformWithAnonymousClass(String value) {
 		Transformer transformer = new Transformer() {
-			@Override
 			public String transform(String input) {
 				return input.toUpperCase();
 			}

@@ -16,10 +16,10 @@ public class RegexExamples {
 	 * @param text text to scan
 	 * @return matched identifiers
 	 */
-	public List<String> issueIds(String text) {
+	public List issueIds(String text) {
 		Pattern pattern = Pattern.compile("[A-Z]+-\\d+");
 		Matcher matcher = pattern.matcher(text);
-		List<String> ids = new ArrayList<>();
+		List ids = new ArrayList();
 
 		while (matcher.find()) {
 			ids.add(matcher.group());

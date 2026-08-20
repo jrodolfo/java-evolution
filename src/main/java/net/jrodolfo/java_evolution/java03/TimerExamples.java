@@ -2,9 +2,6 @@ package net.jrodolfo.java_evolution.java03;
 
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Demonstrates {@link Timer} and {@link TimerTask}.
@@ -19,22 +16,41 @@ public class TimerExamples {
 	 */
 	public int runDelayedTask() throws InterruptedException {
 		Timer timer = new Timer("java03-timer", true);
-		CountDownLatch completed = new CountDownLatch(1);
-		AtomicInteger count = new AtomicInteger();
+		Completion completion = new Completion();
 
 		try {
 			timer.schedule(new TimerTask() {
-				@Override
 				public void run() {
-					count.incrementAndGet();
-					completed.countDown();
+					completion.record();
 				}
 			}, 1L);
-			completed.await(2, TimeUnit.SECONDS);
-			return count.get();
+			return completion.await(2000L);
 		}
 		finally {
 			timer.cancel();
+		}
+	}
+
+	static class Completion {
+		private int count;
+		private boolean done;
+
+		synchronized void record() {
+			count++;
+			done = true;
+			notifyAll();
+		}
+
+		synchronized int await(long timeoutMillis) throws InterruptedException {
+			long deadline = System.currentTimeMillis() + timeoutMillis;
+			while (!done) {
+				long remaining = deadline - System.currentTimeMillis();
+				if (remaining <= 0L) {
+					break;
+				}
+				wait(remaining);
+			}
+			return count;
 		}
 	}
 }

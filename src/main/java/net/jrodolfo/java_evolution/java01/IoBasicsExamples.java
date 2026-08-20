@@ -5,7 +5,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.charset.StandardCharsets;
 
 /**
  * Refreshes classic {@code java.io} stream concepts.
@@ -20,10 +19,10 @@ public class IoBasicsExamples {
 	 * @throws IOException when stream operations fail
 	 */
 	public String copyBytes(String text) throws IOException {
-		InputStream input = new ByteArrayInputStream(text.getBytes(StandardCharsets.UTF_8));
+		InputStream input = new ByteArrayInputStream(text.getBytes("UTF-8"));
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		copy(input, output);
-		return output.toString(StandardCharsets.UTF_8);
+		return output.toString("UTF-8");
 	}
 
 	private void copy(InputStream input, OutputStream output) throws IOException {

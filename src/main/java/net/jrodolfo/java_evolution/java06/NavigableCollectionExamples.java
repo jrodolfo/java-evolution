@@ -2,6 +2,7 @@ package net.jrodolfo.java_evolution.java06;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Map;
 import java.util.NavigableMap;
 import java.util.NavigableSet;
 import java.util.TreeMap;
@@ -48,7 +49,8 @@ public class NavigableCollectionExamples {
 		releases.put(5, "generics and concurrency utilities");
 		releases.put(6, "scripting and compiler APIs");
 		releases.put(7, "Project Coin and NIO.2");
-		return releases.floorEntry(requestedVersion).getValue();
+		Map.Entry<Integer, String> entry = releases.floorEntry(requestedVersion);
+		return entry != null ? entry.getValue() : null;
 	}
 
 	/**

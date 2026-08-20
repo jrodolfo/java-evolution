@@ -33,18 +33,15 @@ public class LoggingExamples {
 	static class CapturingHandler extends Handler {
 		private String message;
 
-		@Override
 		public void publish(LogRecord record) {
 			if (record.getLevel().intValue() >= Level.INFO.intValue()) {
 				message = record.getMessage();
 			}
 		}
 
-		@Override
 		public void flush() {
 		}
 
-		@Override
 		public void close() {
 		}
 

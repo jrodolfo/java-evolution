@@ -17,8 +17,8 @@ public class CollectionsFrameworkExamples {
 	 *
 	 * @return ordered names including duplicates
 	 */
-	public List<String> orderedNames() {
-		List<String> names = new ArrayList<>();
+	public List orderedNames() {
+		List names = new ArrayList();
 		names.add("Ana");
 		names.add("Maria");
 		names.add("Ana");
@@ -30,8 +30,8 @@ public class CollectionsFrameworkExamples {
 	 *
 	 * @return unique names
 	 */
-	public Set<String> uniqueNames() {
-		Set<String> names = new HashSet<>();
+	public Set uniqueNames() {
+		Set names = new HashSet();
 		names.add("Ana");
 		names.add("Maria");
 		names.add("Ana");
@@ -43,8 +43,8 @@ public class CollectionsFrameworkExamples {
 	 *
 	 * @return release descriptions by version number
 	 */
-	public Map<Integer, String> releaseDescriptions() {
-		Map<Integer, String> releases = new HashMap<>();
+	public Map releaseDescriptions() {
+		Map releases = new HashMap();
 		releases.put(1, "foundations");
 		releases.put(2, "collections framework");
 		return releases;

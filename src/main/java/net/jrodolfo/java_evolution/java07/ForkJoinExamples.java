@@ -15,7 +15,8 @@ public class ForkJoinExamples {
 	 * @return total sum
 	 */
 	public int parallelSum(int[] values) {
-		return ForkJoinPool.commonPool().invoke(new SumTask(values, 0, values.length));
+		ForkJoinPool pool = new ForkJoinPool();
+		return pool.invoke(new SumTask(values, 0, values.length));
 	}
 
 	static class SumTask extends RecursiveTask<Integer> {

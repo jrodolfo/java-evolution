@@ -28,11 +28,11 @@ class ExceptionHandlingBasicsExamplesTest {
 		}
 
 		assertThat(thrown)
-				.as("The wrapper should preserve the original IOException as the cause")
+				.as("The Java 1 style wrapper should expose the domain failure without Java 1.4 cause chaining")
 				.isInstanceOf(ExceptionHandlingBasicsExamples.ConfigurationException.class)
 				.hasMessage("configuration could not be loaded");
 		assertThat(thrown.getCause())
-				.isInstanceOf(IOException.class)
-				.hasMessage("value is unavailable");
+				.as("Throwable cause chaining is demonstrated later as a Java 4 feature")
+				.isNull();
 	}
 }

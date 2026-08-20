@@ -21,14 +21,12 @@ public class InterfaceExamples {
 	}
 
 	static class PlainRenderer implements Renderer {
-		@Override
 		public String render(String value) {
 			return value;
 		}
 	}
 
 	static class BracketedRenderer implements Renderer {
-		@Override
 		public String render(String value) {
 			return "[" + value + "]";
 		}
