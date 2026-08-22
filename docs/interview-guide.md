@@ -16,6 +16,8 @@ Good framing:
 I built this repository to study Java release by release. Each package shows only the features introduced in that version, and the tests document the expected behavior.
 ```
 
+Java 1 through Java 7 are useful interview background even when the conversation starts at Java 8. They explain the older foundations behind objects, interfaces, checked exceptions, collections, generics, annotations, `java.util.concurrent`, try-with-resources, NIO.2, and fork/join.
+
 ## Java 8: Functional Style
 
 Key topics:
@@ -76,7 +78,7 @@ src/main/java/net/jrodolfo/java_evolution/java10
 src/main/java/net/jrodolfo/java_evolution/java11
 ```
 
-## Java 12-17: Language Cleanup And Java 17 LTS
+## Java 12-16: Language Simplification
 
 Key topics:
 
@@ -84,8 +86,7 @@ Key topics:
 - Text blocks made multiline strings readable.
 - Records removed boilerplate for transparent data carriers.
 - Pattern matching for `instanceof` combined type check and binding.
-- Sealed classes made closed type hierarchies explicit.
-- Java 17 is an LTS release and finalized sealed classes.
+- Sealed classes were previewed before becoming final in Java 17.
 
 Possible prompt:
 
@@ -119,18 +120,16 @@ src/main/java/net/jrodolfo/java_evolution/java13
 src/main/java/net/jrodolfo/java_evolution/java14
 src/main/java/net/jrodolfo/java_evolution/java15
 src/main/java/net/jrodolfo/java_evolution/java16
-src/main/java/net/jrodolfo/java_evolution/java17
 ```
 
-## Java 18-22: Modern Concurrency And Pattern Matching
+## Java 17-21: Modern Java Baseline
 
 Key topics:
 
+- Java 17 is an LTS release and finalized sealed classes.
 - Java 18 standardized UTF-8 as the default charset.
-- Java 19 previewed virtual threads and record patterns.
-- Java 20 refined preview/incubator features.
+- Java 19 and 20 previewed and refined virtual threads, record patterns, and related concurrency work.
 - Java 21 finalized virtual threads, record patterns, and pattern matching for `switch`, and introduced sequenced collections as a final Collections Framework feature.
-- Java 22 finalized unnamed variables and patterns and the Foreign Function and Memory API.
 
 Possible prompt:
 
@@ -163,18 +162,16 @@ src/main/java/net/jrodolfo/java_evolution/java18
 src/main/java/net/jrodolfo/java_evolution/java19
 src/main/java/net/jrodolfo/java_evolution/java20
 src/main/java/net/jrodolfo/java_evolution/java21
-src/main/java/net/jrodolfo/java_evolution/java22
 ```
 
-## Java 23-26: Current Release Awareness
+## Java 22-24: Post-Java-21 Expansion
 
 Key topics:
 
+- Java 22 finalized unnamed variables and patterns and the Foreign Function and Memory API.
 - Java 23 introduced Markdown documentation comments and continued several previews.
 - Java 24 finalized Stream Gatherers and the Class-File API.
-- Java 25 finalized scoped values, flexible constructor bodies, module import declarations, compact source files, and the KDF API.
-- Some Java 25 features are still preview or incubator, such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
-- Java 26 adds HTTP/3 support, removes the Applet API, and continues preview/incubator/runtime work. This repository documents Java 26 as notes-only while the build baseline remains JDK 25.
+- These releases mix final APIs, preview language work, tooling, security, runtime, and notes-only topics.
 
 Possible prompt:
 
@@ -187,6 +184,23 @@ Strong answer:
 ```text
 I separate final features from preview and incubator features. A preview feature is available for feedback but can still change, so I would not present it as a stable production contract without checking the release status.
 ```
+
+Repo paths:
+
+```text
+src/main/java/net/jrodolfo/java_evolution/java22
+src/main/java/net/jrodolfo/java_evolution/java23
+src/main/java/net/jrodolfo/java_evolution/java24
+```
+
+## Java 25-26: LTS And Current-Release Awareness
+
+Key topics:
+
+- Java 25 is an LTS release that finalized scoped values, flexible constructor bodies, module import declarations, compact source files, and the KDF API.
+- Some Java 25 features are still preview or incubator, such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
+- Java 26 adds HTTP/3 support, removes the Applet API, and continues preview/incubator/runtime work.
+- This repository documents Java 26 as notes-only while the build baseline remains JDK 25.
 
 Possible prompt:
 
@@ -203,8 +217,6 @@ JDK 25 is the stable build baseline for the project. Java 26 is still valuable f
 Repo paths:
 
 ```text
-src/main/java/net/jrodolfo/java_evolution/java23
-src/main/java/net/jrodolfo/java_evolution/java24
 src/main/java/net/jrodolfo/java_evolution/java25
 src/main/java/net/jrodolfo/java_evolution/java26
 ```

@@ -49,8 +49,8 @@ Start here if the goal is interview preparation or practical Java fluency.
 | Pre-Java-8 foundations | 5-7 | Generics, enums, annotations, concurrency utilities, Project Coin, NIO.2 |
 | Functional Java | 8 | Lambdas, streams, method references, `Optional`, default methods, date/time |
 | Platform/API modernization | 9-11 | Collections factories, modules, HTTP Client, String/File APIs, `var` |
-| Language simplification | 12-17 | Switch expressions, text blocks, records, pattern matching, sealed classes |
-| Modern concurrency and data modeling | 18-22 | UTF-8 default, virtual threads, record patterns, pattern switch, sequenced collections |
+| Language simplification | 12-16 | Switch expressions, text blocks, records, pattern matching |
+| Modern Java style | 17-21 | Sealed classes, virtual threads, record patterns, pattern switch, sequenced collections |
 | Post-Java-21 expansion | 22-24 | FFM, Stream Gatherers, Class-File API, source simplification, runtime/security notes |
 | LTS and current-release maturity | 25-26 | Final vs preview/incubator status, scoped values, compact source files, runtime/removal notes |
 
@@ -70,11 +70,11 @@ Do not try to memorize every JEP number on the first pass. Focus on explaining w
 4. **Java 10, 11**
    Study `var`, `HttpClient`, String APIs, files APIs, `Predicate.not`, and `Optional.isEmpty`. These show how Java became more concise without becoming dynamic.
 
-5. **Java 14-17**
-   Study switch expressions, records, pattern matching for `instanceof`, sealed classes, `HexFormat`, and strong encapsulation. These are common in modern code reviews and migration discussions.
+5. **Java 12-16**
+   Study switch expressions, text blocks, records, pattern matching for `instanceof`, and `Stream.toList`. These are common in modern code reviews and migration discussions.
 
-6. **Java 21**
-   Spend extra time here because Java 21 is an LTS release. Focus on virtual threads, record patterns, pattern matching for `switch`, and sequenced collections.
+6. **Java 17-21**
+   Spend extra time here because Java 17 and Java 21 are LTS releases. Focus on sealed classes, strong encapsulation, virtual threads, record patterns, pattern matching for `switch`, and sequenced collections.
 
 7. **Java 22-24**
    Study these as post-Java-21 expansion releases. Focus on final platform APIs, source simplification, and the difference between executable examples and explanatory modules.
@@ -117,8 +117,8 @@ If time is limited, prioritize these topics:
 - Java 8: lambdas, streams, `Optional`, date/time
 - Java 10: `var`
 - Java 11: HTTP Client and String APIs
-- Java 14-17: switch expressions, records, pattern matching, sealed classes
-- Java 21: virtual threads, record patterns, pattern matching for `switch`, sequenced collections
+- Java 12-16: switch expressions, records, pattern matching
+- Java 17-21: sealed classes, virtual threads, record patterns, pattern matching for `switch`, sequenced collections
 - Java 22-24: post-Java-21 platform expansion
 - Java 25-26: final vs preview awareness and baseline discipline
 

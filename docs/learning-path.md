@@ -215,7 +215,9 @@ Java 23:
 Run:
 
 ```bash
-mvn "-Dtest=MarkdownDocumentationCommentsNotesTest,PrimitivePatternsPreviewNotesTest,ModuleImportDeclarationsPreviewNotesTest,FlexibleConstructorBodiesSecondPreviewNotesTest,StreamGatherersSecondPreviewNotesTest,ClassFileApiSecondPreviewNotesTest,ScopedValuesThirdPreviewNotesTest" test
+mvn "-Dtest=MarkdownDocumentationCommentsNotesTest,PrimitivePatternsPreviewNotesTest,ModuleImportDeclarationsPreviewNotesTest" test
+mvn "-Dtest=FlexibleConstructorBodiesSecondPreviewNotesTest,StreamGatherersSecondPreviewNotesTest,ClassFileApiSecondPreviewNotesTest" test
+mvn "-Dtest=ScopedValuesThirdPreviewNotesTest" test
 ```
 
 Java 24:
@@ -290,7 +292,8 @@ Run:
 ```bash
 mvn "-Dtest=Http3ClientNotesTest,FinalFieldRestrictionsNotesTest,AppletApiRemovalNotesTest" test
 mvn "-Dtest=AotObjectCachingNotesTest,G1SynchronizationNotesTest,LazyConstantsSecondPreviewNotesTest" test
-mvn "-Dtest=PemEncodingsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,VectorApiEleventhIncubatorNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
+mvn "-Dtest=PemEncodingsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest" test
+mvn "-Dtest=VectorApiEleventhIncubatorNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
 ```
 
 Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics. It should also explain why Java 26 remains notes-only while the project keeps JDK 25 as the build baseline.

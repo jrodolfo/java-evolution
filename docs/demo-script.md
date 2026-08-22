@@ -85,7 +85,7 @@ mvn -Dtest=VirtualThreadsExamplesTest test
 
 Expected point: the example shows the API shape without turning the repository into a full web application.
 
-### 5. Show A Java 25 Current-Release Example
+### 5. Show Java 25 LTS And Java 26 Current-Release Awareness
 
 Open:
 
@@ -93,12 +93,13 @@ Open:
 src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/README.md
 src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamples.java
 src/test/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamplesTest.java
+src/main/java/net/jrodolfo/java_evolution/java26/README.md
 ```
 
 Say:
 
 ```text
-For newer releases, I separate final features from preview, incubator, runtime, and tooling features. Scoped values are represented as a final executable Java 25 feature, while some other final Java 25 features are documented as notes when they fit source-launcher, cryptography, JVM, or operational examples better than tiny JUnit demos.
+For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature, while Java 26 is documented as notes-only current-release awareness under the JDK 25 build baseline.
 ```
 
 Run:
@@ -107,7 +108,7 @@ Run:
 mvn -Dtest=ScopedValuesExamplesTest test
 ```
 
-Expected point: current-release awareness is useful only if you can also explain feature maturity.
+Expected point: current-release awareness is useful only if you can also explain feature maturity and the project's build baseline.
 
 ### 6. Close With The Supporting Docs
 
@@ -141,7 +142,7 @@ Use this when time is short:
 1. Show `README.md` and explain the version-based structure.
 2. Open `java08/StreamExamples.java` to show Java 8 functional style.
 3. Open `java21/VirtualThreadsExamples.java` to show modern Java concurrency.
-4. Open `java25/scoped_values/README.md` or `java25/CompactSourceFilesNotesTest.java` to show current-release awareness.
+4. Open `java25/scoped_values/README.md` and `java26/README.md` to show LTS/current-release awareness.
 5. Run one focused command:
 
 ```bash
