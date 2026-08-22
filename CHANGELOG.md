@@ -6,6 +6,12 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
+No unreleased changes yet.
+
+## v1.3.1
+
+Patch release focused on Java release chronology and documentation validation workflow.
+
 ### Added
 
 - Added a Java release timeline with month/year release context from Java 1 through Java 25.
@@ -13,6 +19,18 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 ### Changed
 
 - Added release-date context to version READMEs, root README navigation, the feature index, and study/navigation docs.
+- Clarified the distinction between repository release history and Java platform release history.
+- Clarified historical naming for Java 1.3 and Java 1.4, which were marketed under the Java 2 Platform, Standard Edition brand.
+- Added `VERBOSE=-v` and `VERBOSE=-vv` pass-through support for `make links`.
+- Removed a blocked timeline reference link that returned HTTP 403 during Markdown link checks.
+- Cleaned up an unsupported JavaDoc tag in the Java 4 NIO example documentation.
+
+### Validation
+
+- `node scripts/check-doc-navigation.mjs`
+- `make docs`
+- `make links`
+- `git diff --check`
 
 ## v1.3.0
 
