@@ -11,6 +11,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | AOT | Ahead-of-Time | Work done before normal application startup, such as preloading or linking classes to reduce startup cost. |
 | API | Application Programming Interface | A public type, method, module, or library contract that code can call. |
 | ABI | Application Binary Interface | The platform rules that describe how compiled code calls functions and represents values in memory; relevant to the FFM linker's native function signatures. |
+| Applet API | Applet Application Programming Interface | Browser-embedded Java client technology from the plugin era. It was deprecated for removal and removed from the platform in Java 26. |
 | ARM64 | 64-bit ARM architecture | The CPU architecture used by modern Apple Silicon machines and some Linux/Windows systems. It matters when installing JDKs or tools such as `lychee`. |
 | AWT | Abstract Window Toolkit | Java's original GUI toolkit. In this project, AWT appears as early platform background and as part of the history that led to Swing and Java 2D. |
 | CI | Continuous Integration | Automated checks run by GitHub Actions, such as build, link validation, and JavaDoc publishing. |

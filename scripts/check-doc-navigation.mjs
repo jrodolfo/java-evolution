@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const versions = Array.from({ length: 25 }, (_, index) => `java${String(index + 1).padStart(2, "0")}`);
+const versions = Array.from({ length: 26 }, (_, index) => `java${String(index + 1).padStart(2, "0")}`);
 const root = "src/main/java/net/jrodolfo/java_evolution";
 
 function markdownFilesIn(directory) {
