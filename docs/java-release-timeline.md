@@ -44,6 +44,5 @@ For modern releases, OpenJDK and Oracle general-availability announcements provi
 ## References
 
 - [Java SE releases and class-file versions](https://docs.oracle.com/en/java/javase/25/docs/specs/jvms/jvms-1.html)
-- [JDK release archive timeline](https://ops.java/releases/)
 - [OpenJDK JDK 7 project](https://openjdk.org/projects/jdk7/)
 - [OpenJDK JDK 25 general availability announcement](https://mail.openjdk.org/pipermail/announce/2025-September/000360.html)
