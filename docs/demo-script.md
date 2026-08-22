@@ -57,7 +57,7 @@ Java 8 changed everyday Java style. Streams let me describe collection transform
 Run:
 
 ```bash
-mvn -Dtest=StreamExamplesTest test
+mvn "-Dtest=StreamExamplesTest" test
 ```
 
 Expected point: the test proves the behavior and acts as executable documentation.
@@ -80,7 +80,7 @@ Java 21 is important because it is an LTS release. Virtual threads let blocking,
 Run:
 
 ```bash
-mvn -Dtest=VirtualThreadsExamplesTest test
+mvn "-Dtest=VirtualThreadsExamplesTest" test
 ```
 
 Expected point: the example shows the API shape without turning the repository into a full web application.
@@ -105,7 +105,7 @@ For newer releases, I separate final features from preview, incubator, runtime, 
 Run:
 
 ```bash
-mvn -Dtest=ScopedValuesExamplesTest test
+mvn "-Dtest=ScopedValuesExamplesTest" test
 ```
 
 Expected point: current-release awareness is useful only if you can also explain feature maturity and the project's build baseline.
@@ -146,7 +146,7 @@ Use this when time is short:
 5. Run one focused command:
 
 ```bash
-mvn -Dtest=VirtualThreadsExamplesTest test
+mvn "-Dtest=VirtualThreadsExamplesTest" test
 ```
 
 Close with:
@@ -174,9 +174,9 @@ Use this before a live walkthrough to verify that the hands-on demos still match
 Run one example:
 
 ```bash
-mvn -Dtest=StreamExamplesTest test
-mvn -Dtest=VirtualThreadsExamplesTest test
-mvn -Dtest=ScopedValuesExamplesTest test
+mvn "-Dtest=StreamExamplesTest" test
+mvn "-Dtest=VirtualThreadsExamplesTest" test
+mvn "-Dtest=ScopedValuesExamplesTest" test
 ```
 
 Generate JavaDoc:

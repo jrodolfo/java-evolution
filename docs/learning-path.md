@@ -308,4 +308,4 @@ Use this checklist when preparing to show the repository:
 4. Pick one Java 8 example and explain the problem it solved.
 5. Pick one Java 21 example and explain why it matters for current production Java.
 6. Pick one Java 25 or Java 26 example or notes class and explain whether the feature is final, preview, incubator, runtime, tooling-related, security-related, or removal-related.
-7. Use [docs/jep-index.md](jep-index.md) when you need the official JEP number or status.
+7. Use [jep-index.md](jep-index.md) when you need the official JEP number or status.

@@ -67,7 +67,7 @@ Do not try to memorize every JEP number on the first pass. Focus on explaining w
 3. **Java 8**
    Study lambdas, streams, `Optional`, method references, `CompletableFuture`, default methods, and the date/time API. These are still daily-use features.
 
-4. **Java 10, 11**
+4. **Java 9-11**
    Study `var`, `HttpClient`, String APIs, files APIs, `Predicate.not`, and `Optional.isEmpty`. These show how Java became more concise without becoming dynamic.
 
 5. **Java 12-16**
