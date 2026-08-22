@@ -33,10 +33,12 @@ public class NioExamples {
 	 * @param channel source channel
 	 * @return decoded text
 	 * @throws IOException when reading fails
-	 * @apiNote This compact example decodes each buffer chunk independently and
-	 * is intended for ASCII-compatible sample text. Streaming non-ASCII text with
+	 * <p>
+	 * Note: this compact example decodes each buffer chunk independently and is
+	 * intended for ASCII-compatible sample text. Streaming non-ASCII text with
 	 * multibyte characters split across buffers requires a stateful
 	 * {@link java.nio.charset.CharsetDecoder}.
+	 * </p>
 	 */
 	public String readText(ReadableByteChannel channel) throws IOException {
 		ByteBuffer buffer = ByteBuffer.allocate(4);
