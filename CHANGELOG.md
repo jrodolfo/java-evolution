@@ -8,6 +8,25 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 No unreleased changes yet.
 
+## v1.4.1
+
+Patch release focused on learning-documentation clarity after the Java 26 release.
+
+### Changed
+
+- Aligned study-guide version ranges with the canonical learning path stages.
+- Split current-release learning guidance into clearer Java 22-24 and Java 25-26 sections.
+- Split migration guidance into Java 21 to Java 25 LTS migration plus Java 26 awareness.
+- Updated interview and demo guidance to distinguish Java 25 LTS material from Java 26 notes-only current-release awareness.
+- Improved Maven command readability and consistency in learning walkthroughs.
+
+### Validation
+
+- `node scripts/check-doc-navigation.mjs`
+- `make docs`
+- `make links`
+- `git diff --check`
+
 ## v1.4.0
 
 Learning-focused release that expands the repository from Java 1-25 coverage to Java 1-26 coverage while keeping JDK 25 as the build baseline.
