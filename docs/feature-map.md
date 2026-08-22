@@ -2,7 +2,7 @@
 
 This document maps each Java release to the example and test classes that demonstrate or document its features.
 
-Use this when you already know the Java version or feature name and want to jump directly to the code. For learning context, open the linked version README first. For feature maturity and JEP links, use [status-matrix.md](status-matrix.md). For a shorter list of hands-on demonstrations, use [practical-demos.md](practical-demos.md).
+Use this when you already know the Java version or feature name and want to jump directly to the code. For learning context, open the linked version README first. For release chronology, use [java-release-timeline.md](java-release-timeline.md). For feature maturity and JEP links, use [status-matrix.md](status-matrix.md). For a shorter list of hands-on demonstrations, use [practical-demos.md](practical-demos.md).
 
 ## Java 1
 

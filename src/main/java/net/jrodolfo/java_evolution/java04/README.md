@@ -1,5 +1,7 @@
 # Java 4
 
+Released: February 2002 as J2SE 1.4.
+
 J2SE 1.4 added several features that still matter in everyday Java: assertions, regular expressions, NIO, logging, chained exceptions, preferences, XML processing, and integrated security APIs.
 
 ## Assertions

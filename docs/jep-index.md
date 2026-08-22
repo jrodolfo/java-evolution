@@ -1,6 +1,6 @@
 # JEP Index
 
-This index centralizes the JEP links used by the repository. It is a lookup table, not a replacement for the version READMEs.
+This index centralizes the JEP links used by the repository. It is a lookup table, not a replacement for the version READMEs. For release months and historical naming context, use [java-release-timeline.md](java-release-timeline.md).
 
 Status labels:
 
@@ -18,7 +18,7 @@ Status labels:
 
 ## Java 1-7
 
-Java 1-7 predate the modern JEP process used elsewhere in this index. Their entries point to official release notes, specifications, or API documentation instead of JEP pages.
+Java 1-7 predate the modern JEP process used elsewhere in this index. Their entries point to official release notes, specifications, or API documentation instead of JEP pages. See [java-release-timeline.md](java-release-timeline.md) for their release dates and naming history.
 
 | Reference | Feature | Status |
 |---|---|---|

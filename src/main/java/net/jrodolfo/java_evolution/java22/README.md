@@ -1,5 +1,7 @@
 # Java 22
 
+Released: March 2024 as Java SE 22.
+
 Java 22 continued the modern Java direction from Java 21. Some features became final, such as unnamed variables and patterns and the Foreign Function and Memory API. Others stayed in preview because the Java platform was still refining their syntax or API shape.
 
 This package is intentionally mixed: runnable examples are used where JDK 25-compatible syntax keeps things simple, and notes are used where the original Java 22 feature requires preview behavior, launcher behavior, native setup, or APIs that changed later.

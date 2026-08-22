@@ -1,5 +1,7 @@
 # Java 11
 
+Released: September 2018 as Java SE 11.
+
 Java 11 is a long-term support release. It did not introduce one huge language feature, but it added several practical APIs that made everyday Java code cleaner.
 
 The examples in this package focus on small improvements that remove boilerplate from string processing, file I/O, HTTP calls, predicates, optionals, and lambda parameters.

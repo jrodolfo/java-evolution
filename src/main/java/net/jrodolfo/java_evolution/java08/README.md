@@ -1,5 +1,7 @@
 # Java 8
 
+Released: March 2014 as Java SE 8.
+
 Java 8 was one of the most important Java releases because it changed how everyday Java code is written. Before Java 8, Java was mostly object-oriented and imperative: you created classes, loops, and mutable collections to describe almost every operation. Java 8 added tools for passing behavior, processing data declaratively, representing missing values more explicitly, composing asynchronous work, and using a safer date/time model.
 
 The examples in this package intentionally avoid later Java features such as records, `var`, switch expressions, and pattern matching. The goal is to show what Java 8 itself made possible.

@@ -6,7 +6,13 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
-No unreleased changes yet.
+### Added
+
+- Added a Java release timeline with month/year release context from Java 1 through Java 25.
+
+### Changed
+
+- Added release-date context to version READMEs, root README navigation, the feature index, and study/navigation docs.
 
 ## v1.3.0
 

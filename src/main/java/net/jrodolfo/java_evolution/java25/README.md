@@ -1,5 +1,7 @@
 # Java 25
 
+Released: September 2025 as Java SE 25.
+
 Java 25 finalizes several features, continues some preview and incubator work, and adds newer platform work around diagnostics, startup, memory layout, garbage collection, cryptography, and vector computation.
 
 Because this is the newest release in the repository, this package is careful about status. Some examples are runnable with JDK 25. Others are notes because they involve preview APIs, incubator modules, JVM options, cryptographic providers, source-launcher behavior, or runtime ergonomics.

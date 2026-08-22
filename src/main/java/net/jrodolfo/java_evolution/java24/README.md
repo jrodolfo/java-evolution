@@ -1,5 +1,7 @@
 # Java 24
 
+Released: March 2025 as Java SE 24.
+
 Java 24 finalized a few APIs and continued several preview efforts. It is a good release for seeing the difference between language features, library APIs, launcher/runtime behavior, VM ergonomics, and security changes.
 
 Runnable examples are used where the feature is stable and simple. Notes are used where the feature is operational, cryptographic, preview-only, or better demonstrated outside this lightweight Spring Boot-based Maven reference project.

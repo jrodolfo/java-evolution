@@ -1,5 +1,7 @@
 # Java 17
 
+Released: September 2021 as Java SE 17.
+
 Java 17 is a long-term support release. It finalized sealed classes and added several library/runtime improvements that matter for maintainability, diagnostics, security, and low-level data handling.
 
 ## Sealed Classes Final

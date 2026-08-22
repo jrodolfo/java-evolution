@@ -2,7 +2,7 @@
 
 This path turns the repository into a sequence of study sessions. The goal is not to memorize release notes. The goal is to understand the problem each group of features solved, read the smallest useful examples, and run the tests that prove the behavior.
 
-Use [feature-map.md](feature-map.md) when you want a complete class-by-class index. Use [practical-demos.md](practical-demos.md) when you want a shorter tour of the most hands-on examples.
+Use [feature-map.md](feature-map.md) when you want a complete class-by-class index. Use [java-release-timeline.md](java-release-timeline.md) when you want the release chronology behind the stages. Use [practical-demos.md](practical-demos.md) when you want a shorter tour of the most hands-on examples.
 
 ## Stage 1: Java 1-4 Early Foundations
 

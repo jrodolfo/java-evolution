@@ -1,5 +1,7 @@
 # Java 1
 
+Release context: JDK 1.0 arrived in January 1996; JDK 1.1 followed in February 1997.
+
 This package covers early Java 1.0 and 1.1 foundations. It is intentionally a refresher on platform concepts that later releases evolved, not a complete introductory Java course.
 
 Java 1.0 established the object-oriented language, checked exceptions, threads, `java.io`, AWT, applets, and the original standard-library shape. Java 1.1 expanded the platform with inner classes, reflection, object serialization, JDBC, RMI, JavaBeans, internationalization, JAR files, JNI, and the delegation event model.

@@ -1,5 +1,7 @@
 # Java 18
 
+Released: March 2022 as Java SE 18.
+
 Java 18 was not a large language-feature release, but it made important quality-of-life improvements. The common theme is portability and better tooling: text files became more predictable across operating systems, the JDK gained a tiny static web server, JavaDoc gained better code examples, and advanced networking code gained a supported name-resolution extension point.
 
 ## UTF-8 by Default

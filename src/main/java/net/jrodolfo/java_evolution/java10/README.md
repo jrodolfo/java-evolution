@@ -1,5 +1,7 @@
 # Java 10
 
+Released: March 2018 as Java SE 10.
+
 Java 10 was a smaller release than Java 9, but it introduced one feature that appears often in modern Java code: local variable type inference with `var`.
 
 The Java 10 examples focus on readability improvements. None of these features make Java dynamically typed or radically change the language. They remove small amounts of repetition when the compiler already has enough information.

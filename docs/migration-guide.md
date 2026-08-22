@@ -2,7 +2,7 @@
 
 This guide explains what to study when moving from one common Java baseline to a newer one. It is not a full production migration manual. It focuses on the language, library, and platform changes that help a learner or interview candidate explain how Java evolved.
 
-For exact feature status and JEP links, use [status-matrix.md](status-matrix.md) and [jep-index.md](jep-index.md). For class-by-class navigation, use [feature-map.md](feature-map.md).
+For exact feature status and JEP links, use [status-matrix.md](status-matrix.md) and [jep-index.md](jep-index.md). For release chronology, use [java-release-timeline.md](java-release-timeline.md). For class-by-class navigation, use [feature-map.md](feature-map.md).
 
 For recurring acronyms such as JEP, LTS, AOT, JFR, and GC, see [glossary.md](glossary.md).
 

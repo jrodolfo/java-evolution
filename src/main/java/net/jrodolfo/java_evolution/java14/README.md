@@ -1,5 +1,7 @@
 # Java 14
 
+Released: March 2020 as Java SE 14.
+
 Java 14 finalized switch expressions and previewed two features that later became central to modern Java: records and pattern matching. It also improved runtime diagnostics with helpful `NullPointerException` messages.
 
 The preview examples use JDK 25-compatible final syntax while explaining that Java 14 was the first preview release for those features.

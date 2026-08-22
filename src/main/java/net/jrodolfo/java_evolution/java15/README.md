@@ -1,5 +1,7 @@
 # Java 15
 
+Released: September 2020 as Java SE 15.
+
 Java 15 finalized text blocks and continued the preview path for sealed classes. It also introduced hidden classes, a feature aimed mostly at frameworks, language runtimes, and dynamic code generation.
 
 The examples use current JDK 25-compatible syntax while documenting which Java 15 features were final and which were still preview.

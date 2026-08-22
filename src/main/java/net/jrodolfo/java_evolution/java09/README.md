@@ -1,5 +1,7 @@
 # Java 9
 
+Released: September 2017 as Java SE 9.
+
 Java 9 was a large release. Its headline feature was the Java Platform Module System (JPMS), but it also added several everyday improvements that made Java 8-style code easier to write and maintain.
 
 The examples in this package keep the Spring Boot project non-modular on purpose. That lets the repository stay simple while still explaining what modules are for.

@@ -200,6 +200,7 @@ Start here depending on what you need:
 - New to the repository: read this README, then follow the [Study Guide](docs/study-guide.md).
 - Moving from an older Java baseline: use the [Migration Guide](docs/migration-guide.md).
 - Studying over multiple sessions: use the [Learning Path](docs/learning-path.md).
+- Wanting the historical dates: use the [Java Release Timeline](docs/java-release-timeline.md).
 - Looking for hands-on walkthroughs: use the [Practical Demos](docs/practical-demos.md).
 - Looking up acronyms and recurring platform terms: use the [Glossary](docs/glossary.md).
 - Looking for one feature quickly: use the [Feature Map](docs/feature-map.md).
@@ -210,6 +211,7 @@ Start here depending on what you need:
 
 - [Changelog](CHANGELOG.md): release history.
 - [Study Guide](docs/study-guide.md): suggested learning path through Java 1-25.
+- [Java Release Timeline](docs/java-release-timeline.md): release months and historical naming context from Java 1 through Java 25.
 - [Migration Guide](docs/migration-guide.md): practical guide for moving from Java 8, 11, 17, or 21 to newer baselines.
 - [Learning Path](docs/learning-path.md): staged study sessions with files to read, tests to run, and interview angles.
 - [Practical Demos](docs/practical-demos.md): focused walkthroughs for tooling, security, native, and class-file features, with `make demos` as a pre-demo check.
@@ -225,33 +227,33 @@ Start here depending on what you need:
 
 ## Feature Index
 
-| Java | Package | Highlights |
-|---|---|---|
-| 1 | [`java01`](src/main/java/net/jrodolfo/java_evolution/java01/README.md) | Object-Oriented Foundations, Interfaces, Checked Exceptions, Threads, `java.io`, Inner Classes, Reflection/Serialization/JDBC/RMI/JavaBeans notes |
-| 2 | [`java02`](src/main/java/net/jrodolfo/java_evolution/java02/README.md) | Collections Framework, Sorting, `strictfp`, Swing/Java 2D/Security notes |
-| 3 | [`java03`](src/main/java/net/jrodolfo/java_evolution/java03/README.md) | Dynamic Proxy, Timer, Shutdown Hooks/JNDI/Legacy Integration notes |
-| 4 | [`java04`](src/main/java/net/jrodolfo/java_evolution/java04/README.md) | Assertions notes, Regex, NIO, Logging, Chained Exceptions, Preferences/XML/Security notes |
-| 5 | [`java05`](src/main/java/net/jrodolfo/java_evolution/java05/README.md) | Generics, Enhanced For Loop, Autoboxing, Enums, Varargs, Static Import, Annotations, Concurrency Utilities |
-| 6 | [`java06`](src/main/java/net/jrodolfo/java_evolution/java06/README.md) | Navigable Collections, Scripting/Compiler/Console/Monitoring/Web-Service explanatory modules |
-| 7 | [`java07`](src/main/java/net/jrodolfo/java_evolution/java07/README.md) | Try-With-Resources, Multi-Catch, Diamond Operator, String Switch, NIO.2, Fork/Join, `invokedynamic` notes |
-| 8 | [`java08`](src/main/java/net/jrodolfo/java_evolution/java08/README.md) | Lambdas, Streams, Optional, Method References, CompletableFuture, Default Methods, Date/Time API |
-| 9 | [`java09`](src/main/java/net/jrodolfo/java_evolution/java09/README.md) | Collection Factories, Optional/Stream Enhancements, Private Interface Methods, Process API, StackWalker, Modules notes |
-| 10 | [`java10`](src/main/java/net/jrodolfo/java_evolution/java10/README.md) | `var`, Unmodifiable Collectors, `Optional.orElseThrow()` |
-| 11 | [`java11`](src/main/java/net/jrodolfo/java_evolution/java11/README.md) | String APIs, Files read/write string, HTTP Client, `Predicate.not`, lambda `var`, `Optional.isEmpty` |
-| 12 | [`java12`](src/main/java/net/jrodolfo/java_evolution/java12/README.md) | Switch Expressions preview, `Collectors.teeing`, `String.indent`, `Files.mismatch`, Compact Number Format |
-| 13 | [`java13`](src/main/java/net/jrodolfo/java_evolution/java13/README.md) | Text Blocks preview, switch `yield` preview, `FileSystems.newFileSystem(Path)` |
-| 14 | [`java14`](src/main/java/net/jrodolfo/java_evolution/java14/README.md) | Switch Expressions final, Helpful NullPointerExceptions, Records preview, Pattern Matching for `instanceof` preview |
-| 15 | [`java15`](src/main/java/net/jrodolfo/java_evolution/java15/README.md) | Text Blocks final, Sealed Classes preview, Hidden Classes explanatory module |
-| 16 | [`java16`](src/main/java/net/jrodolfo/java_evolution/java16/README.md) | Records final, Pattern Matching for `instanceof` final, `Stream.toList`, Unix-domain socket explanatory module |
-| 17 | [`java17`](src/main/java/net/jrodolfo/java_evolution/java17/README.md) | Sealed Classes final, Pattern Matching for switch preview, Random Generator API, `HexFormat`, Strong Encapsulation explanatory module |
-| 18 | [`java18`](src/main/java/net/jrodolfo/java_evolution/java18/README.md) | UTF-8 default charset, Simple Web Server example, JavaDoc snippets example, Internet-Address Resolution SPI explanatory module |
-| 19 | [`java19`](src/main/java/net/jrodolfo/java_evolution/java19/README.md) | Virtual Threads preview, Record Patterns preview, Pattern Matching switch preview, Structured Concurrency notes, FFM notes |
-| 20 | [`java20`](src/main/java/net/jrodolfo/java_evolution/java20/README.md) | Record Patterns second preview, Pattern Matching switch fourth preview, Scoped Values/Structured Concurrency/FFM/Vector notes |
-| 21 | [`java21`](src/main/java/net/jrodolfo/java_evolution/java21/README.md) | Virtual Threads final, Record Patterns final, Pattern Matching for switch final, Sequenced Collections, KEM example |
-| 22 | [`java22`](src/main/java/net/jrodolfo/java_evolution/java22/README.md) | Unnamed Variables and Patterns final, FFM executable native example, Stream Gatherers explanatory module, Class-File API explanatory module |
-| 23 | [`java23`](src/main/java/net/jrodolfo/java_evolution/java23/README.md) | Markdown Documentation Comments module, Primitive Patterns preview module, Module Imports preview module, ZGC Generational Mode notes |
-| 24 | [`java24`](src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API, Security Manager/AOT/runtime modules, post-quantum crypto examples, preview bridge modules |
-| 25 | [`java25`](src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, KDF example, Module Imports and Compact Source Files final documented via notes, JFR/AOT/GC notes |
+| Java | Released | Package | Highlights |
+|---|---|---|---|
+| 1 | Jan 1996 / Feb 1997 | [`java01`](src/main/java/net/jrodolfo/java_evolution/java01/README.md) | Object-Oriented Foundations, Interfaces, Checked Exceptions, Threads, `java.io`, Inner Classes, Reflection/Serialization/JDBC/RMI/JavaBeans notes |
+| 2 | Dec 1998 | [`java02`](src/main/java/net/jrodolfo/java_evolution/java02/README.md) | Collections Framework, Sorting, `strictfp`, Swing/Java 2D/Security notes |
+| 3 | May 2000 | [`java03`](src/main/java/net/jrodolfo/java_evolution/java03/README.md) | Dynamic Proxy, Timer, Shutdown Hooks/JNDI/Legacy Integration notes |
+| 4 | Feb 2002 | [`java04`](src/main/java/net/jrodolfo/java_evolution/java04/README.md) | Assertions notes, Regex, NIO, Logging, Chained Exceptions, Preferences/XML/Security notes |
+| 5 | Sep 2004 | [`java05`](src/main/java/net/jrodolfo/java_evolution/java05/README.md) | Generics, Enhanced For Loop, Autoboxing, Enums, Varargs, Static Import, Annotations, Concurrency Utilities |
+| 6 | Dec 2006 | [`java06`](src/main/java/net/jrodolfo/java_evolution/java06/README.md) | Navigable Collections, Scripting/Compiler/Console/Monitoring/Web-Service explanatory modules |
+| 7 | Jul 2011 | [`java07`](src/main/java/net/jrodolfo/java_evolution/java07/README.md) | Try-With-Resources, Multi-Catch, Diamond Operator, String Switch, NIO.2, Fork/Join, `invokedynamic` notes |
+| 8 | Mar 2014 | [`java08`](src/main/java/net/jrodolfo/java_evolution/java08/README.md) | Lambdas, Streams, Optional, Method References, CompletableFuture, Default Methods, Date/Time API |
+| 9 | Sep 2017 | [`java09`](src/main/java/net/jrodolfo/java_evolution/java09/README.md) | Collection Factories, Optional/Stream Enhancements, Private Interface Methods, Process API, StackWalker, Modules notes |
+| 10 | Mar 2018 | [`java10`](src/main/java/net/jrodolfo/java_evolution/java10/README.md) | `var`, Unmodifiable Collectors, `Optional.orElseThrow()` |
+| 11 | Sep 2018 | [`java11`](src/main/java/net/jrodolfo/java_evolution/java11/README.md) | String APIs, Files read/write string, HTTP Client, `Predicate.not`, lambda `var`, `Optional.isEmpty` |
+| 12 | Mar 2019 | [`java12`](src/main/java/net/jrodolfo/java_evolution/java12/README.md) | Switch Expressions preview, `Collectors.teeing`, `String.indent`, `Files.mismatch`, Compact Number Format |
+| 13 | Sep 2019 | [`java13`](src/main/java/net/jrodolfo/java_evolution/java13/README.md) | Text Blocks preview, switch `yield` preview, `FileSystems.newFileSystem(Path)` |
+| 14 | Mar 2020 | [`java14`](src/main/java/net/jrodolfo/java_evolution/java14/README.md) | Switch Expressions final, Helpful NullPointerExceptions, Records preview, Pattern Matching for `instanceof` preview |
+| 15 | Sep 2020 | [`java15`](src/main/java/net/jrodolfo/java_evolution/java15/README.md) | Text Blocks final, Sealed Classes preview, Hidden Classes explanatory module |
+| 16 | Mar 2021 | [`java16`](src/main/java/net/jrodolfo/java_evolution/java16/README.md) | Records final, Pattern Matching for `instanceof` final, `Stream.toList`, Unix-domain socket explanatory module |
+| 17 | Sep 2021 | [`java17`](src/main/java/net/jrodolfo/java_evolution/java17/README.md) | Sealed Classes final, Pattern Matching for switch preview, Random Generator API, `HexFormat`, Strong Encapsulation explanatory module |
+| 18 | Mar 2022 | [`java18`](src/main/java/net/jrodolfo/java_evolution/java18/README.md) | UTF-8 default charset, Simple Web Server example, JavaDoc snippets example, Internet-Address Resolution SPI explanatory module |
+| 19 | Sep 2022 | [`java19`](src/main/java/net/jrodolfo/java_evolution/java19/README.md) | Virtual Threads preview, Record Patterns preview, Pattern Matching switch preview, Structured Concurrency notes, FFM notes |
+| 20 | Mar 2023 | [`java20`](src/main/java/net/jrodolfo/java_evolution/java20/README.md) | Record Patterns second preview, Pattern Matching switch fourth preview, Scoped Values/Structured Concurrency/FFM/Vector notes |
+| 21 | Sep 2023 | [`java21`](src/main/java/net/jrodolfo/java_evolution/java21/README.md) | Virtual Threads final, Record Patterns final, Pattern Matching for switch final, Sequenced Collections, KEM example |
+| 22 | Mar 2024 | [`java22`](src/main/java/net/jrodolfo/java_evolution/java22/README.md) | Unnamed Variables and Patterns final, FFM executable native example, Stream Gatherers explanatory module, Class-File API explanatory module |
+| 23 | Sep 2024 | [`java23`](src/main/java/net/jrodolfo/java_evolution/java23/README.md) | Markdown Documentation Comments module, Primitive Patterns preview module, Module Imports preview module, ZGC Generational Mode notes |
+| 24 | Mar 2025 | [`java24`](src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API, Security Manager/AOT/runtime modules, post-quantum crypto examples, preview bridge modules |
+| 25 | Sep 2025 | [`java25`](src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, KDF example, Module Imports and Compact Source Files final documented via notes, JFR/AOT/GC notes |
 
 ## How To Study This Repository
 

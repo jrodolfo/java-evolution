@@ -1,5 +1,7 @@
 # Java 23
 
+Released: September 2024 as Java SE 23.
+
 Java 23 is mostly a preview and refinement release. That makes it valuable for learning because it shows how Java features mature: ideas appear as previews, receive feedback, and may become final in later releases.
 
 This package uses notes classes for most Java 23 features because many of them were preview APIs, runtime behavior, documentation tooling, or VM features rather than small stable APIs that fit cleanly into unit tests.

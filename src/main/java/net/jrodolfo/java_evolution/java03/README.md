@@ -1,5 +1,7 @@
 # Java 3
 
+Released: May 2000 as J2SE 1.3.
+
 J2SE 1.3 was not a large language release. Its most teachable additions for this repository are dynamic proxies, timer tasks, shutdown hooks, JNDI context, and legacy enterprise integration notes.
 
 ## Dynamic Proxy

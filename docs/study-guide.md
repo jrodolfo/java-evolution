@@ -4,6 +4,8 @@ This guide suggests one way to study the repository without treating every Java 
 
 The repository is organized by release, but learning Java features is easier if you group them by theme: functional style, platform modernization, language simplification, pattern matching, concurrency, and recent preview work.
 
+For release months and historical naming context, use [java-release-timeline.md](java-release-timeline.md).
+
 ## How To Use The Examples
 
 For each feature, read in this order:

@@ -1,5 +1,7 @@
 # Java 6
 
+Released: December 2006 as Java SE 6.
+
 Java 6 was more of a platform and tooling release than a language release. It added standard scripting integration, a compiler API, better monitoring and management support, console password prompting, web-service APIs, desktop improvements, and library refinements such as deques and navigable collections.
 
 This repository keeps most Java 6 topics as explanatory modules because a faithful demonstration often depends on tools, interactive terminals, optional engines, removed bundled APIs, or runtime attachment behavior. The executable example focuses on collection APIs that still compile and run naturally on JDK 25.

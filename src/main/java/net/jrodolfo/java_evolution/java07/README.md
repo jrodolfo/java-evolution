@@ -1,5 +1,7 @@
 # Java 7
 
+Released: July 2011 as Java SE 7.
+
 Java 7 made everyday Java code cleaner and safer through Project Coin, while also adding major platform support for modern filesystem work, parallel decomposition, and dynamic language implementation on the JVM.
 
 The examples in this package compile on JDK 25, but they intentionally use Java 7-era shapes where possible. For example, `StringSwitchExamples` uses a classic switch statement, not a later switch expression.

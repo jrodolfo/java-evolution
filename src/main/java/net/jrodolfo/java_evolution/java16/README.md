@@ -1,5 +1,7 @@
 # Java 16
 
+Released: March 2021 as Java SE 16.
+
 Java 16 finalized records and pattern matching for `instanceof`, two features that make modern Java code noticeably less repetitive. It also added `Stream.toList()` and Unix-domain socket channel support.
 
 Java 16 also introduced two important incubator APIs. The Vector API began its

@@ -1,5 +1,7 @@
 # Java 2
 
+Released: December 1998 as J2SE 1.2.
+
 Java 2, also known as J2SE 1.2, was a major platform release. It introduced the Collections Framework, Swing, Java 2D, a stronger security-policy model, and the `strictfp` modifier.
 
 This package focuses executable examples on the Collections Framework because it remains foundational and easy to demonstrate faithfully. GUI, graphics, floating-point-history, and security-policy topics are represented as explanatory modules.

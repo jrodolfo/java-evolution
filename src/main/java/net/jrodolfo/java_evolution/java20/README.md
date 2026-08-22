@@ -1,5 +1,7 @@
 # Java 20
 
+Released: March 2023 as Java SE 20.
+
 Java 20 was mostly a refinement release. Many features were in a second, fourth, or fifth preview/incubator round, which is useful to understand: important Java features often evolve publicly before they become final.
 
 The practical lesson is that preview and incubator features are not promises of final API shape. They are a way for the Java platform to gather feedback while keeping the production language stable.

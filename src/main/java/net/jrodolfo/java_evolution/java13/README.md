@@ -1,5 +1,7 @@
 # Java 13
 
+Released: September 2019 as Java SE 13.
+
 Java 13 continued preview work from Java 12 and refined features that later became part of everyday Java. Its most visible additions were text blocks and the `yield` keyword for switch expressions.
 
 The examples use JDK 25-compatible final syntax while documenting where Java 13 was still previewing or refining the feature.
