@@ -6,6 +6,12 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
+No unreleased changes yet.
+
+## v1.4.0
+
+Learning-focused release that expands the repository from Java 1-25 coverage to Java 1-26 coverage while keeping JDK 25 as the build baseline.
+
 ### Added
 
 - Added Java 26 as notes-only C2 explanatory material under the JDK 25 build baseline.
@@ -15,6 +21,14 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 ### Changed
 
 - Updated repository navigation, timeline, feature map, status matrix, JEP index, study guide, migration guide, and glossary for Java 26 coverage.
+
+### Validation
+
+- Java 26 focused Maven test suite
+- `node scripts/check-doc-navigation.mjs`
+- `make docs`
+- `make links`
+- `git diff --check`
 
 ## v1.3.1
 
