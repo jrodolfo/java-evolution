@@ -175,9 +175,9 @@ mvn "-Dtest=ScopedValuesPreviewNotesTest,StructuredConcurrencyPreviewNotesTest" 
 
 Interview angle: explain Java 21 as the point where modern Java concurrency becomes practical for many server applications. Virtual threads let code keep a simple blocking style while supporting many concurrent I/O-bound tasks.
 
-## Java 21 To Java 25
+## Java 21 To Java 26
 
-Java 25 is useful for current-release awareness. The learning theme is maturity tracking: some features become final, while others remain preview, incubator, runtime, security, or tooling topics.
+Java 25 and Java 26 are useful for current-release awareness. The learning theme is maturity tracking: some features become final, while others remain preview, incubator, runtime, security, tooling, or removal topics.
 
 What changed conceptually:
 
@@ -185,6 +185,7 @@ What changed conceptually:
 - Java 24 finalized Stream Gatherers and the Class-File API.
 - Java 25 finalized Scoped Values, Flexible Constructor Bodies, Module Import Declarations, Compact Source Files and Instance Main Methods, and the Key Derivation Function API.
 - Java 25 also continues preview/incubator work such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
+- Java 26 adds HTTP/3 support for the standard HTTP Client API, removes the Applet API, and continues preview/incubator work such as PEM encodings, structured concurrency, Lazy Constants, primitive patterns, and the Vector API.
 - Runtime and operational improvements continue around AOT, JFR, object headers, and garbage collection.
 
 Compatibility concerns:
@@ -192,6 +193,7 @@ Compatibility concerns:
 - Final features can be discussed as stable Java features, but this repository may still document them as notes when they do not fit a small portable JUnit example.
 - Preview and incubator features should be treated as learning material unless a project has explicitly chosen to adopt them with the required flags/modules.
 - Runtime, GC, JFR, and AOT features usually require application-level measurement rather than small unit tests.
+- Java 26 material is notes-only while this repository keeps JDK 25 as its build baseline.
 
 Study these files:
 
@@ -206,6 +208,11 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/stable_values/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/structured_concurrency/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java26/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java26/Http3ClientNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java26/lazy_constants/README.md`
 
 Run:
 
@@ -214,9 +221,11 @@ mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest" te
 mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
 mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest,HkdfKeyDerivationExampleTest" test
 mvn "-Dtest=StableValuesPreviewNotesTest,StructuredConcurrencyFifthPreviewNotesTest" test
+mvn "-Dtest=Http3ClientNotesTest,FinalFieldRestrictionsNotesTest,AppletApiRemovalNotesTest" test
+mvn "-Dtest=LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
 ```
 
-Interview angle: show maturity discipline. A strong answer distinguishes final language/API features from preview, incubator, runtime, tooling, and security topics, and explains why some final features are represented as notes in this repository.
+Interview angle: show maturity discipline. A strong answer distinguishes final language/API features from preview, incubator, runtime, tooling, security, and removal topics, and explains why some final features are represented as notes in this repository.
 
 ## Practical Migration Checklist
 

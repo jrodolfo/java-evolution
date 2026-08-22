@@ -6,7 +6,15 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
-No unreleased changes yet.
+### Added
+
+- Added Java 26 as notes-only C2 explanatory material under the JDK 25 build baseline.
+- Added Java 26 documentation for HTTP/3, final-field restrictions, Applet API removal, AOT object caching, G1 synchronization reductions, PEM encodings, structured concurrency, Lazy Constants, Vector API, and primitive patterns.
+- Added focused tests for Java 26 notes classes.
+
+### Changed
+
+- Updated repository navigation, timeline, feature map, status matrix, JEP index, study guide, migration guide, and glossary for Java 26 coverage.
 
 ## v1.3.1
 

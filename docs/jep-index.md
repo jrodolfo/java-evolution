@@ -10,6 +10,7 @@ Status labels:
 - **Tooling**: command-line, JavaDoc, launcher, or build/development support.
 - **Runtime**: JVM, GC, diagnostics, startup, or migration behavior.
 - **Security**: cryptography or security platform feature.
+- **Removal**: API or platform capability removed from the JDK.
 - **Notes**: represented as a notes class in this repository.
 - **Explanatory module**: represented by a focused package README and notes class because a small runnable example would be misleading or require special setup.
 - **Example**: represented by runnable example code and focused tests.
@@ -242,3 +243,18 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | Runtime, Explanatory Module |
 | [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Runtime, Explanatory Module |
 | [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Runtime, Explanatory Module |
+
+## Java 26
+
+| JEP | Feature | Status |
+|---|---|---|
+| [JEP 500](https://openjdk.org/jeps/500) | Prepare to Make Final Mean Final | Runtime, Explanatory Module |
+| [JEP 504](https://openjdk.org/jeps/504) | Remove the Applet API | Final, Removal, Explanatory Module |
+| [JEP 516](https://openjdk.org/jeps/516) | Ahead-of-Time Object Caching with Any GC | Runtime, Explanatory Module |
+| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for the HTTP Client API | Final, Notes |
+| [JEP 522](https://openjdk.org/jeps/522) | G1 GC: Improve Throughput by Reducing Synchronization | Runtime, Explanatory Module |
+| [JEP 524](https://openjdk.org/jeps/524) | PEM Encodings of Cryptographic Objects | Preview, Security, Notes |
+| [JEP 525](https://openjdk.org/jeps/525) | Structured Concurrency | Preview, Explanatory Module |
+| [JEP 526](https://openjdk.org/jeps/526) | Lazy Constants | Preview, Explanatory Module |
+| [JEP 529](https://openjdk.org/jeps/529) | Vector API | Incubator, Explanatory Module |
+| [JEP 530](https://openjdk.org/jeps/530) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |

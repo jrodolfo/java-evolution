@@ -4,7 +4,7 @@
 [![links](https://github.com/jrodolfo/java-evolution/actions/workflows/links.yml/badge.svg)](https://github.com/jrodolfo/java-evolution/actions/workflows/links.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-`java-evolution` is a practical Java reference project that demonstrates features introduced in each Java release from Java 1 through Java 25.
+`java-evolution` is a practical Java reference project that demonstrates or documents features introduced in each Java release from Java 1 through Java 26.
 
 I built this repository as a place to learn, test, and document how Java has evolved over time. It is primarily for my own continued growth, but it is also meant to help other developers who want concise examples of newer language features, APIs, and idioms.
 
@@ -174,7 +174,7 @@ src/main/java/net/jrodolfo/java_evolution/
   java09/
   java10/
   ...
-  java25/
+  java26/
 
 src/test/java/net/jrodolfo/java_evolution/
   java01/
@@ -188,7 +188,7 @@ src/test/java/net/jrodolfo/java_evolution/
   java09/
   java10/
   ...
-  java25/
+  java26/
 ```
 
 Example classes contain JavaDoc. Test classes are written as executable documentation with clear assertions. Packages can also include a version README with a deeper explanation of the problems each feature solved.
@@ -210,8 +210,8 @@ Start here depending on what you need:
 - Browsing API-style documentation: use the [JavaDoc Site](https://jrodolfo.github.io/java-evolution/).
 
 - [Changelog](CHANGELOG.md): repository release history.
-- [Study Guide](docs/study-guide.md): suggested learning path through Java 1-25.
-- [Java Release Timeline](docs/java-release-timeline.md): release months and historical naming context from Java 1 through Java 25.
+- [Study Guide](docs/study-guide.md): suggested learning path through Java 1-26.
+- [Java Release Timeline](docs/java-release-timeline.md): release months and historical naming context from Java 1 through Java 26.
 - [Migration Guide](docs/migration-guide.md): practical guide for moving from Java 8, 11, 17, or 21 to newer baselines.
 - [Learning Path](docs/learning-path.md): staged study sessions with files to read, tests to run, and interview angles.
 - [Practical Demos](docs/practical-demos.md): focused walkthroughs for tooling, security, native, and class-file features, with `make demos` as a pre-demo check.
@@ -254,6 +254,7 @@ Start here depending on what you need:
 | 23 | Sep 2024 | [`java23`](src/main/java/net/jrodolfo/java_evolution/java23/README.md) | Markdown Documentation Comments module, Primitive Patterns preview module, Module Imports preview module, ZGC Generational Mode notes |
 | 24 | Mar 2025 | [`java24`](src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API, Security Manager/AOT/runtime modules, post-quantum crypto examples, preview bridge modules |
 | 25 | Sep 2025 | [`java25`](src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, KDF example, Module Imports and Compact Source Files final documented via notes, JFR/AOT/GC notes |
+| 26 | Mar 2026 | [`java26`](src/main/java/net/jrodolfo/java_evolution/java26/README.md) | HTTP/3 notes, Final Field restrictions, Applet API removal, AOT Object Caching, G1, PEM/Structured Concurrency/Lazy Constants/Vector/Primitive Patterns notes |
 
 ## How To Study This Repository
 
@@ -302,6 +303,7 @@ Java 1 through Java 7 predate the modern OpenJDK release-project pages and the J
 - [OpenJDK JDK 23](https://openjdk.org/projects/jdk/23/)
 - [OpenJDK JDK 24](https://openjdk.org/projects/jdk/24/)
 - [OpenJDK JDK 25](https://openjdk.org/projects/jdk/25/)
+- [OpenJDK JDK 26](https://openjdk.org/projects/jdk/26/)
 
 ## Contact
 

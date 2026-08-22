@@ -29,6 +29,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | HMAC | Hash-based Message Authentication Code | A cryptographic construction used by HKDF to derive key material from input secret material. |
 | HTML | Hypertext Markup Language | A web document format used in examples about text blocks, JavaDoc, and the Simple Web Server. |
 | HTTP | Hypertext Transfer Protocol | The web protocol demonstrated by the Java 11 HTTP Client examples. |
+| HTTP/3 | Hypertext Transfer Protocol version 3 | The HTTP version added to the Java 26 HTTP Client API. It runs over QUIC rather than TCP. |
 | I/O | Input/Output | Reading from or writing to external resources such as files, sockets, HTTP services, or processes. |
 | ID | Identifier | A value that identifies something, such as a request ID in scoped-value examples. |
 | IDE | Integrated Development Environment | A developer tool useful for browsing Java packages, tests, and generated documentation. |
@@ -62,6 +63,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | JVM | Java Virtual Machine | The runtime engine that executes compiled Java bytecode. |
 | KDF | Key Derivation Function | A cryptographic API for deriving keys from secret material and context. |
 | KEM | Key Encapsulation Mechanism | A cryptographic mechanism for establishing shared secret material by sending an encapsulation message instead of transmitting the secret directly. |
+| Lazy Constants | Lazy Constants | A Java 26 preview API for values that initialize on demand and then behave like constants. |
 | LTS | Long-Term Support | A Java release line commonly supported for a longer maintenance window by vendors. |
 | Maven | Apache Maven | The build tool used here for dependency resolution, compilation, tests, and documentation tasks. |
 | MIT | Massachusetts Institute of Technology | Appears in MIT License, the open-source license used by this repository. |
@@ -73,6 +75,8 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | PEM | Privacy-Enhanced Mail | A text encoding format commonly used for cryptographic keys and certificates. |
 | Preview | Preview Feature | A Java language or API feature available for feedback before becoming final or changing shape. |
 | Project Coin | Small Java language enhancements | The Java 7 effort behind small language improvements such as try-with-resources, multi-catch, diamond, strings in switch, binary literals, and numeric underscores. |
+| QUIC | Quick UDP Internet Connections | A modern transport protocol used by HTTP/3. In this project, it appears in the Java 26 HTTP/3 notes. |
+| Removal | Removal | A Java platform change where a deprecated API or capability is removed from the JDK, such as the Applet API in Java 26. |
 | RISC | Reduced Instruction Set Computer | A processor design style referenced by the ARM acronym. |
 | RMI | Remote Method Invocation | A Java distributed-object technology mentioned as background when discussing native calls and remote procedure styles. |
 | RPC | Remote Procedure Call | A style of calling code across process or network boundaries; useful contrast for local native calls through FFM. |

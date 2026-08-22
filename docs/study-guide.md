@@ -51,7 +51,7 @@ Start here if the goal is interview preparation or practical Java fluency.
 | Platform/API modernization | 9-11 | Collections factories, modules, HTTP Client, String/File APIs, `var` |
 | Language simplification | 12-17 | Switch expressions, text blocks, records, pattern matching, sealed classes |
 | Modern concurrency and data modeling | 18-22 | UTF-8 default, virtual threads, record patterns, pattern switch, sequenced collections |
-| Latest release awareness | 23-25 | Final vs preview/incubator status, compact source files, scoped values, runtime notes |
+| Latest release awareness | 23-26 | Final vs preview/incubator status, compact source files, scoped values, runtime/removal notes |
 
 Do not try to memorize every JEP number on the first pass. Focus on explaining why the feature exists and where you would use it.
 
@@ -75,7 +75,7 @@ Do not try to memorize every JEP number on the first pass. Focus on explaining w
 6. **Java 21**
    Spend extra time here because Java 21 is an LTS release. Focus on virtual threads, record patterns, pattern matching for `switch`, and sequenced collections.
 
-7. **Java 22-25**
+7. **Java 22-26**
    Study these for current-version awareness. Pay attention to status labels: final, preview, incubator, notes-only, runtime, tooling, or cryptography.
 
 ## What To Skip Initially
@@ -115,7 +115,7 @@ If time is limited, prioritize these topics:
 - Java 11: HTTP Client and String APIs
 - Java 14-17: switch expressions, records, pattern matching, sealed classes
 - Java 21: virtual threads, record patterns, pattern matching for `switch`, sequenced collections
-- Java 22-25: final vs preview awareness
+- Java 22-26: final vs preview awareness
 
 The most convincing interview answer is not "I know Java 21." It is:
 

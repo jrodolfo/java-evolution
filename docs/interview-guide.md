@@ -166,7 +166,7 @@ src/main/java/net/jrodolfo/java_evolution/java21
 src/main/java/net/jrodolfo/java_evolution/java22
 ```
 
-## Java 23-25: Current Release Awareness
+## Java 23-26: Current Release Awareness
 
 Key topics:
 
@@ -174,6 +174,7 @@ Key topics:
 - Java 24 finalized Stream Gatherers and the Class-File API.
 - Java 25 finalized scoped values, flexible constructor bodies, module import declarations, compact source files, and the KDF API.
 - Some Java 25 features are still preview or incubator, such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
+- Java 26 adds HTTP/3 support, removes the Applet API, and continues preview/incubator/runtime work. This repository documents Java 26 as notes-only while the build baseline remains JDK 25.
 
 Possible prompt:
 
@@ -193,6 +194,7 @@ Repo paths:
 src/main/java/net/jrodolfo/java_evolution/java23
 src/main/java/net/jrodolfo/java_evolution/java24
 src/main/java/net/jrodolfo/java_evolution/java25
+src/main/java/net/jrodolfo/java_evolution/java26
 ```
 
 ## Good Demo Flow
@@ -203,7 +205,7 @@ Use this flow if you have only a few minutes:
 2. Show `java16/RecordExamples` to demonstrate data-carrier simplification.
 3. Show `java17/SealedClassesExamples` to demonstrate closed hierarchies.
 4. Show `java21/VirtualThreadsExamples` to demonstrate modern concurrency.
-5. Show `java25/scoped_values/README.md` to demonstrate current Java 25 awareness.
+5. Show `java25/scoped_values/README.md` and `java26/README.md` to demonstrate current-release awareness and maturity-status discipline.
 
 Then show the tests to prove that the examples are not just snippets.
 

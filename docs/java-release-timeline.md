@@ -34,10 +34,11 @@ For early releases, names can be confusing: Java 1.2, 1.3, and 1.4 were marketed
 | Java 23 | Java SE 23 | September 2024 | Refinement release with Markdown JavaDoc comments, preview language work, and runtime notes. |
 | Java 24 | Java SE 24 | March 2025 | Finalizes Stream Gatherers and the Class-File API and adds several runtime/security changes. |
 | Java 25 | Java SE 25 | September 2025 | Long-term support release with final scoped values, flexible constructor bodies, module imports, compact source files, and new runtime/platform work. |
+| Java 26 | Java SE 26 | March 2026 | Adds HTTP/3 client support, removes the Applet API, and continues preview/incubator/runtime work under the JDK 25 repository baseline. |
 
 ## Notes On Sources
 
-The main date source is the Java Virtual Machine Specification table of Java SE releases and class-file versions, which lists release months from JDK 1.1 through Java SE 25. For Java 1.0, this repository uses January 1996 for the original JDK 1.0 release; later JVM specification tables often begin with JDK 1.0.2 in May 1996 because they focus on class-file compatibility.
+The main date source is the Java Virtual Machine Specification table of Java SE releases and class-file versions, which lists release months from JDK 1.1 through Java SE 25. For Java 1.0, this repository uses January 1996 for the original JDK 1.0 release; later JVM specification tables often begin with JDK 1.0.2 in May 1996 because they focus on class-file compatibility. Java 26 timing and feature status are taken from the OpenJDK JDK 26 project page.
 
 For modern releases, OpenJDK and Oracle general-availability announcements provide exact release-day context. The repository keeps the documentation at month/year precision so the timeline remains easy to scan.
 
@@ -46,3 +47,4 @@ For modern releases, OpenJDK and Oracle general-availability announcements provi
 - [Java SE releases and class-file versions](https://docs.oracle.com/en/java/javase/25/docs/specs/jvms/jvms-1.html)
 - [OpenJDK JDK 7 project](https://openjdk.org/projects/jdk7/)
 - [OpenJDK JDK 25 general availability announcement](https://mail.openjdk.org/pipermail/announce/2025-September/000360.html)
+- [OpenJDK JDK 26 project](https://openjdk.org/projects/jdk/26/)

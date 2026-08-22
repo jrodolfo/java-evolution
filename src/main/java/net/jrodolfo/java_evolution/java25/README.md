@@ -200,7 +200,7 @@ mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNot
 mvn -Dtest=AotCommandLineErgonomicsNotesTest,JfrEnhancementsNotesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
 ```
 
-Java 25 is the final package in this repository. After reading it, use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.
+After Java 25, continue to `java26/README.md` for notes-only current-release material under the JDK 25 build baseline. Use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.
 
 ## References
 

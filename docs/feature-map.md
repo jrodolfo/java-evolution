@@ -351,3 +351,22 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | JFR enhancements | [`JfrEnhancementsNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/jfr_enhancements/JfrEnhancementsNotes.java) | [`JfrEnhancementsNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/jfr_enhancements/JfrEnhancementsNotesTest.java) |
 | Compact object headers | [`CompactObjectHeadersNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/compact_object_headers/CompactObjectHeadersNotes.java) | [`CompactObjectHeadersNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/compact_object_headers/CompactObjectHeadersNotesTest.java) |
 | Generational Shenandoah | [`GenerationalShenandoahNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/generational_shenandoah/GenerationalShenandoahNotes.java) | [`GenerationalShenandoahNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/generational_shenandoah/GenerationalShenandoahNotesTest.java) |
+
+## Java 26
+
+Learning notes: [java26 README](../src/main/java/net/jrodolfo/java_evolution/java26/README.md)
+
+Java 26 is represented as C2 explanatory material while the repository keeps JDK 25 as its build baseline.
+
+| Feature | Example | Test |
+|---|---|---|
+| HTTP/3 for the HTTP Client API | `Http3ClientNotes` | `Http3ClientNotesTest` |
+| Final field restrictions | [`FinalFieldRestrictionsNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/FinalFieldRestrictionsNotes.java) | [`FinalFieldRestrictionsNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/FinalFieldRestrictionsNotesTest.java) |
+| Applet API removal | [`AppletApiRemovalNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalNotes.java) | [`AppletApiRemovalNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalNotesTest.java) |
+| AOT object caching | [`AotObjectCachingNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/aot_object_caching/AotObjectCachingNotes.java) | [`AotObjectCachingNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/aot_object_caching/AotObjectCachingNotesTest.java) |
+| G1 synchronization reduction | [`G1SynchronizationNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/g1_synchronization/G1SynchronizationNotes.java) | [`G1SynchronizationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/g1_synchronization/G1SynchronizationNotesTest.java) |
+| PEM encodings second preview | `PemEncodingsSecondPreviewNotes` | `PemEncodingsSecondPreviewNotesTest` |
+| Structured concurrency sixth preview | [`StructuredConcurrencySixthPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/structured_concurrency/StructuredConcurrencySixthPreviewNotes.java) | [`StructuredConcurrencySixthPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/structured_concurrency/StructuredConcurrencySixthPreviewNotesTest.java) |
+| Lazy Constants second preview | [`LazyConstantsSecondPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/lazy_constants/LazyConstantsSecondPreviewNotes.java) | [`LazyConstantsSecondPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/lazy_constants/LazyConstantsSecondPreviewNotesTest.java) |
+| Vector API eleventh incubator | [`VectorApiEleventhIncubatorNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/vector_api/VectorApiEleventhIncubatorNotes.java) | [`VectorApiEleventhIncubatorNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/vector_api/VectorApiEleventhIncubatorNotesTest.java) |
+| Primitive patterns fourth preview | `PrimitivePatternsFourthPreviewNotes` | `PrimitivePatternsFourthPreviewNotesTest` |
