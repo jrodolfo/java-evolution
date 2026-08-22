@@ -20,7 +20,7 @@ help:
 	@echo "  make docs          generate JavaDoc under target/site/apidocs"
 	@echo "  make clean-docs    remove generated JavaDoc"
 	@echo "  make docs-audit    check documentation navigation consistency"
-	@echo "  make links         check Markdown links with lychee"
+	@echo "  make links         check Markdown links with lychee; pass VERBOSE=-v or VERBOSE=-vv for lychee details"
 	@echo "  make docs-check    run documentation audit, JavaDoc generation, and link check"
 	@echo "  make check         show versions and run the test suite"
 	@echo "  make release-check run documentation, full test, and practical demo gates"
@@ -62,7 +62,7 @@ docs-audit:
 	@node scripts/check-doc-navigation.mjs
 
 links:
-	lychee --config .lychee.toml README.md "docs/**/*.md" "src/main/java/**/README.md"
+	lychee $(VERBOSE) --config .lychee.toml README.md "docs/**/*.md" "src/main/java/**/README.md"
 
 docs-check: check-java-25 docs-audit docs links
 
