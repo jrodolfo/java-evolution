@@ -209,7 +209,7 @@ Start here depending on what you need:
 - Preparing a release: use the [Release Checklist](docs/release/checklist.md).
 - Browsing API-style documentation: use the [JavaDoc Site](https://jrodolfo.github.io/java-evolution/).
 
-- [Changelog](CHANGELOG.md): release history.
+- [Changelog](CHANGELOG.md): repository release history.
 - [Study Guide](docs/study-guide.md): suggested learning path through Java 1-25.
 - [Java Release Timeline](docs/java-release-timeline.md): release months and historical naming context from Java 1 through Java 25.
 - [Migration Guide](docs/migration-guide.md): practical guide for moving from Java 8, 11, 17, or 21 to newer baselines.

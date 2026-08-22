@@ -11,8 +11,8 @@ For early releases, names can be confusing: Java 1.2, 1.3, and 1.4 were marketed
 | Java 1.0 | JDK 1.0 | January 1996 | Establishes the original language and class-library foundation. |
 | Java 1.1 | JDK 1.1 | February 1997 | Adds many platform features represented in `java01`, such as inner classes, reflection, serialization, JDBC, RMI, and JavaBeans. |
 | Java 2 | J2SE 1.2 | December 1998 | Begins the Java 2 era with the Collections Framework, Swing, Java 2D, and a stronger security model. |
-| Java 3 | J2SE 1.3 | May 2000 | Adds practical runtime and library features such as dynamic proxies, timer tasks, shutdown hooks, and JNDI context. |
-| Java 4 | J2SE 1.4 | February 2002 | Adds regex, NIO, logging, chained exceptions, assertions, preferences, XML processing, and integrated security APIs. |
+| Java 1.3 (repo: Java 3) | J2SE 1.3 | May 2000 | Adds practical runtime and library features such as dynamic proxies, timer tasks, shutdown hooks, and JNDI context. |
+| Java 1.4 (repo: Java 4) | J2SE 1.4 | February 2002 | Adds regex, NIO, logging, chained exceptions, assertions, preferences, XML processing, and integrated security APIs. |
 | Java 5 | J2SE 5.0 | September 2004 | Major language modernization: generics, enhanced for loops, autoboxing, enums, varargs, annotations, and concurrency utilities. |
 | Java 6 | Java SE 6 | December 2006 | Platform and tooling release: scripting, compiler API, console, monitoring, web-service support, and library refinements. |
 | Java 7 | Java SE 7 | July 2011 | Project Coin, NIO.2, fork/join, and `invokedynamic` bridge classic Java to the Java 8 era. |
@@ -43,7 +43,7 @@ For modern releases, OpenJDK and Oracle general-availability announcements provi
 
 ## References
 
-- [Java SE releases and class-file versions](https://docs.oracle.com/en/java/javase/26/docs/specs/jvms/jvms-1.html)
+- [Java SE releases and class-file versions](https://docs.oracle.com/en/java/javase/25/docs/specs/jvms/jvms-1.html)
 - [JDK release archive timeline](https://ops.java/releases/)
 - [OpenJDK JDK 7 project](https://openjdk.org/projects/jdk7/)
 - [OpenJDK JDK 25 general availability announcement](https://mail.openjdk.org/pipermail/announce/2025-September/000360.html)
