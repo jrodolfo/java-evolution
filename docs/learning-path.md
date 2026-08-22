@@ -176,9 +176,9 @@ mvn "-Dtest=KeyEncapsulationExchangeTest,ScopedValuesPreviewNotesTest,Structured
 
 Interview angle: treat Java 21 as the modern baseline. Explain virtual threads as a way to keep the simple blocking style while scaling I/O-bound work, and explain sealed classes plus pattern matching as a safer way to model known alternatives.
 
-## Stage 7: Java 22-26 Current Release Awareness
+## Stage 7: Java 22-24 Post-Java-21 Expansion
 
-Java 22 through 26 are useful for showing that you can read current Java evolution carefully. Some features are final and usable directly. Others are preview, incubator, runtime, tooling, removal, or notes-only topics because they require flags, external setup, newer JDK APIs, or APIs that are not ideal for a small portable example.
+Java 22 through 24 continue the work that became visible around Java 21: simpler source forms, stronger native interop, stream extension points, class-file work, security changes, and preview refinements.
 
 Read these first by version:
 
@@ -246,6 +246,14 @@ mvn "-Dtest=FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarati
 mvn "-Dtest=ScopedValuesFourthPreviewNotesTest,StructuredConcurrencyFourthPreviewNotesTest" test
 ```
 
+Interview angle: explain Java 22-24 as a transition from Java 21's modern baseline into newer platform capabilities. Some features become final, such as unnamed variables and patterns, the Foreign Function and Memory API, Stream Gatherers, and the Class-File API. Others remain preview, runtime, security, or notes-only topics.
+
+## Stage 8: Java 25-26 LTS And Current-Release Maturity
+
+Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is represented as notes-only material in this repository because the build baseline remains JDK 25.
+
+Read these first by version:
+
 Java 25:
 
 - `src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/README.md`
@@ -285,7 +293,7 @@ mvn "-Dtest=AotObjectCachingNotesTest,G1SynchronizationNotesTest,LazyConstantsSe
 mvn "-Dtest=PemEncodingsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,VectorApiEleventhIncubatorNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
 ```
 
-Interview angle: be explicit about maturity. A strong answer distinguishes final features from preview and incubator work, and explains why some topics are documented as notes instead of executable demos.
+Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics. It should also explain why Java 26 remains notes-only while the project keeps JDK 25 as the build baseline.
 
 ## Full Review Checklist
 
@@ -296,5 +304,5 @@ Use this checklist when preparing to show the repository:
 3. Open [practical-demos.md](practical-demos.md) and choose one hands-on demo.
 4. Pick one Java 8 example and explain the problem it solved.
 5. Pick one Java 21 example and explain why it matters for current production Java.
-6. Pick one Java 25 or Java 26 example or notes class and explain whether the feature is final, preview, incubator, runtime, tooling-related, or removal-related.
+6. Pick one Java 25 or Java 26 example or notes class and explain whether the feature is final, preview, incubator, runtime, tooling-related, security-related, or removal-related.
 7. Use [docs/jep-index.md](jep-index.md) when you need the official JEP number or status.

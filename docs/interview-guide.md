@@ -188,6 +188,18 @@ Strong answer:
 I separate final features from preview and incubator features. A preview feature is available for feedback but can still change, so I would not present it as a stable production contract without checking the release status.
 ```
 
+Possible prompt:
+
+```text
+Why does this repository document Java 26 without moving the build baseline from JDK 25?
+```
+
+Strong answer:
+
+```text
+JDK 25 is the stable build baseline for the project. Java 26 is still valuable for current-release awareness, but several topics involve JDK 26-only APIs, preview APIs, incubator modules, runtime behavior, or removed APIs. Notes keep the learning accurate without forcing the whole project to compile or run on JDK 26.
+```
+
 Repo paths:
 
 ```text

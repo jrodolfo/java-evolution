@@ -51,7 +51,8 @@ Start here if the goal is interview preparation or practical Java fluency.
 | Platform/API modernization | 9-11 | Collections factories, modules, HTTP Client, String/File APIs, `var` |
 | Language simplification | 12-17 | Switch expressions, text blocks, records, pattern matching, sealed classes |
 | Modern concurrency and data modeling | 18-22 | UTF-8 default, virtual threads, record patterns, pattern switch, sequenced collections |
-| Latest release awareness | 23-26 | Final vs preview/incubator status, compact source files, scoped values, runtime/removal notes |
+| Post-Java-21 expansion | 22-24 | FFM, Stream Gatherers, Class-File API, source simplification, runtime/security notes |
+| LTS and current-release maturity | 25-26 | Final vs preview/incubator status, scoped values, compact source files, runtime/removal notes |
 
 Do not try to memorize every JEP number on the first pass. Focus on explaining why the feature exists and where you would use it.
 
@@ -75,8 +76,11 @@ Do not try to memorize every JEP number on the first pass. Focus on explaining w
 6. **Java 21**
    Spend extra time here because Java 21 is an LTS release. Focus on virtual threads, record patterns, pattern matching for `switch`, and sequenced collections.
 
-7. **Java 22-26**
-   Study these for current-version awareness. Pay attention to status labels: final, preview, incubator, notes-only, runtime, tooling, or cryptography.
+7. **Java 22-24**
+   Study these as post-Java-21 expansion releases. Focus on final platform APIs, source simplification, and the difference between executable examples and explanatory modules.
+
+8. **Java 25-26**
+   Study these for LTS and current-version awareness. Pay attention to status labels: final, preview, incubator, notes-only, runtime, tooling, cryptography, or removal.
 
 ## What To Skip Initially
 
@@ -115,7 +119,8 @@ If time is limited, prioritize these topics:
 - Java 11: HTTP Client and String APIs
 - Java 14-17: switch expressions, records, pattern matching, sealed classes
 - Java 21: virtual threads, record patterns, pattern matching for `switch`, sequenced collections
-- Java 22-26: final vs preview awareness
+- Java 22-24: post-Java-21 platform expansion
+- Java 25-26: final vs preview awareness and baseline discipline
 
 The most convincing interview answer is not "I know Java 21." It is:
 
