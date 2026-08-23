@@ -191,7 +191,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 467](https://openjdk.org/jeps/467) | Markdown Documentation Comments | Tooling, Notes |
+| [JEP 467](https://openjdk.org/jeps/467) | Markdown Documentation Comments | Tooling, Executable Example |
 | [JEP 477](https://openjdk.org/jeps/477) | Implicitly Declared Classes and Instance Main Methods | Third Preview, Notes |
 | [JEP 455](https://openjdk.org/jeps/455) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
 | [JEP 476](https://openjdk.org/jeps/476) | Module Import Declarations | Preview, Notes |

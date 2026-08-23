@@ -2,7 +2,7 @@
 
 Java 23 introduced Markdown documentation comments.
 
-This module is explanatory because the feature changes how API documentation can be written in source code. It is not a runtime behavior feature.
+This module uses an executable tooling example. It creates a temporary Java source file with Markdown documentation comments, runs the JDK's `javadoc` tool, and checks the generated HTML output.
 
 ## What Problem Does This Feature Solve?
 
@@ -94,15 +94,19 @@ A lightweight text format for structure such as headings, lists, links, and code
 
 The HTML documentation produced by tools from source comments.
 
-## Why This Module Has Notes Instead Of A Runtime Example
+## What The Example Shows
 
 Markdown documentation comments affect source documentation and generated JavaDoc output.
 
 They do not change how a method runs.
 
-For this repository, a unit test can verify that the notes explain the feature, but it would be artificial to write a runtime example that pretends Markdown comments affect program behavior.
+`MarkdownDocumentationCommentsExamples` demonstrates the feature through the documentation pipeline:
 
-The faithful way to study this feature is to read the source documentation shape and generate JavaDoc.
+- create a `.java` source file that uses `///` Markdown documentation comments
+- run the real `javadoc` executable in a child process
+- inspect the generated HTML documentation
+
+The example deliberately does not parse Markdown itself. The point is that JavaDoc tooling understands the new comment form.
 
 ## Realistic Use Case
 

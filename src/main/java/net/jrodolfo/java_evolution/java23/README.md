@@ -4,7 +4,7 @@ Released: September 2024 as Java SE 23.
 
 Java 23 is mostly a preview and refinement release. That makes it valuable for learning because it shows how Java features mature: ideas appear as previews, receive feedback, and may become final in later releases.
 
-This package uses notes classes for most Java 23 features because many of them were preview APIs, runtime behavior, documentation tooling, or VM features rather than small stable APIs that fit cleanly into unit tests.
+This package uses notes classes for most Java 23 features because many of them were preview APIs, runtime behavior, or VM features rather than small stable APIs that fit cleanly into unit tests. Markdown documentation comments are represented with an executable tooling example that runs JavaDoc in a child process.
 
 ## Markdown Documentation Comments
 
@@ -14,9 +14,9 @@ Java 23 introduced Markdown documentation comments so API docs can be written in
 
 The mental model is simple: source comments can move from HTML-heavy shapes such as `<ul>` and `<pre>` toward Markdown lists and code fences, while JavaDoc tooling still produces the generated API documentation.
 
-Explanatory module: [`markdown_documentation_comments`](markdown_documentation_comments/README.md)
+Example module: [`markdown_documentation_comments`](markdown_documentation_comments/README.md)
 
-Test: `MarkdownDocumentationCommentsNotesTest`
+Test: `MarkdownDocumentationCommentsExamplesTest`
 
 ## Primitive Patterns Preview
 
@@ -129,7 +129,7 @@ Start with `markdown_documentation_comments/README.md`, then read `primitive_pat
 Run the focused notes tests:
 
 ```bash
-mvn -Dtest=MarkdownDocumentationCommentsNotesTest,PrimitivePatternsPreviewNotesTest,ModuleImportDeclarationsPreviewNotesTest test
+mvn -Dtest=MarkdownDocumentationCommentsExamplesTest,PrimitivePatternsPreviewNotesTest,ModuleImportDeclarationsPreviewNotesTest test
 mvn -Dtest=FlexibleConstructorBodiesSecondPreviewNotesTest,StreamGatherersSecondPreviewNotesTest,ClassFileApiSecondPreviewNotesTest test
 mvn -Dtest=ScopedValuesThirdPreviewNotesTest,StructuredConcurrencyThirdPreviewNotesTest,UnsafeMemoryAccessDeprecationNotesTest,ZgcGenerationalModeNotesTest test
 ```

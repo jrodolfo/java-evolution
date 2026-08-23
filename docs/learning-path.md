@@ -215,7 +215,7 @@ Java 23:
 Run:
 
 ```bash
-mvn "-Dtest=MarkdownDocumentationCommentsNotesTest,PrimitivePatternsPreviewNotesTest,ModuleImportDeclarationsPreviewNotesTest" test
+mvn "-Dtest=MarkdownDocumentationCommentsExamplesTest,PrimitivePatternsPreviewNotesTest,ModuleImportDeclarationsPreviewNotesTest" test
 mvn "-Dtest=FlexibleConstructorBodiesSecondPreviewNotesTest,StreamGatherersSecondPreviewNotesTest,ClassFileApiSecondPreviewNotesTest" test
 mvn "-Dtest=ScopedValuesThirdPreviewNotesTest" test
 ```
