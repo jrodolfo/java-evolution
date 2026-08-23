@@ -12,6 +12,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted the Java 1.1 serialization module from notes-only material into a trusted in-memory executable example with focused tests.
 - Converted JavaBeans, Java 2D, XML/JAXP, and Java 6 monitoring/management from notes-only material into executable examples with focused tests.
 - Converted Java 16 Unix-domain socket channels from notes-only material into an executable example with safe skips when local socket binding is blocked.
+- Converted Java 15 hidden classes from notes-only material into an executable example using compiled template class bytes.
 
 ## v1.4.1
 

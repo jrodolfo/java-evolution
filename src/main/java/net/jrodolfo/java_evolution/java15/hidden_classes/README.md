@@ -2,7 +2,7 @@
 
 Java 15 introduced hidden classes in JEP 371.
 
-This is an explanatory learning module. It does not generate bytecode because a faithful hidden-class example usually belongs to framework or runtime code that creates class bytes dynamically and defines them with `MethodHandles.Lookup.defineHiddenClass`.
+This module uses compiled template class bytes to define a real hidden class with `MethodHandles.Lookup.defineHiddenClass`. Frameworks usually generate those bytes dynamically; this repository uses a small compiled template so the example stays focused on the Java 15 API rather than on bytecode-generation libraries.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -57,6 +57,8 @@ The primary API is:
 MethodHandles.Lookup.defineHiddenClass(...)
 ```
 
+`HiddenClassesExamples` uses that API with class-file bytes loaded from a nested template class.
+
 ## 4. Terminology In Plain English
 
 Generated class:
@@ -79,34 +81,28 @@ A dynamically defined class that is intended for runtime implementation details 
 
 An object that represents lookup privileges. Hidden classes are defined through a lookup object so access rules are explicit.
 
-## 5. Why This Repository Uses Notes
+## 5. What Does The Example Show?
 
-A meaningful hidden-class demo needs class bytes.
+`HiddenClassesExamples` demonstrates the core hidden-class lifecycle:
 
-Those bytes usually come from:
+- load class-file bytes for a small template class
+- define a hidden class with `MethodHandles.Lookup.defineHiddenClass`
+- verify that the resulting `Class` reports `isHidden()`
+- instantiate the hidden class and invoke behavior from runtime infrastructure
+- verify that normal `Class.forName(...)` lookup cannot discover it by name
 
-- a bytecode library
-- a compiler
-- generated class-file data
-- framework internals
-
-Adding that machinery here would distract from the Java 15 feature.
-
-A fake example that only returns a string containing API names would not demonstrate hidden classes. It would only test the string.
-
-So this package explains the feature and tests the learning claims instead of pretending to generate classes.
+The example does not generate bytecode dynamically. That is deliberate: bytecode generation would teach a different topic. The hidden-class feature begins once runtime code has class-file bytes and wants to define implementation details that normal application code should not discover by name.
 
 ## 6. What The Test Proves
 
-`HiddenClassesNotesTest` does not define a hidden class.
+`HiddenClassesExamplesTest` defines a real hidden class.
 
-It verifies that the notes preserve the important study points:
+It verifies the important study points:
 
-- generated classes can be implementation details
-- hidden classes are not discoverable by normal name lookup
-- the primary API is `MethodHandles.Lookup.defineHiddenClass`
-- realistic users include frameworks, proxies, expression engines, and runtimes
-- this repository intentionally avoids bytecode-generation machinery
+- the hidden class is a real `Class` object
+- `Class.isHidden()` identifies it as hidden
+- runtime infrastructure can instantiate and invoke it
+- normal class-name lookup cannot discover it
 
 ## 7. Realistic Use Case
 

@@ -103,7 +103,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 360](https://openjdk.org/jeps/360) | Sealed Classes | Preview |
 | [JEP 375](https://openjdk.org/jeps/375) | Pattern Matching for instanceof | Second Preview |
 | [JEP 384](https://openjdk.org/jeps/384) | Records | Second Preview |
-| [JEP 371](https://openjdk.org/jeps/371) | Hidden Classes | Final, Explanatory Module |
+| [JEP 371](https://openjdk.org/jeps/371) | Hidden Classes | Final, Executable Example |
 
 ## Java 16
 
