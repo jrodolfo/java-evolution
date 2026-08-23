@@ -66,7 +66,9 @@ Conceptually, code can create a socket channel for local path-based communicatio
 SocketChannel.open(StandardProtocolFamily.UNIX);
 ```
 
-The exact setup depends on the operating system and the path used for the socket.
+`UnixDomainSocketChannelExamples` uses a temporary socket path, opens a server channel with `StandardProtocolFamily.UNIX`, connects a client channel, and exchanges one small message.
+
+The exact setup depends on the operating system and the path used for the socket. Restricted environments can block local socket binding even when the operating system supports Unix-domain sockets.
 
 ## Terminology
 
@@ -78,11 +80,18 @@ Unix-domain socket means a local socket addressed with a file-system path, such 
 
 Protocol family means the address family used by the socket API. `StandardProtocolFamily.INET` is used for Internet Protocol sockets. `StandardProtocolFamily.UNIX` is used for Unix-domain sockets.
 
-## Why This Repository Keeps It As Notes
+## What Does The Example Show?
 
-A faithful executable example would need to create local socket paths and rely on operating-system support.
+The executable example demonstrates:
 
-That is possible, but it would make the ordinary test suite more dependent on local platform behavior. This repository already has enough platform-sensitive examples in later Java versions. For Java 16, the most useful lesson is the model:
+- `StandardProtocolFamily.UNIX` as the protocol family
+- `UnixDomainSocketAddress` as a path-based socket address
+- server/client channel setup over a local socket path
+- same-machine message exchange without a TCP host and port
+
+The message-exchange test skips when the local environment blocks Unix-domain socket binding. This keeps the repository portable in restricted sandboxes while still giving learners a real executable example on supported machines.
+
+The core model remains:
 
 ```text
 TCP socket:
@@ -91,8 +100,6 @@ TCP socket:
 Unix-domain socket:
     local path
 ```
-
-The notes class preserves the concepts without making every learner debug local socket behavior.
 
 ## Realistic Use Case
 

@@ -211,7 +211,7 @@ Learning notes: [java16 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Records final | `RecordExamples` | `RecordExamplesTest` |
 | Pattern matching for `instanceof` final | `PatternMatchingInstanceofExamples` | `PatternMatchingInstanceofExamplesTest` |
 | `Stream.toList()` | `StreamToListExamples` | `StreamToListExamplesTest` |
-| Unix-domain socket channels | [`unix_domain_socket/UnixDomainSocketChannelNotes`](../src/main/java/net/jrodolfo/java_evolution/java16/unix_domain_socket/UnixDomainSocketChannelNotes.java) | [`UnixDomainSocketChannelNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java16/unix_domain_socket/UnixDomainSocketChannelNotesTest.java) |
+| Unix-domain socket channels | [`unix_domain_socket/UnixDomainSocketChannelExamples`](../src/main/java/net/jrodolfo/java_evolution/java16/unix_domain_socket/UnixDomainSocketChannelExamples.java) | [`UnixDomainSocketChannelExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java16/unix_domain_socket/UnixDomainSocketChannelExamplesTest.java) |
 | Vector API first incubator | [java16 README](../src/main/java/net/jrodolfo/java_evolution/java16/README.md) | No dedicated test |
 | Foreign Linker API incubator | [java16 README](../src/main/java/net/jrodolfo/java_evolution/java16/README.md) | No dedicated test |
 | Foreign-Memory Access API third incubator | [java16 README](../src/main/java/net/jrodolfo/java_evolution/java16/README.md) | No dedicated test |

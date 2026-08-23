@@ -110,24 +110,22 @@ Before Java 16, local inter-process communication through Unix-domain sockets wa
 
 Java 16 added Unix-domain socket channel support. This is useful when two processes on the same machine need to communicate without opening TCP ports.
 
-This repository keeps the feature as an explanatory notes module because support depends on operating-system behavior and should not make the unit test suite platform-sensitive.
+Example module: [`unix_domain_socket`](unix_domain_socket/README.md)
 
-Explanatory module: [`unix_domain_socket`](unix_domain_socket/README.md)
-
-Test: `UnixDomainSocketChannelNotesTest`
+Test: `UnixDomainSocketChannelExamplesTest`
 
 ## How To Read This Package
 
-Start with `RecordExamples` and `PatternMatchingInstanceofExamples` because they represent final versions of important language simplifications. Then read `StreamToListExamples` and the `unix_domain_socket/README.md` notes module. Finally, use the Vector API and Foreign Function/Memory sections to understand the incubator work that continued into later releases.
+Start with `RecordExamples` and `PatternMatchingInstanceofExamples` because they represent final versions of important language simplifications. Then read `StreamToListExamples` and the `unix_domain_socket/README.md` example module. Finally, use the Vector API and Foreign Function/Memory sections to understand the incubator work that continued into later releases.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=RecordExamplesTest,PatternMatchingInstanceofExamplesTest test
-mvn -Dtest=StreamToListExamplesTest,UnixDomainSocketChannelNotesTest test
+mvn -Dtest=StreamToListExamplesTest,UnixDomainSocketChannelExamplesTest test
 ```
 
-The Unix-domain socket module is notes-based because the feature depends on local operating system socket behavior. After this package, continue with Java 17, an LTS release that finalizes sealed classes.
+The Unix-domain socket message-exchange test skips when local socket binding is blocked by a restricted environment. After this package, continue with Java 17, an LTS release that finalizes sealed classes.
 
 ## References
 
