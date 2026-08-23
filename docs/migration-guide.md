@@ -93,7 +93,7 @@ Run:
 Multi-test Maven commands quote `-Dtest=...` so the examples work in Bash, Git Bash, and PowerShell.
 
 ```bash
-mvn "-Dtest=CollectionFactoryExamplesTest,ModuleSystemNotesTest" test
+mvn "-Dtest=CollectionFactoryExamplesTest,ModuleSystemExamplesTest" test
 mvn "-Dtest=LocalVariableTypeInferenceExamplesTest,StringApiExamplesTest,FilesApiExamplesTest" test
 mvn -Dtest=HttpClientExamplesTest test
 ```

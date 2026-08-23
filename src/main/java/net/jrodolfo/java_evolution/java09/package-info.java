@@ -9,9 +9,8 @@
  * </p>
  *
  * <p>
- * The module system is represented with explanatory examples instead of a real
- * {@code module-info.java} file so the Spring Boot project can remain
- * intentionally lightweight.
+ * The module system is demonstrated with a temporary modular source tree so the
+ * Spring Boot project can remain intentionally lightweight.
  * </p>
  *
  * <p>

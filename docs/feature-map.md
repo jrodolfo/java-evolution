@@ -134,7 +134,7 @@ Learning notes: [java09 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Try-with-resources improvement | `TryWithResourcesExamples` | `TryWithResourcesExamplesTest` |
 | Process API | `ProcessApiExamples` | `ProcessApiExamplesTest` |
 | StackWalker | `StackWalkerExamples` | `StackWalkerExamplesTest` |
-| Module system | [`ModuleSystemNotes`](../src/main/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemNotes.java) | [`ModuleSystemNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemNotesTest.java) |
+| Module system | [`ModuleSystemExamples`](../src/main/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemExamples.java) | [`ModuleSystemExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemExamplesTest.java) |
 
 ## Java 10
 

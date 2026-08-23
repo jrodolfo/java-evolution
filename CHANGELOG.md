@@ -18,6 +18,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 3 shutdown hooks from notes-only material into an executable child-JVM example.
 - Converted Java 22 multi-file source launcher from notes-only material into an executable child-JVM launcher example.
 - Converted Java 23 Markdown documentation comments from notes-only material into an executable JavaDoc tooling example.
+- Converted Java 9 module system from notes-only material into an executable modular source-tree example.
 
 ## v1.4.1
 

@@ -95,7 +95,7 @@ Status values may be combined, such as `final, security, executable example`, wh
 | 9 | Try-with-resources improvement | final | `TryWithResourcesExamples` | `TryWithResourcesExamplesTest` | [JEP 213](https://openjdk.org/jeps/213) |
 | 9 | Process API | final | `ProcessApiExamples` | `ProcessApiExamplesTest` | [JEP 102](https://openjdk.org/jeps/102) |
 | 9 | StackWalker | final | `StackWalkerExamples` | `StackWalkerExamplesTest` | [JEP 259](https://openjdk.org/jeps/259) |
-| 9 | Module system | final, explanatory module | [`ModuleSystemNotes`](../src/main/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemNotes.java) | [`ModuleSystemNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemNotesTest.java) | [JEP 261](https://openjdk.org/jeps/261) |
+| 9 | Module system | final, executable example | [`ModuleSystemExamples`](../src/main/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemExamples.java) | [`ModuleSystemExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java09/module_system/ModuleSystemExamplesTest.java) | [JEP 261](https://openjdk.org/jeps/261) |
 | 10 | Local variable type inference | final | `LocalVariableTypeInferenceExamples` | `LocalVariableTypeInferenceExamplesTest` | [JEP 286](https://openjdk.org/jeps/286) |
 | 10 | Unmodifiable collectors | final | `UnmodifiableCollectorsExamples` | `UnmodifiableCollectorsExamplesTest` | [java10 README](../src/main/java/net/jrodolfo/java_evolution/java10/README.md) |
 | 10 | `Optional.orElseThrow()` | final | `OptionalOrElseThrowExamples` | `OptionalOrElseThrowExamplesTest` | [java10 README](../src/main/java/net/jrodolfo/java_evolution/java10/README.md) |

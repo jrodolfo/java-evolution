@@ -92,11 +92,11 @@ Before Java 9, the classpath had no strong module boundaries. Large applications
 
 The Java Platform Module System (JPMS) introduced `module-info.java`, `requires`, and `exports`. It lets code declare which modules it depends on and which packages it exposes.
 
-This repository explains modules without converting the Spring Boot app into a modular application, because the learning examples are meant to stay independent.
+This repository demonstrates modules with a temporary modular source tree, without converting the Spring Boot app itself into a modular application.
 
-Explanatory module: [`module_system`](module_system/README.md)
+Example module: [`module_system`](module_system/README.md)
 
-Test: `ModuleSystemNotesTest`
+Test: `ModuleSystemExamplesTest`
 
 ## How To Read This Package
 
@@ -107,10 +107,10 @@ Run the focused tests:
 ```bash
 mvn -Dtest=CollectionFactoryExamplesTest,OptionalEnhancementExamplesTest,StreamEnhancementExamplesTest test
 mvn -Dtest=PrivateInterfaceMethodExamplesTest,TryWithResourcesExamplesTest test
-mvn -Dtest=ProcessApiExamplesTest,StackWalkerExamplesTest,ModuleSystemNotesTest test
+mvn -Dtest=ProcessApiExamplesTest,StackWalkerExamplesTest,ModuleSystemExamplesTest test
 ```
 
-`module_system/README.md` explains JPMS as an explanatory module because a real module demo is clearer as a multi-module project than as a small class inside this Spring Boot shell. After this package, continue with Java 10 for local variable type inference and collector refinements.
+`module_system/README.md` explains JPMS with an isolated multi-module source tree compiled and run through child processes. After this package, continue with Java 10 for local variable type inference and collector refinements.
 
 ## References
 
