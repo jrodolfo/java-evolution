@@ -2,7 +2,7 @@
 
 Java 22 finalized the Java source launcher improvement through JEP 458, Launch Multi-File Source-Code Programs. This is a permanent tooling feature, not a preview feature.
 
-This feature is documented as an explanatory module because it is command-line launcher behavior. A faithful demo belongs to a small source tree launched with `java Main.java`, not to ordinary Maven-compiled classes.
+This module uses an executable child-process example. The Maven test creates a temporary source tree and launches it with `java Main.java`, because the feature belongs to the command-line launcher rather than to ordinary Maven compilation.
 
 ## What Problem Does This Feature Solve?
 
@@ -66,13 +66,25 @@ Maven or Gradle:
 
 The source launcher does not replace build tools for real applications. It reduces setup friction for small programs.
 
-## Why This Module Has No Launcher Test
+## What The Example Shows
 
-This repository is a Maven project. Its tests compile source files through the normal Maven lifecycle.
+`LaunchMultiFileSourceProgramsExamples` creates this temporary source tree:
 
-A faithful launcher test would need to create a temporary source tree and spawn a separate `java Main.java` process. That is possible, but it would test command-line process behavior rather than the Java 22 concept itself.
+```text
+Main.java
+Greeting.java
+messages/MessageFormatter.java
+```
 
-The module therefore documents the command shape and source layout, and the unit test checks the teaching notes.
+The test then starts a child JVM from that directory:
+
+```bash
+java Main.java Rod
+```
+
+`Main.java` references helper source files, and the launcher compiles the small source set for that run. The test also creates a broken source tree to show that launcher compilation errors are surfaced through the child process.
+
+The example deliberately avoids compiling these files through Maven or `JavaCompiler`; that would test a different mechanism.
 
 ## When To Use This Feature
 

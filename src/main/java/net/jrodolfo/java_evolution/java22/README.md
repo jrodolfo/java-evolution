@@ -84,11 +84,11 @@ Java can run a single source file directly, which is useful for small scripts an
 
 The problem it solves is setup friction: small Java programs should not always require a Maven or Gradle project before they can be tried.
 
-This repository keeps the topic as notes because testing launcher behavior would require spawning separate Java processes and temporary source trees.
+This repository demonstrates the feature by creating a temporary source tree and launching `java Main.java` in a child JVM.
 
-Explanatory module: [`launch_multi_file_source_programs`](launch_multi_file_source_programs/README.md)
+Example module: [`launch_multi_file_source_programs`](launch_multi_file_source_programs/README.md)
 
-Test: `LaunchMultiFileSourceProgramsNotesTest`
+Test: `LaunchMultiFileSourceProgramsExamplesTest`
 
 ## Scoped Values Second Preview
 
@@ -124,7 +124,7 @@ Run the focused tests:
 mvn -Dtest=UnnamedVariablesPatternsExamplesTest test
 mvn -Dtest=StreamGatherersPreviewNotesTest,ClassFileApiPreviewNotesTest test
 mvn -Dtest=ForeignFunctionExamplesTest test
-mvn -Dtest=StatementsBeforeSuperPreviewNotesTest,LaunchMultiFileSourceProgramsNotesTest,ScopedValuesSecondPreviewNotesTest,StructuredConcurrencySecondPreviewNotesTest test
+mvn -Dtest=StatementsBeforeSuperPreviewNotesTest,LaunchMultiFileSourceProgramsExamplesTest,ScopedValuesSecondPreviewNotesTest,StructuredConcurrencySecondPreviewNotesTest test
 ```
 
 This package mixes final APIs with previews and notes-only topics, so use it to practice separating stable features from evolving ones. After this package, continue with Java 23 for markdown documentation comments and another round of preview refinements.
