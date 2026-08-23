@@ -10,10 +10,12 @@ Applications often need a last chance to release resources during normal JVM shu
 
 `Runtime.addShutdownHook(Thread)` registers a thread to run during orderly shutdown.
 
-## 3. Why This Repository Uses Notes
+## 3. What Does The Example Show?
 
-A faithful test would need to terminate a JVM process. Running hooks inside the main Maven test JVM would be disruptive and misleading.
+`ShutdownHookExamples` registers a hook that writes a marker file during orderly JVM shutdown.
+
+The test suite runs the example in a child JVM. That keeps the Maven test JVM alive while still exercising the real shutdown behavior. The child process returns normally from `main`, the JVM begins orderly shutdown, and the hook writes the marker.
 
 ## 4. Remember This
 
-Shutdown hooks are best-effort cleanup, not a replacement for normal resource management.
+Shutdown hooks are best-effort cleanup, not a replacement for normal resource management. They are not guaranteed to run after forced termination, `Runtime.halt(...)`, operating-system process kills, or VM crashes.

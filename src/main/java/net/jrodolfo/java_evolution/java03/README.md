@@ -24,9 +24,9 @@ Test: `TimerExamplesTest`
 
 Shutdown hooks let code register cleanup work that runs during normal JVM shutdown.
 
-Explanatory module: [`shutdown_hooks`](shutdown_hooks/README.md)
+Example module: [`shutdown_hooks`](shutdown_hooks/README.md)
 
-Test: `ShutdownHookNotesTest`
+Test: `ShutdownHookExamplesTest`
 
 ## JNDI
 
@@ -52,7 +52,7 @@ Run the focused tests:
 
 ```bash
 mvn -Dtest=DynamicProxyExamplesTest,TimerExamplesTest test
-mvn -Dtest=ShutdownHookNotesTest,JndiNotesTest,LegacyIntegrationNotesTest test
+mvn -Dtest=ShutdownHookExamplesTest,JndiNotesTest,LegacyIntegrationNotesTest test
 ```
 
 After this package, continue with Java 4 for assertions, regex, NIO, logging, chained exceptions, preferences, XML, and integrated security APIs.

@@ -43,7 +43,7 @@ Learning notes: [java03 README](../src/main/java/net/jrodolfo/java_evolution/jav
 |---|---|---|
 | Dynamic proxy | `DynamicProxyExamples` | `DynamicProxyExamplesTest` |
 | Timer and TimerTask | `TimerExamples` | `TimerExamplesTest` |
-| Shutdown hooks | [`shutdown_hooks/ShutdownHookNotes`](../src/main/java/net/jrodolfo/java_evolution/java03/shutdown_hooks/ShutdownHookNotes.java) | [`ShutdownHookNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java03/shutdown_hooks/ShutdownHookNotesTest.java) |
+| Shutdown hooks | [`shutdown_hooks/ShutdownHookExamples`](../src/main/java/net/jrodolfo/java_evolution/java03/shutdown_hooks/ShutdownHookExamples.java) | [`ShutdownHookExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java03/shutdown_hooks/ShutdownHookExamplesTest.java) |
 | JNDI | [`jndi/JndiNotes`](../src/main/java/net/jrodolfo/java_evolution/java03/jndi/JndiNotes.java) | [`JndiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java03/jndi/JndiNotesTest.java) |
 | Legacy integration | [`legacy_integration/LegacyIntegrationNotes`](../src/main/java/net/jrodolfo/java_evolution/java03/legacy_integration/LegacyIntegrationNotes.java) | [`LegacyIntegrationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java03/legacy_integration/LegacyIntegrationNotesTest.java) |
 

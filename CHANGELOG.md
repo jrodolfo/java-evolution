@@ -15,6 +15,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 15 hidden classes from notes-only material into an executable example using compiled template class bytes.
 - Converted the Java 6 Compiler API module from notes-only material into a real file-based compiler example with diagnostics.
 - Converted Java 4 assertions from notes-only material into an executable example that enables assertions explicitly in tests.
+- Converted Java 3 shutdown hooks from notes-only material into an executable child-JVM example.
 
 ## v1.4.1
 
