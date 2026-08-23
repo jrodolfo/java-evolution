@@ -2,7 +2,7 @@
 
 Java 6 improved monitoring and management support for the Java platform.
 
-This is an explanatory learning module because the most important behavior involves runtime tools and management interfaces, not a tiny deterministic method.
+This module uses executable MXBean examples for the local JVM, while still explaining that the larger feature area includes external tools and operational workflows.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -21,11 +21,16 @@ Java 6 provided stronger platform support around:
 - monitoring tools such as `jps`, `jstat`, and related utilities
 - lock and thread management visibility
 
-## 3. Why This Repository Uses Notes
+## 3. What Does The Example Show?
 
-The core lesson is operational. A faithful demonstration is a running process observed by tools, not a pure unit test.
+`MonitoringManagementExamples` reads stable kinds of information from platform MXBeans:
 
-The notes preserve the concepts while keeping the Maven build portable.
+- the current JVM runtime identity
+- the currently loaded class count
+- a heap memory usage snapshot
+- the current live thread count
+
+The exact numbers are runtime snapshots, not constants. The tests assert stable properties such as nonblank runtime identity and nonnegative counts, rather than exact memory sizes or thread counts.
 
 ## 4. Remember This
 

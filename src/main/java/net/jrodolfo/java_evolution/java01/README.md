@@ -92,9 +92,9 @@ Test: `RmiNotesTest`
 
 JavaBeans defined reusable component conventions around properties, events, and introspection.
 
-Explanatory module: [`javabeans`](javabeans/README.md)
+Example module: [`javabeans`](javabeans/README.md)
 
-Test: `JavaBeansNotesTest`
+Test: `JavaBeansExamplesTest`
 
 ## How To Read This Package
 
@@ -105,7 +105,7 @@ Run the focused tests:
 ```bash
 mvn -Dtest=ObjectOrientedBasicsExamplesTest,InterfaceExamplesTest,ExceptionHandlingBasicsExamplesTest test
 mvn -Dtest=ThreadBasicsExamplesTest,IoBasicsExamplesTest,InnerClassExamplesTest test
-mvn -Dtest=ReflectionExamplesTest,SerializationExamplesTest,JdbcNotesTest,RmiNotesTest,JavaBeansNotesTest test
+mvn -Dtest=ReflectionExamplesTest,SerializationExamplesTest,JdbcNotesTest,RmiNotesTest,JavaBeansExamplesTest test
 ```
 
 After this package, continue with Java 2 for the Collections Framework and the Java 2 platform shift.

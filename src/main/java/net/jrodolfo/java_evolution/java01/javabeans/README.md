@@ -10,9 +10,17 @@ Tools needed a standard way to discover component properties, events, and custom
 
 JavaBeans defined conventions such as no-argument constructors, getter/setter property names, event listener patterns, and introspection.
 
-## 3. Why This Repository Uses Notes
+## 3. What Does The Example Show?
 
-The important lesson is convention plus tooling. A tiny class with getters and setters would not explain why JavaBeans mattered.
+`JavaBeansExamples` shows how tooling can discover bean shape from conventions:
+
+- a no-argument constructor makes the component easy for tools to create
+- `getName` and `setName` define a `name` property
+- `isActive` and `setActive` define a boolean `active` property
+- `addProjectListener` and `removeProjectListener` define an event-set convention
+- `Introspector` exposes this metadata through descriptors
+
+The point is not the amount of code in the bean. The point is that tools can discover properties and events without each component implementing a custom metadata API.
 
 ## 4. Remember This
 

@@ -10,9 +10,15 @@ XML was a common integration format, and Java applications needed standard parsi
 
 Java 4 included standard APIs for DOM, SAX, and XSLT-style processing through JAXP.
 
-## 3. Why This Repository Uses Notes
+## 3. What Does The Example Show?
 
-XML APIs are executable, but a useful demo can quickly become about XML syntax rather than the Java release. This module keeps the platform history concise.
+`JaxpExamples` uses trusted in-memory XML to show the core platform APIs:
+
+- parsing XML text into a DOM `Document`
+- reading root elements, attributes, and child text
+- transforming a DOM document back to XML text
+
+The example stays intentionally small. It does not use remote schemas, network access, external files, or complex XPath expressions, because the release-level lesson is that XML parsing and transformation became standard Java platform capabilities.
 
 ## 4. Remember This
 

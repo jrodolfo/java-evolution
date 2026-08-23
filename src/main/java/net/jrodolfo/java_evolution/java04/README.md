@@ -56,9 +56,9 @@ Test: `PreferencesNotesTest`
 
 Java 4 added standard XML processing support through JAXP.
 
-Explanatory module: [`xml`](xml/README.md)
+Example module: [`xml`](xml/README.md)
 
-Test: `JaxpNotesTest`
+Test: `JaxpExamplesTest`
 
 ## Integrated Security APIs
 
@@ -70,13 +70,13 @@ Test: `SecurityIntegrationNotesTest`
 
 ## How To Read This Package
 
-Start with `RegexExamples`, `NioExamples`, `LoggingExamples`, and `ChainedExceptionExamples`. Then read the notes modules for runtime/configuration/platform topics.
+Start with `RegexExamples`, `NioExamples`, `LoggingExamples`, `ChainedExceptionExamples`, and `xml/JaxpExamples`. Then read the notes modules for runtime/configuration/platform topics.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=RegexExamplesTest,NioExamplesTest,LoggingExamplesTest,ChainedExceptionExamplesTest test
-mvn -Dtest=AssertionNotesTest,PreferencesNotesTest,JaxpNotesTest,SecurityIntegrationNotesTest test
+mvn -Dtest=JaxpExamplesTest,AssertionNotesTest,PreferencesNotesTest,SecurityIntegrationNotesTest test
 ```
 
 After this package, continue with Java 5 for generics, enums, annotations, enhanced loops, varargs, formatted output, and concurrency utilities.

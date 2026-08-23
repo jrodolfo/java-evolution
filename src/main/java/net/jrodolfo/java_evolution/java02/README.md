@@ -4,7 +4,7 @@ Released: December 1998 as J2SE 1.2.
 
 Java 2, also known as J2SE 1.2, was a major platform release. It introduced the Collections Framework, Swing, Java 2D, a stronger security-policy model, and the `strictfp` modifier.
 
-This package focuses executable examples on the Collections Framework because it remains foundational and easy to demonstrate faithfully. GUI, graphics, floating-point-history, and security-policy topics are represented as explanatory modules.
+This package focuses executable examples on the Collections Framework, sorting, and headless Java 2D rendering because they remain foundational and can be demonstrated faithfully. GUI windows, floating-point-history, and security-policy topics are represented as explanatory modules.
 
 ## Collections Framework
 
@@ -42,9 +42,9 @@ Test: `SwingNotesTest`
 
 Java 2D improved graphics, shapes, text, images, and rendering control.
 
-Explanatory module: [`java2d`](java2d/README.md)
+Example module: [`java2d`](java2d/README.md)
 
-Test: `Java2DNotesTest`
+Test: `Java2DExamplesTest`
 
 ## Security Policy
 
@@ -56,13 +56,13 @@ Test: `SecurityPolicyNotesTest`
 
 ## How To Read This Package
 
-Start with `CollectionsFrameworkExamples` and `SortingExamples`, then read the explanatory modules for platform-level features.
+Start with `CollectionsFrameworkExamples`, `SortingExamples`, and `java2d/Java2DExamples`, then read the explanatory modules for platform-level features.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=CollectionsFrameworkExamplesTest,SortingExamplesTest test
-mvn -Dtest=StrictFloatingPointNotesTest,SwingNotesTest,Java2DNotesTest,SecurityPolicyNotesTest test
+mvn -Dtest=Java2DExamplesTest,StrictFloatingPointNotesTest,SwingNotesTest,SecurityPolicyNotesTest test
 ```
 
 After this package, continue with Java 3 for dynamic proxies, timers, shutdown hooks, JNDI, and legacy integration notes.

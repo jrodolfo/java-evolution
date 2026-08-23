@@ -20,7 +20,7 @@ Learning notes: [java01 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Serialization | [`serialization/SerializationExamples`](../src/main/java/net/jrodolfo/java_evolution/java01/serialization/SerializationExamples.java) | [`SerializationExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/serialization/SerializationExamplesTest.java) |
 | JDBC | [`jdbc/JdbcNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/jdbc/JdbcNotes.java) | [`JdbcNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/jdbc/JdbcNotesTest.java) |
 | RMI | [`rmi/RmiNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/rmi/RmiNotes.java) | [`RmiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/rmi/RmiNotesTest.java) |
-| JavaBeans | [`javabeans/JavaBeansNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/javabeans/JavaBeansNotes.java) | [`JavaBeansNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/javabeans/JavaBeansNotesTest.java) |
+| JavaBeans | [`javabeans/JavaBeansExamples`](../src/main/java/net/jrodolfo/java_evolution/java01/javabeans/JavaBeansExamples.java) | [`JavaBeansExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/javabeans/JavaBeansExamplesTest.java) |
 
 ## Java 2
 
@@ -32,7 +32,7 @@ Learning notes: [java02 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Sorting with `Comparable` and `Comparator` | `SortingExamples` | `SortingExamplesTest` |
 | `strictfp` | [`strict_floating_point/StrictFloatingPointNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointNotes.java) | [`StrictFloatingPointNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointNotesTest.java) |
 | Swing | [`swing/SwingNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/swing/SwingNotes.java) | [`SwingNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/swing/SwingNotesTest.java) |
-| Java 2D | [`java2d/Java2DNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/java2d/Java2DNotes.java) | [`Java2DNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/java2d/Java2DNotesTest.java) |
+| Java 2D | [`java2d/Java2DExamples`](../src/main/java/net/jrodolfo/java_evolution/java02/java2d/Java2DExamples.java) | [`Java2DExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/java2d/Java2DExamplesTest.java) |
 | Security policy | [`security/SecurityPolicyNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyNotes.java) | [`SecurityPolicyNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyNotesTest.java) |
 
 ## Java 3
@@ -59,7 +59,7 @@ Learning notes: [java04 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Logging API | `LoggingExamples` | `LoggingExamplesTest` |
 | Chained exceptions | `ChainedExceptionExamples` | `ChainedExceptionExamplesTest` |
 | Preferences API | [`preferences/PreferencesNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/preferences/PreferencesNotes.java) | [`PreferencesNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/preferences/PreferencesNotesTest.java) |
-| XML/JAXP | [`xml/JaxpNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/xml/JaxpNotes.java) | [`JaxpNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/xml/JaxpNotesTest.java) |
+| XML/JAXP | [`xml/JaxpExamples`](../src/main/java/net/jrodolfo/java_evolution/java04/xml/JaxpExamples.java) | [`JaxpExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/xml/JaxpExamplesTest.java) |
 | Integrated security APIs | [`security/SecurityIntegrationNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/security/SecurityIntegrationNotes.java) | [`SecurityIntegrationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/security/SecurityIntegrationNotesTest.java) |
 
 ## Java 5
@@ -89,7 +89,7 @@ Learning notes: [java06 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Scripting support | [`scripting/ScriptingSupportNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/scripting/ScriptingSupportNotes.java) | [`ScriptingSupportNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/scripting/ScriptingSupportNotesTest.java) |
 | Compiler API | [`compiler_api/CompilerApiNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/compiler_api/CompilerApiNotes.java) | [`CompilerApiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/compiler_api/CompilerApiNotesTest.java) |
 | Console API | [`console_api/ConsoleApiNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/console_api/ConsoleApiNotes.java) | [`ConsoleApiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/console_api/ConsoleApiNotesTest.java) |
-| Monitoring and management | [`monitoring_management/MonitoringManagementNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/monitoring_management/MonitoringManagementNotes.java) | [`MonitoringManagementNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/monitoring_management/MonitoringManagementNotesTest.java) |
+| Monitoring and management | [`monitoring_management/MonitoringManagementExamples`](../src/main/java/net/jrodolfo/java_evolution/java06/monitoring_management/MonitoringManagementExamples.java) | [`MonitoringManagementExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/monitoring_management/MonitoringManagementExamplesTest.java) |
 | Web-service support | [`web_services/WebServiceSupportNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/web_services/WebServiceSupportNotes.java) | [`WebServiceSupportNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/web_services/WebServiceSupportNotesTest.java) |
 
 ## Java 7

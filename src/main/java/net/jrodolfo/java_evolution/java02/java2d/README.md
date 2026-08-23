@@ -10,9 +10,16 @@ Applications needed richer drawing, text, image, shape, color, and rendering con
 
 Java 2D added APIs around `Graphics2D`, shapes, strokes, paints, transforms, images, and rendering hints.
 
-## 3. Why This Repository Uses Notes
+## 3. What Does The Example Show?
 
-A faithful Java 2D example is visual. A unit test that only constructs shapes would miss the rendering point.
+`Java2DExamples` renders into `BufferedImage` instances instead of opening GUI windows. This keeps the example portable in Maven and CI while still showing real rendering behavior:
+
+- creating an in-memory image
+- drawing a filled rectangle with `Graphics2D`
+- drawing a stroked `Shape`
+- reading pixels to verify that rendering changed the image
+
+The example avoids platform-dependent font layout and visible windows. Those topics matter in desktop applications, but they would make this refresher less deterministic.
 
 ## 4. Remember This
 
