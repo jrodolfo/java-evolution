@@ -33,7 +33,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [Formatter API](https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html) | Formatted output | Final, Example |
 | [Oracle Java SE 6 features](https://www.oracle.com/java/technologies/javase/features.html) | Navigable collections, scripting, compiler API, console, monitoring, web-service support | Final, Examples and Explanatory Modules |
 | [Java SE 6 scripting guide](https://docs.oracle.com/javase/6/docs/technotes/guides/scripting/) | Scripting support | Final, Explanatory Module |
-| [JavaCompiler API](https://docs.oracle.com/javase/6/docs/api/javax/tools/JavaCompiler.html) | Compiler API | Final, Tooling, Explanatory Module |
+| [JavaCompiler API](https://docs.oracle.com/javase/6/docs/api/javax/tools/JavaCompiler.html) | Compiler API | Final, Tooling, Executable Example |
 | [Console API](https://docs.oracle.com/javase/6/docs/api/java/io/Console.html) | Console API | Final, Tooling, Explanatory Module |
 | [Project Coin / JSR 334](https://cr.openjdk.org/~darcy/ProjectCoin/ProjectCoin-Documentation-v0.9375.html) | Try-with-resources, multi-catch, diamond operator, strings in switch, binary literals, numeric underscores | Final, Example |
 | [JDK 7 adoption guide](https://docs.oracle.com/javase/7/docs/webnotes/adoptionGuide/) | NIO.2 and Java 7 migration features | Final, Example |

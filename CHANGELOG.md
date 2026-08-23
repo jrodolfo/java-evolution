@@ -13,6 +13,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted JavaBeans, Java 2D, XML/JAXP, and Java 6 monitoring/management from notes-only material into executable examples with focused tests.
 - Converted Java 16 Unix-domain socket channels from notes-only material into an executable example with safe skips when local socket binding is blocked.
 - Converted Java 15 hidden classes from notes-only material into an executable example using compiled template class bytes.
+- Converted the Java 6 Compiler API module from notes-only material into a real file-based compiler example with diagnostics.
 
 ## v1.4.1
 

@@ -4,7 +4,7 @@ Released: December 2006 as Java SE 6.
 
 Java 6 was more of a platform and tooling release than a language release. It added standard scripting integration, a compiler API, better monitoring and management support, console password prompting, web-service APIs, desktop improvements, and library refinements such as deques and navigable collections.
 
-This repository keeps several Java 6 topics as explanatory modules because a faithful demonstration often depends on tools, interactive terminals, optional engines, removed bundled APIs, or runtime attachment behavior. The executable examples focus on collection APIs and local MXBean monitoring APIs that still compile and run naturally on JDK 25.
+This repository keeps several Java 6 topics as explanatory modules because a faithful demonstration often depends on interactive terminals, optional engines, removed bundled APIs, or runtime attachment behavior. The executable examples focus on collection APIs, compiler invocation, and local MXBean monitoring APIs that still compile and run naturally on JDK 25.
 
 ## Navigable Collections And Deques
 
@@ -30,11 +30,11 @@ Test: `ScriptingSupportNotesTest`
 
 Java 6 added JSR 199, the Java Compiler API, which lets tools invoke a Java compiler programmatically and receive diagnostics.
 
-This is an explanatory module because a realistic example involves generated source files, diagnostic handling, file managers, and compiler availability. A tiny method that returns Java source as a string would teach the wrong thing.
+This module uses a real file-based example: it locates the system compiler, compiles temporary `.java` files into a class-output directory, and collects structured diagnostics for invalid source.
 
-Explanatory module: [`compiler_api`](compiler_api/README.md)
+Example module: [`compiler_api`](compiler_api/README.md)
 
-Test: `CompilerApiNotesTest`
+Test: `CompilerApiExamplesTest`
 
 ## Console API
 
@@ -68,13 +68,13 @@ Test: `WebServiceSupportNotesTest`
 
 ## How To Read This Package
 
-Start with `NavigableCollectionExamples` and `monitoring_management/MonitoringManagementExamples` for executable library and runtime-observability features. Then read the explanatory modules to understand the Java 6 platform direction without forcing obsolete or environment-sensitive APIs into the Maven test suite.
+Start with `NavigableCollectionExamples`, `compiler_api/CompilerApiExamples`, and `monitoring_management/MonitoringManagementExamples` for executable library, tooling, and runtime-observability features. Then read the explanatory modules to understand the Java 6 platform direction without forcing obsolete or environment-sensitive APIs into the Maven test suite.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=NavigableCollectionExamplesTest test
-mvn -Dtest=ScriptingSupportNotesTest,CompilerApiNotesTest,ConsoleApiNotesTest test
+mvn -Dtest=ScriptingSupportNotesTest,CompilerApiExamplesTest,ConsoleApiNotesTest test
 mvn -Dtest=MonitoringManagementExamplesTest,WebServiceSupportNotesTest test
 ```
 
