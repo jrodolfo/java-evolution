@@ -229,7 +229,7 @@ Start here depending on what you need:
 
 | Java | Released | Package | Highlights |
 |---|---|---|---|
-| 1 | Jan 1996 / Feb 1997 | [`java01`](src/main/java/net/jrodolfo/java_evolution/java01/README.md) | Object-Oriented Foundations, Interfaces, Checked Exceptions, Threads, `java.io`, Inner Classes, Reflection/Serialization/JDBC/RMI/JavaBeans notes |
+| 1 | Jan 1996 / Feb 1997 | [`java01`](src/main/java/net/jrodolfo/java_evolution/java01/README.md) | Object-Oriented Foundations, Interfaces, Checked Exceptions, Threads, `java.io`, Inner Classes, Reflection example, Serialization/JDBC/RMI/JavaBeans notes |
 | 2 | Dec 1998 | [`java02`](src/main/java/net/jrodolfo/java_evolution/java02/README.md) | Collections Framework, Sorting, `strictfp`, Swing/Java 2D/Security notes |
 | 3 | May 2000 | [`java03`](src/main/java/net/jrodolfo/java_evolution/java03/README.md) | Dynamic Proxy, Timer, Shutdown Hooks/JNDI/Legacy Integration notes |
 | 4 | Feb 2002 | [`java04`](src/main/java/net/jrodolfo/java_evolution/java04/README.md) | Assertions notes, Regex, NIO, Logging, Chained Exceptions, Preferences/XML/Security notes |

@@ -16,7 +16,7 @@ Learning notes: [java01 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Threads and Runnable | `ThreadBasicsExamples` | `ThreadBasicsExamplesTest` |
 | `java.io` streams | `IoBasicsExamples` | `IoBasicsExamplesTest` |
 | Inner classes | `InnerClassExamples` | `InnerClassExamplesTest` |
-| Reflection | [`reflection/ReflectionNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/reflection/ReflectionNotes.java) | [`ReflectionNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/reflection/ReflectionNotesTest.java) |
+| Reflection | [`reflection/ReflectionExamples`](../src/main/java/net/jrodolfo/java_evolution/java01/reflection/ReflectionExamples.java) | [`ReflectionExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/reflection/ReflectionExamplesTest.java) |
 | Serialization | [`serialization/SerializationNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/serialization/SerializationNotes.java) | [`SerializationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/serialization/SerializationNotesTest.java) |
 | JDBC | [`jdbc/JdbcNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/jdbc/JdbcNotes.java) | [`JdbcNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/jdbc/JdbcNotesTest.java) |
 | RMI | [`rmi/RmiNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/rmi/RmiNotes.java) | [`RmiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/rmi/RmiNotesTest.java) |

@@ -60,9 +60,9 @@ Test: `InnerClassExamplesTest`
 
 Java 1.1 added reflection so code can inspect classes, methods, constructors, and fields at runtime.
 
-Explanatory module: [`reflection`](reflection/README.md)
+Example module: [`reflection`](reflection/README.md)
 
-Test: `ReflectionNotesTest`
+Test: `ReflectionExamplesTest`
 
 ## Serialization
 
@@ -105,7 +105,7 @@ Run the focused tests:
 ```bash
 mvn -Dtest=ObjectOrientedBasicsExamplesTest,InterfaceExamplesTest,ExceptionHandlingBasicsExamplesTest test
 mvn -Dtest=ThreadBasicsExamplesTest,IoBasicsExamplesTest,InnerClassExamplesTest test
-mvn -Dtest=ReflectionNotesTest,SerializationNotesTest,JdbcNotesTest,RmiNotesTest,JavaBeansNotesTest test
+mvn -Dtest=ReflectionExamplesTest,SerializationNotesTest,JdbcNotesTest,RmiNotesTest,JavaBeansNotesTest test
 ```
 
 After this package, continue with Java 2 for the Collections Framework and the Java 2 platform shift.
