@@ -2,6 +2,7 @@ package net.jrodolfo.java_evolution.java04.xml;
 
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.io.IOException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -15,10 +16,9 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-
-import java.io.IOException;
 
 /**
  * Demonstrates JAXP XML processing, standardized in J2SE 1.4.
@@ -81,7 +81,8 @@ public class JaxpExamples {
 	 * @throws SAXException when the XML is invalid
 	 */
 	public String textValue(String xml, String elementName) throws ParserConfigurationException, IOException, SAXException {
-		return parseDocument(xml).getElementsByTagName(elementName).item(0).getTextContent();
+		Node element = parseDocument(xml).getElementsByTagName(elementName).item(0);
+		return element.getFirstChild().getNodeValue();
 	}
 
 	/**

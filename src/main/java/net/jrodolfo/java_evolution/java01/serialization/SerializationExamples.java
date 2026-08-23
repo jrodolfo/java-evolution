@@ -23,6 +23,7 @@ public class SerializationExamples {
 		ByteArrayOutputStream bytes = new ByteArrayOutputStream();
 		ObjectOutputStream objects = new ObjectOutputStream(bytes);
 		objects.writeObject(snapshot);
+		// Manual close keeps this Java 1.1-era example visually close to pre-try-with-resources code.
 		objects.close();
 		return bytes.toByteArray();
 	}
@@ -38,6 +39,7 @@ public class SerializationExamples {
 	public ProjectSnapshot deserialize(byte[] bytes) throws IOException, ClassNotFoundException {
 		ObjectInputStream objects = new ObjectInputStream(new ByteArrayInputStream(bytes));
 		ProjectSnapshot snapshot = (ProjectSnapshot) objects.readObject();
+		// Manual close keeps this Java 1.1-era example visually close to pre-try-with-resources code.
 		objects.close();
 		return snapshot;
 	}

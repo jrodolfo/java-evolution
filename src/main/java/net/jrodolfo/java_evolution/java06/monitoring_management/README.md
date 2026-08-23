@@ -12,6 +12,8 @@ Before the Java 5 and Java 6 management work, much of that inspection depended o
 
 ## 2. What Did Java 6 Improve?
 
+Basic platform MXBeans were introduced in Java 5. Java 6 strengthened the broader management story by unifying MXBean conventions with attach diagnostics and operational tools.
+
 Java 6 provided stronger platform support around:
 
 - Java Management Extensions (JMX)
