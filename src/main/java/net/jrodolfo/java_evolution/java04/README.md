@@ -8,9 +8,9 @@ J2SE 1.4 added several features that still matter in everyday Java: assertions, 
 
 Java 4 added the `assert` statement for checking programmer assumptions during development and testing.
 
-Explanatory module: [`assertions`](assertions/README.md)
+Example module: [`assertions`](assertions/README.md)
 
-Test: `AssertionNotesTest`
+Test: `AssertionExamplesTest`
 
 ## Regular Expressions
 
@@ -70,13 +70,13 @@ Test: `SecurityIntegrationNotesTest`
 
 ## How To Read This Package
 
-Start with `RegexExamples`, `NioExamples`, `LoggingExamples`, `ChainedExceptionExamples`, and `xml/JaxpExamples`. Then read the notes modules for runtime/configuration/platform topics.
+Start with `assertions/AssertionExamples`, `RegexExamples`, `NioExamples`, `LoggingExamples`, `ChainedExceptionExamples`, and `xml/JaxpExamples`. Then read the notes modules for runtime/configuration/platform topics.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=RegexExamplesTest,NioExamplesTest,LoggingExamplesTest,ChainedExceptionExamplesTest test
-mvn -Dtest=JaxpExamplesTest,AssertionNotesTest,PreferencesNotesTest,SecurityIntegrationNotesTest test
+mvn -Dtest=JaxpExamplesTest,AssertionExamplesTest,PreferencesNotesTest,SecurityIntegrationNotesTest test
 ```
 
 After this package, continue with Java 5 for generics, enums, annotations, enhanced loops, varargs, formatted output, and concurrency utilities.

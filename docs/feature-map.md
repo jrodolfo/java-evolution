@@ -53,7 +53,7 @@ Learning notes: [java04 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 | Feature | Example | Test |
 |---|---|---|
-| Assertions | [`assertions/AssertionNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/assertions/AssertionNotes.java) | [`AssertionNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/assertions/AssertionNotesTest.java) |
+| Assertions | [`assertions/AssertionExamples`](../src/main/java/net/jrodolfo/java_evolution/java04/assertions/AssertionExamples.java) | [`AssertionExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/assertions/AssertionExamplesTest.java) |
 | Regular expressions | `RegexExamples` | `RegexExamplesTest` |
 | NIO | `NioExamples` | `NioExamplesTest` |
 | Logging API | `LoggingExamples` | `LoggingExamplesTest` |

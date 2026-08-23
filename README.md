@@ -232,7 +232,7 @@ Start here depending on what you need:
 | 1 | Jan 1996 / Feb 1997 | [`java01`](src/main/java/net/jrodolfo/java_evolution/java01/README.md) | Object-Oriented Foundations, Interfaces, Checked Exceptions, Threads, `java.io`, Inner Classes, Reflection, Serialization, and JavaBeans examples, JDBC/RMI notes |
 | 2 | Dec 1998 | [`java02`](src/main/java/net/jrodolfo/java_evolution/java02/README.md) | Collections Framework, Sorting, Java 2D example, `strictfp`/Swing/Security notes |
 | 3 | May 2000 | [`java03`](src/main/java/net/jrodolfo/java_evolution/java03/README.md) | Dynamic Proxy, Timer, Shutdown Hooks/JNDI/Legacy Integration notes |
-| 4 | Feb 2002 | [`java04`](src/main/java/net/jrodolfo/java_evolution/java04/README.md) | Assertions notes, Regex, NIO, Logging, Chained Exceptions, XML example, Preferences/Security notes |
+| 4 | Feb 2002 | [`java04`](src/main/java/net/jrodolfo/java_evolution/java04/README.md) | Assertions example, Regex, NIO, Logging, Chained Exceptions, XML example, Preferences/Security notes |
 | 5 | Sep 2004 | [`java05`](src/main/java/net/jrodolfo/java_evolution/java05/README.md) | Generics, Enhanced For Loop, Autoboxing, Enums, Varargs, Static Import, Annotations, Concurrency Utilities |
 | 6 | Dec 2006 | [`java06`](src/main/java/net/jrodolfo/java_evolution/java06/README.md) | Navigable Collections, Monitoring/MXBeans example, Scripting/Compiler/Console/Web-Service explanatory modules |
 | 7 | Jul 2011 | [`java07`](src/main/java/net/jrodolfo/java_evolution/java07/README.md) | Try-With-Resources, Multi-Catch, Diamond Operator, String Switch, NIO.2, Fork/Join, `invokedynamic` notes |
