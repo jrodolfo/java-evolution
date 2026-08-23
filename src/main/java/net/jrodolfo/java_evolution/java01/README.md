@@ -68,9 +68,9 @@ Test: `ReflectionExamplesTest`
 
 Java 1.1 added object serialization for writing object graphs to streams and reconstructing them later.
 
-Explanatory module: [`serialization`](serialization/README.md)
+Example module: [`serialization`](serialization/README.md)
 
-Test: `SerializationNotesTest`
+Test: `SerializationExamplesTest`
 
 ## JDBC
 
@@ -105,7 +105,7 @@ Run the focused tests:
 ```bash
 mvn -Dtest=ObjectOrientedBasicsExamplesTest,InterfaceExamplesTest,ExceptionHandlingBasicsExamplesTest test
 mvn -Dtest=ThreadBasicsExamplesTest,IoBasicsExamplesTest,InnerClassExamplesTest test
-mvn -Dtest=ReflectionExamplesTest,SerializationNotesTest,JdbcNotesTest,RmiNotesTest,JavaBeansNotesTest test
+mvn -Dtest=ReflectionExamplesTest,SerializationExamplesTest,JdbcNotesTest,RmiNotesTest,JavaBeansNotesTest test
 ```
 
 After this package, continue with Java 2 for the Collections Framework and the Java 2 platform shift.

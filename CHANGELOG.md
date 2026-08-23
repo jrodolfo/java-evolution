@@ -9,6 +9,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 ### Changed
 
 - Converted the Java 1.1 reflection module from notes-only material into an executable example with focused tests.
+- Converted the Java 1.1 serialization module from notes-only material into a trusted in-memory executable example with focused tests.
 
 ## v1.4.1
 

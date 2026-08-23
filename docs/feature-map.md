@@ -17,7 +17,7 @@ Learning notes: [java01 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | `java.io` streams | `IoBasicsExamples` | `IoBasicsExamplesTest` |
 | Inner classes | `InnerClassExamples` | `InnerClassExamplesTest` |
 | Reflection | [`reflection/ReflectionExamples`](../src/main/java/net/jrodolfo/java_evolution/java01/reflection/ReflectionExamples.java) | [`ReflectionExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/reflection/ReflectionExamplesTest.java) |
-| Serialization | [`serialization/SerializationNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/serialization/SerializationNotes.java) | [`SerializationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/serialization/SerializationNotesTest.java) |
+| Serialization | [`serialization/SerializationExamples`](../src/main/java/net/jrodolfo/java_evolution/java01/serialization/SerializationExamples.java) | [`SerializationExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/serialization/SerializationExamplesTest.java) |
 | JDBC | [`jdbc/JdbcNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/jdbc/JdbcNotes.java) | [`JdbcNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/jdbc/JdbcNotesTest.java) |
 | RMI | [`rmi/RmiNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/rmi/RmiNotes.java) | [`RmiNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/rmi/RmiNotesTest.java) |
 | JavaBeans | [`javabeans/JavaBeansNotes`](../src/main/java/net/jrodolfo/java_evolution/java01/javabeans/JavaBeansNotes.java) | [`JavaBeansNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java01/javabeans/JavaBeansNotesTest.java) |
