@@ -14,6 +14,6 @@ public class PreferencesNotes {
 	}
 
 	public String repositoryDecision() {
-		return "preferences can write to platform-specific backing stores, so this repository keeps them explanatory";
+		return "preferences use platform-specific backing stores that may be unavailable or fail to synchronize in tests";
 	}
 }

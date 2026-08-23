@@ -12,6 +12,6 @@ class PreferencesNotesTest {
 	void notesExplainPreferencesPurposeApiAndEnvironmentCaveat() {
 		assertThat(notes.problemSolved()).contains("small user or system configuration");
 		assertThat(notes.apiShape()).contains("java.util.prefs").contains("key/value");
-		assertThat(notes.repositoryDecision()).contains("platform-specific backing stores");
+		assertThat(notes.repositoryDecision()).contains("platform-specific backing stores").contains("synchronize");
 	}
 }

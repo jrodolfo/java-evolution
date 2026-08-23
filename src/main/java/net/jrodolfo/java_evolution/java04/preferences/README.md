@@ -12,7 +12,11 @@ The Preferences API provides hierarchical nodes and key/value storage for user a
 
 ## 3. Why This Repository Uses Notes
 
-Preferences can write to platform-specific backing stores such as files, registries, or system locations. That makes tests environment-sensitive.
+Preferences are executable in normal applications, but they use platform-specific backing stores such as files, registries, or operating-system preference services. Even user preferences can fail to synchronize in sandboxed, CI, or restricted desktop environments.
+
+That behavior is the important lesson: the API looks like a simple key/value store, but reads and writes depend on a backing store outside the Java object itself.
+
+This repository keeps Preferences as notes so the Maven build does not write to user or system preference storage.
 
 ## 4. Remember This
 
