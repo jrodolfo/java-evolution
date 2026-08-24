@@ -234,7 +234,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 510](https://openjdk.org/jeps/510) | Key Derivation Function API | Final, Security, Example |
 | [JEP 507](https://openjdk.org/jeps/507) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
 | [JEP 502](https://openjdk.org/jeps/502) | Stable Values | Preview, Explanatory Module |
-| [JEP 470](https://openjdk.org/jeps/470) | PEM Encodings of Cryptographic Objects | Preview, Security, Notes |
+| [JEP 470](https://openjdk.org/jeps/470) | PEM Encodings of Cryptographic Objects | Preview, Security, Executable Example |
 | [JEP 505](https://openjdk.org/jeps/505) | Structured Concurrency | Preview, Explanatory Module |
 | [JEP 508](https://openjdk.org/jeps/508) | Vector API | Incubator, Explanatory Module |
 | [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | Runtime, Tooling, Executable Example |

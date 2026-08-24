@@ -146,11 +146,13 @@ Base64-encoded binary data
 
 Before Java 25, applications often had to combine cryptographic object APIs, binary encodings, Base64 conversion, and careful text parsing themselves. Java 25 previewed APIs for reading and writing cryptographic objects using PEM encodings.
 
-Because this is a preview API, the example stays notes-based and focuses on the format and problem being standardized.
+Because this is a preview API, the main Maven build does not import `PEMEncoder` or `PEMDecoder` directly. `PemEncodingsPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
 
-Example: `PemEncodingsPreviewNotes`
+The child program generates an RSA key pair, encodes the public key as PEM text, decodes it back to a `PublicKey`, and verifies that the encoded key bytes still match. It also demonstrates `PEMRecord`, the generic representation for PEM object types that do not have a dedicated Java security class.
 
-Test: `PemEncodingsPreviewNotesTest`
+Example: `PemEncodingsPreviewExamples`
+
+Test: `PemEncodingsPreviewExamplesTest`
 
 ## Structured Concurrency Fifth Preview
 
@@ -187,7 +189,7 @@ Some of these remain notes because they involve memory layout or garbage-collect
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable AOT workflow in `aot_command_line/README.md` and read the notes for primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, `vector_api/README.md`, object headers, and GC behavior. Use `jfr_enhancements/README.md` as a mixed module: it has an executable method timing/tracing example plus runtime caveats for CPU-time profiling and cooperative sampling.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for AOT command-line ergonomics, PEM encodings, and JFR method timing/tracing. Read the notes for primitive patterns, `stable_values/README.md`, `structured_concurrency/README.md`, `vector_api/README.md`, object headers, and GC behavior.
 
 Run the focused tests:
 
@@ -195,7 +197,7 @@ Run the focused tests:
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
 mvn -Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest test
 mvn -Dtest=HkdfKeyDerivationExampleTest test
-mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewNotesTest,PemEncodingsPreviewNotesTest test
+mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewNotesTest,PemEncodingsPreviewExamplesTest test
 mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNotesTest test
 mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
 ```

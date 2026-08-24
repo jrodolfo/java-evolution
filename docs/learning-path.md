@@ -269,6 +269,7 @@ Java 25:
 - `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/PemEncodingsPreviewExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/stable_values/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/structured_concurrency/README.md`
 
@@ -277,7 +278,7 @@ Run:
 ```bash
 mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
 mvn "-Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest,HkdfKeyDerivationExampleTest" test
-mvn "-Dtest=StableValuesPreviewNotesTest,StructuredConcurrencyFifthPreviewNotesTest" test
+mvn "-Dtest=PemEncodingsPreviewExamplesTest,StableValuesPreviewNotesTest,StructuredConcurrencyFifthPreviewNotesTest" test
 ```
 
 Java 26:
