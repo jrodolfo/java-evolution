@@ -20,6 +20,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 23 Markdown documentation comments from notes-only material into an executable JavaDoc tooling example.
 - Converted Java 9 module system from notes-only material into an executable modular source-tree example.
 - Converted Java 2 Swing from notes-only material into a headless executable model/action/EDT example.
+- Converted Java 25 compact source files from notes-only material into an executable source-launcher example.
 
 ## v1.4.1
 

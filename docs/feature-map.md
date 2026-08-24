@@ -340,7 +340,7 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Scoped values final | [`ScopedValuesExamples`](../src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamples.java) | [`ScopedValuesExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamplesTest.java) |
 | Flexible constructor bodies final | `FlexibleConstructorBodiesExamples` | `FlexibleConstructorBodiesExamplesTest` |
 | Module import declarations final | `ModuleImportDeclarationsNotes` | `ModuleImportDeclarationsNotesTest` |
-| Compact source files final | `CompactSourceFilesNotes` | `CompactSourceFilesNotesTest` |
+| Compact source files final | `CompactSourceFilesExamples` | `CompactSourceFilesExamplesTest` |
 | Key Derivation Function API final | [`HkdfKeyDerivationExample`](../src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java) | [`HkdfKeyDerivationExampleTest`](../src/test/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExampleTest.java) |
 | Primitive patterns third preview | `PrimitivePatternsThirdPreviewNotes` | `PrimitivePatternsThirdPreviewNotesTest` |
 | Stable values preview | [`StableValuesPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java25/stable_values/StableValuesPreviewNotes.java) | [`StableValuesPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java25/stable_values/StableValuesPreviewNotesTest.java) |

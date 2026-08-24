@@ -84,11 +84,11 @@ If that source is saved as `HelloWorld.java`, it can be launched directly:
 java HelloWorld.java
 ```
 
-This is a final Java 25 feature documented via notes because compact source files belong naturally to source-launcher examples, not to this Spring Boot-based Maven reference project's ordinary package tree.
+This is a final Java 25 feature demonstrated with temporary source files and the JDK `java` launcher. Compact source syntax stays out of the ordinary Maven source tree because it belongs naturally to source-launcher examples.
 
-Example: `CompactSourceFilesNotes`
+Example: `CompactSourceFilesExamples`
 
-Test: `CompactSourceFilesNotesTest`
+Test: `CompactSourceFilesExamplesTest`
 
 ## Key Derivation Function API Final
 
@@ -187,13 +187,13 @@ These are important, but they are not ideal for tiny deterministic unit tests, s
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, compact source files, primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, `vector_api/README.md`, AOT, JFR, object headers, and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, `vector_api/README.md`, AOT, JFR, object headers, and GC behavior.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
-mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesNotesTest test
+mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesExamplesTest test
 mvn -Dtest=HkdfKeyDerivationExampleTest test
 mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewNotesTest,PemEncodingsPreviewNotesTest test
 mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNotesTest test
