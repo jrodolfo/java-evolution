@@ -26,7 +26,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [What's New in JDK 1.1](https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/post1.0/whatsnew/index.html) | Inner classes, reflection, serialization, JDBC, RMI, JavaBeans, AWT updates, JAR files, JNI, internationalization | Final, Examples |
 | [JavaBeans specification](https://www.oracle.com/java/technologies/javase/javabeans-spec.html) | JavaBeans component conventions | Final, Executable Example |
 | [Object Serialization FAQ](https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html) | Object serialization | Final, Executable Example |
-| [Java language enhancements history](https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html) | `strictfp` and assertions | Final, Notes and Executable Example |
+| [Java language enhancements history](https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html) | `strictfp` and assertions | Final, Executable Examples |
 | [Java 2 platform documentation](https://docs.oracle.com/cd/E19683-01/806-7930/features-2d/index.html) | Java 2D | Final, Executable Example |
 | [J2SE 1.4 new features and enhancements](https://download.oracle.com/otn_hosted_doc/jdeveloper/904preview/jdk14doc/docs/relnotes/features.html) | NIO, regular expressions, XML/JAXP, integrated security APIs, logging, preferences, chained exceptions | Final, Examples and Preferences Notes |
 | [Oracle J2SE 5.0 new features](https://docs.oracle.com/javase/1.5.0/docs/relnotes/features.html) | Generics, enhanced for loop, autoboxing, enums, varargs, static import, annotations, concurrency utilities | Final, Example |
@@ -112,7 +112,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 395](https://openjdk.org/jeps/395) | Records | Final |
 | [JEP 394](https://openjdk.org/jeps/394) | Pattern Matching for instanceof | Final |
 | [JEP 397](https://openjdk.org/jeps/397) | Sealed Classes | Second Preview |
-| [JEP 380](https://openjdk.org/jeps/380) | Unix-Domain Socket Channels | Final, Explanatory Module |
+| [JEP 380](https://openjdk.org/jeps/380) | Unix-Domain Socket Channels | Final, Executable Example |
 | [JEP 338](https://openjdk.org/jeps/338) | Vector API | Incubator, Notes |
 | [JEP 389](https://openjdk.org/jeps/389) | Foreign Linker API | Incubator, Notes |
 | [JEP 393](https://openjdk.org/jeps/393) | Foreign-Memory Access API | Third Incubator, Notes |
@@ -124,7 +124,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 409](https://openjdk.org/jeps/409) | Sealed Classes | Final |
 | [JEP 406](https://openjdk.org/jeps/406) | Pattern Matching for switch | Preview |
 | [JEP 356](https://openjdk.org/jeps/356) | Enhanced Pseudo-Random Number Generators | Final |
-| [JEP 403](https://openjdk.org/jeps/403) | Strongly Encapsulate JDK Internals | Runtime, Explanatory Module |
+| [JEP 403](https://openjdk.org/jeps/403) | Strongly Encapsulate JDK Internals | Runtime, Executable Example |
 
 ## Java 18
 

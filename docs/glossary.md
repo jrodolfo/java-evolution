@@ -19,8 +19,8 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | CPU | Central Processing Unit | The processor running Java code. It appears in discussions about platform architecture, virtual threads, and vector computation. |
 | CSS | Cascading Style Sheets | A web styling language mentioned when examples use embedded text formats. |
 | DHKEM | Diffie-Hellman Key Encapsulation Mechanism | The KEM algorithm name used by the Java 21 example with X25519 keys. |
-| DNS | Domain Name System | The naming system that resolves host names to network addresses; relevant to the Java 18 `InetAddress` resolver SPI notes. |
-| DOM | Document Object Model | A tree-oriented XML API. In the Java 4 XML notes, DOM contrasts with streaming or event-oriented XML processing. |
+| DNS | Domain Name System | The naming system that resolves host names to network addresses; relevant to the Java 18 `InetAddress` resolver SPI example. |
+| DOM | Document Object Model | A tree-oriented XML API. In the Java 4 XML example, DOM contrasts with streaming or event-oriented XML processing. |
 | EE | Enterprise Edition | Usually appears as Java EE, the older enterprise Java platform name relevant to migration from older JDKs. |
 | FFM | Foreign Function and Memory | Java APIs for calling native code and working with memory outside the Java heap. |
 | GC | Garbage Collection | JVM memory management that finds and reclaims objects the application no longer uses. |
@@ -81,11 +81,11 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | RISC | Reduced Instruction Set Computer | A processor design style referenced by the ARM acronym. |
 | RMI | Remote Method Invocation | A Java distributed-object technology mentioned as background when discussing native calls and remote procedure styles. |
 | RPC | Remote Procedure Call | A style of calling code across process or network boundaries; useful contrast for local native calls through FFM. |
-| SAX | Simple API for XML | An event-driven XML parsing API. In the Java 4 XML notes, SAX is useful contrast to DOM because it streams parser events instead of building a full tree. |
+| SAX | Simple API for XML | An event-driven XML parsing API. In the Java 4 XML example, SAX is useful contrast to DOM because it streams parser events instead of building a full tree. |
 | SDKMAN | Software Development Kit Manager | A tool commonly used on Linux/macOS to install and switch between JDK versions. |
 | SE | Standard Edition | Java Standard Edition, the core Java platform specification for the language, JVM, and standard APIs. |
 | SHA-256 | Secure Hash Algorithm 256-bit | A cryptographic hash function used as the hash primitive in `HKDF-SHA256`. |
-| SIMD | Single Instruction, Multiple Data | A processor execution model where one operation applies to multiple data values at once; relevant to the Vector API notes. |
+| SIMD | Single Instruction, Multiple Data | A processor execution model where one operation applies to multiple data values at once; relevant to the Vector API examples. |
 | SPI | Service Provider Interface | An extension point that lets libraries or runtime components plug in implementations, such as the Java 18 `InetAddress` resolver SPI. |
 | SQL | Structured Query Language | A database query language often embedded in Java strings or text blocks. |
 | Spring Boot | Spring Boot | The lightweight application shell and Maven parent used by this project. |
@@ -95,6 +95,6 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | VM | Virtual Machine | A general term for a runtime or machine abstraction; in this project it usually appears as part of JVM discussions. |
 | X25519 | X25519 elliptic-curve Diffie-Hellman function | The key-agreement key type used by the Java 21 DHKEM example. |
 | XML | Extensible Markup Language | A structured text data format often embedded in Java strings or text blocks. |
-| XSLT | Extensible Stylesheet Language Transformations | An XML transformation language. In the Java 4 XML notes, XSLT represents the transformation side of the standard XML-processing stack. |
-| ZGC | Z Garbage Collector | A low-latency garbage collector discussed in Java runtime and GC notes. |
+| XSLT | Extensible Stylesheet Language Transformations | An XML transformation language. In the Java 4 XML example, XSLT represents the transformation side of the standard XML-processing stack. |
+| ZGC | Z Garbage Collector | A low-latency garbage collector demonstrated by the Java 23 ZGC example and discussed in later Java runtime and GC notes. |
 | ZIP | ZIP archive format | A compressed archive format used in examples that treat archives as filesystems. |

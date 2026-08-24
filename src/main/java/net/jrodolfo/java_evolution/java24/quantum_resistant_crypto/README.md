@@ -36,7 +36,7 @@ private key + message -> signature
 public key + message + signature -> valid or invalid
 ```
 
-The KEM example relates directly to the Java 21 `javax.crypto.KEM` example. Java 21 standardized the KEM API shape. Java 24 added post-quantum KEM algorithms that can use that API.
+The KEM example relates directly to the Java 21 [`javax.crypto.KEM` example](../../java21/key_encapsulation/README.md). Java 21 standardized the KEM API shape. Java 24 added post-quantum KEM algorithms that can use that API.
 
 ## Java APIs Used Here
 

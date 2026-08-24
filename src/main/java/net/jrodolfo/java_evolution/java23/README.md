@@ -134,7 +134,7 @@ mvn -Dtest=FlexibleConstructorBodiesSecondPreviewNotesTest,StreamGatherersSecond
 mvn -Dtest=ScopedValuesThirdPreviewNotesTest,StructuredConcurrencyThirdPreviewNotesTest,UnsafeMemoryAccessDeprecationExamplesTest,ZgcGenerationalModeExamplesTest test
 ```
 
-This package is notes-heavy because many Java 23 topics are preview, runtime, or tooling features. After this package, continue with Java 24 to see stream gatherers and the Class-File API reach final status.
+After this package, continue with Java 24 to see Stream Gatherers and the Class-File API reach final status.
 
 ## References
 
