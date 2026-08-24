@@ -99,7 +99,7 @@ Module import declarations became final in Java 25.
 This repository keeps the Java 24 package as a preview-history bridge and leaves the stable explanation to the Java 25 notes:
 
 ```text
-src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsNotes.java
+src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsExamples.java
 ```
 
 That avoids keeping preview syntax from Java 24 in the normal Maven build.

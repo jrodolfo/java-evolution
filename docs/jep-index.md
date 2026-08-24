@@ -229,7 +229,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 |---|---|---|
 | [JEP 506](https://openjdk.org/jeps/506) | Scoped Values | Final |
 | [JEP 513](https://openjdk.org/jeps/513) | Flexible Constructor Bodies | Final |
-| [JEP 511](https://openjdk.org/jeps/511) | Module Import Declarations | Final, Notes |
+| [JEP 511](https://openjdk.org/jeps/511) | Module Import Declarations | Final, Tooling, Executable Example |
 | [JEP 512](https://openjdk.org/jeps/512) | Compact Source Files and Instance Main Methods | Final, Tooling, Executable Example |
 | [JEP 510](https://openjdk.org/jeps/510) | Key Derivation Function API | Final, Security, Example |
 | [JEP 507](https://openjdk.org/jeps/507) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |

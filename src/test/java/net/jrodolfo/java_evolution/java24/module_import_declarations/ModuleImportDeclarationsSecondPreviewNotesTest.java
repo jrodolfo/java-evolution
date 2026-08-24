@@ -46,8 +46,8 @@ class ModuleImportDeclarationsSecondPreviewNotesTest {
 				.contains("second preview in Java 24")
 				.contains("final in Java 25");
 		assertThat(nextStep)
-				.as("The Java 24 bridge note should point to the final Java 25 notes")
-				.contains("ModuleImportDeclarationsNotes")
+				.as("The Java 24 bridge note should point to the final Java 25 executable example")
+				.contains("ModuleImportDeclarationsExamples")
 				.contains("Java 25");
 	}
 }

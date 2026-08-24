@@ -200,7 +200,7 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/scoped_values/ScopedValuesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/FlexibleConstructorBodiesExamples.java`
-- `src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java`
@@ -212,7 +212,7 @@ Run:
 ```bash
 mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest" test
 mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
-mvn "-Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesExamplesTest,HkdfKeyDerivationExampleTest" test
+mvn "-Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest,HkdfKeyDerivationExampleTest" test
 mvn "-Dtest=StableValuesPreviewNotesTest,StructuredConcurrencyFifthPreviewNotesTest" test
 ```
 

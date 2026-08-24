@@ -112,7 +112,7 @@ Module import declarations are most natural in small source files, scripts, tuto
 The final Java 25 notes show the final feature shape:
 
 ```text
-src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsNotes.java
+src/main/java/net/jrodolfo/java_evolution/java25/ModuleImportDeclarationsExamples.java
 ```
 
 The Java 23 module exists to explain the first-preview step and the problem that motivated it.

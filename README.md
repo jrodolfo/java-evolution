@@ -253,7 +253,7 @@ Start here depending on what you need:
 | 22 | Mar 2024 | [`java22`](src/main/java/net/jrodolfo/java_evolution/java22/README.md) | Unnamed Variables and Patterns final, FFM executable native example, Stream Gatherers explanatory module, Class-File API explanatory module |
 | 23 | Sep 2024 | [`java23`](src/main/java/net/jrodolfo/java_evolution/java23/README.md) | Markdown Documentation Comments module, Primitive Patterns preview module, Module Imports preview module, ZGC Generational Mode notes |
 | 24 | Mar 2025 | [`java24`](src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API, Security Manager/AOT/runtime modules, post-quantum crypto examples, preview bridge modules |
-| 25 | Sep 2025 | [`java25`](src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, KDF and Compact Source Files examples, Module Imports notes, JFR/AOT/GC notes |
+| 25 | Sep 2025 | [`java25`](src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, Module Imports, KDF, and Compact Source Files examples, JFR/AOT/GC notes |
 | 26 | Mar 2026 | [`java26`](src/main/java/net/jrodolfo/java_evolution/java26/README.md) | HTTP/3 notes, Final Field restrictions, Applet API removal, AOT Object Caching, G1, PEM/Structured Concurrency/Lazy Constants/Vector/Primitive Patterns notes |
 
 ## How To Study This Repository

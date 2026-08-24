@@ -48,11 +48,11 @@ This makes public top-level types from packages exported by `java.base`, such as
 
 This is useful for learning, scripts, and code that naturally uses a broad module surface. The feature was previewed in Java 23 by JEP 476, previewed again in Java 24 by JEP 494, and finalized in Java 25 by JEP 511.
 
-This is a final Java 25 feature documented via notes because module imports are most natural in small source files, scripts, and examples outside this Spring Boot-based Maven reference project's ordinary package tree.
+This is a final Java 25 feature demonstrated with temporary source files, `javac`, and the JDK `java` launcher. Module import syntax stays out of the ordinary Maven source tree because it belongs naturally to small source files, scripts, and learning examples.
 
-Example: `ModuleImportDeclarationsNotes`
+Example: `ModuleImportDeclarationsExamples`
 
-Test: `ModuleImportDeclarationsNotesTest`
+Test: `ModuleImportDeclarationsExamplesTest`
 
 ## Compact Source Files and Instance Main Methods Final
 
@@ -187,13 +187,13 @@ These are important, but they are not ideal for tiny deterministic unit tests, s
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for module imports, primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, `vector_api/README.md`, AOT, JFR, object headers, and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, `vector_api/README.md`, AOT, JFR, object headers, and GC behavior.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
-mvn -Dtest=ModuleImportDeclarationsNotesTest,CompactSourceFilesExamplesTest test
+mvn -Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest test
 mvn -Dtest=HkdfKeyDerivationExampleTest test
 mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewNotesTest,PemEncodingsPreviewNotesTest test
 mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNotesTest test

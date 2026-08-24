@@ -44,7 +44,7 @@ public class ModuleImportDeclarationsPreviewNotes {
 	 * @return a short next-step note
 	 */
 	public String nextStep() {
-		return "read ModuleImportDeclarationsNotes in Java 25 for the final feature explanation";
+		return "run ModuleImportDeclarationsExamples in Java 25 for the final executable feature demonstration";
 	}
 
 	/**
