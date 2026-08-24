@@ -158,11 +158,11 @@ Test: `PemEncodingsPreviewExamplesTest`
 
 Structured concurrency continued as a fifth preview in Java 25. It keeps the focus on treating related concurrent subtasks as one observable unit of work.
 
-Because this is still a preview API, the repository explains the model and lifecycle without turning the main build into a preview API exercise.
+Because this is still a preview API, the main Maven build does not import `StructuredTaskScope` directly. `StructuredConcurrencyFifthPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
 
-Explanatory module: [`structured_concurrency`](structured_concurrency/README.md)
+Executable preview module: [`structured_concurrency`](structured_concurrency/README.md)
 
-Test: `StructuredConcurrencyFifthPreviewNotesTest`
+Test: `StructuredConcurrencyFifthPreviewExamplesTest`
 
 ## Vector API Tenth Incubator
 
@@ -189,7 +189,7 @@ Some of these remain notes because they involve memory layout or garbage-collect
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for Stable Values, PEM encodings, the Vector API, AOT command-line ergonomics, and JFR method timing/tracing. Read the notes for primitive patterns, `structured_concurrency/README.md`, object headers, and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for Stable Values, PEM encodings, structured concurrency, the Vector API, AOT command-line ergonomics, and JFR method timing/tracing. Read the notes for primitive patterns, object headers, and GC behavior.
 
 Run the focused tests:
 
@@ -198,7 +198,7 @@ mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
 mvn -Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest test
 mvn -Dtest=HkdfKeyDerivationExampleTest test
 mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewExamplesTest,PemEncodingsPreviewExamplesTest test
-mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorExamplesTest test
+mvn -Dtest=StructuredConcurrencyFifthPreviewExamplesTest,VectorApiTenthIncubatorExamplesTest test
 mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
 ```
 

@@ -2,7 +2,9 @@
 
 Java 25 continued Structured Concurrency as a fifth preview in JEP 505.
 
-This is an explanatory learning module. It does not compile a `StructuredTaskScope` example as part of the Maven build because the API is preview in Java 25 and requires preview compiler/runtime options.
+This module is an executable preview example. The main Maven build does not compile `StructuredTaskScope` directly. Instead, `StructuredConcurrencyFifthPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
+
+That keeps the repository build stable while still demonstrating the real Java 25 preview API.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -136,7 +138,7 @@ close scope
 
 The `try` block matters because the scope is closed at the end. The scope gives the subtasks a bounded lifetime.
 
-## 6. Why This Repository Uses Notes
+## 6. How This Repository Runs The Preview API
 
 Structured Concurrency is preview in Java 25.
 
@@ -149,18 +151,21 @@ java --enable-preview Main
 
 This repository keeps the normal Maven build free of preview compilation. That makes the project easier to run consistently while still documenting the preview feature accurately.
 
+That is why this module uses a child process. The repository class itself remains ordinary Java 25-compatible code, while the generated child program imports and executes `java.util.concurrent.StructuredTaskScope`.
+
 ## 7. What The Test Proves
 
-`StructuredConcurrencyFifthPreviewNotesTest` does not test the preview API.
+`StructuredConcurrencyFifthPreviewExamplesTest` tests the preview API through a child compiler and child JVM.
 
-Instead, it protects the learning note. The test verifies that the note explains:
+The test verifies that:
 
-- the scattered-subtask problem
-- the common `ExecutorService`/`Future` alternative
-- the Java 25 `StructuredTaskScope` idea
-- the fifth-preview status and `--enable-preview` requirement
+- a successful scope can fork related subtasks, join them, and read successful results
+- `Subtask.state()` exposes successful completion
+- `Joiner.awaitAllSuccessfulOrThrow()` reports failed subtasks at the scope boundary
+- `StructuredTaskScope.FailedException` wraps the failed subtask cause
+- the preview API remains isolated from the main Maven build
 
-That is the meaningful test boundary for this C2 explanatory module.
+The test does not make cancellation timing the central assertion. It proves deterministic scope success and failure semantics, not scheduler timing.
 
 ## 8. Realistic Use Case
 
