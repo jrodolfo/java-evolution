@@ -246,7 +246,7 @@ Start here depending on what you need:
 | 15 | Sep 2020 | [`java15`](src/main/java/net/jrodolfo/java_evolution/java15/README.md) | Text Blocks final, Sealed Classes preview, Hidden Classes example |
 | 16 | Mar 2021 | [`java16`](src/main/java/net/jrodolfo/java_evolution/java16/README.md) | Records final, Pattern Matching for `instanceof` final, `Stream.toList`, Unix-domain socket example |
 | 17 | Sep 2021 | [`java17`](src/main/java/net/jrodolfo/java_evolution/java17/README.md) | Sealed Classes final, Pattern Matching for switch preview, Random Generator API, `HexFormat`, Strong Encapsulation explanatory module |
-| 18 | Mar 2022 | [`java18`](src/main/java/net/jrodolfo/java_evolution/java18/README.md) | UTF-8 default charset, Simple Web Server example, JavaDoc snippets example, Internet-Address Resolution SPI explanatory module |
+| 18 | Mar 2022 | [`java18`](src/main/java/net/jrodolfo/java_evolution/java18/README.md) | UTF-8 default charset, Simple Web Server example, JavaDoc snippets example, Internet-Address Resolution SPI example |
 | 19 | Sep 2022 | [`java19`](src/main/java/net/jrodolfo/java_evolution/java19/README.md) | Virtual Threads preview, Record Patterns preview, Pattern Matching switch preview, Structured Concurrency notes, FFM notes |
 | 20 | Mar 2023 | [`java20`](src/main/java/net/jrodolfo/java_evolution/java20/README.md) | Record Patterns second preview, Pattern Matching switch fourth preview, Scoped Values/Structured Concurrency/FFM/Vector notes |
 | 21 | Sep 2023 | [`java21`](src/main/java/net/jrodolfo/java_evolution/java21/README.md) | Virtual Threads final, Record Patterns final, Pattern Matching for switch final, Sequenced Collections, KEM example |

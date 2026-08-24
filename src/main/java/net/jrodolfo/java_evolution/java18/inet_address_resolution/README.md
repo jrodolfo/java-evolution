@@ -2,10 +2,11 @@
 
 Java 18 introduced the Internet-Address Resolution SPI in JEP 418.
 
-This is an explanatory module rather than a live networking implementation. A
-resolver provider can affect how `InetAddress` turns host names into network
-addresses, so installing one during ordinary tests would change the behavior of
-the whole running process.
+This module uses an executable child-JVM example. A resolver provider can affect
+how `InetAddress` turns host names into network addresses for the whole running
+process, so the Maven test JVM does not install one. Instead, the example
+generates a tiny provider, registers it through `META-INF/services`, and runs a
+separate Java process to observe the behavior safely.
 
 ## The problem
 
@@ -61,22 +62,32 @@ This is different from calling a helper method such as
 integration point for the networking runtime, which is why its scope and
 lifecycle matter.
 
-## Why this repository does not install one
+## Why this repository isolates the provider
 
-The repository deliberately avoids a live provider example. Installing a
-resolver provider can affect unrelated tests that resolve host names, and the
-result can depend on service configuration, class-path or module-path layout,
-and the environment in which Maven is running.
+The repository deliberately avoids installing a resolver provider in the Maven
+test JVM. Installing a provider can affect unrelated tests that resolve host
+names, and the result can depend on service configuration, class-path or
+module-path layout, and the environment in which Maven is running.
 
 That would make a small Java 18 lesson responsible for changing process-wide
 network behavior. It would also make failures difficult to attribute: a test
 could fail because of the provider rather than because of the feature being
 studied.
 
-The notes class therefore records the problem, the extension point, and the
-project decision. The test checks that those explanations remain present; it
-does not pretend to test a provider that the project intentionally does not
-install.
+`InetAddressResolutionExamples` solves this by creating the provider in a
+temporary classpath and launching a child JVM. The child process resolves
+`demo.internal` to `10.0.0.42` and rejects `outside.internal` without using real
+DNS.
+
+## What the example shows
+
+The executable example demonstrates:
+
+- an `InetAddressResolverProvider` implementation
+- an `InetAddressResolver` with forward and reverse lookup methods
+- service discovery through `META-INF/services/java.net.spi.InetAddressResolverProvider`
+- `InetAddress.getByName("demo.internal")` using the custom provider
+- deterministic rejection of an unsupported host name
 
 ## Realistic use cases
 
@@ -98,7 +109,7 @@ specialized environments, not a requirement for normal host-name lookups.
 The Internet-Address Resolution SPI lets a specialized provider participate in
 the name-resolution work used by `InetAddress`. It solves a customization
 problem, but because that customization can affect the whole process, this
-repository explains the design without installing a live provider.
+repository demonstrates it only in an isolated child JVM.
 
 ## References
 

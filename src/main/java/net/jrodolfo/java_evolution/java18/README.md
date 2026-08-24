@@ -66,24 +66,24 @@ Before Java 18, applications that needed custom host-name resolution had limited
 
 Java 18 introduced a service-provider interface for `InetAddress` resolution. This is mostly useful for libraries, platforms, and specialized runtime environments.
 
-This repository keeps the feature as an explanatory module because installing a resolver provider changes process-wide networking behavior. Read the [`inet_address_resolution`](inet_address_resolution/README.md) module for the terminology, provider-discovery model, realistic use cases, and the reason no live provider is installed.
+This module demonstrates the feature in a child JVM because installing a resolver provider changes process-wide networking behavior. The example builds a tiny provider, registers it through `META-INF/services`, and resolves a fake host without using real DNS.
 
-Notes: `InetAddressResolutionNotes`
+Executable module: [`inet_address_resolution`](inet_address_resolution/README.md)
 
-Documentation test: `InetAddressResolutionNotesTest`
+Test: `InetAddressResolutionExamplesTest`
 
 ## How To Read This Package
 
-Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `simple_web_server/README.md` before `SimpleStaticFileServer`. For documentation snippets, read `javadoc_snippets/README.md`, inspect `JavaDocSnippetExamples`, and generate the JavaDoc site. After that, read `inet_address_resolution/README.md` before `InetAddressResolutionNotes`.
+Start with `Utf8DefaultCharsetExamples` because UTF-8 by default changes a common portability assumption. Then read `simple_web_server/README.md` before `SimpleStaticFileServer`. For documentation snippets, read `javadoc_snippets/README.md`, inspect `JavaDocSnippetExamples`, and generate the JavaDoc site. After that, read `inet_address_resolution/README.md` before running `InetAddressResolutionExamples`.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=Utf8DefaultCharsetExamplesTest test
-mvn -Dtest=SimpleStaticFileServerTest,JavaDocSnippetExamplesTest,InetAddressResolutionNotesTest test
+mvn -Dtest=SimpleStaticFileServerTest,JavaDocSnippetExamplesTest,InetAddressResolutionExamplesTest test
 ```
 
-This package now includes executable tooling and documentation examples plus notes for service-provider behavior. After this package, continue with Java 19 for the first previews of virtual threads and record patterns.
+This package now includes executable tooling, documentation, and child-JVM service-provider examples. After this package, continue with Java 19 for the first previews of virtual threads and record patterns.
 
 ## References
 
