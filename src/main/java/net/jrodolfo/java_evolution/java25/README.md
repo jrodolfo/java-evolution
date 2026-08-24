@@ -116,11 +116,13 @@ if (value instanceof byte b) {
 
 That matters because primitive casts can silently lose information. A primitive pattern combines the safety check and the binding step.
 
-Because this is a preview feature, real code must be compiled and run with preview features enabled.
+Because this is a preview feature, the main Maven build does not compile the syntax directly. `PrimitivePatternsThirdPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
 
-Example: `PrimitivePatternsThirdPreviewNotes`
+The child program demonstrates `instanceof` primitive patterns, primitive `switch` patterns, and a guarded primitive pattern. The test verifies safe-conversion behavior, not future final syntax.
 
-Test: `PrimitivePatternsThirdPreviewNotesTest`
+Example: `PrimitivePatternsThirdPreviewExamples`
+
+Test: `PrimitivePatternsThirdPreviewExamplesTest`
 
 ## Stable Values Preview
 
@@ -189,7 +191,7 @@ Some of these remain notes because they involve memory layout or garbage-collect
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for Stable Values, PEM encodings, structured concurrency, the Vector API, AOT command-line ergonomics, and JFR method timing/tracing. Read the notes for primitive patterns, object headers, and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for primitive patterns, Stable Values, PEM encodings, structured concurrency, the Vector API, AOT command-line ergonomics, and JFR method timing/tracing. Read the notes for object headers and GC behavior.
 
 Run the focused tests:
 
@@ -197,7 +199,7 @@ Run the focused tests:
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
 mvn -Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest test
 mvn -Dtest=HkdfKeyDerivationExampleTest test
-mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewExamplesTest,PemEncodingsPreviewExamplesTest test
+mvn -Dtest=PrimitivePatternsThirdPreviewExamplesTest,StableValuesPreviewExamplesTest,PemEncodingsPreviewExamplesTest test
 mvn -Dtest=StructuredConcurrencyFifthPreviewExamplesTest,VectorApiTenthIncubatorExamplesTest test
 mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
 ```

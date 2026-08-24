@@ -204,6 +204,7 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java25/CompactSourceFilesExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/key_derivation/HkdfKeyDerivationExample.java`
+- `src/main/java/net/jrodolfo/java_evolution/java25/PrimitivePatternsThirdPreviewExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/stable_values/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/stable_values/StableValuesPreviewExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/structured_concurrency/README.md`
@@ -217,7 +218,7 @@ Run:
 mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest" test
 mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
 mvn "-Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest,HkdfKeyDerivationExampleTest" test
-mvn "-Dtest=StableValuesPreviewExamplesTest,StructuredConcurrencyFifthPreviewExamplesTest,VectorApiTenthIncubatorExamplesTest" test
+mvn "-Dtest=PrimitivePatternsThirdPreviewExamplesTest,StableValuesPreviewExamplesTest,StructuredConcurrencyFifthPreviewExamplesTest,VectorApiTenthIncubatorExamplesTest" test
 ```
 
 Interview angle: explain Java 25 as an LTS baseline where several features become final, while preview, incubator, runtime, tooling, and security topics still require maturity discipline.

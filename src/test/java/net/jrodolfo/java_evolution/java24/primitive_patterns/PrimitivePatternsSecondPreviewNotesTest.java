@@ -50,7 +50,7 @@ class PrimitivePatternsSecondPreviewNotesTest {
 				.contains("third preview");
 		assertThat(nextStep)
 				.as("The Java 24 bridge note should point to the next Java 25 preview")
-				.contains("PrimitivePatternsThirdPreviewNotes")
+				.contains("PrimitivePatternsThirdPreviewExamples")
 				.contains("still preview");
 	}
 }

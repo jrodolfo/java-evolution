@@ -41,6 +41,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 25 Stable Values from notes-only material into an executable child-JVM preview API example.
 - Converted Java 25 Vector API from notes-only material into an executable child-JVM incubator-module example.
 - Converted Java 25 Structured Concurrency from notes-only material into an executable child-JVM preview API example.
+- Converted Java 25 Primitive Patterns from notes-only material into an executable child-JVM preview syntax example.
 
 ## v1.4.1
 
