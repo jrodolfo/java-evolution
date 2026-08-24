@@ -1,10 +1,10 @@
 /**
- * Explains Java 25 Compact Object Headers.
+ * Demonstrates the Java 25 Compact Object Headers runtime option.
  *
  * <p>
- * This package documents the object-header, payload, memory-footprint, and JVM
- * option concepts behind JEP 519. See the package README for the detailed
- * runtime memory-layout explanation.
+ * This package verifies the product JVM flag introduced by JEP 519 while keeping
+ * object-size and heap-footprint measurement as explicit runtime-analysis
+ * caveats. See the package README for the memory-layout background.
  * </p>
  */
 package net.jrodolfo.java_evolution.java25.compact_object_headers;

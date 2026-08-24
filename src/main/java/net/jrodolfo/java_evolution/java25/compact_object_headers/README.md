@@ -2,7 +2,9 @@
 
 Java 25 introduced Compact Object Headers as a product feature in JEP 519.
 
-This is an explanatory learning module. It does not try to prove object layout with a unit test because object headers are JVM implementation details. A useful demonstration would require runtime flags, heap measurements, and object-layout tooling rather than ordinary Java source code.
+This is an executable runtime-option example. It launches a child JVM with `-XX:+UseCompactObjectHeaders` and verifies that Java 25 reports the option as enabled through `-XX:+PrintFlagsFinal`.
+
+The example deliberately does not try to prove object-layout savings. Object headers are JVM implementation details, and meaningful memory savings require heap measurements and object-layout tooling against a real workload.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -114,31 +116,36 @@ Lower heap usage can also reduce pressure on the garbage collector. If objects o
 
 The exact benefit depends on the application, object graph, JVM configuration, and workload.
 
-## 6. Why This Repository Uses Notes
+## 6. What The Example Shows
 
 Object headers are not visible through normal Java syntax.
 
-A faithful demonstration would need tooling such as:
+`CompactObjectHeadersExamples` shows the part of the feature that is faithful and portable in this repository:
 
-- JVM command-line flags
+- Java 25 accepts `-XX:+UseCompactObjectHeaders` as a product JVM option
+- the option does not require `-XX:+UnlockExperimentalVMOptions`
+- `-XX:+PrintFlagsFinal` exposes the selected `UseCompactObjectHeaders` state
+- the option can be explicitly enabled or disabled for a child JVM
+
+The example intentionally stops at the runtime-option boundary. Proving that objects are smaller would need tooling such as:
+
 - heap measurements
 - object-layout inspection tools
 - before/after application runs
 - garbage-collection and memory analysis
 
-A normal JUnit test can verify that a note says the right thing, but it cannot portably prove that object headers became smaller in a meaningful application.
+A normal JUnit test can verify that the JVM accepts and reports the option, but it cannot portably prove that object headers became smaller in a meaningful application.
 
 ## 7. What The Test Proves
 
-`CompactObjectHeadersNotesTest` does not inspect JVM object layout.
+`CompactObjectHeadersExamplesTest` does not inspect JVM object layout.
 
-Instead, it verifies that the notes preserve the important learning points:
+Instead, it verifies the executable learning points:
 
-- every Java object has metadata beyond its visible fields
-- compact object headers target memory footprint
-- Java 25 made the feature a product feature
-- the feature is enabled with `-XX:+UseCompactObjectHeaders`
-- it is not enabled by default in Java 25
+- a child JVM starts successfully with `-XX:+UseCompactObjectHeaders`
+- `PrintFlagsFinal` reports `UseCompactObjectHeaders = true` when enabled
+- `PrintFlagsFinal` reports `UseCompactObjectHeaders = false` when disabled
+- the example explains that object-size and heap-footprint savings require separate measurement
 
 ## 8. Realistic Use Case
 

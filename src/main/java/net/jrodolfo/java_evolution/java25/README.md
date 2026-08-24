@@ -187,11 +187,11 @@ Java 25 also includes several features that are better understood as runtime or 
 - compact object headers: [`compact_object_headers`](compact_object_headers/README.md)
 - Generational Shenandoah: [`generational_shenandoah`](generational_shenandoah/README.md)
 
-Some of these remain notes because they involve memory layout or garbage-collector policy. The AOT command-line module is executable as a real cache workflow, and the JFR module demonstrates method timing and tracing through a real `.jfr` recording while keeping CPU-time profiling and cooperative sampling as explanatory runtime context.
+Some of these remain notes because they involve garbage-collector policy. The AOT command-line module is executable as a real cache workflow, the JFR module demonstrates method timing and tracing through a real `.jfr` recording, and the compact-object-headers module verifies the Java 25 JVM option boundary while leaving object-layout measurement as a runtime-analysis caveat.
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for primitive patterns, Stable Values, PEM encodings, structured concurrency, the Vector API, AOT command-line ergonomics, and JFR method timing/tracing. Read the notes for object headers and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for primitive patterns, Stable Values, PEM encodings, structured concurrency, the Vector API, AOT command-line ergonomics, JFR method timing/tracing, and compact object headers. Read the notes for GC behavior.
 
 Run the focused tests:
 
@@ -201,7 +201,7 @@ mvn -Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest t
 mvn -Dtest=HkdfKeyDerivationExampleTest test
 mvn -Dtest=PrimitivePatternsThirdPreviewExamplesTest,StableValuesPreviewExamplesTest,PemEncodingsPreviewExamplesTest test
 mvn -Dtest=StructuredConcurrencyFifthPreviewExamplesTest,VectorApiTenthIncubatorExamplesTest test
-mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
+mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersExamplesTest,GenerationalShenandoahNotesTest test
 ```
 
 After Java 25, continue to `java26/README.md` for notes-only current-release material under the JDK 25 build baseline. Use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.
