@@ -4,7 +4,7 @@ Released: September 2024 as Java SE 23.
 
 Java 23 is mostly a preview and refinement release. That makes it valuable for learning because it shows how Java features mature: ideas appear as previews, receive feedback, and may become final in later releases.
 
-This package uses notes classes for most Java 23 features because many of them were preview APIs, runtime behavior, or VM features rather than small stable APIs that fit cleanly into unit tests. Markdown documentation comments are represented with an executable tooling example that runs JavaDoc in a child process.
+This package uses notes classes for most Java 23 features because many of them were preview APIs, runtime behavior, or VM features rather than small stable APIs that fit cleanly into unit tests. Markdown documentation comments are represented with an executable tooling example that runs JavaDoc in a child process, and Unsafe memory-access deprecation is represented as an executable migration-boundary example.
 
 ## Markdown Documentation Comments
 
@@ -106,11 +106,11 @@ Test: `StructuredConcurrencyThirdPreviewNotesTest`
 
 Some libraries historically used `sun.misc.Unsafe` for low-level memory access. Those APIs are unsupported and make Java upgrades harder.
 
-Java 23 deprecated memory-access methods in `sun.misc.Unsafe`, continuing the move toward supported APIs such as `VarHandle` and the Foreign Function and Memory API.
+Java 23 deprecated memory-access methods in `sun.misc.Unsafe`, continuing the move toward supported APIs such as `VarHandle` and the Foreign Function and Memory API. This repository demonstrates the migration boundary by compiling generated child source, capturing deprecation-for-removal warnings, and showing runtime denial mode without putting `Unsafe` into the main source tree.
 
-Explanatory module: [`unsafe_memory_access_deprecation`](unsafe_memory_access_deprecation/README.md)
+Executable migration module: [`unsafe_memory_access_deprecation`](unsafe_memory_access_deprecation/README.md)
 
-Test: `UnsafeMemoryAccessDeprecationNotesTest`
+Test: `UnsafeMemoryAccessDeprecationExamplesTest`
 
 ## ZGC Generational Mode
 
@@ -131,7 +131,7 @@ Run the focused notes tests:
 ```bash
 mvn -Dtest=MarkdownDocumentationCommentsExamplesTest,PrimitivePatternsPreviewNotesTest,ModuleImportDeclarationsPreviewNotesTest test
 mvn -Dtest=FlexibleConstructorBodiesSecondPreviewNotesTest,StreamGatherersSecondPreviewNotesTest,ClassFileApiSecondPreviewNotesTest test
-mvn -Dtest=ScopedValuesThirdPreviewNotesTest,StructuredConcurrencyThirdPreviewNotesTest,UnsafeMemoryAccessDeprecationNotesTest,ZgcGenerationalModeNotesTest test
+mvn -Dtest=ScopedValuesThirdPreviewNotesTest,StructuredConcurrencyThirdPreviewNotesTest,UnsafeMemoryAccessDeprecationExamplesTest,ZgcGenerationalModeNotesTest test
 ```
 
 This package is notes-heavy because many Java 23 topics are preview, runtime, or tooling features. After this package, continue with Java 24 to see stream gatherers and the Class-File API reach final status.

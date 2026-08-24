@@ -44,6 +44,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 25 Primitive Patterns from notes-only material into an executable child-JVM preview syntax example.
 - Converted Java 25 Compact Object Headers from notes-only material into an executable child-JVM runtime option example.
 - Converted Java 2 security policy from notes-only material into an executable permission-model example.
+- Converted Java 23 Unsafe memory-access deprecation from notes-only material into an executable migration-boundary example.
 
 ## v1.4.1
 

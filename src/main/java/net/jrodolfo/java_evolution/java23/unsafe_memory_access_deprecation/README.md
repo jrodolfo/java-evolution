@@ -2,7 +2,9 @@
 
 Java 23 deprecated the memory-access methods in `sun.misc.Unsafe` for removal.
 
-This feature is documented as an explanatory module because the important lesson is migration away from unsupported low-level APIs. A runnable example that uses `Unsafe` would teach the wrong habit for this repository.
+This module is an executable migration-boundary example. It does not put `sun.misc.Unsafe` in the main compiled source tree. Instead, it generates a tiny child source file, compiles it with `javac -Xlint:removal`, and captures the warnings that learners need to recognize during migration work.
+
+It also runs the generated class with `--sun-misc-unsafe-memory-access=deny` to show how a runtime can reject terminally deprecated memory-access operations. A small `VarHandle` example shows the supported replacement direction for ordinary variable access.
 
 ## What Problem Does This Feature Solve?
 
@@ -56,6 +58,38 @@ prefer supported replacements
 
 Java 23 deprecated the memory-access methods in `sun.misc.Unsafe` for removal. This continued Java's long-term move away from unsupported internal APIs and toward standard replacement APIs with clearer compatibility contracts.
 
+## What The Example Demonstrates
+
+`UnsafeMemoryAccessDeprecationExamples` has three executable parts.
+
+First, it generates child source containing selected `sun.misc.Unsafe` memory-access calls:
+
+```text
+objectFieldOffset(...)
+getInt(...)
+```
+
+Those calls are intentionally isolated in generated source. They exist only to capture migration diagnostics.
+
+Second, it compiles that source with:
+
+```bash
+javac -Xlint:removal ...
+```
+
+The test verifies the compiler warnings:
+
+- `Unsafe is internal proprietary API`
+- memory-access methods are `deprecated and marked for removal`
+
+Third, it runs the compiled probe with:
+
+```bash
+java --sun-misc-unsafe-memory-access=deny ...
+```
+
+The test verifies that the runtime rejects the denied memory-access operation with `UnsupportedOperationException`.
+
 ## Replacement Directions
 
 The right replacement depends on why the code used `Unsafe`.
@@ -66,11 +100,15 @@ The right replacement depends on why the code used `Unsafe`.
 
 The replacement is not a mechanical rename. It is a design decision based on the original use case.
 
-## Why This Module Has No Unsafe Demo
+This module includes a tiny `VarHandle` example because it is a good replacement direction for supported variable access.
 
-This repository is educational. Showing learners how to call deprecated low-level memory-access methods would distract from the Java 23 lesson.
+## Why Unsafe Code Is Isolated
 
-The goal is to understand why Java is steering code away from `Unsafe`, not to normalize new usage of it.
+This repository is educational. Showing `Unsafe` as ordinary application code would distract from the Java 23 lesson.
+
+The generated child source is a negative example. It is present so the tests can show real compiler and runtime warnings, not so learners copy it into new code.
+
+The goal is to understand why Java is steering code away from `Unsafe`, how the migration warnings look, and why supported APIs should be preferred.
 
 ## Remember This
 
