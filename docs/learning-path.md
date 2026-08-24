@@ -243,7 +243,7 @@ Java 24:
 Run:
 
 ```bash
-mvn "-Dtest=StreamGatherersExamplesTest,ClassFileInspectorTest,SecurityManagerDisabledNotesTest" test
+mvn "-Dtest=StreamGatherersExamplesTest,ClassFileInspectorTest,SecurityManagerDisabledExamplesTest" test
 mvn "-Dtest=ModuleLatticeCryptoExamplesTest" test
 mvn "-Dtest=VirtualThreadSynchronizationNotesTest,AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest" test
 mvn "-Dtest=FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest,PrimitivePatternsSecondPreviewNotesTest" test

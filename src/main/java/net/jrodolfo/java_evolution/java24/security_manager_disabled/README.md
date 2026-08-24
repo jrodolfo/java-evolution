@@ -117,21 +117,28 @@ operating system / container / platform
   controls what each process may access
 ```
 
-## What The Notes Class Shows
+## What The Example Shows
 
-`SecurityManagerDisabledNotes` keeps the important teaching points small:
+`SecurityManagerDisabledExamples` keeps the obsolete API call inside a child Java Virtual Machine (JVM). The Maven test JVM never installs or changes a Security Manager.
 
-- `originalGoal()` explains why the Security Manager existed.
 - `oldModel()` explains the same-JVM sandbox model.
 - `permissionExamples()` names actions that could be checked.
 - `java24Impact()` states the Java 24 change.
 - `modernIsolationAdvice()` points to the replacement mental model.
+- `runSecurityManagerProbe(...)` source-launches a small Java program that tries to call `System.setSecurityManager(new SecurityManager())`.
 
-The class is intentionally not a runnable sandbox demo. A fake sandbox demo would be misleading because Java 24 permanently disabled this mechanism.
+The child process prints the actual runtime result:
+
+```text
+thrown=java.lang.UnsupportedOperationException
+message=Setting a Security Manager is not supported
+```
+
+The source-launcher output also shows the removal warnings for `SecurityManager` and `System.setSecurityManager(...)`. That makes the migration path visible without pretending the old sandbox still works.
 
 ## What The Test Proves
 
-`SecurityManagerDisabledNotesTest` protects the educational note.
+`SecurityManagerDisabledExamplesTest` protects both the runtime behavior and the educational explanation.
 
 It checks that the note still explains:
 
@@ -141,8 +148,10 @@ It checks that the note still explains:
 - sensitive actions such as file and network access
 - permanent disablement in Java 24
 - modern isolation through operating systems, containers, processes, and deployment boundaries
+- child-JVM output showing `UnsupportedOperationException`
+- source-launcher warnings that the old API is deprecated and marked for removal
 
-The test does not prove runtime sandbox behavior because that behavior is precisely what Java 24 removed.
+The test does not install a Security Manager in the parent Maven JVM. That global mutation would be the wrong kind of example for a shared test suite.
 
 ## Realistic Use Case
 

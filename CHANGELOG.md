@@ -30,6 +30,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 17 strong encapsulation from notes-only material into an executable child-JVM access-boundary example.
 - Converted Java 2 `strictfp` from notes-only material into an executable example that also captures the Java 17+ compiler warning.
 - Converted Java 6 Console API from notes-only material into an executable boundary example with deterministic fake-console tests.
+- Converted Java 24 Security Manager disablement from notes-only material into an executable child-JVM runtime example.
 
 ## v1.4.1
 

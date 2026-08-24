@@ -40,9 +40,9 @@ Executable test: `ClassFileInspectorTest`
 
 The Security Manager was Java's old in-process sandboxing mechanism. Java 24 permanently disabled it, reinforcing that strong isolation belongs at operating-system, container, process, and deployment boundaries.
 
-Explanatory module: [`security_manager_disabled`](security_manager_disabled/README.md)
+Executable runtime module: [`security_manager_disabled`](security_manager_disabled/README.md)
 
-Test: `SecurityManagerDisabledNotesTest`
+Test: `SecurityManagerDisabledExamplesTest`
 
 ## Virtual Thread Synchronization
 
@@ -101,13 +101,13 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then read `security_manager_disabled/README.md`, `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `key_derivation/README.md`, `flexible_constructor_bodies/README.md`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then run the child-JVM security-manager example in `security_manager_disabled/README.md`, and read `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `key_derivation/README.md`, `flexible_constructor_bodies/README.md`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=StreamGatherersExamplesTest test
-mvn -Dtest=ClassFileInspectorTest,SecurityManagerDisabledNotesTest,VirtualThreadSynchronizationNotesTest test
+mvn -Dtest=ClassFileInspectorTest,SecurityManagerDisabledExamplesTest,VirtualThreadSynchronizationNotesTest test
 mvn -Dtest=AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest test
 mvn -Dtest=ModuleLatticeCryptoExamplesTest test
 mvn -Dtest=PrimitivePatternsSecondPreviewNotesTest,FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest test
