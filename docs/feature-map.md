@@ -30,7 +30,7 @@ Learning notes: [java02 README](../src/main/java/net/jrodolfo/java_evolution/jav
 |---|---|---|
 | Collections Framework | `CollectionsFrameworkExamples` | `CollectionsFrameworkExamplesTest` |
 | Sorting with `Comparable` and `Comparator` | `SortingExamples` | `SortingExamplesTest` |
-| `strictfp` | [`strict_floating_point/StrictFloatingPointNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointNotes.java) | [`StrictFloatingPointNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointNotesTest.java) |
+| `strictfp` | [`strict_floating_point/StrictFloatingPointExamples`](../src/main/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointExamples.java) | [`StrictFloatingPointExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointExamplesTest.java) |
 | Swing | [`swing/SwingExamples`](../src/main/java/net/jrodolfo/java_evolution/java02/swing/SwingExamples.java) | [`SwingExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/swing/SwingExamplesTest.java) |
 | Java 2D | [`java2d/Java2DExamples`](../src/main/java/net/jrodolfo/java_evolution/java02/java2d/Java2DExamples.java) | [`Java2DExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/java2d/Java2DExamplesTest.java) |
 | Security policy | [`security/SecurityPolicyNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyNotes.java) | [`SecurityPolicyNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyNotesTest.java) |

@@ -4,7 +4,7 @@ Released: December 1998 as J2SE 1.2.
 
 Java 2, also known as J2SE 1.2, was a major platform release. It introduced the Collections Framework, Swing, Java 2D, a stronger security-policy model, and the `strictfp` modifier.
 
-This package focuses executable examples on the Collections Framework, sorting, headless Swing concepts, and headless Java 2D rendering because they remain foundational and can be demonstrated faithfully. GUI windows, floating-point-history, and security-policy topics are represented as explanatory material.
+This package focuses executable examples on the Collections Framework, sorting, `strictfp`, headless Swing concepts, and headless Java 2D rendering because they remain foundational and can be demonstrated faithfully. GUI windows and security-policy topics are represented as explanatory material.
 
 ## Collections Framework
 
@@ -24,11 +24,11 @@ Test: `SortingExamplesTest`
 
 ## strictfp
 
-Java 2 added `strictfp` for strict floating-point semantics. Java 17 later restored always-strict floating point, so the historical behavior is better explained than unit-tested.
+Java 2 added `strictfp` for strict floating-point semantics. Java 17 later restored always-strict floating point, so this module demonstrates the modifier and the modern compiler warning without pretending to reproduce the old hardware-dependent behavior.
 
-Explanatory module: [`strict_floating_point`](strict_floating_point/README.md)
+Example module: [`strict_floating_point`](strict_floating_point/README.md)
 
-Test: `StrictFloatingPointNotesTest`
+Test: `StrictFloatingPointExamplesTest`
 
 ## Swing
 
@@ -62,7 +62,7 @@ Run the focused tests:
 
 ```bash
 mvn -Dtest=CollectionsFrameworkExamplesTest,SortingExamplesTest test
-mvn -Dtest=Java2DExamplesTest,StrictFloatingPointNotesTest,SwingExamplesTest,SecurityPolicyNotesTest test
+mvn -Dtest=Java2DExamplesTest,StrictFloatingPointExamplesTest,SwingExamplesTest,SecurityPolicyNotesTest test
 ```
 
 After this package, continue with Java 3 for dynamic proxies, timers, shutdown hooks, JNDI, and legacy integration notes.
