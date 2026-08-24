@@ -2,7 +2,7 @@
 
 Java 6 added `java.io.Console`.
 
-This is an explanatory learning module. It does not call `System.console()` as a required test fixture because Maven, IDEs, CI jobs, background processes, and redirected streams commonly have no attached console.
+This module uses an executable boundary example. It calls `System.console()` only to detect whether this process has an attached console, then keeps the command-line behavior behind a small testable interface. Maven, IDEs, CI jobs, background processes, and redirected streams commonly have no attached console, so the tests do not require one.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -23,11 +23,15 @@ The API provides:
 - console writers
 - `readPassword(...)`, which disables echoing where a real console is available
 
-## 3. Why This Repository Uses Notes
+## 3. What Does The Example Show?
 
-`System.console()` may return `null`.
+`ConsoleApiExamples` demonstrates three practical lessons:
 
-That is normal when a Java program is launched without an interactive terminal. A Maven test that expects a console would fail for reasons unrelated to Java 6.
+- `System.console()` may return `null`.
+- Console logic should sit at the process boundary so application behavior remains testable.
+- Passwords should be read as `char[]` and cleared after use.
+
+The tests use a fake console session for line input, formatted output, and password handling. That keeps the example deterministic while still teaching the shape of the Java 6 API.
 
 ## 4. Remember This
 
