@@ -2,7 +2,9 @@
 
 Java 20 continued the Vector API as a fifth incubator feature in Java Enhancement Proposal (JEP) 438.
 
-This module is explanatory because the Java 20 API required the `jdk.incubator.vector` module. The later Java 25 module contains the fuller incubator learning guide.
+This module is an executable incubator-module example. The main Maven build does not import `jdk.incubator.vector` directly. Instead, `VectorApiFifthIncubatorExamples` writes a small child source file, compiles it with `javac --add-modules jdk.incubator.vector --release 20`, and runs it with `java --add-modules jdk.incubator.vector`.
+
+The later Java 25 module contains the fuller tenth-incubator learning guide.
 
 For recurring acronyms, see the [project glossary](../../../../../../../../docs/glossary.md).
 
@@ -95,18 +97,25 @@ Single Instruction, Multiple Data. One instruction performs the same operation a
 
 An API shipped in the JDK for experimentation and feedback before it becomes a permanent Java SE API. Incubator APIs can change and require explicit modules.
 
-## Why This Module Has Notes Instead Of Java 20 Code
+## Why This Module Uses Child Java 20 Code
 
 The Java 20 Vector API lived in the `jdk.incubator.vector` module.
 
-Using it directly would require special compile and runtime options such as:
+A real Vector API example uses types from that incubator module:
+
+```java
+import jdk.incubator.vector.IntVector;
+import jdk.incubator.vector.VectorSpecies;
+```
+
+Using it requires special compile and runtime options:
 
 ```bash
-javac --add-modules jdk.incubator.vector ...
+javac --add-modules jdk.incubator.vector --release 20 ...
 java --add-modules jdk.incubator.vector ...
 ```
 
-That is not a good fit for this repository's default Maven build. It would make the project harder to run for a historical incubator API shape.
+That is why this module uses a child process. The repository class itself remains ordinary JDK 25-compatible code, while the generated child program imports and executes `jdk.incubator.vector` as Java 20-targeted bytecode.
 
 The later learning module is here:
 
@@ -114,23 +123,31 @@ The later learning module is here:
 src/main/java/net/jrodolfo/java_evolution/java25/vector_api/README.md
 ```
 
-This Java 20 module explains the fifth incubator step and the problem the feature was trying to solve.
+This Java 20 module stays intentionally small: it demonstrates one lane-wise vector addition, scalar tail handling, and the fifth-incubator module boundary. Java 25 carries the fuller later-incubator guide.
 
 ## What The Test Proves
 
-`VectorApiFifthIncubatorNotesTest` protects the Java 20 explanation.
+`VectorApiFifthIncubatorExamplesTest` exercises the real incubator API through a child compiler and child JVM.
 
-It checks that the notes preserve:
+It checks that:
+
+- the generated source compiles with `--release 20`
+- the generated class has Java 20 class-file version 64
+- the child JVM runs only with `jdk.incubator.vector` added
+- fixed-width vector addition works for four lanes
+- scalar tail handling covers the fifth array element
+- the result matches ordinary scalar addition
+
+It also protects the explanation of:
 
 - the scalar-loop problem
 - older reliance on JIT auto-vectorization or native libraries
 - SIMD-style lane-wise computation
 - realistic performance-sensitive use cases
 - Java 20 fifth-incubator status
-- the `jdk.incubator.vector` module reason this stays explanatory
 - the Java 25 continuation module
 
-The test does not execute the Java 20 incubator API because this project avoids old incubator-module setup.
+The test proves API semantics and bytecode targeting. It does not prove that a given CPU instruction was emitted or that vector code is faster on the current machine.
 
 ## Realistic Use Case
 

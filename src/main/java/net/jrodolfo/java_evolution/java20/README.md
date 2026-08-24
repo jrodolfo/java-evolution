@@ -94,22 +94,22 @@ Many CPUs can process multiple values with one vector instruction. Before the Ve
 
 The Vector API gives Java code a way to express vector computations more directly, while still letting the JVM map them to efficient hardware instructions when possible.
 
-This repository keeps the feature as an explanatory module because the API was incubating and requires an incubator module.
+This repository demonstrates the feature with a child Java source file because the API was incubating and requires an incubator module.
 
-Explanatory module: [`vector_api`](vector_api/README.md)
+Example module: [`vector_api`](vector_api/README.md)
 
-Test: `VectorApiFifthIncubatorNotesTest`
+Test: `VectorApiFifthIncubatorExamplesTest`
 
 ## How To Read This Package
 
-Start with `RecordPatternsSecondPreviewExamples` and `PatternMatchingSwitchFourthPreviewExamples` to see the pattern matching work continue. Then read the notes classes for virtual threads and foreign memory. For contextual data, read `scoped_values/README.md` before continuing to the Java 21 and Java 25 scoped-values modules. For parent-child task lifetime, read `structured_concurrency/README.md` before the later structured-concurrency preview modules. For performance-oriented SIMD concepts, read `vector_api/README.md` before the later Vector API incubator module.
+Start with `RecordPatternsSecondPreviewExamples` and `PatternMatchingSwitchFourthPreviewExamples` to see the pattern matching work continue. Then read the notes classes for virtual threads and foreign memory. For contextual data, read `scoped_values/README.md` before continuing to the Java 21 and Java 25 scoped-values modules. For parent-child task lifetime, read `structured_concurrency/README.md` before the later structured-concurrency preview modules. For performance-oriented SIMD concepts, run the `vector_api` example before the later Java 25 Vector API incubator module.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=RecordPatternsSecondPreviewExamplesTest,PatternMatchingSwitchFourthPreviewExamplesTest test
 mvn -Dtest=VirtualThreadsSecondPreviewNotesTest,ScopedValuesIncubatorNotesTest,StructuredConcurrencySecondIncubatorNotesTest test
-mvn -Dtest=ForeignFunctionMemorySecondPreviewNotesTest,VectorApiFifthIncubatorNotesTest test
+mvn -Dtest=ForeignFunctionMemorySecondPreviewNotesTest,VectorApiFifthIncubatorExamplesTest test
 ```
 
 Most Java 20 topics are preview or incubator refinements, so pay attention to status rather than treating every API shape as final. After this package, continue with Java 21, where several of these features become final in an LTS release.

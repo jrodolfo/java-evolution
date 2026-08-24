@@ -46,6 +46,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 2 security policy from notes-only material into an executable permission-model example.
 - Converted Java 23 Unsafe memory-access deprecation from notes-only material into an executable migration-boundary example.
 - Converted Java 23 ZGC generational mode from notes-only material into an executable child-JVM runtime-boundary example.
+- Converted Java 20 Vector API from notes-only material into an executable child-JVM incubator-module example.
 
 ## v1.4.1
 
