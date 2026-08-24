@@ -50,9 +50,9 @@ Virtual threads are most useful when blocking operations do not unnecessarily pi
 
 This matters for existing code because synchronized blocks are common in older libraries.
 
-Explanatory module: [`virtual_thread_synchronization`](virtual_thread_synchronization/README.md)
+Executable runtime module: [`virtual_thread_synchronization`](virtual_thread_synchronization/README.md)
 
-Test: `VirtualThreadSynchronizationNotesTest`
+Test: `VirtualThreadSynchronizationExamplesTest`
 
 ## Quantum-Resistant Crypto
 
@@ -101,13 +101,13 @@ These are represented as notes because the final or later form is covered in Jav
 
 ## How To Read This Package
 
-Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then run the child-JVM security-manager example in `security_manager_disabled/README.md`, and read `virtual_thread_synchronization/README.md`, `aot_class_loading/README.md`, `key_derivation/README.md`, `flexible_constructor_bodies/README.md`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
+Start with `StreamGatherersExamples` because stream gatherers are final in Java 24. For class-file tooling, read `class_file/README.md` before `ClassFileInspector`. Then run the child-JVM runtime examples in `security_manager_disabled/README.md` and `virtual_thread_synchronization/README.md`. Read `aot_class_loading/README.md`, `key_derivation/README.md`, `flexible_constructor_bodies/README.md`, `module_import_declarations/README.md`, `primitive_patterns/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, and the continuing preview notes. For post-quantum cryptography, read `quantum_resistant_crypto/README.md` before the module-lattice examples.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=StreamGatherersExamplesTest test
-mvn -Dtest=ClassFileInspectorTest,SecurityManagerDisabledExamplesTest,VirtualThreadSynchronizationNotesTest test
+mvn -Dtest=ClassFileInspectorTest,SecurityManagerDisabledExamplesTest,VirtualThreadSynchronizationExamplesTest test
 mvn -Dtest=AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest test
 mvn -Dtest=ModuleLatticeCryptoExamplesTest test
 mvn -Dtest=PrimitivePatternsSecondPreviewNotesTest,FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest test

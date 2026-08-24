@@ -2,7 +2,9 @@
 
 Java 24 improved how virtual threads behave when they block while executing synchronized code.
 
-This feature is documented as an explanatory module because the important lesson is a runtime behavior change. A small unit test can check the notes, but it cannot faithfully prove scalability or carrier-thread pinning without turning the repository into a benchmark or runtime diagnostic tool.
+This module is executable. It launches a small child JVM with virtual-thread scheduler parallelism set to `1`, starts many virtual threads that block inside `synchronized` methods, and verifies that another virtual thread can still run to release them.
+
+The example demonstrates a runtime boundary, not a throughput benchmark.
 
 ## What Problem Does This Feature Solve?
 
@@ -63,16 +65,36 @@ Java 24 changed the runtime so virtual threads blocked in synchronized code can 
 
 The practical result is not a new syntax rule. Existing synchronized code can cooperate better with virtual threads, which makes virtual threads easier to use with older libraries and ordinary Java code.
 
-## What This Notes Class Represents
+## What The Example Shows
 
-`VirtualThreadSynchronizationNotes` keeps the learning points small and testable:
+[`VirtualThreadSynchronizationExamples`](VirtualThreadSynchronizationExamples.java) writes and runs a child source file with this JVM property:
 
-- what pinning means
-- why synchronized code matters
-- what Java 24 improved
-- what practical benefit the change provides
+```text
+-Djdk.virtualThreadScheduler.parallelism=1
+```
 
-The unit test verifies those teaching points. It does not benchmark the JVM or attempt to prove carrier-thread scheduling behavior.
+That property limits the virtual-thread scheduler to one carrier thread. The child program then:
+
+- starts many virtual threads
+- lets each one enter a distinct `synchronized` method
+- blocks those virtual threads on a latch
+- starts another virtual thread that must run to release the latch
+- fails if the releaser virtual thread cannot run
+
+On a runtime with the Java 24 improvement, the blocked synchronized virtual threads can release the carrier. The releaser virtual thread can run, release the latch, and let all workers finish.
+
+This is a behavioral boundary. It does not claim a specific speedup.
+
+## What The Test Proves
+
+`VirtualThreadSynchronizationExamplesTest` verifies that:
+
+- the child JVM exits successfully
+- the probe prints a stable success marker
+- the probe ran with scheduler parallelism set to `1`
+- the example still explains pinning, carrier threads, and why synchronized code mattered
+
+The test intentionally does not measure throughput or compare exact timings. Those would depend on machine load, scheduler details, and workload shape.
 
 ## Remember This
 

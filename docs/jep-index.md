@@ -210,7 +210,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 485](https://openjdk.org/jeps/485) | Stream Gatherers | Final |
 | [JEP 484](https://openjdk.org/jeps/484) | Class-File API | Final, Example |
 | [JEP 486](https://openjdk.org/jeps/486) | Permanently Disable the Security Manager | Runtime, Executable Example |
-| [JEP 491](https://openjdk.org/jeps/491) | Synchronize Virtual Threads without Pinning | Runtime, Notes |
+| [JEP 491](https://openjdk.org/jeps/491) | Synchronize Virtual Threads without Pinning | Runtime, Executable Example |
 | [JEP 496](https://openjdk.org/jeps/496) | Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism | Final, Security, Example |
 | [JEP 497](https://openjdk.org/jeps/497) | Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm | Final, Security, Example |
 | [JEP 483](https://openjdk.org/jeps/483) | Ahead-of-Time Class Loading & Linking | Runtime, Notes |
