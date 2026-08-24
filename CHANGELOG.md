@@ -35,6 +35,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 6 scripting support from notes-only material into an executable JSR 223 service-provider example.
 - Converted Java 25 JFR method timing and tracing from notes-only material into an executable recording example, while keeping CPU-time profiling and cooperative sampling as documented runtime caveats.
 - Converted Java 24 virtual-thread synchronization from notes-only material into an executable child-JVM scheduler-boundary example.
+- Converted Java 25 AOT command-line ergonomics from notes-only material into an executable child-JVM cache workflow example.
 
 ## v1.4.1
 

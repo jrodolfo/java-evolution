@@ -183,11 +183,11 @@ Java 25 also includes several features that are better understood as runtime or 
 - compact object headers: [`compact_object_headers`](compact_object_headers/README.md)
 - Generational Shenandoah: [`generational_shenandoah`](generational_shenandoah/README.md)
 
-Some of these remain notes because they involve JVM startup behavior, memory layout, or garbage-collector policy. The JFR module is mixed: method timing and tracing are executable through a real `.jfr` recording, while CPU-time profiling and cooperative sampling remain explanatory runtime context.
+Some of these remain notes because they involve memory layout or garbage-collector policy. The AOT command-line module is executable as a real cache workflow, and the JFR module demonstrates method timing and tracing through a real `.jfr` recording while keeping CPU-time profiling and cooperative sampling as explanatory runtime context.
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then read the notes for primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, `vector_api/README.md`, AOT, object headers, and GC behavior. Use `jfr_enhancements/README.md` as a mixed module: it has an executable method timing/tracing example plus runtime caveats for CPU-time profiling and cooperative sampling.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable AOT workflow in `aot_command_line/README.md` and read the notes for primitive patterns, `stable_values/README.md`, PEM encodings, `structured_concurrency/README.md`, `vector_api/README.md`, object headers, and GC behavior. Use `jfr_enhancements/README.md` as a mixed module: it has an executable method timing/tracing example plus runtime caveats for CPU-time profiling and cooperative sampling.
 
 Run the focused tests:
 
@@ -197,7 +197,7 @@ mvn -Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest t
 mvn -Dtest=HkdfKeyDerivationExampleTest test
 mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewNotesTest,PemEncodingsPreviewNotesTest test
 mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNotesTest test
-mvn -Dtest=AotCommandLineErgonomicsNotesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
+mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
 ```
 
 After Java 25, continue to `java26/README.md` for notes-only current-release material under the JDK 25 build baseline. Use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.

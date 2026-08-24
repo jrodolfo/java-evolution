@@ -2,7 +2,9 @@
 
 Java 25 introduced Ahead-of-Time (AOT) Command-Line Ergonomics in JEP 514.
 
-This is an explanatory learning module. It does not try to create an AOT cache during the Maven test suite because AOT cache creation is an operational workflow around launching an application, training it, and measuring startup behavior. A tiny unit test would not prove the feature in a useful way.
+This module is executable. It creates a real AOT cache with `-XX:AOTCacheOutput=...`, then runs the same small program with `-XX:AOTCache=...`.
+
+The example proves the command-line workflow. It does not claim a startup-speed result.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -27,7 +29,7 @@ training run
 
 production run
     reuses AOT data
-    starts faster
+    starts with less runtime preparation
 ```
 
 ## 2. How Was This Commonly Done Before?
@@ -128,30 +130,35 @@ run application with -XX:AOTCache=app.aot
 
 Advanced workflows can still use the explicit steps when they need more control.
 
-## 6. Why This Repository Uses Notes
+## 6. What The Example Shows
 
-This feature is about JVM startup behavior, command-line options, and operational measurement.
+[`AotCommandLineErgonomicsExamples`](AotCommandLineErgonomicsExamples.java) writes a tiny source-launched Java program into a temporary directory.
 
-A meaningful demonstration would need:
+The test then launches it twice:
 
-- an application packaged for launch
-- a training run
-- an AOT cache file
-- a production run using the cache
-- startup measurements before and after
+```bash
+java -Xlog:aot -XX:AOTCacheOutput=probe.aot AotCacheProbe.java
+java -Xlog:aot -XX:AOTCache=probe.aot AotCacheProbe.java
+```
 
-That is valuable in a deployment or performance lab, but it does not fit a tiny deterministic JUnit test. A unit test can protect the explanation, but it should not pretend to prove startup performance.
+The first command runs the program and creates a real AOT cache file. The second command runs the program with that cache.
 
-## 7. What The Test Proves
+The example checks:
 
-`AotCommandLineErgonomicsNotesTest` does not create an AOT cache.
+- the training run exits successfully
+- the application code runs during training
+- the AOT cache file exists and is non-empty
+- the production run exits successfully
+- the JVM reports that it opened the AOT cache
+- the application code still runs during production
 
-Instead, it verifies that the notes preserve the important learning points:
+## 7. What The Test Does Not Prove
 
-- AOT is about startup work
-- Java 25 simplifies cache creation for common workflows
-- `-XX:AOTCacheOutput` is the key command-line option
-- this is an operational feature, not ordinary Java source-code syntax
+`AotCommandLineErgonomicsExamplesTest` does not benchmark startup time.
+
+Startup measurements depend on the operating system, storage, CPU, JVM configuration, cache state, application shape, and repeated-run methodology. A tiny Maven test would make a poor performance lab.
+
+The test proves the workflow: Java 25 can create and use an AOT cache through the simplified command-line options.
 
 ## 8. Realistic Use Case
 
@@ -169,7 +176,7 @@ Then production starts the application with:
 java -XX:AOTCache=app.aot -cp app.jar com.example.App
 ```
 
-The intended benefit is faster startup because the JVM can reuse data prepared ahead of time.
+The intended benefit is faster startup because the JVM can reuse data prepared ahead of time. Whether the benefit matters should be measured for the real application and deployment environment.
 
 ## 9. When Not To Use It
 
