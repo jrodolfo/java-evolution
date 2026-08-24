@@ -4,7 +4,7 @@ Released: December 1998 as J2SE 1.2.
 
 Java 2, also known as J2SE 1.2, was a major platform release. It introduced the Collections Framework, Swing, Java 2D, a stronger security-policy model, and the `strictfp` modifier.
 
-This package focuses executable examples on the Collections Framework, sorting, `strictfp`, headless Swing concepts, and headless Java 2D rendering because they remain foundational and can be demonstrated faithfully. GUI windows and security-policy topics are represented as explanatory material.
+This package focuses executable examples on the Collections Framework, sorting, `strictfp`, headless Swing concepts, headless Java 2D rendering, and the security-policy permission model because they remain foundational and can be demonstrated faithfully. GUI windows and full Security Manager policy-file enforcement are treated as historical context rather than runtime fixtures.
 
 ## Collections Framework
 
@@ -50,19 +50,19 @@ Test: `Java2DExamplesTest`
 
 Java 2 introduced a more flexible security architecture based on permissions and policy files.
 
-Explanatory module: [`security`](security/README.md)
+Executable model module: [`security`](security/README.md)
 
-Test: `SecurityPolicyNotesTest`
+Test: `SecurityPolicyExamplesTest`
 
 ## How To Read This Package
 
-Start with `CollectionsFrameworkExamples`, `SortingExamples`, `swing/SwingExamples`, and `java2d/Java2DExamples`, then read the explanatory modules for platform-level features.
+Start with `CollectionsFrameworkExamples`, `SortingExamples`, `swing/SwingExamples`, `java2d/Java2DExamples`, and `security/SecurityPolicyExamples`, then read the explanatory context for platform-level enforcement details.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=CollectionsFrameworkExamplesTest,SortingExamplesTest test
-mvn -Dtest=Java2DExamplesTest,StrictFloatingPointExamplesTest,SwingExamplesTest,SecurityPolicyNotesTest test
+mvn -Dtest=Java2DExamplesTest,StrictFloatingPointExamplesTest,SwingExamplesTest,SecurityPolicyExamplesTest test
 ```
 
 After this package, continue with Java 3 for dynamic proxies, timers, shutdown hooks, JNDI, and legacy integration notes.

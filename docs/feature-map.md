@@ -33,7 +33,7 @@ Learning notes: [java02 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | `strictfp` | [`strict_floating_point/StrictFloatingPointExamples`](../src/main/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointExamples.java) | [`StrictFloatingPointExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/strict_floating_point/StrictFloatingPointExamplesTest.java) |
 | Swing | [`swing/SwingExamples`](../src/main/java/net/jrodolfo/java_evolution/java02/swing/SwingExamples.java) | [`SwingExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/swing/SwingExamplesTest.java) |
 | Java 2D | [`java2d/Java2DExamples`](../src/main/java/net/jrodolfo/java_evolution/java02/java2d/Java2DExamples.java) | [`Java2DExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/java2d/Java2DExamplesTest.java) |
-| Security policy | [`security/SecurityPolicyNotes`](../src/main/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyNotes.java) | [`SecurityPolicyNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyNotesTest.java) |
+| Security policy | [`security/SecurityPolicyExamples`](../src/main/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyExamples.java) | [`SecurityPolicyExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java02/security/SecurityPolicyExamplesTest.java) |
 
 ## Java 3
 
