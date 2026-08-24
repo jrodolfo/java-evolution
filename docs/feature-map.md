@@ -86,7 +86,7 @@ Learning notes: [java06 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Feature | Example | Test |
 |---|---|---|
 | Navigable collections and deques | `NavigableCollectionExamples` | `NavigableCollectionExamplesTest` |
-| Scripting support | [`scripting/ScriptingSupportNotes`](../src/main/java/net/jrodolfo/java_evolution/java06/scripting/ScriptingSupportNotes.java) | [`ScriptingSupportNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/scripting/ScriptingSupportNotesTest.java) |
+| Scripting support | [`scripting/ScriptingSupportExamples`](../src/main/java/net/jrodolfo/java_evolution/java06/scripting/ScriptingSupportExamples.java) | [`ScriptingSupportExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/scripting/ScriptingSupportExamplesTest.java) |
 | Compiler API | [`compiler_api/CompilerApiExamples`](../src/main/java/net/jrodolfo/java_evolution/java06/compiler_api/CompilerApiExamples.java) | [`CompilerApiExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/compiler_api/CompilerApiExamplesTest.java) |
 | Console API | [`console_api/ConsoleApiExamples`](../src/main/java/net/jrodolfo/java_evolution/java06/console_api/ConsoleApiExamples.java) | [`ConsoleApiExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/console_api/ConsoleApiExamplesTest.java) |
 | Monitoring and management | [`monitoring_management/MonitoringManagementExamples`](../src/main/java/net/jrodolfo/java_evolution/java06/monitoring_management/MonitoringManagementExamples.java) | [`MonitoringManagementExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java06/monitoring_management/MonitoringManagementExamplesTest.java) |

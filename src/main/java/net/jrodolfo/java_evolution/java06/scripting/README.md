@@ -2,7 +2,7 @@
 
 Java 6 added JSR 223, the Scripting API.
 
-This is an explanatory learning module. It does not run a script engine as part of the Maven build because the repository runs on JDK 25, and modern JDKs no longer guarantee the JavaScript engine that was bundled with Sun's Java 6 implementation.
+This module uses an executable Service Provider Interface (SPI) example. It does not depend on Nashorn, Rhino, GraalJS, or any external scripting engine because the repository runs on JDK 25, and modern JDKs no longer guarantee the JavaScript engine that was bundled with Sun's Java 6 implementation.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -25,13 +25,20 @@ Java application
 
 The API standardized hosting. It did not make every JDK include every scripting language.
 
-## 3. Why This Repository Uses Notes
+## 3. What Does The Example Show?
 
-Sun's Java 6 implementation included a Rhino-based JavaScript engine, but JDK 25 does not provide that old bundled engine.
+`ScriptingSupportExamples` demonstrates the Java 6 API shape with a tiny teaching engine:
 
-A test that assumes `new ScriptEngineManager().getEngineByName("JavaScript")` always returns an engine would be false on many modern JDKs.
+- `ScriptEngineManager`
+- `ScriptEngineFactory`
+- `ScriptEngine`
+- `Bindings`
+- `ScriptEngine.eval(...)`
+- service discovery through `META-INF/services/javax.script.ScriptEngineFactory`
 
-The faithful lesson is the API shape and the optional engine model, so this module uses notes.
+The example engine only replaces `${name}` in a string. It is intentionally not a real scripting language. Its purpose is to show how Java code talks to a pluggable engine.
+
+The tests also check that looking up `"javascript"` is optional. A modern JDK may return `null` unless an engine dependency has been provided.
 
 ## 4. Remember This
 

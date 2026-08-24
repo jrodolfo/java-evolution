@@ -57,7 +57,7 @@ Run:
 
 ```bash
 mvn "-Dtest=GenericsExamplesTest,EnumExamplesTest,AnnotationExamplesTest,ConcurrencyUtilitiesExamplesTest" test
-mvn "-Dtest=NavigableCollectionExamplesTest,ScriptingSupportNotesTest,CompilerApiExamplesTest" test
+mvn "-Dtest=NavigableCollectionExamplesTest,ScriptingSupportExamplesTest,CompilerApiExamplesTest" test
 mvn "-Dtest=TryWithResourcesStatementExamplesTest,ExceptionHandlingExamplesTest,Nio2ExamplesTest,ForkJoinExamplesTest,InvokeDynamicExamplesTest" test
 ```
 
