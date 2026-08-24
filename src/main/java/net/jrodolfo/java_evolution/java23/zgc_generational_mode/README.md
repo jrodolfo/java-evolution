@@ -2,7 +2,9 @@
 
 Java 23 made generational mode the default for ZGC, the Z Garbage Collector.
 
-This feature is documented as an explanatory module because it is a JVM runtime behavior change. A small unit test can verify the learning notes, but it cannot faithfully prove garbage collector efficiency without a workload, JVM flags, and measurement setup.
+This module is an executable runtime-boundary example. It launches child JVMs with `-XX:+UseZGC`, reads `-XX:+PrintFlagsFinal`, and captures `-Xlog:gc+init=info` output to show that modern ZGC initializes with young and old generation workers.
+
+It deliberately does not benchmark garbage collection. A unit test can verify runtime configuration and initialization logs, but it cannot prove garbage collector efficiency without a realistic workload, heap settings, and measurement setup.
 
 ## What Problem Does This Feature Solve?
 
@@ -75,11 +77,30 @@ object lifetime patterns matter
   -> ZGC default changed to benefit from it
 ```
 
-## Why This Module Has No GC Benchmark
+## What The Example Demonstrates
+
+`ZgcGenerationalModeExamples` demonstrates the runtime boundary:
+
+- `java -XX:+UseZGC -version` starts on a ZGC-capable JDK build
+- `-XX:+PrintFlagsFinal` reports `UseZGC = true`
+- `-Xlog:gc+init=info` reports initialization of the Z Garbage Collector
+- the initialization log mentions workers for both old and young generations
+
+The test also captures a historical detail from Java 24 and later:
+
+```text
+Ignoring option ZGenerational; support was removed in 24.0
+```
+
+That warning explains why the example does not compare `-XX:+ZGenerational` with `-XX:-ZGenerational`. Generational ZGC became the default in Java 23, and the separate switch was removed after that transition.
+
+## What The Example Does Not Prove
 
 Garbage collector behavior depends on workload, heap size, allocation rate, JVM flags, machine, and measurement method.
 
-A tiny unit test would either prove nothing meaningful or become a fragile benchmark. This repository keeps the feature as notes so the learner understands the Java 23 runtime change without confusing it with microbenchmarking.
+A tiny unit test would either prove nothing meaningful or become a fragile benchmark. This repository uses child-JVM output so the learner understands the Java 23 runtime change without confusing it with performance measurement.
+
+To evaluate ZGC in production, run a real application or benchmark with GC logging and compare pause times, throughput, CPU usage, and memory behavior.
 
 ## Remember This
 

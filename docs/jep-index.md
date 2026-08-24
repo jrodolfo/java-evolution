@@ -200,8 +200,8 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 466](https://openjdk.org/jeps/466) | Class-File API | Preview, Notes |
 | [JEP 481](https://openjdk.org/jeps/481) | Scoped Values | Preview, Notes |
 | [JEP 480](https://openjdk.org/jeps/480) | Structured Concurrency | Preview, Notes |
-| [JEP 471](https://openjdk.org/jeps/471) | Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal | Runtime, Notes |
-| [JEP 474](https://openjdk.org/jeps/474) | ZGC: Generational Mode by Default | Runtime, Notes |
+| [JEP 471](https://openjdk.org/jeps/471) | Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal | Runtime, Executable Example |
+| [JEP 474](https://openjdk.org/jeps/474) | ZGC: Generational Mode by Default | Runtime, Executable Example |
 
 ## Java 24
 

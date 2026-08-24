@@ -4,7 +4,7 @@ Released: September 2024 as Java SE 23.
 
 Java 23 is mostly a preview and refinement release. That makes it valuable for learning because it shows how Java features mature: ideas appear as previews, receive feedback, and may become final in later releases.
 
-This package uses notes classes for most Java 23 features because many of them were preview APIs, runtime behavior, or VM features rather than small stable APIs that fit cleanly into unit tests. Markdown documentation comments are represented with an executable tooling example that runs JavaDoc in a child process, and Unsafe memory-access deprecation is represented as an executable migration-boundary example.
+This package uses notes classes for most Java 23 features because many of them were preview APIs or evolving APIs that do not fit cleanly into the JDK 25 build. Markdown documentation comments are represented with an executable tooling example, Unsafe memory-access deprecation is represented as an executable migration-boundary example, and ZGC generational mode is represented as an executable runtime-boundary example.
 
 ## Markdown Documentation Comments
 
@@ -116,22 +116,22 @@ Test: `UnsafeMemoryAccessDeprecationExamplesTest`
 
 Garbage collectors can often perform better when they treat young and old objects differently. Java 23 made ZGC use generational mode by default.
 
-This is a runtime behavior topic rather than a small source-code feature, so this repository documents it as an explanatory notes module.
+This repository demonstrates the runtime boundary by launching a child JVM with ZGC enabled and inspecting VM flag output plus GC initialization logs. It does not try to benchmark garbage-collector efficiency.
 
-Explanatory module: [`zgc_generational_mode`](zgc_generational_mode/README.md)
+Executable runtime module: [`zgc_generational_mode`](zgc_generational_mode/README.md)
 
-Test: `ZgcGenerationalModeNotesTest`
+Test: `ZgcGenerationalModeExamplesTest`
 
 ## How To Read This Package
 
 Start with `markdown_documentation_comments/README.md`, then read `primitive_patterns/README.md`, `module_import_declarations/README.md`, `flexible_constructor_bodies/README.md`, `stream_gatherers/README.md`, `class_file_api/README.md`, `scoped_values/README.md`, `structured_concurrency/README.md`, `unsafe_memory_access_deprecation/README.md`, and `zgc_generational_mode/README.md`.
 
-Run the focused notes tests:
+Run the focused tests:
 
 ```bash
 mvn -Dtest=MarkdownDocumentationCommentsExamplesTest,PrimitivePatternsPreviewNotesTest,ModuleImportDeclarationsPreviewNotesTest test
 mvn -Dtest=FlexibleConstructorBodiesSecondPreviewNotesTest,StreamGatherersSecondPreviewNotesTest,ClassFileApiSecondPreviewNotesTest test
-mvn -Dtest=ScopedValuesThirdPreviewNotesTest,StructuredConcurrencyThirdPreviewNotesTest,UnsafeMemoryAccessDeprecationExamplesTest,ZgcGenerationalModeNotesTest test
+mvn -Dtest=ScopedValuesThirdPreviewNotesTest,StructuredConcurrencyThirdPreviewNotesTest,UnsafeMemoryAccessDeprecationExamplesTest,ZgcGenerationalModeExamplesTest test
 ```
 
 This package is notes-heavy because many Java 23 topics are preview, runtime, or tooling features. After this package, continue with Java 24 to see stream gatherers and the Class-File API reach final status.
