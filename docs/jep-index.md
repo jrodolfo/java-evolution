@@ -240,7 +240,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | Runtime, Explanatory Module |
 | [JEP 509](https://openjdk.org/jeps/509) | JFR CPU-Time Profiling | Runtime, Experimental, Explanatory Module |
 | [JEP 518](https://openjdk.org/jeps/518) | JFR Cooperative Sampling | Runtime, Explanatory Module |
-| [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | Runtime, Explanatory Module |
+| [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | Runtime, Executable Example |
 | [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Runtime, Explanatory Module |
 | [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Runtime, Explanatory Module |
 

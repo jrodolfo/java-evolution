@@ -6,7 +6,7 @@ Java 25 included three Java Flight Recorder (JFR) improvements:
 - JEP 518: JFR Cooperative Sampling
 - JEP 520: JFR Method Timing & Tracing
 
-This is an explanatory learning module. It does not try to prove profiling behavior inside the Maven test suite because JFR is an observability tool for running applications. A useful demonstration needs a real process, a recording, and analysis of the generated `.jfr` file.
+Method timing and tracing are executable because a small deterministic JUnit test can create a real `.jfr` recording and inspect it with the JFR consumer API. CPU-time profiling and cooperative sampling remain explanatory because they are profiling-quality/runtime-observability features whose useful behavior depends on platform support, workload shape, and profiling analysis.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -49,11 +49,15 @@ JEP 509 added experimental CPU-time profiling on Linux.
 
 The goal is to sample based on CPU time instead of only elapsed wall-clock time. That helps distinguish code that is actually consuming CPU from code that is waiting, blocked, or sleeping.
 
+This repository explains the feature but does not require it in unit tests. On some platforms the JVM can report that CPU-time method sampling is not supported, and a no-sample result would teach the environment more than the Java feature.
+
 ### Cooperative Sampling
 
 JEP 518 changed how JFR samples Java thread stacks.
 
 The goal is stability. Instead of parsing stacks at unsafe arbitrary points, JFR can cooperate with the running thread and reconstruct stack traces at safepoints while reducing safepoint bias.
+
+This repository explains the feature but does not try to prove sampling quality in a tiny test. A meaningful lesson needs a real workload and profiling analysis.
 
 ### Method Timing And Tracing
 
@@ -107,63 +111,39 @@ Method tracing:
 
 Recording selected method invocations with stack information.
 
-## 5. What The Workflow Looks Like
+## 5. What The Example Shows
 
-A JFR workflow usually has three steps:
-
-```text
-start recording
-      |
-      v
-run the application workload
-      |
-      v
-inspect the recording
-```
-
-Conceptually:
-
-```bash
-java -XX:StartFlightRecording:filename=app.jfr -jar app.jar
-
-jfr view app.jfr
-```
-
-For method timing and tracing, the recording can select specific methods or groups of methods. For example, the filter syntax uses a shape similar to a method reference:
+[`JfrEnhancementsExamples`](JfrEnhancementsExamples.java) creates a real JFR recording for one selected method:
 
 ```text
-com.example.OrderService::calculateTotal
+JfrEnhancementsExamples::tracedWork
 ```
 
-The important idea is that JFR records runtime evidence. It is not just a logging library, and it is not a Java language feature.
+The example:
 
-## 6. Why This Repository Uses Notes
+- enables the `jdk.MethodTrace` event for the selected method
+- enables the `jdk.MethodTiming` event for the same method
+- runs a small repeatable workload
+- dumps a real `.jfr` file
+- reads the recording back with `RecordingFile`
+- reports method trace events, method timing events, and the method names found in the recording
 
-These features are about observing a running JVM.
+That makes JEP 520 executable without pretending that every JFR enhancement is equally suited to a deterministic unit test.
 
-A meaningful demonstration would need:
+## 6. What The Test Proves
 
-- a running application
-- a workload that produces interesting behavior
-- a JFR recording
-- analysis using `jfr`, JDK Mission Control, or another tool
-- interpretation of timing, tracing, or profiling results
+`JfrEnhancementsExamplesTest` verifies that:
 
-That does not fit a small deterministic JUnit test. The test in this repository protects the explanation rather than pretending to verify profiling accuracy.
+- the example writes a real `.jfr` recording
+- method tracing records selected method invocations
+- method timing reports selected method activity
+- the recording identifies `JfrEnhancementsExamples::tracedWork`
+- CPU-time profiling remains documented as experimental and platform-dependent
+- cooperative sampling remains documented as a profiling-quality improvement
 
-## 7. What The Test Proves
+The test does not claim that timing values are performance benchmarks. It only verifies that Java 25's method timing and tracing events can be enabled, recorded, and inspected.
 
-`JfrEnhancementsNotesTest` does not start a JFR recording.
-
-Instead, it verifies that the notes preserve the important learning points:
-
-- JFR is for runtime observability
-- CPU-time profiling is experimental and Linux-specific
-- cooperative sampling is about safer stack sampling
-- method timing and tracing target selected methods
-- this is operational documentation rather than ordinary executable example code
-
-## 8. Realistic Use Case
+## 7. Realistic Use Case
 
 Imagine a service whose startup has become slower after a dependency upgrade.
 
@@ -171,7 +151,7 @@ JFR method timing can help identify static initializers or selected framework me
 
 That evidence helps the team decide what to optimize.
 
-## 9. When Not To Use JFR Enhancements
+## 8. When Not To Use JFR Enhancements
 
 Do not start with JFR for every tiny code question. A unit test or debugger may be simpler during local development.
 
@@ -179,6 +159,6 @@ Do not treat JFR output as automatically self-explanatory. Profiling data still 
 
 Do not enable expensive method tracing broadly in production without care. Targeted tracing is useful, but tracing many methods can add overhead.
 
-## 10. Remember This
+## 9. Remember This
 
-JFR is about evidence. Java 25 improved how the JVM records CPU-time samples, how safely it samples stacks, and how directly it can time or trace selected methods.
+JFR is about evidence. Java 25 improved how the JVM records CPU-time samples, how safely it samples stacks, and how directly it can time or trace selected methods. In this repository, method timing and tracing are executable; CPU-time profiling and cooperative sampling remain documented as runtime profiling context.
