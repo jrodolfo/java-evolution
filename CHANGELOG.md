@@ -6,6 +6,12 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
+No changes yet.
+
+## v1.5.0
+
+Learning-focused release that turns many previously explanatory modules into executable examples while keeping the JDK 25 build baseline.
+
 ### Changed
 
 - Converted the Java 1.1 reflection module from notes-only material into an executable example with focused tests.
@@ -47,6 +53,19 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 23 Unsafe memory-access deprecation from notes-only material into an executable migration-boundary example.
 - Converted Java 23 ZGC generational mode from notes-only material into an executable child-JVM runtime-boundary example.
 - Converted Java 20 Vector API from notes-only material into an executable child-JVM incubator-module example.
+- Kept Preferences, Java 6 web-service support, legacy integration, older superseded previews/incubators, and Java 26 material as explanatory notes where executable examples would be environment-bound, obsolete, or misleading under the JDK 25 baseline.
+- Improved child-process example portability with Windows JDK executable resolution, locale-stable operating-system checks, bounded JVM waits, and Unix-domain socket cleanup.
+- Made Java 18 Simple Web Server tests skip cleanly when local socket binding is blocked in restricted environments.
+- Updated stale documentation labels after notes-to-examples conversions.
+- Updated the Spring Boot starter parent from 4.1.0 to 4.1.1.
+
+### Validation
+
+- `mvn test`
+- `make docs`
+- `make links`
+- `node scripts/check-doc-navigation.mjs`
+- `git diff --check`
 
 ## v1.4.1
 
