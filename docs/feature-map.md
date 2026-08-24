@@ -105,7 +105,7 @@ Learning notes: [java07 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Binary literals and numeric underscores | `NumericLiteralExamples` | `NumericLiteralExamplesTest` |
 | NIO.2 | `Nio2Examples` | `Nio2ExamplesTest` |
 | Fork/join framework | `ForkJoinExamples` | `ForkJoinExamplesTest` |
-| `invokedynamic` | [`invokedynamic/InvokeDynamicNotes`](../src/main/java/net/jrodolfo/java_evolution/java07/invokedynamic/InvokeDynamicNotes.java) | [`InvokeDynamicNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java07/invokedynamic/InvokeDynamicNotesTest.java) |
+| `invokedynamic` | [`invokedynamic/InvokeDynamicExamples`](../src/main/java/net/jrodolfo/java_evolution/java07/invokedynamic/InvokeDynamicExamples.java) | [`InvokeDynamicExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java07/invokedynamic/InvokeDynamicExamplesTest.java) |
 
 ## Java 8
 

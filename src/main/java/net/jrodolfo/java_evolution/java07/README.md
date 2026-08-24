@@ -90,11 +90,11 @@ Test: `ForkJoinExamplesTest`
 
 Java 7 added the `invokedynamic` bytecode and method-handle linkage support for dynamic languages on the JVM.
 
-This is an explanatory module because ordinary Java source code does not directly spell an `invokedynamic` instruction. A faithful learning artifact should explain the bytecode/linkage model rather than hide Java source inside strings.
+The executable module demonstrates `java.lang.invoke` call-site linkage and inspects compiled lambda bytecode with `javap` to show real `invokedynamic` instructions. Ordinary Java source still does not directly spell an `invokedynamic` instruction.
 
-Explanatory module: [`invokedynamic`](invokedynamic/README.md)
+Example module: [`invokedynamic`](invokedynamic/README.md)
 
-Test: `InvokeDynamicNotesTest`
+Test: `InvokeDynamicExamplesTest`
 
 ## How To Read This Package
 
@@ -105,7 +105,7 @@ Run the focused tests:
 ```bash
 mvn -Dtest=TryWithResourcesStatementExamplesTest,ExceptionHandlingExamplesTest,DiamondOperatorExamplesTest test
 mvn -Dtest=StringSwitchExamplesTest,NumericLiteralExamplesTest,Nio2ExamplesTest test
-mvn -Dtest=ForkJoinExamplesTest,InvokeDynamicNotesTest test
+mvn -Dtest=ForkJoinExamplesTest,InvokeDynamicExamplesTest test
 ```
 
 After this package, continue with Java 8 to see lambdas, streams, `Optional`, default methods, `CompletableFuture`, and the Date/Time API.

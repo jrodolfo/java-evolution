@@ -38,7 +38,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [Project Coin / JSR 334](https://cr.openjdk.org/~darcy/ProjectCoin/ProjectCoin-Documentation-v0.9375.html) | Try-with-resources, multi-catch, diamond operator, strings in switch, binary literals, numeric underscores | Final, Example |
 | [JDK 7 adoption guide](https://docs.oracle.com/javase/7/docs/webnotes/adoptionGuide/) | NIO.2 and Java 7 migration features | Final, Example |
 | [Java SE 7 concurrency enhancements](https://docs.oracle.com/javase/7/docs/technotes/guides/concurrency/changes7.html) | Fork/join framework | Final, Example |
-| [java.lang.invoke package](https://docs.oracle.com/javase/7/docs/api/java/lang/invoke/package-summary.html) | `invokedynamic` and method handles | Final, Explanatory Module |
+| [java.lang.invoke package](https://docs.oracle.com/javase/7/docs/api/java/lang/invoke/package-summary.html) | `invokedynamic` and method handles | Final, Tooling, Executable Example |
 
 ## Java 8
 

@@ -2,7 +2,7 @@
 
 Java 7 added the `invokedynamic` bytecode instruction and method-handle linkage support.
 
-This is an explanatory learning module. It does not attempt to create an executable source-level demo because ordinary Java source code does not directly spell the `invokedynamic` instruction.
+This is an executable linkage and bytecode-inspection module. It does not pretend that ordinary Java source code directly spells the `invokedynamic` instruction. Instead, it demonstrates the Java 7 `java.lang.invoke` building blocks and then inspects compiled bytecode that contains real `invokedynamic` instructions.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -47,11 +47,14 @@ Call site:
 
 An object representing the target associated with a dynamic call site.
 
-## 4. Why This Repository Uses Notes
+## 4. What Does The Example Show?
 
-Java source can use APIs from `java.lang.invoke`, but that is not the same thing as demonstrating an actual `invokedynamic` instruction.
+The executable example has two parts:
 
-The feature lives at the bytecode and linkage level. A faithful teaching module should explain that layer directly instead of hiding bytecode concepts behind source strings.
+- it builds `ConstantCallSite` and `MutableCallSite` examples with `MethodHandle`, `MethodType`, and `dynamicInvoker()`
+- it compiles a tiny lambda source file and runs `javap -c -v` so learners can see `invokedynamic`, `BootstrapMethods`, and `LambdaMetafactory` in real bytecode
+
+The lambda source uses Java syntax added later, but that is intentional: Java 7 introduced the bytecode and linkage machinery, while later Java features used that machinery.
 
 ## 5. Remember This
 

@@ -235,7 +235,7 @@ Start here depending on what you need:
 | 4 | Feb 2002 | [`java04`](src/main/java/net/jrodolfo/java_evolution/java04/README.md) | Assertions example, Regex, NIO, Logging, Chained Exceptions, XML example, Preferences/Security notes |
 | 5 | Sep 2004 | [`java05`](src/main/java/net/jrodolfo/java_evolution/java05/README.md) | Generics, Enhanced For Loop, Autoboxing, Enums, Varargs, Static Import, Annotations, Concurrency Utilities |
 | 6 | Dec 2006 | [`java06`](src/main/java/net/jrodolfo/java_evolution/java06/README.md) | Navigable Collections, Monitoring/MXBeans example, Scripting/Compiler/Console/Web-Service explanatory modules |
-| 7 | Jul 2011 | [`java07`](src/main/java/net/jrodolfo/java_evolution/java07/README.md) | Try-With-Resources, Multi-Catch, Diamond Operator, String Switch, NIO.2, Fork/Join, `invokedynamic` notes |
+| 7 | Jul 2011 | [`java07`](src/main/java/net/jrodolfo/java_evolution/java07/README.md) | Try-With-Resources, Multi-Catch, Diamond Operator, String Switch, NIO.2, Fork/Join, `invokedynamic` example |
 | 8 | Mar 2014 | [`java08`](src/main/java/net/jrodolfo/java_evolution/java08/README.md) | Lambdas, Streams, Optional, Method References, CompletableFuture, Default Methods, Date/Time API |
 | 9 | Sep 2017 | [`java09`](src/main/java/net/jrodolfo/java_evolution/java09/README.md) | Collection Factories, Optional/Stream Enhancements, Private Interface Methods, Process API, StackWalker, Modules notes |
 | 10 | Mar 2018 | [`java10`](src/main/java/net/jrodolfo/java_evolution/java10/README.md) | `var`, Unmodifiable Collectors, `Optional.orElseThrow()` |

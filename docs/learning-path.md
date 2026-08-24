@@ -56,7 +56,7 @@ Run:
 ```bash
 mvn "-Dtest=GenericsExamplesTest,EnumExamplesTest,AnnotationExamplesTest,ConcurrencyUtilitiesExamplesTest" test
 mvn "-Dtest=NavigableCollectionExamplesTest,ScriptingSupportNotesTest,CompilerApiExamplesTest" test
-mvn "-Dtest=TryWithResourcesStatementExamplesTest,ExceptionHandlingExamplesTest,Nio2ExamplesTest,ForkJoinExamplesTest" test
+mvn "-Dtest=TryWithResourcesStatementExamplesTest,ExceptionHandlingExamplesTest,Nio2ExamplesTest,ForkJoinExamplesTest,InvokeDynamicExamplesTest" test
 ```
 
 Interview angle: explain these releases as the foundation under later Java. Generics made collections type-safe, Java 5 concurrency utilities raised the abstraction above raw threads, Java 7 made resource and exception handling safer, and Java 6/7 platform work prepared Java for better tooling and JVM language support.
