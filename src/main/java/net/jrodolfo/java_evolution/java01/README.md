@@ -84,9 +84,9 @@ Test: `JdbcNotesTest`
 
 Java 1.1 introduced Remote Method Invocation for calling objects in another JVM.
 
-Explanatory module: [`rmi`](rmi/README.md)
+Example module: [`rmi`](rmi/README.md)
 
-Test: `RmiNotesTest`
+Test: `RmiExamplesTest`
 
 ## JavaBeans
 
@@ -98,14 +98,14 @@ Test: `JavaBeansExamplesTest`
 
 ## How To Read This Package
 
-Start with the executable fundamentals, then read the notes modules to understand early platform facilities that are not a good fit for small portable tests.
+Start with the executable fundamentals, then read the JDBC notes module to understand early platform facilities that are not a good fit for small portable tests.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=ObjectOrientedBasicsExamplesTest,InterfaceExamplesTest,ExceptionHandlingBasicsExamplesTest test
 mvn -Dtest=ThreadBasicsExamplesTest,IoBasicsExamplesTest,InnerClassExamplesTest test
-mvn -Dtest=ReflectionExamplesTest,SerializationExamplesTest,JdbcNotesTest,RmiNotesTest,JavaBeansExamplesTest test
+mvn -Dtest=ReflectionExamplesTest,SerializationExamplesTest,JdbcNotesTest,RmiExamplesTest,JavaBeansExamplesTest test
 ```
 
 After this package, continue with Java 2 for the Collections Framework and the Java 2 platform shift.

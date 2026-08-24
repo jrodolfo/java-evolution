@@ -21,6 +21,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 9 module system from notes-only material into an executable modular source-tree example.
 - Converted Java 2 Swing from notes-only material into a headless executable model/action/EDT example.
 - Converted Java 25 compact source files from notes-only material into an executable source-launcher example.
+- Converted Java 1.1 RMI from notes-only material into a local-registry executable example with safe skips when local socket binding is blocked.
 
 ## v1.4.1
 

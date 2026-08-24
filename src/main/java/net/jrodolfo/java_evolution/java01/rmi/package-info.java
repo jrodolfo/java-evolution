@@ -1,4 +1,4 @@
 /**
- * Explanatory module for Java RMI.
+ * Executable example for Java RMI.
  */
 package net.jrodolfo.java_evolution.java01.rmi;

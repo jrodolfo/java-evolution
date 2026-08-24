@@ -10,9 +10,13 @@ Distributed Java applications needed a standard way for one JVM to call objects 
 
 RMI introduced remote interfaces, remote objects, stubs, registries, remote exceptions, and serialization-based argument passing.
 
-## 3. Why This Repository Uses Notes
+## 3. What Does The Example Show?
 
-A faithful RMI demo requires multiple runtime pieces, a registry, network binding, exported objects, and remote failure handling. That is too environment-sensitive for a compact unit example.
+The example starts a local RMI registry on an ephemeral loopback port, exports a small remote object, binds it under a service name, looks it up through the registry, and invokes it through the remote interface.
+
+It also passes a serializable request object so the test can show that RMI copies remote arguments by value. The example uses modern dynamic stubs because generated `rmic` stubs were part of older RMI workflows, not the normal JDK 25 teaching path.
+
+Because RMI binds local sockets, the focused test skips only when the execution environment blocks loopback socket binding.
 
 ## 4. Remember This
 
