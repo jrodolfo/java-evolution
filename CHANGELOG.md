@@ -8,6 +8,20 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 No changes yet.
 
+## v1.5.1
+
+Patch release focused on Windows validation stability for child-process examples.
+
+### Changed
+
+- Drained child-process output concurrently in selected executable examples so Windows validation does not block while waiting for verbose child JVM or tooling output.
+- Applied the output-draining fix to `invokedynamic`, Java 20 Vector API, Java 23 ZGC generational mode, Java 24 AOT class loading, Java 25 AOT command-line ergonomics, and Java 25 compact object headers examples.
+
+### Validation
+
+- Windows 11 Maven build and test validation
+- Ubuntu Maven build and test validation
+
 ## v1.5.0
 
 Learning-focused release that turns many previously explanatory modules into executable examples while keeping the JDK 25 build baseline.
