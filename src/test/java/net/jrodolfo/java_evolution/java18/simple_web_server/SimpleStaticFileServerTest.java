@@ -1,8 +1,11 @@
 package net.jrodolfo.java_evolution.java18.simple_web_server;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.net.SocketException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -18,7 +21,7 @@ class SimpleStaticFileServerTest {
 	void servesStaticFileFromConfiguredDirectory() throws IOException, InterruptedException {
 		Files.writeString(rootDirectory.resolve("index.html"), "<h1>Java 18 Simple Web Server</h1>");
 
-		try (var server = SimpleStaticFileServer.start(rootDirectory)) {
+		try (var server = startOrSkip()) {
 			var response = server.get("/index.html");
 
 			assertThat(response.isSuccessful())
@@ -35,7 +38,7 @@ class SimpleStaticFileServerTest {
 
 	@Test
 	void returnsNotFoundForMissingStaticFile() throws IOException, InterruptedException {
-		try (var server = SimpleStaticFileServer.start(rootDirectory)) {
+		try (var server = startOrSkip()) {
 			var response = server.get("/missing.html");
 
 			assertThat(response.isNotFound())
@@ -46,7 +49,7 @@ class SimpleStaticFileServerTest {
 
 	@Test
 	void doesNotExposeFilesOutsideServedDirectory() throws IOException, InterruptedException {
-		try (var server = SimpleStaticFileServer.start(rootDirectory)) {
+		try (var server = startOrSkip()) {
 			var response = server.get("/%2e%2e/pom.xml");
 
 			assertThat(response.isSuccessful())
@@ -56,5 +59,27 @@ class SimpleStaticFileServerTest {
 					.as("The response should not contain project files outside the served directory")
 					.doesNotContain("<artifactId>java-evolution</artifactId>");
 		}
+	}
+
+	private SimpleStaticFileServer startOrSkip() throws IOException {
+		try {
+			return SimpleStaticFileServer.start(rootDirectory);
+		}
+		catch (UncheckedIOException exception) {
+			assumeTrue(!hasCause(exception, SocketException.class),
+					"local SimpleFileServer socket binding is not permitted in this environment");
+			throw exception;
+		}
+	}
+
+	private boolean hasCause(Throwable throwable, Class<? extends Throwable> causeType) {
+		Throwable current = throwable;
+		while (current != null) {
+			if (causeType.isInstance(current)) {
+				return true;
+			}
+			current = current.getCause();
+		}
+		return false;
 	}
 }
