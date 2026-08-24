@@ -126,11 +126,11 @@ Test: `PrimitivePatternsThirdPreviewNotesTest`
 
 Stable values model data initialized at most once. This can help the JVM optimize values that are not known at object construction time but become stable later.
 
-Because this is a preview API, the repository keeps the runnable project simple and explains the feature in a dedicated notes module instead of requiring preview-source examples in the main build.
+Because this is a preview API, the main Maven build does not import `StableValue` directly. `StableValuesPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
 
-Explanatory module: [`stable_values`](stable_values/README.md)
+Executable preview module: [`stable_values`](stable_values/README.md)
 
-Test: `StableValuesPreviewNotesTest`
+Test: `StableValuesPreviewExamplesTest`
 
 ## PEM Encodings Preview
 
@@ -189,7 +189,7 @@ Some of these remain notes because they involve memory layout or garbage-collect
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for AOT command-line ergonomics, PEM encodings, and JFR method timing/tracing. Read the notes for primitive patterns, `stable_values/README.md`, `structured_concurrency/README.md`, `vector_api/README.md`, object headers, and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for Stable Values, PEM encodings, AOT command-line ergonomics, and JFR method timing/tracing. Read the notes for primitive patterns, `structured_concurrency/README.md`, `vector_api/README.md`, object headers, and GC behavior.
 
 Run the focused tests:
 
@@ -197,7 +197,7 @@ Run the focused tests:
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
 mvn -Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest test
 mvn -Dtest=HkdfKeyDerivationExampleTest test
-mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewNotesTest,PemEncodingsPreviewExamplesTest test
+mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewExamplesTest,PemEncodingsPreviewExamplesTest test
 mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNotesTest test
 mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
 ```

@@ -2,7 +2,9 @@
 
 Java 25 previewed Stable Values in JEP 502.
 
-This is an explanatory learning module. It does not compile a `StableValue` example as part of the Maven build because the API is preview in Java 25 and requires preview compiler/runtime options. The goal here is to teach the feature faithfully without changing the build for the whole repository.
+This module is an executable preview example. The main Maven build does not compile `StableValue` directly. Instead, `StableValuesPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
+
+That keeps the repository build stable while still demonstrating the real Java 25 preview API.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -125,7 +127,7 @@ if content is not set:
 
 The supplier passed to `orElseSet(...)` is not supposed to run on every call. It provides the initial content only if the stable value has not already been set.
 
-## 6. Why This Repository Uses Notes
+## 6. How This Repository Runs The Preview API
 
 Stable Values are preview in Java 25.
 
@@ -138,20 +140,22 @@ java --enable-preview Main
 
 This Maven project intentionally avoids enabling preview features globally. Enabling them for one feature would affect the whole build and make the repository harder to use as a stable study project.
 
-That is why this module uses real syntax examples in documentation rather than executable-looking Java code that merely returns source code strings.
+That is why this module uses a child process. The repository class itself remains ordinary Java 25-compatible code, while the generated child program imports and executes `java.lang.StableValue`.
 
 ## 7. What The Test Proves
 
-`StableValuesPreviewNotesTest` does not test the Java preview API.
+`StableValuesPreviewExamplesTest` tests the Java preview API through a child compiler and child JVM.
 
-Instead, it protects the learning note itself. The test verifies that the note explains:
+The test verifies that:
 
-- the lazy-but-immutable problem
-- common pre-Java-25 alternatives
-- the Java 25 idea of deferred immutability
-- the reason this repository keeps the feature explanatory
+- `orElseSet(...)` computes content once and returns the same content later
+- `trySet(...)` fails after content is already set
+- `orElseThrow()` returns initialized content
+- `StableValue.supplier(...)` memoizes a supplier result
+- `StableValue.list(...)` computes each accessed element lazily and once
+- `StableValue.map(...)` computes each accessed key lazily and once
 
-That is appropriate here because the repository is deliberately not compiling preview API code.
+The test does not prove JVM optimization behavior. It proves the API semantics that learners can observe directly.
 
 ## 8. Realistic Use Case
 
