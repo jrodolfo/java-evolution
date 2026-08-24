@@ -23,11 +23,11 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 
 | Reference | Feature | Status |
 |---|---|---|
-| [What's New in JDK 1.1](https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/post1.0/whatsnew/index.html) | Inner classes, reflection, serialization, JDBC, RMI, JavaBeans, AWT updates, JAR files, JNI, internationalization | Final, Examples and Explanatory Modules |
-| [JavaBeans specification](https://www.oracle.com/java/technologies/javase/javabeans-spec.html) | JavaBeans component conventions | Final, Explanatory Module |
-| [Object Serialization FAQ](https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html) | Object serialization | Final, Explanatory Module |
+| [What's New in JDK 1.1](https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/post1.0/whatsnew/index.html) | Inner classes, reflection, serialization, JDBC, RMI, JavaBeans, AWT updates, JAR files, JNI, internationalization | Final, Examples |
+| [JavaBeans specification](https://www.oracle.com/java/technologies/javase/javabeans-spec.html) | JavaBeans component conventions | Final, Executable Example |
+| [Object Serialization FAQ](https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html) | Object serialization | Final, Executable Example |
 | [Java language enhancements history](https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html) | `strictfp` and assertions | Final, Notes and Executable Example |
-| [Java 2 platform documentation](https://docs.oracle.com/cd/E19683-01/806-7930/features-2d/index.html) | Java 2D | Final, Explanatory Module |
+| [Java 2 platform documentation](https://docs.oracle.com/cd/E19683-01/806-7930/features-2d/index.html) | Java 2D | Final, Executable Example |
 | [J2SE 1.4 new features and enhancements](https://download.oracle.com/otn_hosted_doc/jdeveloper/904preview/jdk14doc/docs/relnotes/features.html) | NIO, regular expressions, XML/JAXP, integrated security APIs, logging, preferences, chained exceptions | Final, Examples and Explanatory Modules |
 | [Oracle J2SE 5.0 new features](https://docs.oracle.com/javase/1.5.0/docs/relnotes/features.html) | Generics, enhanced for loop, autoboxing, enums, varargs, static import, annotations, concurrency utilities | Final, Example |
 | [Formatter API](https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html) | Formatted output | Final, Example |

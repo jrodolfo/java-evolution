@@ -42,7 +42,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | JAXB | Java Architecture for XML Binding | A Java/XML binding technology used to map XML documents to Java objects. It appears in the Java 6 web-service notes as part of the older bundled enterprise-facing stack. |
 | JAX-WS | Java API for XML Web Services | The Java API for SOAP-based XML web services. It appears in the Java 6 web-service notes as platform support that later moved out of the core JDK. |
 | JavaDoc | Java Documentation | Documentation generated from Java source comments, usually browsed as HTML. |
-| JDBC | Java Database Connectivity | Java's standard database access API. In this project, JDBC is treated as a Java 1.1-era explanatory module because a real example would need a database fixture. |
+| JDBC | Java Database Connectivity | Java's standard database access API. In this project, JDBC is demonstrated through driver registration and `DriverManager` dispatch without requiring a database fixture. |
 | JDK | Java Development Kit | The Java installation used to compile, test, document, and run this project. |
 | JEP | JDK Enhancement Proposal | The OpenJDK process and design record used to propose, track, and document significant JDK changes. In this project, JEP links are the authoritative source for when a Java feature was previewed, finalized, changed, or removed. |
 | JFR | Java Flight Recorder | JVM observability tooling for recording runtime events and performance data. |

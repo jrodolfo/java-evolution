@@ -6,7 +6,7 @@ Use [feature-map.md](feature-map.md) when you want a complete class-by-class ind
 
 ## Stage 1: Java 1-4 Early Foundations
 
-Java 1 through 4 established the original object model, checked exceptions, threads, classic I/O, inner classes, reflection, serialization, the Collections Framework, dynamic proxies, regex, NIO, logging, and chained exceptions.
+Java 1 through 4 established the original object model, checked exceptions, threads, classic I/O, inner classes, reflection, serialization, JDBC, RMI, JavaBeans, the Collections Framework, dynamic proxies, regex, NIO, logging, and chained exceptions.
 
 Read these first:
 
@@ -15,6 +15,7 @@ Read these first:
 - `src/main/java/net/jrodolfo/java_evolution/java01/ExceptionHandlingBasicsExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java01/ThreadBasicsExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java01/InnerClassExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java01/jdbc/JdbcExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java02/CollectionsFrameworkExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java02/SortingExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java03/DynamicProxyExamples.java`
@@ -27,6 +28,7 @@ Run:
 ```bash
 mvn "-Dtest=ObjectOrientedBasicsExamplesTest,InterfaceExamplesTest,ExceptionHandlingBasicsExamplesTest" test
 mvn "-Dtest=ThreadBasicsExamplesTest,InnerClassExamplesTest,CollectionsFrameworkExamplesTest,SortingExamplesTest" test
+mvn "-Dtest=ReflectionExamplesTest,SerializationExamplesTest,JdbcExamplesTest,RmiExamplesTest,JavaBeansExamplesTest" test
 mvn "-Dtest=DynamicProxyExamplesTest,RegexExamplesTest,NioExamplesTest,ChainedExceptionExamplesTest" test
 ```
 

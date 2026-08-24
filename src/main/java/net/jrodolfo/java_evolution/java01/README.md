@@ -6,7 +6,7 @@ This package covers early Java 1.0 and 1.1 foundations. It is intentionally a re
 
 Java 1.0 established the object-oriented language, checked exceptions, threads, `java.io`, AWT, applets, and the original standard-library shape. Java 1.1 expanded the platform with inner classes, reflection, object serialization, JDBC, RMI, JavaBeans, internationalization, JAR files, JNI, and the delegation event model.
 
-The executable examples focus on concepts that still compile and behave faithfully on JDK 25. Environment-heavy or obsolete topics use notes modules.
+The executable examples focus on concepts that still compile and behave faithfully on JDK 25. Environment-heavy topics use local, isolated fixtures where that still teaches the feature clearly.
 
 ## Object-Oriented Basics
 
@@ -76,9 +76,13 @@ Test: `SerializationExamplesTest`
 
 Java 1.1 introduced JDBC as a standard API for database access.
 
-Explanatory module: [`jdbc`](jdbc/README.md)
+The executable module demonstrates driver registration, URL matching,
+`DriverManager` dispatch, connection metadata, and driver cleanup without
+requiring a database server.
 
-Test: `JdbcNotesTest`
+Example module: [`jdbc`](jdbc/README.md)
+
+Test: `JdbcExamplesTest`
 
 ## RMI
 
@@ -98,14 +102,15 @@ Test: `JavaBeansExamplesTest`
 
 ## How To Read This Package
 
-Start with the executable fundamentals, then read the JDBC notes module to understand early platform facilities that are not a good fit for small portable tests.
+Start with the executable fundamentals, then read the focused platform modules
+for reflection, serialization, JDBC, RMI, and JavaBeans.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=ObjectOrientedBasicsExamplesTest,InterfaceExamplesTest,ExceptionHandlingBasicsExamplesTest test
 mvn -Dtest=ThreadBasicsExamplesTest,IoBasicsExamplesTest,InnerClassExamplesTest test
-mvn -Dtest=ReflectionExamplesTest,SerializationExamplesTest,JdbcNotesTest,RmiExamplesTest,JavaBeansExamplesTest test
+mvn -Dtest=ReflectionExamplesTest,SerializationExamplesTest,JdbcExamplesTest,RmiExamplesTest,JavaBeansExamplesTest test
 ```
 
 After this package, continue with Java 2 for the Collections Framework and the Java 2 platform shift.
