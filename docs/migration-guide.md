@@ -133,7 +133,7 @@ Run:
 ```bash
 mvn "-Dtest=SwitchExpressionExamplesTest,TextBlockExamplesTest" test
 mvn "-Dtest=RecordExamplesTest,PatternMatchingInstanceofExamplesTest,SealedClassesExamplesTest" test
-mvn -Dtest=StrongEncapsulationNotesTest test
+mvn -Dtest=StrongEncapsulationExamplesTest test
 ```
 
 Interview angle: describe Java 17 as a cleaner language for domain modeling. Records model data, sealed classes model closed alternatives, and pattern matching reduces manual casting.

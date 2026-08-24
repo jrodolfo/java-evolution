@@ -2,11 +2,10 @@
 
 Java 17 strongly encapsulated JDK internals through JEP 403.
 
-This is an explanatory module because the feature is primarily a runtime and
-migration change. A realistic demonstration would need code that deliberately
-depends on an internal JDK API, reflective access to a non-public member, or
-special JVM command-line options. That would make the example fragile and
-would distract from the migration lesson.
+This is an executable child-JVM module. The example deliberately attempts deep
+reflection into a JDK class from an isolated child process, then compares the
+result with targeted migration flags. That keeps the Maven test JVM clean while
+showing the real runtime behavior.
 
 ## The problem
 
@@ -148,15 +147,24 @@ A practical migration process is:
 5. Treat `--add-exports` or `--add-opens` as temporary, explicitly documented
    compatibility measures.
 
-## Why this repository has no live access example
+## What The Example Shows
 
-The repository does not deliberately access a JDK internal class. Doing so
-would create the very dependency that Java 17 is warning developers to remove.
-It would also make the tests depend on a particular JDK implementation detail
-and possibly require flags that change the meaning of the test environment.
+The executable example launches a small Java source file in a child JVM. The
+probe inspects `String.class.getDeclaredFields()` and calls
+`setAccessible(true)` on a non-public field.
 
-The notes class and its test preserve the educational summary: what the old
-practice was, what Java 17 changed, and what migration direction is safer.
+The child JVM is run four ways:
+
+- with no module-opening flags, where strong encapsulation rejects the access
+- with `--add-opens java.base/java.lang=ALL-UNNAMED`, where the targeted
+  reflective access bridge succeeds
+- with `--add-exports java.base/java.lang=ALL-UNNAMED`, which still fails
+  because exporting a package is not the same as opening it for deep reflection
+- with `--illegal-access=permit`, which modern JDKs ignore because broad
+  relaxed illegal access was removed after Java 17
+
+The reflective access is intentionally bad production practice. It exists here
+only to make the migration behavior observable.
 
 ## When this matters in real software
 

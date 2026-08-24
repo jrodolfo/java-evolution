@@ -226,7 +226,7 @@ Learning notes: [java17 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Pattern matching for switch preview | `PatternMatchingSwitchPreviewExamples` | `PatternMatchingSwitchPreviewExamplesTest` |
 | Random Generator API | `RandomGeneratorExamples` | `RandomGeneratorExamplesTest` |
 | `HexFormat` | `HexFormatExamples` | `HexFormatExamplesTest` |
-| Strong encapsulation | [`strong_encapsulation`](../src/main/java/net/jrodolfo/java_evolution/java17/strong_encapsulation/README.md) | [`StrongEncapsulationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java17/strong_encapsulation/StrongEncapsulationNotesTest.java) |
+| Strong encapsulation | [`strong_encapsulation/StrongEncapsulationExamples`](../src/main/java/net/jrodolfo/java_evolution/java17/strong_encapsulation/StrongEncapsulationExamples.java) | [`StrongEncapsulationExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java17/strong_encapsulation/StrongEncapsulationExamplesTest.java) |
 
 ## Java 18
 

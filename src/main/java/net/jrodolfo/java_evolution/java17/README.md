@@ -94,24 +94,24 @@ Before Java 17, some applications and libraries relied on internal JDK APIs thro
 
 Java 17 strongly encapsulated JDK internals by default. The practical lesson is clear: production code should depend on supported public APIs or maintained libraries, not internal JDK implementation details.
 
-This repository keeps the topic as an explanatory module because it is a runtime compatibility and migration topic rather than a small API demonstration. Read the [`strong_encapsulation`](strong_encapsulation/README.md) module for the module-system terminology, migration history, access flags, and practical investigation steps.
+The executable module uses child JVMs to show failed deep reflection, targeted `--add-opens` migration behavior, the difference between `--add-exports` and `--add-opens`, and the obsolete `--illegal-access` flag.
 
-Notes: `StrongEncapsulationNotes`
+Example module: [`strong_encapsulation`](strong_encapsulation/README.md)
 
-Documentation test: `StrongEncapsulationNotesTest`
+Test: `StrongEncapsulationExamplesTest`
 
 ## How To Read This Package
 
-Start with `SealedClassesExamples` because sealed classes are final in Java 17. Then read `PatternMatchingSwitchPreviewExamples`, `RandomGeneratorExamples`, `HexFormatExamples`, and `strong_encapsulation/README.md` before `StrongEncapsulationNotes`.
+Start with `SealedClassesExamples` because sealed classes are final in Java 17. Then read `PatternMatchingSwitchPreviewExamples`, `RandomGeneratorExamples`, `HexFormatExamples`, and `strong_encapsulation/README.md` before running `StrongEncapsulationExamplesTest`.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=SealedClassesExamplesTest,PatternMatchingSwitchPreviewExamplesTest test
-mvn -Dtest=RandomGeneratorExamplesTest,HexFormatExamplesTest,StrongEncapsulationNotesTest test
+mvn -Dtest=RandomGeneratorExamplesTest,HexFormatExamplesTest,StrongEncapsulationExamplesTest test
 ```
 
-`StrongEncapsulationNotes` is documentation-based because the behavior is mostly visible through module boundaries, reflective access, and migration warnings. After this package, continue with Java 18 for default charset and tooling/documentation improvements.
+`StrongEncapsulationExamplesTest` uses child JVMs so module-opening flags and illegal reflective access attempts do not mutate the Maven test JVM. After this package, continue with Java 18 for default charset and tooling/documentation improvements.
 
 ## References
 
