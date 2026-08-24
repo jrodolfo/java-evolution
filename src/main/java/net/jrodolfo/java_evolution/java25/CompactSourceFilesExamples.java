@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -86,7 +87,12 @@ public class CompactSourceFilesExamples {
 	}
 
 	private String javaExecutable() {
-		return System.getProperty("java.home") + File.separator + "bin" + File.separator + "java";
+		String executable = isWindows() ? "java.exe" : "java";
+		return new File(new File(System.getProperty("java.home"), "bin"), executable).getPath();
+	}
+
+	private boolean isWindows() {
+		return System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("win");
 	}
 
 	/**

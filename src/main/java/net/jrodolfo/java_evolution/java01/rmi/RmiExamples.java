@@ -101,7 +101,7 @@ public class RmiExamples {
 	/**
 	 * Local owner for the registry and exported remote object.
 	 */
-	public static final class RmiGreetingEndpoint {
+	public static final class RmiGreetingEndpoint implements AutoCloseable {
 
 		private final int port;
 		private final Registry registry;

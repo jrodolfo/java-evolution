@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -158,7 +159,7 @@ public class StableValuesPreviewExamples {
 	}
 
 	private boolean isWindows() {
-		return System.getProperty("os.name").toLowerCase().contains("win");
+		return System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("win");
 	}
 
 	private CommandResult run(String... command) throws IOException, InterruptedException {

@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -179,11 +180,20 @@ public class ModuleImportDeclarationsExamples {
 	}
 
 	private String javaExecutable() {
-		return System.getProperty("java.home") + File.separator + "bin" + File.separator + "java";
+		return toolExecutable("java");
 	}
 
 	private String javacExecutable() {
-		return System.getProperty("java.home") + File.separator + "bin" + File.separator + "javac";
+		return toolExecutable("javac");
+	}
+
+	private String toolExecutable(String tool) {
+		String executable = isWindows() ? tool + ".exe" : tool;
+		return new File(new File(System.getProperty("java.home"), "bin"), executable).getPath();
+	}
+
+	private boolean isWindows() {
+		return System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("win");
 	}
 
 	/**

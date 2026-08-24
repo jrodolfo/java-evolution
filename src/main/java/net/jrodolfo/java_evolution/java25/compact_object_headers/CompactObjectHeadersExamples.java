@@ -1,10 +1,13 @@
 package net.jrodolfo.java_evolution.java25.compact_object_headers;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -74,8 +77,16 @@ public class CompactObjectHeadersExamples {
 		command.add("-version");
 
 		Process process = new ProcessBuilder(command).redirectErrorStream(true).start();
+		boolean finished = process.waitFor(10, TimeUnit.SECONDS);
+		if (!finished) {
+			process.destroyForcibly();
+			process.waitFor(5, TimeUnit.SECONDS);
+			String output = new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+			throw new IllegalStateException("child JVM timed out\n" + output);
+		}
+
 		String output = new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
-		int exitCode = process.waitFor();
+		int exitCode = process.exitValue();
 		if (exitCode != 0) {
 			throw new IllegalStateException("child JVM failed with exit code " + exitCode + "\n" + output);
 		}
@@ -91,7 +102,12 @@ public class CompactObjectHeadersExamples {
 	}
 
 	private Path javaExecutable() {
-		return Path.of(System.getProperty("java.home"), "bin", "java");
+		String executable = isWindows() ? "java.exe" : "java";
+		return new File(new File(System.getProperty("java.home"), "bin"), executable).toPath();
+	}
+
+	private boolean isWindows() {
+		return System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("win");
 	}
 
 	/**

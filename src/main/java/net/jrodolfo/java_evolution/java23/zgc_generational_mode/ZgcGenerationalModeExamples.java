@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -125,7 +126,12 @@ public class ZgcGenerationalModeExamples {
 	}
 
 	private String javaExecutable() {
-		return System.getProperty("java.home") + File.separator + "bin" + File.separator + "java";
+		String executable = isWindows() ? "java.exe" : "java";
+		return new File(new File(System.getProperty("java.home"), "bin"), executable).getPath();
+	}
+
+	private boolean isWindows() {
+		return System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("win");
 	}
 
 	/**

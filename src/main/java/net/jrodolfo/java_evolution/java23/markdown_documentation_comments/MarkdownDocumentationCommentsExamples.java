@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -84,7 +85,12 @@ public class MarkdownDocumentationCommentsExamples {
 	}
 
 	private String javadocExecutable() {
-		return System.getProperty("java.home") + File.separator + "bin" + File.separator + "javadoc";
+		String executable = isWindows() ? "javadoc.exe" : "javadoc";
+		return new File(new File(System.getProperty("java.home"), "bin"), executable).getPath();
+	}
+
+	private boolean isWindows() {
+		return System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("win");
 	}
 
 	/**
