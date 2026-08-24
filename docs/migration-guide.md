@@ -207,6 +207,8 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java25/stable_values/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java25/stable_values/StableValuesPreviewExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java25/structured_concurrency/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java25/vector_api/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java25/vector_api/VectorApiTenthIncubatorExamples.java`
 
 Run:
 
@@ -214,7 +216,7 @@ Run:
 mvn "-Dtest=UnnamedVariablesPatternsExamplesTest,StreamGatherersExamplesTest" test
 mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
 mvn "-Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest,HkdfKeyDerivationExampleTest" test
-mvn "-Dtest=StableValuesPreviewExamplesTest,StructuredConcurrencyFifthPreviewNotesTest" test
+mvn "-Dtest=StableValuesPreviewExamplesTest,StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorExamplesTest" test
 ```
 
 Interview angle: explain Java 25 as an LTS baseline where several features become final, while preview, incubator, runtime, tooling, and security topics still require maturity discipline.

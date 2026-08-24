@@ -170,11 +170,11 @@ The Vector API continued as a tenth incubator. It is intended for computations t
 
 The core idea is Single Instruction, Multiple Data (SIMD): one operation can be applied across multiple lanes of data. Instead of processing one `int` at a time, vector-style code can describe work over a group of `int` values and let the JVM map that work to CPU vector instructions when possible.
 
-This repository keeps it as notes because the API requires the `jdk.incubator.vector` module and is still evolving.
+Because this is an incubator API, the main Maven build does not import `jdk.incubator.vector` directly. `VectorApiTenthIncubatorExamples` writes a small child source file, compiles it with `javac --add-modules jdk.incubator.vector --release 25`, and runs it with `java --add-modules jdk.incubator.vector`.
 
-Explanatory module: [`vector_api`](vector_api/README.md)
+Executable incubator module: [`vector_api`](vector_api/README.md)
 
-Test: `VectorApiTenthIncubatorNotesTest`
+Test: `VectorApiTenthIncubatorExamplesTest`
 
 ## Runtime, Diagnostics, Memory, and GC Modules
 
@@ -189,7 +189,7 @@ Some of these remain notes because they involve memory layout or garbage-collect
 
 ## How To Read This Package
 
-Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for Stable Values, PEM encodings, AOT command-line ergonomics, and JFR method timing/tracing. Read the notes for primitive patterns, `structured_concurrency/README.md`, `vector_api/README.md`, object headers, and GC behavior.
+Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for Stable Values, PEM encodings, the Vector API, AOT command-line ergonomics, and JFR method timing/tracing. Read the notes for primitive patterns, `structured_concurrency/README.md`, object headers, and GC behavior.
 
 Run the focused tests:
 
@@ -198,7 +198,7 @@ mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
 mvn -Dtest=ModuleImportDeclarationsExamplesTest,CompactSourceFilesExamplesTest test
 mvn -Dtest=HkdfKeyDerivationExampleTest test
 mvn -Dtest=PrimitivePatternsThirdPreviewNotesTest,StableValuesPreviewExamplesTest,PemEncodingsPreviewExamplesTest test
-mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorNotesTest test
+mvn -Dtest=StructuredConcurrencyFifthPreviewNotesTest,VectorApiTenthIncubatorExamplesTest test
 mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersNotesTest,GenerationalShenandoahNotesTest test
 ```
 

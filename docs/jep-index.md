@@ -236,7 +236,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 502](https://openjdk.org/jeps/502) | Stable Values | Preview, Executable Example |
 | [JEP 470](https://openjdk.org/jeps/470) | PEM Encodings of Cryptographic Objects | Preview, Security, Executable Example |
 | [JEP 505](https://openjdk.org/jeps/505) | Structured Concurrency | Preview, Explanatory Module |
-| [JEP 508](https://openjdk.org/jeps/508) | Vector API | Incubator, Explanatory Module |
+| [JEP 508](https://openjdk.org/jeps/508) | Vector API | Incubator, Executable Example |
 | [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | Runtime, Tooling, Executable Example |
 | [JEP 509](https://openjdk.org/jeps/509) | JFR CPU-Time Profiling | Runtime, Experimental, Explanatory Module |
 | [JEP 518](https://openjdk.org/jeps/518) | JFR Cooperative Sampling | Runtime, Explanatory Module |

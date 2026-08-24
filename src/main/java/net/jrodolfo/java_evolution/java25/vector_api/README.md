@@ -2,7 +2,9 @@
 
 Java 25 continued the Vector API as a tenth incubator in JEP 508.
 
-This is an explanatory learning module. It does not compile a `jdk.incubator.vector` example as part of the Maven build because the API is still incubating and lives in the `jdk.incubator.vector` module. The goal here is to teach the concept faithfully without adding incubator-module build configuration to the whole project.
+This module is an executable incubator-module example. The main Maven build does not compile `jdk.incubator.vector` directly. Instead, `VectorApiTenthIncubatorExamples` writes a small child source file, compiles it with `javac --add-modules jdk.incubator.vector --release 25`, and runs it with `java --add-modules jdk.incubator.vector`.
+
+That keeps the repository build stable while still demonstrating the real Java 25 incubator API.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -102,7 +104,7 @@ sum.intoArray(result, index);
 
 The important idea is not the exact class names. The important idea is that the Java source explicitly describes vector operations that the JVM can map to CPU vector instructions when the platform supports them.
 
-## 6. Why This Repository Uses Notes
+## 6. How This Repository Runs The Incubator API
 
 The Vector API is still incubating in Java 25.
 
@@ -115,20 +117,21 @@ java --add-modules jdk.incubator.vector ...
 
 That would make this lightweight learning project more complicated for one feature that is not final yet.
 
-This module therefore uses real syntax examples in documentation, but it does not create executable-looking Java code that merely returns vector source code as strings.
+That is why this module uses a child process. The repository class itself remains ordinary Java 25-compatible code, while the generated child program imports and executes `jdk.incubator.vector`.
 
 ## 7. What The Test Proves
 
-`VectorApiTenthIncubatorNotesTest` does not test the incubator API itself.
+`VectorApiTenthIncubatorExamplesTest` tests the incubator API through a child compiler and child JVM.
 
-Instead, it protects the learning note. The test verifies that the note explains:
+The test verifies that:
 
-- the scalar-loop problem
-- the Java 25 Vector API idea
-- the SIMD terminology
-- the incubator-module reason this project keeps the feature explanatory
+- the child source compiles only when the `jdk.incubator.vector` module is added
+- vector species metadata is visible
+- array values are loaded into `IntVector` lanes
+- lane-wise addition produces the expected numeric result
+- leftover elements are handled by a scalar tail
 
-That is the right level of testing for a notes-only incubator feature in this repository.
+The test does not prove that a particular CPU instruction was used, and it does not benchmark performance. It proves the API shape and numeric correctness that learners can observe directly.
 
 ## 8. Realistic Use Case
 
