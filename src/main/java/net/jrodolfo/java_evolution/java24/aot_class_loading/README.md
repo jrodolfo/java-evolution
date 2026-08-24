@@ -2,7 +2,9 @@
 
 Java 24 introduced ahead-of-time class loading and linking in JEP 483.
 
-This feature is documented as an explanatory module because it is about JVM startup behavior and deployment preparation. A normal unit test can check the learning notes, but it cannot faithfully prove startup improvement without a separate runtime workflow and measurement setup.
+This module is executable. It compiles a tiny Java application, packages it as a JAR, records AOT configuration, creates an AOT cache, and runs the application with that cache.
+
+The example proves the workflow. It does not benchmark startup speed.
 
 ## What Problem Does This Feature Solve?
 
@@ -62,21 +64,61 @@ The goal is not to change Java source syntax. The goal is to reduce startup cost
 
 Java 24 introduced a way for the JVM to prepare class loading and linking ahead of application execution.
 
-The practical result is a runtime optimization path: deployments can prepare class metadata in advance so application startup has less work to do.
+The explicit workflow has three steps:
 
-## Why This Is Notes-Only
+```bash
+java -XX:AOTMode=record \
+     -XX:AOTConfiguration=app.aotconf \
+     -cp app.jar com.example.App
 
-This repository focuses on small, didactic examples. Ahead-of-time class loading is not naturally demonstrated by a plain method call.
+java -XX:AOTMode=create \
+     -XX:AOTConfiguration=app.aotconf \
+     -XX:AOTCache=app.aot \
+     -cp app.jar
 
-A faithful demonstration would require a command-line workflow, an application run that records or creates cached data, and a second run that uses the prepared data. Measuring the benefit would also depend on machine, application shape, JVM options, and warm/cold startup conditions.
+java -XX:AOTCache=app.aot \
+     -cp app.jar com.example.App
+```
 
-For that reason, this module teaches the mental model and keeps the test focused on the important concepts.
+The first run is a training run. The second command creates the cache. The third run uses the cache.
+
+## What The Example Shows
+
+[`AotClassLoadingExamples`](AotClassLoadingExamples.java) performs that workflow with child processes:
+
+- writes a tiny Java application that uses `List` and streams
+- compiles it with `javac`
+- packages it with `jar`
+- records AOT configuration with `-XX:AOTMode=record`
+- creates an AOT cache with `-XX:AOTMode=create`
+- runs with `-XX:AOTMode=on` and `-XX:AOTCache=...`
+
+The final run uses `-XX:AOTMode=on` so cache problems fail loudly instead of silently falling back.
+
+## What The Test Proves
+
+`AotClassLoadingExamplesTest` verifies that:
+
+- `javac` and `jar` complete successfully
+- the training run creates a non-empty `.aotconf` file
+- the create step creates a non-empty `.aot` cache file
+- the final run opens the AOT cache
+- the final run reports `Using AOT-linked classes: true`
+- the application still runs normally
+
+The test intentionally does not measure startup time. Timing depends on machine, storage, JVM configuration, cache state, and repeated-run methodology.
 
 ## Relation To Java 25
 
-Java 25 continues the ahead-of-time story with command-line ergonomics. The Java 25 `aot_command_line` module explains how the workflow became easier to use from the command line.
+Java 25 continues the ahead-of-time story with command-line ergonomics.
 
-Read this module first to understand the runtime problem. Then read the Java 25 module to see the tooling improvement.
+Read this module first to understand the explicit Java 24 workflow:
+
+```text
+record configuration -> create cache -> run with cache
+```
+
+Then read the Java 25 `aot_command_line` module to see how `-XX:AOTCacheOutput=...` simplifies the common path.
 
 ## Remember This
 

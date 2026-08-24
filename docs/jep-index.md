@@ -213,7 +213,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 491](https://openjdk.org/jeps/491) | Synchronize Virtual Threads without Pinning | Runtime, Executable Example |
 | [JEP 496](https://openjdk.org/jeps/496) | Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism | Final, Security, Example |
 | [JEP 497](https://openjdk.org/jeps/497) | Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm | Final, Security, Example |
-| [JEP 483](https://openjdk.org/jeps/483) | Ahead-of-Time Class Loading & Linking | Runtime, Notes |
+| [JEP 483](https://openjdk.org/jeps/483) | Ahead-of-Time Class Loading & Linking | Runtime, Tooling, Executable Example |
 | [JEP 478](https://openjdk.org/jeps/478) | Key Derivation Function API | Preview, Security, Notes |
 | [JEP 492](https://openjdk.org/jeps/492) | Flexible Constructor Bodies | Preview, Notes |
 | [JEP 494](https://openjdk.org/jeps/494) | Module Import Declarations | Preview, Notes |

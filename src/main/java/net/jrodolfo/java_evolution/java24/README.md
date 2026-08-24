@@ -71,11 +71,11 @@ Executable test: `ModuleLatticeCryptoExamplesTest`
 
 Java startup can be affected by class loading and linking work. Java 24 introduced ahead-of-time class loading and linking to improve startup behavior.
 
-This is an operational/runtime feature, so it is documented as notes.
+This is an operational/runtime feature, so it is demonstrated with a child-process cache workflow rather than an ordinary in-process method call.
 
-Explanatory module: [`aot_class_loading`](aot_class_loading/README.md)
+Executable runtime module: [`aot_class_loading`](aot_class_loading/README.md)
 
-Test: `AotClassLoadingNotesTest`
+Test: `AotClassLoadingExamplesTest`
 
 ## Key Derivation Function API Preview
 
@@ -108,7 +108,7 @@ Run the focused tests:
 ```bash
 mvn -Dtest=StreamGatherersExamplesTest test
 mvn -Dtest=ClassFileInspectorTest,SecurityManagerDisabledExamplesTest,VirtualThreadSynchronizationExamplesTest test
-mvn -Dtest=AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest test
+mvn -Dtest=AotClassLoadingExamplesTest,KeyDerivationFunctionPreviewNotesTest test
 mvn -Dtest=ModuleLatticeCryptoExamplesTest test
 mvn -Dtest=PrimitivePatternsSecondPreviewNotesTest,FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest test
 mvn -Dtest=ScopedValuesFourthPreviewNotesTest,StructuredConcurrencyFourthPreviewNotesTest test

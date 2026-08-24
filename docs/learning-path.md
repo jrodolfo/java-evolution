@@ -247,7 +247,7 @@ Run:
 ```bash
 mvn "-Dtest=StreamGatherersExamplesTest,ClassFileInspectorTest,SecurityManagerDisabledExamplesTest" test
 mvn "-Dtest=ModuleLatticeCryptoExamplesTest" test
-mvn "-Dtest=VirtualThreadSynchronizationExamplesTest,AotClassLoadingNotesTest,KeyDerivationFunctionPreviewNotesTest" test
+mvn "-Dtest=VirtualThreadSynchronizationExamplesTest,AotClassLoadingExamplesTest,KeyDerivationFunctionPreviewNotesTest" test
 mvn "-Dtest=FlexibleConstructorBodiesThirdPreviewNotesTest,ModuleImportDeclarationsSecondPreviewNotesTest,PrimitivePatternsSecondPreviewNotesTest" test
 mvn "-Dtest=ScopedValuesFourthPreviewNotesTest,StructuredConcurrencyFourthPreviewNotesTest" test
 ```
