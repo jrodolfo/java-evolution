@@ -10,9 +10,22 @@ AWT provided GUI components, but they were closely tied to native peers. Swing o
 
 Swing provided components such as `JFrame`, `JPanel`, `JButton`, `JTable`, and the pluggable look-and-feel model.
 
-## 3. Why This Repository Uses Notes
+Swing also made model/action/event concepts central to desktop UI code:
 
-GUI examples are awkward in headless Maven and CI environments. A faithful demo is visual and event-driven, not a pure method.
+- models hold component data
+- actions describe reusable user commands
+- the Event Dispatch Thread (EDT) coordinates UI work
+
+## 3. What Does The Example Show?
+
+`SwingExamples` is a headless executable example. It demonstrates:
+
+- `DefaultListModel` for ordered list data
+- `DefaultTableModel` for table data
+- `Action` and `JButton#doClick()` for event-driven commands
+- `SwingUtilities.invokeAndWait(...)` for running code on the EDT
+
+The example does not show visible windows, layout managers, painting, platform Look and Feel, or real mouse/keyboard interaction. Those parts of Swing are visual and environment-dependent.
 
 ## 4. Remember This
 
