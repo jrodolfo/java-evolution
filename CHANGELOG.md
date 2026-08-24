@@ -26,6 +26,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 25 module import declarations from notes-only material into an executable source-tooling example.
 - Converted Java 7 invokedynamic from notes-only material into an executable linkage and bytecode-inspection example.
 - Converted Java 1.1 JDBC from notes-only material into an executable driver-registration example.
+- Converted Java 4 integrated security APIs from notes-only material into executable local JCA/JCE examples.
 
 ## v1.4.1
 

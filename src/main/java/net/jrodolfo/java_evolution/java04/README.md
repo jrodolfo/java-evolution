@@ -64,19 +64,23 @@ Test: `JaxpExamplesTest`
 
 Java 4 integrated important security APIs such as JCE, JSSE, and JAAS into the standard platform.
 
-Explanatory module: [`security`](security/README.md)
+The executable module focuses on local JCA/JCE operations such as provider
+discovery, message digests, secure random bytes, authenticated encryption,
+HMAC, and digital signatures.
 
-Test: `SecurityIntegrationNotesTest`
+Example module: [`security`](security/README.md)
+
+Test: `SecurityIntegrationExamplesTest`
 
 ## How To Read This Package
 
-Start with `assertions/AssertionExamples`, `RegexExamples`, `NioExamples`, `LoggingExamples`, `ChainedExceptionExamples`, and `xml/JaxpExamples`. Then read the notes modules for runtime/configuration/platform topics.
+Start with `assertions/AssertionExamples`, `RegexExamples`, `NioExamples`, `LoggingExamples`, `ChainedExceptionExamples`, `xml/JaxpExamples`, and `security/SecurityIntegrationExamples`. Then read the Preferences notes module for runtime/configuration caveats.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=RegexExamplesTest,NioExamplesTest,LoggingExamplesTest,ChainedExceptionExamplesTest test
-mvn -Dtest=JaxpExamplesTest,AssertionExamplesTest,PreferencesNotesTest,SecurityIntegrationNotesTest test
+mvn -Dtest=JaxpExamplesTest,AssertionExamplesTest,PreferencesNotesTest,SecurityIntegrationExamplesTest test
 ```
 
 After this package, continue with Java 5 for generics, enums, annotations, enhanced loops, varargs, formatted output, and concurrency utilities.

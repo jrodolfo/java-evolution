@@ -60,7 +60,7 @@ Learning notes: [java04 README](../src/main/java/net/jrodolfo/java_evolution/jav
 | Chained exceptions | `ChainedExceptionExamples` | `ChainedExceptionExamplesTest` |
 | Preferences API | [`preferences/PreferencesNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/preferences/PreferencesNotes.java) | [`PreferencesNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/preferences/PreferencesNotesTest.java) |
 | XML/JAXP | [`xml/JaxpExamples`](../src/main/java/net/jrodolfo/java_evolution/java04/xml/JaxpExamples.java) | [`JaxpExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/xml/JaxpExamplesTest.java) |
-| Integrated security APIs | [`security/SecurityIntegrationNotes`](../src/main/java/net/jrodolfo/java_evolution/java04/security/SecurityIntegrationNotes.java) | [`SecurityIntegrationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/security/SecurityIntegrationNotesTest.java) |
+| Integrated security APIs | [`security/SecurityIntegrationExamples`](../src/main/java/net/jrodolfo/java_evolution/java04/security/SecurityIntegrationExamples.java) | [`SecurityIntegrationExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java04/security/SecurityIntegrationExamplesTest.java) |
 
 ## Java 5
 

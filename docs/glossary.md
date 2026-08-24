@@ -37,7 +37,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | INET | Internet Protocol family | The protocol family used by Internet sockets in Java networking APIs. In this project, it appears when contrasting `StandardProtocolFamily.INET` with Unix-domain sockets. |
 | Incubator | Incubator Module or API | A non-final API delivered for experimentation before it is finalized, changed, or removed. |
 | IO | Input/Output | Reading from or writing to external resources. In compact source-file examples, `IO.println(...)` is a small console output helper available to simple source programs. |
-| JAAS | Java Authentication and Authorization Service | Java security APIs for representing authenticated subjects and checking permissions. In this project, JAAS appears in the Java 4 security integration notes. |
+| JAAS | Java Authentication and Authorization Service | Java security APIs for representing authenticated subjects and checking permissions. In this project, JAAS appears as Java 4 security integration context while executable examples focus on local JCA/JCE operations. |
 | JAR | Java Archive | A packaged Java artifact produced by build tools such as Maven. |
 | JAXB | Java Architecture for XML Binding | A Java/XML binding technology used to map XML documents to Java objects. It appears in the Java 6 web-service notes as part of the older bundled enterprise-facing stack. |
 | JAX-WS | Java API for XML Web Services | The Java API for SOAP-based XML web services. It appears in the Java 6 web-service notes as platform support that later moved out of the core JDK. |
