@@ -17,6 +17,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -203,27 +204,31 @@ public class InvokeDynamicExamples {
 				.directory(workingDirectory.toFile())
 				.redirectErrorStream(true)
 				.start();
+		CompletableFuture<String> output = CompletableFuture.supplyAsync(() -> readOutput(process.getInputStream()));
 
 		boolean finished = process.waitFor(10, TimeUnit.SECONDS);
 		if (!finished) {
 			process.destroyForcibly();
 			process.waitFor(5, TimeUnit.SECONDS);
-			String output = readOutput(process.getInputStream());
-			return new CommandResult(-1, output);
+			return new CommandResult(-1, output.join());
 		}
 
-		String output = readOutput(process.getInputStream());
-		return new CommandResult(process.exitValue(), output);
+		return new CommandResult(process.exitValue(), output.join());
 	}
 
-	private String readOutput(InputStream inputStream) throws IOException {
-		byte[] buffer = new byte[1024];
-		ByteArrayOutputStream output = new ByteArrayOutputStream();
-		int read;
-		while ((read = inputStream.read(buffer)) != -1) {
-			output.write(buffer, 0, read);
+	private String readOutput(InputStream inputStream) {
+		try {
+			byte[] buffer = new byte[1024];
+			ByteArrayOutputStream output = new ByteArrayOutputStream();
+			int read;
+			while ((read = inputStream.read(buffer)) != -1) {
+				output.write(buffer, 0, read);
+			}
+			return new String(output.toByteArray(), StandardCharsets.UTF_8);
 		}
-		return new String(output.toByteArray(), StandardCharsets.UTF_8);
+		catch (IOException exception) {
+			throw new IllegalStateException("could not read child process output", exception);
+		}
 	}
 
 	private String javaExecutable() {

@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -77,20 +78,29 @@ public class CompactObjectHeadersExamples {
 		command.add("-version");
 
 		Process process = new ProcessBuilder(command).redirectErrorStream(true).start();
+		CompletableFuture<String> outputReader = CompletableFuture.supplyAsync(() -> readOutput(process));
 		boolean finished = process.waitFor(10, TimeUnit.SECONDS);
 		if (!finished) {
 			process.destroyForcibly();
 			process.waitFor(5, TimeUnit.SECONDS);
-			String output = new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
-			throw new IllegalStateException("child JVM timed out\n" + output);
+			throw new IllegalStateException("child JVM timed out\n" + outputReader.join());
 		}
 
-		String output = new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+		String output = outputReader.join();
 		int exitCode = process.exitValue();
 		if (exitCode != 0) {
 			throw new IllegalStateException("child JVM failed with exit code " + exitCode + "\n" + output);
 		}
 		return parseFlagState(output);
+	}
+
+	private String readOutput(Process process) {
+		try {
+			return new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+		}
+		catch (IOException exception) {
+			throw new IllegalStateException("could not read child process output", exception);
+		}
 	}
 
 	private VmFlagState parseFlagState(String output) {
