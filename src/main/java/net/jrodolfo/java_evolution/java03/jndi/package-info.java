@@ -1,4 +1,4 @@
 /**
- * Explanatory module for JNDI.
+ * Executable example for JNDI.
  */
 package net.jrodolfo.java_evolution.java03.jndi;

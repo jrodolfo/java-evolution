@@ -10,9 +10,13 @@ Applications often need to look up named resources such as directory entries, en
 
 JNDI standardized naming and directory concepts around contexts, names, lookups, bindings, and providers.
 
-## 3. Why This Repository Uses Notes
+## 3. What Does The Example Show?
 
-A meaningful JNDI example needs a naming or directory provider. Without that provider, a unit test mostly exercises setup ceremony.
+The example configures an `InitialContext` with a small in-memory provider through the standard `Context.INITIAL_CONTEXT_FACTORY` property.
+
+It demonstrates binding names to objects, looking objects up by name, rebinding an existing name, handling missing names, listing names, and listing full bindings.
+
+Real deployments often used LDAP, DNS, RMI registries, application-server resources, or directory services. This repository uses an in-memory provider so the JNDI provider model can be exercised without external infrastructure.
 
 ## 4. Remember This
 

@@ -32,9 +32,9 @@ Test: `ShutdownHookExamplesTest`
 
 Java Naming and Directory Interface (JNDI) provides a standard API for naming and directory services.
 
-Explanatory module: [`jndi`](jndi/README.md)
+Example module: [`jndi`](jndi/README.md)
 
-Test: `JndiNotesTest`
+Test: `JndiExamplesTest`
 
 ## Legacy Integration
 
@@ -46,13 +46,13 @@ Test: `LegacyIntegrationNotesTest`
 
 ## How To Read This Package
 
-Start with `DynamicProxyExamples`, then `TimerExamples`, then the notes modules.
+Start with `DynamicProxyExamples`, then `TimerExamples`, then the executable modules for shutdown hooks and JNDI. Finish with the legacy integration notes.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=DynamicProxyExamplesTest,TimerExamplesTest test
-mvn -Dtest=ShutdownHookExamplesTest,JndiNotesTest,LegacyIntegrationNotesTest test
+mvn -Dtest=ShutdownHookExamplesTest,JndiExamplesTest,LegacyIntegrationNotesTest test
 ```
 
 After this package, continue with Java 4 for assertions, regex, NIO, logging, chained exceptions, preferences, XML, and integrated security APIs.
