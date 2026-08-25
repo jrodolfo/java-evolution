@@ -142,6 +142,18 @@ The published JavaDoc site is available at https://jrodolfo.github.io/java-evolu
 - JavaDoc is generated locally with `make docs` and published through GitHub Pages.
 - GitHub Actions use the same Make targets where practical, so local commands and CI stay aligned.
 
+## Why a Single Maven Module?
+
+This repository is intentionally a single-module Maven project.
+
+The `java01` through `java26` packages are learning chapters that organize examples by the Java release in which features were introduced. They are not separate libraries or deployable artifacts.
+
+Keeping the repository as one Maven project provides a single source tree, test suite, JavaDoc site, dependency configuration, and build model.
+
+Maven remains the Java build system and owns compilation, testing, and JavaDoc generation.
+
+The Makefile does not replace Maven. It provides convenient repository-level commands that combine Maven with other development and documentation tasks, such as JDK checks, documentation audits, link checking, demo test groups, and release validation.
+
 ## Important Design Choice
 
 The Maven build uses a single Java release for every package:
