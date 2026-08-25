@@ -22,7 +22,7 @@ The emphasis is clarity over cleverness. Examples should stay small, readable, a
 - Maven 3.9+
 - GNU Make, if you want to use the documented `make` targets
 - Node.js, if you want to run `make docs-audit`, `make docs-check`, or `make release-check` locally
-- `lychee`, if you want to run `make docs-check` or `make release-check` locally
+- [`lychee`](https://github.com/lycheeverse/lychee), a Markdown/HTML link checker, if you want to run `make docs-check` or `make release-check` locally
 
 This repository uses the local Maven installation on your machine. It does not use the Maven wrapper.
 
