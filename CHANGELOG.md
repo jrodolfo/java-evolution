@@ -8,6 +8,23 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 No changes yet.
 
+## v1.5.3
+
+Patch release focused on cross-platform JDK 25 build validation.
+
+### Changed
+
+- Expanded the GitHub Actions build workflow to run the main Maven test gate on Ubuntu, macOS, and Windows.
+- Kept the cross-platform CI check focused on JDK 25, matching the repository build baseline while Java 26 remains notes-only current-release awareness.
+- Preserved separate documentation and link-check workflows so each validation gate reports the failure type clearly.
+
+### Validation
+
+- GitHub Actions `build` workflow on Ubuntu, macOS, and Windows with Oracle JDK 25
+- Windows 11 IntelliJ Maven install
+- Windows 11 `make test`
+- Windows 11 `make links`
+
 ## v1.5.2
 
 Patch release focused on Java 5 and Java 8 API-design learning clarity.
