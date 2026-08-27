@@ -8,6 +8,27 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 No changes yet.
 
+## v1.5.2
+
+Patch release focused on Java 5 and Java 8 API-design learning clarity.
+
+### Changed
+
+- Improved Java 5 enhanced-for examples to emphasize that the loop works with arrays and any `Iterable`, not only `List`.
+- Added a small custom `Iterable` example to show how application types can become enhanced-for friendly.
+- Expanded Java 5 generics examples with upper-bounded wildcards and multiple bounds for API-design context.
+- Expanded Java 5 varargs examples with a mandatory first-argument pattern and an `Iterable` overload for callers that already have grouped values.
+- Expanded Java 8 lambda examples to show project-owned APIs accepting `Predicate`, `Function`, `Supplier`, and `Consumer`, clarifying that lambdas are not only a Streams feature.
+- Standardized JavaDoc tag ordering for generic method type parameters.
+
+### Validation
+
+- Java 5 and Java 8 focused Maven test suites
+- `mvn test`
+- `make docs`
+- `node scripts/check-doc-navigation.mjs`
+- `git diff --check`
+
 ## v1.5.1
 
 Patch release focused on Windows validation stability for child-process examples.
