@@ -27,9 +27,9 @@ public class GenericsExamples {
 	/**
 	 * Returns the first element from a typed list without a cast.
 	 *
+	 * @param <T> the list element type
 	 * @param values values to inspect
 	 * @return the first value
-	 * @param <T> the list element type
 	 */
 	public <T> T first(List<T> values) {
 		return values.get(0);
@@ -77,9 +77,9 @@ public class GenericsExamples {
 	 * intersection-type-style constraint in normal source code.
 	 * </p>
 	 *
+	 * @param <T> type that satisfies both bounds
 	 * @param feature feature that has both a name and a priority
 	 * @return human-readable feature description
-	 * @param <T> type that satisfies both bounds
 	 */
 	public <T extends NamedFeature & PrioritizedFeature> String describePrioritizedFeature(T feature) {
 		return feature.name() + " has priority " + feature.priority();

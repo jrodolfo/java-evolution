@@ -65,10 +65,10 @@ public class LambdaExamples {
 	/**
 	 * Filters values using a caller-supplied {@link Predicate}.
 	 *
+	 * @param <T> value type
 	 * @param values values to inspect
 	 * @param predicate behavior that decides whether a value is kept
 	 * @return values accepted by the predicate
-	 * @param <T> value type
 	 */
 	public <T> List<T> keepMatching(Iterable<T> values, Predicate<? super T> predicate) {
 		List<T> matchingValues = new ArrayList<>();
@@ -83,11 +83,11 @@ public class LambdaExamples {
 	/**
 	 * Transforms values using a caller-supplied {@link Function}.
 	 *
+	 * @param <T> input value type
+	 * @param <R> result value type
 	 * @param values values to transform
 	 * @param mapper behavior that maps each input value to an output value
 	 * @return transformed values
-	 * @param <T> input value type
-	 * @param <R> result value type
 	 */
 	public <T, R> List<R> transform(Iterable<T> values, Function<? super T, ? extends R> mapper) {
 		List<R> transformedValues = new ArrayList<>();
@@ -100,11 +100,11 @@ public class LambdaExamples {
 	/**
 	 * Returns an existing value or obtains a replacement from a {@link Supplier}.
 	 *
+	 * @param <T> value type
 	 * @param value existing value, possibly {@code null}
 	 * @param fallback behavior that supplies a value when the existing value is
 	 * {@code null}
 	 * @return existing value or supplied fallback
-	 * @param <T> value type
 	 */
 	public <T> T valueOrFallback(T value, Supplier<? extends T> fallback) {
 		if (value != null) {
@@ -116,9 +116,9 @@ public class LambdaExamples {
 	/**
 	 * Sends each value to a caller-supplied {@link Consumer}.
 	 *
+	 * @param <T> value type
 	 * @param values values to visit
 	 * @param consumer behavior that receives each value
-	 * @param <T> value type
 	 */
 	public <T> void visitEach(Iterable<T> values, Consumer<? super T> consumer) {
 		for (T value : values) {
