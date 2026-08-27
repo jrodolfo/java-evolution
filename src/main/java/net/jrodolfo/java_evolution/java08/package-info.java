@@ -4,7 +4,9 @@
  * <p>
  * Java 8 was a major release for day-to-day Java programming. It introduced
  * lambda expressions, method references, the Stream API, Optional, default
- * methods, CompletableFuture, and the modern Date and Time API.
+ * methods, CompletableFuture, and the modern Date and Time API. Lambdas are
+ * useful beyond streams because application APIs can accept standard functional
+ * interfaces from {@code java.util.function}.
  * </p>
  *
  * <p>

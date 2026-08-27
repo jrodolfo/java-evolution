@@ -3,9 +3,9 @@
  *
  * <p>
  * Java 5 was a major language and library release. It introduced generics,
- * enhanced {@code for} loops, autoboxing, enums, varargs, static imports,
- * annotations, covariant return types, formatted output, and the
- * {@code java.util.concurrent} utilities.
+ * including bounded wildcards and multiple bounds, enhanced {@code for} loops,
+ * autoboxing, enums, varargs, static imports, annotations, covariant return
+ * types, formatted output, and the {@code java.util.concurrent} utilities.
  * </p>
  *
  * <p>

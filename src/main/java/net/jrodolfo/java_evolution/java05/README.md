@@ -12,6 +12,8 @@ Before Java 5, collection APIs commonly used raw `Object` values. Callers had to
 
 Generics let classes and methods declare type parameters such as `List<String>`. The compiler can then reject many wrong-type operations before the program runs.
 
+They also support API design. A method that only reads values can accept a producer such as `Iterable<? extends ReleaseFeature>`, allowing callers to pass iterables of more specific feature types without copying them. Java 5 type parameters can also have multiple bounds, such as `<T extends NamedFeature & PrioritizedFeature>`, when a method needs more than one capability.
+
 Example: `GenericsExamples`
 
 Test: `GenericsExamplesTest`
@@ -27,6 +29,8 @@ for (String name : names) {
     total += name.length();
 }
 ```
+
+The loop works with arrays and any `Iterable`, not only `List`. That means an API can often accept `Iterable<T>` when it only needs traversal, and application classes can implement `Iterable<T>` to become enhanced-for friendly.
 
 Example: `EnhancedForLoopExamples`
 
@@ -57,6 +61,8 @@ Test: `EnumExamplesTest`
 Before Java 5, methods that accepted a variable number of values usually required callers to manually create an array.
 
 Varargs let a method declare `String... labels`, so callers can pass zero, one, or many arguments naturally. Inside the method, the parameter is still an array.
+
+A method can put mandatory parameters before the varargs tail, such as `max(int first, int... rest)`, to make invalid empty calls impossible. Varargs are convenient for callers passing individual values; an `Iterable` or collection overload is often friendlier when callers already have grouped values.
 
 Example: `VarargsExamples`
 

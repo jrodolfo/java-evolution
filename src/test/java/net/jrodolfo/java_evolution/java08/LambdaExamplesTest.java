@@ -2,6 +2,7 @@ package net.jrodolfo.java_evolution.java08;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -52,6 +53,33 @@ class LambdaExamplesTest {
 		assertThat(multiplication)
 				.as("The second lambda should multiply both numbers")
 				.isEqualTo(50);
+	}
+
+	@Test
+	void standardFunctionalInterfacesCanBeUsedInProjectApis() {
+		// Given
+		List<String> names = Arrays.asList("Ana", "John", "Maria");
+		List<String> visitedNames = new ArrayList<>();
+
+		// When
+		List<String> longNames = examples.keepMatching(names, name -> name.length() >= 4);
+		List<Integer> nameLengths = examples.transform(names, name -> Integer.valueOf(name.length()));
+		String fallback = examples.valueOrFallback(null, () -> "generated");
+		examples.visitEach(names, name -> visitedNames.add(name.toUpperCase()));
+
+		// Then
+		assertThat(longNames)
+				.as("A project method can accept Predicate<T>, not only Stream.filter")
+				.containsExactly("John", "Maria");
+		assertThat(nameLengths)
+				.as("A project method can accept Function<T, R> to map values")
+				.containsExactly(Integer.valueOf(3), Integer.valueOf(4), Integer.valueOf(5));
+		assertThat(fallback)
+				.as("A project method can accept Supplier<T> for deferred fallback creation")
+				.isEqualTo("generated");
+		assertThat(visitedNames)
+				.as("A project method can accept Consumer<T> for side-effect callbacks")
+				.containsExactly("ANA", "JOHN", "MARIA");
 	}
 
 	@Test

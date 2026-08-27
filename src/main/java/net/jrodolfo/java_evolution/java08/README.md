@@ -16,7 +16,7 @@ Lambda expressions solved this by letting you pass small blocks of behavior dire
 name -> name.length() >= 4
 ```
 
-This made APIs such as `Comparator`, `Predicate`, `Function`, and `Consumer` much easier to use. Lambdas are the foundation for streams and many modern Java APIs.
+This made APIs such as `Comparator`, `Predicate`, `Function`, and `Consumer` much easier to use. Lambdas are the foundation for streams and many modern Java APIs, but they are not only a Streams feature. Your own methods can accept standard functional interfaces from `java.util.function` when callers need to provide behavior.
 
 Example: `LambdaExamples`
 
