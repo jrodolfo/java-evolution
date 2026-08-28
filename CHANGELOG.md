@@ -6,7 +6,16 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
-- Fixed the Makefile to honor the JDK selected by `JAVA_HOME`, including JDKs provisioned by GitHub Actions on macOS.
+No changes yet.
+
+## v1.6.2
+
+Patch release focused on GitHub Actions JDK selection and cleaner JDK 26 build output.
+
+### Changed
+
+- Fixed the Makefile to honor an explicitly selected `JAVA_HOME`, including JDKs provisioned by GitHub Actions on macOS.
+- Suppressed expected JDK 26 removal warnings for the historical Java 2 `SocketPermission` example and test.
 
 ## v1.6.1
 
