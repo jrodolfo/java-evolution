@@ -234,7 +234,7 @@ Start here depending on what you need:
 - [Feature Map](docs/feature-map.md): class-by-class navigation table.
 - [Status Matrix](docs/status-matrix.md): feature status, example class, test class, and reference links.
 - [Release Checklist](docs/release/checklist.md): repeatable release process.
-- [v1.5.3 Release Notes](docs/release/notes-v1.5.3.md): latest GitHub release text; older release notes live in `docs/release/`.
+- [v1.6.0 Release Notes](docs/release/notes-v1.6.0.md): latest GitHub release text; older release notes live in `docs/release/`.
 - [JavaDoc Site](https://jrodolfo.github.io/java-evolution/): generated API documentation published by GitHub Pages.
 
 ## Feature Index

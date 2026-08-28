@@ -112,7 +112,7 @@ mvn -Dtest=FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest,AotOb
 mvn -Dtest=StructuredConcurrencySixthPreviewNotesTest,LazyConstantsSecondPreviewNotesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
-Java 26 is mostly represented as C2 explanatory material. HTTP/3, final-field restrictions, and Applet API removal are represented as C1 executable examples after focused feasibility review.
+Java 26 is mostly represented as C2 explanatory material. HTTP/3, final-field restrictions, Applet API removal, and AOT object caching are represented as C1 executable examples after focused feasibility review.
 
 ## References
 
