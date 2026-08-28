@@ -33,7 +33,7 @@ function Set-Java26Home {
 
     $pathParts = $env:Path -split ';' | Where-Object {
         -not [string]::IsNullOrWhiteSpace($_) -and
-        $_ -ne $javaBin
+                $_ -ne $javaBin
     }
 
     $env:Path = (@($javaBin) + $pathParts) -join ';'
@@ -66,13 +66,14 @@ $searchRoots = @(
     'C:\dev\apps',
     'C:\Program Files\Java',
     'C:\Program Files\Eclipse Adoptium',
-    'C:\Program Files\Microsoft'
+    'C:\Program Files\Microsoft',
+    'C:\Program Files\Zulu'
 )
 
 foreach ($root in $searchRoots) {
     if (Test-Path -LiteralPath $root -PathType Container) {
-        $matches = Get-ChildItem -LiteralPath $root -Directory -Filter 'jdk-26*' -ErrorAction SilentlyContinue |
-            Sort-Object Name -Descending
+        $matches = Get-ChildItem -LiteralPath $root -Directory -ErrorAction SilentlyContinue |
+                Sort-Object Name -Descending
 
         foreach ($match in $matches) {
             $candidates += $match.FullName
@@ -93,7 +94,7 @@ Could not find a JDK 26 installation.
 Pass the JDK path explicitly, or set JAVA26_HOME or JDK26_HOME first.
 
 Examples:
-  .\scripts\use-java-26-windows.ps1 -JavaHome C:\dev\apps\jdk-26.0.2.1
-  `$env:JAVA26_HOME = 'C:\dev\apps\jdk-26.0.2.1'; .\scripts\use-java-26-windows.ps1
+  .\scripts\use-java-26-windows.ps1 -JavaHome 'C:\Program Files\Zulu\zulu-26'
+  `$env:JAVA26_HOME = 'C:\Program Files\Zulu\zulu-26'; .\scripts\use-java-26-windows.ps1
 "@
 exit 1
