@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.UncheckedIOException;
 import java.net.InetSocketAddress;
 import java.net.SocketException;
 import java.net.URI;
@@ -98,10 +99,26 @@ class HttpClientExamplesTest {
 			HttpServer server = HttpServer.create(new InetSocketAddress("localhost", 0), 0);
 			server.createContext("/java11", exchange -> respondWithText(exchange, responseBody, requestMethod));
 			return server;
-		} catch (SocketException exception) {
-			assumeTrue(false, "local HTTP server binding is not permitted in this environment");
+		} catch (IOException exception) {
+			assumeTrue(!hasCause(exception, SocketException.class),
+					"local HTTP server binding is not permitted in this environment");
+			throw exception;
+		} catch (UncheckedIOException exception) {
+			assumeTrue(!hasCause(exception, SocketException.class),
+					"local HTTP server binding is not permitted in this environment");
 			throw exception;
 		}
+	}
+
+	private boolean hasCause(Throwable throwable, Class<? extends Throwable> causeType) {
+		Throwable current = throwable;
+		while (current != null) {
+			if (causeType.isInstance(current)) {
+				return true;
+			}
+			current = current.getCause();
+		}
+		return false;
 	}
 
 	private void respondWithText(
