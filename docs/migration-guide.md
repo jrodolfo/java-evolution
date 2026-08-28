@@ -226,7 +226,7 @@ Interview angle: explain Java 25 as an LTS baseline where several features becom
 
 ## Java 26 Awareness
 
-Java 26 is useful for current-release awareness and is now the repository build baseline. Some Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example; HTTP/3, final-field restrictions, and Applet API removal already have focused executable examples.
+Java 26 is useful for current-release awareness and is now the repository build baseline. Some Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example; HTTP/3, final-field restrictions, Applet API removal, and AOT object caching already have focused executable examples.
 
 What changed conceptually:
 
@@ -239,7 +239,7 @@ Compatibility concerns:
 
 - Java 26 topics should not be treated as executable examples merely because the repository now builds on JDK 26.
 - Final, preview, incubator, runtime, removal, and notes-only labels matter more than the release number alone.
-- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies. Final-field restrictions are executable because the runtime warning can be captured in an isolated child JVM. Applet API removal is executable because the removed package can be verified through a deterministic compiler failure.
+- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies. Final-field restrictions are executable because the runtime warning can be captured in an isolated child JVM. Applet API removal is executable because the removed package can be verified through a deterministic compiler failure. AOT object caching is executable because cache creation and reuse can be verified in isolated child JVMs without measuring startup performance.
 
 Study these files:
 
@@ -248,13 +248,14 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java26/aot_object_caching/AotObjectCachingExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java26/lazy_constants/README.md`
 
 Run:
 
 ```bash
 mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest" test
-mvn "-Dtest=LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
+mvn "-Dtest=AotObjectCachingExamplesTest,LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
 ```
 
 Interview angle: show baseline discipline. A strong answer explains why moving the repository baseline to JDK 26 is separate from deciding whether each Java 26 feature should be executable or notes-only.

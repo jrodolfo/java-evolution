@@ -11,6 +11,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 26 HTTP/3 from notes-only material into an executable API-configuration example with focused tests.
 - Converted Java 26 final-field restrictions from notes-only material into an executable child-JVM runtime-warning example with focused tests.
 - Converted Java 26 Applet API removal from notes-only material into an executable child-compiler removal example with focused tests.
+- Converted Java 26 AOT object caching from notes-only material into an executable child-JVM cache creation and reuse example with focused tests.
 
 ## v1.6.0
 

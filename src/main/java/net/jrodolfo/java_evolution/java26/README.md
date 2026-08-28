@@ -40,11 +40,11 @@ Test: `AppletApiRemovalExamplesTest`
 
 Java 25 improved ahead-of-time command-line ergonomics. Java 26 continues Project Leyden-related startup work by allowing ahead-of-time object caching with any garbage collector.
 
-This is runtime behavior involving startup, JVM-managed cached data, and command-line workflows. It is documented as notes rather than a tiny unit test.
+This is runtime behavior involving startup, JVM-managed cached data, and command-line workflows. The repository demonstrates the cache creation and reuse workflow in isolated child JVMs without measuring startup speed.
 
-Explanatory module: [`aot_object_caching`](aot_object_caching/README.md)
+Executable runtime example: [`aot_object_caching`](aot_object_caching/README.md)
 
-Test: `AotObjectCachingNotesTest`
+Test: `AotObjectCachingExamplesTest`
 
 ## G1 GC Throughput Improvement
 
@@ -102,13 +102,13 @@ Test: `PrimitivePatternsFourthPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `Http3ClientExamples`, then read the executable runtime module for final-field restrictions and the executable removal module for Applet API removal. After that, read the runtime notes for AOT object caching and G1, followed by preview and incubator notes for PEM encodings, structured concurrency, lazy constants, vector computation, and primitive patterns.
+Start with `Http3ClientExamples`, then read the executable runtime modules for final-field restrictions and AOT object caching, followed by the executable removal module for Applet API removal. After that, read the runtime notes for G1, followed by preview and incubator notes for PEM encodings, structured concurrency, lazy constants, vector computation, and primitive patterns.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=Http3ClientExamplesTest,PemEncodingsSecondPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest test
-mvn -Dtest=FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest,AotObjectCachingNotesTest,G1SynchronizationNotesTest test
+mvn -Dtest=FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest,AotObjectCachingExamplesTest,G1SynchronizationNotesTest test
 mvn -Dtest=StructuredConcurrencySixthPreviewNotesTest,LazyConstantsSecondPreviewNotesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
