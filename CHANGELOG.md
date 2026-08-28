@@ -8,6 +8,30 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 No changes yet.
 
+## v1.6.0
+
+Minor release focused on moving the repository build baseline from JDK 25 to JDK 26.
+
+### Changed
+
+- Updated the Maven Java release, Makefile guard, helper scripts, and GitHub Actions workflows to use JDK 26.
+- Replaced the Java 25 helper scripts and runtime guard with Java 26 equivalents for macOS, Linux, Windows Git Bash, and Windows PowerShell.
+- Updated repository documentation, learning guides, migration guidance, JavaDoc-facing comments, and version READMEs to describe JDK 26 as the project build baseline.
+- Preserved Java 26 feature modules as notes-only material until each feature is separately evaluated for a faithful executable example.
+- Kept Java 25 preview examples historically accurate by skipping old-preview child-compilation workflows when running under JDK 26 while still checking source shape and explanatory boundaries.
+- Updated Java 24 Class-File API validation to expect the JDK 26 class-file version.
+- Adjusted the Java 23 ZGC generational-mode test to accept modern JDK behavior where the removed `ZGenerational` option is rejected outright.
+
+### Validation
+
+- `make java-version`
+- `make check-java-26`
+- `make test`
+- `make docs`
+- `make docs-audit`
+- `make demos`
+- `git diff --check`
+
 ## v1.5.3
 
 Patch release focused on cross-platform JDK 25 build validation.

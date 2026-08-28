@@ -159,7 +159,7 @@ The Makefile does not replace Maven. It provides convenient repository-level com
 The Maven build uses a single Java release for every package:
 
 ```xml
-<java.version>25</java.version>
+<java.version>26</java.version>
 ```
 
 Each package demonstrates features introduced in a specific Java release. For example, `java01` refreshes early Java foundations, `java05` demonstrates Java 5 features, and `java21` demonstrates Java 21 features.

@@ -48,7 +48,7 @@ When a feature becomes a practical demo, update the curated demo path:
 
 ## Local Validation
 
-Use JDK 25 and run:
+Use JDK 26 and run:
 
 ```bash
 make check
