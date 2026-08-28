@@ -8,6 +8,7 @@ import java.security.ProtectionDomain;
 
 import org.junit.jupiter.api.Test;
 
+@SuppressWarnings("removal")
 class SecurityPolicyExamplesTest {
 
 	private final SecurityPolicyExamples examples = new SecurityPolicyExamples();

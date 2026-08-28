@@ -19,6 +19,7 @@ import java.security.ProtectionDomain;
  * Security Manager based enforcement is deprecated and disabled in modern Java.
  * </p>
  */
+@SuppressWarnings("removal")
 public class SecurityPolicyExamples {
 
 	private static final String CODE_SOURCE_LOCATION = "file:/trusted/app/";
