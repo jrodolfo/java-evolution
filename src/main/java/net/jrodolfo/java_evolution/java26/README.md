@@ -4,7 +4,7 @@ Released: March 2026 as Java SE 26.
 
 Java 26 adds HTTP/3 support for the standard HTTP Client API, removes the long-deprecated Applet API, continues several preview and incubator features, and advances runtime work around final-field integrity, ahead-of-time startup data, G1 garbage collection, and vector computation.
 
-This package is currently notes-only even though the repository builds on JDK 26. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, removals, and performance internals still need feature-by-feature evaluation.
+This package is mostly notes-only even though the repository builds on JDK 26. HTTP/3 is an executable example because the final API surface can be demonstrated deterministically without live networking. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, removals, and performance internals still need feature-by-feature evaluation.
 
 ## HTTP/3 for the HTTP Client API
 
@@ -12,9 +12,9 @@ Java 11 standardized the HTTP Client API. Java 26 extends that client with HTTP/
 
 HTTP/3 matters because it runs over QUIC rather than TCP. That changes connection setup and transport behavior while preserving the developer-facing idea of making HTTP requests through the platform client.
 
-Example: `Http3ClientNotes`
+Example: `Http3ClientExamples`
 
-Test: `Http3ClientNotesTest`
+Test: `Http3ClientExamplesTest`
 
 ## Prepare to Make Final Mean Final
 
@@ -102,17 +102,17 @@ Test: `PrimitivePatternsFourthPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `Http3ClientNotes`, then read the runtime/removal modules for final-field restrictions, Applet API removal, AOT object caching, and G1. After that, read the preview and incubator notes for PEM encodings, structured concurrency, lazy constants, vector computation, and primitive patterns.
+Start with `Http3ClientExamples`, then read the runtime/removal modules for final-field restrictions, Applet API removal, AOT object caching, and G1. After that, read the preview and incubator notes for PEM encodings, structured concurrency, lazy constants, vector computation, and primitive patterns.
 
 Run the focused tests:
 
 ```bash
-mvn -Dtest=Http3ClientNotesTest,PemEncodingsSecondPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest test
+mvn -Dtest=Http3ClientExamplesTest,PemEncodingsSecondPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest test
 mvn -Dtest=FinalFieldRestrictionsNotesTest,AppletApiRemovalNotesTest,AotObjectCachingNotesTest,G1SynchronizationNotesTest test
 mvn -Dtest=StructuredConcurrencySixthPreviewNotesTest,LazyConstantsSecondPreviewNotesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
-Java 26 is currently represented as C2 explanatory material. Selected features such as HTTP/3 may become executable examples after focused feasibility review.
+Java 26 is mostly represented as C2 explanatory material. HTTP/3 is represented as a C1 executable example after focused feasibility review.
 
 ## References
 

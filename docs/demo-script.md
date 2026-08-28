@@ -99,7 +99,7 @@ src/main/java/net/jrodolfo/java_evolution/java26/README.md
 Say:
 
 ```text
-For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature, while Java 26 is currently documented as notes-only current-release awareness under the JDK 26 build baseline.
+For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature. Java 26 uses the JDK 26 build baseline, includes an executable HTTP/3 API example, and keeps the remaining current-release topics as notes until they pass focused feasibility review.
 ```
 
 Run:

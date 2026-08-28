@@ -204,7 +204,7 @@ mvn -Dtest=StructuredConcurrencyFifthPreviewExamplesTest,VectorApiTenthIncubator
 mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersExamplesTest,GenerationalShenandoahNotesTest test
 ```
 
-After Java 25, continue to `java26/README.md` for notes-only current-release material under the JDK 26 build baseline. Use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.
+After Java 25, continue to `java26/README.md` for current-release material under the JDK 26 build baseline, starting with the executable HTTP/3 example. Use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.
 
 ## References
 

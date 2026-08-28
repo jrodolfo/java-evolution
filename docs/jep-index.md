@@ -251,7 +251,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 500](https://openjdk.org/jeps/500) | Prepare to Make Final Mean Final | Runtime, Explanatory Module |
 | [JEP 504](https://openjdk.org/jeps/504) | Remove the Applet API | Final, Removal, Explanatory Module |
 | [JEP 516](https://openjdk.org/jeps/516) | Ahead-of-Time Object Caching with Any GC | Runtime, Explanatory Module |
-| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for the HTTP Client API | Final, Notes |
+| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for the HTTP Client API | Final, Executable Example |
 | [JEP 522](https://openjdk.org/jeps/522) | G1 GC: Improve Throughput by Reducing Synchronization | Runtime, Explanatory Module |
 | [JEP 524](https://openjdk.org/jeps/524) | PEM Encodings of Cryptographic Objects | Preview, Security, Notes |
 | [JEP 525](https://openjdk.org/jeps/525) | Structured Concurrency | Preview, Explanatory Module |

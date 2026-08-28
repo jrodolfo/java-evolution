@@ -77,7 +77,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | PEM | Privacy-Enhanced Mail | A text encoding format commonly used for cryptographic keys and certificates. |
 | Preview | Preview Feature | A Java language or API feature available for feedback before becoming final or changing shape. |
 | Project Coin | Small Java language enhancements | The Java 7 effort behind small language improvements such as try-with-resources, multi-catch, diamond, strings in switch, binary literals, and numeric underscores. |
-| QUIC | Quick UDP Internet Connections | A modern transport protocol used by HTTP/3. In this project, it appears in the Java 26 HTTP/3 notes. |
+| QUIC | Quick UDP Internet Connections | A modern transport protocol used by HTTP/3. In this project, it appears in the Java 26 HTTP/3 example. |
 | Removal | Removal | A Java platform change where a deprecated API or capability is removed from the JDK, such as the Applet API in Java 26. |
 | RISC | Reduced Instruction Set Computer | A processor design style referenced by the ARM acronym. |
 | RMI | Remote Method Invocation | A Java distributed-object technology mentioned as background when discussing native calls and remote procedure styles. |

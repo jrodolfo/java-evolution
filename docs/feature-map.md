@@ -356,11 +356,11 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 Learning notes: [java26 README](../src/main/java/net/jrodolfo/java_evolution/java26/README.md)
 
-Java 26 is currently represented as C2 explanatory material. The repository now builds on JDK 26, and selected Java 26 features can be evaluated for executable examples in focused follow-up work.
+Java 26 is mostly represented as C2 explanatory material. HTTP/3 is a C1 executable example because the JDK 26 API surface is final and can be demonstrated deterministically without live networking. Other Java 26 features can be evaluated for executable examples in focused follow-up work.
 
 | Feature | Example | Test |
 |---|---|---|
-| HTTP/3 for the HTTP Client API | [`Http3ClientNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/Http3ClientNotes.java) | [`Http3ClientNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/Http3ClientNotesTest.java) |
+| HTTP/3 for the HTTP Client API | [`Http3ClientExamples`](../src/main/java/net/jrodolfo/java_evolution/java26/Http3ClientExamples.java) | [`Http3ClientExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/Http3ClientExamplesTest.java) |
 | Final field restrictions | [`FinalFieldRestrictionsNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/FinalFieldRestrictionsNotes.java) | [`FinalFieldRestrictionsNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/FinalFieldRestrictionsNotesTest.java) |
 | Applet API removal | [`AppletApiRemovalNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalNotes.java) | [`AppletApiRemovalNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalNotesTest.java) |
 | AOT object caching | [`AotObjectCachingNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/aot_object_caching/AotObjectCachingNotes.java) | [`AotObjectCachingNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/aot_object_caching/AotObjectCachingNotesTest.java) |

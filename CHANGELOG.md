@@ -6,7 +6,9 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
-No changes yet.
+### Changed
+
+- Converted Java 26 HTTP/3 from notes-only material into an executable API-configuration example with focused tests.
 
 ## v1.6.0
 

@@ -237,14 +237,14 @@ What changed conceptually:
 
 Compatibility concerns:
 
-- Java 26 notes should not be treated as executable examples merely because the repository now builds on JDK 26.
+- Java 26 topics should not be treated as executable examples merely because the repository now builds on JDK 26.
 - Final, preview, incubator, runtime, removal, and notes-only labels matter more than the release number alone.
-- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision.
+- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies.
 
 Study these files:
 
 - `src/main/java/net/jrodolfo/java_evolution/java26/README.md`
-- `src/main/java/net/jrodolfo/java_evolution/java26/Http3ClientNotes.java`
+- `src/main/java/net/jrodolfo/java_evolution/java26/Http3ClientExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/lazy_constants/README.md`
@@ -252,7 +252,7 @@ Study these files:
 Run:
 
 ```bash
-mvn "-Dtest=Http3ClientNotesTest,FinalFieldRestrictionsNotesTest,AppletApiRemovalNotesTest" test
+mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsNotesTest,AppletApiRemovalNotesTest" test
 mvn "-Dtest=LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
 ```
 
