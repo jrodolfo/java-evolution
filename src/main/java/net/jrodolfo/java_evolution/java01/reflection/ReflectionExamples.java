@@ -7,6 +7,11 @@ import java.lang.reflect.Method;
 
 /**
  * Demonstrates reflection, introduced in Java 1.1.
+ *
+ * <p>
+ * The example keeps reflection declarations raw because generics were added
+ * later, in Java 5.
+ * </p>
  */
 public class ReflectionExamples {
 
@@ -17,7 +22,7 @@ public class ReflectionExamples {
 	 * @return runtime class name
 	 */
 	public String runtimeTypeName(Object value) {
-		Class<?> type = value.getClass();
+		Class type = value.getClass();
 		return type.getName();
 	}
 
@@ -29,7 +34,8 @@ public class ReflectionExamples {
 	 */
 	public String declaredFieldDescription() throws NoSuchFieldException {
 		Field field = PluginCommand.class.getDeclaredField("name");
-		return field.getName() + ": " + field.getType().getSimpleName();
+		String typeName = field.getType().getName();
+		return field.getName() + ": " + typeName.substring(typeName.lastIndexOf('.') + 1);
 	}
 
 	/**
@@ -47,8 +53,8 @@ public class ReflectionExamples {
 	public Object createCommandByClassName(String className, String commandName)
 			throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException,
 			IllegalAccessException {
-		Class<?> type = Class.forName(className);
-		Constructor<?> constructor = type.getConstructor(String.class);
+		Class type = Class.forName(className);
+		Constructor constructor = type.getConstructor(String.class);
 		return constructor.newInstance(commandName);
 	}
 

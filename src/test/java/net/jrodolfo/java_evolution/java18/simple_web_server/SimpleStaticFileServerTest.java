@@ -65,6 +65,11 @@ class SimpleStaticFileServerTest {
 		try {
 			return SimpleStaticFileServer.start(rootDirectory);
 		}
+		catch (IOException exception) {
+			assumeTrue(!hasCause(exception, SocketException.class),
+					"local SimpleFileServer socket binding is not permitted in this environment");
+			throw exception;
+		}
 		catch (UncheckedIOException exception) {
 			assumeTrue(!hasCause(exception, SocketException.class),
 					"local SimpleFileServer socket binding is not permitted in this environment");

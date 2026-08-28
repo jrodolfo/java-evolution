@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Locale;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -72,16 +73,24 @@ public class MarkdownDocumentationCommentsExamples {
 				.redirectErrorStream(true)
 				.start();
 
+		CompletableFuture<String> output = CompletableFuture.supplyAsync(() -> readOutput(process));
 		boolean finished = process.waitFor(10, TimeUnit.SECONDS);
 		if (!finished) {
 			process.destroyForcibly();
 			process.waitFor(5, TimeUnit.SECONDS);
-			String output = new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
-			return new JavaDocResult(-1, output, outputDirectory);
+			return new JavaDocResult(-1, output.join(), outputDirectory);
 		}
 
-		String output = new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
-		return new JavaDocResult(process.exitValue(), output, outputDirectory);
+		return new JavaDocResult(process.exitValue(), output.join(), outputDirectory);
+	}
+
+	private String readOutput(Process process) {
+		try {
+			return new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+		}
+		catch (IOException exception) {
+			throw new IllegalStateException("could not read child process output", exception);
+		}
 	}
 
 	private String javadocExecutable() {

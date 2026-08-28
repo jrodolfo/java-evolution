@@ -3,8 +3,12 @@ package net.jrodolfo.java_evolution.java03.shutdown_hooks;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Locale;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -19,14 +23,19 @@ class ShutdownHookExamplesTest {
 				.redirectErrorStream(true)
 				.start();
 
+		CompletableFuture<String> output = CompletableFuture.supplyAsync(() -> readOutput(process));
 		boolean finished = process.waitFor(10, TimeUnit.SECONDS);
-		String output = new String(process.getInputStream().readAllBytes());
+		if (!finished) {
+			process.destroyForcibly();
+			process.waitFor(5, TimeUnit.SECONDS);
+		}
+		String childOutput = output.join();
 
 		assertThat(finished)
 				.as("The child JVM should finish instead of leaving the Maven test JVM waiting")
 				.isTrue();
 		assertThat(process.exitValue())
-				.as("The child JVM should exit normally; output was: %s", output)
+				.as("The child JVM should exit normally; output was: %s", childOutput)
 				.isZero();
 		assertThat(markerFile)
 				.as("The shutdown hook should write a marker during orderly JVM shutdown")
@@ -44,6 +53,20 @@ class ShutdownHookExamplesTest {
 	}
 
 	private String javaExecutable() {
-		return System.getProperty("java.home") + File.separator + "bin" + File.separator + "java";
+		String executable = isWindows() ? "java.exe" : "java";
+		return new File(new File(System.getProperty("java.home"), "bin"), executable).getPath();
+	}
+
+	private boolean isWindows() {
+		return System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("win");
+	}
+
+	private String readOutput(Process process) {
+		try {
+			return new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+		}
+		catch (IOException exception) {
+			throw new IllegalStateException("could not read child process output", exception);
+		}
 	}
 }

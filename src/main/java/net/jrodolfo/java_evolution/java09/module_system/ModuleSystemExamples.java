@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
@@ -154,16 +155,24 @@ public class ModuleSystemExamples {
 				.redirectErrorStream(true)
 				.start();
 
+		CompletableFuture<String> output = CompletableFuture.supplyAsync(() -> readOutput(process));
 		boolean finished = process.waitFor(15, TimeUnit.SECONDS);
 		if (!finished) {
 			process.destroyForcibly();
 			process.waitFor(5, TimeUnit.SECONDS);
-			String output = new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
-			return new CommandResult(-1, output);
+			return new CommandResult(-1, output.join());
 		}
 
-		String output = new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
-		return new CommandResult(process.exitValue(), output);
+		return new CommandResult(process.exitValue(), output.join());
+	}
+
+	private String readOutput(Process process) {
+		try {
+			return new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+		}
+		catch (IOException exception) {
+			throw new IllegalStateException("could not read child process output", exception);
+		}
 	}
 
 	private void write(Path file, String content) throws IOException {

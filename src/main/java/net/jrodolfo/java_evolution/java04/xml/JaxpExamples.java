@@ -4,7 +4,6 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.IOException;
 
-import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -23,6 +22,13 @@ import org.xml.sax.SAXException;
 
 /**
  * Demonstrates JAXP XML processing, standardized in J2SE 1.4.
+ *
+ * <p>
+ * The parser path intentionally uses only the Java 4-era JAXP and DOM APIs.
+ * Modern XML security properties were added later and are discussed in the
+ * package documentation instead of being mixed into this historical example.
+ * The example accepts trusted in-memory XML only.
+ * </p>
  */
 public class JaxpExamples {
 
@@ -37,9 +43,6 @@ public class JaxpExamples {
 	 */
 	public Document parseDocument(String xml) throws ParserConfigurationException, IOException, SAXException {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
-		factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, "");
-		factory.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		return builder.parse(new InputSource(new StringReader(xml)));
 	}

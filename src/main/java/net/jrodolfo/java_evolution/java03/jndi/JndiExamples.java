@@ -2,7 +2,7 @@ package net.jrodolfo.java_evolution.java03.jndi;
 
 import java.util.Hashtable;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.naming.Binding;
@@ -79,7 +79,7 @@ public class JndiExamples {
 	public static final class MemoryContext implements Context {
 
 		private final Hashtable environment;
-		private final Map bindings = new LinkedHashMap();
+		private final Map bindings = new HashMap();
 
 		MemoryContext(Hashtable environment) {
 			this.environment = new Hashtable();

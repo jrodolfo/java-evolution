@@ -80,7 +80,7 @@ class JndiExamplesTest {
 		Context context = examples.createContext();
 		try {
 			context.bind("service/greeting", "hello");
-			context.bind("service/retries", Integer.valueOf(3));
+			context.bind("service/retries", new Integer(3));
 
 			List names = new ArrayList();
 			NamingEnumeration enumeration = context.list("");
@@ -91,7 +91,7 @@ class JndiExamplesTest {
 
 			assertThat(names)
 					.as("list should enumerate names and the class names of their bound objects")
-					.containsExactly("service/greeting:java.lang.String", "service/retries:java.lang.Integer");
+					.containsExactlyInAnyOrder("service/greeting:java.lang.String", "service/retries:java.lang.Integer");
 		}
 		finally {
 			context.close();

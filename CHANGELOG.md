@@ -12,6 +12,8 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 - Converted Java 26 final-field restrictions from notes-only material into an executable child-JVM runtime-warning example with focused tests.
 - Converted Java 26 Applet API removal from notes-only material into an executable child-compiler removal example with focused tests.
 - Converted Java 26 AOT object caching from notes-only material into an executable child-JVM cache creation and reuse example with focused tests.
+- Hardened socket-binding skips and child-process lifecycle handling across executable examples for restricted and cross-platform environments.
+- Restored early Java examples to historically appropriate APIs and documented the later XML security hardening boundary in the Java 4 JAXP example.
 
 ## v1.6.0
 

@@ -2,7 +2,7 @@ package net.jrodolfo.java_evolution.java02.security;
 
 import java.net.MalformedURLException;
 import java.net.SocketPermission;
-import java.net.URI;
+import java.net.URL;
 import java.security.CodeSource;
 import java.security.PermissionCollection;
 import java.security.Permissions;
@@ -30,8 +30,9 @@ public class SecurityPolicyExamples {
 	 * @return a code source for a trusted application location
 	 * @throws MalformedURLException if the synthetic URI cannot be converted to a URL
 	 */
+	@SuppressWarnings("deprecation")
 	public CodeSource trustedCodeSource() throws MalformedURLException {
-		return new CodeSource(URI.create(CODE_SOURCE_LOCATION).toURL(), (java.security.cert.Certificate[]) null);
+		return new CodeSource(new URL(CODE_SOURCE_LOCATION), (java.security.cert.Certificate[]) null);
 	}
 
 	/**
