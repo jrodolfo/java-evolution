@@ -1,9 +1,13 @@
 JAVA_26_HOME := $(shell /usr/libexec/java_home -v 26 2>/dev/null)
 JAVA_CMD := java
 
+ifeq ($(strip $(JAVA_HOME)),)
 ifneq ($(JAVA_26_HOME),)
 export JAVA_HOME := $(JAVA_26_HOME)
 export PATH := $(JAVA_HOME)/bin:$(PATH)
+JAVA_CMD := $(JAVA_HOME)/bin/java
+endif
+else
 JAVA_CMD := $(JAVA_HOME)/bin/java
 endif
 

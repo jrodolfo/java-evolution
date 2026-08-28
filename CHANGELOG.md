@@ -6,7 +6,7 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
-No changes yet.
+- Fixed the Makefile to honor the JDK selected by `JAVA_HOME`, including JDKs provisioned by GitHub Actions on macOS.
 
 ## v1.6.1
 
