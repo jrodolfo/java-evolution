@@ -23,6 +23,7 @@ This glossary explains acronyms and recurring terms used across the repository. 
 | DOM | Document Object Model | A tree-oriented XML API. In the Java 4 XML example, DOM contrasts with streaming or event-oriented XML processing. |
 | EE | Enterprise Edition | Usually appears as Java EE, the older enterprise Java platform name relevant to migration from older JDKs. |
 | FFM | Foreign Function and Memory | Java APIs for calling native code and working with memory outside the Java heap. |
+| GA | General Availability | The public, final release of a JDK version. In this project, GA distinguishes a released Java platform version from early-access builds, previews, or release candidates. |
 | GC | Garbage Collection | JVM memory management that finds and reclaims objects the application no longer uses. |
 | GNU | GNU's Not Unix | Appears in GNU Make, the `make` implementation used for the documented local workflow. |
 | HKDF | HMAC-based Key Derivation Function | The key derivation algorithm demonstrated by the Java 25 example. |
