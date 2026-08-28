@@ -12,7 +12,7 @@ package net.jrodolfo.java_evolution.java14;
  * <p>
  * Pattern matching for {@code instanceof} solves this by combining the type
  * check and local variable binding. The feature became final in Java 16. The
- * example uses final syntax because this repository compiles with JDK 25.
+ * example uses final syntax because this repository compiles with JDK 26.
  * </p>
  */
 public class PatternMatchingInstanceofPreviewExamples {

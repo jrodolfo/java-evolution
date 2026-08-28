@@ -1,18 +1,19 @@
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Locale;
 import java.util.regex.Pattern;
 
-final class CheckJava25 {
-    private static final Pattern JAVA_25 = Pattern.compile("^(java|openjdk)\\s+25([\\s.]|$)");
-    private static final Pattern MAVEN_JAVA_25 = Pattern.compile("^25([\\s.]|$).*");
+final class CheckJava26 {
+    private static final Pattern JAVA_26 = Pattern.compile("^(java|openjdk)\\s+26([\\s.]|$)");
+    private static final Pattern MAVEN_JAVA_26 = Pattern.compile("^26([\\s.]|$).*");
 
     public static void main(String[] args) throws IOException, InterruptedException {
         CommandResult java = run(List.of("java", "--version"));
         String javaVersion = firstLine(java.output());
 
-        if (java.exitCode() != 0 || !JAVA_25.matcher(javaVersion).find()) {
-            System.err.println("java 25 is required, but the active java is not java 25.");
+        if (java.exitCode() != 0 || !JAVA_26.matcher(javaVersion).find()) {
+            System.err.println("java 26 is required, but the active java is not java 26.");
             System.err.println();
             System.err.println("active java:");
             System.err.println("  " + (javaVersion.isBlank() ? "java command was not available" : javaVersion));
@@ -29,8 +30,8 @@ final class CheckJava25 {
                 .findFirst()
                 .orElse("");
 
-        if (maven.exitCode() != 0 || !MAVEN_JAVA_25.matcher(mavenJavaVersion).find()) {
-            System.err.println("java 25 is required, but maven is not using java 25.");
+        if (maven.exitCode() != 0 || !MAVEN_JAVA_26.matcher(mavenJavaVersion).find()) {
+            System.err.println("java 26 is required, but maven is not using java 26.");
             System.err.println();
             System.err.println("maven java:");
             System.err.println("  " + (mavenJavaVersion.isBlank()
@@ -59,16 +60,16 @@ final class CheckJava25 {
                 .orElse("");
     }
 
-    private static String mavenCommand() {
-        return System.getProperty("os.name", "").toLowerCase().contains("win") ? "mvn.cmd" : "mvn";
-    }
+	private static String mavenCommand() {
+		return System.getProperty("os.name", "").toLowerCase(Locale.ROOT).contains("win") ? "mvn.cmd" : "mvn";
+	}
 
     private static void printHelperInstructions() {
         System.err.println("run one of:");
-        System.err.println("  source scripts/use-java-25-mac.sh");
-        System.err.println("  source scripts/use-java-25-linux.sh");
-        System.err.println("  source scripts/use-java-25-windows.sh");
-        System.err.println("  . .\\scripts\\use-java-25-windows.ps1");
+        System.err.println("  source scripts/use-java-26-mac.sh");
+        System.err.println("  source scripts/use-java-26-linux.sh");
+        System.err.println("  source scripts/use-java-26-windows.sh");
+        System.err.println("  . .\\scripts\\use-java-26-windows.ps1");
         System.err.println();
         System.err.println("then verify:");
         System.err.println("  java --version");

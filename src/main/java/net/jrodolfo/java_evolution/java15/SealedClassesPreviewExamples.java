@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  * <p>
  * Sealed classes solve this by letting the parent type explicitly list
  * permitted subtypes. They became final in Java 17. This project compiles on
- * JDK 25, so the example uses final syntax while documenting the Java 15
+ * JDK 26, so the example uses final syntax while documenting the Java 15
  * preview origin.
  * </p>
  */

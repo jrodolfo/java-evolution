@@ -4,7 +4,7 @@ Released: December 2006 as Java SE 6.
 
 Java 6 was more of a platform and tooling release than a language release. It added standard scripting integration, a compiler API, better monitoring and management support, console password prompting, web-service APIs, desktop improvements, and library refinements such as deques and navigable collections.
 
-This repository keeps some Java 6 topics as explanatory modules because a faithful demonstration can depend on removed bundled APIs or runtime attachment behavior. The executable examples focus on collection APIs, scripting SPI discovery, compiler invocation, console boundary design, and local MXBean monitoring APIs that still compile and run naturally on JDK 25.
+This repository keeps some Java 6 topics as explanatory modules because a faithful demonstration can depend on removed bundled APIs or runtime attachment behavior. The executable examples focus on collection APIs, scripting SPI discovery, compiler invocation, console boundary design, and local MXBean monitoring APIs that still compile and run naturally on JDK 26.
 
 ## Navigable Collections And Deques
 
@@ -20,7 +20,7 @@ Test: `NavigableCollectionExamplesTest`
 
 Java 6 added JSR 223, the Scripting API, so Java applications could host script engines through `javax.script`.
 
-This module demonstrates JSR 223 with a tiny custom engine and a child-JVM service-provider probe. It also shows that JDK 25 still has the API but no longer guarantees the old JavaScript engine that was bundled with Sun's Java 6 implementation.
+This module demonstrates JSR 223 with a tiny custom engine and a child-JVM service-provider probe. It also shows that JDK 26 still has the API but no longer guarantees the old JavaScript engine that was bundled with Sun's Java 6 implementation.
 
 Example module: [`scripting`](scripting/README.md)
 

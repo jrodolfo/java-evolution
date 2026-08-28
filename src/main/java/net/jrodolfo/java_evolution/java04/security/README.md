@@ -5,7 +5,7 @@ J2SE 1.4 integrated important security APIs into the standard platform.
 This is an executable local-security example. It demonstrates the provider
 model, message digests, secure random bytes, AES/GCM encryption, HMAC
 authentication, and RSA signatures using modern algorithms available on the
-JDK 25 baseline.
+JDK 26 baseline.
 
 ## 1. What Problem Does This Feature Solve?
 

@@ -50,13 +50,12 @@ class ZgcGenerationalModeExamplesTest {
 
 		ZgcGenerationalModeExamples.ProcessResult result = examples.oldGenerationalSwitchStatus();
 
-		assertThat(result.exitCode())
-				.as("Modern JDKs should keep running while warning that the old ZGenerational switch is ignored")
-				.isZero();
 		assertThat(result.output())
 				.as("The old switch should be documented as removed rather than used for comparison")
-				.contains("Ignoring option ZGenerational")
-				.contains("support was removed in 24.0");
+				.contains("ZGenerational");
+		assertThat(result.output())
+				.as("Modern JDKs may either warn about the removed flag or reject it outright")
+				.containsAnyOf("Ignoring option ZGenerational", "Unrecognized VM option 'ZGenerational'");
 	}
 
 	@Test

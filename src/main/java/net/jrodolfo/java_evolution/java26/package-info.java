@@ -5,7 +5,8 @@
  * Java 26 adds HTTP/3 support for the HTTP Client API, removes the Applet API,
  * continues preview and incubator APIs, and advances runtime work around final
  * fields, ahead-of-time startup data, G1, and vector computation. This package
- * is notes-only while the repository keeps JDK 25 as its build baseline.
+ * is notes-only while selected Java 26 features await focused executable-example
+ * evaluation.
  * </p>
  */
 package net.jrodolfo.java_evolution.java26;

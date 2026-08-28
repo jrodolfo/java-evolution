@@ -11,7 +11,7 @@ package net.jrodolfo.java_evolution.java20;
  * </p>
  *
  * <p>
- * Record patterns became final in Java 21. This project compiles on JDK 25, so
+ * Record patterns became final in Java 21. This project compiles on JDK 26, so
  * the example uses final syntax while documenting the Java 20 preview status.
  * </p>
  */

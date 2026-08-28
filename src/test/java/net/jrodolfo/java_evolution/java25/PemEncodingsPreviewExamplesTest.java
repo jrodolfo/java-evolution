@@ -1,6 +1,7 @@
 package net.jrodolfo.java_evolution.java25;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,6 +15,9 @@ class PemEncodingsPreviewExamplesTest {
 
 	@Test
 	void childProcessRoundTripsPublicKeyThroughPemText(@TempDir Path workspace) throws Exception {
+		assumeTrue(Runtime.version().feature() == 25,
+				"Java 25 preview APIs must be compiled with a JDK 25 preview compiler");
+
 		PemEncodingsPreviewExamples.PemWorkflowResult result = examples.runPemWorkflow(workspace);
 
 		assertThat(result.compilation().exitCode())

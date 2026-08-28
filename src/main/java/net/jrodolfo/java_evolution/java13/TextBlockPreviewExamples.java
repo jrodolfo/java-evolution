@@ -11,7 +11,7 @@ package net.jrodolfo.java_evolution.java13;
  *
  * <p>
  * Java 13 previewed text blocks to solve that readability problem. Text blocks
- * became final later, in Java 15. This project compiles on JDK 25, so the
+ * became final later, in Java 15. This project compiles on JDK 26, so the
  * example uses final syntax while documenting the Java 13 preview origin.
  * </p>
  */

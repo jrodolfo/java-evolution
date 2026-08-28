@@ -24,7 +24,7 @@ Java 6 brought more web-service support into Java SE, including APIs around:
 
 Modern JDKs removed several Java EE and CORBA-related modules that older code once received from the JDK.
 
-An executable Java 6 web-service example in this JDK 25 project would require explicit dependencies and would mostly teach migration packaging rather than the original Java 6 platform change.
+An executable Java 6 web-service example in this JDK 26 project would require explicit dependencies and would mostly teach migration packaging rather than the original Java 6 platform change.
 
 ## 4. Remember This
 

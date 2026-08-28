@@ -27,7 +27,7 @@ class StrictFloatingPointExamplesTest {
 		assertThat(examples.modernContext())
 				.as("modern Java keeps the historical keyword but no longer needs it for strict evaluation")
 				.contains("Java 17")
-				.contains("JDK 25")
+				.contains("modern JDKs")
 				.contains("unnecessary");
 	}
 
@@ -47,12 +47,12 @@ class StrictFloatingPointExamplesTest {
 	}
 
 	@Test
-	void compilingStrictfpOnJdk25ShowsThatJava17RestoredAlwaysStrictSemantics(@TempDir Path workspace)
+	void compilingStrictfpOnJdk26ShowsThatJava17RestoredAlwaysStrictSemantics(@TempDir Path workspace)
 			throws Exception {
 		StrictFloatingPointExamples.CompilationResult result = examples.compileStrictfpProbe(workspace);
 
 		assertThat(result.exitCode())
-				.as("strictfp remains legal source code on the JDK 25 baseline")
+				.as("strictfp remains legal source code on the JDK 26 baseline")
 				.isZero();
 		assertThat(result.output())
 				.as("javac should explain that strictfp is historical after Java 17")

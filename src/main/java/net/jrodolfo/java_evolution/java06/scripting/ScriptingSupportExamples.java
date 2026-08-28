@@ -41,7 +41,7 @@ public class ScriptingSupportExamples {
 		if (javascriptEngineAvailable()) {
 			return "ScriptEngineManager found a JavaScript engine supplied by this runtime or its dependencies";
 		}
-		return "ScriptEngineManager returned null for JavaScript because JDK 25 does not guarantee a bundled engine";
+		return "ScriptEngineManager returned null for JavaScript because JDK 26 does not guarantee a bundled engine";
 	}
 
 	public String modernPractice() {

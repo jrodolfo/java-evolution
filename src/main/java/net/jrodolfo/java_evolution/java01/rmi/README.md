@@ -14,7 +14,7 @@ RMI introduced remote interfaces, remote objects, stubs, registries, remote exce
 
 The example starts a local RMI registry on an ephemeral loopback port, exports a small remote object, binds it under a service name, looks it up through the registry, and invokes it through the remote interface.
 
-It also passes a serializable request object so the test can show that RMI copies remote arguments by value. The example uses modern dynamic stubs because generated `rmic` stubs were part of older RMI workflows, not the normal JDK 25 teaching path.
+It also passes a serializable request object so the test can show that RMI copies remote arguments by value. The example uses modern dynamic stubs because generated `rmic` stubs were part of older RMI workflows, not the normal JDK 26 teaching path.
 
 Because RMI binds local sockets, the focused test skips only when the execution environment blocks loopback socket binding.
 

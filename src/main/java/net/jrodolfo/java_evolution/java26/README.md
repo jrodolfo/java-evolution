@@ -4,7 +4,7 @@ Released: March 2026 as Java SE 26.
 
 Java 26 adds HTTP/3 support for the standard HTTP Client API, removes the long-deprecated Applet API, continues several preview and incubator features, and advances runtime work around final-field integrity, ahead-of-time startup data, G1 garbage collection, and vector computation.
 
-This package is intentionally notes-only while the repository keeps JDK 25 as its build baseline. Java 26 APIs, preview syntax, incubator modules, and runtime behavior cannot be demonstrated faithfully in a JDK 25 Maven build without distorting the feature.
+This package is currently notes-only even though the repository builds on JDK 26. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, removals, and performance internals still need feature-by-feature evaluation.
 
 ## HTTP/3 for the HTTP Client API
 
@@ -112,7 +112,7 @@ mvn -Dtest=FinalFieldRestrictionsNotesTest,AppletApiRemovalNotesTest,AotObjectCa
 mvn -Dtest=StructuredConcurrencySixthPreviewNotesTest,LazyConstantsSecondPreviewNotesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
-Java 26 is represented as C2 explanatory material because this repository still builds with JDK 25. If the repository later moves to JDK 26, selected features such as HTTP/3 may become executable examples.
+Java 26 is currently represented as C2 explanatory material. Selected features such as HTTP/3 may become executable examples after focused feasibility review.
 
 ## References
 

@@ -12,6 +12,6 @@ class LegacyIntegrationNotesTest {
 	void notesExplainLegacyIntegrationContextAndModernCaveat() {
 		assertThat(notes.historicalContext()).contains("RMI/IIOP").contains("CORBA");
 		assertThat(notes.modernCaveat()).contains("removed from the JDK").contains("explicit dependencies");
-		assertThat(notes.repositoryDecision()).contains("JDK 25");
+		assertThat(notes.repositoryDecision()).contains("JDK 26");
 	}
 }

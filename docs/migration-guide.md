@@ -186,6 +186,7 @@ What changed conceptually:
 - Java 25 finalized Scoped Values, Flexible Constructor Bodies, Module Import Declarations, Compact Source Files and Instance Main Methods, and the Key Derivation Function API.
 - Java 25 also continues preview/incubator work such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
 - Runtime and operational improvements continue around AOT, JFR, object headers, and garbage collection.
+- Java 25 preview child-compilation workflows need a JDK 25 preview compiler for full execution. Under the JDK 26 repository baseline, those tests keep source and documentation checks while skipping the old-preview compiler step.
 
 Compatibility concerns:
 
@@ -225,7 +226,7 @@ Interview angle: explain Java 25 as an LTS baseline where several features becom
 
 ## Java 26 Awareness
 
-Java 26 is useful for current-release awareness, but this repository keeps it notes-only while the build baseline remains JDK 25.
+Java 26 is useful for current-release awareness and is now the repository build baseline. The Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example.
 
 What changed conceptually:
 
@@ -236,9 +237,9 @@ What changed conceptually:
 
 Compatibility concerns:
 
-- Java 26 examples should not be treated as JDK 25-compatible executable code.
+- Java 26 notes should not be treated as executable examples merely because the repository now builds on JDK 26.
 - Final, preview, incubator, runtime, removal, and notes-only labels matter more than the release number alone.
-- A future JDK 26 baseline migration should be a separate build, CI, helper-script, and validation decision.
+- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision.
 
 Study these files:
 
@@ -255,7 +256,7 @@ mvn "-Dtest=Http3ClientNotesTest,FinalFieldRestrictionsNotesTest,AppletApiRemova
 mvn "-Dtest=LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
 ```
 
-Interview angle: show baseline discipline. A strong answer explains why Java 26 is documented for awareness while the project stays on the JDK 25 build baseline.
+Interview angle: show baseline discipline. A strong answer explains why moving the repository baseline to JDK 26 is separate from deciding whether each Java 26 feature should be executable or notes-only.
 
 ## Practical Migration Checklist
 

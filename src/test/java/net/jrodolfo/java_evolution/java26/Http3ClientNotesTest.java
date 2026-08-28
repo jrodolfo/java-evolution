@@ -19,7 +19,7 @@ class Http3ClientNotesTest {
 				.contains("QUIC")
 				.contains("TCP");
 		assertThat(notes.projectDecision())
-				.as("Java 26 HTTP/3 should stay notes-only under the JDK 25 baseline")
-				.contains("JDK 25");
+				.as("Java 26 HTTP/3 should stay notes-only until its executable boundary is reviewed")
+				.contains("focused executable-example feasibility review");
 	}
 }

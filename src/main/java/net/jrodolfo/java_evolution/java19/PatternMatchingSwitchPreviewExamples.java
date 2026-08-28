@@ -12,7 +12,7 @@ package net.jrodolfo.java_evolution.java19;
  *
  * <p>
  * Pattern matching for switch became final later, in Java 21. This example uses
- * the final syntax available in JDK 25.
+ * the final syntax available in JDK 26.
  * </p>
  */
 public class PatternMatchingSwitchPreviewExamples {

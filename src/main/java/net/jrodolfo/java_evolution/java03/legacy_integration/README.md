@@ -12,7 +12,7 @@ Some APIs from this era were later removed from the JDK or moved to explicit dep
 
 ## 3. Why This Repository Uses Notes
 
-Recreating CORBA, plugin, or multi-process enterprise setups would distract from the learning goal and would not be portable on JDK 25.
+Recreating CORBA, plugin, or multi-process enterprise setups would distract from the learning goal and would not be portable on JDK 26.
 
 ## 4. Remember This
 

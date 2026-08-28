@@ -16,14 +16,15 @@ import java.util.concurrent.TimeUnit;
  * The repository itself does not compile against preview APIs. Instead, this
  * example writes a small Java 25 source file, compiles it with
  * {@code javac --enable-preview --release 25}, and runs it with
- * {@code java --enable-preview}. That keeps the main build stable while still
- * demonstrating the real preview API.
+ * {@code java --enable-preview} when the active toolchain is JDK 25. That
+ * keeps the main build stable while still demonstrating the real preview API.
  * </p>
  */
 public class PemEncodingsPreviewExamples {
 
 	/**
 	 * Runs a real Java 25 preview PEM workflow in a temporary workspace.
+	 * Full child-compilation execution requires a JDK 25 preview compiler.
 	 *
 	 * @param workspace temporary directory for generated source and class files
 	 * @return result containing compilation and execution output

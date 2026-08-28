@@ -4,7 +4,7 @@ Released: September 2025 as Java SE 25.
 
 Java 25 finalizes several features, continues some preview and incubator work, and adds newer platform work around diagnostics, startup, memory layout, garbage collection, cryptography, and vector computation.
 
-Because Java 25 is a modern long-term support release, this package is careful about status. Some examples are runnable with JDK 25. Others are notes because they involve preview APIs, incubator modules, JVM options, cryptographic providers, source-launcher behavior, or runtime ergonomics.
+Because Java 25 is a modern long-term support release, this package is careful about status. Final examples and ordinary runtime probes are runnable on the repository's JDK 26 baseline. Java 25 preview child-compiler workflows remain tied to a JDK 25 preview compiler, so their tests preserve source and documentation checks on JDK 26 but skip the child compilation step. Other topics remain notes because they involve preview APIs, incubator modules, JVM options, cryptographic providers, source-launcher behavior, or runtime ergonomics.
 
 ## Scoped Values Final
 
@@ -116,7 +116,7 @@ if (value instanceof byte b) {
 
 That matters because primitive casts can silently lose information. A primitive pattern combines the safety check and the binding step.
 
-Because this is a preview feature, the main Maven build does not compile the syntax directly. `PrimitivePatternsThirdPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
+Because this is a preview feature, the main Maven build does not compile the syntax directly. `PrimitivePatternsThirdPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview` when the active toolchain is JDK 25.
 
 The child program demonstrates `instanceof` primitive patterns, primitive `switch` patterns, and a guarded primitive pattern. The test verifies safe-conversion behavior, not future final syntax.
 
@@ -128,7 +128,7 @@ Test: `PrimitivePatternsThirdPreviewExamplesTest`
 
 Stable values model data initialized at most once. This can help the JVM optimize values that are not known at object construction time but become stable later.
 
-Because this is a preview API, the main Maven build does not import `StableValue` directly. `StableValuesPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
+Because this is a preview API, the main Maven build does not import `StableValue` directly. `StableValuesPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview` when the active toolchain is JDK 25.
 
 Executable preview module: [`stable_values`](stable_values/README.md)
 
@@ -148,7 +148,7 @@ Base64-encoded binary data
 
 Before Java 25, applications often had to combine cryptographic object APIs, binary encodings, Base64 conversion, and careful text parsing themselves. Java 25 previewed APIs for reading and writing cryptographic objects using PEM encodings.
 
-Because this is a preview API, the main Maven build does not import `PEMEncoder` or `PEMDecoder` directly. `PemEncodingsPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
+Because this is a preview API, the main Maven build does not import `PEMEncoder` or `PEMDecoder` directly. `PemEncodingsPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview` when the active toolchain is JDK 25.
 
 The child program generates an RSA key pair, encodes the public key as PEM text, decodes it back to a `PublicKey`, and verifies that the encoded key bytes still match. It also demonstrates `PEMRecord`, the generic representation for PEM object types that do not have a dedicated Java security class.
 
@@ -160,7 +160,7 @@ Test: `PemEncodingsPreviewExamplesTest`
 
 Structured concurrency continued as a fifth preview in Java 25. It keeps the focus on treating related concurrent subtasks as one observable unit of work.
 
-Because this is still a preview API, the main Maven build does not import `StructuredTaskScope` directly. `StructuredConcurrencyFifthPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview`.
+Because this is still a preview API, the main Maven build does not import `StructuredTaskScope` directly. `StructuredConcurrencyFifthPreviewExamples` writes a small child source file, compiles it with `javac --enable-preview --release 25`, and runs it with `java --enable-preview` when the active toolchain is JDK 25.
 
 Executable preview module: [`structured_concurrency`](structured_concurrency/README.md)
 
@@ -193,7 +193,7 @@ Some of these remain notes because they involve garbage-collector policy. The AO
 
 Start with the final executable examples: `scoped_values/README.md`, `FlexibleConstructorBodiesExamples`, `ModuleImportDeclarationsExamples`, `CompactSourceFilesExamples`, and the HKDF example in `key_derivation/README.md`. Then run the executable workflows for primitive patterns, Stable Values, PEM encodings, structured concurrency, the Vector API, AOT command-line ergonomics, JFR method timing/tracing, and compact object headers. Read the notes for GC behavior.
 
-Run the focused tests:
+Run the focused tests. On JDK 26, Java 25 preview child-compilation assertions are skipped because a later JDK cannot act as the JDK 25 preview compiler; the remaining tests still verify the source shape and explanatory boundaries.
 
 ```bash
 mvn -Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest test
@@ -204,7 +204,7 @@ mvn -Dtest=StructuredConcurrencyFifthPreviewExamplesTest,VectorApiTenthIncubator
 mvn -Dtest=AotCommandLineErgonomicsExamplesTest,JfrEnhancementsExamplesTest,CompactObjectHeadersExamplesTest,GenerationalShenandoahNotesTest test
 ```
 
-After Java 25, continue to `java26/README.md` for notes-only current-release material under the JDK 25 build baseline. Use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.
+After Java 25, continue to `java26/README.md` for notes-only current-release material under the JDK 26 build baseline. Use `docs/learning-path.md` to review the full study sequence, `docs/interview-guide.md` to prepare answers, and `docs/jep-index.md` to verify official feature status.
 
 ## References
 

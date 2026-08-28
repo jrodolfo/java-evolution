@@ -6,4 +6,4 @@ For many years, deep reflection could still mutate final fields by making a `Fie
 
 Java 26 prepares for stronger integrity by default. It warns when deep reflection mutates final fields. A future release is expected to restrict that behavior more strongly unless final-field mutation is explicitly enabled.
 
-This is a C2 explanatory module because the important behavior is a runtime warning and migration policy, not a normal source-level example that should run inside the JDK 25 build.
+This is a C2 explanatory module because the important behavior is a runtime warning and migration policy, not a normal source-level example.

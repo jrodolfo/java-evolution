@@ -6,7 +6,7 @@
  * still moving through preview or incubator cycles: record patterns, pattern
  * matching for switch, virtual threads, scoped values, structured concurrency,
  * the Foreign Function and Memory API, and the Vector API. The package shows
- * runnable examples where JDK 25-compatible syntax exists and uses notes where
+ * runnable examples where JDK 26-compatible syntax exists and uses notes where
  * the original API required incubator modules or changed before finalization.
  * </p>
  */

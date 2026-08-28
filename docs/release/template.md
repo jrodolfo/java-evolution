@@ -11,7 +11,7 @@ Use this checklist when adding examples for a new Java release.
 
 ## Example Classes
 
-- Add one focused `*Examples` class for each feature that can be demonstrated with normal JDK 25-compatible source code.
+- Add one focused `*Examples` class for each feature that can be demonstrated with normal JDK 26-compatible source code.
 - Add one focused `*Notes` class for features that cannot be demonstrated cleanly in normal tests.
 - Add JavaDoc to each class and public method.
 - Generate JavaDoc with `make docs`.

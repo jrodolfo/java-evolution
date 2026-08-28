@@ -18,7 +18,7 @@ The emphasis is clarity over cleverness. Examples should stay small, readable, a
 
 ## Requirements
 
-- JDK 25
+- JDK 26
 - Maven 3.9+
 - GNU Make, if you want to use the documented `make` targets
 - Node.js, if you want to run `make docs-audit`, `make docs-check`, or `make release-check` locally
@@ -28,60 +28,60 @@ This repository uses the local Maven installation on your machine. It does not u
 
 ## Platform Support
 
-The project has been validated on macOS, Windows 11, and Linux. The examples are plain Java, and the helper scripts under `scripts/` provide platform-specific ways to switch the current terminal session to JDK 25 before running Maven.
+The project has been validated on macOS, Windows 11, and Linux. The examples are plain Java, and the helper scripts under `scripts/` provide platform-specific ways to switch the current terminal session to JDK 26 before running Maven.
 
-### Java 25 Helpers
+### Java 26 Helpers
 
-If you usually keep another JDK on your machine, use one of these helpers to switch the current terminal session to JDK 25 before running Maven.
+If you usually keep another JDK on your machine, use one of these helpers to switch the current terminal session to JDK 26 before running Maven. These helpers affect only the current shell session; they do not change your global Java default.
 
 On macOS:
 
 ```bash
-source scripts/use-java-25-mac.sh
+source scripts/use-java-26-mac.sh
 ```
 
 On Linux:
 
 ```bash
-source scripts/use-java-25-linux.sh
+source scripts/use-java-26-linux.sh
 ```
 
 On Windows with Git Bash:
 
 ```bash
-source scripts/use-java-25-windows.sh
+source scripts/use-java-26-windows.sh
 ```
 
 On Windows with PowerShell:
 
 ```powershell
-.\scripts\use-java-25-windows.ps1
+.\scripts\use-java-26-windows.ps1
 ```
 
 If PowerShell blocks local scripts on a fresh Windows install, allow scripts only for the current terminal session and then run the helper:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
-.\scripts\use-java-25-windows.ps1
+.\scripts\use-java-26-windows.ps1
 ```
 
-The Linux helper looks for JDK 25 in `JAVA25_HOME`, `JDK25_HOME`, `/usr/lib/jvm`, `/opt`, `/usr/local`, and SDKMAN candidate directories. If your JDK is somewhere else, pass it explicitly:
+The Linux helper looks for JDK 26 in `JAVA26_HOME`, `JDK26_HOME`, `/usr/lib/jvm`, `/opt`, `/usr/local`, and SDKMAN candidate directories. If your JDK is somewhere else, pass it explicitly:
 
 ```bash
-source scripts/use-java-25-linux.sh /usr/lib/jvm/jdk-25.0.2
+source scripts/use-java-26-linux.sh /usr/lib/jvm/jdk-26.0.2.1
 ```
 
-The Windows helpers look for JDK 25 in `JAVA25_HOME`, `JDK25_HOME`, `C:\dev\apps`, and common `Program Files` Java install directories. If your JDK is somewhere else, pass it explicitly:
+The Windows helpers look for JDK 26 in `JAVA26_HOME`, `JDK26_HOME`, `C:\dev\apps`, and common `Program Files` Java install directories. If your JDK is somewhere else, pass it explicitly:
 
 ```bash
-source scripts/use-java-25-windows.sh /c/dev/apps/jdk-25.0.0
+source scripts/use-java-26-windows.sh /c/dev/apps/jdk-26.0.2.1
 ```
 
 ```powershell
-.\scripts\use-java-25-windows.ps1 -JavaHome C:\dev\apps\jdk-25.0.0
+.\scripts\use-java-26-windows.ps1 -JavaHome C:\dev\apps\jdk-26.0.2.1
 ```
 
-After switching Java, confirm Maven is also using JDK 25:
+After switching Java, confirm Maven is also using JDK 26:
 
 ```bash
 mvn --version

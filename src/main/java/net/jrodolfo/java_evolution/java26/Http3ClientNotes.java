@@ -35,6 +35,6 @@ public class Http3ClientNotes {
 	 * @return the project decision
 	 */
 	public String projectDecision() {
-		return "this repository keeps HTTP/3 as notes while the build baseline remains JDK 25";
+		return "this repository keeps HTTP/3 as notes until it has a focused executable-example feasibility review";
 	}
 }

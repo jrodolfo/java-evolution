@@ -1,6 +1,7 @@
 package net.jrodolfo.java_evolution.java25.structured_concurrency;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,6 +16,9 @@ class StructuredConcurrencyFifthPreviewExamplesTest {
 
 	@Test
 	void childProcessDemonstratesStructuredScopeSuccessAndFailure(@TempDir Path workspace) throws Exception {
+		assumeTrue(Runtime.version().feature() == 25,
+				"Java 25 preview APIs must be compiled with a JDK 25 preview compiler");
+
 		StructuredConcurrencyFifthPreviewExamples.StructuredConcurrencyWorkflowResult result =
 				examples.runStructuredConcurrencyWorkflow(workspace);
 

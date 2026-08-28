@@ -58,7 +58,7 @@ function testClassesFromText(text) {
 function makeDemosTargetText() {
   const makefile = fs.readFileSync("Makefile", "utf8");
   const lines = makefile.split("\n");
-  const start = lines.findIndex((line) => line === "demos: check-java-25");
+  const start = lines.findIndex((line) => line === "demos: check-java-26");
 
   if (start === -1) {
     errors.push("Makefile is missing demos target");

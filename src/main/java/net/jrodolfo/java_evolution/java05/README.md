@@ -4,7 +4,7 @@ Released: September 2004 as J2SE 5.0.
 
 Java 5, originally named J2SE 5.0, was one of the largest changes in everyday Java programming. It added language features that made collections safer, loops clearer, primitive-wrapper conversions less noisy, constants more expressive, method calls more flexible, metadata available to tools, and concurrent code easier to build.
 
-This package compiles on the repository's JDK 25 baseline. The syntax shown here is still valid today, but the examples explain the Java 5 problem each feature originally solved.
+This package compiles on the repository's JDK 26 baseline. The syntax shown here is still valid today, but the examples explain the Java 5 problem each feature originally solved.
 
 ## Generics
 

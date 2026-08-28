@@ -115,7 +115,7 @@ javac --add-modules jdk.incubator.vector --release 20 ...
 java --add-modules jdk.incubator.vector ...
 ```
 
-That is why this module uses a child process. The repository class itself remains ordinary JDK 25-compatible code, while the generated child program imports and executes `jdk.incubator.vector` as Java 20-targeted bytecode.
+That is why this module uses a child process. The repository class itself remains ordinary JDK 26-compatible code, while the generated child program imports and executes `jdk.incubator.vector` as Java 20-targeted bytecode.
 
 The later learning module is here:
 

@@ -256,7 +256,7 @@ Interview angle: explain Java 22-24 as a transition from Java 21's modern baseli
 
 ## Stage 8: Java 25-26 LTS And Current-Release Maturity
 
-Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is represented as notes-only material in this repository because the build baseline remains JDK 25.
+Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is the repository build baseline, while its feature modules remain notes-only until selected topics are evaluated for faithful executable examples. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on JDK 26 their tests keep the source and documentation checks and skip only that old-preview compiler step.
 
 Read these first by version:
 
@@ -307,7 +307,7 @@ mvn "-Dtest=PemEncodingsSecondPreviewNotesTest,StructuredConcurrencySixthPreview
 mvn "-Dtest=VectorApiEleventhIncubatorNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
 ```
 
-Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics. It should also explain why Java 26 remains notes-only while the project keeps JDK 25 as the build baseline.
+Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics. It should also explain why moving the build baseline to JDK 26 does not automatically mean every Java 26 topic should become an executable example.
 
 ## Full Review Checklist
 

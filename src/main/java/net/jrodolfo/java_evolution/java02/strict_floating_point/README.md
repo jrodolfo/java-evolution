@@ -14,9 +14,9 @@ Floating-point calculations could vary across processors when intermediate value
 
 `StrictFloatingPointExamples` shows the actual `strictfp` modifier and runs a small calculation through a `strictfp` helper type.
 
-The test also compiles a tiny unsuppressed `strictfp` source file with the current JDK. On JDK 25, `javac` accepts the source but warns that, as of Java 17, all floating-point expressions are evaluated strictly and `strictfp` is no longer required.
+The test also compiles a tiny unsuppressed `strictfp` source file with the current JDK. On modern JDKs, `javac` accepts the source but warns that, as of Java 17, all floating-point expressions are evaluated strictly and `strictfp` is no longer required.
 
-That warning is the important modern lesson. The original Java 2 distinction between strict and non-strict evaluation cannot be reproduced faithfully in this JDK 25 project.
+That warning is the important modern lesson. The original Java 2 distinction between strict and non-strict evaluation cannot be reproduced faithfully in this JDK 26 project.
 
 ## 4. Remember This
 

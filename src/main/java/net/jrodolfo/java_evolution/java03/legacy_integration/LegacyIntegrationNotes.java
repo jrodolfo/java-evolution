@@ -14,6 +14,6 @@ public class LegacyIntegrationNotes {
 	}
 
 	public String repositoryDecision() {
-		return "CORBA, plugin, and multi-process enterprise setups are not portable compact examples on JDK 25";
+		return "CORBA, plugin, and multi-process enterprise setups are not portable compact examples on JDK 26";
 	}
 }

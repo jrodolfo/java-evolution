@@ -2,7 +2,7 @@
 
 Java 6 added JSR 223, the Scripting API.
 
-This module uses an executable Service Provider Interface (SPI) example. It does not depend on Nashorn, Rhino, GraalJS, or any external scripting engine because the repository runs on JDK 25, and modern JDKs no longer guarantee the JavaScript engine that was bundled with Sun's Java 6 implementation.
+This module uses an executable Service Provider Interface (SPI) example. It does not depend on Nashorn, Rhino, GraalJS, or any external scripting engine because the repository runs on JDK 26, and modern JDKs no longer guarantee the JavaScript engine that was bundled with Sun's Java 6 implementation.
 
 ## 1. What Problem Does This Feature Solve?
 

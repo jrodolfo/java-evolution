@@ -2,7 +2,7 @@ param(
     [string] $JavaHome
 )
 
-function Test-Java25Home {
+function Test-Java26Home {
     param(
         [string] $Candidate
     )
@@ -19,10 +19,10 @@ function Test-Java25Home {
     }
 
     $versionLine = & $javaExe --version 2>&1 | Select-Object -First 1
-    return $versionLine -match '^(openjdk|java)\s+25(\s|\.|$)'
+    return $versionLine -match '^(openjdk|java)\s+26(\s|\.|$)'
 }
 
-function Set-Java25Home {
+function Set-Java26Home {
     param(
         [string] $Candidate
     )
@@ -45,21 +45,21 @@ function Set-Java25Home {
 $candidates = @()
 
 if ($JavaHome) {
-    if (-not (Test-Java25Home -Candidate $JavaHome)) {
-        Write-Error "The supplied path is not a valid JDK 25 home: $JavaHome"
+    if (-not (Test-Java26Home -Candidate $JavaHome)) {
+        Write-Error "The supplied path is not a valid JDK 26 home: $JavaHome"
         exit 1
     }
 
-    Set-Java25Home -Candidate $JavaHome
+    Set-Java26Home -Candidate $JavaHome
     return
 }
 
-if ($env:JAVA25_HOME) {
-    $candidates += $env:JAVA25_HOME
+if ($env:JAVA26_HOME) {
+    $candidates += $env:JAVA26_HOME
 }
 
-if ($env:JDK25_HOME) {
-    $candidates += $env:JDK25_HOME
+if ($env:JDK26_HOME) {
+    $candidates += $env:JDK26_HOME
 }
 
 $searchRoots = @(
@@ -71,7 +71,7 @@ $searchRoots = @(
 
 foreach ($root in $searchRoots) {
     if (Test-Path -LiteralPath $root -PathType Container) {
-        $matches = Get-ChildItem -LiteralPath $root -Directory -Filter 'jdk-25*' -ErrorAction SilentlyContinue |
+        $matches = Get-ChildItem -LiteralPath $root -Directory -Filter 'jdk-26*' -ErrorAction SilentlyContinue |
             Sort-Object Name -Descending
 
         foreach ($match in $matches) {
@@ -81,19 +81,19 @@ foreach ($root in $searchRoots) {
 }
 
 foreach ($candidate in $candidates) {
-    if (Test-Java25Home -Candidate $candidate) {
-        Set-Java25Home -Candidate $candidate
+    if (Test-Java26Home -Candidate $candidate) {
+        Set-Java26Home -Candidate $candidate
         return
     }
 }
 
 Write-Error @"
-Could not find a JDK 25 installation.
+Could not find a JDK 26 installation.
 
-Pass the JDK path explicitly, or set JAVA25_HOME or JDK25_HOME first.
+Pass the JDK path explicitly, or set JAVA26_HOME or JDK26_HOME first.
 
 Examples:
-  .\scripts\use-java-25-windows.ps1 -JavaHome C:\dev\apps\jdk-25.0.0
-  `$env:JAVA25_HOME = 'C:\dev\apps\jdk-25.0.0'; .\scripts\use-java-25-windows.ps1
+  .\scripts\use-java-26-windows.ps1 -JavaHome C:\dev\apps\jdk-26.0.2.1
+  `$env:JAVA26_HOME = 'C:\dev\apps\jdk-26.0.2.1'; .\scripts\use-java-26-windows.ps1
 "@
 exit 1

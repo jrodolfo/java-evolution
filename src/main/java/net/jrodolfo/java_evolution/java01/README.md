@@ -6,7 +6,7 @@ This package covers early Java 1.0 and 1.1 foundations. It is intentionally a re
 
 Java 1.0 established the object-oriented language, checked exceptions, threads, `java.io`, AWT, applets, and the original standard-library shape. Java 1.1 expanded the platform with inner classes, reflection, object serialization, JDBC, RMI, JavaBeans, internationalization, JAR files, JNI, and the delegation event model.
 
-The executable examples focus on concepts that still compile and behave faithfully on JDK 25. Environment-heavy topics use local, isolated fixtures where that still teaches the feature clearly.
+The executable examples focus on concepts that still compile and behave faithfully on JDK 26. Environment-heavy topics use local, isolated fixtures where that still teaches the feature clearly.
 
 ## Object-Oriented Basics
 

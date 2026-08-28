@@ -22,7 +22,7 @@ public class StrictFloatingPointExamples {
 	}
 
 	public String modernContext() {
-		return "Java 17 restored always-strict floating-point semantics, so JDK 25 treats strictfp as unnecessary";
+		return "Java 17 restored always-strict floating-point semantics, so modern JDKs treat strictfp as unnecessary";
 	}
 
 	public double strictAverage(double left, double right) {

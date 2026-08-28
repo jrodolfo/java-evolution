@@ -10,7 +10,7 @@
  *
  * <p>
  * The classes in this package use only syntax that remains valid on the
- * repository's JDK 25 baseline, while explaining the Java 5 origin of each
+ * repository's JDK 26 baseline, while explaining the Java 5 origin of each
  * feature.
  * </p>
  */

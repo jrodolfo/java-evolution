@@ -201,18 +201,18 @@ Key topics:
 - Java 25 is an LTS release that finalized scoped values, flexible constructor bodies, module import declarations, compact source files, and the KDF API.
 - Some Java 25 features are still preview or incubator, such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
 - Java 26 adds HTTP/3 support, removes the Applet API, and continues preview/incubator/runtime work.
-- This repository documents Java 26 as notes-only while the build baseline remains JDK 25.
+- This repository now builds on JDK 26 while keeping Java 26 feature modules notes-only until each topic is evaluated for faithful executable examples.
 
 Possible prompt:
 
 ```text
-Why does this repository document Java 26 without moving the build baseline from JDK 25?
+Why does this repository build on JDK 26 while still keeping Java 26 feature modules notes-only?
 ```
 
 Strong answer:
 
 ```text
-JDK 25 is the stable build baseline for the project. Java 26 is still valuable for current-release awareness, but several topics involve JDK 26-only APIs, preview APIs, incubator modules, runtime behavior, or removed APIs. Notes keep the learning accurate without forcing the whole project to compile or run on JDK 26.
+JDK 26 is the project build baseline, but baseline support is not the same as example suitability. Several Java 26 topics involve preview APIs, incubator modules, runtime behavior, performance internals, or removed APIs. Notes keep the learning accurate until each topic is evaluated for a focused executable example.
 ```
 
 Repo paths:

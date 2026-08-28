@@ -356,7 +356,7 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 Learning notes: [java26 README](../src/main/java/net/jrodolfo/java_evolution/java26/README.md)
 
-Java 26 is represented as C2 explanatory material while the repository keeps JDK 25 as its build baseline.
+Java 26 is currently represented as C2 explanatory material. The repository now builds on JDK 26, and selected Java 26 features can be evaluated for executable examples in focused follow-up work.
 
 | Feature | Example | Test |
 |---|---|---|

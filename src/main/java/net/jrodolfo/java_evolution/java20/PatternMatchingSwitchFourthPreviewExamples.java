@@ -12,7 +12,7 @@ package net.jrodolfo.java_evolution.java20;
  * </p>
  *
  * <p>
- * This class uses final JDK 25 syntax while documenting the Java 20 preview
+ * This class uses final JDK 26 syntax while documenting the Java 20 preview
  * origin.
  * </p>
  */

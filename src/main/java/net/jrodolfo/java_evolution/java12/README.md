@@ -4,7 +4,7 @@ Released: March 2019 as Java SE 12.
 
 Java 12 was a smaller release, but it started an important language direction: making `switch` usable as an expression. It also added several practical library improvements for streams, strings, files, and localized number formatting.
 
-Some Java 12 features were preview features. A preview feature is available for experimentation, but it is not final yet and may change in later releases. This repository compiles with JDK 25, so preview-origin examples use current final syntax while explaining their original Java 12 status.
+Some Java 12 features were preview features. A preview feature is available for experimentation, but it is not final yet and may change in later releases. This repository compiles with JDK 26, so preview-origin examples use current final syntax while explaining their original Java 12 status.
 
 ## Switch Expressions Preview
 

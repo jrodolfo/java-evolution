@@ -6,4 +6,4 @@ SIMD matters when the same operation can be applied to many values at once, such
 
 Java 26 continues the Vector API as an eleventh incubator. Incubator APIs are intentionally not final and are delivered in incubator modules while the design evolves.
 
-This is a C2 explanatory module because it requires the `jdk.incubator.vector` module and is still incubating under the JDK 25 baseline.
+This is a C2 explanatory module because it requires the `jdk.incubator.vector` module, is still incubating, and may duplicate the existing executable Vector API learning path.

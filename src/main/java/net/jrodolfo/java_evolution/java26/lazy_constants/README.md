@@ -6,4 +6,4 @@ Before this kind of API, developers often used suppliers, nullable fields, synch
 
 Java 26 previews Lazy Constants after Java 25 previewed Stable Values. The naming change is useful for learners: the feature is about constant-like data whose initialization can be delayed.
 
-This is a C2 explanatory module because Lazy Constants are a Java 26 preview API and the repository currently builds with JDK 25.
+This is a C2 explanatory module because Lazy Constants are a Java 26 preview API and still need focused executable-example evaluation.

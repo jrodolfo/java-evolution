@@ -12,7 +12,7 @@ package net.jrodolfo.java_evolution.java14;
  * <p>
  * Records solve this by letting the developer declare the data components and
  * letting the compiler generate the standard value-based behavior. Records
- * became final in Java 16. This project compiles on JDK 25, so this class uses
+ * became final in Java 16. This project compiles on JDK 26, so this class uses
  * final record syntax while documenting that Java 14 was the first preview
  * release.
  * </p>

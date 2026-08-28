@@ -4,7 +4,7 @@ Released: September 2024 as Java SE 23.
 
 Java 23 is mostly a preview and refinement release. That makes it valuable for learning because it shows how Java features mature: ideas appear as previews, receive feedback, and may become final in later releases.
 
-This package uses notes classes for most Java 23 features because many of them were preview APIs or evolving APIs that do not fit cleanly into the JDK 25 build. Markdown documentation comments are represented with an executable tooling example, Unsafe memory-access deprecation is represented as an executable migration-boundary example, and ZGC generational mode is represented as an executable runtime-boundary example.
+This package uses notes classes for most Java 23 features because many of them were preview APIs or evolving APIs that do not fit cleanly into the JDK 26 build. Markdown documentation comments are represented with an executable tooling example, Unsafe memory-access deprecation is represented as an executable migration-boundary example, and ZGC generational mode is represented as an executable runtime-boundary example.
 
 ## Markdown Documentation Comments
 

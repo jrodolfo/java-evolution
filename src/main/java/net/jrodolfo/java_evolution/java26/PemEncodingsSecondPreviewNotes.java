@@ -36,6 +36,6 @@ public class PemEncodingsSecondPreviewNotes {
 	 * @return the project decision
 	 */
 	public String projectDecision() {
-		return "the Java 26 preview API is documented as notes because the repository builds with JDK 25";
+		return "the Java 26 preview API remains notes-only until a focused executable-example review";
 	}
 }

@@ -20,8 +20,8 @@ class PemEncodingsSecondPreviewNotesTest {
 				.contains("Java 26")
 				.contains("Java 25");
 		assertThat(notes.projectDecision())
-				.as("Preview API should not be compiled as a normal JDK 25 example")
+				.as("Preview API should not be compiled as a normal non-preview example")
 				.contains("preview API")
-				.contains("JDK 25");
+				.contains("focused executable-example review");
 	}
 }

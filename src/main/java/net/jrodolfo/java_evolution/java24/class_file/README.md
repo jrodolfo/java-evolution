@@ -76,8 +76,9 @@ For example:
 - Java 23 uses major version 67
 - Java 24 uses major version 68
 - Java 25 uses major version 69
+- Java 26 uses major version 70
 
-This project compiles with JDK 25, so the inspected class is expected to use a Java 25 class-file version.
+This project compiles with JDK 26, so the inspected class is expected to use a Java 26 class-file version.
 
 ## Why We Inspect Instead Of Generate
 

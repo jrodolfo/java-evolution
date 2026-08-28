@@ -52,7 +52,7 @@ The current syntax uses `when` instead:
 case String text when text.isBlank() -> "blank string";
 ```
 
-Because this project compiles with JDK 25, the example class uses the current
+Because this project compiles with JDK 26, the example class uses the current
 `when` syntax while this README preserves the Java 17 preview history.
 
 Example: `PatternMatchingSwitchPreviewExamples`

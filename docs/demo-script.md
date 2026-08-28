@@ -99,7 +99,7 @@ src/main/java/net/jrodolfo/java_evolution/java26/README.md
 Say:
 
 ```text
-For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature, while Java 26 is documented as notes-only current-release awareness under the JDK 25 build baseline.
+For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature, while Java 26 is currently documented as notes-only current-release awareness under the JDK 26 build baseline.
 ```
 
 Run:
@@ -133,7 +133,7 @@ Then run:
 make check
 ```
 
-Expected point: the whole repository is tested with JDK 25.
+Expected point: the whole repository is tested with JDK 26.
 
 ## Two Minute Version
 
