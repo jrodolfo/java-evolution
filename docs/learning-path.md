@@ -256,7 +256,7 @@ Interview angle: explain Java 22-24 as a transition from Java 21's modern baseli
 
 ## Stage 8: Java 25-26 LTS And Current-Release Maturity
 
-Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is the repository build baseline. HTTP/3 is executable because the final API can be demonstrated deterministically, while the remaining Java 26 feature modules stay notes-only until selected topics are evaluated for faithful executable examples. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on JDK 26 their tests keep the source and documentation checks and skip only that old-preview compiler step.
+Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is the repository build baseline. HTTP/3 and Applet API removal are executable because they can be demonstrated deterministically, while the remaining Java 26 feature modules stay notes-only until selected topics are evaluated for faithful executable examples. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on JDK 26 their tests keep the source and documentation checks and skip only that old-preview compiler step.
 
 Read these first by version:
 
@@ -293,6 +293,7 @@ Java 26:
 - `src/main/java/net/jrodolfo/java_evolution/java26/Http3ClientExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java26/aot_object_caching/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/g1_synchronization/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/lazy_constants/README.md`
@@ -301,7 +302,7 @@ Java 26:
 Run:
 
 ```bash
-mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsNotesTest,AppletApiRemovalNotesTest" test
+mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsNotesTest,AppletApiRemovalExamplesTest" test
 mvn "-Dtest=AotObjectCachingNotesTest,G1SynchronizationNotesTest,LazyConstantsSecondPreviewNotesTest" test
 mvn "-Dtest=PemEncodingsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest" test
 mvn "-Dtest=VectorApiEleventhIncubatorNotesTest,PrimitivePatternsFourthPreviewNotesTest" test

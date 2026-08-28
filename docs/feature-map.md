@@ -356,13 +356,13 @@ Learning notes: [java25 README](../src/main/java/net/jrodolfo/java_evolution/jav
 
 Learning notes: [java26 README](../src/main/java/net/jrodolfo/java_evolution/java26/README.md)
 
-Java 26 is mostly represented as C2 explanatory material. HTTP/3 is a C1 executable example because the JDK 26 API surface is final and can be demonstrated deterministically without live networking. Other Java 26 features can be evaluated for executable examples in focused follow-up work.
+Java 26 is mostly represented as C2 explanatory material. HTTP/3 is a C1 executable example because the JDK 26 API surface is final and can be demonstrated deterministically without live networking. Applet API removal is also C1 because the removed package can be verified with a deterministic child-compiler example. Other Java 26 features can be evaluated for executable examples in focused follow-up work.
 
 | Feature | Example | Test |
 |---|---|---|
 | HTTP/3 for the HTTP Client API | [`Http3ClientExamples`](../src/main/java/net/jrodolfo/java_evolution/java26/Http3ClientExamples.java) | [`Http3ClientExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/Http3ClientExamplesTest.java) |
 | Final field restrictions | [`FinalFieldRestrictionsNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/FinalFieldRestrictionsNotes.java) | [`FinalFieldRestrictionsNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/FinalFieldRestrictionsNotesTest.java) |
-| Applet API removal | [`AppletApiRemovalNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalNotes.java) | [`AppletApiRemovalNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalNotesTest.java) |
+| Applet API removal | [`AppletApiRemovalExamples`](../src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalExamples.java) | [`AppletApiRemovalExamplesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalExamplesTest.java) |
 | AOT object caching | [`AotObjectCachingNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/aot_object_caching/AotObjectCachingNotes.java) | [`AotObjectCachingNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/aot_object_caching/AotObjectCachingNotesTest.java) |
 | G1 synchronization reduction | [`G1SynchronizationNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/g1_synchronization/G1SynchronizationNotes.java) | [`G1SynchronizationNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/g1_synchronization/G1SynchronizationNotesTest.java) |
 | PEM encodings second preview | [`PemEncodingsSecondPreviewNotes`](../src/main/java/net/jrodolfo/java_evolution/java26/PemEncodingsSecondPreviewNotes.java) | [`PemEncodingsSecondPreviewNotesTest`](../src/test/java/net/jrodolfo/java_evolution/java26/PemEncodingsSecondPreviewNotesTest.java) |

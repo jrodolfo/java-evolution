@@ -4,7 +4,7 @@ Released: March 2026 as Java SE 26.
 
 Java 26 adds HTTP/3 support for the standard HTTP Client API, removes the long-deprecated Applet API, continues several preview and incubator features, and advances runtime work around final-field integrity, ahead-of-time startup data, G1 garbage collection, and vector computation.
 
-This package is mostly notes-only even though the repository builds on JDK 26. HTTP/3 is an executable example because the final API surface can be demonstrated deterministically without live networking. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, removals, and performance internals still need feature-by-feature evaluation.
+This package is mostly notes-only even though the repository builds on JDK 26. HTTP/3 and Applet API removal are executable examples because they can be demonstrated deterministically without live networking or obsolete browser-plugin tooling. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, and performance internals still need feature-by-feature evaluation.
 
 ## HTTP/3 for the HTTP Client API
 
@@ -30,11 +30,11 @@ Test: `FinalFieldRestrictionsNotesTest`
 
 Applets belong to the browser-plugin era of Java. They were deprecated for removal long before Java 26.
 
-Java 26 removes the Applet API from the platform. This is a removal and migration topic, not a feature that should be demonstrated with new executable code.
+Java 26 removes the Applet API from the platform. This is a removal and migration topic, so the example demonstrates the compile-time failure of obsolete applet source rather than showing how to write an applet.
 
-Explanatory module: [`applet_api_removal`](applet_api_removal/README.md)
+Executable removal example: [`applet_api_removal`](applet_api_removal/README.md)
 
-Test: `AppletApiRemovalNotesTest`
+Test: `AppletApiRemovalExamplesTest`
 
 ## AOT Object Caching with Any GC
 
@@ -102,17 +102,17 @@ Test: `PrimitivePatternsFourthPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `Http3ClientExamples`, then read the runtime/removal modules for final-field restrictions, Applet API removal, AOT object caching, and G1. After that, read the preview and incubator notes for PEM encodings, structured concurrency, lazy constants, vector computation, and primitive patterns.
+Start with `Http3ClientExamples`, then read the executable removal module for Applet API removal. After that, read the runtime modules for final-field restrictions, AOT object caching, and G1, followed by preview and incubator notes for PEM encodings, structured concurrency, lazy constants, vector computation, and primitive patterns.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=Http3ClientExamplesTest,PemEncodingsSecondPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest test
-mvn -Dtest=FinalFieldRestrictionsNotesTest,AppletApiRemovalNotesTest,AotObjectCachingNotesTest,G1SynchronizationNotesTest test
+mvn -Dtest=FinalFieldRestrictionsNotesTest,AppletApiRemovalExamplesTest,AotObjectCachingNotesTest,G1SynchronizationNotesTest test
 mvn -Dtest=StructuredConcurrencySixthPreviewNotesTest,LazyConstantsSecondPreviewNotesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
-Java 26 is mostly represented as C2 explanatory material. HTTP/3 is represented as a C1 executable example after focused feasibility review.
+Java 26 is mostly represented as C2 explanatory material. HTTP/3 and Applet API removal are represented as C1 executable examples after focused feasibility review.
 
 ## References
 

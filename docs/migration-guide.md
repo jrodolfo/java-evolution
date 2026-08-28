@@ -231,7 +231,7 @@ Java 26 is useful for current-release awareness and is now the repository build 
 What changed conceptually:
 
 - Java 26 adds HTTP/3 support for the standard HTTP Client API.
-- Java 26 removes the Applet API after a long deprecation path.
+- Java 26 removes the Applet API after a long deprecation path, and this repository demonstrates the removal with a child-compiler example.
 - Java 26 continues preview/incubator work such as PEM encodings, structured concurrency, Lazy Constants, primitive patterns, and the Vector API.
 - Runtime and operational improvements continue around final-field restrictions, AOT object caching, and G1 garbage collection.
 
@@ -239,7 +239,7 @@ Compatibility concerns:
 
 - Java 26 topics should not be treated as executable examples merely because the repository now builds on JDK 26.
 - Final, preview, incubator, runtime, removal, and notes-only labels matter more than the release number alone.
-- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies.
+- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies. Applet API removal is executable because the removed package can be verified through a deterministic compiler failure.
 
 Study these files:
 
@@ -247,12 +247,13 @@ Study these files:
 - `src/main/java/net/jrodolfo/java_evolution/java26/Http3ClientExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java26/lazy_constants/README.md`
 
 Run:
 
 ```bash
-mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsNotesTest,AppletApiRemovalNotesTest" test
+mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsNotesTest,AppletApiRemovalExamplesTest" test
 mvn "-Dtest=LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
 ```
 
