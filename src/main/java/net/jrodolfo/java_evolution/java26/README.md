@@ -2,9 +2,9 @@
 
 Released: March 2026 as Java SE 26.
 
-Java 26 adds HTTP/3 support for the standard HTTP Client API, removes the long-deprecated Applet API, continues several preview and incubator features, and advances runtime work around final-field integrity, ahead-of-time startup data, G1 garbage collection, and vector computation.
+Java 26 adds HTTP/3 support for the standard HTTP Client API, starts warning about deep-reflective final-field mutation, removes the long-deprecated Applet API, continues several preview and incubator features, and advances runtime work around ahead-of-time startup data, G1 garbage collection, and vector computation.
 
-This package is mostly notes-only even though the repository builds on JDK 26. HTTP/3 and Applet API removal are executable examples because they can be demonstrated deterministically without live networking or obsolete browser-plugin tooling. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, and performance internals still need feature-by-feature evaluation.
+This package is mostly notes-only even though the repository builds on JDK 26. HTTP/3, final-field restrictions, and Applet API removal are executable examples because they can be demonstrated deterministically without live networking, main-JVM warning leakage, or obsolete browser-plugin tooling. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, and performance internals still need feature-by-feature evaluation.
 
 ## HTTP/3 for the HTTP Client API
 
@@ -22,9 +22,9 @@ Java has long allowed final fields to be mutated through deep reflection. That w
 
 Java 26 starts the migration by warning when deep reflection mutates final fields. The goal is to prepare applications for a future release where this behavior is restricted more strongly by default.
 
-Explanatory module: [`final_field_restrictions`](final_field_restrictions/README.md)
+Executable runtime example: [`final_field_restrictions`](final_field_restrictions/README.md)
 
-Test: `FinalFieldRestrictionsNotesTest`
+Test: `FinalFieldRestrictionsExamplesTest`
 
 ## Remove the Applet API
 
@@ -102,17 +102,17 @@ Test: `PrimitivePatternsFourthPreviewNotesTest`
 
 ## How To Read This Package
 
-Start with `Http3ClientExamples`, then read the executable removal module for Applet API removal. After that, read the runtime modules for final-field restrictions, AOT object caching, and G1, followed by preview and incubator notes for PEM encodings, structured concurrency, lazy constants, vector computation, and primitive patterns.
+Start with `Http3ClientExamples`, then read the executable runtime module for final-field restrictions and the executable removal module for Applet API removal. After that, read the runtime notes for AOT object caching and G1, followed by preview and incubator notes for PEM encodings, structured concurrency, lazy constants, vector computation, and primitive patterns.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=Http3ClientExamplesTest,PemEncodingsSecondPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest test
-mvn -Dtest=FinalFieldRestrictionsNotesTest,AppletApiRemovalExamplesTest,AotObjectCachingNotesTest,G1SynchronizationNotesTest test
+mvn -Dtest=FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest,AotObjectCachingNotesTest,G1SynchronizationNotesTest test
 mvn -Dtest=StructuredConcurrencySixthPreviewNotesTest,LazyConstantsSecondPreviewNotesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
-Java 26 is mostly represented as C2 explanatory material. HTTP/3 and Applet API removal are represented as C1 executable examples after focused feasibility review.
+Java 26 is mostly represented as C2 explanatory material. HTTP/3, final-field restrictions, and Applet API removal are represented as C1 executable examples after focused feasibility review.
 
 ## References
 

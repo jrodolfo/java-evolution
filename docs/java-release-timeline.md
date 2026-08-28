@@ -34,7 +34,7 @@ For early releases, names can be confusing: Java 1.2, 1.3, and 1.4 were marketed
 | Java 23 | Java SE 23 | September 2024 | Refinement release with Markdown JavaDoc comments, preview language work, and runtime notes. |
 | Java 24 | Java SE 24 | March 2025 | Finalizes Stream Gatherers and the Class-File API and adds several runtime/security changes. |
 | Java 25 | Java SE 25 | September 2025 | Long-term support release with final scoped values, flexible constructor bodies, module imports, compact source files, and new runtime/platform work. |
-| Java 26 | Java SE 26 | March 2026 | Adds HTTP/3 client support, removes the Applet API, and continues preview/incubator/runtime work. |
+| Java 26 | Java SE 26 | March 2026 | Adds HTTP/3 client support, warns about deep-reflective final-field mutation, removes the Applet API, and continues preview/incubator/runtime work. |
 
 ## Notes On Sources
 

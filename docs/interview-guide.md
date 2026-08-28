@@ -200,19 +200,19 @@ Key topics:
 
 - Java 25 is an LTS release that finalized scoped values, flexible constructor bodies, module import declarations, compact source files, and the KDF API.
 - Some Java 25 features are still preview or incubator, such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
-- Java 26 adds HTTP/3 support, removes the Applet API, and continues preview/incubator/runtime work.
-- This repository now builds on JDK 26 while keeping Java 26 feature modules notes-only until each topic is evaluated for faithful executable examples.
+- Java 26 adds HTTP/3 support, warns about deep-reflective final-field mutation, removes the Applet API, and continues preview/incubator/runtime work.
+- This repository now builds on JDK 26 while keeping only the not-yet-evaluated Java 26 feature modules notes-only. HTTP/3, final-field restrictions, and Applet API removal already have focused executable examples.
 
 Possible prompt:
 
 ```text
-Why does this repository build on JDK 26 while still keeping Java 26 feature modules notes-only?
+Why does this repository build on JDK 26 while still keeping some Java 26 feature modules notes-only?
 ```
 
 Strong answer:
 
 ```text
-JDK 26 is the project build baseline, but baseline support is not the same as example suitability. Several Java 26 topics involve preview APIs, incubator modules, runtime behavior, performance internals, or removed APIs. Notes keep the learning accurate until each topic is evaluated for a focused executable example.
+JDK 26 is the project build baseline, but baseline support is not the same as example suitability. Several Java 26 topics involve preview APIs, incubator modules, runtime behavior, or performance internals. The repository adds focused executable examples when a topic can be demonstrated deterministically and honestly; the remaining topics stay as notes until they are evaluated.
 ```
 
 Repo paths:

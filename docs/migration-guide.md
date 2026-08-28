@@ -226,7 +226,7 @@ Interview angle: explain Java 25 as an LTS baseline where several features becom
 
 ## Java 26 Awareness
 
-Java 26 is useful for current-release awareness and is now the repository build baseline. The Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example.
+Java 26 is useful for current-release awareness and is now the repository build baseline. Some Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example; HTTP/3, final-field restrictions, and Applet API removal already have focused executable examples.
 
 What changed conceptually:
 
@@ -239,7 +239,7 @@ Compatibility concerns:
 
 - Java 26 topics should not be treated as executable examples merely because the repository now builds on JDK 26.
 - Final, preview, incubator, runtime, removal, and notes-only labels matter more than the release number alone.
-- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies. Applet API removal is executable because the removed package can be verified through a deterministic compiler failure.
+- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies. Final-field restrictions are executable because the runtime warning can be captured in an isolated child JVM. Applet API removal is executable because the removed package can be verified through a deterministic compiler failure.
 
 Study these files:
 
@@ -253,7 +253,7 @@ Study these files:
 Run:
 
 ```bash
-mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsNotesTest,AppletApiRemovalExamplesTest" test
+mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest" test
 mvn "-Dtest=LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest" test
 ```
 
