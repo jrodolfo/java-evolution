@@ -27,14 +27,14 @@ source scripts/use-java-26-windows.sh
 Windows with PowerShell:
 
 ```powershell
-.\scripts\use-java-26-windows.ps1
+. .\scripts\use-java-26-windows.ps1
 ```
 
 If PowerShell blocks local scripts, allow them for the current session only:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
-.\scripts\use-java-26-windows.ps1
+. .\scripts\use-java-26-windows.ps1
 ```
 
 ## Custom JDK Locations

@@ -99,7 +99,7 @@ src/main/java/net/jrodolfo/java_evolution/java26/README.md
 Say:
 
 ```text
-For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature. Java 26 uses the JDK 26 build baseline and includes executable examples for HTTP/3, final-field restrictions, Applet API removal, and AOT object caching, while the remaining current-release topics stay as notes until they pass focused feasibility review.
+For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature. Java 26 uses the JDK 26 build baseline and includes executable examples for HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency, while G1 synchronization reduction and the Vector API remain explanatory notes.
 ```
 
 Run:

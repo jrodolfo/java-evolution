@@ -4,7 +4,7 @@ Released: March 2026 as Java SE 26.
 
 Java 26 adds HTTP/3 support for the standard HTTP Client API, starts warning about deep-reflective final-field mutation, removes the long-deprecated Applet API, continues several preview and incubator features, and advances runtime work around ahead-of-time startup data, G1 garbage collection, and vector computation.
 
-This package is mostly notes-only even though the repository builds on JDK 26. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, and primitive patterns are executable examples because they can be demonstrated deterministically with isolated API, compiler, or child-JVM workflows. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, and performance internals still need feature-by-feature evaluation.
+This package contains eight C1 executable examples and two C2 explanatory modules. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency are executable because they can be demonstrated deterministically with isolated API, compiler, or child-JVM workflows. G1 synchronization reduction and the Vector API remain explanatory modules because their runtime and incubator behavior is not represented by a focused portable example.
 
 ## HTTP/3 for the HTTP Client API
 
@@ -112,7 +112,7 @@ mvn -Dtest=FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest,AotOb
 mvn -Dtest=StructuredConcurrencySixthPreviewExamplesTest,LazyConstantsSecondPreviewExamplesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
-Java 26 is mostly represented as C2 explanatory material. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and structured concurrency are represented as C1 executable examples after focused feasibility review. The preview APIs and syntax compile and run only in isolated child JVMs using matching JDK 26 preview flags.
+Java 26 contains eight C1 executable examples and two C2 explanatory modules. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency are represented as C1 executable examples after focused feasibility review. G1 synchronization reduction and the Vector API remain C2 explanatory modules. The preview APIs and syntax compile and run only in isolated child JVMs using matching JDK 26 preview flags.
 
 ## References
 

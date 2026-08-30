@@ -226,13 +226,13 @@ Interview angle: explain Java 25 as an LTS baseline where several features becom
 
 ## Java 26 Awareness
 
-Java 26 is useful for current-release awareness and is now the repository build baseline. Some Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example; HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, and primitive patterns already have focused executable examples.
+Java 26 is useful for current-release awareness and is now the repository build baseline. Eight Java 26 topics have focused C1 executable examples: HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency. G1 synchronization reduction and the Vector API remain C2 explanatory modules.
 
 What changed conceptually:
 
 - Java 26 adds HTTP/3 support for the standard HTTP Client API.
 - Java 26 removes the Applet API after a long deprecation path, and this repository demonstrates the removal with a child-compiler example.
-- Java 26 continues preview/incubator work such as structured concurrency, Lazy Constants, and the Vector API. PEM encodings and primitive patterns are also preview work, but this repository demonstrates their behavior in isolated JDK 26 child-JVM workflows.
+- Java 26 continues preview/incubator work such as Structured Concurrency, Lazy Constants, and the Vector API. PEM encodings and primitive patterns are also preview work; the repository demonstrates Structured Concurrency, Lazy Constants, PEM encodings, and primitive patterns in isolated JDK 26 child-JVM workflows, while the Vector API remains explanatory material.
 - Runtime and operational improvements continue around final-field restrictions, AOT object caching, and G1 garbage collection.
 
 Compatibility concerns:
@@ -245,11 +245,16 @@ Study these files:
 
 - `src/main/java/net/jrodolfo/java_evolution/java26/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/Http3ClientExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/FinalFieldRestrictionsExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java26/final_field_restrictions/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/README.md`
 - `src/main/java/net/jrodolfo/java_evolution/java26/applet_api_removal/AppletApiRemovalExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java26/aot_object_caching/AotObjectCachingExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java26/PemEncodingsSecondPreviewExamples.java`
 - `src/main/java/net/jrodolfo/java_evolution/java26/lazy_constants/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java26/lazy_constants/LazyConstantsSecondPreviewExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java26/structured_concurrency/StructuredConcurrencySixthPreviewExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java26/PrimitivePatternsFourthPreviewExamples.java`
 
 Run:
 

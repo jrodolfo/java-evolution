@@ -1,20 +1,16 @@
 /**
- * Explanatory notes for features introduced in Java 26.
+ * Examples and explanatory notes for features introduced in Java 26.
  *
  * <p>
  * Java 26 adds HTTP/3 support for the HTTP Client API, starts warning about
  * deep-reflective final-field mutation, removes the Applet API, continues
  * preview and incubator APIs, and advances runtime work around ahead-of-time
- * startup data, G1, and vector computation. This package is mostly notes-only
- * while selected Java 26 features await focused executable-example evaluation.
- * HTTP/3 is executable because its final API can be demonstrated without live
- * networking, final-field restrictions are executable because the warning can be
- * captured in a child JVM, Applet API removal is executable because the
- * removed package can be verified with a deterministic compiler probe, AOT
- * object caching is executable through isolated cache workflows, PEM encodings
- * are executable through an in-memory round trip in an isolated preview
- * workflow, and primitive patterns are executable through an isolated
- * matching-JDK preview workflow.
+ * startup data, G1, and vector computation. Eight Java 26 topics are C1
+ * executable examples: HTTP/3, final-field restrictions, Applet API removal,
+ * AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and
+ * Structured Concurrency. G1 synchronization reduction and the Vector API
+ * remain C2 explanatory modules because their runtime and incubator behavior
+ * is not represented by a focused portable example.
  * </p>
  */
 package net.jrodolfo.java_evolution.java26;
