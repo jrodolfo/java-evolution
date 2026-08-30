@@ -6,12 +6,26 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
+## v1.6.3
+
+Patch release focused on completing selected Java 26 C1 migrations and aligning the learner documentation with the current feature coverage.
+
 ### Changed
 
 - Converted Java 26 Structured Concurrency from notes-only material into an executable child-JVM preview API example with focused tests.
 - Converted Java 26 Lazy Constants from notes-only material into an executable child-JVM preview API example with focused tests.
 - Converted Java 26 PEM Encodings from notes-only material into an executable child-JVM preview API example with focused tests.
 - Converted Java 26 Primitive Patterns from notes-only material into an executable child-JVM preview syntax example with focused tests.
+- Updated Java 26 feature maps, learning guides, migration guidance, demo scripts, package documentation, and README content to distinguish eight C1 examples from two C2 explanatory modules.
+- Corrected the PowerShell JDK 26 activation documentation to dot-source the helper script so environment changes persist in the current session.
+
+### Validation
+
+- JDK 26 Maven test suite passed with 459 tests, 0 failures, 0 errors, and 11 expected skips.
+- JavaDoc generation passed.
+- Documentation navigation audit passed.
+- Markdown link validation passed with 1,092 links checked and 0 errors.
+- `git diff --check` passed.
 
 ## v1.6.2
 
