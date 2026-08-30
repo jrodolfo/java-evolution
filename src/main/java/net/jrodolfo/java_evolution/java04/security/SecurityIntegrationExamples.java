@@ -30,6 +30,14 @@ import javax.crypto.spec.SecretKeySpec;
  * portable, and do not require sockets, login configuration, credentials, or
  * external services.
  * </p>
+ * <p>
+ * The example uses later platform APIs such as AES-GCM, SHA-256,
+ * {@link GCMParameterSpec}, {@link Provider.Service},
+ * {@link Arrays#copyOf(byte[], int)}, and {@link StandardCharsets#UTF_8}
+ * intentionally. These choices keep the demonstration aligned with modern
+ * cryptographic security practice on the current JDK, while the surrounding
+ * package explains the Java 4-era integration of security APIs.
+ * </p>
  */
 public class SecurityIntegrationExamples {
 

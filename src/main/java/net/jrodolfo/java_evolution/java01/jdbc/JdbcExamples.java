@@ -23,6 +23,13 @@ import java.util.logging.Logger;
  * tiny learning driver, lets {@link DriverManager} route a JDBC URL to that
  * driver, and exposes connection metadata. It is not a SQL engine.
  * </p>
+ * <p>
+ * The small provider uses {@link Proxy} as an intentional modern-JDK
+ * compatibility adapter. Dynamic proxies were added after JDBC 1.1, but they
+ * avoid filling this historical driver example with dozens of boilerplate
+ * methods required by today's expanded {@link Connection} and
+ * {@link DatabaseMetaData} interfaces.
+ * </p>
  */
 public class JdbcExamples {
 

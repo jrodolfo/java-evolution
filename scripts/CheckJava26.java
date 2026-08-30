@@ -3,6 +3,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 final class CheckJava26 {
     private static final Pattern JAVA_26 = Pattern.compile("^(java|openjdk)\\s+26([\\s.]|$)");
@@ -47,9 +49,22 @@ final class CheckJava26 {
         Process process = new ProcessBuilder(command)
                 .redirectErrorStream(true)
                 .start();
-        byte[] output = process.getInputStream().readAllBytes();
-        int exitCode = process.waitFor();
-        return new CommandResult(exitCode, new String(output, StandardCharsets.UTF_8).trim());
+        CompletableFuture<String> output = CompletableFuture.supplyAsync(() -> readOutput(process));
+        boolean finished = process.waitFor(10, TimeUnit.SECONDS);
+        if (!finished) {
+            process.destroyForcibly();
+            process.waitFor(5, TimeUnit.SECONDS);
+            return new CommandResult(-1, output.join().trim());
+        }
+        return new CommandResult(process.exitValue(), output.join().trim());
+    }
+
+    private static String readOutput(Process process) {
+        try {
+            return new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+        } catch (IOException exception) {
+            throw new IllegalStateException("could not read prerequisite command output", exception);
+        }
     }
 
     private static String firstLine(String output) {
