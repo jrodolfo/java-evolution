@@ -226,13 +226,13 @@ Interview angle: explain Java 25 as an LTS baseline where several features becom
 
 ## Java 26 Awareness
 
-Java 26 is useful for current-release awareness and is now the repository build baseline. Some Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example; HTTP/3, final-field restrictions, Applet API removal, AOT object caching, and primitive patterns already have focused executable examples.
+Java 26 is useful for current-release awareness and is now the repository build baseline. Some Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example; HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, and primitive patterns already have focused executable examples.
 
 What changed conceptually:
 
 - Java 26 adds HTTP/3 support for the standard HTTP Client API.
 - Java 26 removes the Applet API after a long deprecation path, and this repository demonstrates the removal with a child-compiler example.
-- Java 26 continues preview/incubator work such as PEM encodings, structured concurrency, Lazy Constants, and the Vector API. Primitive patterns are also preview work, but this repository demonstrates their source-level behavior in an isolated JDK 26 child-JVM workflow.
+- Java 26 continues preview/incubator work such as structured concurrency, Lazy Constants, and the Vector API. PEM encodings and primitive patterns are also preview work, but this repository demonstrates their behavior in isolated JDK 26 child-JVM workflows.
 - Runtime and operational improvements continue around final-field restrictions, AOT object caching, and G1 garbage collection.
 
 Compatibility concerns:
@@ -255,7 +255,7 @@ Run:
 
 ```bash
 mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest" test
-mvn "-Dtest=AotObjectCachingExamplesTest,LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewExamplesTest" test
+mvn "-Dtest=AotObjectCachingExamplesTest,PemEncodingsSecondPreviewExamplesTest,LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewExamplesTest" test
 ```
 
 Interview angle: show baseline discipline. A strong answer explains why moving the repository baseline to JDK 26 is separate from deciding whether each Java 26 feature should be executable or notes-only.

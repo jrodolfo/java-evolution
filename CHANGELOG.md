@@ -23,6 +23,7 @@ Patch release focused on cross-platform executable examples, historical API fide
 
 ### Changed
 
+- Converted Java 26 PEM Encodings from notes-only material into an executable child-JVM preview API example with focused tests.
 - Converted Java 26 Primitive Patterns from notes-only material into an executable child-JVM preview syntax example with focused tests.
 - Converted Java 26 HTTP/3 from notes-only material into an executable API-configuration example with focused tests.
 - Converted Java 26 final-field restrictions from notes-only material into an executable child-JVM runtime-warning example with focused tests.
