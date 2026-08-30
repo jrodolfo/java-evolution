@@ -22,7 +22,7 @@ See [Platform Setup](docs/platform-setup.md) for platform-specific JDK helpers a
 
 ## Quick Start
 
-Select JDK 26 for the current terminal session, then verify Java and Maven:
+On macOS, select JDK 26 for the current terminal session, then verify Java and Maven:
 
 ```bash
 source scripts/use-java-26-mac.sh
@@ -41,6 +41,7 @@ Useful targets:
 
 ```bash
 make test
+make links
 make demos
 make docs
 make docs-check
@@ -81,7 +82,7 @@ The project uses one Java release for the build: `26`. Each package still teache
 
 Start with the package for the Java version you want to review. Read its version README, then the example class and matching test. The [Study Guide](docs/study-guide.md) provides a broader sequence.
 
-To run one example, use its test class:
+To run one example, use its test class. For example:
 
 ```bash
 mvn -Dtest=StreamExamplesTest test
