@@ -93,7 +93,7 @@ Use the [Feature Map](docs/feature-map.md) to find the class and test for a spec
 
 ## Official References
 
-Java 1 through Java 7 predate the modern OpenJDK release pages and JEP process. Historical references and official links are organized in the [JEP Index](docs/jep-index.md) and [Java Release Timeline](docs/java-release-timeline.md).
+Java 1 through Java 7 predate the modern OpenJDK release pages and JEP process, so their entries use historical release notes, specifications, and API documentation. Java 8 through Java 26 use the JEP process and OpenJDK release references where available. All historical and official links are organized in the [JEP Index](docs/jep-index.md) and [Java Release Timeline](docs/java-release-timeline.md).
 
 ## Contact
 
