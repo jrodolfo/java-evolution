@@ -239,7 +239,7 @@ Compatibility concerns:
 
 - Java 26 topics should not be treated as executable examples merely because the repository now builds on JDK 26.
 - Final, preview, incubator, runtime, removal, and notes-only labels matter more than the release number alone.
-- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies. Final-field restrictions are executable because the runtime warning can be captured in an isolated child JVM. Applet API removal is executable because the removed package can be verified through a deterministic compiler failure. AOT object caching is executable because cache creation and reuse can be verified in isolated child JVMs without measuring startup performance.
+- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies. Final-field restrictions are executable because the runtime warning can be captured in an isolated child JVM. Applet API removal is executable because the removed package can be verified through a deterministic compiler failure. AOT object caching is executable because cache creation and reuse can be verified in isolated child JVMs without measuring startup performance. Structured Concurrency is executable because scope joining and failure propagation can be verified in an isolated child JVM without relying on scheduler timing or cancellation races.
 
 Study these files:
 
@@ -255,7 +255,7 @@ Run:
 
 ```bash
 mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest" test
-mvn "-Dtest=AotObjectCachingExamplesTest,PemEncodingsSecondPreviewExamplesTest,LazyConstantsSecondPreviewExamplesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewExamplesTest" test
+mvn "-Dtest=AotObjectCachingExamplesTest,PemEncodingsSecondPreviewExamplesTest,LazyConstantsSecondPreviewExamplesTest,StructuredConcurrencySixthPreviewExamplesTest,PrimitivePatternsFourthPreviewExamplesTest" test
 ```
 
 Interview angle: show baseline discipline. A strong answer explains why moving the repository baseline to JDK 26 is separate from deciding whether each Java 26 feature should be executable or notes-only.
