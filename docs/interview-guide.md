@@ -201,7 +201,7 @@ Key topics:
 - Java 25 is an LTS release that finalized scoped values, flexible constructor bodies, module import declarations, compact source files, and the KDF API.
 - Some Java 25 features are still preview or incubator, such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
 - Java 26 adds HTTP/3 support, warns about deep-reflective final-field mutation, removes the Applet API, and continues preview/incubator/runtime work.
-- This repository now builds on JDK 26 while keeping only the not-yet-evaluated Java 26 feature modules notes-only. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, and primitive patterns already have focused executable examples.
+- This repository now builds on JDK 26 while keeping only the not-yet-evaluated Java 26 feature modules notes-only. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, Lazy Constants, and primitive patterns already have focused executable examples.
 
 Possible prompt:
 

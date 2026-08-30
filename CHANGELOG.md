@@ -6,7 +6,9 @@ This project uses simple release notes rather than a strict changelog taxonomy. 
 
 ## Unreleased
 
-No changes yet.
+### Changed
+
+- Converted Java 26 Lazy Constants from notes-only material into an executable child-JVM preview API example with focused tests.
 
 ## v1.6.2
 
@@ -23,6 +25,7 @@ Patch release focused on cross-platform executable examples, historical API fide
 
 ### Changed
 
+- Converted Java 26 Lazy Constants from notes-only material into an executable child-JVM preview API example with focused tests.
 - Converted Java 26 PEM Encodings from notes-only material into an executable child-JVM preview API example with focused tests.
 - Converted Java 26 Primitive Patterns from notes-only material into an executable child-JVM preview syntax example with focused tests.
 - Converted Java 26 HTTP/3 from notes-only material into an executable API-configuration example with focused tests.

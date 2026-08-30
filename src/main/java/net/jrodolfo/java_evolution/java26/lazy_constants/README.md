@@ -6,4 +6,10 @@ Before this kind of API, developers often used suppliers, nullable fields, synch
 
 Java 26 previews Lazy Constants after Java 25 previewed Stable Values. The naming change is useful for learners: the feature is about constant-like data whose initialization can be delayed.
 
-This is a C2 explanatory module because Lazy Constants are a Java 26 preview API and still need focused executable-example evaluation.
+This is a C1 executable preview example because the LazyConstant API can be demonstrated deterministically with an in-memory supplier in an isolated JDK 26 child JVM.
+
+The example focuses on lifecycle semantics rather than concurrency benchmarks: the supplier is not evaluated by `orElse`, is evaluated once by the first `get`, and the resulting value is reused.
+
+Example: `LazyConstantsSecondPreviewExamples`
+
+Test: `LazyConstantsSecondPreviewExamplesTest`

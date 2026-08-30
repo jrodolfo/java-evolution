@@ -226,7 +226,7 @@ Interview angle: explain Java 25 as an LTS baseline where several features becom
 
 ## Java 26 Awareness
 
-Java 26 is useful for current-release awareness and is now the repository build baseline. Some Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example; HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, and primitive patterns already have focused executable examples.
+Java 26 is useful for current-release awareness and is now the repository build baseline. Some Java 26 feature modules remain notes-only until each topic is evaluated for a faithful executable example; HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, and primitive patterns already have focused executable examples.
 
 What changed conceptually:
 
@@ -255,7 +255,7 @@ Run:
 
 ```bash
 mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest" test
-mvn "-Dtest=AotObjectCachingExamplesTest,PemEncodingsSecondPreviewExamplesTest,LazyConstantsSecondPreviewNotesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewExamplesTest" test
+mvn "-Dtest=AotObjectCachingExamplesTest,PemEncodingsSecondPreviewExamplesTest,LazyConstantsSecondPreviewExamplesTest,StructuredConcurrencySixthPreviewNotesTest,PrimitivePatternsFourthPreviewExamplesTest" test
 ```
 
 Interview angle: show baseline discipline. A strong answer explains why moving the repository baseline to JDK 26 is separate from deciding whether each Java 26 feature should be executable or notes-only.

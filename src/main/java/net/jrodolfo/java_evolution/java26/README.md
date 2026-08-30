@@ -80,9 +80,9 @@ Stable Values previewed in Java 25. Java 26 reworks that idea as Lazy Constants 
 
 The problem is common: some values should be initialized lazily, but after successful initialization they should behave like constants that the JVM can trust.
 
-Explanatory module: [`lazy_constants`](lazy_constants/README.md)
+Executable preview example: [`lazy_constants`](lazy_constants/README.md)
 
-Test: `LazyConstantsSecondPreviewNotesTest`
+Test: `LazyConstantsSecondPreviewExamplesTest`
 
 ## Vector API Eleventh Incubator
 
@@ -102,17 +102,17 @@ Test: `PrimitivePatternsFourthPreviewExamplesTest`
 
 ## How To Read This Package
 
-Start with `Http3ClientExamples`, then read the executable runtime modules for final-field restrictions and AOT object caching, the executable removal module for Applet API removal, and the isolated preview examples for PEM encodings and primitive patterns. After that, read the runtime notes for G1, followed by preview and incubator notes for structured concurrency, lazy constants, and vector computation.
+Start with `Http3ClientExamples`, then read the executable runtime modules for final-field restrictions and AOT object caching, the executable removal module for Applet API removal, and the isolated preview examples for PEM encodings, lazy constants, and primitive patterns. After that, read the runtime notes for G1, followed by preview and incubator notes for structured concurrency and vector computation.
 
 Run the focused tests:
 
 ```bash
 mvn -Dtest=Http3ClientExamplesTest,PemEncodingsSecondPreviewExamplesTest,PrimitivePatternsFourthPreviewExamplesTest test
 mvn -Dtest=FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest,AotObjectCachingExamplesTest,G1SynchronizationNotesTest test
-mvn -Dtest=StructuredConcurrencySixthPreviewNotesTest,LazyConstantsSecondPreviewNotesTest,VectorApiEleventhIncubatorNotesTest test
+mvn -Dtest=StructuredConcurrencySixthPreviewNotesTest,LazyConstantsSecondPreviewExamplesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
-Java 26 is mostly represented as C2 explanatory material. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, and primitive patterns are represented as C1 executable examples after focused feasibility review. PEM encodings and primitive patterns remain preview APIs or syntax, so their examples compile and run only in isolated child JVMs using matching JDK 26 preview flags.
+Java 26 is mostly represented as C2 explanatory material. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, and primitive patterns are represented as C1 executable examples after focused feasibility review. PEM encodings, Lazy Constants, and primitive patterns remain preview APIs or syntax, so their examples compile and run only in isolated child JVMs using matching JDK 26 preview flags.
 
 ## References
 

@@ -303,7 +303,7 @@ Run:
 
 ```bash
 mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest" test
-mvn "-Dtest=AotObjectCachingExamplesTest,G1SynchronizationNotesTest,LazyConstantsSecondPreviewNotesTest" test
+mvn "-Dtest=AotObjectCachingExamplesTest,G1SynchronizationNotesTest,LazyConstantsSecondPreviewExamplesTest" test
 mvn "-Dtest=PemEncodingsSecondPreviewExamplesTest,StructuredConcurrencySixthPreviewNotesTest" test
 mvn "-Dtest=VectorApiEleventhIncubatorNotesTest,PrimitivePatternsFourthPreviewExamplesTest" test
 ```
