@@ -9,6 +9,7 @@ import java.nio.channels.UnsupportedAddressTypeException;
 import java.nio.file.AccessDeniedException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Locale;
 
 import org.junit.jupiter.api.Test;
 
@@ -40,7 +41,7 @@ class UnixDomainSocketChannelExamplesTest {
 
 	@Test
 	void clientAndServerExchangeMessageThroughLocalSocket() throws Exception {
-		Path directory = Files.createTempDirectory("java-evolution-uds-exchange-");
+		Path directory = createSocketDirectory();
 		Path socketPath = directory.resolve("app.sock");
 		try {
 			assertThat(examples.exchangeMessage(socketPath, "ping"))
@@ -57,5 +58,17 @@ class UnixDomainSocketChannelExamplesTest {
 			Files.deleteIfExists(socketPath);
 			Files.deleteIfExists(directory);
 		}
+	}
+
+	private Path createSocketDirectory() throws IOException {
+		Path shortTemporaryRoot = Path.of("/tmp");
+		if (isMacOs() && Files.isDirectory(shortTemporaryRoot) && Files.isWritable(shortTemporaryRoot)) {
+			return Files.createTempDirectory(shortTemporaryRoot, "uds-");
+		}
+		return Files.createTempDirectory("java-evolution-uds-exchange-");
+	}
+
+	private boolean isMacOs() {
+		return System.getProperty("os.name", "").toLowerCase(Locale.ROOT).contains("mac");
 	}
 }
