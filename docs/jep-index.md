@@ -257,4 +257,4 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 525](https://openjdk.org/jeps/525) | Structured Concurrency | Preview, Explanatory Module |
 | [JEP 526](https://openjdk.org/jeps/526) | Lazy Constants | Preview, Explanatory Module |
 | [JEP 529](https://openjdk.org/jeps/529) | Vector API | Incubator, Explanatory Module |
-| [JEP 530](https://openjdk.org/jeps/530) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
+| [JEP 530](https://openjdk.org/jeps/530) | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |

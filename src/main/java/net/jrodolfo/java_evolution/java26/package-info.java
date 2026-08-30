@@ -9,8 +9,10 @@
  * while selected Java 26 features await focused executable-example evaluation.
  * HTTP/3 is executable because its final API can be demonstrated without live
  * networking, final-field restrictions are executable because the warning can be
- * captured in a child JVM, and Applet API removal is executable because the
- * removed package can be verified with a deterministic compiler probe.
+ * captured in a child JVM, Applet API removal is executable because the
+ * removed package can be verified with a deterministic compiler probe, AOT
+ * object caching is executable through isolated cache workflows, and primitive
+ * patterns are executable through an isolated matching-JDK preview workflow.
  * </p>
  */
 package net.jrodolfo.java_evolution.java26;

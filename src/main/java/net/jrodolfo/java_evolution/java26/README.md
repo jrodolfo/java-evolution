@@ -4,7 +4,7 @@ Released: March 2026 as Java SE 26.
 
 Java 26 adds HTTP/3 support for the standard HTTP Client API, starts warning about deep-reflective final-field mutation, removes the long-deprecated Applet API, continues several preview and incubator features, and advances runtime work around ahead-of-time startup data, G1 garbage collection, and vector computation.
 
-This package is mostly notes-only even though the repository builds on JDK 26. HTTP/3, final-field restrictions, and Applet API removal are executable examples because they can be demonstrated deterministically without live networking, main-JVM warning leakage, or obsolete browser-plugin tooling. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, and performance internals still need feature-by-feature evaluation.
+This package is mostly notes-only even though the repository builds on JDK 26. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, and primitive patterns are executable examples because they can be demonstrated deterministically with isolated API, compiler, or child-JVM workflows. Baseline support alone does not make every feature a good executable example: preview syntax, incubator modules, runtime behavior, and performance internals still need feature-by-feature evaluation.
 
 ## HTTP/3 for the HTTP Client API
 
@@ -96,23 +96,23 @@ Test: `VectorApiEleventhIncubatorNotesTest`
 
 Primitive patterns continue as a fourth preview in Java 26. The goal is to make pattern matching more uniform across reference and primitive values while avoiding unsafe or lossy casts.
 
-Example: `PrimitivePatternsFourthPreviewNotes`
+Executable preview example: `PrimitivePatternsFourthPreviewExamples`
 
-Test: `PrimitivePatternsFourthPreviewNotesTest`
+Test: `PrimitivePatternsFourthPreviewExamplesTest`
 
 ## How To Read This Package
 
-Start with `Http3ClientExamples`, then read the executable runtime modules for final-field restrictions and AOT object caching, followed by the executable removal module for Applet API removal. After that, read the runtime notes for G1, followed by preview and incubator notes for PEM encodings, structured concurrency, lazy constants, vector computation, and primitive patterns.
+Start with `Http3ClientExamples`, then read the executable runtime modules for final-field restrictions and AOT object caching, the executable removal module for Applet API removal, and the isolated preview example for primitive patterns. After that, read the runtime notes for G1, followed by preview and incubator notes for PEM encodings, structured concurrency, lazy constants, and vector computation.
 
 Run the focused tests:
 
 ```bash
-mvn -Dtest=Http3ClientExamplesTest,PemEncodingsSecondPreviewNotesTest,PrimitivePatternsFourthPreviewNotesTest test
+mvn -Dtest=Http3ClientExamplesTest,PemEncodingsSecondPreviewNotesTest,PrimitivePatternsFourthPreviewExamplesTest test
 mvn -Dtest=FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest,AotObjectCachingExamplesTest,G1SynchronizationNotesTest test
 mvn -Dtest=StructuredConcurrencySixthPreviewNotesTest,LazyConstantsSecondPreviewNotesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
-Java 26 is mostly represented as C2 explanatory material. HTTP/3, final-field restrictions, Applet API removal, and AOT object caching are represented as C1 executable examples after focused feasibility review.
+Java 26 is mostly represented as C2 explanatory material. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, and primitive patterns are represented as C1 executable examples after focused feasibility review. Primitive patterns remain preview syntax, so the example compiles and runs only in an isolated child JVM using the matching JDK 26 preview flags.
 
 ## References
 
