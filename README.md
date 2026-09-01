@@ -2,6 +2,10 @@
 
 [![build](https://github.com/jrodolfo/java-evolution/actions/workflows/build.yml/badge.svg)](https://github.com/jrodolfo/java-evolution/actions/workflows/build.yml)
 [![links](https://github.com/jrodolfo/java-evolution/actions/workflows/links.yml/badge.svg)](https://github.com/jrodolfo/java-evolution/actions/workflows/links.yml)
+[![javadoc pages](https://github.com/jrodolfo/java-evolution/actions/workflows/javadoc-pages.yml/badge.svg)](https://github.com/jrodolfo/java-evolution/actions/workflows/javadoc-pages.yml)
+[![latest release](https://img.shields.io/github/v/release/jrodolfo/java-evolution?display_name=tag&sort=semver)](https://github.com/jrodolfo/java-evolution/releases/latest)
+[![Java 26](https://img.shields.io/badge/Java-26-orange.svg)](https://jdk.java.net/26/)
+[![Maven 3.9+](https://img.shields.io/badge/Maven-3.9%2B-C71A36.svg)](https://maven.apache.org/download.cgi)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 `java-evolution` is a practical Java reference project covering features introduced from Java 1 through Java 26. It uses small plain-Java examples, focused JUnit tests, and JavaDoc to explain what changed, why it matters, and how the APIs are used.
