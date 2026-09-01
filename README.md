@@ -30,6 +30,7 @@ On macOS, select JDK 26 for the current terminal session, then verify Java and M
 
 ```bash
 source scripts/use-java-26-mac.sh
+java --version
 mvn --version
 ```
 
