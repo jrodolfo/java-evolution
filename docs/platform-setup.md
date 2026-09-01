@@ -39,20 +39,28 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 ## Custom JDK Locations
 
+On macOS, the helper normally selects a registered JDK 26 through
+`/usr/libexec/java_home`. Pass a JDK home explicitly when it is installed in a
+custom location:
+
+```bash
+source scripts/use-java-26-mac.sh /opt/jdks/jdk-26.0.2.1/Contents/Home
+```
+
 The Linux helper searches `JAVA26_HOME`, `JDK26_HOME`, common JDK directories, and SDKMAN candidates. Pass a JDK path explicitly when needed:
 
 ```bash
 source scripts/use-java-26-linux.sh /usr/lib/jvm/jdk-26.0.2.1
 ```
 
-The Windows helpers search `JAVA26_HOME`, `JDK26_HOME`, `C:\dev\apps`, and common `Program Files` locations:
+The Windows helpers search `JAVA26_HOME`, `JDK26_HOME`, `C:\dev\apps`, and common `Program Files` locations. Both Windows helpers also accept an explicit JDK path when needed:
 
 ```bash
 source scripts/use-java-26-windows.sh /c/dev/apps/jdk-26.0.2.1
 ```
 
 ```powershell
-.\scripts\use-java-26-windows.ps1 -JavaHome C:\dev\apps\jdk-26.0.2.1
+. .\scripts\use-java-26-windows.ps1 -JavaHome C:\dev\apps\jdk-26.0.2.1
 ```
 
 ## Verify
