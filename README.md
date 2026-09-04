@@ -107,6 +107,7 @@ Java 1 through Java 7 predate the modern OpenJDK release pages and JEP process, 
 
 - Software Developer: Rod Oliveira
 - GitHub: https://github.com/jrodolfo
+- LinkedIn: https://linkedin.com/in/rodoliveira
 - Webpage: https://jrodolfo.net
 
 ## License
