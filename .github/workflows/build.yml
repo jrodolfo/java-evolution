@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: set up jdk 27
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@v6
         with:
           # Temporary until Java 27 reaches GA on September 15.
           distribution: oracle-openjdk
