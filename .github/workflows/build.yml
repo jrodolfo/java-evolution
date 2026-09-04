@@ -36,8 +36,9 @@ jobs:
       - name: set up jdk 27
         uses: actions/setup-java@v5
         with:
-          distribution: oracle
-          java-version: '27'
+          # Temporary until Java 27 reaches GA on September 15.
+          distribution: oracle-openjdk
+          java-version: '27-ea'
           cache: maven
 
       - name: run local check target
