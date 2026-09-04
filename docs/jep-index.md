@@ -258,3 +258,17 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 | [JEP 526](https://openjdk.org/jeps/526) | Lazy Constants | Preview, Executable Example |
 | [JEP 529](https://openjdk.org/jeps/529) | Vector API | Incubator, Explanatory Module |
 | [JEP 530](https://openjdk.org/jeps/530) | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |
+
+## Java 27
+
+| JEP | Feature | Status |
+|---|---|---|
+| [JEP 523](https://openjdk.org/jeps/523) | Prepare for G1 | Runtime, Explanatory Module |
+| [JEP 527](https://openjdk.org/jeps/527) | TLS 1.3 Hybrid Key Exchange | Final, Security, Executable Example |
+| [JEP 531](https://openjdk.org/jeps/531) | Lazy Constants | Preview, Executable Example |
+| [JEP 532](https://openjdk.org/jeps/532) | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |
+| [JEP 533](https://openjdk.org/jeps/533) | Structured Concurrency | Preview, Executable Example |
+| [JEP 534](https://openjdk.org/jeps/534) | Compact Object Headers by Default | Runtime, Executable Example |
+| [JEP 536](https://openjdk.org/jeps/536) | JFR in-process data redaction | Runtime, Security, Executable Example |
+| [JEP 537](https://openjdk.org/jeps/537) | Vector API | Incubator, Explanatory Module |
+| [JEP 538](https://openjdk.org/jeps/538) | PEM Encodings of Cryptographic Objects | Preview, Security, Executable Example |

@@ -1,6 +1,7 @@
 package net.jrodolfo.java_evolution.java26;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,6 +15,8 @@ class PemEncodingsSecondPreviewExamplesTest {
 
 	@Test
 	void childProcessDemonstratesInMemoryPemRoundTrip(@TempDir Path workspace) throws Exception {
+		assumeTrue(Runtime.version().feature() == 26,
+				"Java 26 preview APIs require a matching JDK 26 preview compiler");
 		PemEncodingsSecondPreviewExamples.PemWorkflowResult result = examples.runPemWorkflow(workspace);
 
 		assertThat(result.compilation().exitCode())

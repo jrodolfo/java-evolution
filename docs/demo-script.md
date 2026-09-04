@@ -85,7 +85,7 @@ mvn "-Dtest=VirtualThreadsExamplesTest" test
 
 Expected point: the example shows the API shape without turning the repository into a full web application.
 
-### 5. Show Java 25 LTS And Java 26 Current-Release Awareness
+### 5. Show Java 25 LTS, Java 26, And Java 27 Preparation
 
 Open:
 
@@ -99,7 +99,7 @@ src/main/java/net/jrodolfo/java_evolution/java26/README.md
 Say:
 
 ```text
-For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature. Java 26 uses the JDK 26 build baseline and includes executable examples for HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency, while G1 synchronization reduction and the Vector API remain explanatory notes.
+For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature. Java 26 contains executable examples for HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency, while G1 synchronization reduction and the Vector API remain explanatory notes. The `java-27` branch prepares the next baseline with executable examples for compact headers, hybrid TLS, JFR redaction, and continuing previews, while keeping G1 default selection and Vector API evolution as notes.
 ```
 
 Run:
@@ -142,7 +142,7 @@ Use this when time is short:
 1. Show `README.md` and explain the version-based structure.
 2. Open `java08/StreamExamples.java` to show Java 8 functional style.
 3. Open `java21/VirtualThreadsExamples.java` to show modern Java concurrency.
-4. Open `java25/scoped_values/README.md` and `java26/README.md` to show LTS/current-release awareness.
+4. Open `java25/scoped_values/README.md`, `java26/README.md`, and `java27/README.md` to show LTS/current-release awareness.
 5. Run one focused command:
 
 ```bash
@@ -189,4 +189,9 @@ Open the generated JavaDoc:
 
 ```text
 target/site/apidocs/index.html
+```
+
+## Java 27 Preparation
+
+On the `java-27` branch, show `src/main/java/net/jrodolfo/java_evolution/java27/README.md` and run the focused Java 27 tests. Explain that preview APIs use an isolated child JVM with matching Java 27 preview flags, while G1 default selection and the Vector API remain notes because their useful validation depends on runtime workloads or incubator evolution.
 ```

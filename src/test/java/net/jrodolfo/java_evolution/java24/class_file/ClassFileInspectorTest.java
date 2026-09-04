@@ -24,8 +24,8 @@ class ClassFileInspectorTest {
 				.as("the Class-File API exposes the class declared by the bytes")
 				.isEqualTo("net.jrodolfo.java_evolution.java24.StreamGatherersExamples");
 		assertThat(summary.majorVersion())
-				.as("the project compiles with JDK 26")
-				.isEqualTo(ClassFile.JAVA_26_VERSION);
+				.as("the project compiles with JDK 27")
+				.isEqualTo(ClassFile.JAVA_27_VERSION);
 		assertThat(summary.isJava24OrNewer())
 				.as("the final API can inspect modern class-file versions")
 				.isTrue();

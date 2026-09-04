@@ -1,9 +1,9 @@
-JAVA_26_HOME := $(shell /usr/libexec/java_home -v 26 2>/dev/null)
+JAVA_27_HOME := $(shell /usr/libexec/java_home -v 27 2>/dev/null)
 JAVA_CMD := java
 
 ifeq ($(strip $(JAVA_HOME)),)
-ifneq ($(JAVA_26_HOME),)
-export JAVA_HOME := $(JAVA_26_HOME)
+ifneq ($(JAVA_27_HOME),)
+export JAVA_HOME := $(JAVA_27_HOME)
 export PATH := $(JAVA_HOME)/bin:$(PATH)
 JAVA_CMD := $(JAVA_HOME)/bin/java
 endif
@@ -11,11 +11,11 @@ else
 JAVA_CMD := $(JAVA_HOME)/bin/java
 endif
 
-.PHONY: help check-java-26 java-version test clean-test demos run docs clean-docs docs-audit links docs-check check release-check
+.PHONY: help check-java-27 java-version test clean-test demos run docs clean-docs docs-audit links docs-check check release-check
 
 help:
 	@echo "available targets:"
-	@echo "  make check-java-26 verify the active Java and Maven runtimes use Java 26"
+	@echo "  make check-java-27 verify the active Java and Maven runtimes use Java 27"
 	@echo "  make java-version  show the Java and Maven versions"
 	@echo "  make test          run the test suite"
 	@echo "  make clean-test    clean the build and run the test suite"
@@ -29,20 +29,20 @@ help:
 	@echo "  make check         show versions and run the test suite"
 	@echo "  make release-check run documentation, full test, and practical demo gates"
 
-check-java-26:
-	@java scripts/CheckJava26.java
+check-java-27:
+	@java scripts/CheckJava27.java
 
-java-version: check-java-26
+java-version: check-java-27
 	$(JAVA_CMD) --version
 	mvn --version
 
-test: check-java-26
+test: check-java-27
 	mvn test
 
-clean-test: check-java-26
+clean-test: check-java-27
 	mvn clean test
 
-demos: check-java-26
+demos: check-java-27
 	mvn "-Dtest=SimpleStaticFileServerTest" test
 	mvn "-Dtest=JavaDocSnippetExamplesTest" test
 	mvn "-Dtest=KeyEncapsulationExchangeTest" test
@@ -53,10 +53,10 @@ demos: check-java-26
 	mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
 	mvn "-Dtest=HkdfKeyDerivationExampleTest" test
 
-run: check-java-26
+run: check-java-27
 	mvn spring-boot:run
 
-docs: check-java-26
+docs: check-java-27
 	mvn javadoc:javadoc
 
 clean-docs:
@@ -68,8 +68,8 @@ docs-audit:
 links:
 	lychee $(VERBOSE) --config .lychee.toml README.md "docs/**/*.md" "src/main/java/**/README.md"
 
-docs-check: check-java-26 docs-audit docs links
+docs-check: check-java-27 docs-audit docs links
 
-check: check-java-26 java-version test
+check: check-java-27 java-version test
 
-release-check: check-java-26 docs-check check demos
+release-check: check-java-27 docs-check check demos

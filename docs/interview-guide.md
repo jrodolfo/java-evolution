@@ -230,7 +230,7 @@ Use this flow if you have only a few minutes:
 2. Show `java16/RecordExamples` to demonstrate data-carrier simplification.
 3. Show `java17/SealedClassesExamples` to demonstrate closed hierarchies.
 4. Show `java21/VirtualThreadsExamples` to demonstrate modern concurrency.
-5. Show `java25/scoped_values/README.md` and `java26/README.md` to demonstrate current-release awareness and maturity-status discipline.
+5. Show `java25/scoped_values/README.md`, `java26/README.md`, and `java27/README.md` to demonstrate current-release awareness and maturity-status discipline.
 
 Then show the tests to prove that the examples are not just snippets.
 
@@ -244,3 +244,16 @@ Then show the tests to prove that the examples are not just snippets.
 - Why did virtual threads matter after years of reactive programming?
 - What is the difference between final, preview, and incubator features?
 - Why does this project use notes classes for some features instead of runnable demos?
+
+## Java 27 Preparation
+
+The `java-27` branch separates preparation from the stable Java 26 line. It
+uses executable examples for deterministic VM, TLS, JFR, and preview API
+observations, while G1 default selection and the Vector API remain notes until
+small tests can represent their behavior honestly.
+
+Repo path:
+
+```text
+src/main/java/net/jrodolfo/java_evolution/java27
+```

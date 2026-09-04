@@ -1,66 +1,66 @@
 # Platform Setup
 
-This project uses JDK 26, Maven 3.9+, and a local Maven installation. It does not use the Maven wrapper.
+This branch uses JDK 27, Maven 3.9+, and a local Maven installation. It does not use the Maven wrapper.
 
-The helper scripts select JDK 26 for the current terminal session only. They do not change the machine's global Java default.
+The helper scripts select JDK 27 for the current terminal session only. They do not change the machine's global Java default.
 
-## Select JDK 26
+## Select JDK 27
 
 macOS:
 
 ```bash
-source scripts/use-java-26-mac.sh
+source scripts/use-java-27-mac.sh
 ```
 
 Linux:
 
 ```bash
-source scripts/use-java-26-linux.sh
+source scripts/use-java-27-linux.sh
 ```
 
 Windows with Git Bash:
 
 ```bash
-source scripts/use-java-26-windows.sh
+source scripts/use-java-27-windows.sh
 ```
 
 Windows with PowerShell:
 
 ```powershell
-. .\scripts\use-java-26-windows.ps1
+. .\scripts\use-java-27-windows.ps1
 ```
 
 If PowerShell blocks local scripts, allow them for the current session only:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
-. .\scripts\use-java-26-windows.ps1
+. .\scripts\use-java-27-windows.ps1
 ```
 
 ## Custom JDK Locations
 
-On macOS, the helper normally selects a registered JDK 26 through
+On macOS, the helper normally selects a registered JDK 27 through
 `/usr/libexec/java_home`. Pass a JDK home explicitly when it is installed in a
 custom location:
 
 ```bash
-source scripts/use-java-26-mac.sh /opt/jdks/jdk-26.0.2.1/Contents/Home
+source scripts/use-java-27-mac.sh /Users/jrodolfo/Library/Java/JavaVirtualMachines/jdk-27.jdk/Contents/Home
 ```
 
-The Linux helper searches `JAVA26_HOME`, `JDK26_HOME`, common JDK directories, and SDKMAN candidates. Pass a JDK path explicitly when needed:
+The Linux helper searches `JAVA27_HOME`, `JDK27_HOME`, common JDK directories, and SDKMAN candidates. Pass a JDK path explicitly when needed:
 
 ```bash
-source scripts/use-java-26-linux.sh /usr/lib/jvm/jdk-26.0.2.1
+source scripts/use-java-27-linux.sh /usr/lib/jvm/jdk-27
 ```
 
-The Windows helpers search `JAVA26_HOME`, `JDK26_HOME`, `C:\dev\apps`, and common `Program Files` locations. Both Windows helpers also accept an explicit JDK path when needed:
+The Windows helpers search `JAVA27_HOME`, `JDK27_HOME`, `C:\dev\apps`, and common `Program Files` locations. Both Windows helpers also accept an explicit JDK path when needed:
 
 ```bash
-source scripts/use-java-26-windows.sh /c/dev/apps/jdk-26.0.2.1
+source scripts/use-java-27-windows.sh /c/dev/apps/jdk-27
 ```
 
 ```powershell
-. .\scripts\use-java-26-windows.ps1 -JavaHome C:\dev\apps\jdk-26.0.2.1
+. .\scripts\use-java-27-windows.ps1 -JavaHome C:\dev\apps\jdk-27
 ```
 
 ## Verify

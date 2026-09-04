@@ -256,7 +256,7 @@ Interview angle: explain Java 22-24 as a transition from Java 21's modern baseli
 
 ## Stage 8: Java 25-26 LTS And Current-Release Maturity
 
-Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is the repository build baseline and contains eight C1 executable examples: HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency. G1 synchronization reduction and the Vector API remain C2 explanatory modules. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on JDK 26 their tests keep the source and documentation checks and skip only that old-preview compiler step.
+Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is the stable repository baseline and contains eight executable examples. The `java-27` branch prepares the next baseline and adds focused examples for deterministic Java 27 behavior while leaving workload-dependent and incubator-only topics as notes.
 
 Read these first by version:
 
@@ -314,7 +314,7 @@ mvn "-Dtest=PemEncodingsSecondPreviewExamplesTest,StructuredConcurrencySixthPrev
 mvn "-Dtest=VectorApiEleventhIncubatorNotesTest,PrimitivePatternsFourthPreviewExamplesTest" test
 ```
 
-Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics. It should also explain why moving the build baseline to JDK 26 does not automatically mean every Java 26 topic should become an executable example.
+Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics. It should also explain why moving a build baseline does not automatically mean every feature should become an executable example.
 
 ## Full Review Checklist
 
@@ -325,5 +325,25 @@ Use this checklist when preparing to show the repository:
 3. Open [practical-demos.md](practical-demos.md) and choose one hands-on demo.
 4. Pick one Java 8 example and explain the problem it solved.
 5. Pick one Java 21 example and explain why it matters for current production Java.
-6. Pick one Java 25 or Java 26 example or notes class and explain whether the feature is final, preview, incubator, runtime, tooling-related, security-related, or removal-related.
+6. Pick one Java 25, Java 26, or Java 27 example or notes class and explain whether the feature is final, preview, incubator, runtime, tooling-related, security-related, or removal-related.
 7. Use [jep-index.md](jep-index.md) when you need the official JEP number or status.
+
+## Java 27 Preparation
+
+Java 27 is prepared on the `java-27` branch while the stable line remains on
+Java 26. The executable examples cover compact-header defaults, hybrid TLS
+configuration, JFR redaction, and the continuing Lazy Constants, primitive
+patterns, Structured Concurrency, and PEM Encodings previews. G1 default
+selection and the Vector API remain explanatory because they need workload
+evidence or would duplicate an earlier incubator example.
+
+Read these files:
+
+- `src/main/java/net/jrodolfo/java_evolution/java27/README.md`
+- `src/main/java/net/jrodolfo/java_evolution/java27/compact_object_headers/CompactObjectHeadersDefaultExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java27/tls_hybrid_key_exchange/PostQuantumHybridKeyExchangeExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java27/jfr_data_redaction/JfrRedactionOptionExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java27/lazy_constants/LazyConstantsThirdPreviewExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java27/primitive_patterns/PrimitivePatternsFifthPreviewExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java27/structured_concurrency/StructuredConcurrencySeventhPreviewExamples.java`
+- `src/main/java/net/jrodolfo/java_evolution/java27/pem_encodings/PemEncodingsThirdPreviewExamples.java`

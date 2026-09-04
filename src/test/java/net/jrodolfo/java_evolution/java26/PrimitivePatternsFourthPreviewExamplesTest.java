@@ -1,6 +1,7 @@
 package net.jrodolfo.java_evolution.java26;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,6 +15,8 @@ class PrimitivePatternsFourthPreviewExamplesTest {
 
 	@Test
 	void childProcessDemonstratesPrimitivePatternMatching(@TempDir Path workspace) throws Exception {
+		assumeTrue(Runtime.version().feature() == 26,
+				"Java 26 preview syntax requires a matching JDK 26 preview compiler");
 		PrimitivePatternsFourthPreviewExamples.PrimitivePatternsWorkflowResult result =
 				examples.runPrimitivePatternsWorkflow(workspace);
 

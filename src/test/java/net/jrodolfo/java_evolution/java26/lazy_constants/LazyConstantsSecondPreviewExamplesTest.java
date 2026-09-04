@@ -1,6 +1,7 @@
 package net.jrodolfo.java_evolution.java26.lazy_constants;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,6 +15,8 @@ class LazyConstantsSecondPreviewExamplesTest {
 
 	@Test
 	void childProcessDemonstratesDeferredOneTimeInitialization(@TempDir Path workspace) throws Exception {
+		assumeTrue(Runtime.version().feature() == 26,
+				"Java 26 preview APIs require a matching JDK 26 preview compiler");
 		LazyConstantsSecondPreviewExamples.LazyConstantsWorkflowResult result =
 				examples.runLazyConstantsWorkflow(workspace);
 

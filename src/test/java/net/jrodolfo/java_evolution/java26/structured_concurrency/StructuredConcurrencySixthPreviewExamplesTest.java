@@ -1,6 +1,7 @@
 package net.jrodolfo.java_evolution.java26.structured_concurrency;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,6 +16,8 @@ class StructuredConcurrencySixthPreviewExamplesTest {
 
 	@Test
 	void childProcessDemonstratesStructuredSuccessAndFailure(@TempDir Path workspace) throws Exception {
+		assumeTrue(Runtime.version().feature() == 26,
+				"Java 26 preview APIs require a matching JDK 26 preview compiler");
 		StructuredConcurrencySixthPreviewExamples.StructuredConcurrencyWorkflowResult result =
 				examples.runStructuredConcurrencyWorkflow(workspace);
 
