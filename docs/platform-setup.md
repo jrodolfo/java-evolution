@@ -12,11 +12,13 @@ macOS:
 source scripts/use-java-27-mac.sh
 ```
 
-Linux:
+Linux (Zsh or Bash; source the helper in your current shell):
 
 ```bash
 source scripts/use-java-27-linux.sh
 ```
+
+The switch applies to this shell session and its child processes; changing directories does not undo it. The SDKMAN default stays unchanged. Open a fresh terminal to use your default JDK again.
 
 Windows with Git Bash:
 
