@@ -16,6 +16,14 @@ Lambda expressions solved this by letting you pass small blocks of behavior dire
 name -> name.length() >= 4
 ```
 
+These lambdas work because the target types are **functional interfaces**:
+interfaces with one abstract method whose implementation can be supplied by a
+lambda instead of a separate anonymous class. A useful mental model is:
+
+- `Predicate<T>` accepts a `T` and returns `boolean`.
+- `Function<T, R>` accepts a `T` and returns an `R`.
+- `Consumer<T>` accepts a `T` and returns no result.
+
 This made APIs such as `Comparator`, `Predicate`, `Function`, and `Consumer` much easier to use. Lambdas are the foundation for streams and many modern Java APIs, but they are not only a Streams feature. Your own methods can accept standard functional interfaces from `java.util.function` when callers need to provide behavior.
 
 Example: `LambdaExamples`
@@ -35,6 +43,14 @@ users.stream()
 		.sorted()
 		.collect(Collectors.toList());
 ```
+
+The stream is not a collection that stores these elements. It is a way to
+describe a sequence of processing steps over data supplied by a collection,
+array, or another source. Operations such as `filter` and `map` are
+**intermediate operations**: they build the pipeline. `collect` is a
+**terminal operation**: it asks the pipeline to produce a result. The
+intermediate steps are normally lazy, so processing happens when a terminal
+operation is invoked.
 
 Streams are useful when you want to transform, filter, group, aggregate, or search through data while keeping the code focused on the desired result.
 
@@ -79,6 +95,10 @@ Test: `MethodReferenceExamplesTest`
 Before Java 8, `Future` could represent a result that would arrive later, but composing futures was awkward. You often had to block with `get()`, manually coordinate threads, or write callback-heavy code.
 
 `CompletableFuture` solved this by making asynchronous work composable. You can start a task, transform its result, combine it with another task, and recover from failure without immediately blocking the current thread.
+
+Asynchronous composition does not automatically make the underlying operation
+non-blocking. A task started asynchronously may still perform blocking I/O;
+that depends on the operation and executor used to run it.
 
 This is useful for I/O-style work such as calling services, loading data, or combining independent operations.
 

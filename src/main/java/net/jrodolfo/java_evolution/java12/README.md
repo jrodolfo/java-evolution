@@ -72,6 +72,10 @@ Test: `CompactNumberFormatExamplesTest`
 
 ## JVM Constants API
 
+In simple terms, this API lets a tool describe a Java type, method, or constant
+as data. The tool can inspect or manipulate that description without first
+turning the referenced class into a live runtime object.
+
 Before Java 12, tools that worked with bytecode or generated Java code often
 had to load a class in order to describe a field, method, or type reference.
 Loading a class can trigger resolution or initialization, which is undesirable

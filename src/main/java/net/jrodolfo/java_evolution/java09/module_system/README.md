@@ -56,17 +56,21 @@ module-info.java
 A small descriptor can look like this:
 
 ```java
-module net.jrodolfo.java_evolution.examples {
-    requires java.net.http;
-    exports net.jrodolfo.java_evolution.examples;
+module com.example.app {
+    requires com.example.greetings;
 }
 ```
 
 This says:
 
-- this module is named `net.jrodolfo.java_evolution.examples`
-- it depends on the `java.net.http` module
-- it exposes the package `net.jrodolfo.java_evolution.examples`
+- this module is named `com.example.app`
+- it depends on the `com.example.greetings` module
+- its code may use packages exported by `com.example.greetings`
+
+The companion `com.example.greetings` module exports its public package while
+keeping `com.example.greetings.internal` unexported. This is a Java 9 module
+relationship and keeps the example focused on JPMS boundaries rather than on
+an API introduced in a later Java release.
 
 ## 4. Terminology In Plain English
 
@@ -115,9 +119,8 @@ src/
 The descriptor might say:
 
 ```java
-module net.jrodolfo.java_evolution.examples {
-    requires java.net.http;
-    exports net.jrodolfo.java_evolution.examples;
+module com.example.greetings {
+    exports com.example.greetings;
 }
 ```
 

@@ -10,13 +10,13 @@ The examples in this package keep the Spring Boot project non-modular on purpose
 
 Before Java 9, creating a small read-only collection was surprisingly verbose. You often used `Arrays.asList(...)`, wrapped it with `Collections.unmodifiableList(...)`, or manually created and populated a collection.
 
-Java 9 added `List.of`, `Set.of`, and `Map.of` so small immutable collections could be created directly:
+Java 9 added `List.of`, `Set.of`, and `Map.of` so small unmodifiable collections could be created directly:
 
 ```java
 List.of("modules", "collection factories", "stream enhancements")
 ```
 
-These factories reject `null`, reject duplicate set elements or map keys, and return collections that cannot be modified.
+These factories reject `null`, reject duplicate set elements or map keys, and return collections that cannot be modified. The collections are unmodifiable, but that does not promise that the objects stored inside them are deeply immutable; a mutable element can still change.
 
 Example: `CollectionFactoryExamples`
 

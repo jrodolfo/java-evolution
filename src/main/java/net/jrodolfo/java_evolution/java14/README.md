@@ -46,7 +46,11 @@ public record Feature(String name, boolean preview) {
 }
 ```
 
-Records are useful for immutable data carriers where identity is based on the component values.
+Records are useful for data carriers whose generated `equals` and `hashCode`
+compare component values. A record's component fields are final, but this is
+not deep immutability: an object referenced by a component may still be
+mutable. Records remain ordinary objects with identity; their generated
+value-oriented comparison is based on their components.
 
 Example: `RecordPreviewExamples`
 
