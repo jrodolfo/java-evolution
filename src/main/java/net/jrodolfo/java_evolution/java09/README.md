@@ -42,6 +42,11 @@ Java 8 streams were powerful, but some common ordered stream operations were mis
 
 Java 9 added `takeWhile`, `dropWhile`, `Stream.ofNullable`, and a bounded form of `Stream.iterate`. These methods make stream pipelines more expressive, especially for ordered data.
 
+`takeWhile` keeps the initial run of matching elements and then stops, while
+`dropWhile` skips that initial run and keeps the rest. Unlike `filter`, which
+examines the whole stream and retains every match, these operations depend on
+encounter order and a boundary.
+
 Example: `StreamEnhancementExamples`
 
 Test: `StreamEnhancementExamplesTest`
@@ -68,7 +73,10 @@ Test: `TryWithResourcesExamplesTest`
 
 ## Process API
 
-Before Java 9, Java code had limited standard support for inspecting operating-system processes. Developers often had to rely on platform-specific shell commands or native code to get process IDs and related metadata.
+Before Java 9, `Process` primarily represented a process started by the Java
+application. Java lacked the same standard API for identifying and inspecting
+the current process or arbitrary operating-system processes, so developers
+often relied on platform-specific shell commands or native code.
 
 Java 9 added `ProcessHandle`, which gives Java code a standard way to inspect the current process, its parent when visible, and process metadata such as the process id, command, and liveness.
 
@@ -80,7 +88,11 @@ Test: `ProcessApiExamplesTest`
 
 Before Java 9, stack inspection usually meant calling `Thread.currentThread().getStackTrace()`, which eagerly created an array of stack frames and exposed a relatively blunt API.
 
-Java 9 added `StackWalker`, a lazy and structured API for walking stack frames. It is useful for diagnostics, logging, security-sensitive libraries, and frameworks that need caller information.
+Java 9 added `StackWalker`, a lazy and structured API for walking stack frames.
+`Thread.getStackTrace()` eagerly creates an array of frames; `StackWalker` can
+traverse frames only as needed and stop when it finds the frame it wants. It is
+useful for diagnostics, logging, security-sensitive libraries, and frameworks
+that need caller information.
 
 Example: `StackWalkerExamples`
 

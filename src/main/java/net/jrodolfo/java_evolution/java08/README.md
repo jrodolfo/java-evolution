@@ -64,6 +64,10 @@ Before Java 8, a method that might not find a value usually returned `null`. The
 
 `Optional` solved part of this problem by making absence visible in the method return type. A method returning `Optional<String>` tells the caller: there may not be a value here, and you must decide what to do about that.
 
+For example, `String findUser(...)` leaves a `null` result ambiguous: is no user
+expected, or was something forgotten? `Optional<String> findUser(...)` makes
+expected absence part of the API contract.
+
 `Optional` is most useful as a return type. It is not meant to replace every nullable field or parameter.
 
 Example: `OptionalExamples`
@@ -92,7 +96,7 @@ Test: `MethodReferenceExamplesTest`
 
 ## CompletableFuture
 
-Before Java 8, `Future` could represent a result that would arrive later, but composing futures was awkward. You often had to block with `get()`, manually coordinate threads, or write callback-heavy code.
+Before Java 8, `Future` could represent a result that would arrive later, but composing futures was awkward. A plain `Future` mainly let callers wait for or query a result. You often had to block with `get()`, manually coordinate threads, or write callback-heavy code.
 
 `CompletableFuture` solved this by making asynchronous work composable. You can start a task, transform its result, combine it with another task, and recover from failure without immediately blocking the current thread.
 
@@ -131,7 +135,7 @@ The `java.time` API solved this with immutable, clearer types:
 - `Duration` for time-based amounts
 - `DateTimeFormatter` for parsing and formatting
 
-The main improvement is that the type tells you what kind of time concept you are working with.
+The main improvement is that the type tells you what kind of time concept you are working with. For example, `Calendar` operations mutate a shared object, and `SimpleDateFormat` is mutable and not thread-safe, so reusing either carelessly can change state or produce unsafe concurrent behavior.
 
 Example: `DateTimeApiExamples`
 

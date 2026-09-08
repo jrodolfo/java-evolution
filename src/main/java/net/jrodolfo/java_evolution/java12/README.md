@@ -4,7 +4,7 @@ Released: March 2019 as Java SE 12.
 
 Java 12 was a smaller release, but it started an important language direction: making `switch` usable as an expression. It also added several practical library improvements for streams, strings, files, and localized number formatting.
 
-Some Java 12 features were preview features. A preview feature is available for experimentation, but it is not final yet and may change in later releases. This repository compiles with JDK 26, so preview-origin examples use current final syntax while explaining their original Java 12 status.
+Some Java 12 features were preview features. A preview feature is available for experimentation, but it is not final yet and may change in later releases. The switch-expression syntax shown here remains faithful to the Java 12 preview; the repository's preview policy explains when that is appropriate.
 
 ## Switch Expressions Preview
 
@@ -76,16 +76,20 @@ In simple terms, this API lets a tool describe a Java type, method, or constant
 as data. The tool can inspect or manipulate that description without first
 turning the referenced class into a live runtime object.
 
-Before Java 12, tools that worked with bytecode or generated Java code often
-had to load a class in order to describe a field, method, or type reference.
-Loading a class can trigger resolution or initialization, which is undesirable
-when a tool only needs to inspect or describe a constant symbolically.
+Before Java 12, bytecode libraries could already represent class names,
+descriptors, constant-pool entries, and symbolic references without loading the
+referenced classes. The missing piece was a standard JDK API for doing this
+nominal description work.
 
 Java 12 introduced the JVM Constants API through JEP 334. The
 `java.lang.constant` API lets compilers, bytecode tools, and other platform
 tools describe constant-pool entries by name and structure without requiring
-the referenced class to be loaded first. These nominal descriptions can later
-be resolved when the tool actually needs a live runtime object.
+the referenced class to be loaded first. A live `Class`, `MethodType`, or
+`MethodHandle` is different from a nominal descriptor: the descriptor is a
+symbolic recipe that can later be resolved when a live runtime object is
+actually needed. This standardizes a useful representation for bytecode tools,
+compiler infrastructure, bootstrap/linkage logic, and APIs that manipulate
+symbolic constants.
 
 This repository keeps JEP 334 as a reference topic because the API is most
 useful in compiler and bytecode tooling rather than in a small application

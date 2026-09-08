@@ -19,7 +19,9 @@ Java 11 added:
 - `stripTrailing()`
 - `repeat(int)`
 
-These methods make common text cleanup and formatting code easier to read.
+These methods make common text cleanup and formatting code easier to read. In
+particular, `trim()` uses an older limited character-range definition of
+whitespace, while `strip()` follows Unicode whitespace semantics.
 
 Example: `StringApiExamples`
 
@@ -37,9 +39,15 @@ Test: `FilesApiExamplesTest`
 
 ## HTTP Client
 
-Before Java 11, the JDK had `HttpURLConnection`, but it was old and awkward for modern HTTP usage. Many projects used third-party clients for a cleaner API, HTTP/2 support, and asynchronous requests.
+Before Java 11, the JDK had `HttpURLConnection`, but it was old and awkward for
+modern HTTP usage: code configured a mutable connection, set properties, opened
+streams manually, and handled response and error streams. Many projects used
+third-party clients for a cleaner API, HTTP/2 support, and asynchronous
+requests.
 
-Java 11 finalized the standard `java.net.http.HttpClient` API. It supports synchronous and asynchronous calls, HTTP/2, request builders, response body handlers, and a more fluent style.
+Java 11 finalized the standard `java.net.http.HttpClient` API. Code can build a
+request, send it, and receive a typed response, with support for synchronous
+and asynchronous calls, HTTP/2, request builders, and response body handlers.
 
 The examples build requests and demonstrate synchronous sending through a caller-provided client so the tests remain deterministic and offline.
 
