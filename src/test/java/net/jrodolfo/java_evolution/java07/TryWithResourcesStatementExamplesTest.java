@@ -17,6 +17,9 @@ class TryWithResourcesStatementExamplesTest {
 		assertThat(firstLine)
 				.as("Java 7 try-with-resources should keep resource handling in the try header")
 				.isEqualTo("first");
+		assertThat(examples.readFirstLineClosesResource("first\nsecond"))
+				.as("Java 7 try-with-resources should invoke close when the try block ends")
+				.isTrue();
 	}
 
 	@Test

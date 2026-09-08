@@ -6,6 +6,7 @@ import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.util.EventListener;
+import java.util.EventObject;
 
 /**
  * Demonstrates JavaBeans introspection, introduced in Java 1.1.
@@ -59,6 +60,17 @@ public class JavaBeansExamples {
 	public String eventSetName() throws IntrospectionException {
 		EventSetDescriptor[] descriptors = beanInfo().getEventSetDescriptors();
 		return descriptors[0].getName();
+	}
+
+	/**
+	 * Finds the event object type accepted by the sample listener method.
+	 *
+	 * @return event object type
+	 * @throws IntrospectionException when bean metadata cannot be read
+	 */
+	public Class eventListenerParameterType() throws IntrospectionException {
+		EventSetDescriptor descriptor = beanInfo().getEventSetDescriptors()[0];
+		return descriptor.getListenerMethodDescriptors()[0].getMethod().getParameterTypes()[0];
 	}
 
 	private BeanInfo beanInfo() throws IntrospectionException {
@@ -115,6 +127,16 @@ public class JavaBeansExamples {
 	 * Listener type used to demonstrate JavaBeans event-set discovery.
 	 */
 	public interface ProjectListener extends EventListener {
-		void projectChanged();
+		void projectChanged(ProjectEvent event);
+	}
+
+	/**
+	 * Event object delivered when a project changes.
+	 */
+	public static class ProjectEvent extends EventObject {
+
+		public ProjectEvent(Object source) {
+			super(source);
+		}
 	}
 }
