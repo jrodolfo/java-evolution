@@ -10,7 +10,11 @@ The executable examples focus on concepts that still compile and behave faithful
 
 ## Object-Oriented Basics
 
-Java code is organized around classes and objects. Classes can encapsulate state and behavior, and inheritance lets a subclass reuse and specialize behavior from a superclass.
+Java code is organized around classes and objects. An object's **state** is the
+data it currently holds, and its **behavior** is what it can do through its
+methods. **Encapsulation** means keeping that data and behavior together while
+controlling how other code can change the object's state. Inheritance lets a
+subclass reuse and specialize behavior from a superclass.
 
 Example: `ObjectOrientedBasicsExamples`
 

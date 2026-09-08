@@ -10,6 +10,11 @@ Applications often need to look up named resources such as directory entries, en
 
 JNDI standardized naming and directory concepts around contexts, names, lookups, bindings, and providers.
 
+A simple mental model is a catalog: application code asks for a resource by a
+name instead of knowing how to construct it or where it is stored. The naming
+service resolves that name, and a provider connects the standard JNDI API to a
+particular system such as LDAP, DNS, or an application server.
+
 ## 3. What Does The Example Show?
 
 The example configures an `InitialContext` with a small in-memory provider through the standard `Context.INITIAL_CONTEXT_FACTORY` property.
