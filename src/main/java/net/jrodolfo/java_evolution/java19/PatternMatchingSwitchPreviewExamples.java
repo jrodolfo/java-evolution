@@ -11,8 +11,8 @@ package net.jrodolfo.java_evolution.java19;
  * </p>
  *
  * <p>
- * Pattern matching for switch became final later, in Java 21. This example uses
- * the final syntax available in JDK 26.
+ * Pattern matching for switch became final later, in Java 21. The type-pattern
+ * form shown here was part of the Java 19 preview and remains faithful to it.
  * </p>
  */
 public class PatternMatchingSwitchPreviewExamples {

@@ -4,7 +4,10 @@ Released: March 2020 as Java SE 14.
 
 Java 14 finalized switch expressions and previewed two features that later became central to modern Java: records and pattern matching. It also improved runtime diagnostics with helpful `NullPointerException` messages.
 
-The preview examples use JDK 26-compatible final syntax while explaining that Java 14 was the first preview release for those features.
+The record and pattern-matching forms shown here remain syntactically and
+semantically faithful to the Java 14 previews, while the README identifies
+Java 14 as their first preview release. Later finalization does not by itself
+justify rewriting an earlier preview example with different syntax.
 
 ## Switch Expressions Final
 
@@ -46,7 +49,11 @@ public record Feature(String name, boolean preview) {
 }
 ```
 
-Records are useful for immutable data carriers where identity is based on the component values.
+Records are useful for data carriers whose generated `equals` and `hashCode`
+compare component values. A record's component fields are final, but this is
+not deep immutability: an object referenced by a component may still be
+mutable. A record is still a reference type; its generated `equals` method
+compares component values rather than object identity.
 
 Example: `RecordPreviewExamples`
 

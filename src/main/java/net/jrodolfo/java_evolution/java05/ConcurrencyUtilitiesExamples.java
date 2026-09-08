@@ -23,7 +23,6 @@ public class ConcurrencyUtilitiesExamples {
 	 */
 	public String runCallable(ExecutorService executor) throws Exception {
 		Callable<String> task = new Callable<String>() {
-			@Override
 			public String call() {
 				return "computed by executor";
 			}
@@ -47,7 +46,6 @@ public class ConcurrencyUtilitiesExamples {
 
 		for (int index = 0; index < taskCount; index++) {
 			executor.submit(new Runnable() {
-				@Override
 				public void run() {
 					completed.incrementAndGet();
 					latch.countDown();
@@ -70,19 +68,16 @@ public class ConcurrencyUtilitiesExamples {
 	public int sumTaskResults(ExecutorService executor) throws Exception {
 		java.util.List<Callable<Integer>> tasks = Arrays.asList(
 				new Callable<Integer>() {
-					@Override
 					public Integer call() {
 						return 10;
 					}
 				},
 				new Callable<Integer>() {
-					@Override
 					public Integer call() {
 						return 20;
 					}
 				},
 				new Callable<Integer>() {
-					@Override
 					public Integer call() {
 						return 30;
 					}

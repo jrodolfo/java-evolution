@@ -25,7 +25,8 @@ public class RmiExamples {
 	private static final String SERVICE_NAME = "greeting";
 
 	/**
-	 * Starts a local RMI registry, exports a remote object, and binds the service.
+	 * Starts a local RMI registry, constructs an exported remote object, and
+	 * binds the service.
 	 *
 	 * @return local RMI endpoint that must be closed after use
 	 * @throws IOException when local socket binding or object export fails
@@ -34,25 +35,12 @@ public class RmiExamples {
 		int port = freeLoopbackPort();
 		Registry registry = LocateRegistry.createRegistry(port);
 		GreetingRemoteObject remoteObject = new GreetingRemoteObject();
-		try {
-			GreetingService stub = (GreetingService) UnicastRemoteObject.exportObject(remoteObject, 0);
-			registry.rebind(SERVICE_NAME, stub);
-			return new RmiGreetingEndpoint(port, registry, remoteObject);
-		}
-		catch (RemoteException exception) {
-			try {
-				UnicastRemoteObject.unexportObject(remoteObject, true);
-			}
-			catch (RemoteException ignored) {
-				// The object may not have been exported if exportObject failed.
-			}
-			UnicastRemoteObject.unexportObject(registry, true);
-			throw exception;
-		}
+		registry.rebind(SERVICE_NAME, remoteObject);
+		return new RmiGreetingEndpoint(port, registry, remoteObject);
 	}
 
 	private int freeLoopbackPort() throws IOException {
-		ServerSocket socket = new ServerSocket(0, 1, InetAddress.getLoopbackAddress());
+		ServerSocket socket = new ServerSocket(0, 1, InetAddress.getByName("127.0.0.1"));
 		try {
 			return socket.getLocalPort();
 		}
@@ -101,7 +89,7 @@ public class RmiExamples {
 	/**
 	 * Local owner for the registry and exported remote object.
 	 */
-	public static final class RmiGreetingEndpoint implements AutoCloseable {
+	public static final class RmiGreetingEndpoint {
 
 		private final int port;
 		private final Registry registry;
@@ -121,7 +109,7 @@ public class RmiExamples {
 		 * @throws NotBoundException when the service name is not bound
 		 */
 		public GreetingService lookupGreetingService() throws RemoteException, NotBoundException {
-			Registry clientRegistry = LocateRegistry.getRegistry(InetAddress.getLoopbackAddress().getHostAddress(), port);
+			Registry clientRegistry = LocateRegistry.getRegistry("127.0.0.1", port);
 			return (GreetingService) clientRegistry.lookup(SERVICE_NAME);
 		}
 
@@ -134,25 +122,31 @@ public class RmiExamples {
 			return remoteObject.lastReceivedRequest();
 		}
 
+		Registry registryForTestCleanup() {
+			return registry;
+		}
+
+		Remote remoteObjectForTestCleanup() {
+			return remoteObject;
+		}
+
 		/**
-		 * Unbinds and unexports the RMI resources.
+		 * Unbinds the RMI service name. The historical example has no modern
+		 * unexport operation; tests may release the exported resources separately.
 		 */
 		public void close() throws RemoteException, NotBoundException {
-			try {
-				registry.unbind(SERVICE_NAME);
-			}
-			finally {
-				UnicastRemoteObject.unexportObject(remoteObject, true);
-				UnicastRemoteObject.unexportObject(registry, true);
-			}
+			registry.unbind(SERVICE_NAME);
 		}
 	}
 
-	private static final class GreetingRemoteObject implements GreetingService {
+	private static final class GreetingRemoteObject extends UnicastRemoteObject implements GreetingService {
+
+		private GreetingRemoteObject() throws RemoteException {
+			super();
+		}
 
 		private GreetingRequest lastReceivedRequest;
 
-		@Override
 		public String greet(GreetingRequest request) throws RemoteException {
 			lastReceivedRequest = request;
 			return "hello, " + request.name();

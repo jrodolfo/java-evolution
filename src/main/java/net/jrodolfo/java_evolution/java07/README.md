@@ -10,9 +10,14 @@ The examples in this package compile on JDK 26, but they intentionally use Java 
 
 Before Java 7, resource cleanup commonly required `try`/`finally` blocks. That worked, but it was verbose and easy to get wrong, especially when both the main operation and the cleanup failed.
 
-Try-with-resources closes resources automatically and records cleanup failures as suppressed exceptions.
+Try-with-resources closes resources automatically and records cleanup failures
+as suppressed exceptions. If the main operation throws exception A and closing
+the resource throws exception B, Java preserves A as the primary exception and
+associates B with it as a suppressed exception. The original failure remains
+the one callers catch first, while the cleanup failure is still available for
+diagnosis.
 
-Java 7 introduced `AutoCloseable` as the general contract for resources managed by try-with-resources. `java.io.Closeable` was retrofitted to extend `AutoCloseable`, but it keeps the older I/O-specific signature where `close()` throws `IOException` instead of the broader `Exception`. In interviews, this distinction explains why try-with-resources works for both classic I/O streams and non-I/O resources such as locks, cursors, or custom cleanup handles.
+Java 7 introduced `AutoCloseable` as the general contract for resources managed by try-with-resources. `java.io.Closeable` was retrofitted to extend `AutoCloseable`, but it keeps the older I/O-specific signature where `close()` throws `IOException` instead of the broader `Exception`. This distinction explains why try-with-resources works for both classic I/O streams and non-I/O resources such as cursors or custom cleanup handles. A `java.util.concurrent.locks.Lock` is not itself an `AutoCloseable` resource.
 
 Example: `TryWithResourcesStatementExamples`
 
@@ -23,6 +28,12 @@ Test: `TryWithResourcesStatementExamplesTest`
 Before Java 7, two exception types that needed the same handling usually required duplicated catch blocks or a broad common superclass.
 
 Multi-catch lets one catch block handle multiple exception types. Java 7 also improved rethrow analysis so the compiler can preserve more precise thrown types in common wrapper methods.
+
+For example, if a method catches `IOException` or `SQLException`, records some
+context, and then rethrows the caught exception without replacing it, the
+compiler can infer that those are still the only checked exceptions that can
+escape. The wrapper can therefore declare the narrower types instead of
+falling back to `throws Exception`.
 
 Example: `ExceptionHandlingExamples`
 
@@ -68,7 +79,11 @@ Test: `NumericLiteralExamplesTest`
 
 ## NIO.2
 
-Before Java 7, file handling often used `java.io.File`, which had limited error reporting and weaker support for modern filesystem operations.
+Before Java 7, file handling often used `java.io.File`. Many operations
+reported failure only by returning `boolean`, which left the caller without a
+useful reason. NIO.2 commonly reports failures with informative exceptions and
+adds stronger models for paths, links, attributes, directory traversal, and
+filesystem providers.
 
 Java 7 added NIO.2, centered on `Path`, `Files`, file attributes, symbolic-link-aware APIs, directory walking, and filesystem providers.
 
@@ -80,7 +95,11 @@ Test: `Nio2ExamplesTest`
 
 Before Java 7, Java 5 executors made task submission easier, but recursive parallel decomposition still required substantial manual coordination.
 
-The fork/join framework added `ForkJoinPool`, `RecursiveTask`, and work stealing for computations that naturally split into subtasks and join results.
+The fork/join framework added `ForkJoinPool`, `RecursiveTask`, and work
+stealing for computations that naturally split into subtasks and join results.
+When a worker finishes its own tasks, it can take pending work from another
+worker's queue. That helps recursive parallel work remain balanced instead of
+leaving one worker overloaded while another sits idle.
 
 Example: `ForkJoinExamples`
 
@@ -90,7 +109,11 @@ Test: `ForkJoinExamplesTest`
 
 Java 7 added the `invokedynamic` bytecode and method-handle linkage support for dynamic languages on the JVM.
 
-The executable module demonstrates `java.lang.invoke` call-site linkage and inspects compiled lambda bytecode with `javap` to show real `invokedynamic` instructions. Ordinary Java source still does not directly spell an `invokedynamic` instruction.
+The executable module demonstrates `java.lang.invoke` call-site linkage with
+method handles, constant call sites, and mutable call sites. Ordinary Java
+source still does not directly spell an `invokedynamic` instruction; later
+features such as lambdas can use this JVM linkage machinery, but the Java 7
+example itself uses only Java 7-era APIs.
 
 Example module: [`invokedynamic`](invokedynamic/README.md)
 

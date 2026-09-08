@@ -12,7 +12,17 @@ Before Java 5, collection APIs commonly used raw `Object` values. Callers had to
 
 Generics let classes and methods declare type parameters such as `List<String>`. The compiler can then reject many wrong-type operations before the program runs.
 
-They also support API design. A method that only reads values can accept a producer such as `Iterable<? extends ReleaseFeature>`, allowing callers to pass iterables of more specific feature types without copying them. Java 5 type parameters can also have multiple bounds, such as `<T extends NamedFeature & PrioritizedFeature>`, when a method needs more than one capability.
+Start with a simple type argument such as `List<String>`: the list still stores
+strings, but the compiler checks that callers add and retrieve the right type.
+
+Generics can then describe relationships between types. A bounded type
+parameter such as `<T extends ReleaseFeature>` says that `T` must be a
+`ReleaseFeature` or one of its subclasses. A method that only reads values can
+accept a producer such as `Iterable<? extends ReleaseFeature>`, allowing
+callers to pass iterables of more specific feature types without copying them.
+Java 5 type parameters can also have multiple bounds, such as
+`<T extends NamedFeature & PrioritizedFeature>`, when a method needs more than
+one capability.
 
 Example: `GenericsExamples`
 
@@ -84,6 +94,11 @@ Before Java 5, source-level metadata often lived in naming conventions, marker i
 
 Annotations let metadata live directly on declarations. Tools and frameworks can inspect that metadata at compile time or runtime, depending on the annotation retention policy.
 
+Retention describes how long the annotation remains available: source
+retention is discarded by the compiler, class retention is stored in the class
+file, and runtime retention remains available to reflection while the program
+runs.
+
 Example: `AnnotationExamples`
 
 Test: `AnnotationExamplesTest`
@@ -113,6 +128,10 @@ Test: `FormattingExamplesTest`
 Before Java 5, concurrent code often used low-level `Thread`, `wait`, `notify`, and synchronized blocks directly. Those primitives are powerful, but they are easy to coordinate incorrectly.
 
 Java 5 added `java.util.concurrent`, including executors, futures, latches, locks, atomic variables, and thread-safe collections.
+
+These utilities reduce coordination mistakes such as waiting on the wrong
+condition, forgetting to signal another thread, or implementing a race-prone
+shutdown protocol by hand.
 
 Example: `ConcurrencyUtilitiesExamples`
 

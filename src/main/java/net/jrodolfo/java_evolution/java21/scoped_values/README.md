@@ -1,6 +1,7 @@
 # Scoped Values Preview
 
-Java 21 introduced Scoped Values as a first preview feature in Java Enhancement Proposal (JEP) 446.
+Java 20 incubated Scoped Values, and Java 21 continued them as a first preview
+feature in Java Enhancement Proposal (JEP) 446.
 
 This module is explanatory because the Java 21 API was still preview. The final runnable learning module belongs to Java 25, where Scoped Values became final.
 
@@ -41,11 +42,15 @@ A `ThreadLocal` stores a value associated with the current thread. Code running 
 
 That can be useful, but it creates risks:
 
-- the value is mutable thread-associated state
+- the thread-local association can be changed over the thread's lifetime; the
+  referenced value itself may be immutable or mutable
 - cleanup is usually manual
 - forgetting cleanup can leave stale context behind
 - stale context is especially dangerous when threads are reused
 - it can become difficult to see where the value came from
+- the association does not simply follow logical work when execution moves to
+  another thread; inheritance is a separate behavior that must be arranged
+  explicitly
 
 The issue is not that `ThreadLocal` is always wrong. The issue is that contextual data often needs a clearer lifetime than "whatever remains associated with this thread."
 
@@ -56,13 +61,16 @@ Java 21 previewed Scoped Values.
 The preview idea was:
 
 ```text
-bind immutable contextual data
+bind contextual data for a bounded scope
 run an operation
 make the value visible to code called during that operation
 remove the binding automatically when the operation finishes
 ```
 
-This gives contextual data a bounded lifetime.
+This gives the binding a bounded lifetime. Scoped Values provide an alternative
+for many contextual-data uses of `ThreadLocal` rather than replacing every
+ThreadLocal use case. The referenced object is not made deeply immutable by
+the binding.
 
 ## Important Terminology
 
@@ -163,4 +171,6 @@ Scoped Values become useful when contextual data must be available across a deep
 
 ## Remember This
 
-Scoped Values were previewed in Java 21 to provide immutable contextual data with a bounded lifetime. They are easier to reason about than mutable thread-associated context when the value belongs to one operation.
+Scoped Values were previewed in Java 21 to provide contextual data with a
+bounded binding lifetime. They are easier to reason about than a mutable
+thread-local association when the context belongs to one operation.

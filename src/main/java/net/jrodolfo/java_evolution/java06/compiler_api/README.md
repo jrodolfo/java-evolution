@@ -8,7 +8,12 @@ This module uses a real executable example. It compiles temporary Java source fi
 
 Before Java 6, tools that needed to compile Java source programmatically often launched `javac` as an external process or depended on implementation-specific compiler classes.
 
-That was awkward for IDEs, build tools, application servers, template engines, and frameworks that generated Java source.
+That was awkward for IDEs, build tools, application servers, template engines,
+and frameworks that generated Java source. A child process requires the tool to
+manage command-line arguments, process streams, exit codes, and textual
+diagnostics. The Compiler API instead invokes the compiler in-process and
+returns structured diagnostics that a tool can associate with source files and
+line positions.
 
 ## 2. What Did Java Introduce?
 

@@ -10,6 +10,19 @@ This package focuses executable examples on the Collections Framework, sorting, 
 
 Before Java 2, common containers included `Vector`, `Hashtable`, arrays, and custom structures. Java 2 introduced standard collection interfaces such as `List`, `Set`, and `Map`, plus implementations and algorithms.
 
+A `List` is an ordered sequence that can contain duplicates. A `Set` represents
+unique values, while a `Map` associates keys with values. Choose the interface
+that describes what the code needs: for example, declare a parameter as
+`List` when order and list operations matter, or as `Set` when
+uniqueness matters. When the concrete implementation is not important, use
+the interface rather than committing callers to an implementation such as
+`ArrayList` or `HashSet`.
+
+This separation lets the implementation change without changing the code that
+uses it. The same idea applies to variables, parameters, and return types: the
+interface describes the available operations, and the implementation supplies
+the storage details.
+
 Example: `CollectionsFrameworkExamples`
 
 Test: `CollectionsFrameworkExamplesTest`
@@ -17,6 +30,12 @@ Test: `CollectionsFrameworkExamplesTest`
 ## Sorting
 
 Java 2 collections made sorting and ordering a standard concern through `Comparable`, `Comparator`, and `Collections.sort`.
+
+`Comparable` means that a type defines its own natural ordering through a
+`compareTo` method, such as a value object ordering itself by an identifying
+field. `Comparator` represents an ordering outside the type, which is useful
+when callers need a different rule, such as sorting the same objects by name
+in one place and by date in another.
 
 Example: `SortingExamples`
 

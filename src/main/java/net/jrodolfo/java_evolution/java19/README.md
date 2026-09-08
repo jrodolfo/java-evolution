@@ -4,17 +4,32 @@ Released: September 2022 as Java SE 19.
 
 Java 19 was an important preview-and-incubator release. Several features that later became central to modern Java appeared here in early form: virtual threads, structured concurrency, record patterns, pattern matching for `switch`, and the Foreign Function and Memory API.
 
-Because this project compiles on JDK 26, examples use the current compatible syntax where possible and explain the Java 19 preview origin.
+The examples retain later syntax only where the demonstrated form and meaning
+remain faithful to the Java 19 preview; otherwise the material is explanatory
+and identifies the historical form.
 
 ## Virtual Threads Preview
 
 Before virtual threads, Java developers often had to choose between two imperfect models for server-side concurrency.
 
-One model used a platform thread per request. That code was easy to understand because it looked sequential, but platform threads are relatively expensive. At very high concurrency, thread count became a practical limit.
+One model used a platform thread per request. That code was easy to understand because it looked sequential, but platform threads generally correspond closely to operating-system threads. Each one consumes stack memory and OS scheduling resources, so creating very large numbers of them can make thread count a practical limit.
 
 Another model used asynchronous callbacks, futures, or reactive pipelines. That improved scalability, but the code often became harder to read, debug, and step through.
 
 Virtual threads try to preserve the simple thread-per-task programming style while making threads cheap enough for very large numbers of blocking tasks.
+
+A simple mental model is:
+
+```text
+many application tasks
+    -> many virtual threads
+        -> JVM schedules them
+            -> smaller number of platform threads
+```
+
+When a virtual thread waits on suitable blocking work, the JVM can usually let
+the underlying platform thread run another virtual thread instead of leaving
+that platform thread idle.
 
 Java 19 introduced virtual threads as a preview feature. They became final in Java 21.
 
@@ -70,7 +85,7 @@ Test: `StructuredConcurrencyPreviewNotesTest`
 
 ## Foreign Function and Memory API Preview
 
-Before the Foreign Function and Memory API, Java code usually used JNI for serious native integration. JNI is powerful, but it is also complex, unsafe, and easy to make platform-specific.
+Before the Foreign Function and Memory API, Java code usually used JNI for serious native integration. JNI commonly requires Java declarations plus native C or C++ glue code, with explicit coordination and conversion as calls cross the Java/native boundary. Native memory is outside many of Java's normal safety guarantees, so an invalid address or size can corrupt memory or even crash the process. Native libraries may also vary by operating system and CPU architecture.
 
 The Foreign Function and Memory API aims to provide a supported way to call native functions and work with memory outside the Java heap.
 

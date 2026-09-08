@@ -12,6 +12,10 @@ Before Java 6, sorted sets and maps existed, but APIs for nearest-neighbor navig
 
 Java 6 added `NavigableSet`, `NavigableMap`, and `Deque`. These APIs made ordered collection navigation and double-ended queues part of the standard library.
 
+A deque is a queue that supports insertion and removal at both the front and
+the back, which is useful when the same data structure must act as either a
+queue or a stack.
+
 Example: `NavigableCollectionExamples`
 
 Test: `NavigableCollectionExamplesTest`

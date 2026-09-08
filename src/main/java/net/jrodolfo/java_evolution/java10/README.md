@@ -20,7 +20,12 @@ Java 10 added `var`, allowing the compiler to infer the local variable type from
 var lengths = new HashMap<String, Integer>();
 ```
 
-The variable still has a real static type. `var` is only a readability feature for local variables, loop variables, and try-with-resources variables. It cannot be used for fields, method parameters, or method return types in Java 10.
+The variable still has a real static type. `var` performs local-variable type
+inference and removes redundant type spelling. It can improve readability when
+the initializer makes the inferred type obvious, but indiscriminate use can
+hide useful type information. It is available for local variables, loop
+variables, and try-with-resources variables, not fields, method parameters, or
+method return types in Java 10.
 
 Example: `LocalVariableTypeInferenceExamples`
 
@@ -33,6 +38,10 @@ Java 8 streams made it easy to collect results into lists, sets, and maps, but t
 Java 10 added `Collectors.toUnmodifiableList`, `Collectors.toUnmodifiableSet`, and `Collectors.toUnmodifiableMap`. These collectors let the pipeline produce an unmodifiable result directly.
 
 This is useful when a method should return a snapshot that callers cannot accidentally mutate.
+
+The restriction is structural, not deep immutability: callers cannot add or
+remove elements through the returned collection, but an object inside it may
+still be mutable.
 
 Example: `UnmodifiableCollectorsExamples`
 

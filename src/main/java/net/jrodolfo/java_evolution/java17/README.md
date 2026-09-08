@@ -19,6 +19,17 @@ public sealed interface Shape permits Circle, Rectangle, Square {
 
 This is useful for domain hierarchies that should be closed and well understood.
 
+Each permitted subtype must make the next design decision explicit:
+
+- `final` means the hierarchy stops at that subtype.
+- `sealed` means that subtype continues the hierarchy with another controlled
+  set of permitted subtypes.
+- `non-sealed` means the hierarchy becomes open again below that subtype.
+
+These choices tell readers and the compiler the actual shape of the hierarchy.
+When pattern matching handles the sealed type, the compiler can use that known
+shape to reason about whether all permitted cases are covered.
+
 Example: `SealedClassesExamples`
 
 Test: `SealedClassesExamplesTest`
@@ -37,7 +48,9 @@ return switch (value) {
 };
 ```
 
-The feature became final later in Java 21. This repository uses current syntax while documenting Java 17 as the preview origin.
+The feature became final later in Java 21. The executable example below uses
+only the type-pattern subset whose syntax and meaning are faithful to the Java
+17 preview; it does not use the later guard syntax.
 
 The preview syntax also evolved. Java 17 used `&&` to add a condition to a
 pattern, for example:
@@ -52,8 +65,8 @@ The current syntax uses `when` instead:
 case String text when text.isBlank() -> "blank string";
 ```
 
-Because this project compiles with JDK 26, the example class uses the current
-`when` syntax while this README preserves the Java 17 preview history.
+The executable class intentionally leaves guarded patterns out because the
+guard syntax changed materially between the Java 17 preview and later releases.
 
 Example: `PatternMatchingSwitchPreviewExamples`
 

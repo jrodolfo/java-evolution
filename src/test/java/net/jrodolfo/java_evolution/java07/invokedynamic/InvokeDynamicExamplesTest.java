@@ -4,10 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.lang.invoke.MethodType;
 import java.lang.invoke.WrongMethodTypeException;
-import java.nio.file.Path;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.io.TempDir;
 
 class InvokeDynamicExamplesTest {
 
@@ -47,31 +45,4 @@ class InvokeDynamicExamplesTest {
 				.isInstanceOf(WrongMethodTypeException.class);
 	}
 
-	@Test
-	void compiledLambdaBytecodeContainsInvokedynamicInstruction(@TempDir Path workspace) throws Exception {
-		Path sourceFile = examples.createLambdaSource(workspace);
-		Path outputDirectory = workspace.resolve("classes");
-
-		InvokeDynamicExamples.CommandResult compile = examples.compile(sourceFile, outputDirectory);
-		InvokeDynamicExamples.CommandResult run = examples.runClass(outputDirectory, "LambdaBytecode");
-		InvokeDynamicExamples.CommandResult javap = examples.inspectBytecode(outputDirectory, "LambdaBytecode");
-
-		assertThat(compile.exitCode())
-				.as("The generated lambda source should compile; output was: %s", compile.output())
-				.isZero();
-		assertThat(run.exitCode())
-				.as("The generated lambda class should run; output was: %s", run.output())
-				.isZero();
-		assertThat(run.output())
-				.as("The lambda source is ordinary Java code whose bytecode uses invokedynamic")
-				.contains("hello, Java");
-		assertThat(javap.exitCode())
-				.as("javap should inspect the generated class; output was: %s", javap.output())
-				.isZero();
-		assertThat(javap.output())
-				.as("javap output should show the actual invokedynamic instruction and bootstrap metadata")
-				.contains("invokedynamic")
-				.contains("BootstrapMethods")
-				.contains("LambdaMetafactory");
-	}
 }

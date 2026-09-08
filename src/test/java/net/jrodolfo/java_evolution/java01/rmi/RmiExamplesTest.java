@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import java.io.IOException;
 import java.net.SocketException;
+import java.rmi.server.UnicastRemoteObject;
 
 import org.junit.jupiter.api.Test;
 
@@ -28,7 +29,7 @@ class RmiExamplesTest {
 					.isInstanceOf(RmiExamples.GreetingService.class);
 		}
 		finally {
-			endpoint.close();
+			close(endpoint);
 		}
 	}
 
@@ -49,7 +50,17 @@ class RmiExamplesTest {
 					.isEqualTo("serialized argument");
 		}
 		finally {
+			close(endpoint);
+		}
+	}
+
+	private void close(RmiExamples.RmiGreetingEndpoint endpoint) throws Exception {
+		try {
 			endpoint.close();
+		}
+		finally {
+			UnicastRemoteObject.unexportObject(endpoint.remoteObjectForTestCleanup(), true);
+			UnicastRemoteObject.unexportObject(endpoint.registryForTestCleanup(), true);
 		}
 	}
 

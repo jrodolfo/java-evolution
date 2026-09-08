@@ -25,13 +25,13 @@ public class SwingExamples {
 	 *
 	 * @return ordered snapshot of model values
 	 */
-	public List<String> listModelSnapshot() {
-		DefaultListModel<String> model = new DefaultListModel<String>();
+	public List listModelSnapshot() {
+		DefaultListModel model = new DefaultListModel();
 		model.addElement("collections");
 		model.addElement("swing");
 		model.addElement("java2d");
 
-		List<String> values = new ArrayList<String>();
+		List values = new ArrayList();
 		for (int index = 0; index < model.getSize(); index++) {
 			values.add(model.getElementAt(index));
 		}

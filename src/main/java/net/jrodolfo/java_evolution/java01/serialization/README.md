@@ -25,7 +25,12 @@ The example uses only bytes created inside the test. It does not read serialized
 
 ## 4. What Is The Modern Caution?
 
-Java serialization is easy to demonstrate, but it is legacy-sensitive infrastructure. Deserializing untrusted data can be dangerous, and a serialized form can become a long-lived compatibility contract between versions of a class.
+Java serialization is easy to demonstrate, but it is legacy-sensitive
+infrastructure. Deserialization can execute type-specific reconstruction logic
+while interpreting attacker-controlled data, so untrusted serialized input can
+create security vulnerabilities. A serialized form can also become a long-lived
+compatibility contract: once files or other systems depend on the field layout
+and class identity, changing a class can break old data or require migration.
 
 Modern systems often prefer explicit formats such as JSON, protocol buffers, or database rows for application data exchange. When Java serialization is used, the input source and filtering strategy matter.
 

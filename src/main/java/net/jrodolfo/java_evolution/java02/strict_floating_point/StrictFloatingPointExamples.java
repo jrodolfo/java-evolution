@@ -1,13 +1,10 @@
 package net.jrodolfo.java_evolution.java02.strict_floating_point;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.Locale;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.TimeUnit;
+import java.io.InputStream;
 
 /**
  * Demonstrates {@code strictfp}, introduced in Java 2.
@@ -30,21 +27,25 @@ public class StrictFloatingPointExamples {
 		return StrictCalculator.average(left, right);
 	}
 
-	public CompilationResult compileStrictfpProbe(Path workspace) throws IOException, InterruptedException {
-		Path sourceFile = workspace.resolve("StrictfpProbe.java");
-		Files.write(sourceFile, strictfpProbeSource().getBytes(StandardCharsets.UTF_8));
+	public CompilationResult compileStrictfpProbe(File workspace) throws IOException, InterruptedException {
+		File sourceFile = new File(workspace, "StrictfpProbe.java");
+		FileOutputStream output = new FileOutputStream(sourceFile);
+		try {
+			output.write(strictfpProbeSource().getBytes());
+		}
+		finally {
+			output.close();
+		}
 
-		return run(javacCommand(), sourceFile.toString());
+		return run(javacCommand(), sourceFile.getPath());
 	}
 
 	public String strictfpProbeSource() {
-		return """
-				public strictfp class StrictfpProbe {
-				    public strictfp double average(double left, double right) {
-				        return (left + right) / 2.0d;
-				    }
-				}
-				""";
+		return "public strictfp class StrictfpProbe {\n"
+				+ "    public strictfp double average(double left, double right) {\n"
+				+ "        return (left + right) / 2.0d;\n"
+				+ "    }\n"
+				+ "}\n";
 	}
 
 	private String javacCommand() {
@@ -53,35 +54,45 @@ public class StrictFloatingPointExamples {
 	}
 
 	private boolean isWindows() {
-		return System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("win");
+		return System.getProperty("os.name").toLowerCase().indexOf("win") >= 0;
 	}
 
 	private CompilationResult run(String... command) throws IOException, InterruptedException {
-		ProcessBuilder processBuilder = new ProcessBuilder(command);
-		processBuilder.redirectErrorStream(true);
-		Process process = processBuilder.start();
-		CompletableFuture<String> output = CompletableFuture.supplyAsync(() -> readOutput(process));
-
-		boolean finished = process.waitFor(10, TimeUnit.SECONDS);
-		if (!finished) {
-			process.destroyForcibly();
-			process.waitFor(5, TimeUnit.SECONDS);
-			return new CompilationResult(-1, output.join());
-		}
-
-		return new CompilationResult(process.exitValue(), output.join());
+		final Process process = Runtime.getRuntime().exec(command);
+		final StringBuffer output = new StringBuffer();
+		Thread standardOutputReader = new Thread(new Runnable() {
+			public void run() {
+				readOutput(process.getInputStream(), output);
+			}
+		});
+		Thread errorOutputReader = new Thread(new Runnable() {
+			public void run() {
+				readOutput(process.getErrorStream(), output);
+			}
+		});
+		standardOutputReader.start();
+		errorOutputReader.start();
+		int exitCode = process.waitFor();
+		standardOutputReader.join();
+		errorOutputReader.join();
+		return new CompilationResult(exitCode, output.toString());
 	}
 
-	private String readOutput(Process process) {
+	private void readOutput(InputStream input, StringBuffer output) {
 		try {
-			return new String(process.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+			byte[] buffer = new byte[1024];
+			ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+			int read;
+			while ((read = input.read(buffer)) != -1) {
+				bytes.write(buffer, 0, read);
+			}
+			output.append(new String(bytes.toByteArray()));
 		}
 		catch (IOException exception) {
-			throw new IllegalStateException("could not read child process output", exception);
+			output.append("could not read child process output: ").append(exception);
 		}
 	}
 
-	@SuppressWarnings("strictfp")
 	private static strictfp class StrictCalculator {
 
 		private StrictCalculator() {

@@ -10,6 +10,10 @@ Applications sometimes need to store small user or system configuration values w
 
 The Preferences API provides hierarchical nodes and key/value storage for user and system preferences.
 
+Preferences are configuration storage, not secret storage. The API does not
+turn values into encrypted secrets, so passwords, private keys, and tokens
+should be kept in a secrets-management system designed to protect them.
+
 ## 3. Why This Repository Uses Notes
 
 Preferences are executable in normal applications, but they use platform-specific backing stores such as files, registries, or operating-system preference services. Even user preferences can fail to synchronize in sandboxed, CI, or restricted desktop environments.

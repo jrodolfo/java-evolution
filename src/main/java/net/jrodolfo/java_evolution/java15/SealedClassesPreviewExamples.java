@@ -15,9 +15,9 @@ import java.util.stream.Collectors;
  *
  * <p>
  * Sealed classes solve this by letting the parent type explicitly list
- * permitted subtypes. They became final in Java 17. This project compiles on
- * JDK 26, so the example uses final syntax while documenting the Java 15
- * preview origin.
+ * permitted subtypes. They became final in Java 17. The sealed-type syntax
+ * shown here is also faithful to the Java 15 preview, while the documentation
+ * identifies its preview status.
  * </p>
  */
 public class SealedClassesPreviewExamples {

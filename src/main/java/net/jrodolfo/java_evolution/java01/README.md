@@ -10,7 +10,11 @@ The executable examples focus on concepts that still compile and behave faithful
 
 ## Object-Oriented Basics
 
-Java code is organized around classes and objects. Classes can encapsulate state and behavior, and inheritance lets a subclass reuse and specialize behavior from a superclass.
+Java code is organized around classes and objects. An object's **state** is the
+data it currently holds, and its **behavior** is what it can do through its
+methods. **Encapsulation** means keeping that data and behavior together while
+controlling how other code can change the object's state. Inheritance lets a
+subclass reuse and specialize behavior from a superclass.
 
 Example: `ObjectOrientedBasicsExamples`
 
@@ -26,7 +30,11 @@ Test: `InterfaceExamplesTest`
 
 ## Checked Exceptions
 
-Checked exceptions force callers to handle or declare recoverable failure. This baseline matters before studying Java 7 multi-catch, precise rethrow, and try-with-resources.
+For a checked exception, the compiler requires the calling code to catch the
+exception or declare it in the method's `throws` clause. This makes the failure
+part of the method's visible contract, but it does not mean that every checked
+exception represents a recoverable situation. This baseline matters before
+studying Java 7 multi-catch, precise rethrow, and try-with-resources.
 
 Example: `ExceptionHandlingBasicsExamples`
 
@@ -34,7 +42,14 @@ Test: `ExceptionHandlingBasicsExamplesTest`
 
 ## Threads And Runnable
 
-Early Java exposed concurrency through `Thread`, `Runnable`, synchronization, `wait`, and `notify`. Later releases added higher-level concurrency utilities and virtual threads, but the original model explains the foundation.
+Early Java exposed concurrency through `Thread`, `Runnable`, synchronization,
+`wait()`, and `notify()`. A `Thread` represents an independently running path
+of execution, while a `Runnable` holds the work that path should perform.
+Synchronization protects shared state when multiple threads access it. A
+thread can call `wait()` to release a lock and pause until another thread calls
+`notify()` after changing the shared state. Later releases added higher-level
+concurrency utilities and virtual threads, but this original model explains
+the foundation.
 
 Example: `ThreadBasicsExamples`
 
@@ -42,7 +57,12 @@ Test: `ThreadBasicsExamplesTest`
 
 ## java.io
 
-The original I/O model centered on streams and readers. Later releases added NIO, NIO.2, and convenience file APIs, but `InputStream`, `OutputStream`, `Reader`, and `Writer` remain important concepts.
+The original I/O model centered on streams and readers. `InputStream` and
+`OutputStream` work with raw bytes, which is appropriate for binary data such as
+images. `Reader` and `Writer` work with characters, which is appropriate for
+text and involves character encoding. Later releases added NIO, NIO.2, and
+convenience file APIs, but these byte-oriented and character-oriented types
+remain important concepts.
 
 Example: `IoBasicsExamples`
 
@@ -50,7 +70,12 @@ Test: `IoBasicsExamplesTest`
 
 ## Inner Classes
 
-Java 1.1 added inner classes, making it easier to keep small helper implementations near the code that uses them. This history helps explain anonymous classes, which later became a common pre-lambda pattern.
+Java 1.1 added inner classes, making it easier to keep small helper
+implementations near the code that uses them. Keeping a helper nearby makes
+its purpose and access to the surrounding class easier to understand, while
+also avoiding a separate top-level name for a type that has no wider use. This
+history helps explain anonymous classes, which later became a common pre-lambda
+pattern.
 
 Example: `InnerClassExamples`
 
@@ -76,9 +101,10 @@ Test: `SerializationExamplesTest`
 
 Java 1.1 introduced JDBC as a standard API for database access.
 
-The executable module demonstrates driver registration, URL matching,
-`DriverManager` dispatch, connection metadata, and driver cleanup without
-requiring a database server.
+The executable module models driver registration, URL matching, driver-manager
+dispatch, connection metadata, and cleanup without requiring a database server.
+It uses small Java 1.1-era local types instead of modern compatibility adapters
+for today's expanded JDBC interfaces.
 
 Example module: [`jdbc`](jdbc/README.md)
 

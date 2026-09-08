@@ -16,6 +16,14 @@ Test: `AssertionExamplesTest`
 
 Java 4 added `java.util.regex`, bringing regular expression matching into the standard library.
 
+`Pattern` is the compiled description of the text rule. A `Matcher` applies
+that rule to a particular input. Together they support common tasks such as
+validating an entire value, searching for matches, extracting captured text,
+and replacing matching text.
+
+For example, a pattern such as `"[0-9]+"` describes one or more digits; a
+matcher can then search a string for portions that follow that rule.
+
 Example: `RegexExamples`
 
 Test: `RegexExamplesTest`
@@ -23,6 +31,13 @@ Test: `RegexExamplesTest`
 ## NIO
 
 Java 4 added New I/O (NIO), including buffers, channels, selectors, and charsets.
+
+Older stream-oriented I/O presents data as a sequence that code reads from or
+writes to one stream at a time. NIO separates the data from the connection: a
+**buffer** is a region of memory that holds bytes or characters, and a
+**channel** transfers data between that buffer and a file, socket, or other
+source. A **selector** can then watch several selectable channels and report
+which ones are ready, so one thread can coordinate multiple connections.
 
 Example: `NioExamples`
 
@@ -32,6 +47,13 @@ Test: `NioExamplesTest`
 
 Java 4 added `java.util.logging` as a standard logging API.
 
+Logging gives messages a destination, a logger name, and a severity instead of
+mixing diagnostic text into normal output with `System.out.println`. Log
+levels such as `SEVERE`, `WARNING`, `INFO`, and `FINE` let an operator choose
+how much detail to see without changing the application's main logic. The
+structure also makes it easier to route, filter, and understand messages in a
+larger application.
+
 Example: `LoggingExamples`
 
 Test: `LoggingExamplesTest`
@@ -39,6 +61,20 @@ Test: `LoggingExamplesTest`
 ## Chained Exceptions
 
 Java 4 standardized exception causes, making wrapper exceptions preserve the original failure.
+
+For example, code can translate a low-level failure while keeping its cause:
+
+```java
+try {
+    throw new IOException("disk failed");
+} catch (IOException exception) {
+    throw new ImportException("import failed", exception);
+}
+```
+
+The caller receives a meaningful higher-level exception, while the original
+`IOException` remains available for diagnosis. This is useful when an API
+wants to expose its own vocabulary without hiding the underlying problem.
 
 Example: `ChainedExceptionExamples`
 

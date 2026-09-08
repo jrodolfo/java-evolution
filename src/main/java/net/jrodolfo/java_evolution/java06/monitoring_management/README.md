@@ -4,6 +4,12 @@ Java 6 improved monitoring and management support for the Java platform.
 
 This module uses executable MXBean examples for the local JVM, while still explaining that the larger feature area includes external tools and operational workflows.
 
+In plain terms, a running Java application can expose useful information about
+itself. Developers and operators can inspect memory, threads, garbage
+collection, class loading, runtime configuration, and similar operational
+details instead of treating the JVM as a black box. JMX and MXBeans are the
+Java names for the interfaces and conventions used to expose that information.
+
 ## 1. What Problem Does This Feature Solve?
 
 Production Java applications need to be inspected while they run. Developers and operators need information about memory, threads, garbage collection, class loading, logging, and operating-system interaction.

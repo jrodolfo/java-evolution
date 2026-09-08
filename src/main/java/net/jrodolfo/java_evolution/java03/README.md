@@ -8,6 +8,16 @@ J2SE 1.3 was not a large language release. Its most teachable additions for this
 
 Dynamic proxies let Java create an object at runtime that implements one or more interfaces and routes method calls to an invocation handler.
 
+This is useful when every call needs an additional concern, such as logging,
+security checks, transaction handling, or framework interception. The proxy is
+the object the caller sees; the `InvocationHandler` receives each method call
+and decides what should happen next, often forwarding the call to a real
+object. You can picture the flow as:
+
+```text
+caller -> proxy -> invocation handler -> real object
+```
+
 Example: `DynamicProxyExamples`
 
 Test: `DynamicProxyExamplesTest`
@@ -15,6 +25,10 @@ Test: `DynamicProxyExamplesTest`
 ## Timer And TimerTask
 
 Before scheduled executors, `Timer` and `TimerTask` provided a standard way to schedule delayed or repeated work.
+
+`Timer` is the scheduler. `TimerTask` is the unit of work that the scheduler
+will run. Separating those roles lets one timer coordinate tasks that should
+run later or repeatedly without each task implementing its own waiting loop.
 
 Example: `TimerExamples`
 

@@ -15,9 +15,9 @@ import java.util.concurrent.FutureTask;
  * </p>
  *
  * <p>
- * Virtual threads became final later, in Java 21. This project compiles on JDK
- * 25, so the example uses the final API while documenting the Java 19 preview
- * origin.
+ * Virtual threads became final later, in Java 21. The API calls shown here
+ * retain the same syntax and semantics as the Java 19 preview while the
+ * documentation identifies the preview origin.
  * </p>
  */
 public class VirtualThreadsPreviewExamples {

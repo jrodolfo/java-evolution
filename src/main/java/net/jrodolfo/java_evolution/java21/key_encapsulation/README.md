@@ -22,7 +22,8 @@ Advanced Encryption Standard (AES) is the most common example. It is fast and wi
 The problem is not AES itself. The problem is key agreement:
 
 ```text
-How does Alice give Bob the AES key without sending the AES key directly?
+How can Alice and Bob establish matching secret key material without
+transmitting that secret material directly?
 ```
 
 If Alice simply sends the key over the network, anyone listening can copy it.
@@ -40,17 +41,11 @@ private key -> kept secret by Bob
 
 Alice can use Bob's public key as part of a secure setup process. Bob uses his private key to complete the other side of that process.
 
-Older designs often transported a symmetric key by encrypting that key with public-key cryptography. That can work, but it requires careful choices around algorithms, key sizes, modes, and padding.
-
-## What Padding Means
-
-Padding means adding extra bytes so data fits the size or structure required by a cryptographic algorithm.
-
-For example, a block cipher may require data to fit an exact block size. If the message is shorter than the block, extra bytes are added and later removed.
-
-Padding sounds simple, but bad padding design or error handling can leak information. A padding oracle attack happens when a system reveals different behavior for valid and invalid padding, giving attackers clues they can use without knowing the secret key.
-
-KEM does not magically remove every cryptographic concern, but it gives key establishment a cleaner API boundary than directly encrypting a symmetric key yourself.
+Older designs often transported a symmetric key by encrypting that key with
+public-key cryptography. That can work, but it requires careful choices around
+algorithms, key sizes, encoding, and the construction's security rules. KEM
+does not remove every cryptographic concern, but it gives key establishment a
+clearer API boundary than directly transporting a symmetric key yourself.
 
 ## What KEM Changes
 

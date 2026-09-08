@@ -31,6 +31,16 @@ For communication that never leaves the machine, many operating systems also sup
 
 That means the communication endpoint is identified by a path on the local machine rather than by a network host and port.
 
+The path, such as `/tmp/example.sock`, names the socket endpoint in the
+filesystem namespace. It is not an ordinary file containing the messages; the
+operating system associates the path with a local communication endpoint.
+
+Unix-domain sockets can be attractive because there is no TCP port to allocate
+or collide with, and the endpoint is local rather than a routable network
+address. On systems that support it, filesystem-based endpoint permissions
+can also participate in local access control. The exact support and permission
+behavior is operating-system dependent.
+
 ## How Was This Commonly Done Before?
 
 Before Java 16, Java's standard non-blocking socket channel APIs focused on Internet sockets such as TCP.

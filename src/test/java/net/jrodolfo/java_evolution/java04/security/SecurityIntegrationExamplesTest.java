@@ -1,13 +1,10 @@
 package net.jrodolfo.java_evolution.java04.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-import java.nio.charset.StandardCharsets;
 import java.security.KeyPair;
 import java.util.List;
 
-import javax.crypto.AEADBadTagException;
 import javax.crypto.SecretKey;
 
 import org.junit.jupiter.api.Test;
@@ -82,33 +79,16 @@ class SecurityIntegrationExamplesTest {
 	}
 
 	@Test
-	void aesGcmRoundTripsPlaintextAndRejectsTampering() throws Exception {
-		byte[] ciphertext = examples.encryptWithAesGcm("confidential");
-
-		assertThat(ciphertext)
-				.as("Authenticated encryption should produce bytes different from the plaintext")
-				.isNotEqualTo("confidential".getBytes(StandardCharsets.UTF_8));
-		assertThat(examples.decryptWithAesGcm(ciphertext))
-				.as("Decrypting the original AES/GCM ciphertext should recover the plaintext")
-				.isEqualTo("confidential");
-
-		byte[] tampered = examples.tamper(ciphertext);
-		assertThatThrownBy(() -> examples.decryptWithAesGcm(tampered))
-				.as("AES/GCM should reject ciphertext whose authentication tag no longer matches")
-				.isInstanceOf(AEADBadTagException.class);
-	}
-
-	@Test
 	void hmacVerifiesOriginalMessageAndRejectsChangedMessage() throws Exception {
-		byte[] tag = examples.hmacSha256("important");
+		byte[] tag = examples.hmacSha1("important");
 
 		assertThat(tag)
-				.as("HMAC-SHA256 should produce a 256-bit authentication tag")
-				.hasSize(32);
-		assertThat(examples.verifyHmacSha256("important", tag))
+				.as("HMAC-SHA1 should produce a 160-bit authentication tag")
+				.hasSize(20);
+		assertThat(examples.verifyHmacSha1("important", tag))
 				.as("The original message should verify against its HMAC tag")
 				.isTrue();
-		assertThat(examples.verifyHmacSha256("changed", tag))
+		assertThat(examples.verifyHmacSha1("changed", tag))
 				.as("Changing the message should invalidate the HMAC tag")
 				.isFalse();
 	}

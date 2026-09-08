@@ -10,6 +10,14 @@ The original JVM invocation instructions were designed mainly for statically typ
 
 Dynamic language implementations on the JVM had to fit dynamic dispatch into bytecode instructions that expected more static target information. That made dynamic languages harder to implement efficiently.
 
+The traditional instructions were designed around Java's known method and
+receiver relationships. A dynamic language may decide the target only at
+runtime based on the value, type, or call-site state, so it needs a runtime
+linkage point rather than a fully predetermined method reference.
+
+`invokedynamic` provides that linkage point. The JVM asks a bootstrap method to
+choose a target, then can reuse the linked target until the call site changes.
+
 ## 2. What Did Java Introduce?
 
 Java 7 introduced:
@@ -49,12 +57,11 @@ An object representing the target associated with a dynamic call site.
 
 ## 4. What Does The Example Show?
 
-The executable example has two parts:
-
-- it builds `ConstantCallSite` and `MutableCallSite` examples with `MethodHandle`, `MethodType`, and `dynamicInvoker()`
-- it compiles a tiny lambda source file and runs `javap -c -v` so learners can see `invokedynamic`, `BootstrapMethods`, and `LambdaMetafactory` in real bytecode
-
-The lambda source uses Java syntax added later, but that is intentional: Java 7 introduced the bytecode and linkage machinery, while later Java features used that machinery.
+The executable example builds `ConstantCallSite` and `MutableCallSite`
+examples with `MethodHandle`, `MethodType`, and `dynamicInvoker()`. These are
+Java 7-era APIs and directly demonstrate the linkage machinery without using
+later lambda syntax or APIs. Later Java features such as lambdas can use
+`invokedynamic`, but that later source is outside this Java 7 example.
 
 ## 5. Remember This
 
