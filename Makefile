@@ -34,30 +34,30 @@ check-java-27:
 
 java-version: check-java-27
 	$(JAVA_CMD) --version
-	mvn --version
+	././mvnww --version
 
 test: check-java-27
-	mvn test
+	./mvnw test
 
 clean-test: check-java-27
-	mvn clean test
+	./mvnw clean test
 
 demos: check-java-27
-	mvn "-Dtest=SimpleStaticFileServerTest" test
-	mvn "-Dtest=JavaDocSnippetExamplesTest" test
-	mvn "-Dtest=KeyEncapsulationExchangeTest" test
-	mvn "-Dtest=ForeignFunctionExamplesTest" test
-	mvn "-Dtest=StreamGatherersExamplesTest" test
-	mvn "-Dtest=ClassFileInspectorTest" test
-	mvn "-Dtest=ModuleLatticeCryptoExamplesTest" test
-	mvn "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
-	mvn "-Dtest=HkdfKeyDerivationExampleTest" test
+	./mvnw "-Dtest=SimpleStaticFileServerTest" test
+	./mvnw "-Dtest=JavaDocSnippetExamplesTest" test
+	./mvnw "-Dtest=KeyEncapsulationExchangeTest" test
+	./mvnw "-Dtest=ForeignFunctionExamplesTest" test
+	./mvnw "-Dtest=StreamGatherersExamplesTest" test
+	./mvnw "-Dtest=ClassFileInspectorTest" test
+	./mvnw "-Dtest=ModuleLatticeCryptoExamplesTest" test
+	./mvnw "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
+	./mvnw "-Dtest=HkdfKeyDerivationExampleTest" test
 
 run: check-java-27
-	mvn spring-boot:run
+	./mvnw spring-boot:run
 
 docs: check-java-27
-	mvn javadoc:javadoc
+	./mvnw javadoc:javadoc
 
 clean-docs:
 	rm -rf target/site/apidocs
