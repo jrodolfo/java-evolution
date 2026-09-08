@@ -35,7 +35,10 @@ Java developers often used `ThreadLocal`.
 
 A `ThreadLocal` stores a value associated with the current thread. Code later on that same thread can read the value without receiving it as a method parameter.
 
-That solves the parameter-noise problem, but it introduces another problem: the context becomes mutable state attached to a thread.
+That solves the parameter-noise problem, but it introduces another problem:
+the thread-local association can be changed over the thread's lifetime. The
+referenced object may itself be immutable or mutable; the concern here is that
+code can replace or remove the association.
 
 The risks include:
 
@@ -43,24 +46,29 @@ The risks include:
 - forgetting cleanup can leave stale values behind
 - reused threads can accidentally carry old context
 - it can be hard to see where the value was originally set
-- child-thread behavior can be surprising
+- context does not automatically follow logical work when that work moves to
+  another thread; inheritance is a separate behavior that must be arranged
+  explicitly
 
 The issue is not that `ThreadLocal` is useless. The issue is that contextual data often needs a clearer lifetime than "whatever is currently associated with this thread."
 
 ## What Did Java 20 Introduce?
 
-Java 20 introduced Scoped Values as an incubating API.
+Java 20 introduced Scoped Values as an incubating API that provided an
+alternative for many contextual-data uses of `ThreadLocal`.
 
 The idea was:
 
 ```text
-bind immutable contextual data
+bind contextual data for a bounded scope
 run an operation
 make the value available to code called during that operation
 remove the binding when the operation finishes
 ```
 
-That gives the context a bounded lifetime.
+That gives the binding a bounded lifetime. The referenced object is not made
+deeply immutable by the binding, and code does not manage it through
+`ThreadLocal`-style `set` and `remove` calls.
 
 ## Important Terminology
 
@@ -160,4 +168,6 @@ Scoped Values become useful when contextual data must cross a deeper call chain 
 
 ## Remember This
 
-Java 20 introduced Scoped Values as an incubating attempt to replace many fragile `ThreadLocal` context patterns with immutable context that has a clear lifetime.
+Java 20 introduced Scoped Values as an incubating attempt to provide an
+alternative for many fragile `ThreadLocal` context patterns, with a binding
+that has a clear lifetime.

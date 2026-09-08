@@ -1,6 +1,8 @@
 # Structured Concurrency Preview
 
-Java 21 introduced Structured Concurrency as a first preview feature in Java Enhancement Proposal (JEP) 453.
+Java 19 introduced Structured Concurrency as a first incubator, Java 20
+continued it as a second incubator, and Java 21 continued it as a first
+preview feature in Java Enhancement Proposal (JEP) 453.
 
 This module is explanatory because the Java 21 API was still preview. The later Java 25 module contains the fuller learning material for the current preview workflow.
 

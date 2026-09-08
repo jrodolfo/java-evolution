@@ -2,11 +2,6 @@
 
 Java 17 strongly encapsulated JDK internals through JEP 403.
 
-This is an executable child-JVM module. The example deliberately attempts deep
-reflection into a JDK class from an isolated child process, then compares the
-result with targeted migration flags. That keeps the Maven test JVM clean while
-showing the real runtime behavior.
-
 ## The problem
 
 The JDK contains implementation code that supports the public Java platform.
@@ -33,6 +28,12 @@ application breaks when the JDK implementation changes
 Internal APIs were never promised to remain stable. Depending on them made
 upgrades harder for application developers and forced the JDK to preserve
 implementation details for code that was never supposed to use them.
+
+Normal reflection lets code inspect classes, methods, constructors, and fields
+at runtime. **Deep reflection** goes further: it attempts to access members,
+such as private fields or methods, that ordinary Java access rules would
+normally prevent. Across module boundaries, strong encapsulation restricts
+that access so that non-public implementation details remain protected.
 
 ## What Java modules protect
 
@@ -148,6 +149,11 @@ A practical migration process is:
    compatibility measures.
 
 ## What The Example Shows
+
+This is an executable child-JVM module. The example deliberately attempts deep
+reflection into a JDK class from an isolated child process, then compares the
+result with targeted migration flags. That keeps the Maven test JVM clean while
+showing the real runtime behavior.
 
 The executable example launches a small Java source file in a child JVM. The
 probe inspects `String.class.getDeclaredFields()` and calls

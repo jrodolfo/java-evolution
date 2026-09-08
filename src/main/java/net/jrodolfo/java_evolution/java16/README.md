@@ -20,8 +20,10 @@ or may not recognize a form that can use the processor's vector instructions.
 
 Java 16 introduced the Vector API as an incubator API through
 [JEP 338](https://openjdk.org/jeps/338). It gave Java code a more direct way to
-describe lane-wise operations, such as adding corresponding values from two
-groups of numbers. The API lived in the `jdk.incubator.vector` module and was
+describe operations over **lanes**, where each lane is one value in a vector
+group. A scalar calculation handles one value at a time; a vector calculation
+can add corresponding values in several lanes together. The API lived in the
+`jdk.incubator.vector` module and was
 intentionally expected to change as the design gathered feedback.
 
 This repository explains later points in that evolution in the [Java 20 Vector
@@ -35,6 +37,12 @@ outside the Java heap. Before these APIs, common choices included the Java
 Native Interface (JNI), direct buffers, or unsafe implementation-specific
 APIs. Those choices can require native glue code or make memory lifetime and
 access rules harder to express safely.
+
+JNI commonly requires Java declarations plus C or C++ glue code that converts
+arguments, calls the native function, and converts results back. Native memory
+is also outside the ordinary Java heap model, so mistakes such as an invalid
+address, an incorrect size, or using memory after its lifetime ends are harder
+to detect and reason about.
 
 Java 16 explored these needs through two related but separate incubator APIs:
 
@@ -51,16 +59,20 @@ for the final API.
 
 ## Records Final
 
-Before records, simple immutable data carriers required a lot of mechanical code: fields, constructors, accessors, `equals`, `hashCode`, and `toString`.
+Before records, simple data carriers required a lot of mechanical code: fields, constructors, accessors, `equals`, `hashCode`, and `toString`.
 
-Records solve that by letting the developer declare the state and letting the compiler generate the standard value-based behavior:
+Records solve that by letting the developer declare the components and letting
+the compiler generate transparent component-based methods:
 
 ```java
 public record Feature(String name, int version) {
 }
 ```
 
-Records are best for transparent data carriers where the components define the value.
+Record component fields are final, but records do not provide deep immutability;
+an object referenced by a component may still be mutable. Records are concise
+transparent data carriers whose generated methods use their components for
+value-oriented comparison.
 
 Example: `RecordExamples`
 
@@ -103,6 +115,9 @@ That works, but it is verbose for the most common terminal collection operation.
 Example: `StreamToListExamples`
 
 Test: `StreamToListExamplesTest`
+
+If callers need to add or remove elements from the result, use a mutable list
+such as an `ArrayList` instead of `Stream.toList()`.
 
 ## Unix-Domain Socket Channels
 

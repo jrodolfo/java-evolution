@@ -52,7 +52,7 @@ Test: `VirtualThreadsSecondPreviewNotesTest`
 
 ## Scoped Values Incubator
 
-Thread-local variables are useful for passing contextual data, such as request IDs or security information, without threading parameters through every method. But `ThreadLocal` can be hard to reason about: values are mutable, cleanup is easy to forget, and inheritance across threads can be surprising.
+Thread-local variables are useful for passing contextual data, such as request IDs or security information, without threading parameters through every method. But `ThreadLocal` can be hard to reason about: the thread-associated binding can be changed, cleanup is easy to forget, and inheritance across threads can be surprising.
 
 Scoped values were introduced as an incubating API to provide a safer model for sharing immutable contextual data within a bounded execution scope.
 
@@ -78,7 +78,7 @@ Test: `StructuredConcurrencySecondIncubatorNotesTest`
 
 Java 20 continued the Foreign Function and Memory API as a second preview.
 
-The problem it solves is native interoperation. Java needed a supported alternative to JNI for calling native functions and accessing off-heap memory with clearer safety boundaries.
+The problem it solves is native interoperation. Java needed a supported alternative to JNI for calling native functions and accessing off-heap memory with clearer safety boundaries around memory lifetime, bounds, and access.
 
 This repository keeps the feature as notes because native interop would distract from the main goal of simple, portable examples.
 

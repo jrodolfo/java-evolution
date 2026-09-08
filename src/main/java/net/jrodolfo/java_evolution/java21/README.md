@@ -10,11 +10,28 @@ For learners, Java 21 is where many pieces of modern Java start to feel connecte
 
 Before virtual threads, server-side Java often had an uncomfortable concurrency choice.
 
-Using one platform thread per request was simple to understand, but platform threads are relatively expensive. At high concurrency, thread count could become a bottleneck.
+Using one platform thread per request was simple to understand, but platform
+threads generally correspond closely to operating-system threads. Each one
+consumes stack memory and OS scheduling resources, so very large thread counts
+can become a practical bottleneck.
 
 Using asynchronous or reactive code could scale well, but the code often became harder to read, debug, and maintain.
 
 Virtual threads solve this by making threads lightweight enough for thread-per-task code to scale much further. The point is not to make CPU-bound work faster. The point is to make blocking I/O code easier to write while still supporting high concurrency.
+
+A simple mental model is:
+
+```text
+one task
+    -> virtual thread
+        -> JVM schedules it
+            -> platform/carrier thread
+                -> operating system
+```
+
+Virtual threads are cheap enough that one per task is often appropriate. They
+generally should not be pooled merely to conserve threads in the way platform
+threads historically were.
 
 Example: `VirtualThreadsExamples`
 
@@ -62,6 +79,10 @@ Sequenced collections solve this by adding common abstractions for encounter ord
 - `SequencedSet`
 - `SequencedMap`
 
+The common API feels like a shared vocabulary for ordered collections:
+`getFirst()` reads the first element, `getLast()` reads the last element, and
+`reversed()` provides a view in reverse encounter order.
+
 Example: `SequencedCollectionsExamples`
 
 Test: `SequencedCollectionsExamplesTest`
@@ -80,9 +101,12 @@ Test: `UnnamedPatternsVariablesPreviewExamplesTest`
 
 ## Scoped Values Preview
 
-Thread-local variables are often used to pass contextual information, such as a request ID, through a call chain. The problem is that `ThreadLocal` values are mutable and can be difficult to clean up correctly, especially with many tasks and threads.
+Thread-local variables are often used to pass contextual information, such as a request ID, through a call chain. The problem is that the thread-local association can be changed and can be difficult to clean up correctly, especially with many tasks and threads. The object stored there may be immutable; the concern is the mutable association managed through operations such as `set` and `remove`.
 
-Scoped values provide a safer model for immutable contextual data bound to a limited execution scope.
+Scoped values provide an alternative for many contextual-data uses of
+`ThreadLocal`: they bind contextual data to a limited execution scope and
+remove the binding when that scope ends. They do not make a referenced object
+deeply immutable.
 
 This repository keeps the Java 21 version as an explanatory module because the API was preview and continued to evolve.
 

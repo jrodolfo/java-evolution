@@ -42,6 +42,11 @@ public sealed interface Shape permits Circle, Rectangle {
 
 This makes domain modeling clearer and prepares the language for safer exhaustive pattern matching.
 
+When the compiler knows the complete permitted hierarchy, later pattern
+matching code can be checked against all possible subtypes instead of treating
+the hierarchy as open-ended. That makes a missing case easier to detect when a
+closed domain is modeled deliberately.
+
 Example: `SealedClassesPreviewExamples`
 
 Test: `SealedClassesPreviewExamplesTest`
@@ -49,6 +54,16 @@ Test: `SealedClassesPreviewExamplesTest`
 ## Hidden Classes
 
 Frameworks and language runtimes sometimes generate classes at runtime. Before hidden classes, generated implementation classes were more visible and discoverable than they needed to be.
+
+For example, a framework may generate a tiny helper class optimized to invoke
+one method or perform one internal operation. The helper is useful to the
+framework, but it is not a reusable named type that application code should
+import or depend on.
+
+An ordinary dynamically defined class has a runtime name and participates in
+normal name-based lookup. That can expose an implementation detail more
+broadly than intended, and other code may start depending on a name that the
+framework should have been free to change.
 
 Java 15 introduced hidden classes for generated implementation details that should not be used directly by application code. They are useful for frameworks, proxies, expression engines, and dynamic language runtimes.
 

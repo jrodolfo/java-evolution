@@ -18,6 +18,12 @@ Examples include:
 
 These generated classes are usually implementation details. Application code should not find them by name, depend on them, or treat them as part of a stable API.
 
+Frameworks generate them for concrete reasons: a proxy may need a small class
+that forwards one interface, an expression engine may compile a reusable
+operation, or a runtime may specialize a method call for one call site. The
+generated class helps the framework run, but it is not intended to become an
+application-level type.
+
 Before hidden classes, generated classes were often more visible and name-addressable than they needed to be.
 
 ## 2. How Was This Commonly Done Before?
@@ -35,13 +41,27 @@ framework decides it needs an implementation class
 
 That works, but it is not always a good fit.
 
-If the generated class is only an internal implementation detail, normal class discoverability can be undesirable.
+An ordinary dynamically defined class receives a runtime name and participates
+in normal name-based lookup, such as a class loader lookup or
+`Class.forName(...)`. If the class is only an internal implementation detail,
+that makes it easier for unrelated code to discover and depend on it. The
+framework may then be forced to preserve an implementation name that was never
+intended as an API.
 
 ## 3. What Did Java Introduce?
 
 Java 15 added hidden classes.
 
 A hidden class is still a real class to the Java Virtual Machine (JVM), but it is not intended to be found through normal class-name lookup.
+
+The framework can keep the returned `Class` or method-handle reference and use
+the generated implementation directly. Ordinary application code cannot find
+that implementation through its name in the normal way.
+
+```text
+framework keeps the returned reference -> framework can use the helper
+ordinary name-based lookup          -/-> helper is not discoverable normally
+```
 
 At a high level, the workflow is:
 
