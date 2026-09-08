@@ -17,8 +17,17 @@ JavaBeans defined conventions such as no-argument constructors, getter/setter pr
 - a no-argument constructor makes the component easy for tools to create
 - `getName` and `setName` define a `name` property
 - `isActive` and `setActive` define a boolean `active` property
-- `addProjectListener` and `removeProjectListener` define an event-set convention
-- `Introspector` exposes this metadata through descriptors
+- matching `addProjectListener(ProjectListener)` and
+  `removeProjectListener(ProjectListener)` methods tell JavaBeans that the bean
+  publishes events to `ProjectListener` objects
+- an "event set" means this relationship between an event source and its
+  listener type; it does not mean `java.util.Set`
+- `Introspector` examines JavaBeans naming conventions and returns `BeanInfo`
+- `BeanInfo` exposes the information through descriptors such as
+  `PropertyDescriptor`, `MethodDescriptor`, and `EventSetDescriptor`
+
+A descriptor is simply an object that describes one part of a bean, such as a
+property, method, or event set.
 
 The point is not the amount of code in the bean. The point is that tools can discover properties and events without each component implementing a custom metadata API.
 
