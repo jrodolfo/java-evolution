@@ -1,6 +1,11 @@
 # Legacy Integration
 
-J2SE 1.3 belongs to an era where desktop applets, plugins, RMI/IIOP, CORBA, and enterprise integration APIs were prominent.
+J2SE 1.3 belongs to an era where Java was being positioned as both a desktop
+and distributed enterprise platform. Applets and browser plugins brought Java
+into client environments, while RMI/IIOP and CORBA addressed communication and
+interoperability between remote object systems. Enterprise integration APIs
+were significant because applications were increasingly expected to connect
+business systems rather than run in isolation.
 
 ## 1. What Problem Does This Feature Area Solve?
 

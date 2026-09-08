@@ -8,7 +8,12 @@ Tools needed a standard way to discover component properties, events, and custom
 
 ## 2. What Did Java Introduce?
 
-JavaBeans defined conventions such as no-argument constructors, getter/setter property names, event listener patterns, and introspection.
+JavaBeans defined conventions such as convenient construction by tools,
+getter/setter property names, event listener patterns, and introspection. A
+no-argument constructor is a common convention because a tool can create a
+bean without first knowing application-specific constructor arguments, but it
+should not be read as a claim that every JavaBean is formally defined only by
+having such a constructor.
 
 ## 3. What Does The Example Show?
 

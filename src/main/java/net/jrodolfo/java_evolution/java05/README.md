@@ -94,6 +94,11 @@ Before Java 5, source-level metadata often lived in naming conventions, marker i
 
 Annotations let metadata live directly on declarations. Tools and frameworks can inspect that metadata at compile time or runtime, depending on the annotation retention policy.
 
+Retention describes how long the annotation remains available: source
+retention is discarded by the compiler, class retention is stored in the class
+file, and runtime retention remains available to reflection while the program
+runs.
+
 Example: `AnnotationExamples`
 
 Test: `AnnotationExamplesTest`
@@ -123,6 +128,10 @@ Test: `FormattingExamplesTest`
 Before Java 5, concurrent code often used low-level `Thread`, `wait`, `notify`, and synchronized blocks directly. Those primitives are powerful, but they are easy to coordinate incorrectly.
 
 Java 5 added `java.util.concurrent`, including executors, futures, latches, locks, atomic variables, and thread-safe collections.
+
+These utilities reduce coordination mistakes such as waiting on the wrong
+condition, forgetting to signal another thread, or implementing a race-prone
+shutdown protocol by hand.
 
 Example: `ConcurrencyUtilitiesExamples`
 

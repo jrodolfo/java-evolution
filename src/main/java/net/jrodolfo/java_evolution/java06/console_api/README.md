@@ -33,6 +33,11 @@ The API provides:
 
 The tests use a fake console session for line input, formatted output, and password handling. That keeps the example deterministic while still teaching the shape of the Java 6 API.
 
+Passwords are commonly read into a `char[]` rather than a `String` because a
+`String` is immutable and its contents cannot be explicitly overwritten. A
+character array can be cleared after use, although clearing it does not by
+itself guarantee that no other copy or observation of the password exists.
+
 ## 4. Remember This
 
 Always check whether `System.console()` returned `null`. Use `readPassword(...)` for secrets when a real console is available, and clear the returned `char[]` after use.

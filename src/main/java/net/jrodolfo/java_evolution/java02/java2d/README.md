@@ -10,6 +10,12 @@ Applications needed richer drawing, text, image, shape, color, and rendering con
 
 Java 2D added APIs around `Graphics2D`, shapes, strokes, paints, transforms, images, and rendering hints.
 
+The important difference from basic AWT drawing is configurability. Instead of
+only asking to draw a primitive, code can choose a shape, stroke width, paint,
+coordinate transform, and rendering behavior. `Graphics2D` therefore provides
+a mental model of a configurable drawing operation rather than a small list of
+fixed drawing commands.
+
 ## 3. What Does The Example Show?
 
 `Java2DExamples` renders into `BufferedImage` instances instead of opening GUI windows. This keeps the example portable in Maven and CI while still showing real rendering behavior:

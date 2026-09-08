@@ -20,6 +20,20 @@ Java 6 brought more web-service support into Java SE, including APIs around:
 - streaming XML processing
 - XML digital signatures
 
+XML binding maps XML elements and attributes to Java objects and back again.
+SOAP and JAX-WS-style web services use XML messages and service contracts so a
+Java client can call operations exposed by a remote service. Streaming XML
+APIs process a document as it is read, which can avoid holding the entire
+document in memory.
+
+The historical progression was:
+
+```text
+before Java 6 -> separate web-service/XML stacks or Java EE environments
+Java 6        -> important APIs included in the Java SE distribution
+modern Java   -> several of those APIs are no longer bundled and are explicit dependencies
+```
+
 ## 3. Why This Repository Uses Notes
 
 Modern JDKs removed several Java EE and CORBA-related modules that older code once received from the JDK.

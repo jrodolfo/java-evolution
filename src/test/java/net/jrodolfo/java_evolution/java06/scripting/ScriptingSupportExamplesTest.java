@@ -2,7 +2,7 @@ package net.jrodolfo.java_evolution.java06.scripting;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.nio.file.Path;
+import java.io.File;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -33,7 +33,7 @@ class ScriptingSupportExamplesTest {
 	}
 
 	@Test
-	void childJvmDiscoversScriptEngineFactoryThroughServiceProviderFile(@TempDir Path workspace) throws Exception {
+	void childJvmDiscoversScriptEngineFactoryThroughServiceProviderFile(@TempDir File workspace) throws Exception {
 		ScriptingSupportExamples.CommandResult result = examples.runServiceProviderProbe(workspace);
 
 		assertThat(result.exitCode())

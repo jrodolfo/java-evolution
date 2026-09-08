@@ -19,7 +19,6 @@ import java.security.ProtectionDomain;
  * Security Manager based enforcement is deprecated and disabled in modern Java.
  * </p>
  */
-@SuppressWarnings("removal")
 public class SecurityPolicyExamples {
 
 	private static final String CODE_SOURCE_LOCATION = "file:/trusted/app/";
@@ -31,7 +30,6 @@ public class SecurityPolicyExamples {
 	 * @return a code source for a trusted application location
 	 * @throws MalformedURLException if the synthetic URI cannot be converted to a URL
 	 */
-	@SuppressWarnings("deprecation")
 	public CodeSource trustedCodeSource() throws MalformedURLException {
 		return new CodeSource(new URL(CODE_SOURCE_LOCATION), (java.security.cert.Certificate[]) null);
 	}

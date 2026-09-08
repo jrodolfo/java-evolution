@@ -4,7 +4,20 @@ Java 2 added the `strictfp` modifier.
 
 ## 1. What Problem Does This Feature Solve?
 
-Floating-point calculations could vary across processors when intermediate values used wider precision. Java 2 allowed some non-strict behavior by default for performance on then-current hardware.
+Floating-point calculations could vary across processors when intermediate
+values used wider precision. The same source calculation could therefore take
+this conceptual path:
+
+```text
+same source calculation
+    -> different intermediate precision or rounding behavior
+        -> small differences in the final result
+```
+
+Java 2 allowed some non-strict behavior by default for performance on
+then-current hardware. `strictfp` was intended to constrain those intermediate
+results and rounding steps so the calculation followed the same floating-point
+semantics across processors.
 
 ## 2. What Did Java Introduce?
 

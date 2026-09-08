@@ -1,6 +1,5 @@
 package net.jrodolfo.java_evolution.java04.security;
 
-import java.nio.charset.StandardCharsets;
 import java.security.GeneralSecurityException;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -10,14 +9,12 @@ import java.security.SecureRandom;
 import java.security.Security;
 import java.security.Signature;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Enumeration;
 import java.util.List;
 
-import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.Mac;
 import javax.crypto.SecretKey;
-import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
@@ -30,28 +27,9 @@ import javax.crypto.spec.SecretKeySpec;
  * portable, and do not require sockets, login configuration, credentials, or
  * external services.
  * </p>
- * <p>
- * The example uses later platform APIs such as AES-GCM, SHA-256,
- * {@link GCMParameterSpec}, {@link Provider.Service},
- * {@link Arrays#copyOf(byte[], int)}, and {@link StandardCharsets#UTF_8}
- * intentionally. These choices keep the demonstration aligned with modern
- * cryptographic security practice on the current JDK, while the surrounding
- * package explains the Java 4-era integration of security APIs.
- * </p>
  */
 public class SecurityIntegrationExamples {
 
-	private static final byte[] AES_KEY_BYTES = new byte[] {
-			0x00, 0x01, 0x02, 0x03,
-			0x04, 0x05, 0x06, 0x07,
-			0x08, 0x09, 0x0a, 0x0b,
-			0x0c, 0x0d, 0x0e, 0x0f
-	};
-	private static final byte[] GCM_IV = new byte[] {
-			0x10, 0x11, 0x12, 0x13,
-			0x14, 0x15, 0x16, 0x17,
-			0x18, 0x19, 0x1a, 0x1b
-	};
 	private static final byte[] HMAC_KEY_BYTES = new byte[] {
 			0x20, 0x21, 0x22, 0x23,
 			0x24, 0x25, 0x26, 0x27,
@@ -65,16 +43,19 @@ public class SecurityIntegrationExamples {
 	 * @param algorithm algorithm to find, such as {@code SHA-256}
 	 * @return provider/service summaries
 	 */
-	public List<ProviderServiceSummary> providerServicesFor(String algorithm) {
-		List<ProviderServiceSummary> services = new ArrayList<ProviderServiceSummary>();
+	public List providerServicesFor(String algorithm) {
+		List services = new ArrayList();
 		Provider[] providers = Security.getProviders();
-		for (Provider provider : providers) {
-			for (Provider.Service service : provider.getServices()) {
-				if (service.getAlgorithm().equalsIgnoreCase(algorithm)) {
+		for (int providerIndex = 0; providerIndex < providers.length; providerIndex++) {
+			Provider provider = providers[providerIndex];
+			Enumeration keys = provider.keys();
+			while (keys.hasMoreElements()) {
+				String key = String.valueOf(keys.nextElement());
+				int separator = key.indexOf('.');
+				if (separator > 0 && key.substring(0, separator).equals("MessageDigest")
+						&& key.substring(separator + 1).equalsIgnoreCase(algorithm)) {
 					services.add(new ProviderServiceSummary(
-							provider.getName(),
-							service.getType(),
-							service.getAlgorithm()));
+							provider.getName(), "MessageDigest", algorithm));
 				}
 			}
 		}
@@ -90,7 +71,7 @@ public class SecurityIntegrationExamples {
 	 */
 	public byte[] sha256Digest(String text) throws GeneralSecurityException {
 		MessageDigest digest = MessageDigest.getInstance("SHA-256");
-		return digest.digest(text.getBytes(StandardCharsets.UTF_8));
+		return digest.digest(text.getBytes());
 	}
 
 	/**
@@ -118,61 +99,28 @@ public class SecurityIntegrationExamples {
 	}
 
 	/**
-	 * Encrypts text with AES/GCM.
-	 *
-	 * <p>
-	 * This example uses a fixed key and initialization vector so tests can focus
-	 * on API behavior. Production code must use a fresh, unique GCM IV for each
-	 * encryption with the same key.
-	 * </p>
-	 *
-	 * @param plaintext text to encrypt
-	 * @return ciphertext plus authentication tag
-	 * @throws GeneralSecurityException when encryption fails
-	 */
-	public byte[] encryptWithAesGcm(String plaintext) throws GeneralSecurityException {
-		Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
-		cipher.init(Cipher.ENCRYPT_MODE, fixedAesKey(), fixedGcmParameters());
-		return cipher.doFinal(plaintext.getBytes(StandardCharsets.UTF_8));
-	}
-
-	/**
-	 * Decrypts bytes produced by {@link #encryptWithAesGcm(String)}.
-	 *
-	 * @param ciphertext ciphertext plus authentication tag
-	 * @return decrypted text
-	 * @throws GeneralSecurityException when authentication or decryption fails
-	 */
-	public String decryptWithAesGcm(byte[] ciphertext) throws GeneralSecurityException {
-		Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
-		cipher.init(Cipher.DECRYPT_MODE, fixedAesKey(), fixedGcmParameters());
-		byte[] plaintext = cipher.doFinal(ciphertext);
-		return new String(plaintext, StandardCharsets.UTF_8);
-	}
-
-	/**
-	 * Computes an HMAC-SHA256 tag.
+	 * Computes an HMAC-SHA1 tag for this historical provider example.
 	 *
 	 * @param message message to authenticate
 	 * @return authentication tag
-	 * @throws GeneralSecurityException when HMAC-SHA256 is unavailable
+	 * @throws GeneralSecurityException when HMAC-SHA1 is unavailable
 	 */
-	public byte[] hmacSha256(String message) throws GeneralSecurityException {
-		Mac mac = Mac.getInstance("HmacSHA256");
-		mac.init(new SecretKeySpec(HMAC_KEY_BYTES, "HmacSHA256"));
-		return mac.doFinal(message.getBytes(StandardCharsets.UTF_8));
+	public byte[] hmacSha1(String message) throws GeneralSecurityException {
+		Mac mac = Mac.getInstance("HmacSHA1");
+		mac.init(new SecretKeySpec(HMAC_KEY_BYTES, "HmacSHA1"));
+		return mac.doFinal(message.getBytes());
 	}
 
 	/**
-	 * Verifies an HMAC-SHA256 tag using constant-time comparison.
+	 * Verifies an HMAC-SHA1 tag using constant-time comparison.
 	 *
 	 * @param message authenticated message
 	 * @param expectedTag expected authentication tag
 	 * @return whether the tag matches the message
-	 * @throws GeneralSecurityException when HMAC-SHA256 is unavailable
+	 * @throws GeneralSecurityException when HMAC-SHA1 is unavailable
 	 */
-	public boolean verifyHmacSha256(String message, byte[] expectedTag) throws GeneralSecurityException {
-		byte[] actualTag = hmacSha256(message);
+	public boolean verifyHmacSha1(String message, byte[] expectedTag) throws GeneralSecurityException {
+		byte[] actualTag = hmacSha1(message);
 		return MessageDigest.isEqual(actualTag, expectedTag);
 	}
 
@@ -199,7 +147,7 @@ public class SecurityIntegrationExamples {
 	public byte[] signWithRsa(String message, KeyPair keyPair) throws GeneralSecurityException {
 		Signature signature = Signature.getInstance("SHA256withRSA");
 		signature.initSign(keyPair.getPrivate());
-		signature.update(message.getBytes(StandardCharsets.UTF_8));
+		signature.update(message.getBytes());
 		return signature.sign();
 	}
 
@@ -216,28 +164,8 @@ public class SecurityIntegrationExamples {
 			throws GeneralSecurityException {
 		Signature signature = Signature.getInstance("SHA256withRSA");
 		signature.initVerify(keyPair.getPublic());
-		signature.update(message.getBytes(StandardCharsets.UTF_8));
+		signature.update(message.getBytes());
 		return signature.verify(signed);
-	}
-
-	/**
-	 * Creates a copy with one byte changed.
-	 *
-	 * @param bytes source bytes
-	 * @return tampered copy
-	 */
-	public byte[] tamper(byte[] bytes) {
-		byte[] copy = Arrays.copyOf(bytes, bytes.length);
-		copy[copy.length - 1] = (byte) (copy[copy.length - 1] ^ 0x01);
-		return copy;
-	}
-
-	private SecretKey fixedAesKey() {
-		return new SecretKeySpec(AES_KEY_BYTES, "AES");
-	}
-
-	private GCMParameterSpec fixedGcmParameters() {
-		return new GCMParameterSpec(128, GCM_IV);
 	}
 
 	/**

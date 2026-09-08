@@ -46,7 +46,7 @@ public class JavaBeansExamples {
 	 * @return property type
 	 * @throws IntrospectionException when bean metadata cannot be read
 	 */
-	public Class<?> propertyType(String propertyName) throws IntrospectionException {
+	public Class propertyType(String propertyName) throws IntrospectionException {
 		return property(propertyName).getPropertyType();
 	}
 
@@ -67,9 +67,9 @@ public class JavaBeansExamples {
 
 	private PropertyDescriptor property(String propertyName) throws IntrospectionException {
 		PropertyDescriptor[] descriptors = beanInfo().getPropertyDescriptors();
-		for (PropertyDescriptor descriptor : descriptors) {
-			if (descriptor.getName().equals(propertyName)) {
-				return descriptor;
+		for (int index = 0; index < descriptors.length; index++) {
+			if (descriptors[index].getName().equals(propertyName)) {
+				return descriptors[index];
 			}
 		}
 		throw new IntrospectionException("Unknown property: " + propertyName);

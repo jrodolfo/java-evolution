@@ -4,13 +4,25 @@ Java 2 made Swing part of the standard platform.
 
 ## 1. What Problem Does This Feature Solve?
 
-AWT provided GUI components, but they were closely tied to native peers. Swing offered a richer, more portable set of lightweight components.
+AWT provided GUI components, but many AWT components used a **native peer**: a
+platform-specific operating-system widget created to represent the Java
+component. That could make behavior and appearance depend on the host system.
+Swing offered a richer set of **lightweight components**, which draw themselves
+in Java instead of requiring a separate native widget for each component. This
+improves portability and gives Swing's look-and-feel system more control over
+appearance.
 
 ## 2. What Did Java Introduce?
 
 Swing provided components such as `JFrame`, `JPanel`, `JButton`, `JTable`, and the pluggable look-and-feel model.
 
-Swing also made model/action/event concepts central to desktop UI code:
+Swing also made model/action/event concepts central to desktop UI code. UI
+updates and event handling are coordinated through the **Event Dispatch Thread
+(EDT)**, the thread responsible for processing Swing events and changing Swing
+components. Keeping that work on one event thread avoids competing updates to
+the same UI state and makes event ordering predictable.
+
+The main concepts are:
 
 - models hold component data
 - actions describe reusable user commands

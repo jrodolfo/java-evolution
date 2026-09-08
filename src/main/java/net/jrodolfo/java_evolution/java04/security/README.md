@@ -3,9 +3,9 @@
 J2SE 1.4 integrated important security APIs into the standard platform.
 
 This is an executable local-security example. It demonstrates the provider
-model, message digests, secure random bytes, AES/GCM encryption, HMAC
-authentication, and RSA signatures using modern algorithms available on the
-JDK 26 baseline.
+model, message digests, secure random bytes, key generation, HMAC
+authentication, and RSA signatures using APIs that belong to the Java 4-era
+JCA/JCE platform.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -29,13 +29,17 @@ portable and deterministic:
 - provider and service discovery through `java.security.Security`
 - SHA-256 message digests
 - `SecureRandom` byte generation
-- AES/GCM authenticated encryption and tamper rejection
-- HMAC-SHA256 message authentication
+- AES key generation through the JCE provider model
+- HMAC-SHA1 message authentication, retained here only as a historical
+  Java 4-era provider capability; modern systems should follow current
+  cryptographic guidance
 - SHA256withRSA signing and verification
 
-It intentionally does not open TLS sockets or configure JAAS login modules.
-Those topics require environment-specific setup and would distract from the
-core Java 4 lesson: security APIs became standard platform facilities.
+It intentionally does not open TLS sockets, configure JAAS login modules, or
+teach a historical cipher mode as modern application guidance. Modern
+authenticated-encryption choices belong in current security guidance; the
+Java 4 lesson here is that the security APIs and provider model became standard
+platform facilities.
 
 ## 4. Remember This
 

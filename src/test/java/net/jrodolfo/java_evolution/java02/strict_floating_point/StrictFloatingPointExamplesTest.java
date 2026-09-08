@@ -2,7 +2,7 @@ package net.jrodolfo.java_evolution.java02.strict_floating_point;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.nio.file.Path;
+import java.io.File;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -47,7 +47,7 @@ class StrictFloatingPointExamplesTest {
 	}
 
 	@Test
-	void compilingStrictfpOnJdk26ShowsThatJava17RestoredAlwaysStrictSemantics(@TempDir Path workspace)
+	void compilingStrictfpOnJdk26ShowsThatJava17RestoredAlwaysStrictSemantics(@TempDir File workspace)
 			throws Exception {
 		StrictFloatingPointExamples.CompilationResult result = examples.compileStrictfpProbe(workspace);
 

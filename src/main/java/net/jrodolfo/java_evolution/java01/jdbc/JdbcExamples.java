@@ -1,242 +1,134 @@
 package net.jrodolfo.java_evolution.java01.jdbc;
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.DriverPropertyInfo;
 import java.sql.SQLException;
-import java.sql.SQLFeatureNotSupportedException;
-import java.util.Enumeration;
-import java.util.Properties;
-import java.util.logging.Logger;
 
 /**
- * Demonstrates the JDBC driver boundary introduced in Java 1.1.
+ * Demonstrates the JDBC 1.1 driver-dispatch model introduced in Java 1.1.
  *
- * <p>
- * JDBC is normally used with a real database driver and a real database. This
- * example deliberately stays at the service-provider boundary: it registers a
- * tiny learning driver, lets {@link DriverManager} route a JDBC URL to that
- * driver, and exposes connection metadata. It is not a SQL engine.
- * </p>
- * <p>
- * The small provider uses {@link Proxy} as an intentional modern-JDK
- * compatibility adapter. Dynamic proxies were added after JDBC 1.1, but they
- * avoid filling this historical driver example with dozens of boilerplate
- * methods required by today's expanded {@link Connection} and
- * {@link DatabaseMetaData} interfaces.
- * </p>
+ * <p>Modern JDKs have expanded the original JDBC interfaces with many later
+ * methods. Rather than introduce later APIs or a dynamic-proxy compatibility
+ * layer into this Java 1.1 example, this class uses small local types that
+ * model the original roles: a driver manager selects a driver by URL, and the
+ * selected driver creates a connection.</p>
  */
 public class JdbcExamples {
 
-	private static final String DRIVER_NAME = "java-evolution learning jdbc driver";
-	private static final String DRIVER_VERSION = "1.1-learning";
-	private static final String DATABASE_NAME = "learning-database";
-	private static final String DATABASE_VERSION = "in-memory metadata only";
+	private final LearningDriverManager driverManager = new LearningDriverManager();
 
-	/**
-	 * Registers a driver that accepts URLs beginning with the supplied prefix.
-	 *
-	 * @param urlPrefix accepted JDBC URL prefix, such as {@code jdbc:learning:}
-	 * @return the registered driver, which should be deregistered after use
-	 * @throws SQLException when driver registration fails
-	 */
-	public Driver registerLearningDriver(String urlPrefix) throws SQLException {
-		Driver driver = new LearningDriver(urlPrefix);
-		DriverManager.registerDriver(driver);
+	/** Registers a driver that accepts URLs beginning with the supplied prefix. */
+	public LearningDriver registerLearningDriver(String urlPrefix) {
+		LearningDriver driver = new LearningDriver(urlPrefix);
+		driverManager.registerDriver(driver);
 		return driver;
 	}
 
-	/**
-	 * Removes a previously registered driver from {@link DriverManager}.
-	 *
-	 * @param driver driver to deregister
-	 * @throws SQLException when deregistration fails
-	 */
-	public void deregisterDriver(Driver driver) throws SQLException {
-		DriverManager.deregisterDriver(driver);
+	/** Removes a previously registered learning driver. */
+	public void deregisterDriver(LearningDriver driver) {
+		driverManager.deregisterDriver(driver);
 	}
 
 	/**
-	 * Opens a connection through {@link DriverManager}.
+	 * Opens a connection through the small driver-manager model.
 	 *
-	 * @param jdbcUrl JDBC URL
-	 * @return connection selected by a matching registered driver
-	 * @throws SQLException when no matching driver can open the URL
+	 * @param jdbcUrl URL requested by the application
+	 * @return connection created by the matching driver
+	 * @throws SQLException when no registered driver accepts the URL
 	 */
-	public Connection openConnection(String jdbcUrl) throws SQLException {
-		return DriverManager.getConnection(jdbcUrl);
+	public LearningConnection openConnection(String jdbcUrl) throws SQLException {
+		return driverManager.getConnection(jdbcUrl);
 	}
 
-	/**
-	 * Counts currently registered learning drivers.
-	 *
-	 * @return number of registered drivers created by this example
-	 */
+	/** @return number of registered learning drivers */
 	public int registeredLearningDriverCount() {
-		int count = 0;
-		Enumeration<Driver> drivers = DriverManager.getDrivers();
-		while (drivers.hasMoreElements()) {
-			if (drivers.nextElement() instanceof LearningDriver) {
-				count++;
+		return driverManager.countDrivers();
+	}
+
+	/** Small model of the JDBC driver-selection role. */
+	public static final class LearningDriverManager {
+		private LearningDriver driver;
+
+		public void registerDriver(LearningDriver driver) {
+			this.driver = driver;
+		}
+
+		public void deregisterDriver(LearningDriver driver) {
+			if (this.driver == driver) {
+				this.driver = null;
 			}
 		}
-		return count;
+
+		public LearningConnection getConnection(String url) throws SQLException {
+			if (driver != null && driver.acceptsURL(url)) {
+				return driver.connect(url);
+			}
+			throw new SQLException("No suitable driver for " + url);
+		}
+
+		public int countDrivers() {
+			return driver == null ? 0 : 1;
+		}
 	}
 
-	/**
-	 * Minimal JDBC driver used to demonstrate the driver registration model.
-	 */
-	public static final class LearningDriver implements Driver {
-
+	/** Minimal driver contract used by the learning model. */
+	public static final class LearningDriver {
 		private final String urlPrefix;
 
 		private LearningDriver(String urlPrefix) {
 			this.urlPrefix = urlPrefix;
 		}
 
-		@Override
-		public Connection connect(String url, Properties info) throws SQLException {
-			if (!acceptsURL(url)) {
-				return null;
-			}
-			return learningConnection(url);
-		}
-
-		@Override
 		public boolean acceptsURL(String url) {
 			return url != null && url.startsWith(urlPrefix);
 		}
 
-		@Override
-		public DriverPropertyInfo[] getPropertyInfo(String url, Properties info) {
-			return new DriverPropertyInfo[0];
-		}
-
-		@Override
-		public int getMajorVersion() {
-			return 1;
-		}
-
-		@Override
-		public int getMinorVersion() {
-			return 1;
-		}
-
-		@Override
-		public boolean jdbcCompliant() {
-			return false;
-		}
-
-		@Override
-		public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-			throw new SQLFeatureNotSupportedException("this learning driver does not use java.util.logging");
+		public LearningConnection connect(String url) throws SQLException {
+			if (!acceptsURL(url)) {
+				return null;
+			}
+			return new LearningConnection(url);
 		}
 	}
 
-	private static Connection learningConnection(String url) {
-		ConnectionHandler handler = new ConnectionHandler(url);
-		return (Connection) Proxy.newProxyInstance(
-				JdbcExamples.class.getClassLoader(),
-				new Class<?>[] { Connection.class },
-				handler);
-	}
-
-	private static DatabaseMetaData learningMetadata(String url) {
-		MetadataHandler handler = new MetadataHandler(url);
-		return (DatabaseMetaData) Proxy.newProxyInstance(
-				JdbcExamples.class.getClassLoader(),
-				new Class<?>[] { DatabaseMetaData.class },
-				handler);
-	}
-
-	private static final class ConnectionHandler implements InvocationHandler {
-
+	/** Minimal connection that exposes the selected URL and metadata. */
+	public static final class LearningConnection {
 		private final String url;
 		private boolean closed;
 
-		private ConnectionHandler(String url) {
+		private LearningConnection(String url) {
 			this.url = url;
 		}
 
-		@Override
-		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-			String name = method.getName();
-			if ("close".equals(name)) {
-				closed = true;
-				return null;
-			}
-			if ("isClosed".equals(name)) {
-				return Boolean.valueOf(closed);
-			}
-			if ("isValid".equals(name)) {
-				return Boolean.valueOf(!closed);
-			}
-			if ("getMetaData".equals(name)) {
-				return learningMetadata(url);
-			}
-			return handleObjectOrWrapperMethod(proxy, method, args);
+		public LearningDatabaseMetaData getMetaData() {
+			return new LearningDatabaseMetaData(url);
+		}
+
+		public void close() {
+			closed = true;
+		}
+
+		public boolean isClosed() {
+			return closed;
 		}
 	}
 
-	private static final class MetadataHandler implements InvocationHandler {
-
+	/** Minimal metadata returned by the learning connection. */
+	public static final class LearningDatabaseMetaData {
 		private final String url;
 
-		private MetadataHandler(String url) {
+		private LearningDatabaseMetaData(String url) {
 			this.url = url;
 		}
 
-		@Override
-		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-			String name = method.getName();
-			if ("getURL".equals(name)) {
-				return url;
-			}
-			if ("getDriverName".equals(name)) {
-				return DRIVER_NAME;
-			}
-			if ("getDriverVersion".equals(name)) {
-				return DRIVER_VERSION;
-			}
-			if ("getDriverMajorVersion".equals(name)) {
-				return Integer.valueOf(1);
-			}
-			if ("getDriverMinorVersion".equals(name)) {
-				return Integer.valueOf(1);
-			}
-			if ("getDatabaseProductName".equals(name)) {
-				return DATABASE_NAME;
-			}
-			if ("getDatabaseProductVersion".equals(name)) {
-				return DATABASE_VERSION;
-			}
-			return handleObjectOrWrapperMethod(proxy, method, args);
+		public String getURL() {
+			return url;
 		}
-	}
 
-	private static Object handleObjectOrWrapperMethod(Object proxy, Method method, Object[] args)
-			throws SQLException {
-		String name = method.getName();
-		if ("toString".equals(name)) {
-			return "JdbcExamples proxy for " + proxy.getClass().getInterfaces()[0].getSimpleName();
+		public String getDriverName() {
+			return "java-evolution learning jdbc driver";
 		}
-		if ("hashCode".equals(name)) {
-			return Integer.valueOf(System.identityHashCode(proxy));
+
+		public String getDatabaseProductName() {
+			return "learning-database";
 		}
-		if ("equals".equals(name)) {
-			return Boolean.valueOf(proxy == args[0]);
-		}
-		if ("unwrap".equals(name)) {
-			throw new SQLFeatureNotSupportedException("unwrap is not supported by this learning proxy");
-		}
-		if ("isWrapperFor".equals(name)) {
-			return Boolean.FALSE;
-		}
-		throw new SQLFeatureNotSupportedException(method.getName() + " is outside this JDBC learning example");
 	}
 }

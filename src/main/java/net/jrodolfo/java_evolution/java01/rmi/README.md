@@ -8,7 +8,14 @@ Distributed Java applications needed a standard way for one JVM to call objects 
 
 ## 2. What Did Java Introduce?
 
-RMI introduced remote interfaces, remote objects, stubs, registries, remote exceptions, and serialization-based argument passing.
+RMI introduced remote interfaces, remote objects, stubs, registries, remote
+exceptions, and serialization-based argument passing. A **registry** is a
+name-to-remote-object directory that lets a caller find a service. A **stub**
+is the local-looking proxy that forwards a call to the remote object. A
+**remote exception** reports that the call or communication failed across the
+JVM boundary. **Serialization-based argument passing** converts supported
+argument objects into a byte representation so they can be sent to the other
+JVM and reconstructed there.
 
 ## 3. What Does The Example Show?
 

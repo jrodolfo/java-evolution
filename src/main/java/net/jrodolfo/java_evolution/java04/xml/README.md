@@ -10,6 +10,15 @@ XML was a common integration format, and Java applications needed standard parsi
 
 Java 4 included standard APIs for DOM, SAX, and XSLT-style processing through JAXP.
 
+A short conceptual map is:
+
+- **DOM** parses XML into an in-memory tree that code can navigate and modify.
+- **SAX** reports parsing events while reading XML, without building the whole
+  document tree first.
+- **XSLT** transforms XML into another document or text form.
+- **JAXP** provides the standard Java APIs and factories used to work with XML
+  parsers and transformers.
+
 ## 3. What Does The Example Show?
 
 `JaxpExamples` uses trusted in-memory XML to show the core platform APIs:

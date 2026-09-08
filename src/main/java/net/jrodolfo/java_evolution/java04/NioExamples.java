@@ -42,7 +42,7 @@ public class NioExamples {
 	 */
 	public String readText(ReadableByteChannel channel) throws IOException {
 		ByteBuffer buffer = ByteBuffer.allocate(4);
-		StringBuilder text = new StringBuilder();
+		StringBuffer text = new StringBuffer();
 		int bytesRead = channel.read(buffer);
 
 		while (bytesRead != -1) {
