@@ -10,7 +10,17 @@ This package contains eight C1 executable examples and two C2 explanatory module
 
 Java 11 standardized the HTTP Client API. Java 26 extends that client with HTTP/3 support.
 
-HTTP/3 matters because it runs over QUIC rather than TCP. That changes connection setup and transport behavior while preserving the developer-facing idea of making HTTP requests through the platform client.
+HTTP/3 matters because it runs over QUIC rather than TCP. HTTP/1.1 and HTTP/2
+normally use TCP, while QUIC integrates secure connection establishment with
+its transport model. QUIC streams can also avoid TCP-level head-of-line
+blocking: packet loss affecting one stream does not block unrelated streams in
+the same way. This may reduce some connection-establishment overhead and
+improve behavior under packet loss, but it does not make HTTP/3 always faster
+or eliminate every form of head-of-line blocking.
+
+The developer-facing model remains the same: applications make HTTP requests
+through the platform client, and HTTP/2 remains a valid choice when it fits the
+server and workload.
 
 Example: `Http3ClientExamples`
 
@@ -18,7 +28,11 @@ Test: `Http3ClientExamplesTest`
 
 ## Prepare to Make Final Mean Final
 
-Java has long allowed final fields to be mutated through deep reflection. That weakens the meaning of `final`, can surprise developers, and limits JVM optimization opportunities.
+Java has long allowed final fields to be mutated through deep reflection. That
+undermines the expectation that the field's stored reference or value remains
+fixed after initialization and limits JVM optimization opportunities. A
+declaration such as `final List<String> names` keeps the field reference fixed;
+it does not make the referenced list deeply immutable.
 
 Java 26 starts the migration by warning when deep reflection mutates final fields. The goal is to prepare applications for a future release where this behavior is restricted more strongly by default.
 
@@ -48,7 +62,25 @@ Test: `AotObjectCachingExamplesTest`
 
 ## G1 GC Throughput Improvement
 
-Java 26 includes G1 work intended to improve throughput by reducing synchronization in garbage-collector internals.
+Java 26 includes G1 work intended to improve throughput by reducing
+synchronization in garbage-collector internals. Here, synchronization means
+coordination among GC worker threads when they access or update shared
+collector state; that coordination can make workers wait or perform extra
+bookkeeping. Throughput means the amount of execution capacity available for
+useful application work rather than collection and coordination overhead.
+
+The intended causal chain is:
+
+```text
+less GC-worker coordination
+    -> less synchronization overhead
+        -> potentially less time and CPU spent on coordination
+            -> potentially better overall throughput
+```
+
+The result depends on the workload and runtime conditions. A small
+deterministic unit test cannot prove a throughput improvement; that requires
+representative workloads and measurement.
 
 This is useful operational knowledge, but it is not a source-level API. It belongs in runtime notes.
 
