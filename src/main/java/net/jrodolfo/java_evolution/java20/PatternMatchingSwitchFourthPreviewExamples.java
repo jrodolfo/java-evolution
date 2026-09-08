@@ -12,8 +12,9 @@ package net.jrodolfo.java_evolution.java20;
  * </p>
  *
  * <p>
- * This class uses final JDK 26 syntax while documenting the Java 20 preview
- * origin.
+ * The guarded type-pattern syntax shown here was part of the Java 20 preview
+ * and remains faithful to that preview while the feature's later finalization
+ * is documented.
  * </p>
  */
 public class PatternMatchingSwitchFourthPreviewExamples {

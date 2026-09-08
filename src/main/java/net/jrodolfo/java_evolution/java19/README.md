@@ -4,7 +4,9 @@ Released: September 2022 as Java SE 19.
 
 Java 19 was an important preview-and-incubator release. Several features that later became central to modern Java appeared here in early form: virtual threads, structured concurrency, record patterns, pattern matching for `switch`, and the Foreign Function and Memory API.
 
-Because this project compiles on JDK 26, examples use the current compatible syntax where possible and explain the Java 19 preview origin.
+The examples retain later syntax only where the demonstrated form and meaning
+remain faithful to the Java 19 preview; otherwise the material is explanatory
+and identifies the historical form.
 
 ## Virtual Threads Preview
 

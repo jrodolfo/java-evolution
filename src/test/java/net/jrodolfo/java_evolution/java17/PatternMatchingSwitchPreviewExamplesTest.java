@@ -9,14 +9,14 @@ class PatternMatchingSwitchPreviewExamplesTest {
 	private final PatternMatchingSwitchPreviewExamples examples = new PatternMatchingSwitchPreviewExamples();
 
 	@Test
-	void switchCanUseTypePatternsAndGuards() {
+	void switchCanUseCompatibleTypePatterns() {
 		// When / Then
 		assertThat(examples.describe(null))
 				.as("Pattern matching switch can handle null explicitly")
 				.isEqualTo("null");
 		assertThat(examples.describe("   "))
-				.as("A guarded String pattern should handle blank text")
-				.isEqualTo("blank string");
+				.as("A String type pattern should bind the value")
+				.isEqualTo("string length=3");
 		assertThat(examples.describe("Java"))
 				.as("A String pattern should bind the value")
 				.isEqualTo("string length=4");

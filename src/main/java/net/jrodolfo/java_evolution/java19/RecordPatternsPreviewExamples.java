@@ -10,9 +10,9 @@ package net.jrodolfo.java_evolution.java19;
  * </p>
  *
  * <p>
- * Record patterns became final later, in Java 21. This project compiles on JDK
- * 25, so the example uses final syntax while documenting the Java 19 preview
- * origin.
+ * Record patterns became final later, in Java 21. The record-pattern form
+ * shown here remains syntactically and semantically faithful to the Java 19
+ * preview while documenting that preview origin.
  * </p>
  */
 public class RecordPatternsPreviewExamples {

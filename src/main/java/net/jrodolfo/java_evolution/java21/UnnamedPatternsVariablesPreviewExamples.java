@@ -13,7 +13,9 @@ package net.jrodolfo.java_evolution.java21;
  *
  * <p>
  * The feature became final in Java 22 as unnamed variables and patterns. This
- * project compiles on JDK 26, where the same syntax is final.
+ * The syntax shown here is also the syntax that became final in Java 22, so it
+ * remains faithful to the Java 21 preview while this class preserves the
+ * historical preview label.
  * </p>
  */
 public class UnnamedPatternsVariablesPreviewExamples {

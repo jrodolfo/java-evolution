@@ -12,9 +12,9 @@ package net.jrodolfo.java_evolution.java17;
  *
  * <p>
  * Pattern matching for switch solves this by letting a switch branch on type
- * patterns. It became final later, in Java 21. This project compiles on JDK
- * 25, so the example uses final syntax while documenting the Java 17 preview
- * origin.
+ * patterns. It became final later, in Java 21. The executable method uses only
+ * type-pattern syntax that is faithful to both the Java 17 preview and the
+ * later feature; the README documents the historical guard syntax separately.
  * </p>
  */
 public class PatternMatchingSwitchPreviewExamples {
@@ -28,7 +28,6 @@ public class PatternMatchingSwitchPreviewExamples {
 	public String describe(Object value) {
 		return switch (value) {
 			case null -> "null";
-			case String text when text.isBlank() -> "blank string";
 			case String text -> "string length=" + text.length();
 			case Integer number -> "integer doubled=" + number * 2;
 			default -> "unknown";

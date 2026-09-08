@@ -20,7 +20,8 @@ if (value instanceof Customer(String name, Address(String city, String country))
 }
 ```
 
-This repository uses the final JDK 26-compatible syntax while documenting that Java 20 was still preview territory.
+The syntax shown remains faithful to the Java 20 second preview, while this
+README documents that the feature was still preview territory at that time.
 
 Example: `RecordPatternsSecondPreviewExamples`
 
