@@ -3,7 +3,7 @@ package net.jrodolfo.java_evolution.java27.jfr_data_redaction;
 import java.io.IOException;
 import net.jrodolfo.java_evolution.java27.Java27ChildProcess;
 
-/** Probes the availability of Java 27 JFR argument-redaction options. */
+/** Probes Java 27 JFR redaction options for arguments, environment, and properties. */
 public class JfrRedactionOptionExamples {
 
 	/** Runs the JDK's documented Flight Recorder option-help probe. */
@@ -14,7 +14,7 @@ public class JfrRedactionOptionExamples {
 
 	/** Explains what this deterministic probe establishes. */
 	public String purpose() {
-		return "the JDK 27 JFR option help exposes configuration for redacting matching command-line and environment data";
+		return "the JDK 27 JFR option help exposes configuration for redacting matching command-line, environment, and system-property data";
 	}
 
 	/** States what this focused, deterministic probe does not establish. */

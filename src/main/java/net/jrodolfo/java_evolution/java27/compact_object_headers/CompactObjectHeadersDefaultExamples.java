@@ -3,7 +3,7 @@ package net.jrodolfo.java_evolution.java27.compact_object_headers;
 import java.io.IOException;
 import net.jrodolfo.java_evolution.java27.Java27ChildProcess;
 
-/** Verifies that Compact Object Headers are enabled by default in Java 27. */
+/** Verifies the Java 27 HotSpot Compact Object Headers default. */
 public class CompactObjectHeadersDefaultExamples {
 
 	/** Runs {@code PrintFlagsFinal} in a child JVM and returns its output. */

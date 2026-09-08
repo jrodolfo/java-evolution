@@ -1,10 +1,22 @@
 # Java 27
 
-Released: September 2026 as Java SE 27.
+Java 27 is scheduled for general availability in September 2026. This branch
+prepares the repository against JDK 27 pre-GA builds.
 
-Java 27 makes G1 the default collector in all environments, enables Compact
-Object Headers by default, adds post-quantum hybrid key exchange for TLS 1.3,
-and continues several preview and incubator features.
+Java 27 groups its changes into four themes:
+
+- JVM ergonomics and memory layout: G1 becomes the default collector in more
+  HotSpot environments, and Compact Object Headers are enabled by default.
+- Security: post-quantum hybrid TLS key establishment, JFR data redaction, and
+  PEM encodings.
+- Language, API, and concurrency previews: Lazy Constants, primitive patterns,
+  and Structured Concurrency.
+- Performance-oriented incubation: the Vector API continues its incubator
+  evolution.
+
+The G1 and object-header changes are HotSpot JVM behavior, not Java-language or
+Java-SE layout guarantees. The security and preview topics are described by
+their dedicated examples below.
 
 ## Executable examples
 

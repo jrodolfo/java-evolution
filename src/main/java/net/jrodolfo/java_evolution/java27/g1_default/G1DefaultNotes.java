@@ -1,11 +1,11 @@
 package net.jrodolfo.java_evolution.java27.g1_default;
 
-/** Explains the Java 27 change making G1 the default collector everywhere. */
+/** Explains the Java 27 HotSpot change making G1 the default collector broadly. */
 public class G1DefaultNotes {
 
 	/** Returns a learner-friendly summary. */
 	public String summary() {
-		return "Java 27 makes G1 the default garbage collector in all environments";
+		return "Java 27 HotSpot makes G1 the default garbage collector when no collector is selected";
 	}
 
 	/** Explains why the repository keeps this topic as notes. */
