@@ -34,7 +34,7 @@ check-java-27:
 
 java-version: check-java-27
 	$(JAVA_CMD) --version
-	././mvnww --version
+	./mvnw --version
 
 test: check-java-27
 	./mvnw test
