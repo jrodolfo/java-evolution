@@ -12,9 +12,9 @@
 
 ## Validation
 
-- [ ] `make check`
-- [ ] `make docs`
-- [ ] `make links`
+- [ ] `make check-build`
+- [ ] `make generate-docs`
+- [ ] `make check-links`
 - [ ] Not run, reason:
 
 ## Documentation Impact

@@ -14,7 +14,7 @@ Use this checklist when adding examples for a new Java release.
 - Add one focused `*Examples` class for each feature that can be demonstrated with the current project baseline and historically faithful source code.
 - Add one focused `*Notes` class for features that cannot be demonstrated cleanly in normal tests.
 - Add JavaDoc to each class and public method.
-- Generate JavaDoc with `make docs`.
+- Generate JavaDoc with `make generate-docs`.
 - Keep examples intentionally small and interview-readable.
 
 ## Tests
@@ -22,7 +22,7 @@ Use this checklist when adding examples for a new Java release.
 - Add a matching `*Test` class for every `*Examples` class.
 - Add tests for `*Notes` classes when the notes expose structured summary methods.
 - Make each test explain the expected behavior through method names, assertions, or short local comments.
-- Run `make check`.
+- Run `make check-build`.
 
 ## Documentation
 
@@ -33,11 +33,11 @@ Use this checklist when adding examples for a new Java release.
 - Add the release to `docs/status-matrix.md`.
 - Add the release or key features to `docs/learning-path.md` and `docs/demo-script.md` when they change the suggested study flow.
 - Mention preview or incubator status explicitly when a feature was not final in that release.
-- Run `make docs-check` to catch stale grouped-test names, wildcard test references, missing version READMEs, JavaDoc issues, and broken Markdown links.
+- Run `make check-docs` to catch stale grouped-test names, wildcard test references, missing version READMEs, JavaDoc issues, and broken Markdown links.
 - Confirm generated JavaDoc is readable for the new classes.
 
 ## Final Check
 
-- Confirm `make release-check` passes.
+- Confirm `make check-release` passes.
 - Confirm `git status --short` only shows intentional changes.
 - Use a lower-case commit message.

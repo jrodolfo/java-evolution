@@ -38,8 +38,8 @@ Before publishing this release, run:
 mvn -Dtest=EnhancedForLoopExamplesTest,GenericsExamplesTest,VarargsExamplesTest,LambdaExamplesTest test
 mvn "-Dtest=AnnotationExamplesTest,AutoboxingExamplesTest,ConcurrencyUtilitiesExamplesTest,CovariantReturnExamplesTest,EnhancedForLoopExamplesTest,EnumExamplesTest,FormattingExamplesTest,GenericsExamplesTest,StaticImportExamplesTest,VarargsExamplesTest,CompletableFutureExamplesTest,DateTimeApiExamplesTest,DefaultMethodExamplesTest,LambdaExamplesTest,MethodReferenceExamplesTest,OptionalExamplesTest,StreamExamplesTest" test
 mvn test
-make docs
-make links
+make generate-docs
+make check-links
 node scripts/check-doc-navigation.mjs
 git diff --check
 ```
@@ -60,7 +60,7 @@ Observed release-preparation context:
 - JavaDoc generation passed
 - documentation navigation audit passed
 - whitespace diff check passed
-- `make links` should be run locally before release publication because external link checks may fail in restricted network environments
+- `make check-links` should be run locally before release publication because external link checks may fail in restricted network environments
 
 ## Suggested GitHub Release Text
 
@@ -77,7 +77,7 @@ Highlights:
 Validation:
 - Java 5 and Java 8 focused Maven test suites
 - mvn test
-- make docs
+- make generate-docs
 - node scripts/check-doc-navigation.mjs
 - git diff --check
 ```

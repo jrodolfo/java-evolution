@@ -21,7 +21,7 @@ The repository is intended to be a didactic reference. Small examples should dem
 Before publishing this release, run:
 
 ```bash
-make release-check
+make check-release
 ```
 
 Expected result:
@@ -40,5 +40,5 @@ java-evolution v1.1.3 is a patch release focused on the Java 21 virtual-thread n
 This release fixes the example so it reuses one named virtual-thread builder and demonstrates the expected worker-1, worker-2, and worker-3 sequence. The corresponding test now verifies that sequence directly.
 
 Validation:
-- make release-check
+- make check-release
 ```

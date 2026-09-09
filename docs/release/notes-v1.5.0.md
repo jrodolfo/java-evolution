@@ -29,8 +29,8 @@ Before publishing this release, run:
 
 ```bash
 mvn test
-make docs
-make links
+make generate-docs
+make check-links
 node scripts/check-doc-navigation.mjs
 git diff --check
 ```
@@ -46,9 +46,9 @@ Expected result:
 Observed release-preparation result:
 
 - maintainer local `mvn test`: 430 tests, 0 failures, 0 errors, 1 skipped
-- restricted Codex `make test`: 430 tests, 0 failures, 0 errors, 7 skipped because local socket binding is blocked
-- `make docs`: passed
-- `make links`: passed
+- restricted Codex `make run-tests`: 430 tests, 0 failures, 0 errors, 7 skipped because local socket binding is blocked
+- `make generate-docs`: passed
+- `make check-links`: passed
 - `node scripts/check-doc-navigation.mjs`: passed
 - `git diff`: clean before release-note preparation
 
@@ -68,8 +68,8 @@ Highlights:
 
 Validation:
 - mvn test
-- make docs
-- make links
+- make generate-docs
+- make check-links
 - node scripts/check-doc-navigation.mjs
 - git diff --check
 ```

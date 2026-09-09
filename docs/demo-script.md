@@ -130,7 +130,7 @@ The feature map helps me find examples quickly, the JEP index links features to 
 Then run:
 
 ```bash
-make check
+make check-build
 ```
 
 Expected point: the whole repository is tested with JDK 27, while Java 27's platform lifecycle is still pre-GA.
@@ -160,13 +160,13 @@ The important part is not only that I read about these features. I wrote small e
 Run the full validation:
 
 ```bash
-make check
+make check-build
 ```
 
 Run the practical demo validation:
 
 ```bash
-make demos
+make run-demos
 ```
 
 Use this before a live walkthrough to verify that the hands-on demos still match your local environment.
@@ -182,7 +182,7 @@ mvn "-Dtest=ScopedValuesExamplesTest" test
 Generate JavaDoc:
 
 ```bash
-make docs
+make generate-docs
 ```
 
 Open the generated JavaDoc:

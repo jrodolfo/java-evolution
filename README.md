@@ -39,18 +39,18 @@ Use the Linux or Windows helper described in [Platform Setup](docs/platform-setu
 Run the main checks:
 
 ```bash
-make check
+make check-build
 ```
 
 Useful targets:
 
 ```bash
-make test
-make links
-make demos
-make docs
-make docs-check
-make release-check
+make run-tests
+make check-links
+make run-demos
+make generate-docs
+make check-docs
+make check-release
 ```
 
 The generated JavaDoc is written to `target/site/apidocs/index.html` and is published at the [JavaDoc site](https://jrodolfo.github.io/java-evolution/).

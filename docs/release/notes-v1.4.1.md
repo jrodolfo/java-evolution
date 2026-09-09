@@ -25,8 +25,8 @@ Before publishing this release, run:
 
 ```bash
 node scripts/check-doc-navigation.mjs
-make docs
-make links
+make generate-docs
+make check-links
 git diff --check
 ```
 
@@ -51,7 +51,7 @@ Highlights:
 
 Validation:
 - node scripts/check-doc-navigation.mjs
-- make docs
-- make links
+- make generate-docs
+- make check-links
 - git diff --check
 ```

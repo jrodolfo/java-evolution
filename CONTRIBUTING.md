@@ -35,7 +35,7 @@ Prefer names that describe the feature directly, such as `StreamExamples`, `Reco
 - Update `README.md` when adding a new Java version or major feature.
 - Update `docs/feature-map.md` with the example and test class names.
 - Link to JEPs or official documentation when a feature needs historical context.
-- Run `make docs` after adding or changing JavaDoc.
+- Run `make generate-docs` after adding or changing JavaDoc.
 
 ## Practical Demos
 
@@ -51,6 +51,6 @@ When a feature becomes a practical demo, update the curated demo path:
 Use JDK 26 and run:
 
 ```bash
-make check
-make docs
+make check-build
+make generate-docs
 ```

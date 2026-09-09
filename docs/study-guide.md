@@ -24,13 +24,13 @@ src/test/java/net/jrodolfo/java_evolution/java08/StreamExamplesTest.java
 Run the examples through tests:
 
 ```bash
-make test
+make run-tests
 ```
 
 Use JavaDoc when you want a browsable API reference:
 
 ```bash
-make docs
+make generate-docs
 ```
 
 The generated site is written to:
@@ -104,7 +104,7 @@ Use this checklist:
 3. Explain what problem each feature solved.
 4. Open each example class and read the JavaDoc.
 5. Open the matching test and read the assertion messages.
-6. Run the tests for the whole project with `make test`.
+6. Run the tests for the whole project with `make run-tests`.
 
 For a quick version review, use [feature-map.md](feature-map.md).
 

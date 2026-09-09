@@ -320,8 +320,8 @@ Interview angle: be explicit about maturity. A strong answer distinguishes final
 
 Use this checklist when preparing to show the repository:
 
-1. Run `make check`.
-2. Open the JavaDoc site or run `make docs` locally.
+1. Run `make check-build`.
+2. Open the JavaDoc site or run `make generate-docs` locally.
 3. Open [practical-demos.md](practical-demos.md) and choose one hands-on demo.
 4. Pick one Java 8 example and explain the problem it solved.
 5. Pick one Java 21 example and explain why it matters for current production Java.

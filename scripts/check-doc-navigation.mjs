@@ -58,10 +58,10 @@ function testClassesFromText(text) {
 function makeDemosTargetText() {
   const makefile = fs.readFileSync("Makefile", "utf8");
   const lines = makefile.split("\n");
-  const start = lines.findIndex((line) => line === "demos: check-java-27");
+  const start = lines.findIndex((line) => line === "run-demos: check-java-27");
 
   if (start === -1) {
-    errors.push("Makefile is missing demos target");
+    errors.push("Makefile is missing run-demos target");
     return "";
   }
 
@@ -119,13 +119,13 @@ const practicalDemoTests = testClassesFromText(fs.readFileSync("docs/practical-d
 
 for (const testClass of makeDemoTests) {
   if (!practicalDemoTests.has(testClass)) {
-    errors.push(`docs/practical-demos.md is missing make demos test class ${testClass}`);
+    errors.push(`docs/practical-demos.md is missing make run-demos test class ${testClass}`);
   }
 }
 
 for (const testClass of practicalDemoTests) {
   if (!makeDemoTests.has(testClass)) {
-    errors.push(`docs/practical-demos.md lists ${testClass}, but make demos does not run it`);
+    errors.push(`docs/practical-demos.md lists ${testClass}, but make run-demos does not run it`);
   }
 }
 

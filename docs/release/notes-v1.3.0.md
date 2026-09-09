@@ -26,7 +26,7 @@ This release keeps simple features simple and uses deeper explanatory modules on
 Before publishing this release, run:
 
 ```bash
-make release-check
+make check-release
 ```
 
 Expected result outside restricted network and socket-binding environments:
@@ -39,7 +39,7 @@ Expected result outside restricted network and socket-binding environments:
 
 Known local-environment notes from the release preparation:
 
-- `make links` can fail when external HTTP checks are blocked by firewall or sandbox rules.
+- `make check-links` can fail when external HTTP checks are blocked by firewall or sandbox rules.
 - `mvn test` can fail in restricted environments if local socket binding is denied for the Java 18 Simple Web Server tests.
 
 ## Suggested GitHub Release Text

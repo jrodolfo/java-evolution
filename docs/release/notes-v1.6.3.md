@@ -13,13 +13,13 @@
 Run the following commands before publishing:
 
 ```bash
-make java-version
+make show-versions
 make check-java-26
 mvn test
-make docs
-make links
+make generate-docs
+make check-links
 node scripts/check-doc-navigation.mjs
-make demos
+make run-demos
 git diff --check
 ```
 

@@ -269,7 +269,7 @@ Interview angle: show baseline discipline. A strong answer explains why moving t
 
 Use this lightweight checklist before discussing or planning a Java version migration:
 
-1. Confirm the target JDK and Maven versions with `make check`.
+1. Confirm the target JDK and Maven versions with `make check-build`.
 2. Identify whether the project depends on removed JDK-bundled modules or internal JDK APIs.
 3. Upgrade build plugins, frameworks, and test libraries before changing language idioms.
 4. Study the target baseline features in this guide.

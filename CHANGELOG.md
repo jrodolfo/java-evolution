@@ -74,12 +74,12 @@ Minor release focused on moving the repository build baseline from JDK 25 to JDK
 
 ### Validation
 
-- `make java-version`
+- `make show-versions`
 - `make check-java-26`
-- `make test`
-- `make docs`
-- `make docs-audit`
-- `make demos`
+- `make run-tests`
+- `make generate-docs`
+- `make audit-docs`
+- `make run-demos`
 - `git diff --check`
 
 ## v1.5.3
@@ -96,8 +96,8 @@ Patch release focused on cross-platform JDK 25 build validation.
 
 - GitHub Actions `build` workflow on Ubuntu, macOS, and Windows with Oracle JDK 25
 - Windows 11 IntelliJ Maven install
-- Windows 11 `make test`
-- Windows 11 `make links`
+- Windows 11 `make run-tests`
+- Windows 11 `make check-links`
 
 ## v1.5.2
 
@@ -116,7 +116,7 @@ Patch release focused on Java 5 and Java 8 API-design learning clarity.
 
 - Java 5 and Java 8 focused Maven test suites
 - `mvn test`
-- `make docs`
+- `make generate-docs`
 - `node scripts/check-doc-navigation.mjs`
 - `git diff --check`
 
@@ -188,8 +188,8 @@ Learning-focused release that turns many previously explanatory modules into exe
 ### Validation
 
 - `mvn test`
-- `make docs`
-- `make links`
+- `make generate-docs`
+- `make check-links`
 - `node scripts/check-doc-navigation.mjs`
 - `git diff --check`
 
@@ -208,8 +208,8 @@ Patch release focused on learning-documentation clarity after the Java 26 releas
 ### Validation
 
 - `node scripts/check-doc-navigation.mjs`
-- `make docs`
-- `make links`
+- `make generate-docs`
+- `make check-links`
 - `git diff --check`
 
 ## v1.4.0
@@ -230,8 +230,8 @@ Learning-focused release that expands the repository from Java 1-25 coverage to 
 
 - Java 26 focused Maven test suite
 - `node scripts/check-doc-navigation.mjs`
-- `make docs`
-- `make links`
+- `make generate-docs`
+- `make check-links`
 - `git diff --check`
 
 ## v1.3.1
@@ -247,15 +247,15 @@ Patch release focused on Java release chronology and documentation validation wo
 - Added release-date context to version READMEs, root README navigation, the feature index, and study/navigation docs.
 - Clarified the distinction between repository release history and Java platform release history.
 - Clarified historical naming for Java 1.3 and Java 1.4, which were marketed under the Java 2 Platform, Standard Edition brand.
-- Added `VERBOSE=-v` and `VERBOSE=-vv` pass-through support for `make links`.
+- Added `VERBOSE=-v` and `VERBOSE=-vv` pass-through support for `make check-links`.
 - Removed a blocked timeline reference link that returned HTTP 403 during Markdown link checks.
 - Cleaned up an unsupported JavaDoc tag in the Java 4 NIO example documentation.
 
 ### Validation
 
 - `node scripts/check-doc-navigation.mjs`
-- `make docs`
-- `make links`
+- `make generate-docs`
+- `make check-links`
 - `git diff --check`
 
 ## v1.3.0
@@ -282,7 +282,7 @@ Learning-focused release that expands the repository from Java 8-25 coverage to 
 - `node scripts/check-doc-navigation.mjs`
 - `mvn javadoc:javadoc`
 - `git diff --check`
-- `make links` was attempted in a restricted environment; external HTTP checks failed with network/firewall errors.
+- `make check-links` was attempted in a restricted environment; external HTTP checks failed with network/firewall errors.
 - `mvn test` was attempted in a restricted environment; existing Java 18 simple web server tests failed because local socket binding was denied.
 
 ## v1.2.0
@@ -299,10 +299,10 @@ Learning-focused release that substantially improves the Java 8 through Java 25 
 
 ### Validation
 
-- `make docs-audit`
+- `make audit-docs`
 - `mvn -B javadoc:javadoc`
 - `mvn -B test` on JDK 25 outside restricted loopback environments
-- `make release-check`
+- `make check-release`
 
 ## v1.1.3
 
@@ -315,7 +315,7 @@ Patch release focused on the Java 21 virtual-thread naming example.
 
 ### Validation
 
-- `make release-check`
+- `make check-release`
 
 ## v1.1.2
 
@@ -329,7 +329,7 @@ Patch release focused on glossary and acronym clarity for learners.
 
 ### Validation
 
-- `make release-check`
+- `make check-release`
 
 ## v1.1.1
 
@@ -343,7 +343,7 @@ Patch release focused on JavaDoc and documentation navigation clarity.
 
 ### Validation
 
-- `make release-check`
+- `make check-release`
 
 ## v1.1.0
 
@@ -358,7 +358,7 @@ Second public release of `java-evolution`, focused on turning several notes-only
 - Executable HKDF key derivation example for Java 25.
 - Java 18 JavaDoc `@snippet` examples.
 - Java 18 Simple Web Server example.
-- Practical demo guide and `make demos` target for focused walkthroughs.
+- Practical demo guide and `make run-demos` target for focused walkthroughs.
 - Glossary documentation, including Java Platform Module System (JPMS) search terms.
 - Java 25 guardrail for Make targets.
 - Java 25 helper scripts for macOS, Linux, Windows Git Bash, and Windows PowerShell.
@@ -366,8 +366,8 @@ Second public release of `java-evolution`, focused on turning several notes-only
 
 ### Changed
 
-- Improved release automation with `make docs-check` and `make release-check`.
-- Aligned build workflow with the local `make check` behavior.
+- Improved release automation with `make check-docs` and `make check-release`.
+- Aligned build workflow with the local `make check-build` behavior.
 - Improved documentation and tests after code, documentation, and test reviews.
 - Clarified Foreign Function and Memory API `invokeExact` cast requirements.
 - Renamed and organized release documentation under `docs/release/`.
@@ -375,7 +375,7 @@ Second public release of `java-evolution`, focused on turning several notes-only
 
 ### Validation
 
-- `make release-check`
+- `make check-release`
 - macOS validation with JDK 25 and Maven.
 - Windows 11 validation with JDK 25, Maven, PowerShell helper, Git Bash helper, and Make.
 - Linux validation with JDK 25 helper flow.
@@ -391,18 +391,18 @@ Initial public release of `java-evolution`.
 - Notes classes for preview, incubator, runtime, tooling, cryptography, source-launcher, JVM, GC, and platform features that are not a good fit for tiny portable JUnit examples.
 - JUnit 5 tests used as executable documentation.
 - Version README files explaining the problem each feature solved.
-- JavaDoc generation with `make docs`.
+- JavaDoc generation with `make generate-docs`.
 - GitHub Pages workflow for publishing generated JavaDoc.
 - Build workflow for compiling and testing with JDK 25.
 - Markdown links workflow.
-- Documentation navigation audit with `make docs-audit`.
+- Documentation navigation audit with `make audit-docs`.
 - Study, learning path, interview, demo, migration, feature map, status matrix, JEP index, contribution, security, and release process documentation.
 
 ### Validation
 
-- `make docs-audit`
-- `make docs`
-- `make check`
+- `make audit-docs`
+- `make generate-docs`
+- `make check-build`
 
 ### Known Notes
 

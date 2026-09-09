@@ -37,7 +37,7 @@ jobs:
           cache: maven
 
       - name: generate javadoc
-        run: make docs
+        run: make generate-docs
 
       - name: configure pages
         uses: actions/configure-pages@v6

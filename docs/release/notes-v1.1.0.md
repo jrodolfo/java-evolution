@@ -13,7 +13,7 @@ The release also improves the local developer workflow across macOS, Windows 11,
 - Java 25 HKDF key derivation executable example.
 - Java 18 JavaDoc `@snippet` examples.
 - Java 18 Simple Web Server executable example.
-- Practical demo documentation with `make demos`.
+- Practical demo documentation with `make run-demos`.
 - Cross-platform Java 25 helper scripts and guardrails.
 
 ## Learning Value
@@ -30,9 +30,9 @@ These examples keep the repository aligned with its main purpose: explaining wha
 
 ## Tooling And Platform Improvements
 
-- Added `make docs-check` for documentation navigation, JavaDoc, and Markdown link validation.
-- Added `make release-check` as the final local pre-release gate.
-- Added `make demos` for focused practical walkthrough tests.
+- Added `make check-docs` for documentation navigation, JavaDoc, and Markdown link validation.
+- Added `make check-release` as the final local pre-release gate.
+- Added `make run-demos` for focused practical walkthrough tests.
 - Added a Java-based guard that verifies both `java` and Maven are using JDK 25 before Java-dependent Make targets run.
 - Added Java 25 helper scripts for macOS, Linux, Windows Git Bash, and Windows PowerShell.
 - Validated the project on macOS, Windows 11, and Linux.
@@ -50,7 +50,7 @@ These examples keep the repository aligned with its main purpose: explaining wha
 Before publishing this release, run:
 
 ```bash
-make release-check
+make check-release
 ```
 
 Expected result:
@@ -74,6 +74,6 @@ java-evolution v1.1.0 expands the project with executable examples for KEM, Fore
 This release also improves the cross-platform workflow with Java 25 helper scripts for macOS, Linux, Windows Git Bash, and Windows PowerShell, plus Java 25 guardrails for Make targets.
 
 Validation:
-- make release-check
+- make check-release
 - validated on macOS, Windows 11, and Linux
 ```

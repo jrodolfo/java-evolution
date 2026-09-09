@@ -38,7 +38,7 @@ The repository is meant for learning, not only for quick reference. Acronyms can
 Before publishing this release, run:
 
 ```bash
-make release-check
+make check-release
 ```
 
 Expected result:
@@ -57,5 +57,5 @@ java-evolution v1.1.2 is a documentation polish release focused on glossary and 
 This release expands glossary coverage and makes first-use acronym definitions explicit in cryptography-focused feature documentation, including KEM, ML-KEM, ML-DSA, HKDF, HMAC, AES, KDF, and related terms.
 
 Validation:
-- make release-check
+- make check-release
 ```

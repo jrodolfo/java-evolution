@@ -37,8 +37,8 @@ Before publishing this release, run:
 ```bash
 mvn "-Dtest=Http3ClientExamplesTest,PemEncodingsSecondPreviewExamplesTest,PrimitivePatternsFourthPreviewExamplesTest,FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest,AotObjectCachingExamplesTest,G1SynchronizationNotesTest,StructuredConcurrencySixthPreviewExamplesTest,LazyConstantsSecondPreviewExamplesTest,VectorApiEleventhIncubatorNotesTest" test
 node scripts/check-doc-navigation.mjs
-make docs
-make links
+make generate-docs
+make check-links
 git diff --check
 ```
 
@@ -71,7 +71,7 @@ Highlights:
 Validation:
 - Java 26 focused Maven test suite
 - node scripts/check-doc-navigation.mjs
-- make docs
-- make links
+- make generate-docs
+- make check-links
 - git diff --check
 ```

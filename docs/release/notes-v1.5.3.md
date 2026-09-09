@@ -11,7 +11,7 @@ This release adds operating-system coverage to the main build workflow so the re
   - `macos-latest`
   - `windows-latest`
 - Kept Oracle JDK 25 as the required CI runtime for the build matrix.
-- Kept the build job running `make check`, matching the repository's local validation gate for compilation and tests.
+- Kept the build job running `make check-build`, matching the repository's local validation gate for compilation and tests.
 - Left documentation generation, GitHub Pages publication, and link checking in their existing dedicated workflows so CI failures remain easier to diagnose.
 
 ## Why This Matters
@@ -28,8 +28,8 @@ Before publishing this release, run:
 
 ```bash
 mvn test
-make docs
-make links
+make generate-docs
+make check-links
 node scripts/check-doc-navigation.mjs
 git diff --check
 ```
@@ -47,8 +47,8 @@ Observed release-preparation context:
 
 - GitHub Actions `build` workflow passed on Ubuntu, macOS, and Windows with Oracle JDK 25
 - Windows 11 IntelliJ Maven install passed
-- Windows 11 `make test` passed
-- Windows 11 `make links` passed
+- Windows 11 `make run-tests` passed
+- Windows 11 `make check-links` passed
 
 ## Suggested GitHub Release Text
 
@@ -58,12 +58,12 @@ java-evolution v1.5.3 is a cross-platform validation patch for the JDK 25 build 
 Highlights:
 - expanded the GitHub Actions build workflow to run on Ubuntu, macOS, and Windows
 - kept Oracle JDK 25 as the required CI runtime for the build matrix
-- kept the build job running make check, matching the local compilation and test gate
+- kept the build job running make check-build, matching the local compilation and test gate
 - left docs, pages, and link checks in their dedicated workflows for clearer failure reports
 
 Validation:
 - GitHub Actions build workflow on Ubuntu, macOS, and Windows with Oracle JDK 25
 - Windows 11 IntelliJ Maven install
-- Windows 11 make test
-- Windows 11 make links
+- Windows 11 make run-tests
+- Windows 11 make check-links
 ```

@@ -54,7 +54,7 @@ var name = "Java 18";
 
 For a teaching repository, this matters because examples in documentation should be easy to read and hard to misformat.
 
-The executable example in this package keeps the Java methods simple and puts the main teaching value in the generated JavaDoc. Run `make docs`, then compare the source JavaDoc with the rendered page.
+The executable example in this package keeps the Java methods simple and puts the main teaching value in the generated JavaDoc. Run `make generate-docs`, then compare the source JavaDoc with the rendered page.
 
 Executable example: [`javadoc_snippets`](javadoc_snippets/README.md)
 

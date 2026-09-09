@@ -82,14 +82,14 @@ These tools are optional if you run Maven commands directly, but they are
 needed for the repository-level convenience and documentation targets:
 
 - [GNU Make](https://www.gnu.org/software/make/) runs the repository-level
-  targets such as `make test`, `make docs`, `make demos`, and
-  `make release-check`. Maven remains usable without Make.
+  targets such as `make run-tests`, `make generate-docs`, `make run-demos`, and
+  `make check-release`. Maven remains usable without Make.
 - [Node.js](https://nodejs.org/en/download/package-manager) runs the local
-  documentation navigation audit used by `make docs-audit`, `make docs-check`,
-  and `make release-check`.
+  documentation navigation audit used by `make audit-docs`, `make check-docs`,
+  and `make check-release`.
 - [`lychee`](https://github.com/lycheeverse/lychee#installation) checks Markdown
-  and HTML links for `make links`, `make docs-check`, and
-  `make release-check`.
+  and HTML links for `make check-links`, `make check-docs`, and
+  `make check-release`.
 
 Install each tool using your operating system's package manager or the linked
 official installation instructions. Verify the optional tools with:
@@ -100,4 +100,4 @@ node --version
 lychee --version
 ```
 
-Use `make release-check` for the complete local validation gate.
+Use `make check-release` for the complete local validation gate.

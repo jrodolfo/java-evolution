@@ -31,9 +31,9 @@ Describe what happened instead.
 Commands you ran, if any:
 
 ```bash
-make check
-make docs
-make links
+make check-build
+make generate-docs
+make check-links
 ```
 
 ## Additional Context

@@ -28,8 +28,8 @@ Before publishing this release, run:
 
 ```bash
 mvn test
-make docs
-make links
+make generate-docs
+make check-links
 node scripts/check-doc-navigation.mjs
 git diff --check
 ```
@@ -61,8 +61,8 @@ Validation:
 - Windows 11 Maven build and test validation
 - Ubuntu Maven build and test validation
 - mvn test
-- make docs
-- make links
+- make generate-docs
+- make check-links
 - node scripts/check-doc-navigation.mjs
 - git diff --check
 ```

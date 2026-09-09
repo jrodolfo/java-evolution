@@ -7,10 +7,10 @@ Use this guide when you want a practical tour through the repository instead of 
 Before a study session, interview walkthrough, or live demo, run the complete practical demo check:
 
 ```bash
-make demos
+make run-demos
 ```
 
-The table mirrors the focused checks run by `make demos` and also includes focused commands for running one demo at a time.
+The table mirrors the focused checks run by `make run-demos` and also includes focused commands for running one demo at a time.
 
 ## How To Use This Guide
 
@@ -28,7 +28,7 @@ The tests keep each demo honest. They show the expected behavior without requiri
 | Java | Feature | Package or class | What it demonstrates | Focused test command | Local requirements |
 |---|---|---|---|---|---|
 | 18 | Simple Web Server | [`simple_web_server`](../src/main/java/net/jrodolfo/java_evolution/java18/simple_web_server/README.md) | Starts a local static-file server with `SimpleFileServer`, serves a temporary directory, and verifies HTTP responses. | `mvn -Dtest=SimpleStaticFileServerTest test` | Binds a local loopback port. |
-| 18 | JavaDoc snippets | [`javadoc_snippets`](../src/main/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/README.md) | Shows JavaDoc `@snippet` markup in real generated documentation. | `mvn -Dtest=JavaDocSnippetExamplesTest test` | Run `make docs` to inspect rendered snippets. |
+| 18 | JavaDoc snippets | [`javadoc_snippets`](../src/main/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/README.md) | Shows JavaDoc `@snippet` markup in real generated documentation. | `mvn -Dtest=JavaDocSnippetExamplesTest test` | Run `make generate-docs` to inspect rendered snippets. |
 | 21 | Key Encapsulation Mechanism API | [`key_encapsulation`](../src/main/java/net/jrodolfo/java_evolution/java21/key_encapsulation/README.md) | Establishes shared secret material with encapsulation and decapsulation. | `mvn -Dtest=KeyEncapsulationExchangeTest test` | Requires a JDK/provider with the demonstrated KEM algorithm. |
 | 22 | Foreign Function and Memory API | [`foreign_function`](../src/main/java/net/jrodolfo/java_evolution/java22/foreign_function/README.md) | Calls native C library functions from Java using the final FFM API. | `mvn -Dtest=ForeignFunctionExamplesTest test` | Requires native access and standard platform C library symbols. |
 | 24 | Stream Gatherers | [`StreamGatherersExamples`](../src/main/java/net/jrodolfo/java_evolution/java24/StreamGatherersExamples.java) | Demonstrates final Stream Gatherers with fixed windows and running scans. | `mvn -Dtest=StreamGatherersExamplesTest test` | No external setup. |

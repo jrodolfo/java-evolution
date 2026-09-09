@@ -54,7 +54,7 @@ when the final JDK 27 build is available.
 Validation results below were collected during this release preparation.
 
 ```bash
-make java-version
+make show-versions
 ./mvnw test
 ./mvnw javadoc:javadoc
 node scripts/check-doc-navigation.mjs
@@ -63,13 +63,13 @@ git diff --check
 
 Observed local results:
 
-- `make java-version` confirmed JDK 27 and Maven 3.9.16.
+- `make show-versions` confirmed JDK 27 and Maven 3.9.16.
 - `./mvnw test` passed with 478 tests, 0 failures, 0 errors, and 16 skips.
 - `./mvnw javadoc:javadoc` completed successfully.
 - `node scripts/check-doc-navigation.mjs` passed.
-- `make links` passed with 1,172 links checked, 0 errors, and 8 redirects.
+- `make check-links` passed with 1,172 links checked, 0 errors, and 8 redirects.
 - `git diff --check` passed.
-- `make release-check` completed the navigation and JavaDoc checks, but its
+- `make check-release` completed the navigation and JavaDoc checks, but its
   `lychee` step reported 95 external-link connection failures in the restricted
   environment before the successful standalone link check above.
 

@@ -28,13 +28,13 @@ The Java 25 preview examples also remain historically honest. A JDK 26 compiler 
 Before publishing this release, run:
 
 ```bash
-make java-version
+make show-versions
 make check-java-26
 mvn test
-make docs
-make links
+make generate-docs
+make check-links
 node scripts/check-doc-navigation.mjs
-make demos
+make run-demos
 git diff --check
 ```
 
@@ -51,14 +51,14 @@ Expected result:
 
 Observed release-preparation context:
 
-- `make java-version` reported Homebrew OpenJDK 26.0.2.1 and Maven using Java 26.0.2.1
+- `make show-versions` reported Homebrew OpenJDK 26.0.2.1 and Maven using Java 26.0.2.1
 - `make check-java-26` passed
-- `make test` passed with 437 tests, 0 failures, 0 errors, and 11 skipped
-- `make docs` passed
-- `make docs-audit` passed
-- `make demos` passed
+- `make run-tests` passed with 437 tests, 0 failures, 0 errors, and 11 skipped
+- `make generate-docs` passed
+- `make audit-docs` passed
+- `make run-demos` passed
 - `git diff --check` passed
-- `make links` could not complete inside the restricted Codex sandbox because broad external URL checks failed with connection errors; it should be run locally before publishing
+- `make check-links` could not complete inside the restricted Codex sandbox because broad external URL checks failed with connection errors; it should be run locally before publishing
 
 ## Suggested GitHub Release Text
 
@@ -74,12 +74,12 @@ Highlights:
 - updated Class-File API and ZGC runtime-boundary tests for JDK 26 behavior
 
 Validation:
-- make java-version
+- make show-versions
 - make check-java-26
-- make test
-- make docs
-- make docs-audit
-- make demos
+- make run-tests
+- make generate-docs
+- make audit-docs
+- make run-demos
 - git diff --check
-- make links locally before publishing
+- make check-links locally before publishing
 ```

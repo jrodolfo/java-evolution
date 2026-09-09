@@ -51,7 +51,7 @@ src/main/java/net/jrodolfo/java_evolution/java18/javadoc_snippets/JavaDocSnippet
 Then generate the JavaDoc site:
 
 ```bash
-make docs
+make generate-docs
 ```
 
 Open the generated page under:

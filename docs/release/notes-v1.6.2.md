@@ -13,13 +13,13 @@
 Run the following commands before publishing:
 
 ```bash
-make java-version
+make show-versions
 make check-java-26
 mvn test
-make docs
-make links
+make generate-docs
+make check-links
 node scripts/check-doc-navigation.mjs
-make demos
+make run-demos
 git diff --check
 ```
 
@@ -32,7 +32,7 @@ Observed validation during release preparation:
 - Documentation navigation audit passed.
 - `git diff --check` passed.
 - No `SocketPermission` removal warnings remained in the JDK 26 Maven build output.
-- `make links` should be run locally before publishing because external network access is restricted in the Codex sandbox.
+- `make check-links` should be run locally before publishing because external network access is restricted in the Codex sandbox.
 
 ## Suggested GitHub Release Text
 
@@ -47,8 +47,8 @@ Highlights:
 Validation:
 - JDK 26 GitHub Actions builds passed on Ubuntu, macOS, and Windows
 - mvn test
-- make docs
+- make generate-docs
 - node scripts/check-doc-navigation.mjs
 - git diff --check
-- make links locally before publishing
+- make check-links locally before publishing
 ```

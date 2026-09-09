@@ -28,7 +28,7 @@ Preview, incubator, runtime, and genuinely notes-only topics remain documented a
 Before publishing this release, run:
 
 ```bash
-make release-check
+make check-release
 ```
 
 Expected result:
@@ -47,5 +47,5 @@ java-evolution v1.1.1 is a cleanup release focused on JavaDoc and documentation 
 This release removes duplicate notes classes for features that now have dedicated executable example packages, and updates docs and demo commands to point directly to those executable examples.
 
 Validation:
-- make release-check
+- make check-release
 ```

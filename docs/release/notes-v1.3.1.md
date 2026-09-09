@@ -11,7 +11,7 @@ The project already explains how Java changed. This release adds the missing tim
 - Added release chronology to the root README feature index and linked the timeline from study/navigation docs.
 - Clarified the distinction between repository release history and Java platform release history.
 - Clarified that Java 1.3 and Java 1.4 were marketed under the Java 2 Platform, Standard Edition brand even though this repository uses `java03` and `java04` module names.
-- Added `VERBOSE=-v` and `VERBOSE=-vv` pass-through support for `make links`.
+- Added `VERBOSE=-v` and `VERBOSE=-vv` pass-through support for `make check-links`.
 - Removed a timeline reference link that returned HTTP 403 during Markdown link checks.
 - Cleaned up an unsupported JavaDoc tag in the Java 4 NIO example documentation.
 
@@ -29,8 +29,8 @@ Before publishing this release, run:
 
 ```bash
 node scripts/check-doc-navigation.mjs
-make docs
-make links
+make generate-docs
+make check-links
 git diff --check
 ```
 
@@ -52,13 +52,13 @@ Highlights:
 - linked release chronology from the root README and study/navigation docs
 - clarified repository release history vs Java platform release history
 - clarified historical naming for Java 1.3 and Java 1.4 under the Java 2 Platform, Standard Edition brand
-- added VERBOSE=-v / VERBOSE=-vv support for make links
+- added VERBOSE=-v / VERBOSE=-vv support for make check-links
 - removed a blocked timeline reference that returned HTTP 403 in link checks
 - cleaned a JavaDoc warning in the Java 4 NIO documentation
 
 Validation:
 - node scripts/check-doc-navigation.mjs
-- make docs
-- make links
+- make generate-docs
+- make check-links
 - git diff --check
 ```

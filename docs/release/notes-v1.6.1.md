@@ -16,13 +16,13 @@
 Run the following commands before publishing:
 
 ```bash
-make java-version
+make show-versions
 make check-java-26
 mvn test
-make docs
-make links
+make generate-docs
+make check-links
 node scripts/check-doc-navigation.mjs
-make demos
+make run-demos
 git diff --check
 ```
 
@@ -33,7 +33,7 @@ Observed validation during release preparation:
 - JavaDoc generation passed.
 - Documentation navigation audit passed.
 - `git diff --check` passed.
-- `make links` was not run in the restricted Codex sandbox; run it locally before publishing.
+- `make check-links` was not run in the restricted Codex sandbox; run it locally before publishing.
 
 ## Suggested GitHub Release Text
 
@@ -49,8 +49,8 @@ Highlights:
 
 Validation:
 - mvn test
-- make docs
+- make generate-docs
 - node scripts/check-doc-navigation.mjs
 - git diff --check
-- make links locally before publishing
+- make check-links locally before publishing
 ```

@@ -23,7 +23,7 @@ Simple features remain concise. More difficult topics now receive the additional
 Before publishing this release, run:
 
 ```bash
-make release-check
+make check-release
 ```
 
 Expected result:
@@ -47,6 +47,6 @@ Highlights:
 - corrected historical API usage and maturity labels, including JEP 458
 
 Validation:
-- make docs-audit
-- make release-check
+- make audit-docs
+- make check-release
 ```

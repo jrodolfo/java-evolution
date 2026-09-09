@@ -32,7 +32,7 @@ The repository demonstrates features introduced from Java 8 through Java 25. It 
 Before publishing this release, run:
 
 ```bash
-make release-check
+make check-release
 ```
 
 Expected result:
@@ -56,5 +56,5 @@ Initial public release of java-evolution.
 This release provides a didactic Java reference from Java 8 through Java 25, with focused examples, notes classes, JUnit executable documentation, JavaDoc generation, GitHub Pages publishing, and study/interview/migration documentation.
 
 Validation:
-- make release-check
+- make check-release
 ```
