@@ -37,5 +37,8 @@ class JavaBeansExamplesTest {
 		assertThat(examples.eventSetName())
 				.as("addXListener and removeXListener methods define a JavaBeans event set")
 				.isEqualTo("project");
+		assertThat(examples.eventListenerParameterType())
+				.as("A JavaBeans listener method should receive the bean event object")
+				.isEqualTo(JavaBeansExamples.ProjectEvent.class);
 	}
 }

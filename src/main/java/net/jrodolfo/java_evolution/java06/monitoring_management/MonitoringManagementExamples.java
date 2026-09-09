@@ -4,6 +4,7 @@ import java.lang.management.ClassLoadingMXBean;
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;
 import java.lang.management.MemoryUsage;
+import java.lang.management.OperatingSystemMXBean;
 import java.lang.management.RuntimeMXBean;
 import java.lang.management.ThreadMXBean;
 
@@ -51,6 +52,17 @@ public class MonitoringManagementExamples {
 	public int liveThreadCount() {
 		ThreadMXBean threads = ManagementFactory.getThreadMXBean();
 		return threads.getThreadCount();
+	}
+
+	/**
+	 * Reads the system load average added to the management API in Java 6.
+	 * A negative value means the operating system does not provide this reading.
+	 *
+	 * @return system load average, or a negative value when unavailable
+	 */
+	public double systemLoadAverage() {
+		OperatingSystemMXBean operatingSystem = ManagementFactory.getOperatingSystemMXBean();
+		return operatingSystem.getSystemLoadAverage();
 	}
 
 	/**

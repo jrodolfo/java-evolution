@@ -37,6 +37,15 @@ class MonitoringManagementExamplesTest {
 	}
 
 	@Test
+	void operatingSystemMxBeanExposesJava6LoadAverageCapability() {
+		double loadAverage = examples.systemLoadAverage();
+
+		assertThat(loadAverage == -1.0 || loadAverage >= 0.0)
+				.as("Java 6 system-load monitoring returns a nonnegative value or -1 when unavailable")
+				.isTrue();
+	}
+
+	@Test
 	void snapshotCollectsMultipleManagementReadings() {
 		MonitoringManagementExamples.JvmSnapshot snapshot = examples.snapshot();
 

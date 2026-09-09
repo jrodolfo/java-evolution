@@ -17,13 +17,13 @@ class PatternMatchingSwitchExamplesTest {
 
 		// Then
 		assertThat(startDescription)
-				.as("The Start record pattern should bind the service name")
+				.as("The Start type pattern should bind the service name")
 				.isEqualTo("start api");
 		assertThat(stopDescription)
-				.as("The Stop record pattern should bind the service name")
+				.as("The Stop type pattern should bind the service name")
 				.isEqualTo("stop api");
 		assertThat(restartDescription)
-				.as("The Restart record pattern should bind the service name")
+				.as("The Restart type pattern should bind the service name")
 				.isEqualTo("restart api");
 	}
 }

@@ -4,23 +4,23 @@ Released: March 2019 as Java SE 12.
 
 Java 12 was a smaller release, but it started an important language direction: making `switch` usable as an expression. It also added several practical library improvements for streams, strings, files, and localized number formatting.
 
-Some Java 12 features were preview features. A preview feature is available for experimentation, but it is not final yet and may change in later releases. The switch-expression syntax shown here remains faithful to the Java 12 preview; the repository's preview policy explains when that is appropriate.
+Some Java 12 features were preview features. A preview feature is available for experimentation, but it is not final yet and may change in later releases. Java 12's first switch-expression preview used value-bearing `break`; Java 13 replaced it with `yield`, and Java 14 finalized the later design. The runnable class uses the current equivalent on JDK 26, while its `firstPreviewSource()` method preserves the Java 12 form as source text.
 
 ## Switch Expressions Preview
 
 Before switch expressions, `switch` was a statement. Producing a value usually required a mutable local variable, `break` statements, and care to avoid accidental fall-through.
 
-Java 12 previewed switch expressions, allowing `switch` to return a value directly:
+Java 12 previewed switch expressions, allowing `switch` to return a value directly. Its first-preview statement form used `break` with a value:
 
 ```java
-return switch (dayNumber) {
-	case 1, 2, 3, 4, 5 -> "weekday";
-	case 6, 7 -> "weekend";
-	default -> "unknown";
+String result = switch (dayNumber) {
+	case 1, 2, 3, 4, 5: break "weekday";
+	case 6, 7: break "weekend";
+	default: break "unknown";
 };
 ```
 
-The main problem solved was readability and safety. Arrow labels make fall-through impossible in normal branches, and the whole expression makes the returned value clear.
+Java 13 changed value-bearing `break` to `yield`, and Java 14 finalized switch expressions with the later syntax. The repository keeps the historical Java 12 form in `firstPreviewSource()` because JDK 26 cannot compile an older JDK's preview syntax, while `dayType` provides runnable equivalent behavior. The main problem solved was readability and safety: a switch expression makes the produced value explicit, and the later arrow rules make fall-through impossible in normal branches.
 
 Example: `SwitchExpressionPreviewExamples`
 

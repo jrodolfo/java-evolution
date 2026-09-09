@@ -5,7 +5,6 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -53,7 +52,7 @@ public class ConcurrencyUtilitiesExamples {
 			});
 		}
 
-		latch.await(2, TimeUnit.SECONDS);
+		latch.await();
 		return completed.get();
 	}
 

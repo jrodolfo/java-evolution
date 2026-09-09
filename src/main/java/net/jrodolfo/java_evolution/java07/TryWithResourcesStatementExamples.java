@@ -24,6 +24,21 @@ public class TryWithResourcesStatementExamples {
 	}
 
 	/**
+	 * Uses a tracking resource so a caller can observe automatic closing.
+	 *
+	 * @param text text to read
+	 * @return whether the resource was closed after the try block
+	 * @throws IOException when reading fails
+	 */
+	public boolean readFirstLineClosesResource(String text) throws IOException {
+		TrackingReader reader = new TrackingReader(new StringReader(text));
+		try (TrackingReader resource = reader) {
+			resource.readLine();
+		}
+		return reader.closed;
+	}
+
+	/**
 	 * Shows that cleanup failures are preserved as suppressed exceptions when the
 	 * main operation already failed.
 	 *
@@ -39,6 +54,21 @@ public class TryWithResourcesStatementExamples {
 		@Override
 		public void close() throws Exception {
 			throw new IOException("close failed");
+		}
+	}
+
+	static class TrackingReader extends BufferedReader {
+
+		boolean closed;
+
+		TrackingReader(StringReader reader) {
+			super(reader);
+		}
+
+		@Override
+		public void close() throws IOException {
+			closed = true;
+			super.close();
 		}
 	}
 }

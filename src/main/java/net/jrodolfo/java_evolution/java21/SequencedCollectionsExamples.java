@@ -37,6 +37,18 @@ public class SequencedCollectionsExamples {
 	}
 
 	/**
+	 * Observes that a reversed view is backed by its original collection.
+	 *
+	 * @return the original and reversed collections after changing the view
+	 */
+	public SequenceViewSummary observeReversedView() {
+		ArrayList<String> values = new ArrayList<>(List.of("first", "middle", "last"));
+		SequencedCollection<String> reversed = values.reversed();
+		reversed.removeFirst();
+		return new SequenceViewSummary(List.copyOf(values), List.copyOf(reversed));
+	}
+
+	/**
 	 * Uses first and last entry operations from {@link SequencedMap}.
 	 *
 	 * @return a summary of map encounter order
@@ -59,6 +71,15 @@ public class SequencedCollectionsExamples {
 	 * @param reversed the values observed through the reversed view
 	 */
 	public record SequenceSummary(String first, String last, List<String> reversed) {
+	}
+
+	/**
+	 * Captures the state of a collection and its reversed view after a mutation.
+	 *
+	 * @param original values observed through the original collection
+	 * @param reversed values observed through the reversed view
+	 */
+	public record SequenceViewSummary(List<String> original, List<String> reversed) {
 	}
 
 	/**

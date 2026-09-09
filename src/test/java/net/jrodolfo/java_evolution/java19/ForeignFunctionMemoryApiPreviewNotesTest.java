@@ -37,4 +37,12 @@ class ForeignFunctionMemoryApiPreviewNotesTest {
 				.contains("foreign_function")
 				.contains("final API");
 	}
+
+	@Test
+	void notesPreserveTheJava19MemorySessionApiShape() {
+		assertThat(notes.java19ApiShape())
+				.as("Java 19 preview used MemorySession to manage native segment lifetime")
+				.contains("MemorySession", "openConfined", "MemorySegment")
+				.doesNotContain("Arena", "SegmentScope");
+	}
 }

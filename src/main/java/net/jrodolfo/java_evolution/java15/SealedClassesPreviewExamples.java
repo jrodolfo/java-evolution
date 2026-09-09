@@ -50,6 +50,18 @@ public class SealedClassesPreviewExamples {
 	}
 
 	/**
+	 * Returns the reflection API shape from the Java 15 first preview.
+	 *
+	 * <p>The preview method is preserved as source text because the current
+	 * JDK exposes the later {@code getPermittedSubclasses()} API instead.</p>
+	 *
+	 * @return Java 15 preview reflection source
+	 */
+	public String java15ReflectionApiSource() {
+		return "ClassDesc[] permitted = Shape.class.permittedSubclasses();";
+	}
+
+	/**
 	 * Sealed parent type that explicitly lists permitted implementations with
 	 * {@code permits}. Code outside that list cannot directly implement this
 	 * interface.

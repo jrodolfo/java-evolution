@@ -1,6 +1,7 @@
 package net.jrodolfo.java_evolution.java25.generational_shenandoah;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -43,5 +44,15 @@ class GenerationalShenandoahNotesTest {
 				.contains("realistic workloads")
 				.contains("GC logs")
 				.contains("measurements");
+	}
+
+	@Test
+	void generationalModeStartsWithoutExperimentalUnlockWhenShenandoahIsAvailable() throws Exception {
+		assumeTrue(notes.shenandoahAvailable(), "this JDK build does not support Shenandoah");
+
+		GenerationalShenandoahNotes.ProcessResult result = notes.generationalModeProbe();
+		assertThat(result.exitCode())
+				.as("Java 25 generational Shenandoah should start without experimental VM unlock")
+				.isZero();
 	}
 }

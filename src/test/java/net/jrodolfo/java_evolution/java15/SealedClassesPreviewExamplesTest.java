@@ -33,4 +33,12 @@ class SealedClassesPreviewExamplesTest {
 				.as("The sealed Shape interface should explicitly permit only the known domain subtypes")
 				.containsExactlyInAnyOrder("Circle", "Rectangle");
 	}
+
+	@Test
+	void java15PreviewReflectionApiIsKeptDistinctFromLaterApi() {
+		assertThat(examples.java15ReflectionApiSource())
+				.as("Java 15 preview returned ClassDesc values through permittedSubclasses")
+				.contains("permittedSubclasses()", "ClassDesc[]")
+				.doesNotContain("getPermittedSubclasses");
+	}
 }
