@@ -11,7 +11,9 @@ import java.nio.charset.StandardCharsets;
  * on different machines because the default came from the operating system and
  * locale. That made simple text examples harder to reason about and made file
  * exchange bugs easy to create accidentally. Java 18 made UTF-8 the standard
- * default so common text handling is predictable across platforms.
+ * default so common text handling is predictable across platforms. An explicit
+ * {@code -Dfile.encoding=COMPAT} setting is a compatibility escape hatch that
+ * restores the older environment-dependent behavior.
  * </p>
  *
  * <p>
@@ -42,7 +44,8 @@ public class Utf8DefaultCharsetExamples {
 
 	/**
 	 * Encodes text using the default charset, which Java 18 standardized as
-	 * UTF-8.
+	 * UTF-8 under the normal Java 18+ default configuration. The explicit
+	 * {@code COMPAT} compatibility mode is the exception.
 	 *
 	 * @param text the text to encode
 	 * @return encoded bytes

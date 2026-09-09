@@ -39,4 +39,12 @@ class ForeignFunctionMemorySecondPreviewNotesTest {
 				.as("The note should name the final release")
 				.contains("Java 22");
 	}
+
+	@Test
+	void notesPreserveTheJava20ArenaAndSegmentScopeApiShape() {
+		assertThat(notes.java20ApiShape())
+				.as("Java 20 split memory lifetime management between Arena and SegmentScope")
+				.contains("Arena", "openConfined", "SegmentScope", "scope()")
+				.doesNotContain("MemorySession");
+	}
 }

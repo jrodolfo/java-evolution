@@ -45,6 +45,18 @@ public class ForeignFunctionMemorySecondPreviewNotes {
 	}
 
 	/**
+	 * Returns the Java 20 lifecycle API shape that replaced the Java 19 session
+	 * model.
+	 *
+	 * @return Java 20 preview API source shape
+	 */
+	public String java20ApiShape() {
+		return "Arena arena = Arena.openConfined();\n"
+				+ "SegmentScope scope = arena.scope();\n"
+				+ "MemorySegment segment = MemorySegment.allocateNative(8, scope);";
+	}
+
+	/**
 	 * Explains why this Java 20 entry stays as notes.
 	 *
 	 * @return the project decision

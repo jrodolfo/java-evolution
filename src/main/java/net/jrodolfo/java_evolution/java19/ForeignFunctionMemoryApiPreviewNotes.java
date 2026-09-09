@@ -62,6 +62,16 @@ public class ForeignFunctionMemoryApiPreviewNotes {
 	}
 
 	/**
+	 * Returns the central lifecycle API shape from the Java 19 preview.
+	 *
+	 * @return Java 19 preview API source shape
+	 */
+	public String java19ApiShape() {
+		return "MemorySession session = MemorySession.openConfined();\n"
+				+ "MemorySegment segment = MemorySegment.allocateNative(8, session);";
+	}
+
+	/**
 	 * Points learners to the executable final API module.
 	 *
 	 * @return a short next-step note

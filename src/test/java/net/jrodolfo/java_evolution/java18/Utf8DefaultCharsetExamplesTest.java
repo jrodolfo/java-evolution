@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.nio.charset.StandardCharsets;
 
+import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
 
 class Utf8DefaultCharsetExamplesTest {
@@ -12,6 +13,9 @@ class Utf8DefaultCharsetExamplesTest {
 
 	@Test
 	void defaultCharsetIsUtf8InJava18AndLater() {
+		Assumptions.assumeFalse("COMPAT".equals(System.getProperty("file.encoding")),
+				"COMPAT explicitly requests the pre-Java-18 default-charset behavior");
+
 		// When / Then
 		assertThat(examples.defaultCharset())
 				.as("Java 18 standardized the default charset as UTF-8")
@@ -23,6 +27,9 @@ class Utf8DefaultCharsetExamplesTest {
 
 	@Test
 	void defaultEncodingUsesUtf8Bytes() {
+		Assumptions.assumeFalse("COMPAT".equals(System.getProperty("file.encoding")),
+				"COMPAT explicitly requests the pre-Java-18 default-charset behavior");
+
 		// When
 		byte[] bytes = examples.bytesWithDefaultCharset("café");
 

@@ -42,4 +42,16 @@ class SequencedCollectionsExamplesTest {
 				.as("SequencedMap.lastEntry should expose the last value in encounter order")
 				.isEqualTo("current");
 	}
+
+	@Test
+	void reversedCollectionIsBackedByTheOriginalCollection() {
+		var summary = examples.observeReversedView();
+
+		assertThat(summary.original())
+				.as("Removing the first item from the reversed view removes the last item from the original")
+				.containsExactly("first", "middle");
+		assertThat(summary.reversed())
+				.as("The reversed view should reflect the mutation of its backing collection")
+				.containsExactly("middle", "first");
+	}
 }
