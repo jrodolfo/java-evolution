@@ -4,6 +4,18 @@ All notable changes to this project are documented here.
 
 This project uses simple release notes rather than a strict changelog taxonomy. The repository is educational, so each release entry focuses on learning value, documentation coverage, and validation status.
 
+## v1.7.1
+
+Patch release focused on Windows GitHub Actions compatibility and consistent JDK 27 build commands.
+
+### Changed
+
+- Updated the workflow to run the existing Makefile check target through Bash and resolve Java from PATH so the Maven Wrapper works on Windows runners.
+- Updated the Makefile to select `mvnw.cmd` on Windows and standardized the version, test, documentation, link, demo, and release-check targets.
+- Updated current documentation and templates to use the standardized targets and linked the JDK 27 download from the root requirements.
+- Removed obsolete Java 26 environment helpers and the Java 26 prerequisite checker now that JDK 27 is the repository baseline.
+- No Java production or test source files changed after v1.7.0.
+
 ## v1.7.0
 
 ### Added
