@@ -41,6 +41,7 @@ use_java_27_linux() {
       "${JDK27_HOME:-}" \
       /usr/lib/jvm/*27* \
       /opt/jdk-27* \
+      /opt/jdk/jdk-27* \
       /opt/java/jdk-27* \
       /usr/local/jdk-27* \
       "${SDKMAN_CANDIDATES_DIR:-${SDKMAN_DIR:-$HOME/.sdkman}/candidates}"/java/27*
