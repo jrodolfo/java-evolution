@@ -16,5 +16,5 @@ In `instanceof` and `switch`, this lets code express primitive classification
 declaratively instead of combining potentially lossy casts with manual checks.
 The child probe uses the matching Java 27 preview compiler and runtime.
 
-Example: `PrimitivePatternsFifthPreviewExamples`  
+Example: `PrimitivePatternsFifthPreviewExamples`
 Test: `PrimitivePatternsFifthPreviewExamplesTest`

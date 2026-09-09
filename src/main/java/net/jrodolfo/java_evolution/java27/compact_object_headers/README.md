@@ -18,5 +18,5 @@ not guarantee a particular object layout or a fixed saving for every object.
 The example inspects `PrintFlagsFinal`; it does not measure object sizes,
 memory savings, or cache behavior.
 
-Example: `CompactObjectHeadersDefaultExamples`  
+Example: `CompactObjectHeadersDefaultExamples`
 Test: `CompactObjectHeadersDefaultExamplesTest`

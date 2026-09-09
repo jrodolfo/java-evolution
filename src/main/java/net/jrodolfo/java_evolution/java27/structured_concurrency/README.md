@@ -16,5 +16,5 @@ The child probe demonstrates this organization with two subtasks and a shared
 join. Structured concurrency organizes concurrent work; it does not
 automatically make arbitrary work execute faster.
 
-Example: `StructuredConcurrencySeventhPreviewExamples`  
+Example: `StructuredConcurrencySeventhPreviewExamples`
 Test: `StructuredConcurrencySeventhPreviewExamplesTest`

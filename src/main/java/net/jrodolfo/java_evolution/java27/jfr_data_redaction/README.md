@@ -15,5 +15,5 @@ redaction option/help configuration. It does not create or inspect a JFR
 recording, verify that a particular value is redacted at recording time, or
 require an application workload.
 
-Example: `JfrRedactionOptionExamples`  
+Example: `JfrRedactionOptionExamples`
 Test: `JfrRedactionOptionExamplesTest`

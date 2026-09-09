@@ -20,5 +20,5 @@ workloads and measurement.
 This remains an explanatory module because a small test can inspect selection,
 but cannot establish workload-level collector quality.
 
-Notes: `G1DefaultNotes`  
+Notes: `G1DefaultNotes`
 Test: `G1DefaultNotesTest`

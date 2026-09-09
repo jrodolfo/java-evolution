@@ -16,5 +16,5 @@ The child probe shows the first `get()` performing the computation, later
 matching Java 27 preview compiler and child JVM rather than pretending the
 preview API is already final.
 
-Example: `LazyConstantsThirdPreviewExamples`  
+Example: `LazyConstantsThirdPreviewExamples`
 Test: `LazyConstantsThirdPreviewExamplesTest`

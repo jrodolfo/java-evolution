@@ -21,5 +21,5 @@ That proves local API and configuration availability only; it does not prove
 successful negotiation with a particular peer, interoperability with every
 TLS implementation, or network performance and security behavior.
 
-Example: `PostQuantumHybridKeyExchangeExamples`  
+Example: `PostQuantumHybridKeyExchangeExamples`
 Test: `PostQuantumHybridKeyExchangeExamplesTest`

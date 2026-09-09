@@ -12,5 +12,5 @@ change. This repository points to the earlier executable SIMD lesson instead
 of duplicating essentially the same demonstration while the API continues to
 evolve.
 
-Notes: `VectorApiTwelfthIncubatorNotes`  
+Notes: `VectorApiTwelfthIncubatorNotes`
 Test: `VectorApiTwelfthIncubatorNotesTest`

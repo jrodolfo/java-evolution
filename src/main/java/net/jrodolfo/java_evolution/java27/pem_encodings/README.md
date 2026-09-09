@@ -22,5 +22,5 @@ it does not validate a certificate, establish trust, or perform real PKI
 processing. The example is compiled and run with matching Java 27 preview
 flags.
 
-Example: `PemEncodingsThirdPreviewExamples`  
+Example: `PemEncodingsThirdPreviewExamples`
 Test: `PemEncodingsThirdPreviewExamplesTest`
