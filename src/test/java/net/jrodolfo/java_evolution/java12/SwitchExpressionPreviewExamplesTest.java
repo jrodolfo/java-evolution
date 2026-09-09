@@ -21,4 +21,12 @@ class SwitchExpressionPreviewExamplesTest {
 				.as("The default branch should handle unknown values")
 				.isEqualTo("unknown");
 	}
+
+	@Test
+	void firstPreviewSourcePreservesJava12ValueBearingBreak() {
+		assertThat(examples.firstPreviewSource())
+				.as("Java 12 first preview used break with a value before Java 13 introduced yield")
+				.contains("break \"weekday\"", "break \"weekend\"", "break \"unknown\"")
+				.doesNotContain("yield");
+	}
 }

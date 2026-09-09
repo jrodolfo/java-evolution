@@ -3,8 +3,14 @@ package net.jrodolfo.java_evolution.java10;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.IOException;
+import java.net.URI;
 import java.util.Arrays;
 import java.util.Map;
+
+import javax.tools.JavaCompiler;
+import javax.tools.JavaFileObject;
+import javax.tools.SimpleJavaFileObject;
+import javax.tools.ToolProvider;
 
 import org.junit.jupiter.api.Test;
 
@@ -68,14 +74,33 @@ class LocalVariableTypeInferenceExamplesTest {
 
 	@Test
 	void java10VarIsLimitedToLocalVariables() {
+		// Given
+		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+		JavaFileObject invalidSource = new InMemorySource(
+				"public class InvalidVarField { private var name = \"not allowed\"; }");
+
 		// When
-		var explanation = examples.whereVarCanBeUsed();
+		boolean compiled = compiler.getTask(null, null, null,
+				Arrays.asList("--release", "10"), null, Arrays.asList(invalidSource)).call();
 
 		// Then
-		assertThat(explanation)
-				.as("The example should document the Java 10 scope of var")
-				.contains("local variables")
-				.contains("not fields")
-				.contains("method return types");
+		assertThat(compiled)
+				.as("Java 10 var is restricted to local variables, not fields")
+				.isFalse();
+	}
+
+	private static final class InMemorySource extends SimpleJavaFileObject {
+
+		private final String source;
+
+		private InMemorySource(String source) {
+			super(URI.create("string:///InvalidVarField.java"), JavaFileObject.Kind.SOURCE);
+			this.source = source;
+		}
+
+		@Override
+		public CharSequence getCharContent(boolean ignoreEncodingErrors) {
+			return source;
+		}
 	}
 }
