@@ -1,5 +1,10 @@
 JAVA_27_HOME := $(shell /usr/libexec/java_home -v 27 2>/dev/null)
 JAVA_CMD := java
+MVNW := ./mvnw
+
+ifeq ($(OS),Windows_NT)
+MVNW := cmd.exe /c mvnw.cmd
+endif
 
 ifeq ($(strip $(JAVA_HOME)),)
 ifneq ($(JAVA_27_HOME),)
@@ -34,30 +39,30 @@ check-java-27:
 
 java-version: check-java-27
 	$(JAVA_CMD) --version
-	./mvnw --version
+	$(MVNW) --version
 
 test: check-java-27
-	./mvnw test
+	$(MVNW) test
 
 clean-test: check-java-27
-	./mvnw clean test
+	$(MVNW) clean test
 
 demos: check-java-27
-	./mvnw "-Dtest=SimpleStaticFileServerTest" test
-	./mvnw "-Dtest=JavaDocSnippetExamplesTest" test
-	./mvnw "-Dtest=KeyEncapsulationExchangeTest" test
-	./mvnw "-Dtest=ForeignFunctionExamplesTest" test
-	./mvnw "-Dtest=StreamGatherersExamplesTest" test
-	./mvnw "-Dtest=ClassFileInspectorTest" test
-	./mvnw "-Dtest=ModuleLatticeCryptoExamplesTest" test
-	./mvnw "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
-	./mvnw "-Dtest=HkdfKeyDerivationExampleTest" test
+	$(MVNW) "-Dtest=SimpleStaticFileServerTest" test
+	$(MVNW) "-Dtest=JavaDocSnippetExamplesTest" test
+	$(MVNW) "-Dtest=KeyEncapsulationExchangeTest" test
+	$(MVNW) "-Dtest=ForeignFunctionExamplesTest" test
+	$(MVNW) "-Dtest=StreamGatherersExamplesTest" test
+	$(MVNW) "-Dtest=ClassFileInspectorTest" test
+	$(MVNW) "-Dtest=ModuleLatticeCryptoExamplesTest" test
+	$(MVNW) "-Dtest=ScopedValuesExamplesTest,FlexibleConstructorBodiesExamplesTest" test
+	$(MVNW) "-Dtest=HkdfKeyDerivationExampleTest" test
 
 run: check-java-27
-	./mvnw spring-boot:run
+	$(MVNW) spring-boot:run
 
 docs: check-java-27
-	./mvnw javadoc:javadoc
+	$(MVNW) javadoc:javadoc
 
 clean-docs:
 	rm -rf target/site/apidocs
