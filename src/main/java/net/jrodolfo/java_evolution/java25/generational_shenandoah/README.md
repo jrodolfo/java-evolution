@@ -2,7 +2,7 @@
 
 Java 25 introduced Generational Shenandoah as a product feature in JEP 521.
 
-This is an explanatory learning module. It does not try to prove garbage-collector behavior with a unit test because meaningful garbage-collector evaluation needs a real workload, JVM options, garbage-collection logs, and application measurements.
+This is an explanatory learning module with a small deterministic child-JVM option probe. It does not try to prove garbage-collector performance because meaningful evaluation needs a real workload, JVM options, garbage-collection logs, and application measurements.
 
 ## 1. What Problem Does This Feature Solve?
 
@@ -144,7 +144,7 @@ A small JUnit test can allocate objects, but that would not prove that Generatio
 
 ## 7. What The Test Proves
 
-`GenerationalShenandoahNotesTest` does not test the garbage collector.
+`GenerationalShenandoahNotesTest` does not benchmark or otherwise evaluate garbage-collector performance. When Shenandoah is available, it starts a child JVM with generational mode and no `-XX:+UnlockExperimentalVMOptions` flag. This protects the Java 25 product-feature status claim. Unsupported JDK/platform combinations are skipped.
 
 Instead, it verifies that the notes preserve the important learning points:
 

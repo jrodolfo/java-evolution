@@ -4,7 +4,7 @@ Released: March 2026 as Java SE 26.
 
 Java 26 adds HTTP/3 support for the standard HTTP Client API, starts warning about deep-reflective final-field mutation, removes the long-deprecated Applet API, continues several preview and incubator features, and advances runtime work around ahead-of-time startup data, G1 garbage collection, and vector computation.
 
-This package contains eight C1 executable examples and two C2 explanatory modules. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency are executable because they can be demonstrated deterministically with isolated API, compiler, or child-JVM workflows. G1 synchronization reduction and the Vector API remain explanatory modules because their runtime and incubator behavior is not represented by a focused portable example.
+This package contains nine executable examples and one explanatory module. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, Structured Concurrency, and the Vector API are executable because they can be demonstrated deterministically with isolated API, compiler, or child-JVM workflows. G1 synchronization reduction remains explanatory because its runtime behavior is not represented by a focused portable example.
 
 ## HTTP/3 for the HTTP Client API
 
@@ -120,7 +120,7 @@ Test: `LazyConstantsSecondPreviewExamplesTest`
 
 The Vector API continues as an eleventh incubator in Java 26. It lets Java express Single Instruction, Multiple Data (SIMD) computations that the JVM can map to CPU vector instructions when available.
 
-Explanatory module: [`vector_api`](vector_api/README.md)
+Executable incubator module: [`vector_api`](vector_api/README.md)
 
 Test: `VectorApiEleventhIncubatorNotesTest`
 
@@ -134,7 +134,7 @@ Test: `PrimitivePatternsFourthPreviewExamplesTest`
 
 ## How To Read This Package
 
-Start with `Http3ClientExamples`, then read the executable runtime modules for final-field restrictions and AOT object caching, the executable removal module for Applet API removal, and the isolated preview examples for PEM encodings, lazy constants, primitive patterns, and structured concurrency. After that, read the runtime notes for G1, followed by the Vector API incubator notes.
+Start with `Http3ClientExamples`, then read the executable runtime modules for final-field restrictions and AOT object caching, the executable removal module for Applet API removal, and the isolated preview examples for PEM encodings, lazy constants, primitive patterns, structured concurrency, and the Vector API. After that, read the runtime notes for G1 synchronization reduction.
 
 Run the focused tests:
 
@@ -144,7 +144,7 @@ mvn -Dtest=FinalFieldRestrictionsExamplesTest,AppletApiRemovalExamplesTest,AotOb
 mvn -Dtest=StructuredConcurrencySixthPreviewExamplesTest,LazyConstantsSecondPreviewExamplesTest,VectorApiEleventhIncubatorNotesTest test
 ```
 
-Java 26 contains eight C1 executable examples and two C2 explanatory modules. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency are represented as C1 executable examples after focused feasibility review. G1 synchronization reduction and the Vector API remain C2 explanatory modules. The preview APIs and syntax compile and run only in isolated child JVMs using matching JDK 26 preview flags.
+Java 26 contains nine executable examples and one explanatory module. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, Structured Concurrency, and the Vector API are represented by focused executable examples. G1 synchronization reduction remains explanatory because its runtime effect requires workload measurement. The preview APIs and syntax compile and run only in isolated child JVMs using matching JDK 26 preview flags.
 
 ## References
 

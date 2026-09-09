@@ -256,7 +256,7 @@ Interview angle: explain Java 22-24 as a transition from Java 21's modern baseli
 
 ## Stage 8: Java 25-26 LTS And Current-Release Maturity
 
-Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is the repository build baseline and contains eight C1 executable examples: HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency. G1 synchronization reduction and the Vector API remain C2 explanatory modules. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on JDK 26 their tests keep the source and documentation checks and skip only that old-preview compiler step.
+Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is the repository build baseline and contains nine executable examples: HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, Structured Concurrency, and the Vector API. G1 synchronization reduction remains an explanatory module. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on JDK 26 their tests keep the source and documentation checks and skip only that old-preview compiler step.
 
 Read these first by version:
 
