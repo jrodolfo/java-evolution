@@ -42,5 +42,5 @@ jobs:
           version: latest
 
       - name: run local check target
-        run: make check
+        run: make SHELL=bash JAVA_CMD=java check
         shell: bash
