@@ -43,3 +43,4 @@ jobs:
 
       - name: run local check target
         run: make check
+        shell: bash
