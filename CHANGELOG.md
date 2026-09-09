@@ -14,6 +14,7 @@ Patch release focused on Windows GitHub Actions compatibility and consistent JDK
 - Updated the Makefile to select `mvnw.cmd` on Windows and standardized the version, test, documentation, link, demo, and release-check targets.
 - Updated current documentation and templates to use the standardized targets and linked the JDK 27 download from the root requirements.
 - Removed obsolete Java 26 environment helpers and the Java 26 prerequisite checker now that JDK 27 is the repository baseline.
+- Extended the Linux JDK 27 helper to search `/opt/jdk/jdk-27*` installations.
 - No Java production or test source files changed after v1.7.0.
 
 ## v1.7.0
