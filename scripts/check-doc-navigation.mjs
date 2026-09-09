@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const versions = Array.from({ length: 26 }, (_, index) => `java${String(index + 1).padStart(2, "0")}`);
+const versions = Array.from({ length: 27 }, (_, index) => `java${String(index + 1).padStart(2, "0")}`);
 const root = "src/main/java/net/jrodolfo/java_evolution";
 
 function markdownFilesIn(directory) {
@@ -58,7 +58,7 @@ function testClassesFromText(text) {
 function makeDemosTargetText() {
   const makefile = fs.readFileSync("Makefile", "utf8");
   const lines = makefile.split("\n");
-  const start = lines.findIndex((line) => line === "demos: check-java-26");
+  const start = lines.findIndex((line) => line === "demos: check-java-27");
 
   if (start === -1) {
     errors.push("Makefile is missing demos target");

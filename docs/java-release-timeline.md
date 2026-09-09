@@ -35,6 +35,7 @@ For early releases, names can be confusing: Java 1.2, 1.3, and 1.4 were marketed
 | Java 24 | Java SE 24 | March 2025 | Finalizes Stream Gatherers and the Class-File API and adds several runtime/security changes. |
 | Java 25 | Java SE 25 | September 2025 | Long-term support release with final scoped values, flexible constructor bodies, module imports, compact source files, and new runtime/platform work. |
 | Java 26 | Java SE 26 | March 2026 | Adds HTTP/3 client support, warns about deep-reflective final-field mutation, removes the Applet API, and continues preview/incubator/runtime work. |
+| Java 27 | Java SE 27 | September 2026 | Makes G1 and Compact Object Headers defaults, adds hybrid post-quantum TLS key exchange, and continues preview/incubator APIs. |
 
 ## Notes On Sources
 
@@ -48,3 +49,4 @@ For modern releases, OpenJDK and Oracle general-availability announcements provi
 - [OpenJDK JDK 7 project](https://openjdk.org/projects/jdk7/)
 - [OpenJDK JDK 25 general availability announcement](https://mail.openjdk.org/pipermail/announce/2025-September/000360.html)
 - [OpenJDK JDK 26 project](https://openjdk.org/projects/jdk/26/)
+- [OpenJDK JDK 27 project](https://openjdk.org/projects/jdk/27/)

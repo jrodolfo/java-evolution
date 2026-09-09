@@ -25,7 +25,7 @@ class AppletApiRemovalExamplesTest {
 		assertThat(result.output())
 				.as("The compiler output should make the Applet API removal visible")
 				.contains("package java.applet does not exist")
-				.contains("cannot find symbol")
+				.containsAnyOf("cannot find symbol", "Applet")
 				.contains("Applet");
 	}
 

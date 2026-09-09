@@ -263,7 +263,7 @@ mvn "-Dtest=Http3ClientExamplesTest,FinalFieldRestrictionsExamplesTest,AppletApi
 mvn "-Dtest=AotObjectCachingExamplesTest,PemEncodingsSecondPreviewExamplesTest,LazyConstantsSecondPreviewExamplesTest,StructuredConcurrencySixthPreviewExamplesTest,PrimitivePatternsFourthPreviewExamplesTest" test
 ```
 
-Interview angle: show baseline discipline. A strong answer explains why moving the repository baseline to JDK 26 is separate from deciding whether each Java 26 feature should be executable or notes-only.
+Interview angle: show baseline discipline. A strong answer explains why moving the repository baseline is separate from deciding whether each feature should be executable or notes-only.
 
 ## Practical Migration Checklist
 
@@ -275,3 +275,13 @@ Use this lightweight checklist before discussing or planning a Java version migr
 4. Study the target baseline features in this guide.
 5. Run the focused tests for the features you want to explain.
 6. Use [status-matrix.md](status-matrix.md) to avoid confusing final, preview, incubator, runtime, tooling, and notes-only topics.
+
+## Java 27 Preparation
+
+The `java-27` branch prepares Java 27 support without changing the stable
+Java 26 line. Java 27 examples use `--enable-preview --release 27` only in
+isolated child JVMs. G1 default selection and the Vector API remain notes;
+the other listed Java 27 areas have focused executable examples.
+
+Study `src/main/java/net/jrodolfo/java_evolution/java27/README.md` and its
+matching tests before changing the project baseline.

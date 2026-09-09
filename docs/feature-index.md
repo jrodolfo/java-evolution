@@ -1,6 +1,6 @@
 # Feature Index
 
-This table provides the complete Java 1 through Java 26 feature index. For class-by-class navigation, see the [Feature Map](feature-map.md). For feature maturity and repository representation, see the [Status Matrix](status-matrix.md).
+This table provides the complete Java 1 through Java 27 feature index. For class-by-class navigation, see the [Feature Map](feature-map.md). For feature maturity and repository representation, see the [Status Matrix](status-matrix.md).
 
 | Java | Released | Package | Highlights |
 |---|---|---|---|
@@ -30,3 +30,4 @@ This table provides the complete Java 1 through Java 26 feature index. For class
 | 24 | Mar 2025 | [`java24`](../src/main/java/net/jrodolfo/java_evolution/java24/README.md) | Stream Gatherers final, Class-File API, Security Manager/AOT/runtime modules, post-quantum crypto examples, preview bridge modules |
 | 25 | Sep 2025 | [`java25`](../src/main/java/net/jrodolfo/java_evolution/java25/README.md) | Scoped Values final, Flexible Constructor Bodies final, Module Imports, KDF, Compact Source Files, JFR, AOT, and Object Headers examples, GC notes |
 | 26 | Mar 2026 | [`java26`](../src/main/java/net/jrodolfo/java_evolution/java26/README.md) | HTTP/3, Final Field restrictions, Applet API removal, AOT Object Caching, PEM Encodings, Lazy Constants, Primitive Patterns, and Structured Concurrency examples; G1/Vector notes |
+| 27 | Sep 2026 | [`java27`](../src/main/java/net/jrodolfo/java_evolution/java27/README.md) | G1 and Compact Object Header defaults, post-quantum hybrid TLS, JFR redaction, and continuing preview examples for Lazy Constants, primitive patterns, Structured Concurrency, and PEM Encodings; Vector notes |

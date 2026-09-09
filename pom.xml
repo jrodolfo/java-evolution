@@ -12,7 +12,7 @@
 	<artifactId>java-evolution</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>java-evolution</name>
-	<description>Didactic Java reference project demonstrating features introduced from Java 1 through Java 26.</description>
+	<description>Didactic Java reference project demonstrating features introduced from Java 1 through Java 27.</description>
 	<url>https://github.com/jrodolfo/java-evolution</url>
 	<licenses>
 		<license>
@@ -36,7 +36,7 @@
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>26</java.version>
+		<java.version>27</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
