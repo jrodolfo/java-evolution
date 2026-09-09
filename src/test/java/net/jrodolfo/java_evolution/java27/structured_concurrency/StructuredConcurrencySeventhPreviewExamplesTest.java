@@ -12,7 +12,10 @@ class StructuredConcurrencySeventhPreviewExamplesTest {
 		StructuredConcurrencySeventhPreviewExamples examples = new StructuredConcurrencySeventhPreviewExamples();
 		var result = examples.run(workspace);
 		assertThat(result.exitCode()).isEqualTo(0);
-		assertThat(result.output()).contains("joined=left+right");
+		assertThat(result.output()).contains("joined=left+right", "failure=ExecutionException");
+		assertThat(examples.probeSource())
+				.contains("StructuredTaskScope<String, Void, ExecutionException>")
+				.contains("Joiner.<String>awaitAllSuccessfulOrThrow()");
 		assertThat(examples.boundary()).contains("Java 27").contains("child JVM");
 	}
 }

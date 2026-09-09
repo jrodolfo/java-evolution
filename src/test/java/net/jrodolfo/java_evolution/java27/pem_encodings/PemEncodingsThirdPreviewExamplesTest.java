@@ -11,8 +11,8 @@ class PemEncodingsThirdPreviewExamplesTest {
 	void childProcessDemonstratesInMemoryPemRoundTrip(@TempDir Path workspace) throws Exception {
 		PemEncodingsThirdPreviewExamples examples = new PemEncodingsThirdPreviewExamples();
 		var result = examples.run(workspace);
-		assertThat(result.exitCode()).isEqualTo(0);
-		assertThat(result.output()).contains("label=LEARNING OBJECT", "payload=true", "boundaries=true");
+		assertThat(result.exitCode()).as(result.output()).isEqualTo(0);
+		assertThat(result.output()).contains("key=true", "boundaries=true");
 		assertThat(examples.boundary()).contains("Java 27").contains("in-memory bytes");
 	}
 }

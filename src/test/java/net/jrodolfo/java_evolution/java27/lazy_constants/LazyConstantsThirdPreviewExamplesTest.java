@@ -12,7 +12,7 @@ class LazyConstantsThirdPreviewExamplesTest {
 		LazyConstantsThirdPreviewExamples examples = new LazyConstantsThirdPreviewExamples();
 		var result = examples.run(workspace);
 		assertThat(result.exitCode()).isEqualTo(0);
-		assertThat(result.output()).contains("value=java-27", "same=true", "evaluations=1");
+		assertThat(result.output()).contains("before=0", "value=java-27", "same=true", "evaluations=1");
 		assertThat(examples.status()).contains("third preview").contains("Java 27");
 	}
 

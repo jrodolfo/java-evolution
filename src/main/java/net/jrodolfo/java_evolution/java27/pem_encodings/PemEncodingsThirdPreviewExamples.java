@@ -25,19 +25,24 @@ public class PemEncodingsThirdPreviewExamples {
 	/** Returns source using the Java 27 PEM encoder and decoder. */
 	public String probeSource() {
 		return """
-				import java.security.PEM;
+				import java.security.KeyPairGenerator;
 				import java.security.PEMDecoder;
 				import java.security.PEMEncoder;
+				import java.security.PublicKey;
+				import java.util.Arrays;
 
 				public class PemProbe {
 				    public static void main(String[] args) {
-				        byte[] der = {1, 2, 3, 4};
-				        PEM original = new PEM("LEARNING OBJECT", java.util.Base64.getEncoder().encodeToString(der));
-				        String text = PEMEncoder.of().encodeToString(original);
-				        PEM decoded = PEMDecoder.of().decode(text, PEM.class);
-				        System.out.println("label=" + decoded.type());
-				        System.out.println("payload=" + java.util.Arrays.equals(der, decoded.decode()));
-				        System.out.println("boundaries=" + text.contains("-----BEGIN LEARNING OBJECT-----"));
+				        try {
+				            PublicKey original = KeyPairGenerator.getInstance("Ed25519").generateKeyPair().getPublic();
+				            String text = PEMEncoder.of().encodeToString(original);
+				            PublicKey decoded = PEMDecoder.of().decode(text, PublicKey.class);
+				            System.out.println("key=" + Arrays.equals(original.getEncoded(), decoded.getEncoded()));
+				            System.out.println("boundaries=" + text.contains("-----BEGIN PUBLIC KEY-----"));
+				        }
+				        catch (Exception exception) {
+				            throw new RuntimeException(exception);
+				        }
 				    }
 				}
 				""";

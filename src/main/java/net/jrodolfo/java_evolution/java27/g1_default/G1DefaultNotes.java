@@ -1,5 +1,8 @@
 package net.jrodolfo.java_evolution.java27.g1_default;
 
+import java.io.IOException;
+import net.jrodolfo.java_evolution.java27.Java27ChildProcess;
+
 /** Explains the Java 27 HotSpot change making G1 the default collector broadly. */
 public class G1DefaultNotes {
 
@@ -10,6 +13,11 @@ public class G1DefaultNotes {
 
 	/** Explains why the repository keeps this topic as notes. */
 	public String projectDecision() {
-		return "collector selection and throughput should be validated with representative workloads, not a tiny unit test";
+		return "default collector selection is deterministic JVM configuration, but throughput consequences require representative workloads and are not proved by this test";
+	}
+
+	/** Runs HotSpot without explicitly selecting a garbage collector. */
+	public Java27ChildProcess.Result inspectDefaultCollector() throws IOException, InterruptedException {
+		return Java27ChildProcess.run(Java27ChildProcess.tool("java"), "-XX:+PrintFlagsFinal", "-version");
 	}
 }

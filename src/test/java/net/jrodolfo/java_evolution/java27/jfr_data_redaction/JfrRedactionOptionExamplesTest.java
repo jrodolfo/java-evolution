@@ -13,6 +13,7 @@ class JfrRedactionOptionExamplesTest {
 		assertThat(result.exitCode()).isEqualTo(0);
 		assertThat(result.output())
 				.contains("redact-argument")
+				.contains("redact-key")
 				.contains("[REDACTED]");
 		assertThat(examples.purpose()).contains("option help").contains("redacting");
 		assertThat(examples.boundary()).contains("without recording events");

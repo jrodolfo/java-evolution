@@ -35,8 +35,11 @@ public class LazyConstantsThirdPreviewExamples {
 				            count.incrementAndGet();
 				            return "java-27";
 				        });
-				        System.out.println("value=" + value.get());
-				        System.out.println("same=" + value.get().equals("java-27"));
+				        System.out.println("before=" + count.get());
+				        String first = value.get();
+				        String second = value.get();
+				        System.out.println("value=" + first);
+				        System.out.println("same=" + second.equals("java-27"));
 				        System.out.println("evaluations=" + count.get());
 				    }
 				}
