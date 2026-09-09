@@ -65,11 +65,11 @@ The project uses one Java release for the build: `27`. Each package still teache
 
 When demonstrating a preview feature from Java version `n`, an executable example may use later final syntax only when that syntax is also syntactically and semantically faithful to the Java `n` preview. The README for the example must identify the feature as preview in Java `n`. When the later syntax differs materially, the repository uses a historically faithful source snippet, generated source, descriptive model, or another suitable approach instead. Building with JDK 27 alone is not a reason to use later syntax in an earlier preview example.
 
-Feature maturity and repository representation are separate decisions. A feature can be final in the Java platform while still being represented here by explanatory notes if a small, portable, and honest executable example would be misleading or impractical. When a feature can be demonstrated reliably, the repository provides executable example code with focused tests. When it depends on runtime behavior, workload measurements, special infrastructure, or other conditions that do not fit a small portable test, the repository provides explanatory notes with tests that verify the explanation. For example, Java 27 Compact Object Headers can be verified by inspecting the default VM flag, which is why the repository provides the `CompactObjectHeadersDefaultExamples.java` example class and focused tests. Java 27 G1 becoming the default collector depends on runtime ergonomics and workload measurements, which is why the repository provides the `G1DefaultNotes.java` notes class and documentation-focused tests.
+Feature maturity and repository representation are separate decisions. A feature can be final in the Java platform while still being represented here by explanatory notes if a small, portable, and honest executable example would be misleading or impractical. When a feature can be demonstrated reliably, the repository provides executable example code with focused tests. When it depends on runtime behavior, workload measurements, special infrastructure, or other conditions that do not fit a small portable test, the repository provides explanatory notes with tests that verify the explanation. For example, Java 27 Compact Object Headers can be verified by inspecting the default VM flag, which is why the repository provides the `CompactObjectHeadersDefaultExamples.java` example class and focused tests. Java 27 G1 default selection can be verified with a child-JVM configuration probe, while its performance consequences require workload measurements, which is why the repository provides the `G1DefaultNotes.java` notes class and tests for both distinctions.
 
 ## Coverage
 
-- [Complete Java 1-27 Feature Index](docs/feature-index.md)
+- [Java 1-27 Release-Level Feature Index](docs/feature-index.md)
 - [Class-by-Class Feature Map](docs/feature-map.md)
 - [Feature Status Matrix](docs/status-matrix.md)
 - [Java Release Timeline](docs/java-release-timeline.md)
@@ -83,6 +83,7 @@ Feature maturity and repository representation are separate decisions. A feature
 - [Practical Demos](docs/practical-demos.md): focused hands-on walkthroughs.
 - [Interview Guide](docs/interview-guide.md): interview talking points and demo flow.
 - [Demo Script](docs/demo-script.md): a practical 5-10 minute project walkthrough.
+- [Questions](docs/questions.md): FAQ and cross-version reference supplement.
 - [Glossary](docs/glossary.md): recurring Java platform terms and acronyms.
 - [Changelog](CHANGELOG.md): repository release history.
 - [Release Checklist](docs/release/checklist.md): repeatable release process.

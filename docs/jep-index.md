@@ -2,6 +2,9 @@
 
 This index centralizes the JEP links used by the repository. It is a lookup table, not a replacement for the version READMEs. For release months and historical naming context, use [java-release-timeline.md](java-release-timeline.md).
 
+Java 27 entries describe features in the current pre-GA JDK 27 build; they do
+not mean that the Java 27 platform has reached general availability.
+
 Status labels:
 
 - **Final**: stable feature in the named release.
@@ -263,7 +266,7 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 523](https://openjdk.org/jeps/523) | Prepare for G1 | Runtime, Explanatory Module |
+| [JEP 523](https://openjdk.org/jeps/523) | Make G1 the Default Garbage Collector in All Environments | Runtime, Explanatory Module |
 | [JEP 527](https://openjdk.org/jeps/527) | TLS 1.3 Hybrid Key Exchange | Final, Security, Executable Example |
 | [JEP 531](https://openjdk.org/jeps/531) | Lazy Constants | Preview, Executable Example |
 | [JEP 532](https://openjdk.org/jeps/532) | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |

@@ -1,8 +1,11 @@
 # Platform Setup
 
-This branch uses JDK 27, Maven 3.9+, and a local Maven installation. It does not use the Maven wrapper.
+The repository uses JDK 27 and Maven 3.9+. Maven can be run through the
+repository's Maven Wrapper (`mvnw` or `mvnw.cmd`), so a separate Maven
+installation is optional. The helper scripts select JDK 27 for the current
+terminal session only.
 
-The helper scripts select JDK 27 for the current terminal session only. They do not change the machine's global Java default.
+They do not change the machine's global Java default.
 
 ## Select JDK 27
 

@@ -6,7 +6,7 @@ For early releases, names can be confusing: Java 1.2, 1.3, and 1.4 were marketed
 
 ## Timeline
 
-| Java version | Platform name used at the time | Released | Why the date matters in this project |
+| Java version | Platform name used at the time | Release timing | Why the date matters in this project |
 |---|---|---|---|
 | Java 1.0 | JDK 1.0 | January 1996 | Establishes the original language and class-library foundation. |
 | Java 1.1 | JDK 1.1 | February 1997 | Adds many platform features represented in `java01`, such as inner classes, reflection, serialization, JDBC, RMI, and JavaBeans. |
@@ -35,7 +35,7 @@ For early releases, names can be confusing: Java 1.2, 1.3, and 1.4 were marketed
 | Java 24 | Java SE 24 | March 2025 | Finalizes Stream Gatherers and the Class-File API and adds several runtime/security changes. |
 | Java 25 | Java SE 25 | September 2025 | Long-term support release with final scoped values, flexible constructor bodies, module imports, compact source files, and new runtime/platform work. |
 | Java 26 | Java SE 26 | March 2026 | Adds HTTP/3 client support, warns about deep-reflective final-field mutation, removes the Applet API, and continues preview/incubator/runtime work. |
-| Java 27 | Java SE 27 | September 2026 | Makes G1 and Compact Object Headers defaults, adds hybrid post-quantum TLS key exchange, and continues preview/incubator APIs. |
+| Java 27 | Java SE 27 | Scheduled September 2026 | Pre-GA JDK 27 prepares to make G1 and Compact Object Headers defaults, adds hybrid post-quantum TLS key exchange, and continues preview/incubator APIs. |
 
 ## Notes On Sources
 

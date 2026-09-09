@@ -194,25 +194,25 @@ src/main/java/net/jrodolfo/java_evolution/java23
 src/main/java/net/jrodolfo/java_evolution/java24
 ```
 
-## Java 25-26: LTS And Current-Release Awareness
+## Java 25-27: LTS And Current-Release Awareness
 
 Key topics:
 
 - Java 25 is an LTS release that finalized scoped values, flexible constructor bodies, module import declarations, compact source files, and the KDF API.
 - Some Java 25 features are still preview or incubator, such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
 - Java 26 adds HTTP/3 support, warns about deep-reflective final-field mutation, removes the Applet API, and continues preview/incubator/runtime work.
-- This repository now builds on JDK 26 while keeping only the not-yet-evaluated Java 26 feature modules notes-only. HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency already have focused executable examples.
+- This repository now builds on JDK 27. Java 26 has nine executable examples, including the Vector API, while G1 synchronization reduction remains explanatory. Java 27 is represented in the current pre-GA JDK 27 build with focused executable examples and explanatory modules according to what can be demonstrated honestly.
 
 Possible prompt:
 
 ```text
-Why does this repository build on JDK 26 while still keeping some Java 26 feature modules notes-only?
+Why does this repository build on JDK 27 while still keeping some feature modules explanatory?
 ```
 
 Strong answer:
 
 ```text
-JDK 26 is the project build baseline, but baseline support is not the same as example suitability. Several Java 26 topics involve preview APIs, incubator modules, runtime behavior, or performance internals. The repository adds focused executable examples when a topic can be demonstrated deterministically and honestly; the remaining topics stay as notes until they are evaluated.
+JDK 27 is the project build baseline, but baseline support is not the same as example suitability. Some topics involve preview APIs, incubator modules, runtime behavior, or performance internals. The repository adds focused executable examples when a topic can be demonstrated deterministically and honestly; the remaining topics stay explanatory.
 ```
 
 Repo paths:
@@ -245,12 +245,12 @@ Then show the tests to prove that the examples are not just snippets.
 - What is the difference between final, preview, and incubator features?
 - Why does this project use notes classes for some features instead of runnable demos?
 
-## Java 27 Preparation
+## Java 27 Pre-GA Awareness
 
-The `java-27` branch separates preparation from the stable Java 26 line. It
-uses executable examples for deterministic VM, TLS, JFR, and preview API
-observations, while G1 default selection and the Vector API remain notes until
-small tests can represent their behavior honestly.
+Java 27 is part of the current repository build, but it is still pre-GA. The
+repository uses executable examples for deterministic VM, TLS, JFR, and
+preview API observations, while G1 default selection and the Vector API remain
+explanatory representations for their runtime or incubator limitations.
 
 Repo path:
 

@@ -254,9 +254,9 @@ mvn "-Dtest=ScopedValuesFourthPreviewNotesTest,StructuredConcurrencyFourthPrevie
 
 Interview angle: explain Java 22-24 as a transition from Java 21's modern baseline into newer platform capabilities. Some features become final, such as unnamed variables and patterns, the Foreign Function and Memory API, Stream Gatherers, and the Class-File API. Others remain preview, runtime, security, or notes-only topics.
 
-## Stage 8: Java 25-26 LTS And Current-Release Maturity
+## Stage 8: Java 25-27 LTS And Current-Release Maturity
 
-Java 25 and Java 26 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is the repository build baseline and contains nine executable examples: HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, Structured Concurrency, and the Vector API. G1 synchronization reduction remains an explanatory module. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on JDK 26 their tests keep the source and documentation checks and skip only that old-preview compiler step. The `java-27` branch prepares the next baseline and adds focused examples for deterministic Java 27 behavior while leaving workload-dependent and incubator-only topics as notes.
+Java 25 through Java 27 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is a released feature release with nine executable examples, including the Vector API, while G1 synchronization reduction remains explanatory. The repository now builds on JDK 27 and includes Java 27's pre-GA examples; Java 27 is still a scheduled platform release, so study its preview, incubator, runtime, and security topics with that lifecycle distinction in mind. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on the JDK 27 baseline their tests keep the source and documentation checks and skip only that old-preview compiler step.
 
 Read these first by version:
 
@@ -314,7 +314,7 @@ mvn "-Dtest=PemEncodingsSecondPreviewExamplesTest,StructuredConcurrencySixthPrev
 mvn "-Dtest=VectorApiEleventhIncubatorNotesTest,PrimitivePatternsFourthPreviewExamplesTest" test
 ```
 
-Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics. It should also explain why moving a build baseline does not automatically mean every feature should become an executable example.
+Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics, and separates the JDK 27 pre-GA lifecycle from the repository's JDK 27 build baseline. It should also explain why moving a build baseline does not automatically mean every feature should become an executable example.
 
 ## Full Review Checklist
 
@@ -328,14 +328,15 @@ Use this checklist when preparing to show the repository:
 6. Pick one Java 25, Java 26, or Java 27 example or notes class and explain whether the feature is final, preview, incubator, runtime, tooling-related, security-related, or removal-related.
 7. Use [jep-index.md](jep-index.md) when you need the official JEP number or status.
 
-## Java 27 Preparation
+## Java 27 Pre-GA Study Phase
 
-Java 27 is prepared on the `java-27` branch while the stable line remains on
-Java 26. The executable examples cover compact-header defaults, hybrid TLS
-configuration, JFR redaction, and the continuing Lazy Constants, primitive
-patterns, Structured Concurrency, and PEM Encodings previews. G1 default
-selection and the Vector API remain explanatory because they need workload
-evidence or would duplicate an earlier incubator example.
+Java 27 is included in the current JDK 27 build baseline, but the platform is
+still pre-GA. Its executable examples cover compact-header defaults, hybrid
+TLS configuration, JFR redaction, the continuing Lazy Constants, primitive
+patterns, Structured Concurrency, and PEM Encodings previews, plus the Vector
+API's twelfth incubation. G1 default selection and the Java 27 Vector API
+remain explanatory representations because the useful evidence is limited to
+configuration or incubator context rather than a portable performance claim.
 
 Read these files:
 

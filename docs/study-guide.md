@@ -52,7 +52,7 @@ Start here if the goal is interview preparation or practical Java fluency.
 | Language simplification | 12-16 | Switch expressions, text blocks, records, pattern matching |
 | Modern Java style | 17-21 | Sealed classes, virtual threads, record patterns, pattern switch, sequenced collections |
 | Post-Java-21 expansion | 22-24 | FFM, Stream Gatherers, Class-File API, source simplification, runtime/security notes |
-| LTS and current-release maturity | 25-26 | Final vs preview/incubator status, scoped values, compact source files, runtime/removal notes |
+| LTS and current-release maturity | 25-27 | Final vs preview/incubator status, scoped values, compact source files, runtime/removal notes, and Java 27 pre-GA awareness |
 
 Do not try to memorize every JEP number on the first pass. Focus on explaining why the feature exists and where you would use it.
 
@@ -79,8 +79,8 @@ Do not try to memorize every JEP number on the first pass. Focus on explaining w
 7. **Java 22-24**
    Study these as post-Java-21 expansion releases. Focus on final platform APIs, source simplification, and the difference between executable examples and explanatory modules.
 
-8. **Java 25-26**
-   Study these for LTS and current-version awareness. Pay attention to status labels: final, preview, incubator, notes-only, runtime, tooling, cryptography, or removal.
+8. **Java 25-27**
+   Study these for LTS and current-version awareness. Pay attention to status labels: final, preview, incubator, notes-only, runtime, tooling, cryptography, or removal. Treat Java 27 as a pre-GA study phase, separate from the fact that JDK 27 is now the repository build baseline.
 
 ## What To Skip Initially
 

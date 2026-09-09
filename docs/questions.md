@@ -1,5 +1,11 @@
 # Questions
 
+This FAQ is a reference supplement for the learning guides. Use it for
+cross-version questions about release cadence, feature maturity, JEPs, and
+repository choices; use the [Learning Path](learning-path.md) for a staged
+study progression and the [Status Matrix](status-matrix.md) for feature
+classification.
+
 ## 1) What are Java agents?
 
 A **Java agent** is a special Java component that can observe or modify the behavior of a JVM application, often by instrumenting bytecode.

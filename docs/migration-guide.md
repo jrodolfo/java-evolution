@@ -186,7 +186,7 @@ What changed conceptually:
 - Java 25 finalized Scoped Values, Flexible Constructor Bodies, Module Import Declarations, Compact Source Files and Instance Main Methods, and the Key Derivation Function API.
 - Java 25 also continues preview/incubator work such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
 - Runtime and operational improvements continue around AOT, JFR, object headers, and garbage collection.
-- Java 25 preview child-compilation workflows need a JDK 25 preview compiler for full execution. Under the JDK 26 repository baseline, those tests keep source and documentation checks while skipping the old-preview compiler step.
+- Java 25 preview child-compilation workflows need a JDK 25 preview compiler for full execution. Under the JDK 27 repository baseline, those tests keep source and documentation checks while skipping the old-preview compiler step.
 
 Compatibility concerns:
 
@@ -224,22 +224,22 @@ mvn "-Dtest=PrimitivePatternsThirdPreviewExamplesTest,StableValuesPreviewExample
 
 Interview angle: explain Java 25 as an LTS baseline where several features become final, while preview, incubator, runtime, tooling, and security topics still require maturity discipline.
 
-## Java 26 Awareness
+## Java 26 And Java 27 Awareness
 
-Java 26 is useful for current-release awareness and is now the repository build baseline. Eight Java 26 topics have focused C1 executable examples: HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, and Structured Concurrency. G1 synchronization reduction and the Vector API remain C2 explanatory modules.
+Java 26 is a released feature release, and the repository now builds on JDK 27. Nine Java 26 topics have focused executable examples: HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, Structured Concurrency, and the Vector API. G1 synchronization reduction remains an explanatory module.
 
 What changed conceptually:
 
 - Java 26 adds HTTP/3 support for the standard HTTP Client API.
 - Java 26 removes the Applet API after a long deprecation path, and this repository demonstrates the removal with a child-compiler example.
-- Java 26 continues preview/incubator work such as Structured Concurrency, Lazy Constants, and the Vector API. PEM encodings and primitive patterns are also preview work; the repository demonstrates Structured Concurrency, Lazy Constants, PEM encodings, and primitive patterns in isolated JDK 26 child-JVM workflows, while the Vector API remains explanatory material.
+- Java 26 continues preview/incubator work such as Structured Concurrency, Lazy Constants, and the Vector API. PEM encodings and primitive patterns are also preview work; the repository demonstrates these features in isolated matching-JDK child-JVM workflows where appropriate, while G1 synchronization reduction remains explanatory material.
 - Runtime and operational improvements continue around final-field restrictions, AOT object caching, and G1 garbage collection.
 
 Compatibility concerns:
 
-- Java 26 topics should not be treated as executable examples merely because the repository now builds on JDK 26.
+- A feature should not be treated as an executable example merely because the repository builds on a JDK that contains it.
 - Final, preview, incubator, runtime, removal, and notes-only labels matter more than the release number alone.
-- Converting Java 26 notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies. Final-field restrictions are executable because the runtime warning can be captured in an isolated child JVM. Applet API removal is executable because the removed package can be verified through a deterministic compiler failure. AOT object caching is executable because cache creation and reuse can be verified in isolated child JVMs without measuring startup performance. Structured Concurrency is executable because scope joining and failure propagation can be verified in an isolated child JVM without relying on scheduler timing or cancellation races.
+- Converting notes into executable examples should be a separate feature-by-feature validation decision. HTTP/3 is executable because its final API can be demonstrated without live network dependencies. Final-field restrictions are executable because the runtime warning can be captured in an isolated child JVM. Applet API removal is executable because the removed package can be verified through a deterministic compiler failure. AOT object caching is executable because cache creation and reuse can be verified in isolated child JVMs without measuring startup performance. Structured Concurrency and the Vector API are executable in their Java 26 units because their behavior can be demonstrated with bounded child-JVM probes; runtime-performance consequences still require separate measurement.
 
 Study these files:
 
@@ -276,12 +276,14 @@ Use this lightweight checklist before discussing or planning a Java version migr
 5. Run the focused tests for the features you want to explain.
 6. Use [status-matrix.md](status-matrix.md) to avoid confusing final, preview, incubator, runtime, tooling, and notes-only topics.
 
-## Java 27 Preparation
+## Java 27 Pre-GA Awareness
 
-The `java-27` branch prepares Java 27 support without changing the stable
-Java 26 line. Java 27 examples use `--enable-preview --release 27` only in
-isolated child JVMs. G1 default selection and the Vector API remain notes;
-the other listed Java 27 areas have focused executable examples.
+Java 27 is the current repository build baseline, but the platform is still
+pre-GA. Java 27 preview examples use `--enable-preview --release 27` only in
+isolated child JVMs. G1 default selection and the Vector API remain
+explanatory representations; the other listed Java 27 areas have focused
+executable examples.
 
 Study `src/main/java/net/jrodolfo/java_evolution/java27/README.md` and its
-matching tests before changing the project baseline.
+matching tests while keeping the pre-GA platform status separate from the
+repository's current build baseline.
