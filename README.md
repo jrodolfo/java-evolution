@@ -16,7 +16,7 @@ Java keeps evolving, while everyday work can settle into older habits. This repo
 
 ## Requirements
 
-- JDK 27
+- [JDK 27](https://jdk.java.net/27/)
 - Maven 3.9+
 - GNU Make for repository-level convenience targets
 - Node.js for documentation audits
