@@ -4,16 +4,16 @@ All notable changes to this project are documented here.
 
 This project uses simple release notes rather than a strict changelog taxonomy. The repository is educational, so each release entry focuses on learning value, documentation coverage, and validation status.
 
-## Unreleased
+## v1.7.0
 
 ### Added
 
-- Began Java 27 preparation on the `java-27` branch with executable examples for compact object header defaults, hybrid TLS key exchange configuration, JFR redaction-option availability, and continuing preview APIs.
+- Integrated Java 27 into `main` with executable examples for compact object header defaults, hybrid TLS key exchange configuration, JFR redaction-option availability, and continuing preview APIs.
 - Added explanatory Java 27 modules for the G1 default collector and the Vector API incubator continuation.
 
 ### Changed
 
-- Updated the branch build, platform helpers, CI configuration, feature indexes, navigation audit, and learning documentation for JDK 27.
+- Updated the JDK 27 build baseline, platform helpers, CI configuration, feature indexes, navigation audit, and learning documentation.
 
 ## v1.6.3
 
