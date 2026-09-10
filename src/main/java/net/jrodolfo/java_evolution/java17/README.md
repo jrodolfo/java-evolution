@@ -128,8 +128,8 @@ mvn -Dtest=RandomGeneratorExamplesTest,HexFormatExamplesTest,StrongEncapsulation
 
 ## References
 
-- [OpenJDK JDK 17 project](https://openjdk.org/projects/jdk/17/)
-- [JEP 409: Sealed Classes](https://openjdk.org/jeps/409)
-- [JEP 406: Pattern Matching for switch](https://openjdk.org/jeps/406)
-- [JEP 356: Enhanced Pseudo-Random Number Generators](https://openjdk.org/jeps/356)
-- [JEP 403: Strongly Encapsulate JDK Internals](https://openjdk.org/jeps/403)
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/17/">OpenJDK JDK 17 project</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/409">JEP 409: Sealed Classes</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/406">JEP 406: Pattern Matching for switch</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/356">JEP 356: Enhanced Pseudo-Random Number Generators</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/403">JEP 403: Strongly Encapsulate JDK Internals</a>

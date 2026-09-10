@@ -117,11 +117,11 @@ Most Java 20 topics are preview or incubator refinements, so pay attention to st
 
 ## References
 
-- [OpenJDK JDK 20 project](https://openjdk.org/projects/jdk/20/)
-- [JEP 432: Record Patterns](https://openjdk.org/jeps/432)
-- [JEP 433: Pattern Matching for switch](https://openjdk.org/jeps/433)
-- [JEP 436: Virtual Threads](https://openjdk.org/jeps/436)
-- [JEP 429: Scoped Values](https://openjdk.org/jeps/429)
-- [JEP 437: Structured Concurrency](https://openjdk.org/jeps/437)
-- [JEP 434: Foreign Function and Memory API](https://openjdk.org/jeps/434)
-- [JEP 438: Vector API](https://openjdk.org/jeps/438)
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/20/">OpenJDK JDK 20 project</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/432">JEP 432: Record Patterns</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/433">JEP 433: Pattern Matching for switch</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/436">JEP 436: Virtual Threads</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/429">JEP 429: Scoped Values</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/437">JEP 437: Structured Concurrency</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/434">JEP 434: Foreign Function and Memory API</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/438">JEP 438: Vector API</a>

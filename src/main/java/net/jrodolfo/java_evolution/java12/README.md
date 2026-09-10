@@ -110,6 +110,6 @@ After this package, continue with Java 13 to see text blocks preview and the `yi
 
 ## References
 
-- [OpenJDK JDK 12 project](https://openjdk.org/projects/jdk/12/)
-- [JEP 325: Switch Expressions](https://openjdk.org/jeps/325)
-- [JEP 334: JVM Constants API](https://openjdk.org/jeps/334)
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/12/">OpenJDK JDK 12 project</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/325">JEP 325: Switch Expressions</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/334">JEP 334: JVM Constants API</a>

@@ -87,8 +87,8 @@ This package now includes executable tooling, documentation, and child-JVM servi
 
 ## References
 
-- [OpenJDK JDK 18 project](https://openjdk.org/projects/jdk/18/)
-- [JEP 400: UTF-8 by Default](https://openjdk.org/jeps/400)
-- [JEP 408: Simple Web Server](https://openjdk.org/jeps/408)
-- [JEP 413: Code Snippets in Java API Documentation](https://openjdk.org/jeps/413)
-- [JEP 418: Internet-Address Resolution SPI](https://openjdk.org/jeps/418)
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/18/">OpenJDK JDK 18 project</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/400">JEP 400: UTF-8 by Default</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/408">JEP 408: Simple Web Server</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/413">JEP 413: Code Snippets in Java API Documentation</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/418">JEP 418: Internet-Address Resolution SPI</a>

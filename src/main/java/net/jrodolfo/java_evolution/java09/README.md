@@ -126,9 +126,9 @@ mvn -Dtest=ProcessApiExamplesTest,StackWalkerExamplesTest,ModuleSystemExamplesTe
 
 ## References
 
-- [OpenJDK JDK 9 project](https://openjdk.org/projects/jdk9/)
-- [JEP 261: Module System](https://openjdk.org/jeps/261)
-- [JEP 269: Convenience Factory Methods for Collections](https://openjdk.org/jeps/269)
-- [JEP 102: Process API Updates](https://openjdk.org/jeps/102)
-- [JEP 259: Stack-Walking API](https://openjdk.org/jeps/259)
-- [JEP 213: Milling Project Coin](https://openjdk.org/jeps/213)
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk9/">OpenJDK JDK 9 project</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/261">JEP 261: Module System</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/269">JEP 269: Convenience Factory Methods for Collections</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/102">JEP 102: Process API Updates</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/259">JEP 259: Stack-Walking API</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/213">JEP 213: Milling Project Coin</a>

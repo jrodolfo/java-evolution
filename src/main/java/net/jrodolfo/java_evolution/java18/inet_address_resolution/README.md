@@ -113,5 +113,5 @@ repository demonstrates it only in an isolated child JVM.
 
 ## References
 
-- [JEP 418: Internet-Address Resolution SPI](https://openjdk.org/jeps/418)
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/418">JEP 418: Internet-Address Resolution SPI</a>
 - [Java 18 package overview](../README.md)

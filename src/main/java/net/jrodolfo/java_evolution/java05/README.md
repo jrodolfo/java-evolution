@@ -153,6 +153,6 @@ After this package, continue with Java 6 to see tooling, scripting, console, mon
 
 ## References
 
-- [Oracle J2SE 5.0 new features](https://docs.oracle.com/javase/1.5.0/docs/relnotes/features.html)
-- [J2SE 5.0 overview](https://www.oracle.com/java/technologies/javase/j2se-v50.html)
-- [Formatter API in Java 5](https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html)
+- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/1.5.0/docs/relnotes/features.html">Oracle J2SE 5.0 new features</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://www.oracle.com/java/technologies/javase/j2se-v50.html">J2SE 5.0 overview</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html">Formatter API in Java 5</a>

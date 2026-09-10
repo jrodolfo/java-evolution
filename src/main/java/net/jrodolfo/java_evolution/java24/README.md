@@ -118,17 +118,17 @@ This package combines executable final-feature examples with several runtime, se
 
 ## References
 
-- [OpenJDK JDK 24 project](https://openjdk.org/projects/jdk/24/)
-- [JEP 485: Stream Gatherers](https://openjdk.org/jeps/485)
-- [JEP 484: Class-File API](https://openjdk.org/jeps/484)
-- [JEP 486: Permanently Disable the Security Manager](https://openjdk.org/jeps/486)
-- [JEP 491: Synchronize Virtual Threads without Pinning](https://openjdk.org/jeps/491)
-- [JEP 496: Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism](https://openjdk.org/jeps/496)
-- [JEP 497: Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm](https://openjdk.org/jeps/497)
-- [JEP 483: Ahead-of-Time Class Loading & Linking](https://openjdk.org/jeps/483)
-- [JEP 478: Key Derivation Function API](https://openjdk.org/jeps/478)
-- [JEP 492: Flexible Constructor Bodies](https://openjdk.org/jeps/492)
-- [JEP 494: Module Import Declarations](https://openjdk.org/jeps/494)
-- [JEP 488: Primitive Types in Patterns, instanceof, and switch](https://openjdk.org/jeps/488)
-- [JEP 487: Scoped Values](https://openjdk.org/jeps/487)
-- [JEP 499: Structured Concurrency](https://openjdk.org/jeps/499)
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/24/">OpenJDK JDK 24 project</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/485">JEP 485: Stream Gatherers</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/484">JEP 484: Class-File API</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/486">JEP 486: Permanently Disable the Security Manager</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/491">JEP 491: Synchronize Virtual Threads without Pinning</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/496">JEP 496: Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/497">JEP 497: Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/483">JEP 483: Ahead-of-Time Class Loading &amp; Linking</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/478">JEP 478: Key Derivation Function API</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/492">JEP 492: Flexible Constructor Bodies</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/494">JEP 494: Module Import Declarations</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/488">JEP 488: Primitive Types in Patterns, instanceof, and switch</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/487">JEP 487: Scoped Values</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/499">JEP 499: Structured Concurrency</a>

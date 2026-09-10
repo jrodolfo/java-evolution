@@ -88,5 +88,5 @@ After this package, continue with Java 3 for dynamic proxies, timers, shutdown h
 
 ## References
 
-- [Java language enhancements history](https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html)
-- [Java 2 platform documentation](https://docs.oracle.com/cd/E19683-01/806-7930/features-2d/index.html)
+- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html">Java language enhancements history</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/cd/E19683-01/806-7930/features-2d/index.html">Java 2 platform documentation</a>

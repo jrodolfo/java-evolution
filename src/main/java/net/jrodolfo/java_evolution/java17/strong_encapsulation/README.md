@@ -191,6 +191,6 @@ targeted access flags only as explicit, temporary compatibility bridges.
 
 ## References
 
-- [JEP 403: Strongly Encapsulate JDK Internals](https://openjdk.org/jeps/403)
-- [JEP 261: Module System](https://openjdk.org/jeps/261)
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/403">JEP 403: Strongly Encapsulate JDK Internals</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/261">JEP 261: Module System</a>
 - [Java 17 package overview](../README.md)

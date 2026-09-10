@@ -116,6 +116,6 @@ After this package, continue with Java 12 to see the start of switch expressions
 
 ## References
 
-- [OpenJDK JDK 11 project](https://openjdk.org/projects/jdk/11/)
-- [JEP 321: HTTP Client](https://openjdk.org/jeps/321)
-- [JEP 323: Local-Variable Syntax for Lambda Parameters](https://openjdk.org/jeps/323)
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/11/">OpenJDK JDK 11 project</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/321">JEP 321: HTTP Client</a>
+- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/323">JEP 323: Local-Variable Syntax for Lambda Parameters</a>

@@ -26,252 +26,252 @@ Java 1-7 predate the modern JEP process used elsewhere in this index. Their entr
 
 | Reference | Feature | Status |
 |---|---|---|
-| [What's New in JDK 1.1](https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/post1.0/whatsnew/index.html) | Inner classes, reflection, serialization, JDBC, RMI, JavaBeans, AWT updates, JAR files, JNI, internationalization | Final, Examples |
-| [JavaBeans specification](https://www.oracle.com/java/technologies/javase/javabeans-spec.html) | JavaBeans component conventions | Final, Executable Example |
-| [Object Serialization FAQ](https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html) | Object serialization | Final, Executable Example |
-| [Java language enhancements history](https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html) | `strictfp` and assertions | Final, Executable Examples |
-| [Java 2 platform documentation](https://docs.oracle.com/cd/E19683-01/806-7930/features-2d/index.html) | Java 2D | Final, Executable Example |
-| [J2SE 1.4 new features and enhancements](https://download.oracle.com/otn_hosted_doc/jdeveloper/904preview/jdk14doc/docs/relnotes/features.html) | NIO, regular expressions, XML/JAXP, integrated security APIs, logging, preferences, chained exceptions | Final, Examples and Preferences Notes |
-| [Oracle J2SE 5.0 new features](https://docs.oracle.com/javase/1.5.0/docs/relnotes/features.html) | Generics, enhanced for loop, autoboxing, enums, varargs, static import, annotations, concurrency utilities | Final, Example |
-| [Formatter API](https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html) | Formatted output | Final, Example |
-| [Oracle Java SE 6 features](https://www.oracle.com/java/technologies/javase/features.html) | Navigable collections, scripting, compiler API, console, monitoring, web-service support | Final, Examples and Explanatory Modules |
-| [Java SE 6 scripting guide](https://docs.oracle.com/javase/6/docs/technotes/guides/scripting/) | Scripting support | Final, Executable Example |
-| [JavaCompiler API](https://docs.oracle.com/javase/6/docs/api/javax/tools/JavaCompiler.html) | Compiler API | Final, Tooling, Executable Example |
-| [Console API](https://docs.oracle.com/javase/6/docs/api/java/io/Console.html) | Console API | Final, Tooling, Executable Example |
-| [Project Coin / JSR 334](https://cr.openjdk.org/~darcy/ProjectCoin/ProjectCoin-Documentation-v0.9375.html) | Try-with-resources, multi-catch, diamond operator, strings in switch, binary literals, numeric underscores | Final, Example |
-| [JDK 7 adoption guide](https://docs.oracle.com/javase/7/docs/webnotes/adoptionGuide/) | NIO.2 and Java 7 migration features | Final, Example |
-| [Java SE 7 concurrency enhancements](https://docs.oracle.com/javase/7/docs/technotes/guides/concurrency/changes7.html) | Fork/join framework | Final, Example |
-| [java.lang.invoke package](https://docs.oracle.com/javase/7/docs/api/java/lang/invoke/package-summary.html) | `invokedynamic` and method handles | Final, Tooling, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/post1.0/whatsnew/index.html">What's New in JDK 1.1</a> | Inner classes, reflection, serialization, JDBC, RMI, JavaBeans, AWT updates, JAR files, JNI, internationalization | Final, Examples |
+| <a target="_blank" rel="noopener noreferrer" href="https://www.oracle.com/java/technologies/javase/javabeans-spec.html">JavaBeans specification</a> | JavaBeans component conventions | Final, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html">Object Serialization FAQ</a> | Object serialization | Final, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html">Java language enhancements history</a> | `strictfp` and assertions | Final, Executable Examples |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/cd/E19683-01/806-7930/features-2d/index.html">Java 2 platform documentation</a> | Java 2D | Final, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://download.oracle.com/otn_hosted_doc/jdeveloper/904preview/jdk14doc/docs/relnotes/features.html">J2SE 1.4 new features and enhancements</a> | NIO, regular expressions, XML/JAXP, integrated security APIs, logging, preferences, chained exceptions | Final, Examples and Preferences Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/1.5.0/docs/relnotes/features.html">Oracle J2SE 5.0 new features</a> | Generics, enhanced for loop, autoboxing, enums, varargs, static import, annotations, concurrency utilities | Final, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Formatter.html">Formatter API</a> | Formatted output | Final, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://www.oracle.com/java/technologies/javase/features.html">Oracle Java SE 6 features</a> | Navigable collections, scripting, compiler API, console, monitoring, web-service support | Final, Examples and Explanatory Modules |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/6/docs/technotes/guides/scripting/">Java SE 6 scripting guide</a> | Scripting support | Final, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/6/docs/api/javax/tools/JavaCompiler.html">JavaCompiler API</a> | Compiler API | Final, Tooling, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/6/docs/api/java/io/Console.html">Console API</a> | Console API | Final, Tooling, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://cr.openjdk.org/~darcy/ProjectCoin/ProjectCoin-Documentation-v0.9375.html">Project Coin / JSR 334</a> | Try-with-resources, multi-catch, diamond operator, strings in switch, binary literals, numeric underscores | Final, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/7/docs/webnotes/adoptionGuide/">JDK 7 adoption guide</a> | NIO.2 and Java 7 migration features | Final, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/7/docs/technotes/guides/concurrency/changes7.html">Java SE 7 concurrency enhancements</a> | Fork/join framework | Final, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/7/docs/api/java/lang/invoke/package-summary.html">java.lang.invoke package</a> | `invokedynamic` and method handles | Final, Tooling, Executable Example |
 
 ## Java 8
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 126](https://openjdk.org/jeps/126) | Lambda Expressions and Virtual Extension Methods | Final |
-| [JEP 107](https://openjdk.org/jeps/107) | Bulk Data Operations for Collections | Final |
-| [JEP 150](https://openjdk.org/jeps/150) | Date & Time API | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/126">JEP 126</a> | Lambda Expressions and Virtual Extension Methods | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/107">JEP 107</a> | Bulk Data Operations for Collections | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/150">JEP 150</a> | Date & Time API | Final |
 
 ## Java 9
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 261](https://openjdk.org/jeps/261) | Module System | Final, Executable Example |
-| [JEP 269](https://openjdk.org/jeps/269) | Convenience Factory Methods for Collections | Final |
-| [JEP 102](https://openjdk.org/jeps/102) | Process API Updates | Final |
-| [JEP 259](https://openjdk.org/jeps/259) | Stack-Walking API | Final |
-| [JEP 213](https://openjdk.org/jeps/213) | Milling Project Coin | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/261">JEP 261</a> | Module System | Final, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/269">JEP 269</a> | Convenience Factory Methods for Collections | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/102">JEP 102</a> | Process API Updates | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/259">JEP 259</a> | Stack-Walking API | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/213">JEP 213</a> | Milling Project Coin | Final |
 
 ## Java 10
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 286](https://openjdk.org/jeps/286) | Local-Variable Type Inference | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/286">JEP 286</a> | Local-Variable Type Inference | Final |
 
 ## Java 11
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 321](https://openjdk.org/jeps/321) | HTTP Client | Final |
-| [JEP 323](https://openjdk.org/jeps/323) | Local-Variable Syntax for Lambda Parameters | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/321">JEP 321</a> | HTTP Client | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/323">JEP 323</a> | Local-Variable Syntax for Lambda Parameters | Final |
 
 ## Java 12
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 325](https://openjdk.org/jeps/325) | Switch Expressions | Preview |
-| [JEP 334](https://openjdk.org/jeps/334) | JVM Constants API | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/325">JEP 325</a> | Switch Expressions | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/334">JEP 334</a> | JVM Constants API | Final |
 
 ## Java 13
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 354](https://openjdk.org/jeps/354) | Switch Expressions | Preview |
-| [JEP 355](https://openjdk.org/jeps/355) | Text Blocks | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/354">JEP 354</a> | Switch Expressions | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/355">JEP 355</a> | Text Blocks | Preview |
 
 ## Java 14
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 361](https://openjdk.org/jeps/361) | Switch Expressions | Final |
-| [JEP 358](https://openjdk.org/jeps/358) | Helpful NullPointerExceptions | Runtime |
-| [JEP 359](https://openjdk.org/jeps/359) | Records | Preview |
-| [JEP 305](https://openjdk.org/jeps/305) | Pattern Matching for instanceof | Preview |
-| [JEP 368](https://openjdk.org/jeps/368) | Text Blocks | Second Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/361">JEP 361</a> | Switch Expressions | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/358">JEP 358</a> | Helpful NullPointerExceptions | Runtime |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/359">JEP 359</a> | Records | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/305">JEP 305</a> | Pattern Matching for instanceof | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/368">JEP 368</a> | Text Blocks | Second Preview |
 
 ## Java 15
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 378](https://openjdk.org/jeps/378) | Text Blocks | Final |
-| [JEP 360](https://openjdk.org/jeps/360) | Sealed Classes | Preview |
-| [JEP 375](https://openjdk.org/jeps/375) | Pattern Matching for instanceof | Second Preview |
-| [JEP 384](https://openjdk.org/jeps/384) | Records | Second Preview |
-| [JEP 371](https://openjdk.org/jeps/371) | Hidden Classes | Final, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/378">JEP 378</a> | Text Blocks | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/360">JEP 360</a> | Sealed Classes | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/375">JEP 375</a> | Pattern Matching for instanceof | Second Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/384">JEP 384</a> | Records | Second Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/371">JEP 371</a> | Hidden Classes | Final, Executable Example |
 
 ## Java 16
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 395](https://openjdk.org/jeps/395) | Records | Final |
-| [JEP 394](https://openjdk.org/jeps/394) | Pattern Matching for instanceof | Final |
-| [JEP 397](https://openjdk.org/jeps/397) | Sealed Classes | Second Preview |
-| [JEP 380](https://openjdk.org/jeps/380) | Unix-Domain Socket Channels | Final, Executable Example |
-| [JEP 338](https://openjdk.org/jeps/338) | Vector API | Incubator, Notes |
-| [JEP 389](https://openjdk.org/jeps/389) | Foreign Linker API | Incubator, Notes |
-| [JEP 393](https://openjdk.org/jeps/393) | Foreign-Memory Access API | Third Incubator, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/395">JEP 395</a> | Records | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/394">JEP 394</a> | Pattern Matching for instanceof | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/397">JEP 397</a> | Sealed Classes | Second Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/380">JEP 380</a> | Unix-Domain Socket Channels | Final, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/338">JEP 338</a> | Vector API | Incubator, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/389">JEP 389</a> | Foreign Linker API | Incubator, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/393">JEP 393</a> | Foreign-Memory Access API | Third Incubator, Notes |
 
 ## Java 17
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 409](https://openjdk.org/jeps/409) | Sealed Classes | Final |
-| [JEP 406](https://openjdk.org/jeps/406) | Pattern Matching for switch | Preview |
-| [JEP 356](https://openjdk.org/jeps/356) | Enhanced Pseudo-Random Number Generators | Final |
-| [JEP 403](https://openjdk.org/jeps/403) | Strongly Encapsulate JDK Internals | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/409">JEP 409</a> | Sealed Classes | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/406">JEP 406</a> | Pattern Matching for switch | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/356">JEP 356</a> | Enhanced Pseudo-Random Number Generators | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/403">JEP 403</a> | Strongly Encapsulate JDK Internals | Runtime, Executable Example |
 
 ## Java 18
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 400](https://openjdk.org/jeps/400) | UTF-8 by Default | Final |
-| [JEP 408](https://openjdk.org/jeps/408) | Simple Web Server | Tooling, Example |
-| [JEP 413](https://openjdk.org/jeps/413) | Code Snippets in Java API Documentation | Tooling, Example |
-| [JEP 418](https://openjdk.org/jeps/418) | Internet-Address Resolution SPI | Final, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/400">JEP 400</a> | UTF-8 by Default | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/408">JEP 408</a> | Simple Web Server | Tooling, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/413">JEP 413</a> | Code Snippets in Java API Documentation | Tooling, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/418">JEP 418</a> | Internet-Address Resolution SPI | Final, Executable Example |
 
 ## Java 19
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 425](https://openjdk.org/jeps/425) | Virtual Threads | Preview |
-| [JEP 428](https://openjdk.org/jeps/428) | Structured Concurrency | Incubator, Explanatory module |
-| [JEP 405](https://openjdk.org/jeps/405) | Record Patterns | Preview |
-| [JEP 427](https://openjdk.org/jeps/427) | Pattern Matching for switch | Preview |
-| [JEP 420](https://openjdk.org/jeps/420) | Pattern Matching for switch | Second Preview |
-| [JEP 424](https://openjdk.org/jeps/424) | Foreign Function and Memory API | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/425">JEP 425</a> | Virtual Threads | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/428">JEP 428</a> | Structured Concurrency | Incubator, Explanatory module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/405">JEP 405</a> | Record Patterns | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/427">JEP 427</a> | Pattern Matching for switch | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/420">JEP 420</a> | Pattern Matching for switch | Second Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/424">JEP 424</a> | Foreign Function and Memory API | Preview, Notes |
 
 ## Java 20
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 432](https://openjdk.org/jeps/432) | Record Patterns | Preview |
-| [JEP 433](https://openjdk.org/jeps/433) | Pattern Matching for switch | Preview |
-| [JEP 436](https://openjdk.org/jeps/436) | Virtual Threads | Preview, Notes |
-| [JEP 429](https://openjdk.org/jeps/429) | Scoped Values | Incubator, Explanatory module |
-| [JEP 437](https://openjdk.org/jeps/437) | Structured Concurrency | Incubator, Explanatory module |
-| [JEP 434](https://openjdk.org/jeps/434) | Foreign Function and Memory API | Preview, Notes |
-| [JEP 438](https://openjdk.org/jeps/438) | Vector API | Incubator, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/432">JEP 432</a> | Record Patterns | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/433">JEP 433</a> | Pattern Matching for switch | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/436">JEP 436</a> | Virtual Threads | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/429">JEP 429</a> | Scoped Values | Incubator, Explanatory module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/437">JEP 437</a> | Structured Concurrency | Incubator, Explanatory module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/434">JEP 434</a> | Foreign Function and Memory API | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/438">JEP 438</a> | Vector API | Incubator, Executable Example |
 
 ## Java 21
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 444](https://openjdk.org/jeps/444) | Virtual Threads | Final |
-| [JEP 440](https://openjdk.org/jeps/440) | Record Patterns | Final |
-| [JEP 441](https://openjdk.org/jeps/441) | Pattern Matching for switch | Final |
-| [JEP 431](https://openjdk.org/jeps/431) | Sequenced Collections | Final |
-| [JEP 443](https://openjdk.org/jeps/443) | Unnamed Patterns and Variables | Preview |
-| [JEP 446](https://openjdk.org/jeps/446) | Scoped Values | Preview, Explanatory module |
-| [JEP 453](https://openjdk.org/jeps/453) | Structured Concurrency | Preview, Explanatory module |
-| [JEP 452](https://openjdk.org/jeps/452) | Key Encapsulation Mechanism API | Final, Security, Executable example |
-| [JEP 442](https://openjdk.org/jeps/442) | Foreign Function and Memory API | Third Preview, Notes |
-| [JEP 445](https://openjdk.org/jeps/445) | Unnamed Classes and Instance Main Methods | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/444">JEP 444</a> | Virtual Threads | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/440">JEP 440</a> | Record Patterns | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/441">JEP 441</a> | Pattern Matching for switch | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/431">JEP 431</a> | Sequenced Collections | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/443">JEP 443</a> | Unnamed Patterns and Variables | Preview |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/446">JEP 446</a> | Scoped Values | Preview, Explanatory module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/453">JEP 453</a> | Structured Concurrency | Preview, Explanatory module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/452">JEP 452</a> | Key Encapsulation Mechanism API | Final, Security, Executable example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/442">JEP 442</a> | Foreign Function and Memory API | Third Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/445">JEP 445</a> | Unnamed Classes and Instance Main Methods | Preview, Notes |
 
 ## Java 22
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 456](https://openjdk.org/jeps/456) | Unnamed Variables and Patterns | Final |
-| [JEP 454](https://openjdk.org/jeps/454) | Foreign Function and Memory API | Final, Example |
-| [JEP 463](https://openjdk.org/jeps/463) | Implicitly Declared Classes and Instance Main Methods | Second Preview, Notes |
-| [JEP 461](https://openjdk.org/jeps/461) | Stream Gatherers | Preview, Notes |
-| [JEP 457](https://openjdk.org/jeps/457) | Class-File API | Preview, Notes |
-| [JEP 447](https://openjdk.org/jeps/447) | Statements before super(...) | Preview, Notes |
-| [JEP 458](https://openjdk.org/jeps/458) | Launch Multi-File Source-Code Programs | Final, Tooling, Executable Example |
-| [JEP 464](https://openjdk.org/jeps/464) | Scoped Values | Preview, Notes |
-| [JEP 462](https://openjdk.org/jeps/462) | Structured Concurrency | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/456">JEP 456</a> | Unnamed Variables and Patterns | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/454">JEP 454</a> | Foreign Function and Memory API | Final, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/463">JEP 463</a> | Implicitly Declared Classes and Instance Main Methods | Second Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/461">JEP 461</a> | Stream Gatherers | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/457">JEP 457</a> | Class-File API | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/447">JEP 447</a> | Statements before super(...) | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/458">JEP 458</a> | Launch Multi-File Source-Code Programs | Final, Tooling, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/464">JEP 464</a> | Scoped Values | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/462">JEP 462</a> | Structured Concurrency | Preview, Notes |
 
 ## Java 23
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 467](https://openjdk.org/jeps/467) | Markdown Documentation Comments | Tooling, Executable Example |
-| [JEP 477](https://openjdk.org/jeps/477) | Implicitly Declared Classes and Instance Main Methods | Third Preview, Notes |
-| [JEP 455](https://openjdk.org/jeps/455) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
-| [JEP 476](https://openjdk.org/jeps/476) | Module Import Declarations | Preview, Notes |
-| [JEP 482](https://openjdk.org/jeps/482) | Flexible Constructor Bodies | Preview, Notes |
-| [JEP 473](https://openjdk.org/jeps/473) | Stream Gatherers | Preview, Notes |
-| [JEP 466](https://openjdk.org/jeps/466) | Class-File API | Preview, Notes |
-| [JEP 481](https://openjdk.org/jeps/481) | Scoped Values | Preview, Notes |
-| [JEP 480](https://openjdk.org/jeps/480) | Structured Concurrency | Preview, Notes |
-| [JEP 471](https://openjdk.org/jeps/471) | Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal | Runtime, Executable Example |
-| [JEP 474](https://openjdk.org/jeps/474) | ZGC: Generational Mode by Default | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/467">JEP 467</a> | Markdown Documentation Comments | Tooling, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/477">JEP 477</a> | Implicitly Declared Classes and Instance Main Methods | Third Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/455">JEP 455</a> | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/476">JEP 476</a> | Module Import Declarations | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/482">JEP 482</a> | Flexible Constructor Bodies | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/473">JEP 473</a> | Stream Gatherers | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/466">JEP 466</a> | Class-File API | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/481">JEP 481</a> | Scoped Values | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/480">JEP 480</a> | Structured Concurrency | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/471">JEP 471</a> | Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/474">JEP 474</a> | ZGC: Generational Mode by Default | Runtime, Executable Example |
 
 ## Java 24
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 485](https://openjdk.org/jeps/485) | Stream Gatherers | Final |
-| [JEP 484](https://openjdk.org/jeps/484) | Class-File API | Final, Example |
-| [JEP 486](https://openjdk.org/jeps/486) | Permanently Disable the Security Manager | Runtime, Executable Example |
-| [JEP 491](https://openjdk.org/jeps/491) | Synchronize Virtual Threads without Pinning | Runtime, Executable Example |
-| [JEP 496](https://openjdk.org/jeps/496) | Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism | Final, Security, Example |
-| [JEP 497](https://openjdk.org/jeps/497) | Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm | Final, Security, Example |
-| [JEP 483](https://openjdk.org/jeps/483) | Ahead-of-Time Class Loading & Linking | Runtime, Tooling, Executable Example |
-| [JEP 478](https://openjdk.org/jeps/478) | Key Derivation Function API | Preview, Security, Notes |
-| [JEP 492](https://openjdk.org/jeps/492) | Flexible Constructor Bodies | Preview, Notes |
-| [JEP 494](https://openjdk.org/jeps/494) | Module Import Declarations | Preview, Notes |
-| [JEP 488](https://openjdk.org/jeps/488) | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
-| [JEP 487](https://openjdk.org/jeps/487) | Scoped Values | Preview, Notes |
-| [JEP 499](https://openjdk.org/jeps/499) | Structured Concurrency | Preview, Notes |
-| [JEP 495](https://openjdk.org/jeps/495) | Simple Source Files and Instance Main Methods | Fourth Preview, Notes |
-| [JEP 450](https://openjdk.org/jeps/450) | Compact Object Headers | Experimental, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/485">JEP 485</a> | Stream Gatherers | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/484">JEP 484</a> | Class-File API | Final, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/486">JEP 486</a> | Permanently Disable the Security Manager | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/491">JEP 491</a> | Synchronize Virtual Threads without Pinning | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/496">JEP 496</a> | Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism | Final, Security, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/497">JEP 497</a> | Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm | Final, Security, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/483">JEP 483</a> | Ahead-of-Time Class Loading & Linking | Runtime, Tooling, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/478">JEP 478</a> | Key Derivation Function API | Preview, Security, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/492">JEP 492</a> | Flexible Constructor Bodies | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/494">JEP 494</a> | Module Import Declarations | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/488">JEP 488</a> | Primitive Types in Patterns, instanceof, and switch | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/487">JEP 487</a> | Scoped Values | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/499">JEP 499</a> | Structured Concurrency | Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/495">JEP 495</a> | Simple Source Files and Instance Main Methods | Fourth Preview, Notes |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/450">JEP 450</a> | Compact Object Headers | Experimental, Notes |
 
 ## Java 25
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 506](https://openjdk.org/jeps/506) | Scoped Values | Final |
-| [JEP 513](https://openjdk.org/jeps/513) | Flexible Constructor Bodies | Final |
-| [JEP 511](https://openjdk.org/jeps/511) | Module Import Declarations | Final, Tooling, Executable Example |
-| [JEP 512](https://openjdk.org/jeps/512) | Compact Source Files and Instance Main Methods | Final, Tooling, Executable Example |
-| [JEP 510](https://openjdk.org/jeps/510) | Key Derivation Function API | Final, Security, Example |
-| [JEP 507](https://openjdk.org/jeps/507) | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |
-| [JEP 502](https://openjdk.org/jeps/502) | Stable Values | Preview, Executable Example |
-| [JEP 470](https://openjdk.org/jeps/470) | PEM Encodings of Cryptographic Objects | Preview, Security, Executable Example |
-| [JEP 505](https://openjdk.org/jeps/505) | Structured Concurrency | Preview, Executable Example |
-| [JEP 508](https://openjdk.org/jeps/508) | Vector API | Incubator, Executable Example |
-| [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | Runtime, Tooling, Executable Example |
-| [JEP 509](https://openjdk.org/jeps/509) | JFR CPU-Time Profiling | Runtime, Experimental, Explanatory Module |
-| [JEP 518](https://openjdk.org/jeps/518) | JFR Cooperative Sampling | Runtime, Explanatory Module |
-| [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | Runtime, Executable Example |
-| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Runtime, Executable Example |
-| [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Runtime, Explanatory Module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/506">JEP 506</a> | Scoped Values | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/513">JEP 513</a> | Flexible Constructor Bodies | Final |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/511">JEP 511</a> | Module Import Declarations | Final, Tooling, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/512">JEP 512</a> | Compact Source Files and Instance Main Methods | Final, Tooling, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/510">JEP 510</a> | Key Derivation Function API | Final, Security, Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/507">JEP 507</a> | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/502">JEP 502</a> | Stable Values | Preview, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/470">JEP 470</a> | PEM Encodings of Cryptographic Objects | Preview, Security, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/505">JEP 505</a> | Structured Concurrency | Preview, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/508">JEP 508</a> | Vector API | Incubator, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/514">JEP 514</a> | Ahead-of-Time Command-Line Ergonomics | Runtime, Tooling, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/509">JEP 509</a> | JFR CPU-Time Profiling | Runtime, Experimental, Explanatory Module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/518">JEP 518</a> | JFR Cooperative Sampling | Runtime, Explanatory Module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/520">JEP 520</a> | JFR Method Timing & Tracing | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/519">JEP 519</a> | Compact Object Headers | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/521">JEP 521</a> | Generational Shenandoah | Runtime, Explanatory Module |
 
 ## Java 26
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 500](https://openjdk.org/jeps/500) | Prepare to Make Final Mean Final | Runtime, Executable Example |
-| [JEP 504](https://openjdk.org/jeps/504) | Remove the Applet API | Final, Removal, Executable Example |
-| [JEP 516](https://openjdk.org/jeps/516) | Ahead-of-Time Object Caching with Any GC | Runtime, Executable Example |
-| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for the HTTP Client API | Final, Executable Example |
-| [JEP 522](https://openjdk.org/jeps/522) | G1 GC: Improve Throughput by Reducing Synchronization | Runtime, Explanatory Module |
-| [JEP 524](https://openjdk.org/jeps/524) | PEM Encodings of Cryptographic Objects | Preview, Security, Executable Example |
-| [JEP 525](https://openjdk.org/jeps/525) | Structured Concurrency | Preview, Executable Example |
-| [JEP 526](https://openjdk.org/jeps/526) | Lazy Constants | Preview, Executable Example |
-| [JEP 529](https://openjdk.org/jeps/529) | Vector API | Incubator, Explanatory Module |
-| [JEP 530](https://openjdk.org/jeps/530) | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/500">JEP 500</a> | Prepare to Make Final Mean Final | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/504">JEP 504</a> | Remove the Applet API | Final, Removal, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/516">JEP 516</a> | Ahead-of-Time Object Caching with Any GC | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/517">JEP 517</a> | HTTP/3 for the HTTP Client API | Final, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/522">JEP 522</a> | G1 GC: Improve Throughput by Reducing Synchronization | Runtime, Explanatory Module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/524">JEP 524</a> | PEM Encodings of Cryptographic Objects | Preview, Security, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/525">JEP 525</a> | Structured Concurrency | Preview, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/526">JEP 526</a> | Lazy Constants | Preview, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/529">JEP 529</a> | Vector API | Incubator, Explanatory Module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/530">JEP 530</a> | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |
 
 ## Java 27
 
 | JEP | Feature | Status |
 |---|---|---|
-| [JEP 523](https://openjdk.org/jeps/523) | Make G1 the Default Garbage Collector in All Environments | Runtime, Explanatory Module |
-| [JEP 527](https://openjdk.org/jeps/527) | TLS 1.3 Hybrid Key Exchange | Final, Security, Executable Example |
-| [JEP 531](https://openjdk.org/jeps/531) | Lazy Constants | Preview, Executable Example |
-| [JEP 532](https://openjdk.org/jeps/532) | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |
-| [JEP 533](https://openjdk.org/jeps/533) | Structured Concurrency | Preview, Executable Example |
-| [JEP 534](https://openjdk.org/jeps/534) | Compact Object Headers by Default | Runtime, Executable Example |
-| [JEP 536](https://openjdk.org/jeps/536) | JFR in-process data redaction | Runtime, Security, Executable Example |
-| [JEP 537](https://openjdk.org/jeps/537) | Vector API | Incubator, Explanatory Module |
-| [JEP 538](https://openjdk.org/jeps/538) | PEM Encodings of Cryptographic Objects | Preview, Security, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/523">JEP 523</a> | Make G1 the Default Garbage Collector in All Environments | Runtime, Explanatory Module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/527">JEP 527</a> | TLS 1.3 Hybrid Key Exchange | Final, Security, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/531">JEP 531</a> | Lazy Constants | Preview, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/532">JEP 532</a> | Primitive Types in Patterns, instanceof, and switch | Preview, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/533">JEP 533</a> | Structured Concurrency | Preview, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/534">JEP 534</a> | Compact Object Headers by Default | Runtime, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/536">JEP 536</a> | JFR in-process data redaction | Runtime, Security, Executable Example |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/537">JEP 537</a> | Vector API | Incubator, Explanatory Module |
+| <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/538">JEP 538</a> | PEM Encodings of Cryptographic Objects | Preview, Security, Executable Example |
