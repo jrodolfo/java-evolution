@@ -4,6 +4,15 @@ All notable changes to this project are documented here.
 
 This project uses simple release notes rather than a strict changelog taxonomy. The repository is educational, so each release entry focuses on learning value, documentation coverage, and validation status.
 
+## v1.7.3
+
+Patch release focused on correcting the Maven project version and improving generated JavaDoc presentation.
+
+### Changed
+
+- Updated the Maven project version from `0.0.1-SNAPSHOT` to `1.7.3`.
+- Added explicit titles to generated JavaDoc pages.
+
 ## v1.7.2
 
 Patch release focused on enforcing the JDK 27 build baseline for direct Maven commands and keeping CI aligned with the current repository structure.
