@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>net.jrodolfo</groupId>
 	<artifactId>java-evolution</artifactId>
-	<version>1.7.3</version>
+	<version>1.7.4</version>
 	<name>java-evolution</name>
 	<description>Didactic Java reference project demonstrating features introduced from Java 1 through Java 27.</description>
 	<url>https://github.com/jrodolfo/java-evolution</url>

@@ -4,6 +4,15 @@ All notable changes to this project are documented here.
 
 This project uses simple release notes rather than a strict changelog taxonomy. The repository is educational, so each release entry focuses on learning value, documentation coverage, and validation status.
 
+## v1.7.4
+
+Patch release focused on restoring Java 27 package descriptions in generated JavaDoc.
+
+### Changed
+
+- Added package-level JavaDoc descriptions for all nine Java 27 feature packages using the repository's established `package-info.java` convention.
+- Updated the Maven project version to `1.7.4`.
+
 ## v1.7.3
 
 Patch release focused on correcting the Maven project version and improving generated JavaDoc presentation.
