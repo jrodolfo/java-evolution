@@ -59,6 +59,45 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.6.3</version>
+				<executions>
+					<execution>
+						<id>require-java-27</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireJavaVersion>
+									<version>[27,28)</version>
+									<message>
+										Java 27 is required to build Java Evolution.
+										Maven is using another Java runtime.
+
+										Select Java 27 using one of the repository scripts:
+
+										  source scripts/use-java-27-mac.sh
+										  source scripts/use-java-27-linux.sh
+										  source scripts/use-java-27-windows.sh
+										  . .\scripts\use-java-27-windows.ps1
+
+										Then verify with:
+
+										  java --version
+										  mvn --version
+									</message>
+								</requireJavaVersion>
+							</rules>
+							<fail>true</fail>
+							<failFast>true</failFast>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<argLine>-Xshare:off --enable-native-access=ALL-UNNAMED</argLine>
