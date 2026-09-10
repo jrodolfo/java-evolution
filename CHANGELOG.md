@@ -4,6 +4,16 @@ All notable changes to this project are documented here.
 
 This project uses simple release notes rather than a strict changelog taxonomy. The repository is educational, so each release entry focuses on learning value, documentation coverage, and validation status.
 
+## v1.7.2
+
+Patch release focused on enforcing the JDK 27 build baseline for direct Maven commands and keeping CI aligned with the current repository structure.
+
+### Changed
+
+- Added Maven Enforcer validation during the `validate` phase, requiring Maven to run with Java 27 and providing platform-specific setup guidance when it does not.
+- Updated Javadoc CI to use the temporary JDK 27 early-access setup and removed the obsolete `java-27` branch trigger.
+- Linked required build and documentation tools from the root requirements section.
+
 ## v1.7.1
 
 Patch release focused on Windows GitHub Actions compatibility and consistent JDK 27 build commands.
