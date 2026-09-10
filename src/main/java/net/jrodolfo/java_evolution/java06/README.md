@@ -86,8 +86,8 @@ After this package, continue with Java 7 to see Project Coin language refinement
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://www.oracle.com/java/technologies/javase/features.html">Oracle Java SE 6 features and enhancements</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/6/docs/technotes/guides/scripting/">Java SE 6 scripting guide</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/6/docs/api/javax/tools/JavaCompiler.html">JavaCompiler API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/6/docs/api/java/io/Console.html">Console API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/6/docs/technotes/guides/management/index.html">Java SE 6 monitoring and management</a>
+- [Oracle Java SE 6 features and enhancements](https://www.oracle.com/java/technologies/javase/features.html)
+- [Java SE 6 scripting guide](https://docs.oracle.com/javase/6/docs/technotes/guides/scripting/)
+- [JavaCompiler API](https://docs.oracle.com/javase/6/docs/api/javax/tools/JavaCompiler.html)
+- [Console API](https://docs.oracle.com/javase/6/docs/api/java/io/Console.html)
+- [Java SE 6 monitoring and management](https://docs.oracle.com/javase/6/docs/technotes/guides/management/index.html)

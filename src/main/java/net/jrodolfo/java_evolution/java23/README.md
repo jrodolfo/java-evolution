@@ -138,14 +138,14 @@ After this package, continue with Java 24 to see Stream Gatherers and the Class-
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/23/">OpenJDK JDK 23 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/467">JEP 467: Markdown Documentation Comments</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/455">JEP 455: Primitive Types in Patterns, instanceof, and switch</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/476">JEP 476: Module Import Declarations</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/482">JEP 482: Flexible Constructor Bodies</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/473">JEP 473: Stream Gatherers</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/466">JEP 466: Class-File API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/481">JEP 481: Scoped Values</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/480">JEP 480: Structured Concurrency</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/471">JEP 471: Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/474">JEP 474: ZGC: Generational Mode by Default</a>
+- [OpenJDK JDK 23 project](https://openjdk.org/projects/jdk/23/)
+- [JEP 467: Markdown Documentation Comments](https://openjdk.org/jeps/467)
+- [JEP 455: Primitive Types in Patterns, instanceof, and switch](https://openjdk.org/jeps/455)
+- [JEP 476: Module Import Declarations](https://openjdk.org/jeps/476)
+- [JEP 482: Flexible Constructor Bodies](https://openjdk.org/jeps/482)
+- [JEP 473: Stream Gatherers](https://openjdk.org/jeps/473)
+- [JEP 466: Class-File API](https://openjdk.org/jeps/466)
+- [JEP 481: Scoped Values](https://openjdk.org/jeps/481)
+- [JEP 480: Structured Concurrency](https://openjdk.org/jeps/480)
+- [JEP 471: Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal](https://openjdk.org/jeps/471)
+- [JEP 474: ZGC: Generational Mode by Default](https://openjdk.org/jeps/474)

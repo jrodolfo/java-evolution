@@ -138,12 +138,12 @@ This package mixes final APIs with previews and notes-only topics, so use it to 
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/22/">OpenJDK JDK 22 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/456">JEP 456: Unnamed Variables and Patterns</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/454">JEP 454: Foreign Function and Memory API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/461">JEP 461: Stream Gatherers</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/457">JEP 457: Class-File API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/447">JEP 447: Statements before super(...)</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/458">JEP 458: Launch Multi-File Source-Code Programs</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/464">JEP 464: Scoped Values</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/462">JEP 462: Structured Concurrency</a>
+- [OpenJDK JDK 22 project](https://openjdk.org/projects/jdk/22/)
+- [JEP 456: Unnamed Variables and Patterns](https://openjdk.org/jeps/456)
+- [JEP 454: Foreign Function and Memory API](https://openjdk.org/jeps/454)
+- [JEP 461: Stream Gatherers](https://openjdk.org/jeps/461)
+- [JEP 457: Class-File API](https://openjdk.org/jeps/457)
+- [JEP 447: Statements before super(...)](https://openjdk.org/jeps/447)
+- [JEP 458: Launch Multi-File Source-Code Programs](https://openjdk.org/jeps/458)
+- [JEP 464: Scoped Values](https://openjdk.org/jeps/464)
+- [JEP 462: Structured Concurrency](https://openjdk.org/jeps/462)

@@ -45,8 +45,8 @@ For modern releases, OpenJDK and Oracle general-availability announcements provi
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/en/java/javase/26/docs/specs/jvms/jvms-1.html">Java SE releases and class-file versions</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk7/">OpenJDK JDK 7 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://mail.openjdk.org/pipermail/announce/2025-September/000360.html">OpenJDK JDK 25 general availability announcement</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/26/">OpenJDK JDK 26 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/27/">OpenJDK JDK 27 project</a>
+- [Java SE releases and class-file versions](https://docs.oracle.com/en/java/javase/26/docs/specs/jvms/jvms-1.html)
+- [OpenJDK JDK 7 project](https://openjdk.org/projects/jdk7/)
+- [OpenJDK JDK 25 general availability announcement](https://mail.openjdk.org/pipermail/announce/2025-September/000360.html)
+- [OpenJDK JDK 26 project](https://openjdk.org/projects/jdk/26/)
+- [OpenJDK JDK 27 project](https://openjdk.org/projects/jdk/27/)

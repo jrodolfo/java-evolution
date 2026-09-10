@@ -98,8 +98,8 @@ After this package, continue with Java 15 to see text blocks become final and se
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/14/">OpenJDK JDK 14 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/361">JEP 361: Switch Expressions</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/358">JEP 358: Helpful NullPointerExceptions</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/359">JEP 359: Records</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/305">JEP 305: Pattern Matching for instanceof</a>
+- [OpenJDK JDK 14 project](https://openjdk.org/projects/jdk/14/)
+- [JEP 361: Switch Expressions](https://openjdk.org/jeps/361)
+- [JEP 358: Helpful NullPointerExceptions](https://openjdk.org/jeps/358)
+- [JEP 359: Records](https://openjdk.org/jeps/359)
+- [JEP 305: Pattern Matching for instanceof](https://openjdk.org/jeps/305)

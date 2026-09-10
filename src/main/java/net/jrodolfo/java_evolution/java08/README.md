@@ -157,7 +157,7 @@ After this package, continue with Java 9 to see how the platform added modules, 
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk8/">OpenJDK JDK 8 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/126">JEP 126: Lambda Expressions and Virtual Extension Methods</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/107">JEP 107: Bulk Data Operations for Collections</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/150">JEP 150: Date &amp; Time API</a>
+- [OpenJDK JDK 8 project](https://openjdk.org/projects/jdk8/)
+- [JEP 126: Lambda Expressions and Virtual Extension Methods](https://openjdk.org/jeps/126)
+- [JEP 107: Bulk Data Operations for Collections](https://openjdk.org/jeps/107)
+- [JEP 150: Date & Time API](https://openjdk.org/jeps/150)

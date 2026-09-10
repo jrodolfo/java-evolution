@@ -123,5 +123,5 @@ After this package, continue with Java 5 for generics, enums, annotations, enhan
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html">Java language enhancements history</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://download.oracle.com/otn_hosted_doc/jdeveloper/904preview/jdk14doc/docs/relnotes/features.html">J2SE 1.4 new features and enhancements</a>
+- [Java language enhancements history](https://docs.oracle.com/javase/8/docs/technotes/guides/language/enhancements.html)
+- [J2SE 1.4 new features and enhancements](https://download.oracle.com/otn_hosted_doc/jdeveloper/904preview/jdk14doc/docs/relnotes/features.html)

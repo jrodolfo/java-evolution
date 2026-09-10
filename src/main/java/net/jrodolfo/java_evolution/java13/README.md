@@ -81,6 +81,6 @@ After this package, continue with Java 14 to see switch expressions become final
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/13/">OpenJDK JDK 13 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/354">JEP 354: Switch Expressions</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/355">JEP 355: Text Blocks</a>
+- [OpenJDK JDK 13 project](https://openjdk.org/projects/jdk/13/)
+- [JEP 354: Switch Expressions](https://openjdk.org/jeps/354)
+- [JEP 355: Text Blocks](https://openjdk.org/jeps/355)

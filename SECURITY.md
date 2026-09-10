@@ -8,8 +8,8 @@ If you find a security-sensitive problem in an example or workflow, please repor
 
 Contact:
 
-- GitHub: <a target="_blank" rel="noopener noreferrer" href="https://github.com/jrodolfo">https://github.com/jrodolfo</a>
-- Webpage: <a target="_blank" rel="noopener noreferrer" href="https://jrodolfo.net">https://jrodolfo.net</a>
+- GitHub: https://github.com/jrodolfo
+- Webpage: https://jrodolfo.net
 
 ## Scope
 

@@ -81,13 +81,13 @@ mvn --version
 These tools are optional if you run Maven commands directly, but they are
 needed for the repository-level convenience and documentation targets:
 
-- <a target="_blank" rel="noopener noreferrer" href="https://www.gnu.org/software/make/">GNU Make</a> runs the repository-level
+- [GNU Make](https://www.gnu.org/software/make/) runs the repository-level
   targets such as `make run-tests`, `make generate-docs`, `make run-demos`, and
   `make check-release`. Maven remains usable without Make.
-- <a target="_blank" rel="noopener noreferrer" href="https://nodejs.org/en/download/package-manager">Node.js</a> runs the local
+- [Node.js](https://nodejs.org/en/download/package-manager) runs the local
   documentation navigation audit used by `make audit-docs`, `make check-docs`,
   and `make check-release`.
-- <a target="_blank" rel="noopener noreferrer" href="https://github.com/lycheeverse/lychee#installation"><code>lychee</code></a> checks Markdown
+- [`lychee`](https://github.com/lycheeverse/lychee#installation) checks Markdown
   and HTML links for `make check-links`, `make check-docs`, and
   `make check-release`.
 

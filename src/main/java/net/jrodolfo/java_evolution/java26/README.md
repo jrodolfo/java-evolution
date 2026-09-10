@@ -148,14 +148,14 @@ Java 26 contains nine executable examples and one explanatory module. HTTP/3, fi
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/26/">OpenJDK JDK 26 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/500">JEP 500: Prepare to Make Final Mean Final</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/504">JEP 504: Remove the Applet API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/516">JEP 516: Ahead-of-Time Object Caching with Any GC</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/517">JEP 517: HTTP/3 for the HTTP Client API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/522">JEP 522: G1 GC: Improve Throughput by Reducing Synchronization</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/524">JEP 524: PEM Encodings of Cryptographic Objects</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/525">JEP 525: Structured Concurrency</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/526">JEP 526: Lazy Constants</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/529">JEP 529: Vector API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/530">JEP 530: Primitive Types in Patterns, instanceof, and switch</a>
+- [OpenJDK JDK 26 project](https://openjdk.org/projects/jdk/26/)
+- [JEP 500: Prepare to Make Final Mean Final](https://openjdk.org/jeps/500)
+- [JEP 504: Remove the Applet API](https://openjdk.org/jeps/504)
+- [JEP 516: Ahead-of-Time Object Caching with Any GC](https://openjdk.org/jeps/516)
+- [JEP 517: HTTP/3 for the HTTP Client API](https://openjdk.org/jeps/517)
+- [JEP 522: G1 GC: Improve Throughput by Reducing Synchronization](https://openjdk.org/jeps/522)
+- [JEP 524: PEM Encodings of Cryptographic Objects](https://openjdk.org/jeps/524)
+- [JEP 525: Structured Concurrency](https://openjdk.org/jeps/525)
+- [JEP 526: Lazy Constants](https://openjdk.org/jeps/526)
+- [JEP 529: Vector API](https://openjdk.org/jeps/529)
+- [JEP 530: Primitive Types in Patterns, instanceof, and switch](https://openjdk.org/jeps/530)

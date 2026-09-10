@@ -19,7 +19,7 @@ usually describe one scalar value at a time, and the just-in-time compiler may
 or may not recognize a form that can use the processor's vector instructions.
 
 Java 16 introduced the Vector API as an incubator API through
-<a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/338">JEP 338</a>. It gave Java code a more direct way to
+[JEP 338](https://openjdk.org/jeps/338). It gave Java code a more direct way to
 describe operations over **lanes**, where each lane is one value in a vector
 group. A scalar calculation handles one value at a time; a vector calculation
 can add corresponding values in several lanes together. The API lived in the
@@ -46,9 +46,9 @@ to detect and reason about.
 
 Java 16 explored these needs through two related but separate incubator APIs:
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/389">JEP 389: Foreign Linker API</a> explored calling
+- [JEP 389: Foreign Linker API](https://openjdk.org/jeps/389) explored calling
   foreign functions from Java.
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/393">JEP 393: Foreign-Memory Access API, third incubator</a>
+- [JEP 393: Foreign-Memory Access API, third incubator](https://openjdk.org/jeps/393)
   explored safe and efficient access to memory outside the Java heap.
 
 The two efforts were later combined into the Foreign Function and Memory API.
@@ -144,10 +144,10 @@ The Unix-domain socket message-exchange test skips when local socket binding is 
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/16/">OpenJDK JDK 16 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/395">JEP 395: Records</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/394">JEP 394: Pattern Matching for instanceof</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/380">JEP 380: Unix-Domain Socket Channels</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/338">JEP 338: Vector API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/389">JEP 389: Foreign Linker API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/393">JEP 393: Foreign-Memory Access API</a>
+- [OpenJDK JDK 16 project](https://openjdk.org/projects/jdk/16/)
+- [JEP 395: Records](https://openjdk.org/jeps/395)
+- [JEP 394: Pattern Matching for instanceof](https://openjdk.org/jeps/394)
+- [JEP 380: Unix-Domain Socket Channels](https://openjdk.org/jeps/380)
+- [JEP 338: Vector API](https://openjdk.org/jeps/338)
+- [JEP 389: Foreign Linker API](https://openjdk.org/jeps/389)
+- [JEP 393: Foreign-Memory Access API](https://openjdk.org/jeps/393)

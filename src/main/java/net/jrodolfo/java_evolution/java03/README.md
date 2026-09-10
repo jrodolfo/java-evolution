@@ -73,4 +73,4 @@ After this package, continue with Java 4 for assertions, regex, NIO, logging, ch
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://www.oracle.com/java/technologies/javase/jdk-relnotes-index.html">JDK release notes index</a>
+- [JDK release notes index](https://www.oracle.com/java/technologies/javase/jdk-relnotes-index.html)

@@ -112,9 +112,9 @@ The structured concurrency and foreign memory examples are notes-based because t
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/19/">OpenJDK JDK 19 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/425">JEP 425: Virtual Threads</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/428">JEP 428: Structured Concurrency</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/405">JEP 405: Record Patterns</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/427">JEP 427: Pattern Matching for switch</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/424">JEP 424: Foreign Function and Memory API</a>
+- [OpenJDK JDK 19 project](https://openjdk.org/projects/jdk/19/)
+- [JEP 425: Virtual Threads](https://openjdk.org/jeps/425)
+- [JEP 428: Structured Concurrency](https://openjdk.org/jeps/428)
+- [JEP 405: Record Patterns](https://openjdk.org/jeps/405)
+- [JEP 427: Pattern Matching for switch](https://openjdk.org/jeps/427)
+- [JEP 424: Foreign Function and Memory API](https://openjdk.org/jeps/424)

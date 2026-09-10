@@ -16,11 +16,11 @@ Java keeps evolving, while everyday work can settle into older habits. This repo
 
 ## Requirements
 
-- <a target="_blank" rel="noopener noreferrer" href="https://jdk.java.net/27/">JDK 27</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://maven.apache.org/download.cgi">Maven 3.9+</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://www.gnu.org/software/make/">GNU Make</a> for repository-level convenience targets
-- <a target="_blank" rel="noopener noreferrer" href="https://nodejs.org/en/download">Node.js</a> for documentation audits
-- <a target="_blank" rel="noopener noreferrer" href="https://github.com/lycheeverse/lychee"><code>lychee</code></a> for Markdown and HTML link checks
+- [JDK 27](https://jdk.java.net/27/)
+- [Maven 3.9+](https://maven.apache.org/download.cgi)
+- [GNU Make](https://www.gnu.org/software/make/) for repository-level convenience targets
+- [Node.js](https://nodejs.org/en/download) for documentation audits
+- [`lychee`](https://github.com/lycheeverse/lychee) for Markdown and HTML link checks
 
 See [Platform Setup](docs/platform-setup.md) for platform-specific JDK helpers and optional-tool details.
 
@@ -109,9 +109,9 @@ Java 1 through Java 7 predate the modern OpenJDK release pages and JEP process, 
 ## Contact
 
 - Software Developer: Rod Oliveira
-- GitHub: <a target="_blank" rel="noopener noreferrer" href="https://github.com/jrodolfo">https://github.com/jrodolfo</a>
-- LinkedIn: <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/rodoliveira">https://linkedin.com/in/rodoliveira</a>
-- Webpage: <a target="_blank" rel="noopener noreferrer" href="https://jrodolfo.net">https://jrodolfo.net</a>
+- GitHub: https://github.com/jrodolfo
+- LinkedIn: https://linkedin.com/in/rodoliveira
+- Webpage: https://jrodolfo.net
 
 ## License
 

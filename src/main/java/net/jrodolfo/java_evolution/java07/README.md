@@ -135,7 +135,7 @@ After this package, continue with Java 8 to see lambdas, streams, `Optional`, de
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/7/docs/webnotes/adoptionGuide/">JDK 7 adoption guide</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://cr.openjdk.org/~darcy/ProjectCoin/ProjectCoin-Documentation-v0.9375.html">Project Coin / JSR 334 documentation</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/7/docs/technotes/guides/concurrency/changes7.html">Java SE 7 concurrency enhancements</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://docs.oracle.com/javase/7/docs/api/java/lang/invoke/package-summary.html">java.lang.invoke package in Java 7</a>
+- [JDK 7 adoption guide](https://docs.oracle.com/javase/7/docs/webnotes/adoptionGuide/)
+- [Project Coin / JSR 334 documentation](https://cr.openjdk.org/~darcy/ProjectCoin/ProjectCoin-Documentation-v0.9375.html)
+- [Java SE 7 concurrency enhancements](https://docs.oracle.com/javase/7/docs/technotes/guides/concurrency/changes7.html)
+- [java.lang.invoke package in Java 7](https://docs.oracle.com/javase/7/docs/api/java/lang/invoke/package-summary.html)

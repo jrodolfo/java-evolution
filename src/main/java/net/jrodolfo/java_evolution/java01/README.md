@@ -143,6 +143,6 @@ After this package, continue with Java 2 for the Collections Framework and the J
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/post1.0/whatsnew/index.html">What's New in JDK 1.1</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://www.oracle.com/java/technologies/javase/javabeans-spec.html">JavaBeans specification</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html">Object Serialization FAQ</a>
+- [What's New in JDK 1.1](https://courses.cs.washington.edu/courses/cse341/99wi/java/tutorial/post1.0/whatsnew/index.html)
+- [JavaBeans specification](https://www.oracle.com/java/technologies/javase/javabeans-spec.html)
+- [Object Serialization FAQ](https://www.oracle.com/java/technologies/javase/serializationfaq-jsp.html)

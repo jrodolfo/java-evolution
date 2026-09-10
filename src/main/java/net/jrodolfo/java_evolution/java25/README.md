@@ -208,20 +208,20 @@ After Java 25, continue to `java26/README.md` for current-release material under
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/25/">OpenJDK JDK 25 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/506">JEP 506: Scoped Values</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/513">JEP 513: Flexible Constructor Bodies</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/511">JEP 511: Module Import Declarations</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/512">JEP 512: Compact Source Files and Instance Main Methods</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/510">JEP 510: Key Derivation Function API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/507">JEP 507: Primitive Types in Patterns, instanceof, and switch</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/502">JEP 502: Stable Values</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/470">JEP 470: PEM Encodings of Cryptographic Objects</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/505">JEP 505: Structured Concurrency</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/508">JEP 508: Vector API</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/514">JEP 514: Ahead-of-Time Command-Line Ergonomics</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/509">JEP 509: JFR CPU-Time Profiling</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/518">JEP 518: JFR Cooperative Sampling</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/520">JEP 520: JFR Method Timing &amp; Tracing</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/519">JEP 519: Compact Object Headers</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/521">JEP 521: Generational Shenandoah</a>
+- [OpenJDK JDK 25 project](https://openjdk.org/projects/jdk/25/)
+- [JEP 506: Scoped Values](https://openjdk.org/jeps/506)
+- [JEP 513: Flexible Constructor Bodies](https://openjdk.org/jeps/513)
+- [JEP 511: Module Import Declarations](https://openjdk.org/jeps/511)
+- [JEP 512: Compact Source Files and Instance Main Methods](https://openjdk.org/jeps/512)
+- [JEP 510: Key Derivation Function API](https://openjdk.org/jeps/510)
+- [JEP 507: Primitive Types in Patterns, instanceof, and switch](https://openjdk.org/jeps/507)
+- [JEP 502: Stable Values](https://openjdk.org/jeps/502)
+- [JEP 470: PEM Encodings of Cryptographic Objects](https://openjdk.org/jeps/470)
+- [JEP 505: Structured Concurrency](https://openjdk.org/jeps/505)
+- [JEP 508: Vector API](https://openjdk.org/jeps/508)
+- [JEP 514: Ahead-of-Time Command-Line Ergonomics](https://openjdk.org/jeps/514)
+- [JEP 509: JFR CPU-Time Profiling](https://openjdk.org/jeps/509)
+- [JEP 518: JFR Cooperative Sampling](https://openjdk.org/jeps/518)
+- [JEP 520: JFR Method Timing & Tracing](https://openjdk.org/jeps/520)
+- [JEP 519: Compact Object Headers](https://openjdk.org/jeps/519)
+- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)

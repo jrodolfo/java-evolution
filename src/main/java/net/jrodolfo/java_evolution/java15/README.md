@@ -87,7 +87,7 @@ mvn -Dtest=HiddenClassesExamplesTest test
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/15/">OpenJDK JDK 15 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/378">JEP 378: Text Blocks</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/360">JEP 360: Sealed Classes</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/371">JEP 371: Hidden Classes</a>
+- [OpenJDK JDK 15 project](https://openjdk.org/projects/jdk/15/)
+- [JEP 378: Text Blocks](https://openjdk.org/jeps/378)
+- [JEP 360: Sealed Classes](https://openjdk.org/jeps/360)
+- [JEP 371: Hidden Classes](https://openjdk.org/jeps/371)

@@ -72,5 +72,5 @@ After this package, continue with Java 11 to see the standard HTTP Client and sm
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/10/">OpenJDK JDK 10 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/286">JEP 286: Local-Variable Type Inference</a>
+- [OpenJDK JDK 10 project](https://openjdk.org/projects/jdk/10/)
+- [JEP 286: Local-Variable Type Inference](https://openjdk.org/jeps/286)

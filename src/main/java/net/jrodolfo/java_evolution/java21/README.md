@@ -157,12 +157,12 @@ Java 21 is an LTS release, so spend extra time here. After this package, continu
 
 ## References
 
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/projects/jdk/21/">OpenJDK JDK 21 project</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/444">JEP 444: Virtual Threads</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/440">JEP 440: Record Patterns</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/441">JEP 441: Pattern Matching for switch</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/431">JEP 431: Sequenced Collections</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/443">JEP 443: Unnamed Patterns and Variables</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/446">JEP 446: Scoped Values</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/453">JEP 453: Structured Concurrency</a>
-- <a target="_blank" rel="noopener noreferrer" href="https://openjdk.org/jeps/452">JEP 452: Key Encapsulation Mechanism API</a>
+- [OpenJDK JDK 21 project](https://openjdk.org/projects/jdk/21/)
+- [JEP 444: Virtual Threads](https://openjdk.org/jeps/444)
+- [JEP 440: Record Patterns](https://openjdk.org/jeps/440)
+- [JEP 441: Pattern Matching for switch](https://openjdk.org/jeps/441)
+- [JEP 431: Sequenced Collections](https://openjdk.org/jeps/431)
+- [JEP 443: Unnamed Patterns and Variables](https://openjdk.org/jeps/443)
+- [JEP 446: Scoped Values](https://openjdk.org/jeps/446)
+- [JEP 453: Structured Concurrency](https://openjdk.org/jeps/453)
+- [JEP 452: Key Encapsulation Mechanism API](https://openjdk.org/jeps/452)
