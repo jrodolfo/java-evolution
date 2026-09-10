@@ -17,9 +17,9 @@ Java keeps evolving, while everyday work can settle into older habits. This repo
 ## Requirements
 
 - [JDK 27](https://jdk.java.net/27/)
-- Maven 3.9+
-- GNU Make for repository-level convenience targets
-- Node.js for documentation audits
+- [Maven 3.9+](https://maven.apache.org/download.cgi)
+- [GNU Make](https://www.gnu.org/software/make/) for repository-level convenience targets
+- [Node.js](https://nodejs.org/en/download) for documentation audits
 - [`lychee`](https://github.com/lycheeverse/lychee) for Markdown and HTML link checks
 
 See [Platform Setup](docs/platform-setup.md) for platform-specific JDK helpers and optional-tool details.
