@@ -4,6 +4,16 @@ All notable changes to this project are documented here.
 
 This project uses simple release notes rather than a strict changelog taxonomy. The repository is educational, so each release entry focuses on learning value, documentation coverage, and validation status.
 
+## v1.8.0
+
+Patch release focused on reconciling the repository with the Java 27 GA release.
+
+### Changed
+
+- Updated current documentation from Java 27 pre-GA wording to the September 15, 2026 GA status while preserving historical release notes.
+- Updated GitHub Actions to use the official Oracle OpenJDK 27 distribution with Maven caching.
+- Updated the Maven project version to `1.8.0`.
+
 ## v1.7.4
 
 Patch release focused on restoring Java 27 package descriptions in generated JavaDoc.
