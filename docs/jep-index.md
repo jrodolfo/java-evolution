@@ -2,8 +2,9 @@
 
 This index centralizes the JEP links used by the repository. It is a lookup table, not a replacement for the version READMEs. For release months and historical naming context, use [java-release-timeline.md](java-release-timeline.md).
 
-Java 27 entries describe features in the current pre-GA JDK 27 build; they do
-not mean that the Java 27 platform has reached general availability.
+Java 27 entries describe features in the Java SE 27 release. The feature
+status labels below remain independent of the release's GA status: preview and
+incubator features are not final merely because JDK 27 is generally available.
 
 Status labels:
 

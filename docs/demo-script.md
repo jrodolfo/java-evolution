@@ -85,7 +85,7 @@ mvn "-Dtest=VirtualThreadsExamplesTest" test
 
 Expected point: the example shows the API shape without turning the repository into a full web application.
 
-### 5. Show Java 25 LTS, Java 26, And Java 27 Pre-GA Work
+### 5. Show Java 25 LTS, Java 26, And Java 27 GA Work
 
 Open:
 
@@ -99,7 +99,7 @@ src/main/java/net/jrodolfo/java_evolution/java26/README.md
 Say:
 
 ```text
-For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature. Java 26 is a released feature release with executable examples for HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, Structured Concurrency, and the Vector API, while G1 synchronization reduction remains an explanatory note. The repository now builds on JDK 27, which is still pre-GA: it adds executable examples for compact headers, hybrid TLS, JFR redaction, and continuing previews, while keeping G1 default selection and Java 27 Vector API evolution explanatory.
+For newer releases, I separate final features from preview, incubator, runtime, tooling, security, and removal topics. Scoped values are represented as a final executable Java 25 LTS feature. Java 26 is a released feature release with executable examples for HTTP/3, final-field restrictions, Applet API removal, AOT object caching, PEM encodings, Lazy Constants, primitive patterns, Structured Concurrency, and the Vector API, while G1 synchronization reduction remains an explanatory note. The repository now builds on GA JDK 27: it adds executable examples for compact headers, hybrid TLS, JFR redaction, and continuing previews, while keeping G1 default selection and Java 27 Vector API evolution explanatory.
 ```
 
 Run:
@@ -133,7 +133,7 @@ Then run:
 make check-build
 ```
 
-Expected point: the whole repository is tested with JDK 27, while Java 27's platform lifecycle is still pre-GA.
+Expected point: the whole repository is tested with GA JDK 27, while individual Java 27 features retain their own final, preview, or incubator maturity.
 
 ## Two Minute Version
 
@@ -191,7 +191,7 @@ Open the generated JavaDoc:
 target/site/apidocs/index.html
 ```
 
-## Java 27 Pre-GA
+## Java 27 GA
 
 Show `src/main/java/net/jrodolfo/java_evolution/java27/README.md` and run the focused Java 27 tests. Explain that preview APIs use an isolated child JVM with matching Java 27 preview flags, while G1 default selection and the Vector API remain explanatory representations because their useful interpretation depends on runtime configuration or incubator evolution rather than a small performance claim.
 ```

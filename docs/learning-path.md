@@ -256,7 +256,7 @@ Interview angle: explain Java 22-24 as a transition from Java 21's modern baseli
 
 ## Stage 8: Java 25-27 LTS And Current-Release Maturity
 
-Java 25 through Java 27 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is a released feature release with nine executable examples, including the Vector API, while G1 synchronization reduction remains explanatory. The repository now builds on JDK 27 and includes Java 27's pre-GA examples; Java 27 is still a scheduled platform release, so study its preview, incubator, runtime, and security topics with that lifecycle distinction in mind. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on the JDK 27 baseline their tests keep the source and documentation checks and skip only that old-preview compiler step.
+Java 25 through Java 27 are useful for showing that you can track feature maturity carefully. Java 25 is a long-term support release with several final features. Java 26 is a released feature release with nine executable examples, including the Vector API, while G1 synchronization reduction remains explanatory. The repository now builds on JDK 27 and includes Java 27's GA-era material; study its preview, incubator, runtime, and security topics with that feature-maturity distinction in mind. Java 25 preview child-compilation workflows still require a JDK 25 preview compiler for full execution; on the JDK 27 baseline their tests keep the source and documentation checks and skip only that old-preview compiler step.
 
 Read these first by version:
 
@@ -314,7 +314,7 @@ mvn "-Dtest=PemEncodingsSecondPreviewExamplesTest,StructuredConcurrencySixthPrev
 mvn "-Dtest=VectorApiEleventhIncubatorNotesTest,PrimitivePatternsFourthPreviewExamplesTest" test
 ```
 
-Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics, and separates the JDK 27 pre-GA lifecycle from the repository's JDK 27 build baseline. It should also explain why moving a build baseline does not automatically mean every feature should become an executable example.
+Interview angle: be explicit about maturity. A strong answer distinguishes final, preview, incubator, runtime, tooling, security, and removal topics, and separates JDK 27's GA release status from the maturity of each feature. It should also explain why moving a build baseline does not automatically mean every feature should become an executable example.
 
 ## Full Review Checklist
 
@@ -328,10 +328,10 @@ Use this checklist when preparing to show the repository:
 6. Pick one Java 25, Java 26, or Java 27 example or notes class and explain whether the feature is final, preview, incubator, runtime, tooling-related, security-related, or removal-related.
 7. Use [jep-index.md](jep-index.md) when you need the official JEP number or status.
 
-## Java 27 Pre-GA Study Phase
+## Java 27 GA Study Phase
 
-Java 27 is included in the current JDK 27 build baseline, but the platform is
-still pre-GA. Its executable examples cover compact-header defaults, hybrid
+Java 27 is included in the current JDK 27 build baseline and is now a GA
+platform release. Its executable examples cover compact-header defaults, hybrid
 TLS configuration, JFR redaction, the continuing Lazy Constants, primitive
 patterns, Structured Concurrency, and PEM Encodings previews, plus the Vector
 API's twelfth incubation. G1 default selection and the Java 27 Vector API

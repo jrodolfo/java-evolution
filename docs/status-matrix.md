@@ -12,10 +12,9 @@ Status vocabulary:
 
 Status values may be combined, such as `final, security, executable example`, when a feature has both an official maturity status and a repository representation.
 
-Feature maturity and JDK release lifecycle are separate. In particular, Java
-27 rows describe the feature status and repository representation in the
-current pre-GA JDK 27 build; they do not indicate that Java 27 has reached
-general availability.
+Feature maturity and JDK release lifecycle are separate. Java 27 rows describe
+the feature status and repository representation in the Java SE 27 release.
+The GA release status does not make its preview or incubator features final.
 
 - `final`: stable feature in the named release
 - `preview`: available for feedback, may change later

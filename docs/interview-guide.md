@@ -201,7 +201,7 @@ Key topics:
 - Java 25 is an LTS release that finalized scoped values, flexible constructor bodies, module import declarations, compact source files, and the KDF API.
 - Some Java 25 features are still preview or incubator, such as primitive patterns, stable values, PEM encodings, structured concurrency, and the Vector API.
 - Java 26 adds HTTP/3 support, warns about deep-reflective final-field mutation, removes the Applet API, and continues preview/incubator/runtime work.
-- This repository now builds on JDK 27. Java 26 has nine executable examples, including the Vector API, while G1 synchronization reduction remains explanatory. Java 27 is represented in the current pre-GA JDK 27 build with focused executable examples and explanatory modules according to what can be demonstrated honestly.
+- This repository now builds on JDK 27. Java 26 has nine executable examples, including the Vector API, while G1 synchronization reduction remains explanatory. Java 27 is represented in the GA JDK 27 build with focused executable examples and explanatory modules according to what can be demonstrated honestly.
 
 Possible prompt:
 
@@ -245,9 +245,9 @@ Then show the tests to prove that the examples are not just snippets.
 - What is the difference between final, preview, and incubator features?
 - Why does this project use notes classes for some features instead of runnable demos?
 
-## Java 27 Pre-GA Awareness
+## Java 27 GA Awareness
 
-Java 27 is part of the current repository build, but it is still pre-GA. The
+Java 27 is part of the current repository build and is generally available. The
 repository uses executable examples for deterministic VM, TLS, JFR, and
 preview API observations, while G1 default selection and the Vector API remain
 explanatory representations for their runtime or incubator limitations.

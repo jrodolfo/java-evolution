@@ -276,14 +276,14 @@ Use this lightweight checklist before discussing or planning a Java version migr
 5. Run the focused tests for the features you want to explain.
 6. Use [status-matrix.md](status-matrix.md) to avoid confusing final, preview, incubator, runtime, tooling, and notes-only topics.
 
-## Java 27 Pre-GA Awareness
+## Java 27 GA Awareness
 
-Java 27 is the current repository build baseline, but the platform is still
-pre-GA. Java 27 preview examples use `--enable-preview --release 27` only in
+Java 27 is the current repository build baseline and is generally available.
+Java 27 preview examples use `--enable-preview --release 27` only in
 isolated child JVMs. G1 default selection and the Vector API remain
 explanatory representations; the other listed Java 27 areas have focused
 executable examples.
 
 Study `src/main/java/net/jrodolfo/java_evolution/java27/README.md` and its
-matching tests while keeping the pre-GA platform status separate from the
-repository's current build baseline.
+matching tests while keeping the platform release status separate from each
+feature's maturity.

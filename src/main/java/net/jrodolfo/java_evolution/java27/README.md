@@ -1,7 +1,8 @@
 # Java 27
 
-Java 27 is scheduled for general availability in September 2026. This package
-documents the repository's current pre-GA JDK 27 build.
+Java 27 reached general availability on September 15, 2026. This package documents
+the repository's Java 27 material and its remaining preview and incubator
+features.
 
 Java 27 groups its changes into four themes:
 
