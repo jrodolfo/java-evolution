@@ -7,7 +7,7 @@
 [![Java 27](https://img.shields.io/badge/Java-27-orange.svg)](https://jdk.java.net/27/)
 [![Maven 3.9+](https://img.shields.io/badge/Maven-3.9%2B-C71A36.svg)](https://maven.apache.org/download.cgi)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/jrodolfo/java-evolution)
+[![Ask DeepWiki](https://img.shields.io/badge/Ask%20DeepWiki-Documentation-2563EB.svg)](https://deepwiki.com/jrodolfo/java-evolution)
 <a href="https://linkedin.com/in/rodoliveira/"><img src="https://img.shields.io/badge/Follow%20Rod-yellow.svg?logo=linkedin"></a>
 
 `java-evolution` is a practical Java reference project covering features introduced from Java 1 through Java 27. It uses small plain-Java examples, focused JUnit tests, and JavaDoc to explain what changed, why it matters, and how the APIs are used.
